@@ -190,7 +190,8 @@ int main(void)
 
 	// Initialize application specific hardware
 	InitializeBoard();
-	putrsUART((ROM char*)"Initializing...");
+//cals edit
+	//putrsUART((ROM char*)"Initializing...");
 	
 	#if defined(USE_LCD)
 	// Initialize and display the stack version on the LCD

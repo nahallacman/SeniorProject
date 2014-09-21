@@ -62,12 +62,19 @@
 
 
 // Defines the server to be accessed for this application
-static BYTE ServerName[] =	"www.google.com";
+//cals edit
+static BYTE ServerName[] =	"192.168.11.55";
+//static BYTE ServerName[] =	"www.google.com";
 
 // Defines the port to be accessed for this application
-static WORD ServerPort = 80;
+//cals edit
+static WORD ServerPort = 50000;
+//static WORD ServerPort = 80;
+
 
 // Defines the URL to be requested by this HTTP client
+//cals edit
+//static ROM BYTE RemoteURL[] = "/search?as_q=Microchip&as_sitesearch=microchip.com";
 static ROM BYTE RemoteURL[] = "/search?as_q=Microchip&as_sitesearch=microchip.com";
 
 
@@ -155,11 +162,16 @@ void GenericTCPClient(void)
 				break;
 			
 			// Place the application protocol data into the transmit buffer.  For this example, we are connected to an HTTP server, so we'll send an HTTP GET request.
-			TCPPutROMString(MySocket, (ROM BYTE*)"GET ");
-			TCPPutROMString(MySocket, RemoteURL);
-			TCPPutROMString(MySocket, (ROM BYTE*)" HTTP/1.0\r\nHost: ");
-			TCPPutString(MySocket, ServerName);
-			TCPPutROMString(MySocket, (ROM BYTE*)"\r\nConnection: close\r\n\r\n");
+			//cals edit
+			//TCPPutROMString(MySocket, (ROM BTYE*)"TEST ");
+			TCPPutROMString(MySocket, (ROM BYTE*)"TEST MESSAGE ");
+			//TCPPutROMString(MySocket, (ROM BYTE*)"GET ");
+			
+			//TCPPutROMString(MySocket, (ROM BYTE*)"GET ");
+			//TCPPutROMString(MySocket, RemoteURL);
+			//TCPPutROMString(MySocket, (ROM BYTE*)" HTTP/1.0\r\nHost: ");
+			//TCPPutString(MySocket, ServerName);
+			//TCPPutROMString(MySocket, (ROM BYTE*)"\r\nConnection: close\r\n\r\n");
 
 			// Send the packet
 			TCPFlush(MySocket);

@@ -17,7 +17,6 @@ Objects\ -\ TCPIP\ PIC32\ ETH\ Demo\ App-C32\BerkeleyUDPClientDemo.o: \
  ..\Microchip\Include/TCPIP\ Stack/UDP.h \
  ..\Microchip\Include/TCPIP\ Stack/TCP.h \
  ..\Microchip\Include/TCPIP\ Stack/BerkeleyAPI.h \
- ..\Microchip\Include/TCPIP\ Stack/UART.h \
  ..\Microchip\Include/TCPIP\ Stack/DHCP.h \
  ..\Microchip\Include/TCPIP\ Stack/DNS.h \
  ..\Microchip\Include/TCPIP\ Stack/MPFS2.h \
