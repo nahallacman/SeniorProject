@@ -57,7 +57,7 @@ int main(void);
 int main(void) {
 
     //system config
-    //SYSTEMConfig(72000000L, SYS_CFG_WAIT_STATES | SYS_CFG_PCACHE);
+    SYSTEMConfig(72000000L, SYS_CFG_WAIT_STATES | SYS_CFG_PCACHE);
 
     //using RD6 for PS2CLK   //  PORTDbits.RD6;
     TRISDbits.TRISD6 = 1; // set to input
@@ -72,18 +72,18 @@ int main(void) {
 
     int i = 0;
     int delay = 0;
-    int MAX_DELAY = 1000;
+    //int CLOCK_DELAY = 20000; // delay for at least 50 micro seconds //thjs value needs updating
     while (1)
     {
         if(PORTDbits.RD6 == 0)
         {
-            i = 0;
-            for( delay = 0; delay < MAX_DELAY; delay++);
+            i = PORTDbits.RD7;
+            //for( delay = 0; delay < CLOCK_DELAY; delay++);
         }
         else
         {
-            i = 1;
-            for( delay = 0; delay < MAX_DELAY; delay++);
+            i = PORTDbits.RD7;
+            //for( delay = 0; delay < CLOCK_DELAY; delay++);
         }
     }
 }
