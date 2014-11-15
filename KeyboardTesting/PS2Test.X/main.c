@@ -145,15 +145,14 @@ int main(void) {
          */
         while(TMR2 < LINEMAX);
         TMR2 = 0;
-        //for( line = 0; line < 628; line++ )
-        //{
-            //TMR4 = 0;
+        for( line = 0; line < 628 ; line++ )
+        {
+            TMR4 = 0;
             switch(line)
             {
                 case 0:     //front porch
                     PORTBbits.RB12 = 1; // front porch is 1
                     while (TMR4 < LOOPMAX); //
-                    TMR4 = 0;
                     break;
                 case 1:     //sync pulse
                 case 2:
@@ -162,7 +161,6 @@ int main(void) {
                 case 5:
                     PORTBbits.RB12 = 0; // sync pulse is 0
                     while (TMR4 < LOOPMAX);
-                    TMR4 = 0;
                     break;
                 case 6:
                 case 7:
@@ -189,7 +187,6 @@ int main(void) {
                 case 28:
                     PORTBbits.RB12 = 1; //back porch is 1
                     while (TMR4 < LOOPMAX);
-                    TMR4 = 0;
                     break;
                 default:
                     
@@ -216,7 +213,7 @@ int main(void) {
                     while(TMR4 < LOOPMAXd4 * 3);
                     PORTGCLR = 0x100; // clear video bit
                     while(TMR4 < LOOPMAX);
-                    TMR4 = 0;
+
                     /*
                     for(l = 0; l < 16; l++) // make 16 zones on screen, hopefully making 8 lines
                     {
@@ -226,7 +223,7 @@ int main(void) {
                     */
                     break;
             }
-       // }
+        }
     }
 }
 
