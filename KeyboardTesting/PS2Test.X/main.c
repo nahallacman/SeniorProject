@@ -81,10 +81,10 @@ int main(void) {
     PORTGbits.RG8 = 0;// initialize value just in case, may be unnecessary
     //using RD4 for horizontal sync
     TRISDbits.TRISD4 = 0; //set to output
-    PORTDbits.RD4 = 0;// initialize value just in case, may be unnecessary
+    PORTDbits.RD4 = 1;// initialize value to high since active is low
     //using RB12 for vertical sync
     TRISBbits.TRISB12 = 0; //set to output
-    PORTBbits.RB12 = 0;// initialize value just in case, may be unnecessary
+    PORTBbits.RB12 = 1;// initialize value to high since active is low
     //timer 2 and 3 config
     T2CONbits.T32 = 1; //This sets operation to 32 bit mode using timers 2 and 3 together
     T2CONbits.TCKPS = 0; //set the prescaler to 1:1
@@ -92,7 +92,7 @@ int main(void) {
     PR2 = -1; // max out the period register just in case
     TMR2 = 0; // zero out the timer register
     //timer 4 config
-    T4CONbits.TCKPS = 0;
+    T4CONbits.TCKPS = 0;//set the prescaler to 1:1
     T4CONbits.ON = 0;
     PR4 = -1;// max out the period register just in case
     TMR4 = 0; // zero out the timer register
@@ -129,9 +129,17 @@ int main(void) {
     int LINEMAX = 1326320;
     int LOOPMAX = 2112; // number of clock cycles for one line
     int LOOPMAXd4;
+    int LOOPMAXd4x2;
+    int LOOPMAXd4x3;
     LOOPMAXd4 = LOOPMAX / 4;
+    LOOPMAXd4x2 = LOOPMAX * 2;
+    LOOPMAXd4x3 = LOOPMAX * 3;
 
     //this implementation was not actually expected to work. All of the numbers are done with assumptions that nothing else in the code takes any time. A real solution shall be built, but this is a starting framework that will give me a basis to work with or against.
+
+    //things could use a rewrite to use ISR's and timers for at least the syncing pulses
+    //probably also for the line data write
+
     T2CONbits.ON = 1; // turn the timers on
     T4CONbits.ON = 1;
     while(1)
@@ -143,6 +151,7 @@ int main(void) {
          * back porch: 23 lines (line 6-28)
          * video: 600 lines (line 29-629)
          */
+        i = 1;
         while(TMR2 < LINEMAX);
         TMR2 = 0;
         for( line = 0; line < 628 ; line++ )
@@ -151,15 +160,16 @@ int main(void) {
             switch(line)
             {
                 case 0:     //front porch
-                    PORTBbits.RB12 = 1; // front porch is 1
+                    //PORTBbits.RB12 = 1; // front porch is 1
                     while (TMR4 < LOOPMAX); //
+                    PORTBbits.RB12 = 0; // sync pulse is 0
                     break;
                 case 1:     //sync pulse
                 case 2:
                 case 3:
                 case 4:
                 case 5:
-                    PORTBbits.RB12 = 0; // sync pulse is 0
+                    
                     while (TMR4 < LOOPMAX);
                     break;
                 case 6:
@@ -197,21 +207,24 @@ int main(void) {
                      * sync pulse: 128 pixels (256 clocks)
                      * back porch: 88 pixels (176 clocks)
                     */
-                    while(TMR4 < 80); // these numbers need adjusting to the frame reset
-                    PORTDbits.RD4 = 1;
-                    while(TMR4 < 80+256);
-                    PORTDbits.RD4 = 0;
-                    while(TMR4 < 80+255+176 );
+                    
+                    while( TMR4 < 80 ); // these numbers may need to be tweaked to include the number of cycles wasted before the portd bit can be cleared
+                    PORTDCLR = 0x10;
+                    //PORTDbits.RD4 = 0;
+                    while( TMR4 < 80+256 );
+                    PORTDSET = 0x10;
+                    //PORTDbits.RD4 = 1;
+                    while( TMR4 < 80+255+176 );
                     /*
                      * Video: 800 pixels (1600 clocks)
                      */
                     PORTGSET = 0x100; // turn the video on to start
                     while( TMR4 < LOOPMAXd4 );
-                    PORTGCLR = 0x100; // clear video bit
-                    while(TMR4 < LOOPMAXd4 * 2);
-                    PORTGSET = 0x100; // set the video bit
-                    while(TMR4 < LOOPMAXd4 * 3);
-                    PORTGCLR = 0x100; // clear video bit
+                    PORTGINV = 0x100; // invert video bit
+                    while(TMR4 < LOOPMAXd4x2);
+                    PORTGINV = 0x100; // invert the video bit
+                    while(TMR4 < LOOPMAXd4x3);
+                    PORTGINV = 0x100; // invert video bit
                     while(TMR4 < LOOPMAX);
 
                     /*
