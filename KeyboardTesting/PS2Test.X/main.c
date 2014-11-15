@@ -57,8 +57,9 @@ int main(void);
 int main(void) {
 
     //system config
-    SYSTEMConfig(72000000L, SYS_CFG_WAIT_STATES | SYS_CFG_PCACHE);
+    SYSTEMConfig(80000000L, SYS_CFG_WAIT_STATES | SYS_CFG_PCACHE);
 
+    //---keyboard configuration begin---
     //using RD6 for PS2CLK   //  PORTDbits.RD6;
     TRISDbits.TRISD6 = 1; // set to input
     //using RD7 for PS2DATA
@@ -67,9 +68,26 @@ int main(void) {
     //using internal pullup resistors
     CNPUEbits.CNPUE15 = 1; //PS2CLK pullup
     CNPUEbits.CNPUE16 = 1; //PS2DATA pullup
+    //---keyboard configuration end---
+
+    //---VGA configuration begin---
+    //using RB11 for video/composite jumper, only required on the duinomite hardware
+    //PORTBbits.RB11 = ?
+    TRISBbits.TRISB11 = 0; //set to output
+    PORTBbits.RB11 = 0; // select VGA //NOT CONFIRMED
+    //using RG8 for video
+    TRISGbits.TRISG8 = 0; //set to output
+    PORTGbits.RG8 = 0;// initialize value just in case, may be unnecessary
+    //using RD4 for horizontal sync
+    TRISDbits.TRISD4 = 0; //set to output
+    PORTDbits.RD4 = 0;// initialize value just in case, may be unnecessary
+    //using RB12 for vertical sync
+    TRISBbits.TRISB12 = 0; //set to output
+    PORTBbits.RB12 = 0;// initialize value just in case, may be unnecessary
+    //---VGA configuration end---
 
 
-
+    /* * * * this code for keyboard testing * * * *
     int i = 0;
     int delay = 0;
     //int CLOCK_DELAY = 20000; // delay for at least 50 micro seconds //thjs value needs updating
@@ -84,6 +102,98 @@ int main(void) {
         {
             i = PORTDbits.RD7;
             //for( delay = 0; delay < CLOCK_DELAY; delay++);
+        }
+    }
+    */
+
+    //for this test I will try to manually bitbang a 800x600 60Hz standard VGA
+    // later on things can be implemented using the output comparator,
+    // SPI as a serial shift register for clocking out data bits, and
+    // DMA to feed the SPI device.
+    int i,j,k,l,m = 0;
+    int line = 0;
+    int loop = 0;
+    int LOOPMAX = 2112; // number of clock cycles for one line
+
+    //this implementation was not actually expected to work. All of the numbers are done with assumptions that nothing else in the code takes any time. A real solution shall be built, but this is a starting framework that will give me a basis to work with or against.
+
+    while(1)
+    {
+        /*
+         * Vertical lines info:
+         * front port: 1 line (line 0)
+         * sync pules: 4 lines (line 1-5)
+         * back porch: 23 lines (line 6-28)
+         * video: 600 lines (line 29-629)
+         */
+        for( line = 0; line < 628; line++ )
+        {
+            switch(line)
+            {
+                case 0:     //front porch
+                    PORTBbits.RB12 = 0; // front porch is 0
+                    for( loop = 0; loop < LOOPMAX; loop++);
+                    break;
+                case 1:     //sync pulse
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                    PORTBbits.RB12 = 1; // sync pulse is 1
+                    for( loop = 0; loop < LOOPMAX; loop++);
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                case 10:
+                case 11:
+                case 12:
+                case 13:
+                case 14:
+                case 15:
+                case 16:
+                case 17:
+                case 18:
+                case 19:
+                case 20:
+                case 21:
+                case 22:
+                case 23:
+                case 24:
+                case 25:
+                case 26:
+                case 27:
+                case 28:
+                    PORTBbits.RB12 = 0; //back porch is 0
+                    for( loop = 0; loop < LOOPMAX; loop++);
+                    break;
+                default:
+                    
+                    /*the time sensitive part of VGA operation is the sync pulses, and horizontal video timing
+                    the times needed:
+                    horizontal sync pulse:
+                     * front porch: 40 pixels (80 clocks)
+                     * sync pulse: 128 pixels (256 clocks)
+                     * back porch: 88 pixels (176 clocks)
+                    */
+                    for(i = 0; i < 80; i++);
+                    PORTDbits.RD4 = 1;
+                    for(j = 0; j < 256; j++);
+                    PORTDbits.RD4 = 0;
+                    for(k = 0; k < 176; k++);
+                    /*
+                     * Video: 800 pixels (1600 clocks)
+                     */
+
+                    for(l = 0; l < 16; l++) // make 16 zones on screen, hopefully making 8 lines
+                    {
+                        PORTGINV = 0x100; // flip video bit
+                        for(m = 0; m < 100; m++); // make each zone 50 pixels wide (16 * 100 = 1600)
+                    }
+                    
+                    break;
+            }
         }
     }
 }
