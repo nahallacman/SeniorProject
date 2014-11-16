@@ -171,6 +171,7 @@ int main(void) {
                 case 5:
                     
                     while (TMR4 < LOOPMAX);
+                    PORTBbits.RB12 = 1; //back porch is 1
                     break;
                 case 6:
                 case 7:
