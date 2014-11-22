@@ -75,10 +75,10 @@ int main(void) {
     //using RB11 for video/composite jumper, only required on the duinomite hardware
     //PORTBbits.RB11 = ?
     TRISBbits.TRISB11 = 0; //set to output
-    PORTBbits.RB11 = 0; // select VGA //NOT CONFIRMED
+    PORTBbits.RB11 = 0 ; // select VGA //NOT CONFIRMED
     //using RG8 for video
     TRISGbits.TRISG8 = 0; //set to output
-    PORTGbits.RG8 = 0;// initialize value just in case, may be unnecessary
+    PORTGbits.RG8 = 1;// initialize value just in case, may be unnecessary
     //using RD4 for horizontal sync
     TRISDbits.TRISD4 = 0; //set to output
     PORTDbits.RD4 = 1;// initialize value to high since active is low
@@ -127,7 +127,7 @@ int main(void) {
     int line = 0;
     int loop = 0;
     int LINEMAX = 1199000; //663161; //1326320;
-    int LOOPMAX = 2112; //2110;  //1112; //2112; // number of clock cycles for one line
+    int LOOPMAX = 2112; //2112; //1000; //2111; //2112; //400; //2000; //2112; //2110;  //1112; //2112; // number of clock cycles for one line
     int LOOPMAXd4;
     int LOOPMAXd4x2;
     int LOOPMAXd4x3;
@@ -154,8 +154,8 @@ int main(void) {
         //i = 1;
         while(TMR2 < LINEMAX);
         TMR2 = 0;
-        for( line = 0; line < 628 ; line++ )
-        //for( line = 0; line < 600 ; line++ )
+        //for( line = 0; line < 628 ; line++ )
+        for( line = 0; line < 550 ; line++ )
 		{
 
             //TMR4 = 0;
@@ -165,10 +165,12 @@ int main(void) {
                     //PORTBbits.RB12 = 1; // front porch is 1
                     //while (TMR4 < LOOPMAX); //
 					//TMR4 = 0;
-            while (TMR4 < LOOPMAX);
-			TMR4 = 0;
+            		//while (TMR4 < LOOPMAX);
+					//TMR4 = 0;
                     PORTBbits.RB12 = 0; // sync pulse is 0's
-                    break;
+                    while (TMR4 < LOOPMAX);
+					TMR4 = 0;
+					break;
                 case 1:     //sync pulse
                 case 2:
                 case 3:
@@ -227,7 +229,7 @@ int main(void) {
                     PORTDSET = 0x10;
                     //PORTDbits.RD4 = 1;
                     //while( TMR4 < 80+255+176 );
-                    
+                    //TMR4 = 0;
 					/*
                      * Video: 800 pixels (1600 clocks)
                      */
@@ -242,8 +244,8 @@ int main(void) {
 					*/
 
 					//--------------------------------
-                    //while(TMR4 < LOOPMAX);
-					//TMR4 = 0;
+                    while(TMR4 < LOOPMAX);
+					TMR4 = 0;
 
 					
                     /*

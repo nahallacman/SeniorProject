@@ -1,0 +1,23 @@
+# MPLAB IDE generated this makefile for use with GNU make.
+# Project: Keyboard_Demo.mcp
+# Date: Sat Nov 22 02:34:32 2014
+
+AS = xc32-as.exe
+CC = xc32-gcc.exe
+LD = xc32-ld.exe
+AR = xc32-ar.exe
+HX = xc32-bin2hex.exe
+RM = rm
+
+Keyboard_Demo.hex : Keyboard_Demo.elf
+	$(HX) "Keyboard_Demo.elf"
+
+Keyboard_Demo.elf : main.o
+	$(CC) -mdebugger -mprocessor=32MX795F512H "main.o" -o"Keyboard_Demo.elf" -Wl,-L"C:\Program Files (x86)\Microchip\xc32\v1.32\pic32mx\lib",--defsym=__MPLAB_BUILD=1,--defsym=__MPLAB_DEBUG=1,--defsym=__MPLAB_DEBUGGER_REAL_ICE=1,--defsym=__ICD2RAM=1,-Map="Keyboard_Demo.map"
+
+main.o : ../KeyboardTesting/PS2Test.X/main.c
+	$(CC) -mprocessor=32MX795F512H -x c -c "C:\Users\mainuser\Desktop\SeniorProject\KeyboardTesting\PS2Test.X\main.c" -o"main.o" -MMD -MF"main.d" -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -g
+
+clean : 
+	$(RM) "main.o" "Keyboard_Demo.elf" "Keyboard_Demo.hex"
+
