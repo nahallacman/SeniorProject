@@ -126,8 +126,8 @@ int main(void) {
     int i,j,k,l,m = 0;
     int line = 0;
     int loop = 0;
-    int LINEMAX = 1326320;
-    int LOOPMAX = 2112; // number of clock cycles for one line
+    int LINEMAX = 1199000; //663161; //1326320;
+    int LOOPMAX = 2112; //2110;  //1112; //2112; // number of clock cycles for one line
     int LOOPMAXd4;
     int LOOPMAXd4x2;
     int LOOPMAXd4x3;
@@ -151,18 +151,23 @@ int main(void) {
          * back porch: 23 lines (line 6-28)
          * video: 600 lines (line 29-629)
          */
-        i = 1;
+        //i = 1;
         while(TMR2 < LINEMAX);
         TMR2 = 0;
         for( line = 0; line < 628 ; line++ )
-        {
-            TMR4 = 0;
+        //for( line = 0; line < 600 ; line++ )
+		{
+
+            //TMR4 = 0;
             switch(line)
             {
                 case 0:     //front porch
                     //PORTBbits.RB12 = 1; // front porch is 1
-                    while (TMR4 < LOOPMAX); //
-                    PORTBbits.RB12 = 0; // sync pulse is 0
+                    //while (TMR4 < LOOPMAX); //
+					//TMR4 = 0;
+            while (TMR4 < LOOPMAX);
+			TMR4 = 0;
+                    PORTBbits.RB12 = 0; // sync pulse is 0's
                     break;
                 case 1:     //sync pulse
                 case 2:
@@ -171,6 +176,7 @@ int main(void) {
                 case 5:
                     
                     while (TMR4 < LOOPMAX);
+					TMR4 = 0;
                     PORTBbits.RB12 = 1; //back porch is 1
                     break;
                 case 6:
@@ -196,11 +202,16 @@ int main(void) {
                 case 26:
                 case 27:
                 case 28:
+            while (TMR4 < LOOPMAX);
+			TMR4 = 0;
                     PORTBbits.RB12 = 1; //back porch is 1
-                    while (TMR4 < LOOPMAX);
+                    //while (TMR4 < LOOPMAX);
+					//TMR4 = 0;
                     break;
                 default:
-                    
+
+                    //while (TMR4 < LOOPMAX);
+					//TMR4 = 0;
                     /*the time sensitive part of VGA operation is the sync pulses, and horizontal video timing
                     the times needed:
                     horizontal sync pulse:
@@ -215,19 +226,26 @@ int main(void) {
                     while( TMR4 < 80+256 );
                     PORTDSET = 0x10;
                     //PORTDbits.RD4 = 1;
-                    while( TMR4 < 80+255+176 );
-                    /*
+                    //while( TMR4 < 80+255+176 );
+                    
+					/*
                      * Video: 800 pixels (1600 clocks)
                      */
-                    PORTGSET = 0x100; // turn the video on to start
+                    /*
+					PORTGSET = 0x100; // turn the video on to start
                     while( TMR4 < LOOPMAXd4 );
                     PORTGINV = 0x100; // invert video bit
                     while(TMR4 < LOOPMAXd4x2);
                     PORTGINV = 0x100; // invert the video bit
                     while(TMR4 < LOOPMAXd4x3);
                     PORTGINV = 0x100; // invert video bit
-                    while(TMR4 < LOOPMAX);
+					*/
 
+					//--------------------------------
+                    //while(TMR4 < LOOPMAX);
+					//TMR4 = 0;
+
+					
                     /*
                     for(l = 0; l < 16; l++) // make 16 zones on screen, hopefully making 8 lines
                     {
@@ -235,6 +253,7 @@ int main(void) {
                         for(m = 0; m < 100; m++); // make each zone 50 pixels wide (16 * 100 = 1600)
                     }
                     */
+					
                     break;
             }
         }
