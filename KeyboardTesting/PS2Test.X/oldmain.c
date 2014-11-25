@@ -1,8 +1,8 @@
 /*
- * File:   newmain.c
+ * File:   main.c
  * Author: cal
  *
- * Created on November 24, 2014, 11:41 PM
+ * Created on October 26, 2014, 8:35 PM
  */
 
 /******************************************************************************
@@ -33,6 +33,12 @@
  *****************************************************************************/
 
 
+/*
+ The purpose of this project is to use the SOLDERLESS breadboard with the
+ * pic32mx795L512 H,  NOT L
+ to test the keyboard interaction
+ */
+
 #include <p32xxxx.h>
 #include <plib.h>
 
@@ -43,34 +49,29 @@ int main(void);
 #pragma config	ICESEL	=	ICS_PGx1	// ICE pin selection
 
 
-//set the priority of the timer2 service routine
-#pragma interrupt T2ISR IPL5 vector 8
-
-//set the priority of the timer4 service routine
-#pragma interrupt T4ISR IPL6 vector 16
-
-void T2ISR(void);
-
-void T4ISR(void);
 
 #pragma config POSCMOD=XT, FNOSC=PRIPLL, FPLLIDIV=DIV_2, FPLLMUL=MUL_20, FPLLODIV=DIV_1
 #pragma config FPBDIV=DIV_1, FWDTEN=OFF, CP=OFF, BWP=OFF
 #pragma config FSOSCEN=OFF, IESO=OFF
 
-int video;
-int global_count;
-int T4State;
 
 int main(void) {
 
     //system config
     SYSTEMConfig(80000000L, SYS_CFG_WAIT_STATES | SYS_CFG_PCACHE);
 
-    INTCONbits.MVEC = 1; // turn on mutli vectored mode
+    //---keyboard configuration begin---
+    //using RD6 for PS2CLK   //  PORTDbits.RD6;
+    TRISDbits.TRISD6 = 1; // set to input
+    //using RD7 for PS2DATA
+    TRISDbits.TRISD7 = 1; // set to input
+
+    //using internal pullup resistors
+    CNPUEbits.CNPUE15 = 1; //PS2CLK pullup
+    CNPUEbits.CNPUE16 = 1; //PS2DATA pullup
+    //---keyboard configuration end---
 
     //---VGA configuration begin---
-    
-    //---VGA port bits begin---
     //using RB11 for video/composite jumper, only required on the duinomite hardware
     //PORTBbits.RB11 = ?
     TRISBbits.TRISB11 = 0; //set to output
@@ -84,108 +85,106 @@ int main(void) {
     //using RB12 for vertical sync
     TRISBbits.TRISB12 = 0; //set to output
     PORTBbits.RB12 = 1;// initialize value to high since active is low
-    //---VGA port bits end ---
-    
-    
     //timer 2 and 3 config
     T2CONbits.T32 = 1; //This sets operation to 32 bit mode using timers 2 and 3 together
     T2CONbits.TCKPS = 0; //set the prescaler to 1:1
     T2CONbits.ON = 0; // make sure the timer is off
-    PR2 = 1199000; // set the period register to interrupt at 60Hz // not confirmed in math
+    PR2 = -1; // max out the period register just in case
     TMR2 = 0; // zero out the timer register
-
-    mT2ClearIntFlag(); // clear the interupt flag just in case
-    //configure the timer 2 priority
-    mT2SetIntPriority(5);
-    // and sub priority
-    mT2SetIntSubPriority(0);
-    //Then enable the interrupt
-    mT2IntEnable(1);
-
-
     //timer 4 config
     T4CONbits.TCKPS = 0;//set the prescaler to 1:1
     T4CONbits.ON = 0;
-    PR4 = 2112;//this is a guess
+    PR4 = -1;// max out the period register just in case
     TMR4 = 0; // zero out the timer register
 
-    mT4ClearIntFlag(); // clear the interupt flag just in case
-    //configure the timer 2 priority
-    mT4SetIntPriority(6);
-    // and sub priority
-    mT4SetIntSubPriority(0);
-    //Then enable the interrupt
-    mT4IntEnable(1);
-   
-    
-    mT2ClearIntFlag(); // clear the interupt flag just in case
-    
     //---VGA configuration end---
 
-    //---turn things on---
-    T2CONbits.ON = 1; // turn the timers on
-    
-    //enable interrupts
-    asm("ei");
-   
-    video = 0; //initialize global variable to tell if video is on or off
-    global_count = 0;//initalize global variable for counting ISR entries
-    T4State = 0;//initalize state machine for timer 4 / h sync
 
+
+    /* * * * this code for keyboard testing * * * *
+    int i = 0;
+    int delay = 0;
+    //int CLOCK_DELAY = 20000; // delay for at least 50 micro seconds //thjs value needs updating
     while (1)
     {
-        if(video = 1)
+        if(PORTDbits.RD6 == 0)
         {
-            PORTGINV = 0x100; // invert video bit
+            i = PORTDbits.RD7;
+            //for( delay = 0; delay < CLOCK_DELAY; delay++);
         }
         else
         {
-            PORTGSET = 0x100; //make sure it is off while not displaying video
+            i = PORTDbits.RD7;
+            //for( delay = 0; delay < CLOCK_DELAY; delay++);
         }
     }
-}
+    */
 
+    //for this test I will try to manually bitbang a 800x600 60Hz standard VGA
+    // later on things can be implemented using the output comparator,
+    // SPI as a serial shift register for clocking out data bits, and
+    // DMA to feed the SPI device.
+    int i,j,k,l,m = 0;
+    int line = 0;
+    int loop = 0;
+    int LINEMAX = 1199000; //663161; //1326320;
+    int LOOPMAX = 2112; //2112; //1000; //2111; //2112; //400; //2000; //2112; //2110;  //1112; //2112; // number of clock cycles for one line
+    int LOOPMAXd4;
+    int LOOPMAXd4x2;
+    int LOOPMAXd4x3;
+    LOOPMAXd4 = LOOPMAX / 4;
+    LOOPMAXd4x2 = LOOPMAX * 2;
+    LOOPMAXd4x3 = LOOPMAX * 3;
 
+    //this implementation was not actually expected to work. All of the numbers are done with assumptions that nothing else in the code takes any time. A real solution shall be built, but this is a starting framework that will give me a basis to work with or against.
 
-void T2ISR(void)
-{
-    //increment global counter
-    global_count++;
-    //atomically clear the interrupt flag
-    mT2ClearIntFlag();
-    //while(1);
-    //begin t4isr
+    //things could use a rewrite to use ISR's and timers for at least the syncing pulses
+    //probably also for the line data write
+
+    T2CONbits.ON = 1; // turn the timers on
     T4CONbits.ON = 1;
-}
 
-void T4ISR(void)
-{
+   
+    while(1)
+    {
+        /*
+         * Vertical lines info:
+         * front port: 1 line (line 0)
+         * sync pules: 4 lines (line 1-5)
+         * back porch: 23 lines (line 6-28)
+         * video: 600 lines (line 29-629)
+         */
+        //i = 1;
+        while(TMR2 < LINEMAX);
+        TMR2 = 0;
+        //for( line = 0; line < 628 ; line++ )
+        for( line = 0; line < 550 ; line++ )
+		{
 
-
-
-
-
-
-
-
-            switch(T4State)
+            //TMR4 = 0;
+            switch(line)
             {
-                case 0:     
-                    //error?
-                    break;
-
-                case 1://front porch is done?
-                    //sync pulse
+                case 0:     //front porch
+                    //PORTBbits.RB12 = 1; // front porch is 1
+                    //while (TMR4 < LOOPMAX); //
+					//TMR4 = 0;
+            		//while (TMR4 < LOOPMAX);
+					//TMR4 = 0;
                     PORTBbits.RB12 = 0; // sync pulse is 0's
-                    break;
+                    while (TMR4 < LOOPMAX);
+					TMR4 = 0;
+					break;
+                case 1:     //sync pulse
                 case 2:
                 case 3:
                 case 4:
                 case 5:
-                    break;
-                case 6:
+                    
+                    while (TMR4 < LOOPMAX);
+					TMR4 = 0;
                     PORTBbits.RB12 = 1; //back porch is 1
                     break;
+                case 6:
                 case 7:
                 case 8:
                 case 9:
@@ -208,16 +207,16 @@ void T4ISR(void)
                 case 26:
                 case 27:
                 case 28:
-
+            while (TMR4 < LOOPMAX);
+			TMR4 = 0;
                     PORTBbits.RB12 = 1; //back porch is 1
-                    break;
-                case 628:
-                    //end the ISR
-                    T4State = 0;
-                    video = 0;
+                    //while (TMR4 < LOOPMAX);
+					//TMR4 = 0;
                     break;
                 default:
 
+                    //while (TMR4 < LOOPMAX);
+					//TMR4 = 0;
                     /*the time sensitive part of VGA operation is the sync pulses, and horizontal video timing
                     the times needed:
                     horizontal sync pulse:
@@ -225,16 +224,46 @@ void T4ISR(void)
                      * sync pulse: 128 pixels (256 clocks)
                      * back porch: 88 pixels (176 clocks)
                     */
-
-                    while( TMR4 < 2112+80 ); // these numbers may need to be tweaked to include the number of cycles wasted before the portd bit can be cleared
+                    
+                    while( TMR4 < 80 ); // these numbers may need to be tweaked to include the number of cycles wasted before the portd bit can be cleared
                     PORTDCLR = 0x10;
                     //PORTDbits.RD4 = 0;
-                    while( TMR4 < 2112+80+256 );
+                    while( TMR4 < 80+256 );
                     PORTDSET = 0x10;
-                    video = 1;
-                    break;
+                    //PORTDbits.RD4 = 1;
+                    //while( TMR4 < 80+255+176 );
+                    //TMR4 = 0;
+					/*
+                     * Video: 800 pixels (1600 clocks)
+                     */
+                    /*
+					PORTGSET = 0x100; // turn the video on to start
+                    while( TMR4 < LOOPMAXd4 );
+                    PORTGINV = 0x100; // invert video bit
+                    while(TMR4 < LOOPMAXd4x2);
+                    PORTGINV = 0x100; // invert the video bit
+                    while(TMR4 < LOOPMAXd4x3);
+                    PORTGINV = 0x100; // invert video bit
+					*/
 
-               }
-            TMR4 = 0;
-            T4State++;
+					//--------------------------------
+                    while(TMR4 < LOOPMAX);
+					TMR4 = 0;
+
+					
+                    /*
+                    for(l = 0; l < 16; l++) // make 16 zones on screen, hopefully making 8 lines
+                    {
+                        PORTGINV = 0x100; // flip video bit
+                        for(m = 0; m < 100; m++); // make each zone 50 pixels wide (16 * 100 = 1600)
+                    }
+                    */
+					
+                    break;
+            }
+        }
+    }
 }
+
+
+
