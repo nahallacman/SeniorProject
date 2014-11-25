@@ -96,11 +96,13 @@ int main(void) {
     
     
     //timer 2 and 3 config
-	//T2CONbits.T32 = 1; //This sets operation to 32 bit mode using timers 2 and 3 together
+	T2CONbits.T32 = 1; //This sets operation to 32 bit mode using timers 2 and 3 together
 	T2CONbits.TCKPS = 0; //set the prescaler to 1:1
     T2CONbits.ON = 0; // make sure the timer is off
-    PR2 = 100; //PR2 = 1199000; // set the period register to interrupt at 60Hz // not confirmed in math
-    TMR2 = 0x0; // zero out the timer register
+    //PR2 = 100; 
+	//PR2 = 1199000; // set the period register to interrupt at 60Hz // not confirmed in math
+    PR2 = 1333334;
+	TMR2 = 0x0; // zero out the timer register
 
 	//OpenTimer23( T23_ON | T23_SOURCE_INT | T2_32BIT_MODE_ON | T23_PS_1_1 , 100);
 
@@ -116,7 +118,7 @@ int main(void) {
     //timer 2 and 3 config
 	T3CONbits.TCKPS = 0; //set the prescaler to 1:1
     T3CONbits.ON = 0; // make sure the timer is off
-    PR3 = 150; //PR2 = 1199000; // set the period register to interrupt at 60Hz // not confirmed in math
+    PR3 = 0;//PR3 = 150; //PR2 = 1199000; // set the period register to interrupt at 60Hz // not confirmed in math
     TMR3 = 0x0; // zero out the timer register
 
 	//OpenTimer23( T23_ON | T23_SOURCE_INT | T2_32BIT_MODE_ON | T23_PS_1_1 , 100);
@@ -193,6 +195,11 @@ void T2ISR(void)
 void T3ISR(void)
 {
 	mT3ClearIntFlag();
+    //increment global counter
+    global_count++;
+	//begin t4isr
+    T4CONbits.ON = 1;
+	//it is possible that the T4State variable will need to be reset here
 }
 
 void T4ISR(void)
