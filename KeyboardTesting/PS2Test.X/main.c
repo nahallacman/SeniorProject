@@ -170,7 +170,14 @@ int main(void) {
     {
         if(video == 1)
         {
-            PORTGINV = 0x100; // invert video bit
+			/*
+			int i = 0;
+			while(i<100)
+			{
+				i++;
+			}
+			*/
+			PORTGINV = 0x100; // invert video bit
         }
         else
         {
