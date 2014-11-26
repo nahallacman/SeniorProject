@@ -85,7 +85,7 @@ int main(void) {
     PORTBbits.RB11 = 0 ; // select VGA //NOT CONFIRMED
     //using RG8 for video
     TRISGbits.TRISG8 = 0; //set to output
-    PORTGbits.RG8 = 1;// initialize value just in case, may be unnecessary
+    PORTGbits.RG8 = 0;// initialize value just in case, may be unnecessary
     //using RD4 for horizontal sync
     TRISDbits.TRISD4 = 0; //set to output
     PORTDbits.RD4 = 1;// initialize value to high since active is low
@@ -99,9 +99,18 @@ int main(void) {
 	T2CONbits.T32 = 1; //This sets operation to 32 bit mode using timers 2 and 3 together
 	T2CONbits.TCKPS = 0; //set the prescaler to 1:1
     T2CONbits.ON = 0; // make sure the timer is off
-    //PR2 = 100; 
+    
+	//PR2 = 100; 
 	//PR2 = 1199000; // set the period register to interrupt at 60Hz // not confirmed in math
-    PR2 = 1333334;
+    //PR2 = 1333334; //59.9572Hz
+	//PR2 = 1333330;
+	//PR2 = 1333000; //59.8417
+	//PR2 = 1334000;	//60.2856
+	//PR2 = 1333500;
+	//PR2 = 1333434;
+	PR2 = 1333334;
+	//PR2 = 80000000;
+
 	TMR2 = 0x0; // zero out the timer register
 
 	//OpenTimer23( T23_ON | T23_SOURCE_INT | T2_32BIT_MODE_ON | T23_PS_1_1 , 100);
@@ -118,7 +127,7 @@ int main(void) {
     //timer 2 and 3 config
 	T3CONbits.TCKPS = 0; //set the prescaler to 1:1
     T3CONbits.ON = 0; // make sure the timer is off
-    PR3 = 0;//PR3 = 150; //PR2 = 1199000; // set the period register to interrupt at 60Hz // not confirmed in math
+    //PR3 = 0;//PR3 = 150; //PR2 = 1199000; // set the period register to interrupt at 60Hz // not confirmed in math
     TMR3 = 0x0; // zero out the timer register
 
 	//OpenTimer23( T23_ON | T23_SOURCE_INT | T2_32BIT_MODE_ON | T23_PS_1_1 , 100);
@@ -156,19 +165,19 @@ int main(void) {
 	//enable interrupts
 	asm("ei");
     //---turn things on---
-    T2CONbits.ON = 1; // turn the timer on
-    T3CONbits.ON = 1;
+    //T2CONbits.ON = 1; // turn the timer on
+    //T3CONbits.ON = 1;
 	T4CONbits.ON = 1;
     
     
    
     video = 0; //initialize global variable to tell if video is on or off
     global_count = 0;//initalize global variable for counting ISR entries
-    T4State = 0;//initalize state machine for timer 4 / h sync
+    T4State = 1;//initalize state machine for timer 4 / h sync
 
     while (1)
     {
-        if(video == 1)
+        if(video == 0)
         {
 			/*
 			int i = 0;
@@ -181,7 +190,7 @@ int main(void) {
         }
         else
         {
-            PORTGSET = 0x100; //make sure it is off while not displaying video
+            PORTGCLR = 0x100; //make sure it is off while not displaying video
         }
     }
 }
@@ -202,21 +211,26 @@ void T2ISR(void)
 void T3ISR(void)
 {
 	mT3ClearIntFlag();
+	//mT2ClearIntFlag();
+	PORTBbits.RB12 = 0; // sync pulse is 0's
     //increment global counter
-    global_count++;
-	//begin t4isr
-    T4CONbits.ON = 1;
-	//it is possible that the T4State variable will need to be reset here
+    //global_count++;
+	
+	//PORTBbits.RB12 = 0; // sync pulse is 0's
+	//delay for 8480 clocks
+	while(TMR2 < 8480);
+	PORTBbits.RB12 = 1; //back porch is 1	
 }
 
-void T4ISR(void)
-{
-	//atomically clear the interrupt flag
-    mT4ClearIntFlag();
-	//TMR4 = 0; //test, is this necessary?
+
+	//begin t4isr
+    //T4CONbits.ON = 1;
+	//it is possible that the T4State variable will need to be reset here
+	/*
 	switch(T4State)
 	{
 	    case 0:     
+			video = 0;
 	        //error?
 	        break;
 	
@@ -260,27 +274,34 @@ void T4ISR(void)
 	    case 628:
 	        //end the ISR
 	        T4State = 0;
-	        video = 0;
-	T4CONbits.ON = 0; // turn the timer off at the end of the ISR
 	        break;
 	    default:
-	
-	        /*the time sensitive part of VGA operation is the sync pulses, and horizontal video timing
-	        the times needed:
-	        horizontal sync pulse:
-	         * front porch: 40 pixels (80 clocks)
-	         * sync pulse: 128 pixels (256 clocks)
-	         * back porch: 88 pixels (176 clocks)
-	        */
-	
-	        while( TMR4 < 80 ); // these numbers may need to be tweaked to include the number of cycles wasted before the portd bit can be cleared
-	        PORTDCLR = 0x10;
-	        //PORTDbits.RD4 = 0;
-	        while( TMR4 < 80+256 );
-	        PORTDSET = 0x10;
-	        video = 1;
-	        break;
-	
+		break;
 	   }
 	T4State++;
+	*/
+
+
+void T4ISR(void)
+{
+	//atomically clear the interrupt flag
+    mT4ClearIntFlag();
+	//TMR4 = 0; //test, is this necessary?
+	while( TMR4 < 80 ); // these numbers may need to be tweaked to include the number of cycles wasted before the portd bit can be cleared
+    PORTDCLR = 0x10;
+    //PORTDbits.RD4 = 0;
+    while( TMR4 < 80+256 );
+    PORTDSET = 0x10;
+	//delay for back porch before starting video
+    while(TMR4 < 80+256+176);
+	video = 1;
 }
+
+ /*the time sensitive part of VGA operation is the sync pulses, and horizontal video timing
+ the times needed:
+ horizontal sync pulse:
+  * front porch: 40 pixels (80 clocks)
+  * sync pulse: 128 pixels (256 clocks)
+  * back porch: 88 pixels (176 clocks)
+ */
+			
