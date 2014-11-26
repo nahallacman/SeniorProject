@@ -64,6 +64,7 @@ void T4ISR(void);
 int video;
 int global_count;
 int T4State;
+int T2State;
 
 //	Function Prototypes
 int main(void);
@@ -165,7 +166,7 @@ int main(void) {
 	//enable interrupts
 	asm("ei");
     //---turn things on---
-    //T2CONbits.ON = 1; // turn the timer on
+    T2CONbits.ON = 1; // turn the timer on
     //T3CONbits.ON = 1;
 	T4CONbits.ON = 1;
     
@@ -173,7 +174,8 @@ int main(void) {
    
     video = 0; //initialize global variable to tell if video is on or off
     global_count = 0;//initalize global variable for counting ISR entries
-    T4State = 1;//initalize state machine for timer 4 / h sync
+    T4State = 0;//initalize state machine for timer 4 / h sync
+	T2State = 0;
 
     while (1)
     {
@@ -212,14 +214,20 @@ void T3ISR(void)
 {
 	mT3ClearIntFlag();
 	//mT2ClearIntFlag();
-	PORTBbits.RB12 = 0; // sync pulse is 0's
-    //increment global counter
-    //global_count++;
-	
-	//PORTBbits.RB12 = 0; // sync pulse is 0's
-	//delay for 8480 clocks
-	while(TMR2 < 8480);
-	PORTBbits.RB12 = 1; //back porch is 1	
+	if(T2State == 0)
+	{
+		PORTBbits.RB12 = 0; // sync pulse is 0's
+    	//increment global counter
+    	//global_count++;
+		PR2 = 8480; //delay next state for 8480 clocks
+		T2State = 1;
+	}
+	else
+	{
+		PORTBbits.RB12 = 1; //back porch is 1
+		PR2 = 1333334 - 8480;	
+		T2State = 0;
+	}
 }
 
 
@@ -287,14 +295,33 @@ void T4ISR(void)
 	//atomically clear the interrupt flag
     mT4ClearIntFlag();
 	//TMR4 = 0; //test, is this necessary?
-	while( TMR4 < 80 ); // these numbers may need to be tweaked to include the number of cycles wasted before the portd bit can be cleared
-    PORTDCLR = 0x10;
+	if(T4State == 0)
+	{
+		//while( TMR4 < 80 ); // these numbers may need to be tweaked to include the number of cycles wasted before the portd bit can be cleared
+    	PORTDCLR = 0x10;
     //PORTDbits.RD4 = 0;
-    while( TMR4 < 80+256 );
-    PORTDSET = 0x10;
-	//delay for back porch before starting video
-    while(TMR4 < 80+256+176);
+		PR4 = 80;
+		T4State = 1;
+		video = 1;
+ 	}
+	else if(T4State == 1)
+	{
+		
+		//while( TMR4 < 80+256 );
+    	PORTDSET = 0x10;
+		PR4 = 80+256;
+		T4State = 2;
+	}
+	else if(T4State == 2)
+{
+	//while(TMR4 < 80+256+176);
+	PR4 = 2112 - 80 - 256 - 176;
 	video = 1;
+	T4State = 0;
+}
+	//delay for back porch before starting video
+    
+
 }
 
  /*the time sensitive part of VGA operation is the sync pulses, and horizontal video timing
