@@ -61,7 +61,8 @@ void T3ISR(void);
 
 void T4ISR(void);
 
-int video;
+int videoON;
+int videoSEL;
 int global_count;
 int T4State;
 int T2State;
@@ -75,8 +76,18 @@ int main(void) {
     SYSTEMConfig(80000000L, SYS_CFG_WAIT_STATES | SYS_CFG_PCACHE);
 
 	//SYSTEMConfig(72000000L, SYS_CFG_WAIT_STATES | SYS_CFG_PCACHE);
+	
+    //---keyboard configuration begin---
+    //using RD6 for PS2CLK   //  PORTDbits.RD6;
+    TRISDbits.TRISD6 = 1; // set to input
+    //using RD7 for PS2DATA
+    TRISDbits.TRISD7 = 1; // set to input
 
-    
+    //using internal pullup resistors
+    CNPUEbits.CNPUE15 = 1; //PS2CLK pullup
+    CNPUEbits.CNPUE16 = 1; //PS2DATA pullup
+    //---keyboard configuration end---
+
     //---VGA configuration begin---
     
     //---VGA port bits begin---
@@ -172,23 +183,28 @@ int main(void) {
     
     
    
-    video = 0; //initialize global variable to tell if video is on or off
-    global_count = 0;//initalize global variable for counting ISR entries
+    videoON = 0; //initialize global variable to tell if video is on or off
+    videoSEL = 1;
+	global_count = 0;//initalize global variable for counting ISR entries
     T4State = 0;//initalize state machine for timer 4 / h sync
 	T2State = 0;
 
     while (1)
     {
-        if(video == 0)
+        if(videoON == 1)
         {
-			/*
-			int i = 0;
-			while(i<100)
+			if( videoSEL == 1 )
 			{
-				i++;
+				PORTGINV = 0x100;
 			}
-			*/
-			PORTGINV = 0x100; // invert video bit
+			else
+			{
+				PORTGSET = 0x100; // only on video pattern
+			}
+			if(PORTDbits.RD6 == 0)
+			{
+				videoSEL = 2;
+			}
         }
         else
         {
@@ -295,33 +311,17 @@ void T4ISR(void)
 	//atomically clear the interrupt flag
     mT4ClearIntFlag();
 	//TMR4 = 0; //test, is this necessary?
-	if(T4State == 0)
-	{
-		//while( TMR4 < 80 ); // these numbers may need to be tweaked to include the number of cycles wasted before the portd bit can be cleared
-    	PORTDCLR = 0x10;
+	while( TMR4 < 80 ); // these numbers may need to be tweaked to include the number of cycles wasted before the portd bit can be cleared
+    //PORTDCLR = 0x10;
+	PORTDSET = 0x10;
+	videoON = 0;
     //PORTDbits.RD4 = 0;
-		PR4 = 80;
-		T4State = 1;
-		video = 1;
- 	}
-	else if(T4State == 1)
-	{
-		
-		//while( TMR4 < 80+256 );
-    	PORTDSET = 0x10;
-		PR4 = 80+256;
-		T4State = 2;
-	}
-	else if(T4State == 2)
-{
-	//while(TMR4 < 80+256+176);
-	PR4 = 2112 - 80 - 256 - 176;
-	video = 1;
-	T4State = 0;
-}
+    while( TMR4 < 80+256 );
+	PORTDCLR = 0x10;
+    //PORTDSET = 0x10;
 	//delay for back porch before starting video
-    
-
+    while(TMR4 < 80+256+176);
+	videoON = 1;
 }
 
  /*the time sensitive part of VGA operation is the sync pulses, and horizontal video timing
