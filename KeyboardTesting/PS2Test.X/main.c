@@ -66,6 +66,8 @@ int videoSEL;
 int global_count;
 int T4State;
 int T2State;
+int KEYPRESSED;
+int linecount;
 
 //	Function Prototypes
 int main(void);
@@ -191,6 +193,15 @@ int main(void) {
 
     while (1)
     {
+        if(PORTDbits.RD6 == 0)
+        {
+            KEYPRESSED = 1;
+        }
+
+
+
+
+        /*
         if(videoON == 1)
         {
 			if( videoSEL == 1 )
@@ -210,6 +221,7 @@ int main(void) {
         {
             PORTGCLR = 0x100; //make sure it is off while not displaying video
         }
+         */
     }
 }
 
@@ -243,6 +255,7 @@ void T3ISR(void)
 		PORTBbits.RB12 = 1; //back porch is 1
 		PR2 = 1333334 - 8480;	
 		T2State = 0;
+                linecount = 0;
 	}
 }
 
@@ -322,6 +335,26 @@ void T4ISR(void)
 	//delay for back porch before starting video
     while(TMR4 < 80+256+176);
 	videoON = 1;
+    if(KEYPRESSED == 1)
+    {
+        if(linecount > 99)
+        {
+            PORTGINV = 0x100;
+            linecount = 0;
+        }
+    }
+    else
+    {
+        if(linecount > 299)
+        {
+            PORTGINV = 0x100;
+            linecount = 0;
+        }
+    }
+        linecount++;
+    
+
+        
 }
 
  /*the time sensitive part of VGA operation is the sync pulses, and horizontal video timing
