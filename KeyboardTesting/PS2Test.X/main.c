@@ -51,15 +51,19 @@
 //set the priority of the timer3 service routine
 #pragma interrupt T3ISR IPL7 vector 12
 
-
 //set the priority of the timer4 service routine
 #pragma interrupt T4ISR IPL5 vector 16
+
+//set the priority of the SPI2ISR service routine
+#pragma interrupt SPI2ISR IPL4 vector 31
 
 void T2ISR(void);
 
 void T3ISR(void);
 
 void T4ISR(void);
+
+void SPI2ISR(void);
 
 int videoON;
 int videoSEL;
@@ -121,17 +125,40 @@ int main(void) {
     PORTBbits.RB12 = 1;// initialize value to high since active is low
     //---VGA port bits end ---
     
-	//SPI2 for video config begin
+	//---SPI2 for video config begin---
     SPI2BRG = 0; // set BRG value to 0 for 40MHz operation
 	//need to confirm the 40MHz operation
 	//SPI2TX = TESTDATA;
 
-			//need to set SPI device to 32 bit operation
-			//need to figure out the polarity of video signals for the SPI device
-				//I believe it is active high video, but I do not know for sure
-			
+	//need to figure out the polarity of video signals for the SPI device
+	//I believe it is active high video, but I do not know for sure
+	SPI2CONbits.CKE = 0; //these values are copy pasted, not checked 
+    SPI2CONbits.CKP = 1;
+    SPI2CONbits.SMP = 0;
 
-	//SPI2 for video config end
+    SPI2CONbits.MODE16 = 0; //set SPI device to 32 bit operation
+    SPI2CONbits.MODE32 = 1;
+
+	SPI2CONbits.STXISEL = 0b01; // interrupt when buffer is empty, but shift register is not
+	
+	//could be useful, but don't use yet.
+	//SPI2CONbits.ENHBUF = 1; //use the enhanced buffering
+
+	//compiler doesn't recognize this value
+	//SPI2CONbits.MCLKSEL = 0; //use PBclk not MCLK for the baud rate generator
+	
+	SPI2CONbits.ON = 1;//turn SPI2 on
+
+	//---configure SPI2 interrupts---
+	//only using transmit interrupt
+	IEC1bits.SPI2TXIE = 1;
+	IFS1bits.SPI2TXIF = 0;
+
+	//IPC7bits.SPI2TX = 0b100;
+	IPC7SET = 10000000;//priortiy bits 26, 27, 28, set bit 28 for priority 4
+	IPC7CLR = 3000000; //clear subpriority bits 25 and 24	
+
+	//---SPI2 for video config end---
 
     //timer 2 and 3 config
 	T2CONbits.T32 = 1; //This sets operation to 32 bit mode using timers 2 and 3 together
@@ -214,6 +241,13 @@ int main(void) {
 	global_count = 0;//initalize global variable for counting ISR entries
     T4State = 0;//initalize state machine for timer 4 / h sync
 	T2State = 0;
+
+
+	//manually set an SPI flag for testing
+	IFS1bits.SPI2TXIF = 1;
+
+
+
 
     while (1)
     {
@@ -421,3 +455,15 @@ void T4ISR(void)
   * back porch: 88 pixels (176 clocks)
  */
 			
+
+void SPI2ISR(void)
+{
+	//clear the interrupt flag atomically
+	IFS1CLR = 0x80;
+	//put more information in the transmit buffer
+	
+	//test putting information into the SPI2TX buffer
+	SPI2BUF = TESTDATA;
+	//test clearing the buffer
+	//SPI2BUF;
+}
