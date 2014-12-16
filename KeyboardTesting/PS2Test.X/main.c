@@ -69,6 +69,9 @@ int T2State;
 int KEYPRESSED;
 int linecount;
 
+
+int TESTDATA = 0x55555555;
+
 //	Function Prototypes
 int main(void);
 
@@ -97,10 +100,20 @@ int main(void) {
     //PORTBbits.RB11 = ?
     TRISBbits.TRISB11 = 0; //set to output
     PORTBbits.RB11 = 0 ; // select VGA //NOT CONFIRMED
-    //using RG8 for video
+    
+	//using RG8 for video on duinomite, green on Cal's project
     TRISGbits.TRISG8 = 0; //set to output
     PORTGbits.RG8 = 0;// initialize value just in case, may be unnecessary
-    //using RD4 for horizontal sync
+    
+	//using RG6 for video blue on Cal's project
+    TRISGbits.TRISG6 = 0; //set to output
+    PORTGbits.RG6 = 0;// initialize value just in case, may be unnecessary
+
+	//using RG9 for video red on Cal's project
+    TRISGbits.TRISG9 = 0; //set to output
+    PORTGbits.RG9 = 0;// initialize value just in case, may be unnecessary
+
+	//using RD4 for horizontal sync
     TRISDbits.TRISD4 = 0; //set to output
     PORTDbits.RD4 = 1;// initialize value to high since active is low
     //using RB12 for vertical sync
@@ -108,7 +121,18 @@ int main(void) {
     PORTBbits.RB12 = 1;// initialize value to high since active is low
     //---VGA port bits end ---
     
-    
+	//SPI2 for video config begin
+    SPI2BRG = 0; // set BRG value to 0 for 40MHz operation
+	//need to confirm the 40MHz operation
+	//SPI2TX = TESTDATA;
+
+			//need to set SPI device to 32 bit operation
+			//need to figure out the polarity of video signals for the SPI device
+				//I believe it is active high video, but I do not know for sure
+			
+
+	//SPI2 for video config end
+
     //timer 2 and 3 config
 	T2CONbits.T32 = 1; //This sets operation to 32 bit mode using timers 2 and 3 together
 	T2CONbits.TCKPS = 0; //set the prescaler to 1:1
@@ -255,7 +279,10 @@ void T3ISR(void)
 		PORTBbits.RB12 = 1; //back porch is 1
 		PR2 = 1333334 - 8480;	
 		T2State = 0;
-                linecount = 0;
+         
+
+		PORTGCLR = 0x240; // clear the video pins for the beginning of frame
+		linecount = 0;
 	}
 }
 
@@ -324,6 +351,9 @@ void T4ISR(void)
 	//atomically clear the interrupt flag
     mT4ClearIntFlag();
 	//TMR4 = 0; //test, is this necessary?
+
+	PORTGCLR = 0x240; // video must be cleared when it is not in frame
+
 	while( TMR4 < 80 ); // these numbers may need to be tweaked to include the number of cycles wasted before the portd bit can be cleared
     //PORTDCLR = 0x10;
 	PORTDSET = 0x10;
@@ -335,6 +365,32 @@ void T4ISR(void)
 	//delay for back porch before starting video
     while(TMR4 < 80+256+176);
 	videoON = 1;
+	if(linecount < 600)
+	{
+		//PORTGINV = 0x100;
+		PORTGSET = 0x240;
+	}
+/*
+	else if(linecount < 600)
+	{
+		PORTGINV = 0x100;
+	}
+*/
+	else
+	{
+		//not in video frame?
+		linecount = 999;
+	}
+	linecount++;
+
+
+
+
+
+
+
+
+/*
     if(KEYPRESSED == 1)
     {
         if(linecount > 99)
@@ -352,7 +408,7 @@ void T4ISR(void)
         }
     }
         linecount++;
-    
+*/    
 
         
 }
