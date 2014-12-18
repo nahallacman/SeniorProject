@@ -73,6 +73,7 @@ int T2State;
 int KEYPRESSED;
 int linecount;
 
+//this value should be constant
 //int PR2VAL1 = 1334000; //doesnt work, guess test, not true limit testing
 //int PR2VAL1 = 1333334; //works 59.9999Hz
 //int PR2VAL1 = 1333300; // 60.0014Hz
@@ -80,7 +81,9 @@ int linecount;
 //int PR2VAL1 = 1330000; //doesn't work, guess test, not true limit testing
 //int PR2VAL1 = 1332000; // doesn't work, 60.0600Hz
 //int PR2VAL1 = 1332500; // doesn't work, 60.0374Hz, black screen
-int PR2VAL1 = 1326260;
+//int PR2VAL1 = 1326260; //works, 60.3199HZ  
+int PR2VAL1 = 1326259; // works, 60.3200Hz
+//int PR2VAL1 = 1326261;
 
         //PR2 = 1333000; //59.8417
         //PR2 = 1333334; //59.9572Hz
@@ -157,8 +160,11 @@ int main(void) {
     SPI2CONbits.MODE16 = 0; //set SPI device to 32 bit operation
     SPI2CONbits.MODE32 = 1;
 
+    SPI2CONbits.FRMEN = 1;
+
 	SPI2CONbits.STXISEL = 0b01; // interrupt when buffer is empty, but shift register is not
-	
+        //SPI2CONbits.STXISEL = 0b00;//interrupt when shift register is empty
+
 	//could be useful, but don't use yet.
 	//SPI2CONbits.ENHBUF = 1; //use the enhanced buffering
 
@@ -166,16 +172,18 @@ int main(void) {
 	//SPI2CONbits.MCLKSEL = 0; //use PBclk not MCLK for the baud rate generator
 	
 	//SPI2CONbits.ON = 1;//turn SPI2 on
-	SPI2CONbits.ON = 0;//testing
+	//SPI2CONbits.ON = 0;//testing
 
 	//---configure SPI2 interrupts---
 	//only using transmit interrupt
-	IEC1bits.SPI2TXIE = 1;
+	IEC1bits.SPI2ATXIE = 1;
 	IFS1bits.SPI2TXIF = 0;
 
 	//IPC7bits.SPI2TX = 0b100;
-	IPC7SET = 10000000;//priortiy bits 26, 27, 28, set bit 28 for priority 4
-	IPC7CLR = 3000000; //clear subpriority bits 25 and 24	
+	//IPC7SET = 10000000;//priortiy bits 26, 27, 28, set bit 28 for priority 4
+        IPC7bits.SPI2IP = 4;
+	//IPC7CLR = 3000000; //clear subpriority bits 25 and 24
+        IPC7bits.SPI2IS = 0;
 
 	//---SPI2 for video config end---
 
@@ -253,6 +261,8 @@ int main(void) {
     T2CONbits.ON = 1; // turn the timer on
     //T3CONbits.ON = 1;
 	T4CONbits.ON = 1;
+
+       SPI2CONbits.ON = 1;//turn SPI2 on
     
     
    
@@ -267,7 +277,8 @@ int main(void) {
 	//try to start things by putting something in the shift register
 	SPI2BUF = TESTDATA;
 	//manually set an SPI flag for testing
-	IFS1bits.SPI2TXIF = 1;
+	//IFS1bits.SPI2TXIF = 1;
+        //IFS1bits.SPI2ATXIF = 1;
 
 
 
@@ -423,7 +434,9 @@ void T4ISR(void)
 	PORTDCLR = 0x10;
     //PORTDSET = 0x10;
 	//delay for back porch before starting video
-    while(TMR4 < 80+256+176);
+    while(TMR4 < 80+256+176); // a quick test shows this may be too long, but is still necessary
+                            // this leads me to believe that the signal durring the sync pulse is read as "0", and the brightness is the difference between that value and the values read as pixels
+        //while(TMR4 < 80+256+150);
 	videoON = 1;
 	if(linecount < 600)
 	{
@@ -493,5 +506,5 @@ void SPI2ISR(void)
 	//test putting information into the SPI2TX buffer
 	SPI2BUF = TESTDATA;
 	//test clearing the buffer
-	//SPI2BUF;
+	SPI2BUF;
 }
