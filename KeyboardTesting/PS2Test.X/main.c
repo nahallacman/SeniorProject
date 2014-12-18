@@ -107,11 +107,14 @@ int main(void) {
     
 	//using RG8 for video on duinomite, green on Cal's project
     TRISGbits.TRISG8 = 0; //set to output
-    PORTGbits.RG8 = 0;// initialize value just in case, may be unnecessary
+    PORTGbits.RG8 = 1;// initialize value just in case, may be unnecessary
     
 	//using RG6 for video blue on Cal's project
-    TRISGbits.TRISG6 = 0; //set to output
-    PORTGbits.RG6 = 0;// initialize value just in case, may be unnecessary
+	//TRISGbits.TRISG6 = 0; //set to output
+    //PORTGbits.RG6 = 0;// initialize value just in case, may be unnecessary
+	//conflict with SPI2 so using RG7 (USBFAULT)
+	TRISGbits.TRISG7 = 0;
+	PORTGbits.RG7 = 0;
 
 	//using RG9 for video red on Cal's project
     TRISGbits.TRISG9 = 0; //set to output
@@ -124,7 +127,7 @@ int main(void) {
     TRISBbits.TRISB12 = 0; //set to output
     PORTBbits.RB12 = 1;// initialize value to high since active is low
     //---VGA port bits end ---
-    
+ 
 	//---SPI2 for video config begin---
     SPI2BRG = 0; // set BRG value to 0 for 40MHz operation
 	//need to confirm the 40MHz operation
@@ -147,7 +150,8 @@ int main(void) {
 	//compiler doesn't recognize this value
 	//SPI2CONbits.MCLKSEL = 0; //use PBclk not MCLK for the baud rate generator
 	
-	SPI2CONbits.ON = 1;//turn SPI2 on
+	//SPI2CONbits.ON = 1;//turn SPI2 on
+	SPI2CONbits.ON = 1;//testing
 
 	//---configure SPI2 interrupts---
 	//only using transmit interrupt
@@ -163,7 +167,7 @@ int main(void) {
     //timer 2 and 3 config
 	T2CONbits.T32 = 1; //This sets operation to 32 bit mode using timers 2 and 3 together
 	T2CONbits.TCKPS = 0; //set the prescaler to 1:1
-    T2CONbits.ON = 0; // make sure the timer is off
+    T2CONbits.ON = 1; // make sure the timer is off
     
 	//PR2 = 100; 
 	//PR2 = 1199000; // set the period register to interrupt at 60Hz // not confirmed in math
@@ -243,6 +247,9 @@ int main(void) {
 	T2State = 0;
 
 
+
+	//try to start things by putting something in the shift register
+	SPI2BUF = TESTDATA;
 	//manually set an SPI flag for testing
 	IFS1bits.SPI2TXIF = 1;
 
@@ -315,7 +322,9 @@ void T3ISR(void)
 		T2State = 0;
          
 
-		PORTGCLR = 0x240; // clear the video pins for the beginning of frame
+		//PORTGCLR = 0x240; // clear the video pins for the beginning of frame
+		//PORTGCLR = 0x340;
+		PORTGCLR = 0x380;
 		linecount = 0;
 	}
 }
@@ -386,8 +395,9 @@ void T4ISR(void)
     mT4ClearIntFlag();
 	//TMR4 = 0; //test, is this necessary?
 
-	PORTGCLR = 0x240; // video must be cleared when it is not in frame
-
+	//PORTGCLR = 0x240; // video must be cleared when it is not in frame
+	PORTGCLR = 0x380;
+	
 	while( TMR4 < 80 ); // these numbers may need to be tweaked to include the number of cycles wasted before the portd bit can be cleared
     //PORTDCLR = 0x10;
 	PORTDSET = 0x10;
@@ -402,7 +412,9 @@ void T4ISR(void)
 	if(linecount < 600)
 	{
 		//PORTGINV = 0x100;
-		PORTGSET = 0x240;
+		//PORTGSET = 0x240;
+		//PORTGSET = 0x340;
+		PORTGSET = 0x380;
 	}
 /*
 	else if(linecount < 600)
