@@ -73,6 +73,21 @@ int T2State;
 int KEYPRESSED;
 int linecount;
 
+//int PR2VAL1 = 1334000; //doesnt work, guess test, not true limit testing
+//int PR2VAL1 = 1333334; //works 59.9999Hz
+//int PR2VAL1 = 1333300; // 60.0014Hz
+//int PR2VAL1 = 1333000; //60.0149 Hz
+//int PR2VAL1 = 1330000; //doesn't work, guess test, not true limit testing
+//int PR2VAL1 = 1332000; // doesn't work, 60.0600Hz
+//int PR2VAL1 = 1332500; // doesn't work, 60.0374Hz, black screen
+int PR2VAL1 = 1326260;
+
+        //PR2 = 1333000; //59.8417
+        //PR2 = 1333334; //59.9572Hz
+        //PR2 = 1334000;	//60.2856
+	//PR2 = 1333334; //59.9999Hz
+
+
 
 int TESTDATA = 0x55555555;
 
@@ -151,7 +166,7 @@ int main(void) {
 	//SPI2CONbits.MCLKSEL = 0; //use PBclk not MCLK for the baud rate generator
 	
 	//SPI2CONbits.ON = 1;//turn SPI2 on
-	SPI2CONbits.ON = 1;//testing
+	SPI2CONbits.ON = 0;//testing
 
 	//---configure SPI2 interrupts---
 	//only using transmit interrupt
@@ -171,14 +186,14 @@ int main(void) {
     
 	//PR2 = 100; 
 	//PR2 = 1199000; // set the period register to interrupt at 60Hz // not confirmed in math
-    //PR2 = 1333334; //59.9572Hz
-	//PR2 = 1333330;
-	//PR2 = 1333000; //59.8417
-	//PR2 = 1334000;	//60.2856
-	//PR2 = 1333500;
-	//PR2 = 1333434;
-	PR2 = 1333334;
-	//PR2 = 80000000;
+
+
+        //PR2 = 1333000; //59.8417
+        //PR2 = 1333334; //59.9572Hz
+        //PR2 = 1334000;	//60.2856
+	//PR2 = 1333334; //59.9999Hz
+
+    PR2 = PR2VAL1;
 
 	TMR2 = 0x0; // zero out the timer register
 
@@ -199,9 +214,9 @@ int main(void) {
     //PR3 = 0;//PR3 = 150; //PR2 = 1199000; // set the period register to interrupt at 60Hz // not confirmed in math
     TMR3 = 0x0; // zero out the timer register
 
-	//OpenTimer23( T23_ON | T23_SOURCE_INT | T2_32BIT_MODE_ON | T23_PS_1_1 , 100);
+    //OpenTimer23( T23_ON | T23_SOURCE_INT | T2_32BIT_MODE_ON | T23_PS_1_1 , 100);
 
-	mT3ClearIntFlag(); // clear the interupt flag just in case    
+    mT3ClearIntFlag(); // clear the interupt flag just in case
     //configure the timer 2 priority
     mT3SetIntPriority(7);
     // and sub priority
@@ -213,7 +228,8 @@ int main(void) {
     //timer 4 config
     T4CONbits.TCKPS = 0;//set the prescaler to 1:1
     T4CONbits.ON = 0;
-    PR4 = 2112;//this is a guess
+    //PR4 = 2112;//this is a guess
+    PR4 = 2111; // this is a slightly better guess, giving 37.8788 khz refresh, but it doesn't quite work
     TMR4 = 0; // zero out the timer register
 
     mT4ClearIntFlag(); // clear the interupt flag just in case
@@ -259,7 +275,7 @@ int main(void) {
     while (1)
     {
         if(PORTDbits.RD6 == 0)
-        {
+        { 
             KEYPRESSED = 1;
         }
 
@@ -318,7 +334,7 @@ void T3ISR(void)
 	else
 	{
 		PORTBbits.RB12 = 1; //back porch is 1
-		PR2 = 1333334 - 8480;	
+		PR2 = PR2VAL1 - 8480;
 		T2State = 0;
          
 
