@@ -49,7 +49,7 @@
 #pragma interrupt T2ISR IPL6 vector 8
 
 //set the priority of the timer3 service routine
-#pragma interrupt T3ISR IPL7 vector 12
+#pragma interrupt T3ISR IPL1 vector 12
 
 //set the priority of the timer4 service routine
 #pragma interrupt T4ISR IPL5 vector 16
@@ -68,10 +68,12 @@ void SPI2ISR(void);
 int videoON;
 int videoSEL;
 int global_count;
-int T4State;
+int T4STATE;
 int T2State;
 int KEYPRESSED;
 int linecount;
+
+int SPI2STATE = 1;
 
 //this value should be constant
 //int PR2VAL1 = 1334000; //doesnt work, guess test, not true limit testing
@@ -93,8 +95,9 @@ int const PR2VAL1 = 1326259; // works, 60.3200Hz
 
 
 //int TESTDATA = 0x55555555;
-//int TESTDATA = 0xFFFF0000;
-int TESTDATA = 0xFF000000;
+int TESTDATA = 0xFFFF0000;
+//int TESTDATA = 0xFF000000;
+//int TESTDATA = 0xFFFFFFFF;
 
 //	Function Prototypes
 int main(void);
@@ -167,6 +170,9 @@ int main(void) {
 
     SPI2CONbits.MSTEN = 1;
 
+    //SPI2CONbits. = 1; //disable the SDI pin
+    SPI2CONSET = 0x10;
+
 	SPI2CONbits.STXISEL = 0b01; // interrupt when buffer is empty, but shift register is not
         //SPI2CONbits.STXISEL = 0b00;//interrupt when shift register is empty
 
@@ -208,11 +214,11 @@ int main(void) {
 
     PR2 = PR2VAL1;
 
-	TMR2 = 0x0; // zero out the timer register
+    TMR2 = 0x0; // zero out the timer register
 
-	//OpenTimer23( T23_ON | T23_SOURCE_INT | T2_32BIT_MODE_ON | T23_PS_1_1 , 100);
+    //OpenTimer23( T23_ON | T23_SOURCE_INT | T2_32BIT_MODE_ON | T23_PS_1_1 , 100);
 
-	mT2ClearIntFlag(); // clear the interupt flag just in case    
+    mT2ClearIntFlag(); // clear the interupt flag just in case
     //configure the timer 2 priority
     mT2SetIntPriority(6);
     // and sub priority
@@ -222,7 +228,7 @@ int main(void) {
 
 
     //timer 2 and 3 config
-	T3CONbits.TCKPS = 0; //set the prescaler to 1:1
+    T3CONbits.TCKPS = 0; //set the prescaler to 1:1
     T3CONbits.ON = 0; // make sure the timer is off
     //PR3 = 0;//PR3 = 150; //PR2 = 1199000; // set the period register to interrupt at 60Hz // not confirmed in math
     TMR3 = 0x0; // zero out the timer register
@@ -231,7 +237,7 @@ int main(void) {
 
     mT3ClearIntFlag(); // clear the interupt flag just in case
     //configure the timer 2 priority
-    mT3SetIntPriority(7);
+    mT3SetIntPriority(1);
     // and sub priority
     mT3SetIntSubPriority(0);
     //Then enable the interrupt
@@ -267,20 +273,20 @@ int main(void) {
     //T3CONbits.ON = 1;
 	T4CONbits.ON = 1;
 
-       SPI2CONbits.ON = 1;//turn SPI2 on
+       SPI2CONbits.ON = 0;//turn SPI2 on
     
     
    
     videoON = 0; //initialize global variable to tell if video is on or off
     videoSEL = 1;
 	global_count = 0;//initalize global variable for counting ISR entries
-    T4State = 0;//initalize state machine for timer 4 / h sync
+    T4STATE = 0;//initalize state machine for timer 4 / h sync
 	T2State = 0;
 
 
 
 	//try to start things by putting something in the shift register
-	SPI2BUF = TESTDATA;
+	//SPI2BUF = TESTDATA;
 	//manually set an SPI flag for testing
 	//IFS1bits.SPI2TXIF = 1;
         //IFS1bits.SPI2ATXIF = 1;
@@ -424,24 +430,48 @@ void T3ISR(void)
 
 void T4ISR(void)
 {
-	//atomically clear the interrupt flag
+    //atomically clear the interrupt flag
     mT4ClearIntFlag();
-	//TMR4 = 0; //test, is this necessary?
+    //TMR4 = 0; //test, is this necessary?
 
-	//PORTGCLR = 0x240; // video must be cleared when it is not in frame
-	PORTGCLR = 0x380;
-        SPI2CONbits.ON = 0;//turn SPI2 off for the sync pulse
-	
-	while( TMR4 < 80 ); // these numbers may need to be tweaked to include the number of cycles wasted before the portd bit can be cleared
-    //PORTDCLR = 0x10;
-	PORTDSET = 0x10;
-	videoON = 0;
-    //PORTDbits.RD4 = 0;
-    while( TMR4 < 80+256 );
-	PORTDCLR = 0x10;
-    //PORTDSET = 0x10;
-	//delay for back porch before starting video
-    while(TMR4 < 80+256+176); // a quick test shows this may be too long, but is still necessary
+    switch(T4STATE)
+    {
+        case 0:
+        //PORTGCLR = 0x240; // video must be cleared when it is not in frame
+        PORTGCLR = 0x380;
+
+        PR4 = 256;
+        //PR4 = 80+256;
+        //PR4 = 80 + 221;
+
+        //SPI2CONbits.ON = 0;//turn SPI2 off for the sync pulse
+        //SPI2CONbits.
+
+        while( TMR4 < 80 ); // these numbers may need to be tweaked to include the number of cycles wasted before the portd bit can be cleared
+        //PORTDCLR = 0x10;
+        PORTDSET = 0x10;
+        videoON = 0;
+        //PORTDbits.RD4 = 0;
+        T4STATE = 1;
+        
+    break;
+        case 1:
+        //while( TMR4 < 80+256 );
+        PORTDCLR = 0x10;
+
+        //testing getting the SPI video in frame
+        //IFS1bits.SPI2TXIF = 1;
+        //SPI2BUF = TESTDATA;
+
+        //PORTDSET = 0x10;
+        T4STATE = 2;
+        PR4 = 80+256+176;
+    break;
+        case 2:
+        PR4 = 2111 - (80 + 256) - (80+256+176) ;
+
+        //delay for back porch before starting video
+        //while(TMR4 < 80+256+176); // a quick test shows this may be too long, but is still necessary
                             // this leads me to believe that the signal durring the sync pulse is read as "0", and the brightness is the difference between that value and the values read as pixels
         //while(TMR4 < 80+256+150);
 	videoON = 1;
@@ -449,10 +479,12 @@ void T4ISR(void)
 	{
 		//PORTGINV = 0x100;
 		//PORTGSET = 0x240;
-		//PORTGSET = 0x340; //turned video off for testing
 		//PORTGSET = 0x380;
 
+                PORTGSET = 0x380; //turned video off for testing
 
+            //SPI2CONbits.ON = 1;//turn SPI2 on
+            //IFS1bits.SPI2TXIF = 1;
                 
 	}
 /*
@@ -464,12 +496,14 @@ void T4ISR(void)
 	else
 	{
 		//not in video frame?
-		linecount = 999;
+		//linecount = 999;
 	}
 	linecount++;
 
-
-        SPI2CONbits.ON = 1;//turn SPI2 on
+        T4STATE = 0;
+        
+     break;
+    }
 
 
 
@@ -516,10 +550,63 @@ void SPI2ISR(void)
 	//put more information in the transmit buffer
 	
 	//test putting information into the SPI2TX buffer
-	SPI2BUF = TESTDATA; //4 buffer slots
-        SPI2BUF = TESTDATA;
-        SPI2BUF = TESTDATA;
-        SPI2BUF = TESTDATA;
+	//SPI2BUF = TESTDATA; //4 buffer slots
+        //SPI2BUF = TESTDATA;
+        //SPI2BUF = TESTDATA;
+        //SPI2BUF = TESTDATA;
 	//test clearing the buffer
 	//SPI2BUF;
+
+        switch(SPI2STATE)
+        {
+            case 1:
+            SPI2BUF = TESTDATA; //4 buffer slots
+            SPI2BUF = TESTDATA;
+            SPI2BUF = TESTDATA;
+            SPI2BUF = TESTDATA;
+            SPI2STATE = 2;
+                break;
+            case 2:
+            SPI2BUF = TESTDATA; //4 buffer slots
+            SPI2BUF = TESTDATA;
+            SPI2BUF = TESTDATA;
+            SPI2BUF = TESTDATA;
+            SPI2STATE = 3;
+                break;
+            case 3:
+            SPI2BUF = TESTDATA; //4 buffer slots
+            SPI2BUF = TESTDATA;
+            SPI2BUF = TESTDATA;
+            SPI2BUF = TESTDATA;
+            SPI2STATE = 4;
+                break;
+            case 4:
+            SPI2BUF = TESTDATA; //4 buffer slots
+            SPI2BUF = TESTDATA;
+            SPI2BUF = TESTDATA;
+            SPI2BUF = TESTDATA;
+            SPI2STATE = 5;
+                break;
+            case 5:
+            SPI2BUF = TESTDATA; //4 buffer slots
+            SPI2BUF = TESTDATA;
+            SPI2BUF = TESTDATA;
+            SPI2BUF = TESTDATA;
+            SPI2STATE = 6;
+                break;
+            case 6:
+            SPI2BUF = TESTDATA; //4 buffer slots
+            SPI2BUF = TESTDATA;
+            SPI2BUF = TESTDATA;
+            SPI2BUF = TESTDATA;
+            SPI2STATE = 7;
+                break;
+            case 7:
+            SPI2BUF = TESTDATA; //last buffer fill for line
+            SPI2STATE = 1;
+                break;
+            case 8: // this state may be needed to stop the SPI after it finishes
+                break;
+
+        }
 }
