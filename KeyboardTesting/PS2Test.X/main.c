@@ -176,6 +176,10 @@ int main(void) {
 	SPI2CONbits.STXISEL = 0b01; // interrupt when buffer is empty, but shift register is not
         //SPI2CONbits.STXISEL = 0b00;//interrupt when shift register is empty
 
+        SPI2CONbits.SSEN = 0; // disable the slave select control
+
+        SPI2CONbits.MSSEN = 0; // Slave select SPI support is disabled
+
 	//could be useful, but don't use yet.
 	//SPI2CONbits.ENHBUF = 1; //use the enhanced buffering
 
@@ -444,7 +448,7 @@ void T4ISR(void)
         //PR4 = 80+256;
         //PR4 = 80 + 221;
 
-        //SPI2CONbits.ON = 0;//turn SPI2 off for the sync pulse
+        SPI2CONbits.ON = 0;//turn SPI2 off for the sync pulse
         //SPI2CONbits.
 
         while( TMR4 < 80 ); // these numbers may need to be tweaked to include the number of cycles wasted before the portd bit can be cleared
@@ -483,8 +487,8 @@ void T4ISR(void)
 
                 PORTGSET = 0x380; //turned video off for testing
 
-            //SPI2CONbits.ON = 1;//turn SPI2 on
-            //IFS1bits.SPI2TXIF = 1;
+            SPI2CONbits.ON = 1;//turn SPI2 on
+            IFS1bits.SPI2TXIF = 1;
                 
 	}
 /*
