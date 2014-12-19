@@ -82,7 +82,7 @@ int linecount;
 //int PR2VAL1 = 1332000; // doesn't work, 60.0600Hz
 //int PR2VAL1 = 1332500; // doesn't work, 60.0374Hz, black screen
 //int PR2VAL1 = 1326260; //works, 60.3199HZ  
-int PR2VAL1 = 1326259; // works, 60.3200Hz
+int const PR2VAL1 = 1326259; // works, 60.3200Hz
 //int PR2VAL1 = 1326261;
 
         //PR2 = 1333000; //59.8417
@@ -92,7 +92,9 @@ int PR2VAL1 = 1326259; // works, 60.3200Hz
 
 
 
-int TESTDATA = 0x55555555;
+//int TESTDATA = 0x55555555;
+//int TESTDATA = 0xFFFF0000;
+int TESTDATA = 0xFF000000;
 
 //	Function Prototypes
 int main(void);
@@ -154,13 +156,16 @@ int main(void) {
 	//need to figure out the polarity of video signals for the SPI device
 	//I believe it is active high video, but I do not know for sure
 	SPI2CONbits.CKE = 0; //these values are copy pasted, not checked 
-    SPI2CONbits.CKP = 1;
+    SPI2CONbits.CKP = 0;
     SPI2CONbits.SMP = 0;
 
     SPI2CONbits.MODE16 = 0; //set SPI device to 32 bit operation
     SPI2CONbits.MODE32 = 1;
 
-    SPI2CONbits.FRMEN = 1;
+    //guessing config values to try and make SPI run
+    //SPI2CONbits.FRMEN = 1;
+
+    SPI2CONbits.MSTEN = 1;
 
 	SPI2CONbits.STXISEL = 0b01; // interrupt when buffer is empty, but shift register is not
         //SPI2CONbits.STXISEL = 0b00;//interrupt when shift register is empty
@@ -190,7 +195,7 @@ int main(void) {
     //timer 2 and 3 config
 	T2CONbits.T32 = 1; //This sets operation to 32 bit mode using timers 2 and 3 together
 	T2CONbits.TCKPS = 0; //set the prescaler to 1:1
-    T2CONbits.ON = 1; // make sure the timer is off
+    T2CONbits.ON = 0; // make sure the timer is off
     
 	//PR2 = 100; 
 	//PR2 = 1199000; // set the period register to interrupt at 60Hz // not confirmed in math
@@ -353,6 +358,7 @@ void T3ISR(void)
 		//PORTGCLR = 0x340;
 		PORTGCLR = 0x380;
 		linecount = 0;
+                //SPI2CONbits.ON = 0;//turn SPI2 off (?)s
 	}
 }
 
@@ -424,6 +430,7 @@ void T4ISR(void)
 
 	//PORTGCLR = 0x240; // video must be cleared when it is not in frame
 	PORTGCLR = 0x380;
+        SPI2CONbits.ON = 0;//turn SPI2 off for the sync pulse
 	
 	while( TMR4 < 80 ); // these numbers may need to be tweaked to include the number of cycles wasted before the portd bit can be cleared
     //PORTDCLR = 0x10;
@@ -442,8 +449,11 @@ void T4ISR(void)
 	{
 		//PORTGINV = 0x100;
 		//PORTGSET = 0x240;
-		//PORTGSET = 0x340;
-		PORTGSET = 0x380;
+		//PORTGSET = 0x340; //turned video off for testing
+		//PORTGSET = 0x380;
+
+
+                
 	}
 /*
 	else if(linecount < 600)
@@ -458,6 +468,8 @@ void T4ISR(void)
 	}
 	linecount++;
 
+
+        SPI2CONbits.ON = 1;//turn SPI2 on
 
 
 
@@ -504,7 +516,10 @@ void SPI2ISR(void)
 	//put more information in the transmit buffer
 	
 	//test putting information into the SPI2TX buffer
-	SPI2BUF = TESTDATA;
+	SPI2BUF = TESTDATA; //4 buffer slots
+        SPI2BUF = TESTDATA;
+        SPI2BUF = TESTDATA;
+        SPI2BUF = TESTDATA;
 	//test clearing the buffer
-	SPI2BUF;
+	//SPI2BUF;
 }
