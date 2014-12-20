@@ -46,10 +46,10 @@
 #pragma config FSOSCEN=OFF, IESO=OFF
 
 //set the priority of the timer2 service routine
-#pragma interrupt T2ISR IPL6 vector 8
+#pragma interrupt T2ISR IPL7 vector 8
 
 //set the priority of the timer3 service routine
-#pragma interrupt T3ISR IPL1 vector 12
+//#pragma interrupt T3ISR IPL7 vector 12
 
 //set the priority of the timer4 service routine
 #pragma interrupt T4ISR IPL7 vector 16
@@ -59,7 +59,7 @@
 
 void T2ISR(void);
 
-void T3ISR(void);
+//void T3ISR(void);
 
 void T4ISR(void);
 
@@ -74,6 +74,14 @@ int KEYPRESSED;
 int linecount;
 
 int SPI2STATE = 1;
+
+
+
+
+//for VGA version 2.0
+int VGA_LineCount = 0;
+
+
 
 //this value should be constant
 //int PR2VAL1 = 1334000; //doesnt work, guess test, not true limit testing
@@ -203,7 +211,7 @@ int main(void) {
 	//---SPI2 for video config end---
 
     //timer 2 and 3 config
-	T2CONbits.T32 = 1; //This sets operation to 32 bit mode using timers 2 and 3 together
+	//T2CONbits.T32 = 1; //This sets operation to 32 bit mode using timers 2 and 3 together
 	T2CONbits.TCKPS = 0; //set the prescaler to 1:1
     T2CONbits.ON = 0; // make sure the timer is off
     
@@ -216,21 +224,24 @@ int main(void) {
         //PR2 = 1334000;	//60.2856
 	//PR2 = 1333334; //59.9999Hz
 
-    PR2 = PR2VAL1;
+    //PR2 = PR2VAL1;
+    PR2 = 0x845;
 
     TMR2 = 0x0; // zero out the timer register
+
+    OpenOC1(OC_ON | OC_TIMER_MODE16 | OC_TIMER2_SRC | OC_CONTINUE_PULSE, 0, 0x110);
 
     //OpenTimer23( T23_ON | T23_SOURCE_INT | T2_32BIT_MODE_ON | T23_PS_1_1 , 100);
 
     mT2ClearIntFlag(); // clear the interupt flag just in case
     //configure the timer 2 priority
-    mT2SetIntPriority(6);
+    mT2SetIntPriority(7);
     // and sub priority
     mT2SetIntSubPriority(0);
     //Then enable the interrupt
     mT2IntEnable(1);
 
-
+/*
     //timer 2 and 3 config
     T3CONbits.TCKPS = 0; //set the prescaler to 1:1
     T3CONbits.ON = 0; // make sure the timer is off
@@ -246,7 +257,7 @@ int main(void) {
     mT3SetIntSubPriority(0);
     //Then enable the interrupt
     mT3IntEnable(1);
-
+*/
 
     //timer 4 config
     T4CONbits.TCKPS = 0;//set the prescaler to 1:1
@@ -275,9 +286,9 @@ int main(void) {
     //---turn things on---
     T2CONbits.ON = 1; // turn the timer on
     //T3CONbits.ON = 1;
-	T4CONbits.ON = 1;
+	//T4CONbits.ON = 1;
 
-       SPI2CONbits.ON = 0;//turn SPI2 on
+       SPI2CONbits.ON = 1;//turn SPI2 on
     
     
    
@@ -333,7 +344,7 @@ int main(void) {
 }
 
 
-
+/*
 void T2ISR(void)
 {
     //increment global counter
@@ -344,7 +355,8 @@ void T2ISR(void)
     //begin t4isr
     T4CONbits.ON = 1;
 }
-
+*/
+/*
 void T3ISR(void)
 {
 	mT3ClearIntFlag();
@@ -371,7 +383,7 @@ void T3ISR(void)
                 //SPI2CONbits.ON = 0;//turn SPI2 off (?)s // may be unnecessary?
 	}
 }
-
+*/
 
 
 void T4ISR(void)
@@ -420,12 +432,16 @@ void T4ISR(void)
     break;
         case 3:
 
-
+        //if(linecount < 628 & linecount > 27)
+        if(linecount > 21 & linecount < 622)
+        {
         SPI2CONbits.ON = 1;//turn SPI2 on
         IFS1bits.SPI2TXIF = 1;
         PORTGSET = 0x380; //turn video on for testing
-
+        }
         PR4 = 1600 ;
+        linecount++;
+
 
         //delay for back porch before starting video
         //while(TMR4 < 80+256+176); // a quick test shows this may be too long, but is still necessary
@@ -567,4 +583,34 @@ void SPI2ISR(void)
                 break;
 
         }
+}
+
+
+void T2ISR(void)
+{
+    mT2ClearIntFlag();
+    VGA_LineCount++;
+    if(VGA_LineCount > 21 && VGA_LineCount < 622)                                                           //If we are in a video line copy memory to spi port
+    {
+      	//DCH0SSA = KVA_TO_PA((void*) (VGA_VideoMemoryIndex));                                                //Update the DMA Channel 0 with the next line address
+        //DmaChnEnable(DMA_CHANNEL1);                                                                         //Start the transfer
+        //VGA_VideoMemoryIndex+=25;                                                                           //Incroment the next line Index pointer, 25*32bit bytes = 800bits
+        SPI2CONbits.ON = 1;//turn SPI2 on
+        IFS1bits.SPI2TXIF = 1;
+    }
+
+    if(VGA_LineCount==1)
+    {
+        PORTBbits.RB12 = 0; // sync pulse is 0's
+    }                                                              //Vertical Sync Pulse is generated over Horizontal line 1 to 4, Set Low
+    if(VGA_LineCount==5)
+    {
+        PORTBbits.RB12 = 1; //Set High
+    }
+    if(VGA_LineCount==628)                                                                                  //We have delt with all 628 lines so reset line count and video memory pointer
+    {
+        VGA_LineCount = 0;
+        //VGA_VideoMemoryIndex = VGA_VideoMemory;
+    }
+    
 }
