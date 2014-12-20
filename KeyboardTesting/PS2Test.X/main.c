@@ -68,7 +68,7 @@ void SPI2ISR(void);
 int videoON;
 int videoSEL;
 int global_count;
-int T4STATE;
+int T4STATE = 1;
 int T2State;
 int KEYPRESSED;
 int linecount;
@@ -284,7 +284,7 @@ int main(void) {
     videoON = 0; //initialize global variable to tell if video is on or off
     videoSEL = 1;
 	global_count = 0;//initalize global variable for counting ISR entries
-    T4STATE = 0;//initalize state machine for timer 4 / h sync
+    T4STATE = 1;//initalize state machine for timer 4 / h sync
 	T2State = 0;
 
 
@@ -368,68 +368,10 @@ void T3ISR(void)
 		//PORTGCLR = 0x340;
 		PORTGCLR = 0x380;
 		linecount = 0;
-                //SPI2CONbits.ON = 0;//turn SPI2 off (?)s
+                SPI2CONbits.ON = 0;//turn SPI2 off (?)s // may be unnecessary?
 	}
 }
 
-
-	//begin t4isr
-    //T4CONbits.ON = 1;
-	//it is possible that the T4State variable will need to be reset here
-	/*
-	switch(T4State)
-	{
-	    case 0:     
-			video = 0;
-	        //error?
-	        break;
-	
-	    case 1://front porch is done?
-	        //sync pulse
-	        PORTBbits.RB12 = 0; // sync pulse is 0's
-	        break;
-	    case 2:
-	    case 3:
-	    case 4:
-	    case 5:
-	        break;
-	    case 6:
-	        PORTBbits.RB12 = 1; //back porch is 1
-	        break;
-	    case 7:
-	    case 8:
-	    case 9:
-	    case 10:
-	    case 11:
-	    case 12:
-	    case 13:
-	    case 14:
-	    case 15:
-	    case 16:
-	    case 17:
-	    case 18:
-	    case 19:
-	    case 20:
-	    case 21:
-	    case 22:
-	    case 23:
-	    case 24:
-	    case 25:
-	    case 26:
-	    case 27:
-	    case 28:
-	
-	        PORTBbits.RB12 = 1; //back porch is 1
-	        break;
-	    case 628:
-	        //end the ISR
-	        T4State = 0;
-	        break;
-	    default:
-		break;
-	   }
-	T4State++;
-	*/
 
 
 void T4ISR(void)
@@ -440,71 +382,81 @@ void T4ISR(void)
 
     switch(T4STATE)
     {
-        case 0:
+        case 1:
         //PORTGCLR = 0x240; // video must be cleared when it is not in frame
-        PORTGCLR = 0x380;
+        PORTGCLR = 0x380; // turn video off
+        SPI2CONbits.ON = 0;//turn SPI2 off
 
-        PR4 = 256;
-        //PR4 = 80+256;
+        //PR4 = 256 + 80;
+        PR4 = 80+256;
         //PR4 = 80 + 221;
 
-        SPI2CONbits.ON = 0;//turn SPI2 off for the sync pulse
+        
         //SPI2CONbits.
 
         while( TMR4 < 80 ); // these numbers may need to be tweaked to include the number of cycles wasted before the portd bit can be cleared
+
+        //TMR4 = 0;
         //PORTDCLR = 0x10;
-        PORTDSET = 0x10;
-        videoON = 0;
+
+        PORTDSET = 0x10; //set the h-sync pin
+        //videoON = 0;
         //PORTDbits.RD4 = 0;
-        T4STATE = 1;
+        T4STATE = 2;
         
     break;
-        case 1:
+        case 2:
         //while( TMR4 < 80+256 );
-        PORTDCLR = 0x10;
+        PORTDCLR = 0x10; //clear the h-sync pin
+        PR4 = 176;
 
         //testing getting the SPI video in frame
         //IFS1bits.SPI2TXIF = 1;
         //SPI2BUF = TESTDATA;
 
         //PORTDSET = 0x10;
-        T4STATE = 2;
-        PR4 = 80+256+176;
+        T4STATE = 3;
+        
     break;
-        case 2:
-        PR4 = 2111 - (80 + 256) - (80+256+176) ;
+        case 3:
+        PR4 = 1600 ;
+
+        SPI2CONbits.ON = 1;//turn SPI2 on
+        IFS1bits.SPI2TXIF = 1;
+        PORTGSET = 0x380; //turn video on for testing
 
         //delay for back porch before starting video
         //while(TMR4 < 80+256+176); // a quick test shows this may be too long, but is still necessary
                             // this leads me to believe that the signal durring the sync pulse is read as "0", and the brightness is the difference between that value and the values read as pixels
         //while(TMR4 < 80+256+150);
-	videoON = 1;
+	//videoON = 1;
+        /*
 	if(linecount < 600)
 	{
 		//PORTGINV = 0x100;
 		//PORTGSET = 0x240;
 		//PORTGSET = 0x380;
 
-                PORTGSET = 0x380; //turned video off for testing
+            PORTGSET = 0x380; //turn video on for testing
 
             SPI2CONbits.ON = 1;//turn SPI2 on
             IFS1bits.SPI2TXIF = 1;
                 
 	}
-/*
-	else if(linecount < 600)
-	{
-		PORTGINV = 0x100;
-	}
-*/
+
+	//else if(linecount < 600)
+	//{
+	//	PORTGINV = 0x100;
+	//}
+
 	else
 	{
 		//not in video frame?
 		//linecount = 999;
 	}
 	linecount++;
-
-        T4STATE = 0;
+*/
+        T4STATE = 1;
         
      break;
     }
