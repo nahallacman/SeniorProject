@@ -174,7 +174,9 @@ int main(void) {
     SPI2CONbits.MODE32 = 1;
 
     //guessing config values to try and make SPI run
-    //SPI2CONbits.FRMEN = 1;
+    SPI2CONbits.FRMEN = 1; // enable framed mode
+     SPI2CONbits.FRMSYNC = 1; //slave select line is input, slave mode
+     SPI2CONbits.FRMPOL = 1;
 
     SPI2CONbits.MSTEN = 1;
 
@@ -229,7 +231,9 @@ int main(void) {
 
     TMR2 = 0x0; // zero out the timer register
 
-    OpenOC1(OC_ON | OC_TIMER_MODE16 | OC_TIMER2_SRC | OC_CONTINUE_PULSE, 0, 0x110);
+    //OpenOC1(OC_ON | OC_TIMER_MODE16 | OC_TIMER2_SRC | OC_CONTINUE_PULSE, 0, 0x110);
+    //OpenOC1(OC_ON | OC_TIMER_MODE16 | OC_TIMER2_SRC | OC_CONTINUE_PULSE, 0, 0x108);
+OpenOC1(OC_ON | OC_TIMER_MODE16 | OC_TIMER2_SRC | OC_CONTINUE_PULSE, 0, 0x100);
 
     //OpenTimer23( T23_ON | T23_SOURCE_INT | T2_32BIT_MODE_ON | T23_PS_1_1 , 100);
 
@@ -521,7 +525,8 @@ void SPI2ISR(void)
 {
 	//clear the interrupt flag atomically
 	IFS1CLR = 0x80;
-	//put more information in the transmit buffer
+        //IFS1bits.SPI2TXIF = 0;
+        //put more information in the transmit buffer
 	
 	//test putting information into the SPI2TX buffer
 	//SPI2BUF = TESTDATA; //4 buffer slots
@@ -578,6 +583,8 @@ void SPI2ISR(void)
             case 7:
             SPI2BUF = TESTDATA; //last buffer fill for line
             SPI2STATE = 1;
+            //while(SPI2STATbits.SPITBE != 0);//wait until the transmit buffer is empty
+            //SPI2CONbits.ON = 0; //testing fitting SPI lines into frame
                 break;
             case 8: // this state may be needed to stop the SPI after it finishes
                 break;
@@ -588,7 +595,9 @@ void SPI2ISR(void)
 
 void T2ISR(void)
 {
-    mT2ClearIntFlag();
+    //IFS0bits.T2IF = 0;
+    IFS0CLR = 0x100; // clear T2IF atomically
+    //mT2ClearIntFlag();
     VGA_LineCount++;
     if(VGA_LineCount > 21 && VGA_LineCount < 622)                                                           //If we are in a video line copy memory to spi port
     {
@@ -596,7 +605,7 @@ void T2ISR(void)
         //DmaChnEnable(DMA_CHANNEL1);                                                                         //Start the transfer
         //VGA_VideoMemoryIndex+=25;                                                                           //Incroment the next line Index pointer, 25*32bit bytes = 800bits
         SPI2CONbits.ON = 1;//turn SPI2 on
-        IFS1bits.SPI2TXIF = 1;
+        //IFS1bits.SPI2TXIF = 1;
     }
 
     if(VGA_LineCount==1)
