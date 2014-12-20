@@ -183,8 +183,9 @@ int main(void) {
     //SPI2CONbits. = 1; //disable the SDI pin
     SPI2CONSET = 0x10;
 
-	SPI2CONbits.STXISEL = 0b01; // interrupt when buffer is empty, but shift register is not
-        //SPI2CONbits.STXISEL = 0b00;//interrupt when shift register is empty
+        //SPI2CONbits.STXISEL = 0b10;//half empty
+	//SPI2CONbits.STXISEL = 0b01; // interrupt when buffer is empty, but shift register is not
+        SPI2CONbits.STXISEL = 0b00;//interrupt when shift register is empty
 
         SPI2CONbits.SSEN = 0; // disable the slave select control
 
@@ -543,10 +544,12 @@ void SPI2ISR(void)
             SPI2BUF = TESTDATA;
             SPI2BUF = TESTDATA;
             SPI2BUF = TESTDATA;
+            SPI2BUF = TESTDATA;
             SPI2STATE = 2;
                 break;
             case 2:
             SPI2BUF = TESTDATA; //4 buffer slots
+            SPI2BUF = TESTDATA;
             SPI2BUF = TESTDATA;
             SPI2BUF = TESTDATA;
             SPI2BUF = TESTDATA;
@@ -557,10 +560,12 @@ void SPI2ISR(void)
             SPI2BUF = TESTDATA;
             SPI2BUF = TESTDATA;
             SPI2BUF = TESTDATA;
+            SPI2BUF = TESTDATA;
             SPI2STATE = 4;
                 break;
             case 4:
             SPI2BUF = TESTDATA; //4 buffer slots
+            SPI2BUF = TESTDATA;
             SPI2BUF = TESTDATA;
             SPI2BUF = TESTDATA;
             SPI2BUF = TESTDATA;
@@ -571,7 +576,8 @@ void SPI2ISR(void)
             SPI2BUF = TESTDATA;
             SPI2BUF = TESTDATA;
             SPI2BUF = TESTDATA;
-            SPI2STATE = 6;
+            SPI2BUF = TESTDATA;
+            SPI2STATE = 1;
                 break;
             case 6:
             SPI2BUF = TESTDATA; //4 buffer slots
