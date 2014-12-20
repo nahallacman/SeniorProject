@@ -52,7 +52,7 @@
 #pragma interrupt T3ISR IPL1 vector 12
 
 //set the priority of the timer4 service routine
-#pragma interrupt T4ISR IPL5 vector 16
+#pragma interrupt T4ISR IPL7 vector 16
 
 //set the priority of the SPI2ISR service routine
 #pragma interrupt SPI2ISR IPL4 vector 31
@@ -257,7 +257,7 @@ int main(void) {
 
     mT4ClearIntFlag(); // clear the interupt flag just in case
     //configure the timer 2 priority
-    mT4SetIntPriority(5);
+    mT4SetIntPriority(7);
     // and sub priority
     mT4SetIntSubPriority(0);
     //Then enable the interrupt
@@ -368,7 +368,7 @@ void T3ISR(void)
 		//PORTGCLR = 0x340;
 		PORTGCLR = 0x380;
 		linecount = 0;
-                SPI2CONbits.ON = 0;//turn SPI2 off (?)s // may be unnecessary?
+                //SPI2CONbits.ON = 0;//turn SPI2 off (?)s // may be unnecessary?
 	}
 }
 
@@ -400,10 +400,10 @@ void T4ISR(void)
         //PORTDCLR = 0x10;
 
         PORTDSET = 0x10; //set the h-sync pin
-        //videoON = 0;
-        //PORTDbits.RD4 = 0;
+
         T4STATE = 2;
-        
+
+        //while(TMR4 < 80+256);
     break;
         case 2:
         //while( TMR4 < 80+256 );
@@ -419,11 +419,13 @@ void T4ISR(void)
         
     break;
         case 3:
-        PR4 = 1600 ;
+
 
         SPI2CONbits.ON = 1;//turn SPI2 on
         IFS1bits.SPI2TXIF = 1;
         PORTGSET = 0x380; //turn video on for testing
+
+        PR4 = 1600 ;
 
         //delay for back porch before starting video
         //while(TMR4 < 80+256+176); // a quick test shows this may be too long, but is still necessary
