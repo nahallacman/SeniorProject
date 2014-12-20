@@ -55,7 +55,7 @@
 #pragma interrupt T4ISR IPL7 vector 16
 
 //set the priority of the SPI2ISR service routine
-#pragma interrupt SPI2ISR IPL4 vector 31
+//#pragma interrupt SPI2ISR IPL4 vector 31
 
 void T2ISR(void);
 
@@ -63,7 +63,7 @@ void T2ISR(void);
 
 void T4ISR(void);
 
-void SPI2ISR(void);
+//void SPI2ISR(void);
 
 int videoON;
 int videoSEL;
@@ -79,9 +79,17 @@ int SPI2STATE = 1;
 
 
 //for VGA version 2.0
-int VGA_LineCount = 0;
+//int VGA_LineCount = 0;
 
-
+//const int VGA_VIDEO_MEMORY_SIZE = 15000;
+volatile int VGA_LineCount=0;                                                                               //Used to keep a track of current video line
+//volatile unsigned long int VGA_VideoMemory[VGA_VIDEO_MEMORY_SIZE];                                          //800 x 600 x 1bit Video Memory
+volatile unsigned long int VGA_VideoMemory[15000];
+//volatile unsigned long int VGA_VideoMemory[800];
+volatile unsigned long int *VGA_VideoMemoryIndex = VGA_VideoMemory;                                         //Pointer Index into Video Memory
+volatile unsigned long int *VGA_VideoScrollIndex = VGA_VideoMemory;                                         //Pointer Scrolling Index into Video Memory
+long int VGA_BackPorch[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};                                                  //Back porch buffer
+//int VGA_TextConsoleX=0,VGA_TextConsoleY=VGA_Y_MAX-CONSOLE_FONT_HIEGHT;                                      //Global variables used for VGA_Locate, used by _mon_putc
 
 //this value should be constant
 //int PR2VAL1 = 1334000; //doesnt work, guess test, not true limit testing
@@ -103,9 +111,13 @@ int const PR2VAL1 = 1326259; // works, 60.3200Hz
 
 
 //int TESTDATA = 0x55555555;
-int TESTDATA = 0xFFFF0000;
+//int TESTDATA = 0xFFFF0000;
 //int TESTDATA = 0xFF000000;
 //int TESTDATA = 0xFFFFFFFF;
+//int TESTDATA = 0xF0000000;
+//int TESTDATA = 0xC000C000;
+//int TESTDATA = 0xC0000000;
+int TESTDATA = 0x50005000;
 
 //	Function Prototypes
 int main(void);
@@ -114,6 +126,14 @@ int main(void) {
 
     //system config
     SYSTEMConfig(80000000L, SYS_CFG_WAIT_STATES | SYS_CFG_PCACHE);
+
+    int i = 0;
+    for(i = 0; i < 15000; i++)
+    {
+        VGA_VideoMemory[i] = 0xFFFF0000;
+    }
+    VGA_SetupVideoOutput();
+
 
 	//SYSTEMConfig(72000000L, SYS_CFG_WAIT_STATES | SYS_CFG_PCACHE);
 	
@@ -184,8 +204,8 @@ int main(void) {
     SPI2CONSET = 0x10;
 
         //SPI2CONbits.STXISEL = 0b10;//half empty
-	//SPI2CONbits.STXISEL = 0b01; // interrupt when buffer is empty, but shift register is not
-        SPI2CONbits.STXISEL = 0b00;//interrupt when shift register is empty
+	SPI2CONbits.STXISEL = 0b01; // interrupt when buffer is empty, but shift register is not
+        //SPI2CONbits.STXISEL = 0b00;//interrupt when shift register is empty
 
         SPI2CONbits.SSEN = 0; // disable the slave select control
 
@@ -202,12 +222,12 @@ int main(void) {
 
 	//---configure SPI2 interrupts---
 	//only using transmit interrupt
-	IEC1bits.SPI2ATXIE = 1;
+	//IEC1bits.SPI2ATXIE = 1;
 	IFS1bits.SPI2TXIF = 0;
 
 	//IPC7bits.SPI2TX = 0b100;
-	//IPC7SET = 10000000;//priortiy bits 26, 27, 28, set bit 28 for priority 4
-        IPC7bits.SPI2IP = 4;
+	//IPC7SET = 10000000;//priortiy bits 26, 27, 28, set bit 28 for priority 2
+        IPC7bits.SPI2IP = 2;
 	//IPC7CLR = 3000000; //clear subpriority bits 25 and 24
         IPC7bits.SPI2IS = 0;
 
@@ -521,7 +541,7 @@ void T4ISR(void)
   * back porch: 88 pixels (176 clocks)
  */
 			
-
+/*
 void SPI2ISR(void)
 {
 	//clear the interrupt flag atomically
@@ -597,7 +617,7 @@ void SPI2ISR(void)
 
         }
 }
-
+*/
 
 void T2ISR(void)
 {
@@ -607,10 +627,10 @@ void T2ISR(void)
     VGA_LineCount++;
     if(VGA_LineCount > 21 && VGA_LineCount < 622)                                                           //If we are in a video line copy memory to spi port
     {
-      	//DCH0SSA = KVA_TO_PA((void*) (VGA_VideoMemoryIndex));                                                //Update the DMA Channel 0 with the next line address
-        //DmaChnEnable(DMA_CHANNEL1);                                                                         //Start the transfer
-        //VGA_VideoMemoryIndex+=25;                                                                           //Incroment the next line Index pointer, 25*32bit bytes = 800bits
-        SPI2CONbits.ON = 1;//turn SPI2 on
+      	DCH0SSA = KVA_TO_PA((void*) (VGA_VideoMemoryIndex));                                                //Update the DMA Channel 0 with the next line address
+        DmaChnEnable(DMA_CHANNEL1);                                                                         //Start the transfer
+        VGA_VideoMemoryIndex+=25;                                                                           //Incroment the next line Index pointer, 25*32bit bytes = 800bits
+        //SPI2CONbits.ON = 1;//turn SPI2 on
         //IFS1bits.SPI2TXIF = 1;
     }
 
@@ -625,7 +645,26 @@ void T2ISR(void)
     if(VGA_LineCount==628)                                                                                  //We have delt with all 628 lines so reset line count and video memory pointer
     {
         VGA_LineCount = 0;
-        //VGA_VideoMemoryIndex = VGA_VideoMemory;
+        VGA_VideoMemoryIndex = VGA_VideoMemory;
     }
     
+}
+
+
+void VGA_SetupVideoOutput(void)
+{
+    //SpiChnOpen(SPI_CHANNEL2, SPI_OPEN_MSTEN | SPI_OPEN_MODE32 | SPI_OPEN_FRMEN | SPI_OPEN_FSP_IN | SPI_OPEN_FSP_HIGH,2);
+    //SpiChnEnable(SPI_CHANNEL2, TRUE);                                                                       //Enable the SPI Port
+
+    DmaChnOpen(DMA_CHANNEL1, 1, DMA_OPEN_DEFAULT);                                                          //We are using channel 1 to start the video line transfer with the back porch
+    DmaChnSetEventControl(DMA_CHANNEL1, DMA_EV_START_IRQ_EN | DMA_EV_START_IRQ(_SPI2_TX_IRQ));              //Send data to SPI port when empty
+    DmaChnSetTxfer(DMA_CHANNEL1, (void*)VGA_BackPorch, (void *)&SPI2BUF, 9, 4, 4);                          //Set the address to the back porch buffer, just zero's
+
+    DmaChnOpen(DMA_CHANNEL0, 0, DMA_OPEN_DEFAULT);                                                          //Channel 0 is chained to channel 1 and is used to output the video
+    DmaChnSetEventControl(DMA_CHANNEL0, DMA_EV_START_IRQ_EN | DMA_EV_START_IRQ(_SPI2_TX_IRQ));              //Send data to SPI port when empty
+    DmaChnSetTxfer(DMA_CHANNEL0, (void*)VGA_VideoMemory, (void *)&SPI2BUF, 100, 4, 4);                      //Set the address to the start of video memory
+    DmaChnSetControlFlags(DMA_CHANNEL0, DMA_CTL_CHAIN_EN | DMA_CTL_CHAIN_DIR);                              //Chain DMA 0 so that it will start on completion of the DMA 1 transfer
+
+    //mT2SetIntPriority(7);                                                                                   //Timer 2 interrupt is used to start the DMA transfer and more
+    //mT2IntEnable(INT_ENABLED);                                                                              //Enable the interrupt
 }
