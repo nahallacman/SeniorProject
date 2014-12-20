@@ -131,6 +131,7 @@ int main(void) {
     for(i = 0; i < 15000; i++)
     {
         VGA_VideoMemory[i] = 0xFFFF0000;
+        //VGA_VideoMemory[i] = 0x55555555;
     }
     VGA_SetupVideoOutput();
 
