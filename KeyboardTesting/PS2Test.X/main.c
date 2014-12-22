@@ -77,6 +77,9 @@ int SPI2STATE = 1;
 
 int LineWidth = 25;
 
+//these need to be unchanging
+int VGA_X_MAX = 800;
+int VGA_Y_MAX = 600;
 
 //for VGA version 2.0
 //int VGA_LineCount = 0;
@@ -92,8 +95,13 @@ long int VGA_BackPorch[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};                      
 //int VGA_TextConsoleX=0,VGA_TextConsoleY=VGA_Y_MAX-CONSOLE_FONT_HIEGHT;                                      //Global variables used for VGA_Locate, used by _mon_putc
 
 
-void writehorizontalline(int line);
-void writeverticalline(int column);
+void writefullhorizontalline(int line);
+void writefullverticalline(int column);
+
+void writehorizontalline(int y1, int y2);
+void writeverticalline(int x1, int x2);
+
+void writepixel(int x, int y);
 
 //this value should be constant
 //int PR2VAL1 = 1334000; //doesnt work, guess test, not true limit testing
@@ -139,20 +147,27 @@ int main(void) {
         //VGA_VideoMemory[i] = 0xFF000000;
         //VGA_VideoMemory[i] = 0x55555555;
     //}
-    writehorizontalline(0);
-    writehorizontalline(1);
-    writehorizontalline(5);//can't see
-    writehorizontalline(6);//can see
-    //writehorizontalline(8);
-    //writehorizontalline(10);
-    writehorizontalline(599);
+    writefullhorizontalline(0);
+    writefullhorizontalline(1);
+    writefullhorizontalline(5);//can't see
+    writefullhorizontalline(6);//can see
+    //writefullhorizontalline(8);
+    //writefullhorizontalline(10);
+    writefullhorizontalline(150);
+    writefullhorizontalline(300);
+    writefullhorizontalline(450);
+    writefullhorizontalline(599);
     //writehorizontalline(600); // out of frame
-    writeverticalline(0);
+    writefullverticalline(0);
 
-    writeverticalline(399);
-    writeverticalline(400);
-    writeverticalline(799);
+    writefullverticalline(399);
+    writefullverticalline(400);
+    writefullverticalline(799);
 
+    writepixel(700, 500);
+    //writepixel(700, 501);
+    //writepixel(701, 500);
+    //writepixel(701, 501);
 
     VGA_SetupVideoOutput();
 
@@ -691,7 +706,7 @@ void VGA_SetupVideoOutput(void)
     //mT2IntEnable(INT_ENABLED);                                                                              //Enable the interrupt
 }
 
-void writehorizontalline(int line)
+void writefullhorizontalline(int line)
 {
     int i = 0;
     for(i = 0; i < 25; i++) // write a line
@@ -700,7 +715,7 @@ void writehorizontalline(int line)
     }
 }
 
-void writeverticalline(int column)
+void writefullverticalline(int column)
 {
     int i = 0;
     int j = 0;
@@ -709,6 +724,32 @@ void writeverticalline(int column)
     for(i=0; i< 600; i++)
     {
             //VGA_VideoMemory[i*LineWidth+columnremainder] |= 1; //0x100000000 >> columnremainder;
-            VGA_VideoMemory[i*LineWidth+columnremainder] |= 1;
+            VGA_VideoMemory[i*25] |= 1;
+    }
+}
+
+
+void writehorizontalline(int y1, int y2)
+{
+    int i = 0;
+
+}
+void writeverticalline(int x1, int x2)
+{
+    
+}
+
+//so far only writes a pixel
+void writepixel(int x, int y)
+{
+    if(x < VGA_X_MAX && y < VGA_Y_MAX)
+    {
+        int Bit;
+        int Byte;
+
+        Byte = (y*25) + (x/32);
+        Bit = 0x80000000 >> x - (32*(x/32));
+
+        VGA_VideoMemory[Byte] |= Bit;
     }
 }
