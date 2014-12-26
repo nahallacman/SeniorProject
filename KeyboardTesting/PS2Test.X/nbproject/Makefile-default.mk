@@ -45,17 +45,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=C:/Users/cal/Desktop/School/SeniorProject/KeyboardTesting/PS2Test.X/main.c C:/Users/cal/Desktop/School/SeniorProject/KeyboardTesting/PS2Test.X/VGA.c
+SOURCEFILES_QUOTED_IF_SPACED=C:/Users/cal/Desktop/School/SeniorProject/KeyboardTesting/PS2Test.X/main.c C:/Users/cal/Desktop/School/SeniorProject/KeyboardTesting/PS2Test.X/VGA.c C:/Users/cal/Desktop/School/SeniorProject/KeyboardTesting/PS2Test.X/PS2.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/487472683/main.o ${OBJECTDIR}/_ext/487472683/VGA.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/487472683/main.o.d ${OBJECTDIR}/_ext/487472683/VGA.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/487472683/main.o ${OBJECTDIR}/_ext/487472683/VGA.o ${OBJECTDIR}/_ext/487472683/PS2.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/487472683/main.o.d ${OBJECTDIR}/_ext/487472683/VGA.o.d ${OBJECTDIR}/_ext/487472683/PS2.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/487472683/main.o ${OBJECTDIR}/_ext/487472683/VGA.o
+OBJECTFILES=${OBJECTDIR}/_ext/487472683/main.o ${OBJECTDIR}/_ext/487472683/VGA.o ${OBJECTDIR}/_ext/487472683/PS2.o
 
 # Source Files
-SOURCEFILES=C:/Users/cal/Desktop/School/SeniorProject/KeyboardTesting/PS2Test.X/main.c C:/Users/cal/Desktop/School/SeniorProject/KeyboardTesting/PS2Test.X/VGA.c
+SOURCEFILES=C:/Users/cal/Desktop/School/SeniorProject/KeyboardTesting/PS2Test.X/main.c C:/Users/cal/Desktop/School/SeniorProject/KeyboardTesting/PS2Test.X/VGA.c C:/Users/cal/Desktop/School/SeniorProject/KeyboardTesting/PS2Test.X/PS2.c
 
 
 CFLAGS=
@@ -103,6 +103,12 @@ ${OBJECTDIR}/_ext/487472683/VGA.o: C:/Users/cal/Desktop/School/SeniorProject/Key
 	@${RM} ${OBJECTDIR}/_ext/487472683/VGA.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/487472683/VGA.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/487472683/VGA.o.d" -o ${OBJECTDIR}/_ext/487472683/VGA.o C:/Users/cal/Desktop/School/SeniorProject/KeyboardTesting/PS2Test.X/VGA.c   
 	
+${OBJECTDIR}/_ext/487472683/PS2.o: C:/Users/cal/Desktop/School/SeniorProject/KeyboardTesting/PS2Test.X/PS2.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/487472683 
+	@${RM} ${OBJECTDIR}/_ext/487472683/PS2.o.d 
+	@${RM} ${OBJECTDIR}/_ext/487472683/PS2.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/487472683/PS2.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/487472683/PS2.o.d" -o ${OBJECTDIR}/_ext/487472683/PS2.o C:/Users/cal/Desktop/School/SeniorProject/KeyboardTesting/PS2Test.X/PS2.c   
+	
 else
 ${OBJECTDIR}/_ext/487472683/main.o: C:/Users/cal/Desktop/School/SeniorProject/KeyboardTesting/PS2Test.X/main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/487472683 
@@ -115,6 +121,12 @@ ${OBJECTDIR}/_ext/487472683/VGA.o: C:/Users/cal/Desktop/School/SeniorProject/Key
 	@${RM} ${OBJECTDIR}/_ext/487472683/VGA.o.d 
 	@${RM} ${OBJECTDIR}/_ext/487472683/VGA.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/487472683/VGA.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/487472683/VGA.o.d" -o ${OBJECTDIR}/_ext/487472683/VGA.o C:/Users/cal/Desktop/School/SeniorProject/KeyboardTesting/PS2Test.X/VGA.c   
+	
+${OBJECTDIR}/_ext/487472683/PS2.o: C:/Users/cal/Desktop/School/SeniorProject/KeyboardTesting/PS2Test.X/PS2.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/487472683 
+	@${RM} ${OBJECTDIR}/_ext/487472683/PS2.o.d 
+	@${RM} ${OBJECTDIR}/_ext/487472683/PS2.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/487472683/PS2.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/487472683/PS2.o.d" -o ${OBJECTDIR}/_ext/487472683/PS2.o C:/Users/cal/Desktop/School/SeniorProject/KeyboardTesting/PS2Test.X/PS2.c   
 	
 endif
 
