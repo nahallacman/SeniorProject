@@ -35,7 +35,7 @@
 
 #include <p32xxxx.h>
 #include <plib.h>
-#include "VGA.h"
+//#include "VGA.h"
 
 
 
@@ -46,8 +46,7 @@
 #pragma config FPBDIV=DIV_1, FWDTEN=OFF, CP=OFF, BWP=OFF
 #pragma config FSOSCEN=OFF, IESO=OFF
 
-//set the priority of the timer2 service routine
-#pragma interrupt T2ISR IPL7 vector 8
+
 
 //set the priority of the timer3 service routine
 //#pragma interrupt T3ISR IPL7 vector 12
@@ -58,7 +57,7 @@
 //set the priority of the SPI2ISR service routine
 //#pragma interrupt SPI2ISR IPL4 vector 31
 
-void T2ISR(void);
+
 
 //void T3ISR(void);
 
@@ -76,35 +75,9 @@ int linecount;
 
 int SPI2STATE = 1;
 
-int LineWidth = 25;
-
-//these need to be unchanging
-int VGA_X_MAX = 800;
-int VGA_Y_MAX = 600;
-
-//for VGA version 2.0
-//int VGA_LineCount = 0;
-
-//const int VGA_VIDEO_MEMORY_SIZE = 15000;
-volatile int VGA_LineCount=0;                                                                               //Used to keep a track of current video line
-//volatile unsigned long int VGA_VideoMemory[VGA_VIDEO_MEMORY_SIZE];                                          //800 x 600 x 1bit Video Memory
-volatile unsigned long int VGA_VideoMemory[15000];
-//volatile unsigned long int VGA_VideoMemory[800];
-volatile unsigned long int *VGA_VideoMemoryIndex = VGA_VideoMemory;                                         //Pointer Index into Video Memory
-volatile unsigned long int *VGA_VideoScrollIndex = VGA_VideoMemory;                                         //Pointer Scrolling Index into Video Memory
-long int VGA_BackPorch[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};                                                  //Back porch buffer
-//int VGA_TextConsoleX=0,VGA_TextConsoleY=VGA_Y_MAX-CONSOLE_FONT_HIEGHT;                                      //Global variables used for VGA_Locate, used by _mon_putc
 
 
-void writefullhorizontalline(int line);
-void writefullverticalline(int column);
 
-void writehorizontalline(int y1, int y2);
-void writeverticalline(int x1, int x2);
-
-void writepixel(int x, int y);
-
-void writechar(char * character, int x, int y);
 
 
 
@@ -349,7 +322,7 @@ int main(void) {
     writechar(testchar, 8, 8);
     writechar(font_map[25], 32, 32);
 
-    VGA_SetupVideoOutput();
+    
 
 
 
@@ -512,134 +485,3 @@ void T4ISR(void)
   * sync pulse: 128 pixels (256 clocks)
   * back porch: 88 pixels (176 clocks)
  */
-			
-
-void T2ISR(void)
-{
-    //IFS0bits.T2IF = 0;
-    IFS0CLR = 0x100; // clear T2IF atomically
-    //mT2ClearIntFlag();
-    VGA_LineCount++;
-    if(VGA_LineCount > 21 && VGA_LineCount < 622)                                                           //If we are in a video line copy memory to spi port
-    {
-      	DCH0SSA = KVA_TO_PA((void*) (VGA_VideoMemoryIndex));                                                //Update the DMA Channel 0 with the next line address
-        DmaChnEnable(DMA_CHANNEL1);                                                                         //Start the transfer
-        VGA_VideoMemoryIndex+=25;                                                                           //Incroment the next line Index pointer, 25*32bit bytes = 800bits
-        //SPI2CONbits.ON = 1;//turn SPI2 on
-        //IFS1bits.SPI2TXIF = 1;
-    }
-
-    if(VGA_LineCount==1)
-    {
-        PORTBbits.RB12 = 0; // sync pulse is 0's
-    }                                                              //Vertical Sync Pulse is generated over Horizontal line 1 to 4, Set Low
-    if(VGA_LineCount==5)
-    {
-        PORTBbits.RB12 = 1; //Set High
-    }
-    if(VGA_LineCount==628)                                                                                  //We have delt with all 628 lines so reset line count and video memory pointer
-    {
-        VGA_LineCount = 0;
-        VGA_VideoMemoryIndex = VGA_VideoMemory;
-    }
-    
-}
-
-
-
-void VGA_SetupVideoOutput(void)
-{
-    //SpiChnOpen(SPI_CHANNEL2, SPI_OPEN_MSTEN | SPI_OPEN_MODE32 | SPI_OPEN_FRMEN | SPI_OPEN_FSP_IN | SPI_OPEN_FSP_HIGH,2);
-    //SpiChnEnable(SPI_CHANNEL2, TRUE);                                                                       //Enable the SPI Port
-
-    DmaChnOpen(DMA_CHANNEL1, 1, DMA_OPEN_DEFAULT);                                                          //We are using channel 1 to start the video line transfer with the back porch
-    DmaChnSetEventControl(DMA_CHANNEL1, DMA_EV_START_IRQ_EN | DMA_EV_START_IRQ(_SPI2_TX_IRQ));              //Send data to SPI port when empty
-    DmaChnSetTxfer(DMA_CHANNEL1, (void*)VGA_BackPorch, (void *)&SPI2BUF, 9, 4, 4);                          //Set the address to the back porch buffer, just zero's
-
-    DmaChnOpen(DMA_CHANNEL0, 0, DMA_OPEN_DEFAULT);                                                          //Channel 0 is chained to channel 1 and is used to output the video
-    DmaChnSetEventControl(DMA_CHANNEL0, DMA_EV_START_IRQ_EN | DMA_EV_START_IRQ(_SPI2_TX_IRQ));              //Send data to SPI port when empty
-    DmaChnSetTxfer(DMA_CHANNEL0, (void*)VGA_VideoMemory, (void *)&SPI2BUF, 100, 4, 4);                      //Set the address to the start of video memory
-    DmaChnSetControlFlags(DMA_CHANNEL0, DMA_CTL_CHAIN_EN | DMA_CTL_CHAIN_DIR);                              //Chain DMA 0 so that it will start on completion of the DMA 1 transfer
-
-    //mT2SetIntPriority(7);                                                                                   //Timer 2 interrupt is used to start the DMA transfer and more
-    //mT2IntEnable(INT_ENABLED);                                                                              //Enable the interrupt
-}
-
-void writefullhorizontalline(int line)
-{
-    int i = 0;
-    for(i = 0; i < 25; i++) // write a line
-    {
-        VGA_VideoMemory[line*LineWidth+i] = 0xFFFFFFFF;
-    }
-}
-
-void writefullverticalline(int column)
-{
-    int i = 0;
-    //int j = 0;
-    //int columndiv = column / 25;
-    //int columnremainder = column % 32;
-    //for(i=0; i< 600; i++)
-   // {
-            //VGA_VideoMemory[i*LineWidth+columnremainder] |= 1; //0x100000000 >> columnremainder;
-    //        VGA_VideoMemory[i*25] |= 1;
-   // }
-
-    int Bit;
-    int Byte;
-
-    for(i = 0; i < VGA_Y_MAX; i++)
-    {
-        Byte = (i*25) + (column/32);
-        //Bit = 0x80000000 >> x - (32*(x/32)); // what is this 32 * x / 32 operation for??s
-        Bit = 0x80000000 >> column; // doesn't seem to hurt anything... we do this due to the order of things being shifed out of the SPI device
-        VGA_VideoMemory[Byte] |= Bit;
-    }
-}
-
-
-void writehorizontalline(int y1, int y2)
-{
-    int i = 0;
-
-}
-void writeverticalline(int x1, int x2)
-{
-    
-}
-
-//so far only writes a pixel
-void writepixel(int x, int y)
-{
-    if(x < VGA_X_MAX && y < VGA_Y_MAX)
-    {
-        int Bit;
-        int Byte;
-
-        Byte = (y*25) + (x/32);
-        //Bit = 0x80000000 >> x - (32*(x/32)); // what is this 32 * x / 32 operation for??s
-        Bit = 0x80000000 >> x; // doesn't seem to hurt anything...
-
-        VGA_VideoMemory[Byte] |= Bit;
-    }
-}
-
-//uses 8 characters in a 8x8 grid for characters, puts that character at position starting with x, y
-void writechar(char * character, int x, int y)
-{
-    int i = 0;
-    if(x < VGA_X_MAX && y < VGA_Y_MAX)
-    {
-        int Bits;
-        int Byte;
-
-        Byte = (y*25) + (x/32);
-        for(i = 0; i < 8; i++)
-        {
-            Bits = character[i];
-            VGA_VideoMemory[Byte] |= Bits;
-            Byte += 25; // go down one line
-        }
-    }
-}
