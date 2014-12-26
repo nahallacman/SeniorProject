@@ -153,15 +153,30 @@ int main(void) {
     writefullhorizontalline(6);//can see
     //writefullhorizontalline(8);
     //writefullhorizontalline(10);
-    writefullhorizontalline(150);
-    writefullhorizontalline(300);
-    writefullhorizontalline(450);
-    writefullhorizontalline(599);
-    //writehorizontalline(600); // out of frame
-    writefullverticalline(0);
+    //writefullhorizontalline(150);
+    //writefullhorizontalline(300);
+    //writefullhorizontalline(450);
+    //writefullhorizontalline(599);
 
-    writefullverticalline(399);
+    writefullhorizontalline(75);
+    writefullhorizontalline(150);
+    writefullhorizontalline(225);
+    writefullhorizontalline(300);
+    writefullhorizontalline(375);
+    writefullhorizontalline(450);
+    writefullhorizontalline(525);
+    writefullhorizontalline(599);
+
+    //writehorizontalline(600); // out of frame
+
+    writefullverticalline(0);
+    writefullverticalline(100);
+    writefullverticalline(200);
+    writefullverticalline(300);
     writefullverticalline(400);
+    writefullverticalline(500);
+    writefullverticalline(600);
+    writefullverticalline(700);
     writefullverticalline(799);
 
     writepixel(700, 500);
@@ -378,74 +393,9 @@ OpenOC1(OC_ON | OC_TIMER_MODE16 | OC_TIMER2_SRC | OC_CONTINUE_PULSE, 0, 0x100);
             KEYPRESSED = 1;
         }
 
-
-
-
-        /*
-        if(videoON == 1)
-        {
-			if( videoSEL == 1 )
-			{
-				PORTGINV = 0x100;
-			}
-			else
-			{
-				PORTGSET = 0x100; // only on video pattern
-			}
-			if(PORTDbits.RD6 == 0)
-			{
-				videoSEL = 2;
-			}
-        }
-        else
-        {
-            PORTGCLR = 0x100; //make sure it is off while not displaying video
-        }
-         */
+        
     }
 }
-
-
-/*
-void T2ISR(void)
-{
-    //increment global counter
-    global_count++;
-    //atomically clear the interrupt flag
-    mT2ClearIntFlag();
-    //while(1);
-    //begin t4isr
-    T4CONbits.ON = 1;
-}
-*/
-/*
-void T3ISR(void)
-{
-	mT3ClearIntFlag();
-	//mT2ClearIntFlag();
-	if(T2State == 0)
-	{
-		PORTBbits.RB12 = 0; // sync pulse is 0's
-    	//increment global counter
-    	//global_count++;
-		PR2 = 8480; //delay next state for 8480 clocks
-		T2State = 1;
-	}
-	else
-	{
-		PORTBbits.RB12 = 1; //back porch is 1
-		PR2 = PR2VAL1 - 8480;
-		T2State = 0;
-         
-
-		//PORTGCLR = 0x240; // clear the video pins for the beginning of frame
-		//PORTGCLR = 0x340;
-		PORTGCLR = 0x380;
-		linecount = 0;
-                //SPI2CONbits.ON = 0;//turn SPI2 off (?)s // may be unnecessary?
-	}
-}
-*/
 
 
 void T4ISR(void)
@@ -541,33 +491,6 @@ void T4ISR(void)
      break;
     }
 
-
-
-
-
-
-
-/*
-    if(KEYPRESSED == 1)
-    {
-        if(linecount > 99)
-        {
-            PORTGINV = 0x100;
-            linecount = 0;
-        }
-    }
-    else
-    {
-        if(linecount > 299)
-        {
-            PORTGINV = 0x100;
-            linecount = 0;
-        }
-    }
-        linecount++;
-*/    
-
-        
 }
 
  /*the time sensitive part of VGA operation is the sync pulses, and horizontal video timing
@@ -578,83 +501,6 @@ void T4ISR(void)
   * back porch: 88 pixels (176 clocks)
  */
 			
-/*
-void SPI2ISR(void)
-{
-	//clear the interrupt flag atomically
-	IFS1CLR = 0x80;
-        //IFS1bits.SPI2TXIF = 0;
-        //put more information in the transmit buffer
-	
-	//test putting information into the SPI2TX buffer
-	//SPI2BUF = TESTDATA; //4 buffer slots
-        //SPI2BUF = TESTDATA;
-        //SPI2BUF = TESTDATA;
-        //SPI2BUF = TESTDATA;
-	//test clearing the buffer
-	//SPI2BUF;
-
-        switch(SPI2STATE)
-        {
-            case 1:
-            SPI2BUF = TESTDATA; //4 buffer slots
-            SPI2BUF = TESTDATA;
-            SPI2BUF = TESTDATA;
-            SPI2BUF = TESTDATA;
-            SPI2BUF = TESTDATA;
-            SPI2STATE = 2;
-                break;
-            case 2:
-            SPI2BUF = TESTDATA; //4 buffer slots
-            SPI2BUF = TESTDATA;
-            SPI2BUF = TESTDATA;
-            SPI2BUF = TESTDATA;
-            SPI2BUF = TESTDATA;
-            SPI2STATE = 3;
-                break;
-            case 3:
-            SPI2BUF = TESTDATA; //4 buffer slots
-            SPI2BUF = TESTDATA;
-            SPI2BUF = TESTDATA;
-            SPI2BUF = TESTDATA;
-            SPI2BUF = TESTDATA;
-            SPI2STATE = 4;
-                break;
-            case 4:
-            SPI2BUF = TESTDATA; //4 buffer slots
-            SPI2BUF = TESTDATA;
-            SPI2BUF = TESTDATA;
-            SPI2BUF = TESTDATA;
-            SPI2BUF = TESTDATA;
-            SPI2STATE = 5;
-                break;
-            case 5:
-            SPI2BUF = TESTDATA; //4 buffer slots
-            SPI2BUF = TESTDATA;
-            SPI2BUF = TESTDATA;
-            SPI2BUF = TESTDATA;
-            SPI2BUF = TESTDATA;
-            SPI2STATE = 1;
-                break;
-            case 6:
-            SPI2BUF = TESTDATA; //4 buffer slots
-            SPI2BUF = TESTDATA;
-            SPI2BUF = TESTDATA;
-            SPI2BUF = TESTDATA;
-            SPI2STATE = 7;
-                break;
-            case 7:
-            SPI2BUF = TESTDATA; //last buffer fill for line
-            SPI2STATE = 1;
-            //while(SPI2STATbits.SPITBE != 0);//wait until the transmit buffer is empty
-            //SPI2CONbits.ON = 0; //testing fitting SPI lines into frame
-                break;
-            case 8: // this state may be needed to stop the SPI after it finishes
-                break;
-
-        }
-}
-*/
 
 void T2ISR(void)
 {
@@ -718,13 +564,24 @@ void writefullhorizontalline(int line)
 void writefullverticalline(int column)
 {
     int i = 0;
-    int j = 0;
+    //int j = 0;
     //int columndiv = column / 25;
-    int columnremainder = column % 32;
-    for(i=0; i< 600; i++)
-    {
+    //int columnremainder = column % 32;
+    //for(i=0; i< 600; i++)
+   // {
             //VGA_VideoMemory[i*LineWidth+columnremainder] |= 1; //0x100000000 >> columnremainder;
-            VGA_VideoMemory[i*25] |= 1;
+    //        VGA_VideoMemory[i*25] |= 1;
+   // }
+
+    int Bit;
+    int Byte;
+
+    for(i = 0; i < VGA_Y_MAX; i++)
+    {
+        Byte = (i*25) + (column/32);
+        //Bit = 0x80000000 >> x - (32*(x/32)); // what is this 32 * x / 32 operation for??s
+        Bit = 0x80000000 >> column; // doesn't seem to hurt anything... we do this due to the order of things being shifed out of the SPI device
+        VGA_VideoMemory[Byte] |= Bit;
     }
 }
 
@@ -748,7 +605,8 @@ void writepixel(int x, int y)
         int Byte;
 
         Byte = (y*25) + (x/32);
-        Bit = 0x80000000 >> x - (32*(x/32));
+        //Bit = 0x80000000 >> x - (32*(x/32)); // what is this 32 * x / 32 operation for??s
+        Bit = 0x80000000 >> x; // doesn't seem to hurt anything...
 
         VGA_VideoMemory[Byte] |= Bit;
     }
