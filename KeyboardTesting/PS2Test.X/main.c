@@ -52,7 +52,7 @@
 //#pragma interrupt T3ISR IPL7 vector 12
 
 //set the priority of the timer4 service routine
-#pragma interrupt T4ISR IPL7 vector 16
+//#pragma interrupt T4ISR IPL7 vector 16
 
 //set the priority of the SPI2ISR service routine
 //#pragma interrupt SPI2ISR IPL4 vector 31
@@ -61,7 +61,7 @@
 
 //void T3ISR(void);
 
-void T4ISR(void);
+//void T4ISR(void);
 
 //void SPI2ISR(void);
 
@@ -382,7 +382,7 @@ int main(void) {
     }
 }
 
-
+/*
 void T4ISR(void)
 {
     //atomically clear the interrupt flag
@@ -445,7 +445,7 @@ void T4ISR(void)
                             // this leads me to believe that the signal durring the sync pulse is read as "0", and the brightness is the difference between that value and the values read as pixels
         //while(TMR4 < 80+256+150);
 	//videoON = 1;
-        /*
+        
 	if(linecount < 600)
 	{
 		//PORTGINV = 0x100;
@@ -470,14 +470,14 @@ void T4ISR(void)
 		//linecount = 999;
 	}
 	linecount++;
-*/
+
     T4STATE = 1;
 
     break;
     }
 
 }
-
+*/
  /*the time sensitive part of VGA operation is the sync pulses, and horizontal video timing
  the times needed:
  horizontal sync pulse:

@@ -142,7 +142,7 @@ OpenOC1(OC_ON | OC_TIMER_MODE16 | OC_TIMER2_SRC | OC_CONTINUE_PULSE, 0, 0x100);
     //Then enable the interrupt
     mT3IntEnable(1);
 */
-
+/*
     //timer 4 config
     T4CONbits.TCKPS = 0;//set the prescaler to 1:1
     T4CONbits.ON = 0;
@@ -158,7 +158,7 @@ OpenOC1(OC_ON | OC_TIMER_MODE16 | OC_TIMER2_SRC | OC_CONTINUE_PULSE, 0, 0x100);
     //Then enable the interrupt
     mT4IntEnable(1);
 
-
+*/
     //mT2ClearIntFlag(); // clear the interupt flag just in case
 
     //---VGA configuration end---
