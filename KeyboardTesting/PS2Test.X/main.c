@@ -60,6 +60,7 @@
 
 
 
+
 //void T3ISR(void);
 
 //void T4ISR(void);
@@ -213,6 +214,10 @@ int main(void) {
 
     while (1)
     {
+        if(PORTDbits.RD7 == 0)
+        {
+            int testing = 1;
+        }
         if(PORTDbits.RD6 == 0)
         { 
             KEYPRESSED = 1;

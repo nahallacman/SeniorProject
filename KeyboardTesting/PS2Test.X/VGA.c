@@ -225,6 +225,7 @@ void writefullhorizontalline(int line)
     for(i = 0; i < 25; i++) // write a line
     {
         VGA_VideoMemory[line*LineWidth+i] = 0xFFFFFFFF;
+        //[line][i] = 0xFFFFFFFF;
     }
 }
 

@@ -12,6 +12,17 @@
 extern "C" {
 #endif
 
+//set the priority of the ChangeNotificationISR
+#pragma interrupt ChangeNotificationISR IPL1 vector 26
+
+void ChangeNotificationISR(void);
+
+int ChangeState;
+int values[12];
+
+int badkeypress = 0;
+int badkeystart = 0;
+
 
  /**
   * font_map based on the file
