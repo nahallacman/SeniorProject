@@ -17,8 +17,8 @@ extern "C" {
 
 void ChangeNotificationISR(void);
 
-int ChangeState;
-int values[12];
+int ChangeState = 0;
+int values[23];
 
 int badkeypress = 0;
 int badkeystart = 0;
