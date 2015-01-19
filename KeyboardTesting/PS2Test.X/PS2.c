@@ -3,7 +3,7 @@
 
 char * keyboard_lookup(char number)
 {
-    if(number > 0x20 && number < 0x100)
+    if(number > 0x20 && number < 0x80)
     {
         return font_map[number];
     }
@@ -151,7 +151,7 @@ void InputCapture1ISR(void)
                 }
                 ps2Buffer[ps2BufferIndex] = code;
                 code = 0;
-                if(ps2BufferIndex < 8)
+                if(ps2BufferIndex < 100)
                 {
                     ps2BufferIndex++;
                 }
