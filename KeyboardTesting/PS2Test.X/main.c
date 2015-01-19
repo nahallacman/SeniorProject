@@ -194,7 +194,7 @@ int main(void) {
     {
         for(j = 0; j < 100; j++)
         {
-            writechar(keyboard_lookup(CharNum), i*8, j*8);
+            writechar(keyboard_lookup(CharNum), j*8, i*8);
             if(CharNum < 0x80)
             {
                 CharNum++;
