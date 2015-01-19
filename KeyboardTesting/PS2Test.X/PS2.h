@@ -15,7 +15,11 @@ extern "C" {
 //set the priority of the ChangeNotificationISR
 #pragma interrupt ChangeNotificationISR IPL1 vector 26
 
+#pragma interrupt InputCapture1ISR IPL6 vector 5
+
 void ChangeNotificationISR(void);
+
+void InputCapture1ISR(void);
 
 int ChangeState = 0;
 int values[23];
@@ -23,6 +27,13 @@ int values[23];
 int badkeypress = 0;
 int badkeystart = 0;
 
+int IC1State = 0;
+
+int parity = 0;
+int code = 0;
+int ps2BufferIndex = 0;
+//int ps2Buffer[8];
+int ps2Buffer[100];
 
  /**
   * font_map based on the file

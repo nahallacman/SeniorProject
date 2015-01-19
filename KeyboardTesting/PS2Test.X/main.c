@@ -41,7 +41,7 @@
 
 
 
-#pragma config	ICESEL	=	ICS_PGx1	// ICE pin selection
+//#pragma config	ICESEL	=	ICS_PGx1	// ICE pin selection
 
 #pragma config POSCMOD=XT, FNOSC=PRIPLL, FPLLIDIV=DIV_2, FPLLMUL=MUL_20, FPLLODIV=DIV_1
 #pragma config FPBDIV=DIV_1, FWDTEN=OFF, CP=OFF, BWP=OFF
