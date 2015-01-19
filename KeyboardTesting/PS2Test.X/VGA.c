@@ -289,11 +289,18 @@ void writechar(char * character, int x, int y)
         int Bits;
         int Byte;
 
+        int temp = (x / 32);
+        int x_intOffset = x / 8;
+
         Byte = (y*25) + (x/32);
         for(i = 0; i < 8; i++)
         {
             Bits = character[i];
-            VGA_VideoMemory[Byte] |= Bits;
+            Bits << x_intOffset* 8;
+
+            test = VGA_VideoMemory[Byte] || Bits;
+            VGA_VideoMemory[Byte] = test;
+            //VGA_VideoMemory[Byte] |= Bits;
             Byte += 25; // go down one line
         }
     }

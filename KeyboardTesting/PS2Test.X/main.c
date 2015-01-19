@@ -188,8 +188,9 @@ int main(void) {
 
     int i = 0;
     int j = 0;
-    int CharNum = 0x20;
+    int CharNum = 0x21;
 
+    //fill the video memory with characters in a repeating loop
     for(i = 0; i < 75; i++)
     {
         for(j = 0; j < 100; j++)
@@ -201,7 +202,7 @@ int main(void) {
             }
             else
             {
-                CharNum = 0x20;
+                CharNum = 0x21;
             }
         }
     }

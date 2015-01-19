@@ -12,6 +12,8 @@
 extern "C" {
 #endif
 
+            int test;
+
 //#include "VGA.c"
 //#include <plib.h>
 //set the priority of the timer2 service routine
