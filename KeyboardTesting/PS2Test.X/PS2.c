@@ -150,6 +150,7 @@ void InputCapture1ISR(void)
                     code += temp;
                 }
                 ps2Buffer[ps2BufferIndex] = code;
+                KeysToProcess = 1;
                 code = 0;
                 if(ps2BufferIndex < 100)
                 {
@@ -169,4 +170,12 @@ void InputCapture1ISR(void)
     {
         badkeypress = 1;
     }
+}
+
+
+void interpretKeypress(void)
+{
+    ClearScreen();
+    writechar(keyboard_lookup('0'), 8, 8);
+    KeysToProcess = 0;
 }

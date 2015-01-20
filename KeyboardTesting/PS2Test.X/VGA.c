@@ -313,3 +313,13 @@ void writechar(char * character, int x, int y)
         }
     }
 }
+
+void ClearScreen(void)
+{
+    //clears the screen
+    int i = 0;
+    for(i=0; i < 15000; i++)
+    {
+        VGA_VideoMemory[i] = 0;
+    }
+}

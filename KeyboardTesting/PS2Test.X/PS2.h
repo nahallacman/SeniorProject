@@ -12,6 +12,8 @@
 extern "C" {
 #endif
 
+#include "PS2Common.h"
+
 //set the priority of the ChangeNotificationISR
 #pragma interrupt ChangeNotificationISR IPL1 vector 26
 
@@ -34,6 +36,8 @@ int code = 0;
 int ps2BufferIndex = 0;
 //int ps2Buffer[8];
 int ps2Buffer[100];
+
+int KeysToProcess;
 
  /**
   * font_map based on the file
@@ -192,6 +196,8 @@ unsigned char font_map[128][8] =
 char * keyboard_lookup(char number);
 
 void keyboard_setup(void);
+
+void interpretKeypress(void);
 
 #ifdef	__cplusplus
 }

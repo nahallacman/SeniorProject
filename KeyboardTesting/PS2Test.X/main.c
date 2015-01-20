@@ -37,6 +37,7 @@
 #include <plib.h>
 //#include "VGA.h"
 //#include "PS2.h"
+#include "PS2Common.h"
 
 
 
@@ -86,7 +87,6 @@ int SPI2STATE = 1;
 
 
 
-
 //this value should be constant
 //int PR2VAL1 = 1334000; //doesnt work, guess test, not true limit testing
 //int PR2VAL1 = 1333334; //works 59.9999Hz
@@ -125,6 +125,11 @@ int main(void) {
 
     int line = 0;
     int linewidth = 25;
+
+
+    KeysToProcess = 0;
+
+
     //int i = 0;
     //for(i = 0; i < 15000; i++) // write the whole video frame
     //{
@@ -243,6 +248,12 @@ int main(void) {
         //IFS1bits.SPI2ATXIF = 1;
 
 
+        //main loop should contain:
+        //while(1)
+        //interpret TCP/IP or other serial data
+        //interpret keypresses
+        //draw things to memory
+        //do other processing
 
 
     while (1)
@@ -255,7 +266,13 @@ int main(void) {
         { 
             KEYPRESSED = 1;
         }
+        if(KeysToProcess == 1)
+        {
 
+            //process keystrokes
+            interpretKeypress();
+
+        }
         
     }
 }
