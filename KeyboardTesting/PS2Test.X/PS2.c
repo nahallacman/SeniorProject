@@ -149,16 +149,25 @@ void InputCapture1ISR(void)
                     code = code << 1;
                     code += temp;
                 }
-                ps2Buffer[ps2BufferIndex] = code;
-                KeysToProcess = 1;
-                code = 0;
-                if(ps2BufferIndex < 100)
+                
+                //circular buffer insert handling of the ps2Buffer
+                if(ps2BufferNumItems < ps2BufferSize)
                 {
-                    ps2BufferIndex++;
-                }
-                else
-                {
-                    ps2BufferIndex = 0;
+                    ps2Buffer[ps2BufferEndIndex] = code;
+                    ps2BufferNumItems++;
+
+
+                    KeysToProcess = 1;
+                    code = 0;
+                    //wrap inside the ps2buffer when writing to the buffer
+                    if(ps2BufferEndIndex < ps2BufferSize)
+                    {
+                        ps2BufferEndIndex++;
+                    }
+                    else
+                    {
+                        ps2BufferEndIndex = 0;
+                    }
                 }
                 break;
             default:
@@ -175,7 +184,93 @@ void InputCapture1ISR(void)
 
 void interpretKeypress(void)
 {
-    ClearScreen();
-    writechar(keyboard_lookup('0'), 8, 8);
-    KeysToProcess = 0;
+    
+    char temp = 0;
+    char temp2 = 0;
+
+    //circular buffer removal handling of the ps2Buffer
+    if(ps2BufferNumItems > 0)
+    {
+
+
+        if( ps2Buffer[ps2BufferStart] == 0xE0 )
+        {
+            //special key pressed
+        }
+        else if(ps2Buffer[ps2BufferStart] == 0xF0)
+        {
+            //key release, so move the buffer down 2
+
+            if(ps2BufferStart < ps2BufferSize )
+            {
+                ps2BufferStart++;
+            }
+            else
+            {
+                ps2BufferStart = 0;
+            }
+            ps2BufferNumItems--;
+
+            if(ps2BufferStart < ps2BufferSize )
+            {
+                ps2BufferStart++;
+            }
+            else
+            {
+                ps2BufferStart = 0;
+            }
+            ps2BufferNumItems--;
+
+        }
+        else
+        {
+            //clears the screen for each key press
+            ClearScreen();
+
+            //remove item from circular buffer
+            temp = ps2Buffer[ps2BufferStart];
+            //reduce number of items in the buffer.
+            ps2BufferNumItems--;
+            //key press
+            temp2 = translateKeypress(temp);
+            //testing a write char
+            writechar(keyboard_lookup(temp2), 8, 8);
+
+            //make buffer circular
+            if(ps2BufferStart < ps2BufferSize )
+            {
+                ps2BufferStart++;
+            }
+            else
+            {
+                ps2BufferStart = 0;
+            }
+        }
+
+
+
+    }
+    else
+    {
+        //there are no more keys to process
+        KeysToProcess = 0;
+    }
+}
+
+char translateKeypress(char translate)
+{
+    char temp;
+    switch(translate)
+    {
+        case 0x15:
+            temp = 0x71; //q
+            break;
+        case 0x1D:
+            temp = 0x77; //w
+            break;
+        default:
+            temp = 0x21;
+    }
+
+    return temp;
 }

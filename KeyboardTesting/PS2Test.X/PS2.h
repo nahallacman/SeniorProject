@@ -33,11 +33,18 @@ int IC1State = 0;
 
 int parity = 0;
 int code = 0;
-int ps2BufferIndex = 0;
+int ps2BufferEndIndex = 0;
 //int ps2Buffer[8];
 int ps2Buffer[100];
 
+//flag letting the system know if there is something keyboard related to process in the main loop
 int KeysToProcess;
+
+//index to the ps2buffer for using a circular buffer
+//int KeyBufferEnd = 0;
+int ps2BufferStart = 0;
+int ps2BufferSize = 100;
+int ps2BufferNumItems = 0;
 
  /**
   * font_map based on the file
@@ -198,6 +205,8 @@ char * keyboard_lookup(char number);
 void keyboard_setup(void);
 
 void interpretKeypress(void);
+
+char translateKeypress(char);
 
 #ifdef	__cplusplus
 }
