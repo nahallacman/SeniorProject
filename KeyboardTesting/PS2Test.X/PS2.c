@@ -225,16 +225,40 @@ void interpretKeypress(void)
         else
         {
             //clears the screen for each key press
-            ClearScreen();
+            //ClearScreen();
 
             //remove item from circular buffer
             temp = ps2Buffer[ps2BufferStart];
             //reduce number of items in the buffer.
             ps2BufferNumItems--;
             //key press
-            temp2 = translateKeypress(temp);
+            //temp2 = translateKeypress(temp);
             //testing a write char
-            writechar(keyboard_lookup(temp2), 8, 8);
+            //writechar(keyboard_lookup(temp2), 8, 8);
+
+
+            //writechar(keyboard_lookup(translateKeypress(temp)), 8, 8);
+            writechar(keyboard_lookup(translateKeypress(temp)), cursor_x, cursor_y);
+            if(cursor_x < 800)
+            {
+                cursor_x += 8;
+            }
+            else
+            {
+                cursor_x = 0;
+                if(cursor_y < 600)
+                {
+                    cursor_y += 8;
+                }
+                else
+                {
+                    cursor_y = 0;
+                }
+                
+            }
+
+
+
 
             //make buffer circular
             if(ps2BufferStart < ps2BufferSize )
@@ -267,6 +291,10 @@ char translateKeypress(char translate)
             break;
         case 0x1D:
             temp = 0x77; //w
+            break;
+        case 0x29: // spacebar will clear the screen
+            ClearScreen();
+            temp = 0x20;
             break;
         default:
             temp = 0x21;

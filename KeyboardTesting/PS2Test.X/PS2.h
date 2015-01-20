@@ -46,6 +46,15 @@ int ps2BufferStart = 0;
 int ps2BufferSize = 100;
 int ps2BufferNumItems = 0;
 
+
+
+
+
+//begining cursor functionality
+int cursor_x = 0;
+int cursor_y = 0;
+
+
  /**
   * font_map based on the file
   * http://users.ices.utexas.edu/~lenharth/cs378/fall13/font8x8.h
