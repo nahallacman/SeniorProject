@@ -292,6 +292,18 @@ char translateKeypress(char translate)
         case 0x1D:
             temp = 0x77; //w
             break;
+        case 0x24:
+            temp = 0x65; //e
+            break;
+        case 0x2D:
+            temp = 0x72; //r
+            break;
+        case 0x2C:
+            temp = 0x74; //t
+            break;
+        case 0x35:
+            temp = 0x79; //y
+            break;
         case 0x29: // spacebar will clear the screen
             ClearScreen();
             temp = 0x20;
