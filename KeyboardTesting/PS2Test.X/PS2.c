@@ -286,6 +286,8 @@ char translateKeypress(char translate)
     char temp;
     switch(translate)
     {
+        //start keyboard line: qwertyuiop[] and '\'
+
         case 0x15:
             temp = 0x71; //q
             break;
@@ -304,6 +306,63 @@ char translateKeypress(char translate)
         case 0x35:
             temp = 0x79; //y
             break;
+        case 0x3C:
+            temp = 0x75; //u
+            break;
+        case 0x43:
+            temp = 0x69; //i
+            break;
+        case 0x44:
+            temp = 0x6F; //o
+            break;
+        case 0x4D:
+            temp = 0x70; //p
+            break;
+        case 0x54:
+            temp = 0x5B; //[
+            break;
+        case 0x5B:
+            temp = 0x5D;  //]
+            break;
+        case 0x5D:
+            temp = 0x5C; //"\"
+            break;
+        //start keyboard line: asdfghjkl;'
+        case 0x1C:
+            temp = 0x61; //a
+            break;
+        case 0x1B:
+            temp = 0x73; //s
+            break;
+        case 0x23:
+            temp = 0x64; //d
+            break;
+        case 0x2B:
+            temp = 0x66; //f
+            break;
+        case 0x34:
+            temp = 0x67; //g
+            break;
+        case 0x33:
+            temp = 0x68; //h
+            break;
+        case 0x3B:
+            temp = 0x6A; //j
+            break;
+        case 0x42:
+            temp = 0x6B; //k
+            break;
+        case 0x4B:
+            temp = 0x6C; //l
+            break;
+        case 0x4C:      //NOTE: this is actually a : not a ; but there is no bitmap for ;
+            temp = 0x3A; //;
+            break;
+        case 0x52:
+            temp = 0x27; //'
+            break;
+        //start keyboard line: zxcvbnm,./
+
         case 0x29: // spacebar will clear the screen
             ClearScreen();
             temp = 0x20;
