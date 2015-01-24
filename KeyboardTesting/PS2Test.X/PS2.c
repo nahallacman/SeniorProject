@@ -286,8 +286,47 @@ char translateKeypress(char translate)
     char temp;
     switch(translate)
     {
+        //start keyboard line: `1234567890-=
+        case 0x0E:
+            temp = 0x60; //`
+            break;
+        case 0x16:
+            temp = 0x31; //1
+            break;
+        case 0x1E:
+            temp = 0x32; //2
+            break;
+        case 0x26:
+            temp = 0x33; //3
+            break;
+        case 0x25:
+            temp = 0x34; //4
+            break;
+        case 0x2E:
+            temp = 0x35; //5
+            break;
+        case 0x36:
+            temp = 0x36; //6
+            break;
+        case 0x3D:
+            temp = 0x37; //7
+            break;
+        case 0x3E:
+            temp = 0x38; //8
+            break;
+        case 0x46:
+            temp = 0x39; //9
+            break;
+        case 0x45:
+            temp = 0x30; //0
+            break;
+        case 0x4E:
+            temp = 0x2D; //-
+            break;
+       case 0x55:
+            temp = 0x3D; //=
+            break;
         //start keyboard line: qwertyuiop[] and '\'
-
         case 0x15:
             temp = 0x71; //q
             break;
@@ -362,7 +401,36 @@ char translateKeypress(char translate)
             temp = 0x27; //'
             break;
         //start keyboard line: zxcvbnm,./
-
+        case 0x1A:
+            temp = 0x7A; //z
+            break;
+        case 0x22:
+            temp = 0x78; //x
+            break;
+        case 0x21:
+            temp = 0x63; //c
+            break;
+        case 0x2A:
+            temp = 0x76; //v
+            break;
+        case 0x32:
+            temp = 0x62; //b
+            break;
+        case 0x31:
+            temp = 0x6E; //n
+            break;
+        case 0x3A:
+            temp = 0x6D; //m
+            break;
+        case 0x41:
+            temp = 0x2C; //,
+            break;
+        case 0x49:
+            temp = 0x2E; //.
+            break;
+        case 0x4A:
+            temp = 0x2F; // "/"
+            break;
         case 0x29: // spacebar will clear the screen
             ClearScreen();
             temp = 0x20;
