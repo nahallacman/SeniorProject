@@ -303,6 +303,11 @@ void writechar(char * character, int x, int y)
             Bits = character[i];
             //Bits << x_intOffset;
             Bits = Bits << leftover;
+            
+            //testing bitswapping
+            //this bitswapping works, just need to reverse the bitorder of the characters
+            //however, bitswapping does break some other things meaning this section still needs work reguardless
+            Bits = _bswapw(Bits);
 
             //test = VGA_VideoMemory[Byte] || Bits;
             //VGA_VideoMemory[Byte] = test;
