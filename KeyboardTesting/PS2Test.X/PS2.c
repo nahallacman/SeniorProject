@@ -286,6 +286,10 @@ char translateKeypress(char translate)
     char temp;
     switch(translate)
     {
+        //start keyboard line: esc F1F2F3F4F5F6F7F8F9F10F11F12
+        case 0x76:
+            ClearScreen(); // esc will clear the screen
+            break;
         //start keyboard line: `1234567890-=
         case 0x0E:
             temp = 0x60; //`
@@ -431,8 +435,7 @@ char translateKeypress(char translate)
         case 0x4A:
             temp = 0x2F; // "/"
             break;
-        case 0x29: // spacebar will clear the screen
-            ClearScreen();
+        case 0x29: // space
             temp = 0x20;
             break;
         default:
