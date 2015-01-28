@@ -12,6 +12,8 @@
 extern "C" {
 #endif
 
+            int test;
+
 //#include "VGA.c"
 //#include <plib.h>
 //set the priority of the timer2 service routine
@@ -31,6 +33,8 @@ void writeverticalline(int x1, int x2);
 void writepixel(int x, int y);
 
 void writechar(char * character, int x, int y);
+
+void ClearScreen(void);
 
 int LineWidth = 25;
 

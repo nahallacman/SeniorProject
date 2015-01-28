@@ -12,16 +12,47 @@
 extern "C" {
 #endif
 
+#include "PS2Common.h"
+
 //set the priority of the ChangeNotificationISR
 #pragma interrupt ChangeNotificationISR IPL1 vector 26
 
+#pragma interrupt InputCapture1ISR IPL6 vector 5
+
 void ChangeNotificationISR(void);
+
+void InputCapture1ISR(void);
 
 int ChangeState = 0;
 int values[23];
 
 int badkeypress = 0;
 int badkeystart = 0;
+
+int IC1State = 0;
+
+int parity = 0;
+int code = 0;
+int ps2BufferEndIndex = 0;
+//int ps2Buffer[8];
+int ps2Buffer[100];
+
+//flag letting the system know if there is something keyboard related to process in the main loop
+int KeysToProcess;
+
+//index to the ps2buffer for using a circular buffer
+//int KeyBufferEnd = 0;
+int ps2BufferStart = 0;
+int ps2BufferSize = 100;
+int ps2BufferNumItems = 0;
+
+
+
+
+
+//begining cursor functionality
+int cursor_x = 0;
+int cursor_y = 0;
 
 
  /**
@@ -181,6 +212,10 @@ unsigned char font_map[128][8] =
 char * keyboard_lookup(char number);
 
 void keyboard_setup(void);
+
+void interpretKeypress(void);
+
+char translateKeypress(char);
 
 #ifdef	__cplusplus
 }

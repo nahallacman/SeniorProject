@@ -291,12 +291,42 @@ void writechar(char * character, int x, int y)
         int Bits;
         int Byte;
 
+        int temp = (x / 32);
+        int leftover = x % 32;
+        int x_intOffset = 0;
+        //if(leftover == 8)
+        //{
+        //    x_intOffset = 8;
+        //}
+
         Byte = (y*25) + (x/32);
         for(i = 0; i < 8; i++)
         {
             Bits = character[i];
+            //Bits << x_intOffset;
+            Bits = Bits << leftover;
+            
+            //testing bitswapping
+            //this bitswapping works, just need to reverse the bitorder of the characters
+            //however, bitswapping does break some other things meaning this section still needs work reguardless
+            Bits = _bswapw(Bits);
+
+            //test = VGA_VideoMemory[Byte] || Bits;
+            //VGA_VideoMemory[Byte] = test;
             VGA_VideoMemory[Byte] |= Bits;
+
+            //VGA_VideoMemory[Byte] |= Bits;
             Byte += 25; // go down one line
         }
+    }
+}
+
+void ClearScreen(void)
+{
+    //clears the screen
+    int i = 0;
+    for(i=0; i < 15000; i++)
+    {
+        VGA_VideoMemory[i] = 0;
     }
 }

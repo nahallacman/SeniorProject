@@ -37,6 +37,7 @@
 #include <plib.h>
 //#include "VGA.h"
 //#include "PS2.h"
+#include "PS2Common.h"
 
 
 
@@ -86,7 +87,6 @@ int SPI2STATE = 1;
 
 
 
-
 //this value should be constant
 //int PR2VAL1 = 1334000; //doesnt work, guess test, not true limit testing
 //int PR2VAL1 = 1333334; //works 59.9999Hz
@@ -125,16 +125,25 @@ int main(void) {
 
     int line = 0;
     int linewidth = 25;
-    int i = 0;
+
+
+    KeysToProcess = 0;
+
+
+    //int i = 0;
     //for(i = 0; i < 15000; i++) // write the whole video frame
     //{
         //VGA_VideoMemory[i] = 0xFF000000;
         //VGA_VideoMemory[i] = 0x55555555;
     //}
+
+    /*
     writefullhorizontalline(0);
     writefullhorizontalline(1);
     writefullhorizontalline(5);//can't see
     writefullhorizontalline(6);//can see
+    */
+
     //writefullhorizontalline(8);
     //writefullhorizontalline(10);
     //writefullhorizontalline(150);
@@ -142,6 +151,7 @@ int main(void) {
     //writefullhorizontalline(450);
     //writefullhorizontalline(599);
 
+    /*
     writefullhorizontalline(75);
     writefullhorizontalline(150);
     writefullhorizontalline(225);
@@ -150,9 +160,10 @@ int main(void) {
     writefullhorizontalline(450);
     writefullhorizontalline(525);
     writefullhorizontalline(599);
-
+*/
     //writehorizontalline(600); // out of frame
 
+    /*
     writefullverticalline(0);
     writefullverticalline(100);
     writefullverticalline(200);
@@ -162,8 +173,8 @@ int main(void) {
     writefullverticalline(600);
     writefullverticalline(700);
     writefullverticalline(799);
-
-    writepixel(700, 500);
+*/
+    //writepixel(700, 500);
     //writepixel(700, 501);
     //writepixel(701, 500);
     //writepixel(701, 501);
@@ -171,12 +182,39 @@ int main(void) {
     char testchar[8] = { 0x3E, 0x63, 0x73, 0x7B, 0x6F, 0x67, 0x3E, 0x00 }; // should be a "0" character
     char cursor[8] = { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF };
     //writechar(testchar, 8, 8);
-    writechar(testchar, 32, 64);
-    writechar(keyboard_lookup('0'), 8, 8);
-    writechar(cursor, 8, 32 );
-    writechar(cursor, 32, 8);
+    //writechar(testchar, 32, 64);
+    //writechar(keyboard_lookup('0'), 8, 8);
+    //writechar(cursor, 8, 32 );
+    //writechar(cursor, 32, 8);
 
-    
+
+    //loop 800 / 8 = 100 times each line
+    //loop 600 / 8 = 75 lines
+
+    int i = 0;
+    int j = 0;
+    int CharNum = 0x21;
+
+    //fill the video memory with characters in a repeating loop
+    for(i = 0; i < 75; i++)
+    {
+        for(j = 0; j < 100; j++)
+        {
+            writechar(keyboard_lookup(CharNum), j*8, i*8);
+            //writechar(keyboard_lookup('0'), j*8, i*8);
+            if(CharNum < 0x80)
+            {
+                CharNum++;
+            }
+            else
+            {
+                CharNum = 0x21;
+            }
+        }
+    }
+
+
+
 	
     keyboard_setup();
 
@@ -210,6 +248,12 @@ int main(void) {
         //IFS1bits.SPI2ATXIF = 1;
 
 
+        //main loop should contain:
+        //while(1)
+        //interpret TCP/IP or other serial data
+        //interpret keypresses
+        //draw things to memory
+        //do other processing
 
 
     while (1)
@@ -222,7 +266,13 @@ int main(void) {
         { 
             KEYPRESSED = 1;
         }
+        if(KeysToProcess == 1)
+        {
 
+            //process keystrokes
+            interpretKeypress();
+
+        }
         
     }
 }
