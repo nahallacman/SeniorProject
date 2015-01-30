@@ -197,8 +197,10 @@ int main(void) {
 
     //fill the video memory with characters in a repeating loop
     for(i = 0; i < 75; i++)
+    //for(i = 0; i < 10; i++)
     {
         for(j = 0; j < 100; j++)
+        //for(j = 0; j < 10; j++)
         {
             writechar(keyboard_lookup(CharNum), j*8, i*8);
             //writechar(keyboard_lookup('0'), j*8, i*8);
