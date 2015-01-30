@@ -30,10 +30,12 @@ void VGA_Setup(void)
     TRISGbits.TRISG9 = 0; //set to output
     PORTGbits.RG9 = 0;// initialize value just in case, may be unnecessary
 
+	//T board: pin 26
 	//using RD4 for horizontal sync
     TRISDbits.TRISD4 = 0; //set to output
     PORTDbits.RD4 = 1;// initialize value to high since active is low
-    //using RB12 for vertical sync
+    //T board: pin 20
+	//using RB12 for vertical sync
     TRISBbits.TRISB12 = 0; //set to output
     PORTBbits.RB12 = 1;// initialize value to high since active is low
     //---VGA port bits end ---
