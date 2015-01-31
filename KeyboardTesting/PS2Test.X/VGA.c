@@ -352,3 +352,68 @@ void ClearScreen(void)
         VGA_VideoMemory[i] = 0;
     }
 }
+
+void MoveCursorLeft(void)
+{
+    if(CursorLocation == 0)
+    {
+        //do nothing, can't move more left
+    }
+    else 
+    {
+        //if(CursorLocation < LineLocationStart)
+        //{
+            //move cursor left
+            CursorLocation--;
+        //}
+        //else
+        //{
+            //do nothing, the cursor can't go any more left
+        //}
+    }
+
+}
+
+void MoveCursorRight(void)
+{
+    if(CursorLocation < 7499)
+    {
+        //if(CursorLocation < LineLocationEnd)
+        //{
+            //move cursor right
+            CursorLocation++;
+        //}
+    }
+    else
+    {
+        //do nothing, can't move more right
+    }
+}
+
+void BlinkCursor(void)
+{
+    /*
+    if( blinkstate == 0 )
+    {
+        //turn the cursor on
+        blinkstate = 1;
+    }
+    else
+    {
+        //turn the cursor off
+        blinkstate = 0;
+    }
+     */
+    int x = 0;
+    int y = 0;
+    int x_char = 0;
+    int y_char = 0;
+
+
+    y_char = (CursorLocation / 100);
+    x_char =  CursorLocation - (y_char * 100);
+    char fullchar[8] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+
+    writechar(fullchar, x_char * 8, y_char * 8);
+
+}

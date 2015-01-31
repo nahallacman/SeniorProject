@@ -196,11 +196,21 @@ void interpretKeypress(void)
         if( ps2Buffer[ps2BufferStart] == 0xE0 )
         {
             //special key pressed
+
+            //ignore the special keys for now, just read them straight in
+            if(ps2BufferStart < ps2BufferSize )
+            {
+                ps2BufferStart++;
+            }
+            else
+            {
+                ps2BufferStart = 0;
+            }
+            ps2BufferNumItems--;
         }
         else if(ps2Buffer[ps2BufferStart] == 0xF0)
         {
             //key release, so move the buffer down 2
-
             if(ps2BufferStart < ps2BufferSize )
             {
                 ps2BufferStart++;
@@ -286,6 +296,16 @@ char translateKeypress(char translate)
     char temp;
     switch(translate)
     {
+        //start special keys: arrow keys
+        case 0x6B:
+            BlinkCursor();
+            MoveCursorLeft(); // left arrow
+            break;
+        case 0x74:
+            BlinkCursor();
+            MoveCursorRight(); // right arrow
+            break;
+
         //start keyboard line: esc F1F2F3F4F5F6F7F8F9F10F11F12
         case 0x76:
             ClearScreen(); // esc will clear the screen

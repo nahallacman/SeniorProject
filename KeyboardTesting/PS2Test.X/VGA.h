@@ -36,9 +36,18 @@ void writechar(char * character, int x, int y);
 
 void ClearScreen(void);
 
+void MoveCursorLeft(void);
+void MoveCursorRight(void);
+
 int LineWidth = 25;
 
-//these need to be unchanging
+int CursorLocation = 0;
+int LineLocationStart = 0;
+int LineLocationEnd = 1;
+
+int blinkstate = 0;
+
+//these need to be unchanging (const? or something?)
 int VGA_X_MAX = 800;
 int VGA_Y_MAX = 600;
 
@@ -55,7 +64,6 @@ volatile unsigned long int VGA_VideoMemory[15000];
 volatile unsigned long int *VGA_VideoMemoryIndex = VGA_VideoMemory;                                         //Pointer Index into Video Memory
 volatile unsigned long int *VGA_VideoScrollIndex = VGA_VideoMemory;                                         //Pointer Scrolling Index into Video Memory
 long int VGA_BackPorch[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};                                                  //Back porch buffer
-//int VGA_TextConsoleX=0,VGA_TextConsoleY=VGA_Y_MAX-CONSOLE_FONT_HIEGHT;                                      //Global variables used for VGA_Locate, used by _mon_putc
 
 
 #ifdef	__cplusplus
