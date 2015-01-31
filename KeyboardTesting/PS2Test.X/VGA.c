@@ -390,6 +390,38 @@ void MoveCursorRight(void)
     }
 }
 
+void MoveCursorUp(void)
+{
+    if(CursorLocation > 100)
+    {
+        //if(CursorLocation < LineLocationEnd)
+        //{
+            //move cursor up
+            CursorLocation = CursorLocation - 100;
+        //}
+    }
+    else
+    {
+        //do nothing, can't move more up
+    }
+}
+
+void MoveCursorDown(void)
+{
+    if(CursorLocation < 7499)
+    {
+        //if(CursorLocation < LineLocationEnd)
+        //{
+            //move cursor up
+            CursorLocation = CursorLocation + 100;
+        //}
+    }
+    else
+    {
+        //do nothing, can't move more up
+    }
+}
+
 void BlinkCursor(void)
 {
     /*

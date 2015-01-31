@@ -296,19 +296,30 @@ void interpretKeypress(void)
 
 char translateKeypress(char translate)
 {
-    char temp;
+    char temp = 0;
     switch(translate)
     {
         //start special keys: arrow keys
         case 0x6B:
-            BlinkCursor();
             MoveCursorLeft(); // left arrow
+            BlinkCursor();
+            temp = 0;
             break;
         case 0x74:
-            BlinkCursor();
             MoveCursorRight(); // right arrow
+            BlinkCursor();
+            temp = 0;
             break;
-
+        case 0x75:
+            MoveCursorUp(); // up arrow
+            BlinkCursor();
+            temp = 0;
+            break;
+        case 0x72:
+            MoveCursorDown(); // down arrow
+            BlinkCursor();
+            temp = 0;
+            break;
         //start keyboard line: esc F1F2F3F4F5F6F7F8F9F10F11F12
         case 0x76:
             ClearScreen(); // esc will clear the screen
