@@ -247,8 +247,11 @@ void interpretKeypress(void)
             //writechar(keyboard_lookup(temp2), 8, 8);
 
 
-            //writechar(keyboard_lookup(translateKeypress(temp)), 8, 8);
+            // this is the hinge for the keyboard keypresses
             writechar(keyboard_lookup(translateKeypress(temp)), cursor_x, cursor_y);
+
+            //this cursor stuff can be taken out and movde into the vga file itself.
+            //the keyboard shouldn't know about where the cursor is, the video file should know that
             if(cursor_x < 800)
             {
                 cursor_x += 8;
