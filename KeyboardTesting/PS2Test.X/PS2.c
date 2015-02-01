@@ -300,6 +300,15 @@ char translateKeypress(char translate)
     char temp = 0;
     switch(translate)
     {
+        //start special keys: page up and page down
+        case 0x7D: 
+            ShiftScreenUp(); // page up
+            temp = 0;
+            break;
+        case 0x7A:
+            ShiftScreenDown(); // page down
+            temp = 0;
+            break;
         //start special keys: arrow keys
         case 0x6B:
             MoveCursorLeft(); // left arrow
@@ -317,9 +326,8 @@ char translateKeypress(char translate)
             temp = 0;
             break;
         case 0x72:
-            //MoveCursorDown(); // down arrow
-            //BlinkCursor();
-            ShiftScreenUp();
+            MoveCursorDown(); // down arrow
+            BlinkCursor();
             temp = 0;
             break;
         //start keyboard line: esc F1F2F3F4F5F6F7F8F9F10F11F12
