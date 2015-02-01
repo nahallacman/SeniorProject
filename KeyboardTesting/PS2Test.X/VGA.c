@@ -449,3 +449,31 @@ void BlinkCursor(void)
     writechar(fullchar, x_char * 8, y_char * 8);
 
 }
+
+void ShiftScreenUp()
+{
+    //25 ints in a line
+    //move every 25 ints into a buffer, then put them back in one line up
+
+    //currently does nothing, but when I make it try to shift I loose all the picture.
+    int buffer[25];
+    int line = 0;
+    int i,j = 0;
+    //char * index = VGA_VideoMemory;
+    for(line = 0; line < 599; line++)
+    {
+        for(i=0; i < 25; i++)
+        {
+            buffer[i] = VGA_VideoMemory[((line + 1) * 25) + i];
+        }
+
+        for(j=0; j < 25; j++)
+        {
+            VGA_VideoMemory[(line * 25) + j] = buffer[j];
+        }
+    }
+    for(i=0; i < 25; i++)
+    {
+        VGA_VideoMemory[(599*25) + i] = 0;
+    }
+}

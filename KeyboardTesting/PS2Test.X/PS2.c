@@ -252,6 +252,7 @@ void interpretKeypress(void)
 
             //this cursor stuff can be taken out and movde into the vga file itself.
             //the keyboard shouldn't know about where the cursor is, the video file should know that
+            //probably should wrap writechar with the cursor stuff
             if(cursor_x < 800)
             {
                 cursor_x += 8;
@@ -316,8 +317,9 @@ char translateKeypress(char translate)
             temp = 0;
             break;
         case 0x72:
-            MoveCursorDown(); // down arrow
-            BlinkCursor();
+            //MoveCursorDown(); // down arrow
+            //BlinkCursor();
+            ShiftScreenUp();
             temp = 0;
             break;
         //start keyboard line: esc F1F2F3F4F5F6F7F8F9F10F11F12
