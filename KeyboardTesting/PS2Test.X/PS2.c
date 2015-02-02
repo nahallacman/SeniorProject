@@ -398,44 +398,44 @@ char translateKeypress(char translate)
                 temp = 0x2B; //+
                 break;
             //start keyboard line: qwertyuiop[] and '\'
-            case 0x15:
-                temp = 0x71; //q
+            case 0x15: //q
+                temp = 0x51; //Q
                 break;
-            case 0x1D:
-                temp = 0x77; //w
+            case 0x1D: //w
+                temp = 0x57; //W
                 break;
-            case 0x24:
-                temp = 0x65; //e
+            case 0x24: //e
+                temp = 0x45; //E
                 break;
-            case 0x2D:
-                temp = 0x72; //r
+            case 0x2D: //r
+                temp = 0x52; //R
                 break;
-            case 0x2C:
-                temp = 0x74; //t
+            case 0x2C: //t
+                temp = 0x54; //T
                 break;
-            case 0x35:
-                temp = 0x79; //y
+            case 0x35: //y
+                temp = 0x59; //Y
                 break;
-            case 0x3C:
-                temp = 0x75; //u
+            case 0x3C: //u
+                temp = 0x55; //U
                 break;
-            case 0x43:
-                temp = 0x69; //i
+            case 0x43: //i
+                temp = 0x49; //I
                 break;
-            case 0x44:
-                temp = 0x6F; //o
+            case 0x44: //o
+                temp = 0x4F; //O
                 break;
-            case 0x4D:
-                temp = 0x70; //p
+            case 0x4D: //p
+                temp = 0x50; //P
                 break;
-            case 0x54:
-                temp = 0x5B; //[
+            case 0x54: //[
+                temp = 0x7B; //{
                 break;
-            case 0x5B:
-                temp = 0x5D;  //]
+            case 0x5B: //]
+                temp = 0x7D;  //}
                 break;
-            case 0x5D:
-                temp = 0x5C; //"\"
+            case 0x5D: //"\"
+                temp = 0x7C; //|
                 break;
             //start keyboard line: asdfghjkl;'
             case 0x1C:
