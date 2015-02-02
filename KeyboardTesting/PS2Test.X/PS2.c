@@ -438,69 +438,69 @@ char translateKeypress(char translate)
                 temp = 0x7C; //|
                 break;
             //start keyboard line: asdfghjkl;'
-            case 0x1C:
-                temp = 0x61; //a
+            case 0x1C: //a
+                temp = 0x41; //A
                 break;
-            case 0x1B:
-                temp = 0x73; //s
+            case 0x1B: //s
+                temp = 0x53; //S
                 break;
-            case 0x23:
-                temp = 0x64; //d
+            case 0x23: //d
+                temp = 0x44; //D
                 break;
-            case 0x2B:
-                temp = 0x66; //f
+            case 0x2B: //f
+                temp = 0x46; //F
                 break;
-            case 0x34:
-                temp = 0x67; //g
+            case 0x34: //g
+                temp = 0x47; //G
                 break;
-            case 0x33:
-                temp = 0x68; //h
+            case 0x33: //h
+                temp = 0x48; //H
                 break;
-            case 0x3B:
-                temp = 0x6A; //j
+            case 0x3B: //j
+                temp = 0x4A; //J
                 break;
-            case 0x42:
-                temp = 0x6B; //k
+            case 0x42: //k
+                temp = 0x4B; //K
                 break;
-            case 0x4B:
-                temp = 0x6C; //l
+            case 0x4B: //l
+                temp = 0x4C; //L
                 break;
             case 0x4C:      //NOTE: this is actually a : not a ; but there is no bitmap for ;
-                temp = 0x3A; //;
+                temp = 0x3A; //:
                 break;
-            case 0x52:
-                temp = 0x27; //'
+            case 0x52: //'
+                temp = 0x22; //"
                 break;
             //start keyboard line: zxcvbnm,./
-            case 0x1A:
-                temp = 0x7A; //z
+            case 0x1A: //z
+                temp = 0x5A; //Z
                 break;
-            case 0x22:
-                temp = 0x78; //x
+            case 0x22: //x
+                temp = 0x58; //X
                 break;
-            case 0x21:
-                temp = 0x63; //c
+            case 0x21: //c
+                temp = 0x43; //C
                 break;
-            case 0x2A:
-                temp = 0x76; //v
+            case 0x2A: //v
+                temp = 0x56; //V
                 break;
-            case 0x32:
-                temp = 0x62; //b
+            case 0x32: //b
+                temp = 0x42; //B
                 break;
-            case 0x31:
-                temp = 0x6E; //n
+            case 0x31: //n
+                temp = 0x4E; //N
                 break;
-            case 0x3A:
-                temp = 0x6D; //m
+            case 0x3A: //m
+                temp = 0x4D; //M
                 break;
-            case 0x41:
-                temp = 0x2C; //,
+            case 0x41: //,
+                temp = 0x3C; //<
                 break;
-            case 0x49:
-                temp = 0x2E; //.
+            case 0x49: //.
+                temp = 0x3E; //>
                 break;
-            case 0x4A:
-                temp = 0x2F; // "/"
+            case 0x4A: // "/"
+                temp = 0x3F; //?
                 break;
             case 0x29: // space
                 temp = 0x20;
