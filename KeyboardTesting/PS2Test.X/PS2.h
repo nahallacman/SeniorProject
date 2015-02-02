@@ -46,6 +46,8 @@ int ps2BufferStart = 0;
 int ps2BufferSize = 100;
 int ps2BufferNumItems = 0;
 
+int ShiftPressed = 0;
+
 
 
 
