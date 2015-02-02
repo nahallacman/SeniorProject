@@ -298,26 +298,35 @@ void interpretKeypress(void)
 char translateKeypress(char translate)
 {
     char temp = 0;
+    int i = 0;
     switch(translate)
     {
         //start special keys: page up and page down
-        case 0x7D: 
-            ShiftScreenUp(); // page up
+        case 0x7D: // page up
+            for(i = 0; i < 8; i++)
+            {
+                ShiftScreenUp();
+            }
             temp = 0;
             break;
-        case 0x7A:
-            ShiftScreenDown(); // page down
+        case 0x7A: // page down
+            for(i = 0; i < 8; i++)
+            {
+                ShiftScreenDown();
+            }
             temp = 0;
             break;
         //start special keys: arrow keys
         case 0x6B:
-            MoveCursorLeft(); // left arrow
-            BlinkCursor();
+            ShiftScreenLeft();
+            //MoveCursorLeft(); // left arrow
+            //BlinkCursor();
             temp = 0;
             break;
         case 0x74:
-            MoveCursorRight(); // right arrow
-            BlinkCursor();
+            ShiftScreenRight();
+            //MoveCursorRight(); // right arrow
+            //BlinkCursor();
             temp = 0;
             break;
         case 0x75:

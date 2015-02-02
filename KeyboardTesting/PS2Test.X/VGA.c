@@ -501,3 +501,57 @@ void ShiftScreenDown()
         VGA_VideoMemory[i] = 0;
     }
 }
+
+void ShiftScreenLeft()
+{
+    //600 lines
+    //25 ints per line
+    //move every ints into a buffer, then put them back in one int to the left
+    int buffer = 0;
+    int line = 0;
+    int i,j = 0;
+    //char * index = VGA_VideoMemory;
+    for(line = 0; line < 600; line++)
+    {
+
+        for(i = 0; i < 24; i++)
+        {
+            buffer = 0;
+            buffer = VGA_VideoMemory[(line * 25) + i + 1];
+            VGA_VideoMemory[(line * 25) + i] = buffer;
+        }
+        VGA_VideoMemory[(line * 25) + 24] = 0;
+
+    }
+    //for(i=0; i < 25; i++)
+    //{
+    //   VGA_VideoMemory[i] = 0;
+    //}
+}
+
+void ShiftScreenRight()
+{
+    //600 lines
+    //25 ints per line
+    //move every ints into a buffer, then put them back in one int to the right
+    int buffer = 0;
+    int line = 0;
+    int i,j = 0;
+    //char * index = VGA_VideoMemory;
+    for(line = -1; line < 600; line++)
+    {
+
+        for(i = 25; i > 0; i--)
+        {
+            buffer = 0;
+            buffer = VGA_VideoMemory[(line * 25) + i];
+            VGA_VideoMemory[(line * 25) + i + 1] = buffer;
+        }
+        VGA_VideoMemory[(line * 25)] = 0;
+
+    }
+    //for(i=0; i < 25; i++)
+    //{
+    //   VGA_VideoMemory[i] = 0;
+    //}
+}
