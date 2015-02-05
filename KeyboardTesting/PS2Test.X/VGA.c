@@ -283,37 +283,42 @@ void writepixel(int x, int y)
 }
 
 //uses 8 characters in a 8x8 grid for characters, puts that character at position starting with x, y
-void writechar(char * character, int x, int y)
+//void writechar(char * character, int x, int y)
+void writechar(char * character)
 {
     int i = 0;
-    if(x < VGA_X_MAX && y < VGA_Y_MAX)
-    {
+    //if(x < VGA_X_MAX && y < VGA_Y_MAX)
+    //{
+        int y_char = 0;
+        int x_char = 0;
+        y_char = (CursorLocation / 100);
+        x_char =  CursorLocation - (y_char * 100);
+        int x_offset = x_char * 8;
+        int y_offset = y_char * 8;
+        
+
+
         int Bits;
         int Byte;
 
-        int temp = (x / 32);
-        int leftover = x % 32;
-        int x_intOffset = 0;
-        //if(leftover == 8)
-        //{
-        //    x_intOffset = 8;
-        //}
+        //int leftover = x % 32;
+        int leftover =  x_offset % 32;
 
-        Byte = (y*25) + (x/32);
+        //Byte = (y*25) + (x/32);
+        Byte = (y_offset*25) + (x_offset/32);
+
         for(i = 0; i < 8; i++)
         {
             Bits = 0;
             Bits = character[i];
-            //Bits << x_intOffset;
-            Bits = Bits << leftover;
 
-            //testing bitswapping
-            //this bitswapping works, just need to reverse the bitorder of the characters
-            //however, bitswapping does break some other things meaning this section still needs work reguardless
+            Bits = Bits << leftover;
+            //Bits = Bits << leftover2;
+
+            //bitswapping to put the character in the correct place
             Bits = _bswapw(Bits);
             
-            //going to try masking off the extra stuff just in case
-            
+            //mask off the extra stuff that can creep in
             if(leftover == 0x08)
             {
                 Bits = Bits & 0x00FF0000;
@@ -330,17 +335,30 @@ void writechar(char * character, int x, int y)
             {
                 Bits = Bits & 0xFF000000;
             }
-            
-            
 
-            //test = VGA_VideoMemory[Byte] || Bits;
-            //VGA_VideoMemory[Byte] = test;
+            //write the bits to the video memory buffer
             VGA_VideoMemory[Byte] |= Bits;
-
-            //VGA_VideoMemory[Byte] |= Bits;
             Byte += 25; // go down one line
         }
+    //}
+}
+
+void placeChar(char * character)
+{
+    
+
+    if(CursorLocation < 7499)
+    {
+        CursorLocation++;
     }
+    else
+    {
+        CursorLocation = 0;
+    }
+    LineLocationEnd++;
+
+    writechar(character);
+
 }
 
 void ClearScreen(void)
@@ -361,11 +379,11 @@ void MoveCursorLeft(void)
     }
     else 
     {
-        //if(CursorLocation < LineLocationStart)
-        //{
+        if(CursorLocation > LineLocationStart - 1)
+        {
             //move cursor left
             CursorLocation--;
-        //}
+        }
         //else
         //{
             //do nothing, the cursor can't go any more left
@@ -378,11 +396,11 @@ void MoveCursorRight(void)
 {
     if(CursorLocation < 7499)
     {
-        //if(CursorLocation < LineLocationEnd)
-        //{
+        if(CursorLocation + 1 < LineLocationEnd)
+        {
             //move cursor right
             CursorLocation++;
-        //}
+        }
     }
     else
     {
@@ -394,11 +412,11 @@ void MoveCursorUp(void)
 {
     if(CursorLocation > 100)
     {
-        //if(CursorLocation < LineLocationEnd)
-        //{
+        if(CursorLocation - 100 > LineLocationStart)
+        {
             //move cursor up
             CursorLocation = CursorLocation - 100;
-        //}
+        }
     }
     else
     {
@@ -410,11 +428,11 @@ void MoveCursorDown(void)
 {
     if(CursorLocation < 7499)
     {
-        //if(CursorLocation < LineLocationEnd)
-        //{
+        if(CursorLocation + 100 < LineLocationEnd)
+        {
             //move cursor up
             CursorLocation = CursorLocation + 100;
-        //}
+        }
     }
     else
     {
@@ -446,7 +464,8 @@ void BlinkCursor(void)
     x_char =  CursorLocation - (y_char * 100);
     char fullchar[8] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
 
-    writechar(fullchar, x_char * 8, y_char * 8);
+    //writechar(fullchar, x_char * 8, y_char * 8);
+    writechar(fullchar);
 
 }
 

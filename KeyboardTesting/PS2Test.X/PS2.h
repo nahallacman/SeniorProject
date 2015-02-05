@@ -46,9 +46,14 @@ int ps2BufferStart = 0;
 int ps2BufferSize = 100;
 int ps2BufferNumItems = 0;
 
+//flag for shift on/off
 int ShiftPressed = 0;
 
+//buffer for line, should probably be moved later
+char textLine[1024];
+int textlineindex = 0;
 
+//int cursorlocation = 0;
 
 
 

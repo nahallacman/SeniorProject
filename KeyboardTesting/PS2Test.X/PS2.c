@@ -246,9 +246,24 @@ void interpretKeypress(void)
             //testing a write char
             //writechar(keyboard_lookup(temp2), 8, 8);
 
-
+            //first translate the keypress
+            temp2 = translateKeypress(temp);
             // this is the hinge for the keyboard keypresses
-            writechar(keyboard_lookup(translateKeypress(temp)), cursor_x, cursor_y);
+
+            //then add it to the textLine buffer and increase the index
+            if(temp2 != 0)
+            {
+                textLine[textlineindex] = temp2;
+
+                //then write the character to the screen
+
+                //writechar(keyboard_lookup(textLine[textlineindex]), cursor_x, cursor_y);
+                placeChar(keyboard_lookup(textLine[textlineindex]));
+
+                 textlineindex++;
+                
+            }
+
 
             //this cursor stuff can be taken out and movde into the vga file itself.
             //the keyboard shouldn't know about where the cursor is, the video file should know that
@@ -539,6 +554,7 @@ char translateKeypress(char translate)
                 //ShiftScreenRight();
                 MoveCursorRight(); // right arrow
                 BlinkCursor();
+                //temp = 1; // quick way to make the right arrow print nothing but not get skipped over when incrementeing
                 temp = 0;
                 break;
             case 0x75:
