@@ -264,6 +264,15 @@ void interpretKeypress(void)
                 
             }
 
+            if(temp2 == 0x01)// enter key was pressed
+            {
+                int i = 0;
+                for(i = 0; i < textlineindex; i++)
+                {
+                    placeChar(keyboard_lookup(textLine[i]));
+                }
+            }
+
 
             //this cursor stuff can be taken out and movde into the vga file itself.
             //the keyboard shouldn't know about where the cursor is, the video file should know that
@@ -332,6 +341,10 @@ char translateKeypress(char translate)
     {
         switch(translate)
         {
+            //start special key: enter
+            case 0x5A: // enter
+                temp = 0x01;
+                break;
             //start special keys: page up and page down
             case 0x7D: // page up
                 ShiftScreenUp();
@@ -528,6 +541,10 @@ char translateKeypress(char translate)
     {
         switch(translate)
         {
+            //start special key: enter
+            case 0x5A: // enter
+                temp = 0x01;
+                break;
             //start special keys: page up and page down
             case 0x7D: // page up
                 for(i = 0; i < 8; i++)
