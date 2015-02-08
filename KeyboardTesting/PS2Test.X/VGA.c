@@ -41,63 +41,69 @@ void VGA_Setup(void)
     //---VGA port bits end ---
 
 	//---SPI2 for video config begin---
-    SPI2BRG = 0; // set BRG value to 0 for 40MHz operation
+        //moving to SPI4 for video config
+    //SPI2BRG = 0; // set BRG value to 0 for 40MHz operation
+    SPI4BRG = 0;
 	//need to confirm the 40MHz operation
 	//SPI2TX = TESTDATA;
 
 	//need to figure out the polarity of video signals for the SPI device
 	//I believe it is active high video, but I do not know for sure
-	SPI2CONbits.CKE = 0; //these values are copy pasted, not checked
-    SPI2CONbits.CKP = 0;
-    SPI2CONbits.SMP = 0;
+    SPI4CONbits.CKE = 0; //these values are copy pasted, not checked
+    SPI4CONbits.CKP = 0;
+    SPI4CONbits.SMP = 0;
 
-    SPI2CONbits.MODE16 = 0; //set SPI device to 32 bit operation
-    SPI2CONbits.MODE32 = 1;
+    SPI4CONbits.MODE16 = 0; //set SPI device to 32 bit operation
+    SPI4CONbits.MODE32 = 1;
 
     //guessing config values to try and make SPI run
-    SPI2CONbits.FRMEN = 1; // enable framed mode
-     SPI2CONbits.FRMSYNC = 1; //slave select line is input, slave mode
-     SPI2CONbits.FRMPOL = 1;
+    SPI4CONbits.FRMEN = 1; // enable framed mode
+     SPI4CONbits.FRMSYNC = 1; //slave select line is input, slave mode
+     SPI4CONbits.FRMPOL = 1;
 
-    SPI2CONbits.MSTEN = 1;
+    SPI4CONbits.MSTEN = 1;
 
-    //SPI2CONbits. = 1; //disable the SDI pin
-    SPI2CONSET = 0x10;
+    //SPI4CONbits. = 1; //disable the SDI pin
+    SPI4CONSET = 0x10;
 
-        //SPI2CONbits.STXISEL = 0b10;//half empty
-	SPI2CONbits.STXISEL = 0b01; // interrupt when buffer is empty, but shift register is not
-        //SPI2CONbits.STXISEL = 0b00;//interrupt when shift register is empty
+        //SPI4CONbits.STXISEL = 0b10;//half empty
+	SPI4CONbits.STXISEL = 0b01; // interrupt when buffer is empty, but shift register is not
+        //SPI4CONbits.STXISEL = 0b00;//interrupt when shift register is empty
 
-        SPI2CONbits.SSEN = 0; // disable the slave select control
+        SPI4CONbits.SSEN = 0; // disable the slave select control
 
-        SPI2CONbits.MSSEN = 0; // Slave select SPI support is disabled
+        SPI4CONbits.MSSEN = 0; // Slave select SPI support is disabled
 
 	//could be useful, but don't use yet.
-	//SPI2CONbits.ENHBUF = 1; //use the enhanced buffering
+	//SPI4CONbits.ENHBUF = 1; //use the enhanced buffering
 
 	//compiler doesn't recognize this value
-	//SPI2CONbits.MCLKSEL = 0; //use PBclk not MCLK for the baud rate generator
+	//SPI4CONbits.MCLKSEL = 0; //use PBclk not MCLK for the baud rate generator
 
-	//SPI2CONbits.ON = 1;//turn SPI2 on
-	//SPI2CONbits.ON = 0;//testing
+	//SPI4CONbits.ON = 1;//turn SPI2 on
+	//SPI4CONbits.ON = 0;//testing
 
 	//---configure SPI2 interrupts---
 	//only using transmit interrupt
 	//IEC1bits.SPI2ATXIE = 1;
-	IFS1bits.SPI2TXIF = 0;
+	//IFS1bits.SPI2TXIF = 0;
+        //IEC1bits.SPI = 1;
+        IFS1bits.SPI4TXIF = 0;
 
 	//IPC7bits.SPI2TX = 0b100;
 	//IPC7SET = 10000000;//priortiy bits 26, 27, 28, set bit 28 for priority 2
-        IPC7bits.SPI2IP = 2;
+        //IPC7bits.SPI2IP = 2;
+        IPC8bits.SPI4IP = 2;
 	//IPC7CLR = 3000000; //clear subpriority bits 25 and 24
-        IPC7bits.SPI2IS = 0;
+        //IPC7bits.SPI2IS = 0;
+        IPC8bits.SPI4IS = 0;
 
-	//---SPI2 for video config end---
+	//---SPI4 for video config end---
 
-    //timer 2 and 3 config
+        //timer 2 and 3 config
 	//T2CONbits.T32 = 1; //This sets operation to 32 bit mode using timers 2 and 3 together
 	T2CONbits.TCKPS = 0; //set the prescaler to 1:1
-    T2CONbits.ON = 0; // make sure the timer is off
+        T2CONbits.ON = 0; // make sure the timer is off
 
 	//PR2 = 100;
 	//PR2 = 1199000; // set the period register to interrupt at 60Hz // not confirmed in math
@@ -172,12 +178,12 @@ void VGA_SetupVideoOutput(void)
     //SpiChnEnable(SPI_CHANNEL2, TRUE);                                                                       //Enable the SPI Port
 
     DmaChnOpen(DMA_CHANNEL1, 1, DMA_OPEN_DEFAULT);                                                          //We are using channel 1 to start the video line transfer with the back porch
-    DmaChnSetEventControl(DMA_CHANNEL1, DMA_EV_START_IRQ_EN | DMA_EV_START_IRQ(_SPI2_TX_IRQ));              //Send data to SPI port when empty
-    DmaChnSetTxfer(DMA_CHANNEL1, (void*)VGA_BackPorch, (void *)&SPI2BUF, 9, 4, 4);                          //Set the address to the back porch buffer, just zero's
+    DmaChnSetEventControl(DMA_CHANNEL1, DMA_EV_START_IRQ_EN | DMA_EV_START_IRQ(_SPI4_TX_IRQ));              //Send data to SPI port when empty
+    DmaChnSetTxfer(DMA_CHANNEL1, (void*)VGA_BackPorch, (void *)&SPI4BUF, 9, 4, 4);                          //Set the address to the back porch buffer, just zero's
 
     DmaChnOpen(DMA_CHANNEL0, 0, DMA_OPEN_DEFAULT);                                                          //Channel 0 is chained to channel 1 and is used to output the video
-    DmaChnSetEventControl(DMA_CHANNEL0, DMA_EV_START_IRQ_EN | DMA_EV_START_IRQ(_SPI2_TX_IRQ));              //Send data to SPI port when empty
-    DmaChnSetTxfer(DMA_CHANNEL0, (void*)VGA_VideoMemory, (void *)&SPI2BUF, 100, 4, 4);                      //Set the address to the start of video memory
+    DmaChnSetEventControl(DMA_CHANNEL0, DMA_EV_START_IRQ_EN | DMA_EV_START_IRQ(_SPI4_TX_IRQ));              //Send data to SPI port when empty
+    DmaChnSetTxfer(DMA_CHANNEL0, (void*)VGA_VideoMemory, (void *)&SPI4BUF, 100, 4, 4);                      //Set the address to the start of video memory
     DmaChnSetControlFlags(DMA_CHANNEL0, DMA_CTL_CHAIN_EN | DMA_CTL_CHAIN_DIR);                              //Chain DMA 0 so that it will start on completion of the DMA 1 transfer
 
     //mT2SetIntPriority(7);                                                                                   //Timer 2 interrupt is used to start the DMA transfer and more
@@ -197,7 +203,7 @@ void T2ISR(void)
       	DCH0SSA = KVA_TO_PA((void*) (VGA_VideoMemoryIndex));                                                //Update the DMA Channel 0 with the next line address
         DmaChnEnable(DMA_CHANNEL1);                                                                         //Start the transfer
         VGA_VideoMemoryIndex+=25;                                                                           //Incroment the next line Index pointer, 25*32bit bytes = 800bits
-        //SPI2CONbits.ON = 1;//turn SPI2 on
+        //SPI4CONbits.ON = 1;//turn SPI2 on
         //IFS1bits.SPI2TXIF = 1;
     }
 
