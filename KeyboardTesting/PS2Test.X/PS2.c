@@ -19,25 +19,31 @@ void keyboard_setup(void)
 
 
     //using IC1 on RD8
+    //changing to IC2 on RD9
 
-    IC1CONbits.ICI = 0; // interrupt on every event (instead of every 2, 3, 4)
+    IC2CONbits.ICI = 0; // interrupt on every event (instead of every 2, 3, 4)
     
-    IC1CONbits.ICM = 0b010; // interrupt on every falling edge
+    IC2CONbits.ICM = 0b010; // interrupt on every falling edge
 
-    IC1CONbits.ON = 1;
+    IC2CONbits.ON = 1;
 
-    IEC0bits.IC1IE = 1; // set the interrupt enable
-    IFS0bits.IC1IF = 0; //clear the flag just in case
+    //IEC0bits.IC1IE = 1; // set the interrupt enable
+    IEC0bits.IC2IE = 1;
+    //IFS0bits.IC1IF = 0; //clear the flag just in case
+    IFS0bits.IC2IF = 0;
 
-    IPC1bits.IC1IP = 6; // set the interrupt priority
-    IPC1bits.IC1IS = 0; // set the subpriority
+    //IPC1bits.IC1IP = 6; // set the interrupt priority
+    IPC2bits.IC2IP = 6;
+    //IPC1bits.IC1IS = 0; // set the subpriority
+    IPC2bits.IC2IS = 0;
 
 
     //using RD6 for PS2CLK   //  PORTDbits.RD6;
     //TRISDbits.TRISD6 = 1; // set to input
-    //moving clock to RD8 to use IC1
+    //moving clock to RD9 to use IC2
     //might need it's own external pullup
-    TRISDbits.TRISD8 = 1; // set to input
+    //TRISDbits.TRISD8 = 1; // set to input
+    TRISDbits.TRISD9 = 1;
     //using RD7 for PS2DATA
     TRISDbits.TRISD7 = 1; // set to input
 
@@ -112,18 +118,21 @@ void ChangeNotificationISR(void)
     IFS1CLR = 0x1;
 }
 
-void InputCapture1ISR(void)
+void InputCapture2ISR(void)
 {
-    IC1BUF;
+    IC2BUF;
     //IFS0bits.IC1IF = 0;
-    IFS0CLR = 0x20; // atomically clear the interrupt flag
+    //IFS0bits.IC2IF = 0;
+    //IFS0CLR = 0x20; // atomically clear the interrupt flag
+    IFS0CLR = 0x200;
 
     values[IC1State] = PORTD;
 
     int i = 0;
 
     //then check to make sure the clock is still low
-    if(PORTDbits.RD8 == 0)
+    //if(PORTDbits.RD8 == 0)
+    if(PORTDbits.RD9 == 0)
     {
         //then read the data bit
         badkeypress = 0;
@@ -137,7 +146,8 @@ void InputCapture1ISR(void)
                 int temp = 0;
                 for(i = 8; i > 0; i--)
                 {
-                    if(values[i] & 0x80) // check this
+                    if(values[i] & 0x80) // 0x80 is for RD8, need RD9, 0x100
+                    //if(values[i] & 0x100)
                     {
                         temp = 1;
                     }

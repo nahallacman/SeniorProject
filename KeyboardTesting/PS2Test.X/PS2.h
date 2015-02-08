@@ -17,11 +17,11 @@ extern "C" {
 //set the priority of the ChangeNotificationISR
 #pragma interrupt ChangeNotificationISR IPL1 vector 26
 
-#pragma interrupt InputCapture1ISR IPL6 vector 5
+#pragma interrupt InputCapture2ISR IPL6 vector 9
 
 void ChangeNotificationISR(void);
 
-void InputCapture1ISR(void);
+void InputCapture2ISR(void);
 
 int ChangeState = 0;
 int values[23];
