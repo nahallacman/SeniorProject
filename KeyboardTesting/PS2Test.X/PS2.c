@@ -284,7 +284,7 @@ void interpretKeypress(void)
             }
 
 
-            //this cursor stuff can be taken out and movde into the vga file itself.
+            //this cursor stuff can be taken out and move into the vga file itself.
             //the keyboard shouldn't know about where the cursor is, the video file should know that
             //probably should wrap writechar with the cursor stuff
             if(cursor_x < 800)
