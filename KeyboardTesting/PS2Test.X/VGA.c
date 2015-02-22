@@ -36,8 +36,10 @@ void VGA_Setup(void)
     PORTDbits.RD4 = 1;// initialize value to high since active is low
     //T board: pin 20
 	//using RB12 for vertical sync
-    TRISBbits.TRISB12 = 0; //set to output
-    PORTBbits.RB12 = 1;// initialize value to high since active is low
+    //TRISBbits.TRISB12 = 0; //set to output
+    //PORTBbits.RB12 = 1;// initialize value to high since active is low
+    TRISBbits.TRISB8 = 0;
+    PORTBbits.RB8 = 1;
     //---VGA port bits end ---
 
 	//---SPI2 for video config begin---
@@ -209,11 +211,13 @@ void T2ISR(void)
 
     if(VGA_LineCount==1)
     {
-        PORTBbits.RB12 = 0; // sync pulse is 0's
+        //PORTBbits.RB12 = 0; // sync pulse is 0's
+        PORTBbits.RB8 = 0;
     }                                                              //Vertical Sync Pulse is generated over Horizontal line 1 to 4, Set Low
     if(VGA_LineCount==5)
     {
-        PORTBbits.RB12 = 1; //Set High
+        //PORTBbits.RB12 = 1; //Set High
+        PORTBbits.RB8 = 1;
     }
     if(VGA_LineCount==628)                                                                                  //We have delt with all 628 lines so reset line count and video memory pointer
     {
