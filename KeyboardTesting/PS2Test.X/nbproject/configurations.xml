@@ -4,9 +4,9 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>C:/Users/cal/Desktop/School/SeniorProject/KeyboardTesting/PS2Test.X/PS2.h</itemPath>
-      <itemPath>C:/Users/cal/Desktop/School/SeniorProject/KeyboardTesting/PS2Test.X/PS2Common.h</itemPath>
-      <itemPath>C:/Users/cal/Desktop/School/SeniorProject/KeyboardTesting/PS2Test.X/VGA.h</itemPath>
+      <itemPath>PS2.h</itemPath>
+      <itemPath>PS2Common.h</itemPath>
+      <itemPath>VGA.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -15,9 +15,9 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>C:/Users/cal/Desktop/School/SeniorProject/KeyboardTesting/PS2Test.X/main.c</itemPath>
-      <itemPath>C:/Users/cal/Desktop/School/SeniorProject/KeyboardTesting/PS2Test.X/PS2.c</itemPath>
-      <itemPath>C:/Users/cal/Desktop/School/SeniorProject/KeyboardTesting/PS2Test.X/VGA.c</itemPath>
+      <itemPath>main.c</itemPath>
+      <itemPath>PS2.c</itemPath>
+      <itemPath>VGA.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -33,9 +33,9 @@
         <targetDevice>PIC32MX795F512L</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>RealICEPlatformTool</platformTool>
+        <platformTool>SKDEPIC32PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>1.33</languageToolchainVersion>
+        <languageToolchainVersion>1.34</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -149,6 +149,7 @@
         <property key="common-include-directories" value=""/>
         <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
+        <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
       </C32Global>
@@ -208,7 +209,6 @@
         <property key="UART5" value="true"/>
         <property key="UART6" value="true"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
-        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="hwtoolclock.instructionspeed" value="4"/>
         <property key="hwtoolclock.units" value="mips"/>
@@ -231,11 +231,14 @@
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
+        <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preserveeeprom" value="false"/>
         <property key="programoptions.preserveprogramrange" value="false"/>
         <property key="programoptions.preserveprogramrange.end" value="0x1d07ffff"/>
         <property key="programoptions.preserveprogramrange.start" value="0x1d000000"/>
         <property key="programoptions.preserveuserid" value="false"/>
+        <property key="programoptions.programcalmem" value="false"/>
+        <property key="programoptions.programuserotp" value="false"/>
         <property key="programoptions.usehighvoltageonmclr" value="false"/>
         <property key="programoptions.uselvpprogramming" value="false"/>
         <property key="tracecontrol.disablemacros" value="false"/>
@@ -245,11 +248,13 @@
         <property key="tracecontrol.select" value="0"/>
         <property key="tracecontrol.stallontracebufferfull" value="false"/>
         <property key="tracecontrol.tracebufmax" value="546000"/>
-        <property key="tracecontrol.tracefile"
-                  value="C:\Users\cal\Desktop\School\SeniorProject\SeniorProject\KeyboardTesting\PS2Test.X\debug\default\defmplabxtrace.log"/>
+        <property key="tracecontrol.tracefile" value="defmplabxtrace.log"/>
         <property key="tracecontrol.tracefilemax" value="10000000"/>
         <property key="voltagevalue" value="3.25"/>
       </RealICEPlatformTool>
+      <SKDEPIC32PlatformTool>
+        <property key="whatToProgram" value="all"/>
+      </SKDEPIC32PlatformTool>
     </conf>
   </confs>
 </configurationDescriptor>
