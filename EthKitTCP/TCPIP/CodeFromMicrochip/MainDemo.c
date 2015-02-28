@@ -197,13 +197,13 @@ int main(void)
 	INTCONbits.MVEC = 1; // turn on mutli vectored mode
 
 	//enable interrupts
-	asm("ei");
+	//asm("ei");
     //---turn things on---
     T2CONbits.ON = 1; // turn the timer on
     //T3CONbits.ON = 1;
 	//T4CONbits.ON = 1;
 
-       SPI4CONbits.ON = 1;//turn SPI4 on
+       SPI2CONbits.ON = 1;//turn SPI2 on
     
     
    
