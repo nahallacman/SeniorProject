@@ -752,3 +752,8 @@ char translateKeypress(char translate)
     }
     return temp;
 }
+
+char * gettextLine(void)
+{
+    return textLine;
+}

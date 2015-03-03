@@ -53,6 +53,7 @@ int ShiftPressed = 0;
 char textLine[1024];
 int textlineindex = 0;
 
+char * gettextLine(void);
 //int cursorlocation = 0;
 
 

@@ -61,6 +61,8 @@
 //cals edits
 #include "../../Dev/PS2Common.h"
 #include <plib.h>
+
+void NewTCPClient(char * textToSend);
 //end cals edits
 
 
@@ -392,7 +394,11 @@ int main(void)
 
         //cals edits
         #if defined(STACK_USE_GENERIC_TCP_CLIENT_EXAMPLE)
-         GenericTCPClient();
+        char * ptr;
+        //ptr = gettextLine();
+         //GenericTCPClient(ptr);
+        //GenericTCPClient();
+        NewTCPClient(gettextLine());
         #endif
        //end cals edits
         
