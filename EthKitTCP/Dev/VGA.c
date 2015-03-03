@@ -90,15 +90,15 @@ void VGA_Setup(void)
 	//IEC1bits.SPI2ATXIE = 1;
 	//IFS1bits.SPI2TXIF = 0;
         //IEC1bits.SPI = 1;
-        IFS1bits.SPI4TXIF = 0;
+        IFS1bits.SPI2TXIF = 0;
 
 	//IPC7bits.SPI2TX = 0b100;
 	//IPC7SET = 10000000;//priortiy bits 26, 27, 28, set bit 28 for priority 2
-        //IPC7bits.SPI2IP = 2;
-        IPC8bits.SPI4IP = 2;
+        IPC7bits.SPI2IP = 4;
+        //IPC8bits.SPI4IP = 2;
 	//IPC7CLR = 3000000; //clear subpriority bits 25 and 24
-        //IPC7bits.SPI2IS = 0;
-        IPC8bits.SPI4IS = 0;
+        IPC7bits.SPI2IS = 0;
+        //IPC8bits.SPI4IS = 0;
 
 	//---SPI4 for video config end---
 

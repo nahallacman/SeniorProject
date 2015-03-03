@@ -291,7 +291,7 @@ int main(void)
     #if defined(WF_CS_TRIS)
     #if defined(DERIVE_KEY_FROM_PASSPHRASE_IN_HOST)
         g_WpsPassphrase.valid = FALSE;
-    #endif    /* defined(DERIVE_KEY_FROM_PASSPHRASE_IN_HOST) */
+    #endif   // defined(DERIVE_KEY_FROM_PASSPHRASE_IN_HOST) 
     WF_Connect();
     #endif
 
@@ -321,6 +321,7 @@ int main(void)
     mDNSMulticastFilterRegister();            
     #endif
 
+    
     // Now that all items are initialized, begin the co-operative
     // multitasking loop.  This infinite loop will continuously 
     // execute all stack-related tasks, as well as your own
@@ -348,6 +349,7 @@ int main(void)
 
         }
 
+        
         // Blink LED0 (right most one) every second.
         if(TickGet() - t >= TICK_SECOND/2ul)
         {
@@ -481,7 +483,7 @@ int main(void)
                 WF_SetPSK(g_WpsPassphrase.passphrase.key);
                 g_WpsPassphrase.valid = FALSE;
             }
-        #endif    /* defined(DERIVE_KEY_FROM_PASSPHRASE_IN_HOST) */
+        #endif    // defined(DERIVE_KEY_FROM_PASSPHRASE_IN_HOST) 
 		#if defined(STACK_USE_AUTOUPDATE_HTTPSERVER) && defined(WF_CS_TRIS) && defined(MRF24WG)
 		{
 			static DWORD t_UpdateImage=0;
@@ -513,7 +515,9 @@ int main(void)
 			}
 		}
 		#endif
+
     }
+
 }
 
 #if defined(WF_CS_TRIS)
