@@ -371,6 +371,12 @@ void placeChar(char * character)
 
 }
 
+void resetPlaceCharLocation(void)
+{
+    CursorLocation = 0;
+    LineLocationEnd = 0;
+}
+
 void ClearScreen(void)
 {
     //clears the screen

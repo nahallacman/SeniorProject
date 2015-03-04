@@ -460,6 +460,13 @@ char translateKeypress(char translate)
 		//start keyboard line: esc F1F2F3F4F5F6F7F8F9F10F11F12
 		case 0x76: // esc
 			ClearScreen(); // esc will clear the screen for now
+                        int i = 0;
+                        for(i = 0; i < 1024; i++) // iterates and clears the line
+                        {
+                            textLine[i] = 0;
+                        }
+                        textlineindex = 0; // reset the index
+                        resetPlaceCharLocation(); // reset the screen beginning
 			break;
 		//start keyboard line: `1234567890-=
 		case 0x0E: //`
@@ -794,7 +801,6 @@ char translateKeypress(char translate)
 				break;
 			}
 			break;
-
 		case 0x34: //g
 			switch(ShiftPressed)
 			{		

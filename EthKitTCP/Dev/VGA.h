@@ -35,6 +35,8 @@ void writepixel(int x, int y);
 //void writechar(char * character, int x, int y);
 void writechar(char * character);
 
+void resetPlaceCharLocation(void);
+
 void ClearScreen(void);
 
 void MoveCursorLeft(void);
