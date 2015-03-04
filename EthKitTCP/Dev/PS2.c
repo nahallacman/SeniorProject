@@ -347,409 +347,649 @@ char translateKeypress(char translate)
         ShiftPressed = 0;
         temp = 0;
     }
-    else if(ShiftPressed == 1)
+    else
     {
-        switch(translate)
-        {
-            //start special key: enter
-            case 0x5A: // enter
-                temp = 0x01;
-                break;
-            //start special keys: page up and page down
-            case 0x7D: // page up
-                ShiftScreenUp();
-                temp = 0;
-                break;
-            case 0x7A: // page down
-                ShiftScreenDown();
-                temp = 0;
-                break;
-            //start special keys: arrow keys
-            case 0x6B: // left arrow
-                ShiftScreenLeft();
-                //MoveCursorLeft(); 
-                //BlinkCursor();
-                temp = 0;
-                break;
-            case 0x74: // right arrow
-                ShiftScreenRight();
-                //MoveCursorRight(); 
-                //BlinkCursor();
-                temp = 0;
-                break;
-            case 0x75: // up arrow
-                for(i = 0; i < 8; i++)
-                {
-                    ShiftScreenUp();
-                }
-                temp = 0;
-                break;
-            case 0x72: // down arrow
-                for(i = 0; i < 8; i++)
-                {
-                    ShiftScreenDown();
-                }
-                temp = 0;
-                break;
-            //start keyboard line: esc F1F2F3F4F5F6F7F8F9F10F11F12
-            case 0x76: // esc
-                ClearScreen(); // esc will clear the screen for now
-                break;
-            //start keyboard line: `1234567890-=
-            case 0x0E: //`
-                temp = 0x7E; //~
-                break;
-            case 0x16: //1
-                temp = 0x21; //!
-                break;
-            case 0x1E: //2
-                temp = 0x40; //@
-                break;
-            case 0x26: //3
-                temp = 0x23; //#
-                break;
-            case 0x25: //4
-                temp = 0x24; //$
-                break;
-            case 0x2E: //5
-                temp = 0x25; //%
-                break;
-            case 0x36: //6
-                temp = 0x5E; //^
-                break;
-            case 0x3D: //7
-                temp = 0x26; //&
-                break;
-            case 0x3E: //8
-                temp = 0x2A; //*
-                break;
-            case 0x46: //9
-                temp = 0x28; //(
-                break;
-            case 0x45: //0
-                temp = 0x29; //)
-                break;
-            case 0x4E: //-
-                temp = 0x5F; //_
-                break;
-           case 0x55: //=
-                temp = 0x2B; //+
-                break;
-            //start keyboard line: qwertyuiop[] and '\'
-            case 0x15: //q
-                temp = 0x51; //Q
-                break;
-            case 0x1D: //w
-                temp = 0x57; //W
-                break;
-            case 0x24: //e
-                temp = 0x45; //E
-                break;
-            case 0x2D: //r
-                temp = 0x52; //R
-                break;
-            case 0x2C: //t
-                temp = 0x54; //T
-                break;
-            case 0x35: //y
-                temp = 0x59; //Y
-                break;
-            case 0x3C: //u
-                temp = 0x55; //U
-                break;
-            case 0x43: //i
-                temp = 0x49; //I
-                break;
-            case 0x44: //o
-                temp = 0x4F; //O
-                break;
-            case 0x4D: //p
-                temp = 0x50; //P
-                break;
-            case 0x54: //[
-                temp = 0x7B; //{
-                break;
-            case 0x5B: //]
-                temp = 0x7D;  //}
-                break;
-            case 0x5D: //"\"
-                temp = 0x7C; //|
-                break;
-            //start keyboard line: asdfghjkl;'
-            case 0x1C: //a
-                temp = 0x41; //A
-                break;
-            case 0x1B: //s
-                temp = 0x53; //S
-                break;
-            case 0x23: //d
-                temp = 0x44; //D
-                break;
-            case 0x2B: //f
-                temp = 0x46; //F
-                break;
-            case 0x34: //g
-                temp = 0x47; //G
-                break;
-            case 0x33: //h
-                temp = 0x48; //H
-                break;
-            case 0x3B: //j
-                temp = 0x4A; //J
-                break;
-            case 0x42: //k
-                temp = 0x4B; //K
-                break;
-            case 0x4B: //l
-                temp = 0x4C; //L
-                break;
-            case 0x4C:      //NOTE: this is actually a : not a ; but there is no bitmap for ;
-                temp = 0x3A; //:
-                break;
-            case 0x52: //'
-                temp = 0x22; //"
-                break;
-            //start keyboard line: zxcvbnm,./
-            case 0x1A: //z
-                temp = 0x5A; //Z
-                break;
-            case 0x22: //x
-                temp = 0x58; //X
-                break;
-            case 0x21: //c
-                temp = 0x43; //C
-                break;
-            case 0x2A: //v
-                temp = 0x56; //V
-                break;
-            case 0x32: //b
-                temp = 0x42; //B
-                break;
-            case 0x31: //n
-                temp = 0x4E; //N
-                break;
-            case 0x3A: //m
-                temp = 0x4D; //M
-                break;
-            case 0x41: //,
-                temp = 0x3C; //<
-                break;
-            case 0x49: //.
-                temp = 0x3E; //>
-                break;
-            case 0x4A: // "/"
-                temp = 0x3F; //?
-                break;
-            case 0x29: // space
-                temp = 0x20;
-                break;
-            default:
-                temp = 0x21;
+	switch(translate)
+	{
+		//start special key: enter
+		case 0x5A: // enter
+			temp = 0x01;
+			break;
+		//start special keys: page up and page down
+		case 0x7D: // page up
+		switch(ShiftPressed)
+			{
+			case 0:
+				for(i = 0; i < 8; i++)
+				{
+					ShiftScreenUp();
+				}
+				temp = 0;
+				break;
+			case 1:
+				ShiftScreenUp();
+				temp = 0;
+				break;
+			}
+			break;
+		case 0x7A: // page down
+		switch(ShiftPressed)
+			{
+			case 0:
+				for(i = 0; i < 8; i++)
+				{
+					ShiftScreenDown();
+				}
+				temp = 0;
+				break;
+			case 1:
+				ShiftScreenDown();
+				temp = 0;
+				break;
+			}
+			break;
+		//start special keys: arrow keys
+		case 0x6B: // left arrow
+			switch(ShiftPressed)
+			{
+			case 0:
+				MoveCursorLeft(); // left arrow
+				BlinkCursor();
+				temp = 0;
+				break;
+			case 1:
+				ShiftScreenLeft();
+				//MoveCursorLeft(); 
+				//BlinkCursor();
+				temp = 0;
+				break;
+			}
+			break;
+		case 0x74: // right arrow
+			switch(ShiftPressed)
+			{
+			case 0:		
+				//ShiftScreenRight();
+				MoveCursorRight(); // right arrow
+				BlinkCursor();
+				//temp = 1; // quick way to make the right arrow print nothing but not get skipped over when incrementing
+				temp = 0;
+				break;
+			case 1:
+				ShiftScreenRight();
+				//MoveCursorRight(); 
+				//BlinkCursor();
+				temp = 0;
+				break;
+			}
+			break;
+		case 0x75: // up arrow
+			switch(ShiftPressed)
+			{
+			case 0:
+				MoveCursorUp(); 
+				BlinkCursor();
+				temp = 0;
+				break;
+			case 1:
+				for(i = 0; i < 8; i++)
+				{
+					ShiftScreenUp();
+				}
+				temp = 0;
+				break;
+			}
+			break;
+		case 0x72: // down arrow
+			switch(ShiftPressed)
+			{
+			case 0:
+				MoveCursorDown(); // down arrow
+				BlinkCursor();
+				temp = 0;
+				break;
+			case 1:			
+				for(i = 0; i < 8; i++)
+				{
+					ShiftScreenDown();
+				}
+				temp = 0;
+				break;
+			}
+			break;
+		//start keyboard line: esc F1F2F3F4F5F6F7F8F9F10F11F12
+		case 0x76: // esc
+			ClearScreen(); // esc will clear the screen for now
+			break;
+		//start keyboard line: `1234567890-=
+		case 0x0E: //`
+			switch(ShiftPressed)
+			{
+			case 0:		
+				temp = 0x60; //`
+				break;
+			case 1:
+				temp = 0x7E; //~
+				break;
+			}
+			break;
+		case 0x16: //1
+			switch(ShiftPressed)
+			{
+			case 0:
+				temp = 0x31; //1
+				break;
+			case 1:
+				temp = 0x21; //!
+				break;
+			}
+			break;
+		case 0x1E: //2
+			switch(ShiftPressed)
+			{
+			case 0:
+				temp = 0x32; //2
+				break;
+			case 1:
+				temp = 0x40; //@
+				break;
+			}
+			break;
+		case 0x26: //3
+			switch(ShiftPressed)
+			{
+			case 0:		
+				temp = 0x33; //3
+				break;
+			case 1:
+				temp = 0x23; //#
+				break;
+			}
+			break;
+		case 0x25: //4
+			switch(ShiftPressed)
+			{
+			case 0:
+				temp = 0x34; //4
+				break;
+			case 1:
+				temp = 0x24; //$
+				break;
+			}
+			break;
+		case 0x2E: //5
+			switch(ShiftPressed)
+			{
+			case 0:
+				temp = 0x35; //5
+				break;
+			case 1:
+				temp = 0x25; //%
+				break;
+			}
+			break;
+		case 0x36: //6
+			switch(ShiftPressed)
+			{
+			case 0:
+				temp = 0x36; //6
+				break;
+			case 1:
+				temp = 0x5E; //^
+				break;
+			}
+			break;
+		case 0x3D: //7
+			switch(ShiftPressed)
+			{
+			case 0:
+				temp = 0x37; //7
+				break;
+			case 1:
+				temp = 0x26; //&
+				break;
+			}
+			break;
+		case 0x3E: //8
+			switch(ShiftPressed)
+			{
+			case 0:
+				temp = 0x38; //8
+				break;
+			case 1:
+				temp = 0x2A; //*
+				break;
+			}
+			break;
+		case 0x46: //9
+			switch(ShiftPressed)
+			{
+			case 0:
+				temp = 0x39; //9
+				break;
+			case 1:
+				temp = 0x28; //(
+				break;
+			}
+			break;
+		case 0x45: //0
+			switch(ShiftPressed)	
+			{
+			case 0:
+				temp = 0x30; //0
+				break;
+			case 1:
+				temp = 0x29; //)
+				break;
+			}
+			break;
+		case 0x4E: //-
+			switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x2D; //-
+				break;
+			case 1:
+				temp = 0x5F; //_
+				break;
+			}
+			break;
+                case 0x55: //=
+	   		switch(ShiftPressed)
+			{
+			case 0:
+				temp = 0x3D; //=
+				break;
+			case 1:
+				temp = 0x2B; //+
+				break;
+			}
+			break;
+		//start keyboard line: qwertyuiop[] and '\'
+		case 0x15: //q
+			switch(ShiftPressed)
+			{
+			case 0:
+				temp = 0x71; //q
+				break;
+			case 1:
+				temp = 0x51; //Q
+				break;
+			}
+			break;
+		case 0x1D: //w
+			switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x77; //w
+				break;
+			case 1:
+				temp = 0x57; //W
+				break;
+			}
+			break;
+		case 0x24: //e
+			switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x65; //e
+				break;
+			case 1:
+				temp = 0x45; //E
+                                break;
+			}
+			break;
+		case 0x2D: //r
+			switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x72; //r
+				break;
+			case 1:
+				temp = 0x52; //R
+				break;
+			}
+			break;
+		case 0x2C: //t
+			switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x74; //t
+				break;
+			case 1:
+				temp = 0x54; //T
+				break;
+			}
+			break;
+		case 0x35: //y
+			switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x79; //y
+				break;
+			case 1:
+				temp = 0x59; //Y
+				break;
+			}
+			break;
+		case 0x3C: //u
+			switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x75; //u
+				break;
+			case 1:
+				temp = 0x55; //U
+				break;
+			}
+			break;
+		case 0x43: //i
+			switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x69; //i
+				break;
+			case 1:
+				temp = 0x49; //I
+				break;
+			}
+			break;
+		case 0x44: //o
+			switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x6F; //o
+				break;
+			case 1:
+				temp = 0x4F; //O
+				break;
+			}
+			break;
+		case 0x4D: //p
+			switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x70; //p
+				break;
+			case 1:
+				temp = 0x50; //P
+				break;
+			}
+			break;
+		case 0x54: //[
+			switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x5B; //[
+				break;
+			case 1:
+				temp = 0x7B; //{
+				break;
+			}
+			break;
+		case 0x5B: //]
+			switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x5D;  //]
+				break;
+			case 1:
+				temp = 0x7D;  //}
+				break;
+			}
+			break;
+		case 0x5D: //"\"
+			switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x5C; //"\"
+				break;
+			case 1:
+				temp = 0x7C; //|
+				break;
+			}
+			break;
+		//start keyboard line: asdfghjkl;'
+		case 0x1C: //a
+			switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x61; //a
+				break;
+			case 1:
+				temp = 0x41; //A
+				break;
+			}
+			break;
+		case 0x1B: //s
+			switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x73; //s
+				break;
+			case 1:
+				temp = 0x53; //S
+				break;
+			}
+			break;
+		case 0x23: //d
+			switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x64; //d
+				break;
+			case 1:
+				temp = 0x44; //D
+				break;
+			}
+			break;
+		case 0x2B: //f
+			switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x66; //f
+				break;
+			case 1:
+				temp = 0x46; //F
+				break;
+			}
+			break;
+
+		case 0x34: //g
+			switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x67; //g
+				break;
+			case 1:
+				temp = 0x47; //G
+				break;
+			}
+			break;
+		case 0x33: //h
+			switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x68; //h
+				break;
+			case 1:
+				temp = 0x48; //H
+				break;
+			}
+			break;
+		case 0x3B: //j
+		switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x6A; //j
+				break;
+			case 1:
+				temp = 0x4A; //J
+				break;
+			}
+			break;
+		case 0x42: //k
+		switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x6B; //k
+				break;
+			case 1:
+				temp = 0x4B; //K
+				break;
+			}
+			break;
+		case 0x4B: //l
+		switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x6C; //l
+				break;
+			case 1:
+				temp = 0x4C; //L
+				break;
+			}
+			break;
+		case 0x4C:      //NOTE: this is actually a : not a ; but there is no bitmap for ;
+		switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x3A; //;
+				break;
+			case 1:
+				temp = 0x3A; //:
+				break;
+			}
+			break;
+		case 0x52: //'
+		switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x27; //'
+				break;
+			case 1:
+				temp = 0x22; //"
+				break;
+			}
+			break;
+		//start keyboard line: zxcvbnm,./
+		case 0x1A: //z
+		switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x7A; //z
+				break;
+			case 1:
+				temp = 0x5A; //Z
+				break;
+			}
+			break;
+		case 0x22: //x
+		switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x78; //x
+				break;
+			case 1:
+				temp = 0x58; //X
+				break;
+			}
+			break;
+		case 0x21: //c
+		switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x63; //c
+				break;
+			case 1:
+				temp = 0x43; //C
+				break;
+			}
+			break;
+		case 0x2A: //v
+		switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x76; //v
+				break;
+			case 1:
+				temp = 0x56; //V
+				break;
+			}
+			break;
+		case 0x32: //b
+		switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x62; //b
+				break;
+			case 1:
+				temp = 0x42; //B
+				break;
+			}
+			break;
+		case 0x31: //n
+		switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x6E; //n
+				break;
+			case 1:
+				temp = 0x4E; //N
+				break;
+			}
+			break;
+		case 0x3A: //m
+		switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x6D; //m
+				break;
+			case 1:
+				temp = 0x4D; //M
+				break;
+			}
+			break;
+		case 0x41: //,
+		switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x2C; //,
+				break;
+			case 1:
+				temp = 0x3C; //<
+				break;
+			}
+			break;
+		case 0x49: //.
+		switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x2E; //.
+				break;
+			case 1:
+				temp = 0x3E; //>
+				break;
+			}
+			break;
+		case 0x4A: // "/"
+		switch(ShiftPressed)
+			{		
+			case 0:
+				temp = 0x2F; // "/"
+				break;
+			case 1:
+				temp = 0x3F; //?
+				break;
+			}
+			break;
+		case 0x29: // space
+			temp = 0x20;
+			break;
+		default:
+			temp = 0x21;
+            }
         }
-    }
-    else // shift is off
-    {
-        switch(translate)
-        {
-            //start special key: enter
-            case 0x5A: // enter
-                temp = 0x01;
-                break;
-            //start special keys: page up and page down
-            case 0x7D: // page up
-                for(i = 0; i < 8; i++)
-                {
-                    ShiftScreenUp();
-                }
-                temp = 0;
-                break;
-            case 0x7A: // page down
-                for(i = 0; i < 8; i++)
-                {
-                    ShiftScreenDown();
-                }
-                temp = 0;
-                break;
-            //start special keys: arrow keys
-            case 0x6B:
-                //ShiftScreenLeft();
-                MoveCursorLeft(); // left arrow
-                BlinkCursor();
-                temp = 0;
-                break;
-            case 0x74:
-                //ShiftScreenRight();
-                MoveCursorRight(); // right arrow
-                BlinkCursor();
-                //temp = 1; // quick way to make the right arrow print nothing but not get skipped over when incrementeing
-                temp = 0;
-                break;
-            case 0x75:
-                MoveCursorUp(); // up arrow
-                BlinkCursor();
-                temp = 0;
-                break;
-            case 0x72:
-                MoveCursorDown(); // down arrow
-                BlinkCursor();
-                temp = 0;
-                break;
-            //start keyboard line: esc F1F2F3F4F5F6F7F8F9F10F11F12
-            case 0x76:
-                ClearScreen(); // esc will clear the screen
-                break;
-            //start keyboard line: `1234567890-=
-            case 0x0E:
-                temp = 0x60; //`
-                break;
-            case 0x16:
-                temp = 0x31; //1
-                break;
-            case 0x1E:
-                temp = 0x32; //2
-                break;
-            case 0x26:
-                temp = 0x33; //3
-                break;
-            case 0x25:
-                temp = 0x34; //4
-                break;
-            case 0x2E:
-                temp = 0x35; //5
-                break;
-            case 0x36:
-                temp = 0x36; //6
-                break;
-            case 0x3D:
-                temp = 0x37; //7
-                break;
-            case 0x3E:
-                temp = 0x38; //8
-                break;
-            case 0x46:
-                temp = 0x39; //9
-                break;
-            case 0x45:
-                temp = 0x30; //0
-                break;
-            case 0x4E:
-                temp = 0x2D; //-
-                break;
-           case 0x55:
-                temp = 0x3D; //=
-                break;
-            //start keyboard line: qwertyuiop[] and '\'
-            case 0x15:
-                temp = 0x71; //q
-                break;
-            case 0x1D:
-                temp = 0x77; //w
-                break;
-            case 0x24:
-                temp = 0x65; //e
-                break;
-            case 0x2D:
-                temp = 0x72; //r
-                break;
-            case 0x2C:
-                temp = 0x74; //t
-                break;
-            case 0x35:
-                temp = 0x79; //y
-                break;
-            case 0x3C:
-                temp = 0x75; //u
-                break;
-            case 0x43:
-                temp = 0x69; //i
-                break;
-            case 0x44:
-                temp = 0x6F; //o
-                break;
-            case 0x4D:
-                temp = 0x70; //p
-                break;
-            case 0x54:
-                temp = 0x5B; //[
-                break;
-            case 0x5B:
-                temp = 0x5D;  //]
-                break;
-            case 0x5D:
-                temp = 0x5C; //"\"
-                break;
-            //start keyboard line: asdfghjkl;'
-            case 0x1C:
-                temp = 0x61; //a
-                break;
-            case 0x1B:
-                temp = 0x73; //s
-                break;
-            case 0x23:
-                temp = 0x64; //d
-                break;
-            case 0x2B:
-                temp = 0x66; //f
-                break;
-            case 0x34:
-                temp = 0x67; //g
-                break;
-            case 0x33:
-                temp = 0x68; //h
-                break;
-            case 0x3B:
-                temp = 0x6A; //j
-                break;
-            case 0x42:
-                temp = 0x6B; //k
-                break;
-            case 0x4B:
-                temp = 0x6C; //l
-                break;
-            case 0x4C:      //NOTE: this is actually a : not a ; but there is no bitmap for ;
-                temp = 0x3A; //;
-                break;
-            case 0x52:
-                temp = 0x27; //'
-                break;
-            //start keyboard line: zxcvbnm,./
-            case 0x1A:
-                temp = 0x7A; //z
-                break;
-            case 0x22:
-                temp = 0x78; //x
-                break;
-            case 0x21:
-                temp = 0x63; //c
-                break;
-            case 0x2A:
-                temp = 0x76; //v
-                break;
-            case 0x32:
-                temp = 0x62; //b
-                break;
-            case 0x31:
-                temp = 0x6E; //n
-                break;
-            case 0x3A:
-                temp = 0x6D; //m
-                break;
-            case 0x41:
-                temp = 0x2C; //,
-                break;
-            case 0x49:
-                temp = 0x2E; //.
-                break;
-            case 0x4A:
-                temp = 0x2F; // "/"
-                break;
-            case 0x29: // space
-                temp = 0x20;
-                break;
-            default:
-                temp = 0x21;
-        }
-    }
     return temp;
 }
 

@@ -16,9 +16,9 @@ while 1:
 
     conn, addr = s.accept()
     print ('Connection address:', addr)
+
     data = conn.recv(BUFFER_SIZE)
     print ("received data:", data)
-
 
     #conn.send(data)  # echo
     conn.close()
