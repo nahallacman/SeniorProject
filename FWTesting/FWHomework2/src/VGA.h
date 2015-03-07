@@ -8,18 +8,23 @@
 #ifndef VGA_H
 #define	VGA_H
 
+#include "PS2Common.h"
+#include "TestCommon.h"
+
 #ifdef	__cplusplus
 extern "C" {
 #endif
 
             int test;
 
+#ifdef __Microcontroller
 //#include "VGA.c"
 //#include <plib.h>
 //set the priority of the timer2 service routine
 #pragma interrupt T2ISR IPL7 vector 8
 
 void T2ISR(void);
+#endif
 
 void VGA_Setup(void);
 void VGA_SetupVideoOutput(void);
@@ -68,6 +73,7 @@ volatile unsigned long int *VGA_VideoMemoryIndex = VGA_VideoMemory;             
 volatile unsigned long int *VGA_VideoScrollIndex = VGA_VideoMemory;                                         //Pointer Scrolling Index into Video Memory
 long int VGA_BackPorch[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};                                                  //Back porch buffer
 
+volatile char VideoTextFrame[7500];
 
 #ifdef	__cplusplus
 }

@@ -9,6 +9,7 @@
 #define	VGA_H
 
 #include "PS2Common.h"
+#include "TestCommon.h"
 
 #ifdef	__cplusplus
 extern "C" {

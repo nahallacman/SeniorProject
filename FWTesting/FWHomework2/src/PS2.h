@@ -4,9 +4,7 @@
  *
  * Created on December 26, 2014, 1:06 PM
  */
- #ifndef __Microcontroller
- #define __Microcontroller
- #endif
+
 
 #ifndef PS2_H
 #define	PS2_H
@@ -16,6 +14,7 @@ extern "C" {
 #endif
 
 #include "PS2Common.h"
+#include "TestCommon.h"
 
 #ifdef __Microcontroller
 //set the priority of the ChangeNotificationISR
@@ -23,10 +22,12 @@ extern "C" {
 
 #pragma interrupt InputCapture2ISR IPL6 vector 9
 
-#endif
+
 void ChangeNotificationISR(void);
 
 void InputCapture2ISR(void);
+
+#endif
 
 int ChangeState = 0;
 int values[23];
@@ -229,6 +230,11 @@ void keyboard_setup(void);
 void interpretKeypress(void);
 
 char translateKeypress(char);
+
+//test code that is excluded when running on the pic32 itself
+#ifndef __Microcontroller
+void testKeyboardAgitator(char scanCode);
+#endif
 
 #ifdef	__cplusplus
 }

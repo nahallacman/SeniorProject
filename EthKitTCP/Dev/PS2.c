@@ -1,7 +1,8 @@
 #include "PS2.h"
-#include <p32xxxx.h>
 
 #ifdef __Microcontroller
+
+#include <p32xxxx.h>
 
 char * keyboard_lookup(char number)
 {

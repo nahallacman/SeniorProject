@@ -1,4 +1,7 @@
 #include "PS2.h"
+
+#ifdef __Microcontroller
+
 #include <p32xxxx.h>
 
 char * keyboard_lookup(char number)
@@ -191,6 +194,7 @@ void InputCapture2ISR(void)
     }
 }
 
+#endif
 
 void interpretKeypress(void)
 {
@@ -1004,6 +1008,7 @@ char * gettextLine(void)
     return textLine;
 }
 
+#ifndef __Microcontroller
 //this test agitator takes a scan code and adds it to the ps2Buffer so it can be processed with interpretKeypress
 void testKeyboardAgitator(char scanCode)
 {
@@ -1027,3 +1032,4 @@ void testKeyboardAgitator(char scanCode)
 		}
 	}
 }
+#endif
