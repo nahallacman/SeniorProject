@@ -275,7 +275,7 @@ void interpretKeypress(void)
                 //writechar(keyboard_lookup(textLine[textlineindex]), cursor_x, cursor_y);
                 placeChar(keyboard_lookup(textLine[textlineindex]));
 
-                 textlineindex++;
+                textlineindex++;
                 
             }
 

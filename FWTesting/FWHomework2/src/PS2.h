@@ -14,7 +14,9 @@ extern "C" {
 #endif
 
 #include "PS2Common.h"
-//#include "TestCommon.h"
+//testing adds to fix unit tests
+//#include "VGA.h"
+
 
 #ifdef __Microcontroller
 //set the priority of the ChangeNotificationISR
@@ -29,17 +31,25 @@ void InputCapture2ISR(void);
 
 #endif
 
-int ChangeState = 0;
+//int ChangeState = 0;
+int ChangeState;
 int values[23];
 
-int badkeypress = 0;
-int badkeystart = 0;
+//int badkeypress = 0;
+int badkeypress;
+//int badkeystart = 0;
+int badkeystart;
 
-int IC1State = 0;
 
-int parity = 0;
-int code = 0;
-int ps2BufferEndIndex = 0;
+//int IC1State = 0;
+int IC1State;
+
+//int parity = 0;
+int parity;
+//int code = 0;
+int code;
+//int ps2BufferEndIndex = 0;
+int ps2BufferEndIndex;
 //int ps2Buffer[8];
 int ps2Buffer[100];
 
@@ -48,7 +58,8 @@ int KeysToProcess;
 
 //index to the ps2buffer for using a circular buffer
 //int KeyBufferEnd = 0;
-int ps2BufferStart = 0;
+//int ps2BufferStart = 0;
+int ps2BufferStart;
 int ps2BufferSize = 100;
 int ps2BufferNumItems = 0;
 
