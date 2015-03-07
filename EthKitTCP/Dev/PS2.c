@@ -1003,3 +1003,27 @@ char * gettextLine(void)
 {
     return textLine;
 }
+
+//this test agitator takes a scan code and adds it to the ps2Buffer so it can be processed with interpretKeypress
+void testKeyboardAgitator(char scanCode)
+{
+   //circular buffer insert handling of the ps2Buffer
+	if(ps2BufferNumItems < ps2BufferSize)
+	{
+		ps2Buffer[ps2BufferEndIndex] = scanCode;
+		ps2BufferNumItems++;
+
+
+		KeysToProcess = 1;
+		//code = 0;
+		//wrap inside the ps2buffer when writing to the buffer
+		if(ps2BufferEndIndex < ps2BufferSize)
+		{
+			ps2BufferEndIndex++;
+		}
+		else
+		{
+			ps2BufferEndIndex = 0;
+		}
+	}
+}
