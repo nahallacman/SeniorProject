@@ -1,6 +1,8 @@
 #include "PS2.h"
 #include <p32xxxx.h>
 
+#ifdef __Microcontroller
+
 char * keyboard_lookup(char number)
 {
     if(number > 0x20 && number < 0x80)
@@ -191,6 +193,7 @@ void InputCapture2ISR(void)
     }
 }
 
+#endif
 
 void interpretKeypress(void)
 {

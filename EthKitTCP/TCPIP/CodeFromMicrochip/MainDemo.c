@@ -59,6 +59,9 @@
  * and this file must define the AppConfig variable as described below.
  */
 //cals edits
+
+
+
 #include "../../Dev/PS2Common.h"
 #include <plib.h>
 
@@ -194,6 +197,7 @@ int main(void)
     
         keyboard_setup();
 
+#ifdef __Microcontroller
     VGA_Setup();
 
 	INTCONbits.MVEC = 1; // turn on mutli vectored mode
@@ -215,6 +219,7 @@ int main(void)
     //T4STATE = 1;//initalize state machine for timer 4 / h sync
    //T2State = 0;
 
+#endif
 
     //end added by cal
 

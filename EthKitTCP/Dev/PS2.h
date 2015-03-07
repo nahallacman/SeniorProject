@@ -4,10 +4,7 @@
  *
  * Created on December 26, 2014, 1:06 PM
  */
-//here is a testing define, comment this out for testing on the PC, leave it for the PIC32 code
- #ifndef __Microcontroller
- #define __Microcontroller
- #endif
+
 
 #ifndef PS2_H
 #define	PS2_H
@@ -24,10 +21,12 @@ extern "C" {
 
 #pragma interrupt InputCapture2ISR IPL6 vector 9
 
-#endif
+
 void ChangeNotificationISR(void);
 
 void InputCapture2ISR(void);
+
+#endif
 
 int ChangeState = 0;
 int values[23];

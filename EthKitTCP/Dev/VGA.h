@@ -8,18 +8,22 @@
 #ifndef VGA_H
 #define	VGA_H
 
+#include "PS2Common.h"
+
 #ifdef	__cplusplus
 extern "C" {
 #endif
 
             int test;
 
+#ifdef __Microcontroller
 //#include "VGA.c"
 //#include <plib.h>
 //set the priority of the timer2 service routine
 #pragma interrupt T2ISR IPL7 vector 8
 
 void T2ISR(void);
+#endif
 
 void VGA_Setup(void);
 void VGA_SetupVideoOutput(void);

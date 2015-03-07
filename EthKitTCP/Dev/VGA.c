@@ -1,5 +1,9 @@
 #include <plib.h>
 #include "VGA.h"
+//this include is soley for the  #define __Microcontroller line. It might be good to take that into another file.
+
+
+#ifdef __Microcontroller
 
 void VGA_Setup(void)
 {
@@ -228,7 +232,7 @@ void T2ISR(void)
 }
 
 
-
+#endif
 
 
 void writefullhorizontalline(int line)
