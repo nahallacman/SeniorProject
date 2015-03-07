@@ -213,6 +213,7 @@ curHTTPID           0x1               build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/
 SMTPClient          0x2c              build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/SMTP.o
 UDPRxCount          0x2               build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/UDP.o
 curHTTP             0x8c              build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/HTTP2.o
+badkeypress         0x4               build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/PS2.o
 _PhyAdd             0x4               build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ETHPIC32ExtPhy.o
 httpStubs           0x10              build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/HTTP2.o
 VGA_VideoMemory     0xea60            build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/VGA.o
@@ -222,13 +223,21 @@ lastBlock           0x40              build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/
 KeysToProcess       0x4               build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/PS2.o
 activeUDPSocket     0x1               build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/UDP.o
 UDPSocketInfo       0xe0              build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/UDP.o
+code                0x4               build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/PS2.o
 textLine            0x400             build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/PS2.o
+badkeystart         0x4               build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/PS2.o
+ChangeState         0x4               build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/PS2.o
 test                0x4               build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/VGA.o
 values              0x5c              build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/PS2.o
+ps2BufferEndIndex   0x4               build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/PS2.o
 remoteNode          0xa               build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/StackTsk.o
 AppConfig           0x33              build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/MainDemo.o
 DhcpIpPool          0x78              build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DHCPs.o
 ps2Buffer           0x190             build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/PS2.o
+ps2BufferStart      0x4               build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/PS2.o
+IC1State            0x4               build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/PS2.o
+ps2BufferNumItems   0x4               build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/PS2.o
+parity              0x4               build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/PS2.o
 
 Microchip PIC32 Memory-Usage Report
 
@@ -439,20 +448,20 @@ section                    address  length [bytes]      (dec)  Description
 reserve_data_0_kseg1    0xa0000000          0x200         512   
 .eh_frame               0xa0000200           0x30          48   
 .sdata                  0xa0000230           0x60          96  Small init data 
-.sbss                   0xa0000290          0x24c         588  Small uninit data 
-.bss                    0xa00004dc         0xf30c       62220  Uninitialized data 
-.bss                    0xa000f7e8         0x7f1c       32540  Uninitialized data 
-.data                   0xa0017704          0x400        1024  Initialized data 
-.bss                    0xa0017b04          0x1c4         452  Uninitialized data 
-.data                   0xa0017cc8           0xb8         184  Initialized data 
-.bss                    0xa0017d80           0x68         104  Uninitialized data 
-.data                   0xa0017de8           0x34          52  Initialized data 
-.bss                    0xa0017e1c           0x5c          92  Uninitialized data 
-.data                   0xa0017e78           0x10          16  Initialized data 
-.bss                    0xa0017e88           0x64         100  Uninitialized data 
-         Total kseg1_data_mem used  :     0x17eec       98028  74.8% of 0x20000
+.sbss                   0xa0000290          0x248         584  Small uninit data 
+.bss                    0xa00004d8         0xf30c       62220  Uninitialized data 
+.bss                    0xa000f7e4         0x7f1c       32540  Uninitialized data 
+.data                   0xa0017700          0x400        1024  Initialized data 
+.bss                    0xa0017b00          0x1c4         452  Uninitialized data 
+.data                   0xa0017cc4           0xb8         184  Initialized data 
+.bss                    0xa0017d7c           0x68         104  Uninitialized data 
+.data                   0xa0017de4           0x34          52  Initialized data 
+.bss                    0xa0017e18           0x5c          92  Uninitialized data 
+.data                   0xa0017e74           0x10          16  Initialized data 
+.bss                    0xa0017e84           0x64         100  Uninitialized data 
+         Total kseg1_data_mem used  :     0x17ee8       98024  74.8% of 0x20000
         --------------------------------------------------------------------------
-            Total Data Memory used  :     0x180ec       98540  74.9% of 0x20200
+            Total Data Memory used  :     0x180e8       98536  74.9% of 0x20200
         --------------------------------------------------------------------------
 
 
@@ -460,7 +469,7 @@ Dynamic Data-Memory Reservation
 section                    address  length [bytes]      (dec)  Description
 -------                 ----------  -------------------------  -----------
 heap                    0xa0017ef8         0x3e80       16000  Reserved for heap 
-stack                   0xa001bd90         0x4260       16992  Reserved for stack 
+stack                   0xa001bd90         0x4268       17000  Reserved for stack 
 
         --------------------------------------------------------------------------
 
@@ -1366,131 +1375,130 @@ END GROUP
                 0xa0000290                _data_end = .
                 0xa0000290                _bss_begin = .
 
-.sbss           0xa0000290      0x24c
+.sbss           0xa0000290      0x248
                 0xa0000290                _sbss_begin = .
  *(.dynsbss)
  *(.sbss .sbss.* .gnu.linkonce.sb.*)
  .sbss          0xa0000290        0xc build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/MainDemo.o
- .sbss          0xa000029c       0x34 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/PS2.o
-                0xa000029c                ChangeState
-                0xa00002a0                badkeypress
-                0xa00002a4                badkeystart
-                0xa00002a8                IC1State
-                0xa00002ac                parity
-                0xa00002b0                code
-                0xa00002b4                ps2BufferEndIndex
-                0xa00002b8                ps2BufferStart
-                0xa00002bc                ps2BufferNumItems
-                0xa00002c0                ShiftPressed
-                0xa00002c4                textlineindex
-                0xa00002c8                cursor_x
-                0xa00002cc                cursor_y
- .sbss          0xa00002d0       0x10 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/VGA.o
-                0xa00002d0                CursorLocation
-                0xa00002d4                LineLocationStart
-                0xa00002d8                blinkstate
-                0xa00002dc                VGA_LineCount
- .sbss          0xa00002e0        0x8 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/GenericTCPClient.o
- .sbss          0xa00002e8        0x1 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/BerkeleyTCPClientDemo.o
- *fill*         0xa00002e9        0x3 
- .sbss          0xa00002ec        0x8 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/BerkeleyTCPServerDemo.o
- .sbss          0xa00002f4       0x18 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/BerkeleyUDPClientDemo.o
- .sbss          0xa000030c        0x8 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/GenericTCPServer.o
- .sbss          0xa0000314        0x8 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/PingDemo.o
- .sbss          0xa000031c        0x8 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/SMTPDemo.o
- .sbss          0xa0000324        0x4 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ARP.o
- .sbss          0xa0000328        0x8 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/Announce.o
- .sbss          0xa0000330        0x4 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/BerkeleyAPI.o
- .sbss          0xa0000334        0x4 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DHCP.o
-                0xa0000334                DHCPClientInitializedOnce
- .sbss          0xa0000338        0xc build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DHCPs.o
- .sbss          0xa0000344       0x14 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DNS.o
- .sbss          0xa0000358       0x24 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DynDNS.o
- .sbss          0xa000037c       0x40 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ETHPIC32IntMac.o
-                0xa00003a8                _stackMgrRxOkPkts
-                0xa00003ac                _stackMgrRxBadPkts
-                0xa00003b0                _stackMgrInGetHdr
-                0xa00003b4                _stackMgrRxDiscarded
-                0xa00003b8                _stackMgrTxNotReady
- .sbss          0xa00003bc       0x10 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ICMP.o
- .sbss          0xa00003cc        0x4 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/IP.o
- .sbss          0xa00003d0        0x8 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/MPFS2.o
- .sbss          0xa00003d8        0x8 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/NBNS.o
- .sbss          0xa00003e0       0x34 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/SMTP.o
- .sbss          0xa0000414       0x10 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/SNTP.o
- .sbss          0xa0000424        0xc build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/StackTsk.o
- .sbss          0xa0000430       0x14 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/TCPPerformanceTest.o
- .sbss          0xa0000444       0x10 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/Telnet.o
- *fill*         0xa0000454        0x4 
- .sbss          0xa0000458       0x10 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/Tick.o
- .sbss          0xa0000468        0x8 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/UDP.o
- .sbss          0xa0000470       0x14 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/CustomHTTPApp.o
- .sbss          0xa0000484       0x20 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(eth_descriptors_add_lib.o)
-                0xa0000484                _EthTxFreeList
-                0xa000048c                _EthTxBusyList
-                0xa0000494                _EthRxFreeList
-                0xa000049c                _EthRxBusyList
- .sbss          0xa00004a4       0x10 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libc.a(malloc.o)
-                0xa00004a4                __allocp
-                0xa00004a8                __alloct
-                0xa00004ac                __allocx
- .sbss          0xa00004b4        0x8 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(sbrk.o)
-                0xa00004b4                _minbrk
-                0xa00004b8                _maxbrk
- .sbss          0xa00004bc        0x4 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(errno.o)
-                0xa00004bc                errno
+ .sbss          0xa000029c       0x10 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/PS2.o
+                0xa000029c                ShiftPressed
+                0xa00002a0                textlineindex
+                0xa00002a4                cursor_x
+                0xa00002a8                cursor_y
+ .sbss          0xa00002ac       0x10 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/VGA.o
+                0xa00002ac                CursorLocation
+                0xa00002b0                LineLocationStart
+                0xa00002b4                blinkstate
+                0xa00002b8                VGA_LineCount
+ .sbss          0xa00002bc        0x8 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/GenericTCPClient.o
+ .sbss          0xa00002c4        0x1 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/BerkeleyTCPClientDemo.o
+ *fill*         0xa00002c5        0x3 
+ .sbss          0xa00002c8        0x8 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/BerkeleyTCPServerDemo.o
+ .sbss          0xa00002d0       0x18 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/BerkeleyUDPClientDemo.o
+ .sbss          0xa00002e8        0x8 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/GenericTCPServer.o
+ .sbss          0xa00002f0        0x8 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/PingDemo.o
+ .sbss          0xa00002f8        0x8 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/SMTPDemo.o
+ .sbss          0xa0000300        0x4 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ARP.o
+ .sbss          0xa0000304        0x8 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/Announce.o
+ .sbss          0xa000030c        0x4 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/BerkeleyAPI.o
+ .sbss          0xa0000310        0x4 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DHCP.o
+                0xa0000310                DHCPClientInitializedOnce
+ .sbss          0xa0000314        0xc build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DHCPs.o
+ .sbss          0xa0000320       0x14 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DNS.o
+ .sbss          0xa0000334       0x24 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DynDNS.o
+ .sbss          0xa0000358       0x40 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ETHPIC32IntMac.o
+                0xa0000384                _stackMgrRxOkPkts
+                0xa0000388                _stackMgrRxBadPkts
+                0xa000038c                _stackMgrInGetHdr
+                0xa0000390                _stackMgrRxDiscarded
+                0xa0000394                _stackMgrTxNotReady
+ .sbss          0xa0000398       0x10 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ICMP.o
+ .sbss          0xa00003a8        0x4 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/IP.o
+ .sbss          0xa00003ac        0x8 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/MPFS2.o
+ .sbss          0xa00003b4        0x8 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/NBNS.o
+ .sbss          0xa00003bc       0x34 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/SMTP.o
+ .sbss          0xa00003f0       0x10 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/SNTP.o
+ .sbss          0xa0000400        0xc build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/StackTsk.o
+ .sbss          0xa000040c       0x14 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/TCPPerformanceTest.o
+ .sbss          0xa0000420       0x10 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/Telnet.o
+ .sbss          0xa0000430       0x10 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/Tick.o
+ .sbss          0xa0000440        0x8 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/UDP.o
+ .sbss          0xa0000448       0x14 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/CustomHTTPApp.o
+ .sbss          0xa000045c       0x20 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(eth_descriptors_add_lib.o)
+                0xa000045c                _EthTxFreeList
+                0xa0000464                _EthTxBusyList
+                0xa000046c                _EthRxFreeList
+                0xa0000474                _EthRxBusyList
+ .sbss          0xa000047c       0x10 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libc.a(malloc.o)
+                0xa000047c                __allocp
+                0xa0000480                __alloct
+                0xa0000484                __allocx
+ .sbss          0xa000048c        0x8 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(sbrk.o)
+                0xa000048c                _minbrk
+                0xa0000490                _maxbrk
+ .sbss          0xa0000494        0x4 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(errno.o)
+                0xa0000494                errno
  *(.scommon)
- .scommon       0xa00004c0        0x8 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/MainDemo.o
-                0xa00004c0                AN0String
- .scommon       0xa00004c8        0x4 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/PS2.o
-                0xa00004c8                KeysToProcess
- .scommon       0xa00004cc        0x4 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/VGA.o
-                0xa00004cc                test
- .scommon       0xa00004d0        0x4 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ETHPIC32ExtPhy.o
-                0xa00004d0                _PhyAdd
- .scommon       0xa00004d4        0x1 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/HTTP2.o
-                0xa00004d4                curHTTPID
- *fill*         0xa00004d5        0x1 
- .scommon       0xa00004d6        0x5 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/UDP.o
-                0xa00004d6                UDPRxCount
-                0xa00004d8                UDPTxCount
-                0xa00004da                activeUDPSocket
-                0xa00004db                _sbss_end = .
-                0xa00004dc                . = ALIGN (0x4)
- *fill*         0xa00004db        0x1 
+ .scommon       0xa0000498        0x8 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/MainDemo.o
+                0xa0000498                AN0String
+ .scommon       0xa00004a0       0x28 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/PS2.o
+                0xa00004a0                badkeypress
+                0xa00004a4                KeysToProcess
+                0xa00004a8                code
+                0xa00004ac                badkeystart
+                0xa00004b0                ChangeState
+                0xa00004b4                ps2BufferEndIndex
+                0xa00004b8                ps2BufferStart
+                0xa00004bc                IC1State
+                0xa00004c0                ps2BufferNumItems
+                0xa00004c4                parity
+ .scommon       0xa00004c8        0x4 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/VGA.o
+                0xa00004c8                test
+ .scommon       0xa00004cc        0x4 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ETHPIC32ExtPhy.o
+                0xa00004cc                _PhyAdd
+ .scommon       0xa00004d0        0x1 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/HTTP2.o
+                0xa00004d0                curHTTPID
+ *fill*         0xa00004d1        0x1 
+ .scommon       0xa00004d2        0x5 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/UDP.o
+                0xa00004d2                UDPRxCount
+                0xa00004d4                UDPTxCount
+                0xa00004d6                activeUDPSocket
+                0xa00004d7                _sbss_end = .
+                0xa00004d8                . = ALIGN (0x4)
+ *fill*         0xa00004d7        0x1 
 
-.bss            0xa00004dc     0xf30c
+.bss            0xa00004d8     0xf30c
  *(.dynbss)
  *(COMMON)
- COMMON         0xa00004dc       0x33 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/MainDemo.o
-                0xa00004dc                AppConfig
- *fill*         0xa000050f        0x1 
- COMMON         0xa0000510      0x5ec build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/PS2.o
-                0xa0000510                textLine
-                0xa0000910                values
-                0xa000096c                ps2Buffer
- COMMON         0xa0000afc     0xea60 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/VGA.o
-                0xa0000afc                VGA_VideoMemory
- COMMON         0xa000f55c       0x78 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DHCPs.o
-                0xa000f55c                DhcpIpPool
- COMMON         0xa000f5d4       0x20 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DynDNS.o
-                0xa000f5d4                DDNSClient
- COMMON         0xa000f5f4       0x9c build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/HTTP2.o
-                0xa000f5f4                curHTTP
-                0xa000f680                httpStubs
- COMMON         0xa000f690       0x40 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/Hashes.o
-                0xa000f690                lastBlock
- COMMON         0xa000f6d0       0x2c build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/SMTP.o
-                0xa000f6d0                SMTPClient
- COMMON         0xa000f6fc        0xa build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/StackTsk.o
-                0xa000f6fc                remoteNode
- *fill*         0xa000f706        0x2 
- COMMON         0xa000f708       0xe0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/UDP.o
-                0xa000f708                UDPSocketInfo
-                0xa000f7e8                . = ALIGN ((. != 0x0)?0x4:0x1)
-                0xa000f7e8                . = ALIGN (0x4)
-                0xa000f7e8                _end = .
-                0xa000f7e8                _bss_end = .
+ COMMON         0xa00004d8       0x33 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/MainDemo.o
+                0xa00004d8                AppConfig
+ *fill*         0xa000050b        0x1 
+ COMMON         0xa000050c      0x5ec build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/PS2.o
+                0xa000050c                textLine
+                0xa000090c                values
+                0xa0000968                ps2Buffer
+ COMMON         0xa0000af8     0xea60 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/VGA.o
+                0xa0000af8                VGA_VideoMemory
+ COMMON         0xa000f558       0x78 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DHCPs.o
+                0xa000f558                DhcpIpPool
+ COMMON         0xa000f5d0       0x20 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DynDNS.o
+                0xa000f5d0                DDNSClient
+ COMMON         0xa000f5f0       0x9c build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/HTTP2.o
+                0xa000f5f0                curHTTP
+                0xa000f67c                httpStubs
+ COMMON         0xa000f68c       0x40 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/Hashes.o
+                0xa000f68c                lastBlock
+ COMMON         0xa000f6cc       0x2c build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/SMTP.o
+                0xa000f6cc                SMTPClient
+ COMMON         0xa000f6f8        0xa build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/StackTsk.o
+                0xa000f6f8                remoteNode
+ *fill*         0xa000f702        0x2 
+ COMMON         0xa000f704       0xe0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/UDP.o
+                0xa000f704                UDPSocketInfo
+                0xa000f7e4                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0xa000f7e4                . = ALIGN (0x4)
+                0xa000f7e4                _end = .
+                0xa000f7e4                _bss_end = .
                 0x00020000                _bmxdudba_address = 0x20000
                 0x00020000                _bmxdupba_address = 0x20000
 
@@ -1511,124 +1519,124 @@ END GROUP
  *(.gptab.bss)
  *(.gptab.sbss)
 
-.mdebug.abi32   0xa000f7e8        0x0
+.mdebug.abi32   0xa000f7e4        0x0
  *(.mdebug.abi32)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\software-debug-break.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/MainDemo.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/PS2.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/VGA.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/GenericTCPClient.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/BerkeleyTCPClientDemo.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/BerkeleyTCPServerDemo.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/BerkeleyUDPClientDemo.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/GenericTCPServer.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/PingDemo.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/SMTPDemo.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/UARTConfig.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ARCFOUR.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ARP.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/Announce.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/AutoIP.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/BerkeleyAPI.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/BigInt.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DHCP.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DHCPs.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DNS.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DNSs.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/Delay.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DynDNS.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ENC28J60.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ENCX24J600.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ETHPIC32ExtPhy.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ETHPIC32ExtPhyDP83848.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ETHPIC32IntMac.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/FTP.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/FileSystem.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/HTTP2.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/Hashes.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/Helpers.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ICMP.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/IP.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/LCDBlocking.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/MPFS2.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/MPFSImg2.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/NBNS.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/RSA.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/Random.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/Reboot.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/SMTP.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/SNMP.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/SNMPv3.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/SNMPv3USM.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/SNTP.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/SPIEEPROM.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/SPIFlash.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/SPIRAM.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/SSL.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/StackTsk.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/TCP.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/TCPPerformanceTest.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/TFTPc.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/Telnet.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/Tick.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/UART.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/UART2TCPBridge.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/UDP.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/UDPPerformanceTest.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ZeroconfHelper.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ZeroconfLinkLocal.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ZeroconfMulticastDNS.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/243675038/WFDebugStrings.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/CustomHTTPApp.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/CustomSNMPApp.o
- .mdebug.abi32  0xa000f7e8        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/CustomSSLCert.o
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral.a(read_core_timer_lib.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(eth_ack_packet_lib.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(eth_descriptors_add_lib.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(eth_init_lib.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(eth_mac_open_lib.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(eth_mac_set_address_max_lib.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(eth_rx_buffers_append_lib.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(eth_rx_filters_lib.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(eth_rx_get_packet_lib.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(eth_rx_set_buffer_size_lib.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(eth_tx_packet_lib.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(_eth_append_busy_list_lib.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(eth_miim_access.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(soft_reset_lib.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(pcache.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(int_disable_interrupts_lib.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(int_restore_interrupts_lib.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(int_enable_mv_int_lib.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(int_tbl_lib.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(dma_chn_open_lib.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(dma_chn_enable_lib.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(dma_chn_set_control_flags_lib.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(dma_chn_write_event_control_flags_lib.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(dma_chn_set_txfer_lib.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(dma_reg_map_tbl_lib.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(port_set_pins_digital_in_lib.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(port_set_pins_digital_out_lib.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(_ports_tbl_libp.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(int_enable_interrupts_lib.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2\libgcc.a(_udivdi3.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2\libgcc.a(_umoddi3.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libc.a(atoi.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libc.a(atol.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libc.a(calloc.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libc.a(ctype.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libc.a(ltoa.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libc.a(malloc.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libc.a(strchr.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libc.a(strncpy.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libc.a(strstr.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libc.a(strncmp.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(sbrk.o)
- .mdebug.abi32  0xa000f7e8        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(errno.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\software-debug-break.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/MainDemo.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/PS2.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/VGA.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/GenericTCPClient.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/BerkeleyTCPClientDemo.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/BerkeleyTCPServerDemo.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/BerkeleyUDPClientDemo.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/GenericTCPServer.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/PingDemo.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/SMTPDemo.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/UARTConfig.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ARCFOUR.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ARP.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/Announce.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/AutoIP.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/BerkeleyAPI.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/BigInt.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DHCP.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DHCPs.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DNS.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DNSs.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/Delay.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DynDNS.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ENC28J60.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ENCX24J600.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ETHPIC32ExtPhy.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ETHPIC32ExtPhyDP83848.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ETHPIC32IntMac.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/FTP.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/FileSystem.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/HTTP2.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/Hashes.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/Helpers.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ICMP.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/IP.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/LCDBlocking.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/MPFS2.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/MPFSImg2.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/NBNS.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/RSA.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/Random.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/Reboot.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/SMTP.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/SNMP.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/SNMPv3.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/SNMPv3USM.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/SNTP.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/SPIEEPROM.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/SPIFlash.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/SPIRAM.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/SSL.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/StackTsk.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/TCP.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/TCPPerformanceTest.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/TFTPc.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/Telnet.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/Tick.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/UART.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/UART2TCPBridge.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/UDP.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/UDPPerformanceTest.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ZeroconfHelper.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ZeroconfLinkLocal.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ZeroconfMulticastDNS.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/243675038/WFDebugStrings.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/CustomHTTPApp.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/CustomSNMPApp.o
+ .mdebug.abi32  0xa000f7e4        0x0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/CustomSSLCert.o
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral.a(read_core_timer_lib.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(eth_ack_packet_lib.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(eth_descriptors_add_lib.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(eth_init_lib.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(eth_mac_open_lib.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(eth_mac_set_address_max_lib.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(eth_rx_buffers_append_lib.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(eth_rx_filters_lib.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(eth_rx_get_packet_lib.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(eth_rx_set_buffer_size_lib.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(eth_tx_packet_lib.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(_eth_append_busy_list_lib.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(eth_miim_access.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(soft_reset_lib.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(pcache.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(int_disable_interrupts_lib.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(int_restore_interrupts_lib.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(int_enable_mv_int_lib.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(int_tbl_lib.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(dma_chn_open_lib.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(dma_chn_enable_lib.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(dma_chn_set_control_flags_lib.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(dma_chn_write_event_control_flags_lib.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(dma_chn_set_txfer_lib.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(dma_reg_map_tbl_lib.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(port_set_pins_digital_in_lib.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(port_set_pins_digital_out_lib.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(_ports_tbl_libp.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX795F512L.a(int_enable_interrupts_lib.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2\libgcc.a(_udivdi3.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2\libgcc.a(_umoddi3.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libc.a(atoi.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libc.a(atol.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libc.a(calloc.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libc.a(ctype.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libc.a(ltoa.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libc.a(malloc.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libc.a(strchr.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libc.a(strncpy.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libc.a(strstr.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libc.a(strncmp.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(sbrk.o)
+ .mdebug.abi32  0xa000f7e4        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(errno.o)
 
 .mdebug.abiN32
  *(.mdebug.abiN32)
@@ -3230,61 +3238,61 @@ LOAD data_init
 .stack          0xa001bd90      0x800
  .stack         0xa001bd90      0x800 stack
 
-.bss            0xa000f7e8     0x7f1c
- .bss           0xa000f7e8     0x4224 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/TCP.o
- .bss           0xa0013a0c     0x3cf8 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ETHPIC32IntMac.o
+.bss            0xa000f7e4     0x7f1c
+ .bss           0xa000f7e4     0x4224 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/TCP.o
+ .bss           0xa0013a08     0x3cf8 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ETHPIC32IntMac.o
 
-.data           0xa0017704      0x400
- .data          0xa0017704      0x400 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/PS2.o
-                0xa0017704                font_map
+.data           0xa0017700      0x400
+ .data          0xa0017700      0x400 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/PS2.o
+                0xa0017700                font_map
 
-.bss            0xa0017b04      0x1c4
- .bss           0xa0017b04       0xc0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/CustomHTTPApp.o
- .bss           0xa0017bc4       0x8c build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/BerkeleyAPI.o
- .bss           0xa0017c50       0x78 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/MPFS2.o
+.bss            0xa0017b00      0x1c4
+ .bss           0xa0017b00       0xc0 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/CustomHTTPApp.o
+ .bss           0xa0017bc0       0x8c build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/BerkeleyAPI.o
+ .bss           0xa0017c4c       0x78 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/MPFS2.o
 
-.data           0xa0017cc8       0xb8
- .data          0xa0017cc8       0x70 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/BerkeleyTCPClientDemo.o
- .data          0xa0017d38       0x48 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/SMTPDemo.o
+.data           0xa0017cc4       0xb8
+ .data          0xa0017cc4       0x70 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/BerkeleyTCPClientDemo.o
+ .data          0xa0017d34       0x48 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/SMTPDemo.o
 
-.bss            0xa0017d80       0x68
- .bss           0xa0017d80       0x34 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/AutoIP.o
- .bss           0xa0017db4       0x34 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DHCP.o
+.bss            0xa0017d7c       0x68
+ .bss           0xa0017d7c       0x34 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/AutoIP.o
+ .bss           0xa0017db0       0x34 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DHCP.o
 
-.data           0xa0017de8       0x34
- .data          0xa0017de8       0x34 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DynDNS.o
+.data           0xa0017de4       0x34
+ .data          0xa0017de4       0x34 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DynDNS.o
 
-.bss            0xa0017e1c       0x5c
- .bss           0xa0017e1c       0x28 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/VGA.o
-                0xa0017e1c                VGA_BackPorch
- .bss           0xa0017e44       0x1c c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(sbrk.o)
- .bss           0xa0017e60       0x18 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ARP.o
+.bss            0xa0017e18       0x5c
+ .bss           0xa0017e18       0x28 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1386482886/VGA.o
+                0xa0017e18                VGA_BackPorch
+ .bss           0xa0017e40       0x1c c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(sbrk.o)
+ .bss           0xa0017e5c       0x18 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ARP.o
 
-.data           0xa0017e78       0x10
- .data          0xa0017e78       0x10 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/GenericTCPClient.o
+.data           0xa0017e74       0x10
+ .data          0xa0017e74       0x10 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/GenericTCPClient.o
 
-.bss            0xa0017e88       0x64
- .bss           0xa0017e88       0x10 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/BerkeleyTCPClientDemo.o
- .bss           0xa0017e98       0x10 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/BerkeleyUDPClientDemo.o
- .bss           0xa0017ea8       0x10 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DynDNS.o
- .bss           0xa0017eb8       0x10 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libc.a(malloc.o)
-                0xa0017eb8                __allocs
- .bss           0xa0017ec8        0xc build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DNS.o
- .bss           0xa0017ed4        0xc build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ICMP.o
- .bss           0xa0017ee0        0xc build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/TCPPerformanceTest.o
+.bss            0xa0017e84       0x64
+ .bss           0xa0017e84       0x10 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/BerkeleyTCPClientDemo.o
+ .bss           0xa0017e94       0x10 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1472/BerkeleyUDPClientDemo.o
+ .bss           0xa0017ea4       0x10 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DynDNS.o
+ .bss           0xa0017eb4       0x10 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libc.a(malloc.o)
+                0xa0017eb4                __allocs
+ .bss           0xa0017ec4        0xc build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DNS.o
+ .bss           0xa0017ed0        0xc build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/ICMP.o
+ .bss           0xa0017edc        0xc build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/TCPPerformanceTest.o
 
 .bss.SentTransactionID.23832
-                0xa0017eec        0x4
+                0xa0017ee8        0x4
  .bss.SentTransactionID.23832
-                0xa0017eec        0x4 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DNS.o
+                0xa0017ee8        0x4 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/DNS.o
 
-.bss.NextPort   0xa0017ef0        0x2
- .bss.NextPort  0xa0017ef0        0x2 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/TCP.o
+.bss.NextPort   0xa0017eec        0x2
+ .bss.NextPort  0xa0017eec        0x2 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/TCP.o
 
 .bss.NextPort.23804
-                0xa0017ef2        0x2
+                0xa0017eee        0x2
  .bss.NextPort.23804
-                0xa0017ef2        0x2 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/UDP.o
+                0xa0017eee        0x2 build/XC32-PIC32_ETH_SK_ETH795/debug/_ext/1954962658/UDP.o
 
 .bss%z1         0x00000000        0x0
  .bss           0x00000000        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(errno.o)
