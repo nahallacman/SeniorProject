@@ -61,12 +61,16 @@ int KeysToProcess;
 //int KeyBufferEnd = 0;
 //int ps2BufferStart = 0;
 int ps2BufferStart;
-int ps2BufferSize = 100;
+
+//maybe this should be a #define?
+//int ps2BufferSize = 100;
+#define ps2BufferSize 100
 //int ps2BufferNumItems = 0;
 int ps2BufferNumItems;
 
 //flag for shift on/off
-int ShiftPressed = 0;
+//int ShiftPressed = 0;
+int ShiftPressed;
 
 //buffer for line, should probably be moved later
 char textLine[1024];
