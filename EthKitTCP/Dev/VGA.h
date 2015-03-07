@@ -15,7 +15,7 @@
 extern "C" {
 #endif
 
-            int test;
+int test;
 
 #ifdef __Microcontroller
 //#include "VGA.c"
@@ -24,10 +24,10 @@ extern "C" {
 #pragma interrupt T2ISR IPL7 vector 8
 
 void T2ISR(void);
-#endif
-
 void VGA_Setup(void);
 void VGA_SetupVideoOutput(void);
+
+#endif
 
 void writefullhorizontalline(int line);
 void writefullverticalline(int column);
@@ -73,7 +73,7 @@ volatile unsigned long int *VGA_VideoMemoryIndex = VGA_VideoMemory;             
 volatile unsigned long int *VGA_VideoScrollIndex = VGA_VideoMemory;                                         //Pointer Scrolling Index into Video Memory
 long int VGA_BackPorch[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};                                                  //Back porch buffer
 
-volatile char VideoTextFrame[7500];
+//volatile char VideoTextFrame[7500];
 
 #ifdef	__cplusplus
 }

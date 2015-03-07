@@ -61,6 +61,7 @@
 //cals edits
 
 
+#include "../../Dev/TestCommon.h"
 
 #include "../../Dev/PS2Common.h"
 #include <plib.h>
@@ -198,6 +199,7 @@ int main(void)
         keyboard_setup();
 
 #ifdef __Microcontroller
+        
     VGA_Setup();
 
 	INTCONbits.MVEC = 1; // turn on mutli vectored mode
