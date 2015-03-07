@@ -14,6 +14,7 @@ extern "C" {
 #endif
 
 #include "PS2Common.h"
+#include "TestCommon.h"
 //testing adds to fix unit tests
 //#include "VGA.h"
 

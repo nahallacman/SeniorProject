@@ -1,7 +1,7 @@
 
 #include "VGA.h"
 //this include is soley for the  #define __Microcontroller line. It might be good to take that into another file.
-
+#include "TestProject.c"
 
 #ifdef __Microcontroller
 

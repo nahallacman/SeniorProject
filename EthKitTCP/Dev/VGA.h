@@ -8,7 +8,7 @@
 #ifndef VGA_H
 #define	VGA_H
 
-#include "PS2Common.h"
+//#include "PS2Common.h"
 #include "TestCommon.h"
 
 #ifdef	__cplusplus
