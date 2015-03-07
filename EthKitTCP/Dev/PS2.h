@@ -4,6 +4,7 @@
  *
  * Created on December 26, 2014, 1:06 PM
  */
+//here is a testing define, comment this out for testing on the PC, leave it for the PIC32 code
  #ifndef __Microcontroller
  #define __Microcontroller
  #endif
@@ -229,6 +230,11 @@ void keyboard_setup(void);
 void interpretKeypress(void);
 
 char translateKeypress(char);
+
+//test code that is excluded when running on the pic32 itself
+#ifndef __Microcontroller
+void testKeyboardAgitator(char scanCode);
+#endif
 
 #ifdef	__cplusplus
 }

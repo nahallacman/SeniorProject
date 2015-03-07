@@ -1004,6 +1004,7 @@ char * gettextLine(void)
     return textLine;
 }
 
+#ifndef __Microcontroller
 //this test agitator takes a scan code and adds it to the ps2Buffer so it can be processed with interpretKeypress
 void testKeyboardAgitator(char scanCode)
 {
@@ -1027,3 +1028,4 @@ void testKeyboardAgitator(char scanCode)
 		}
 	}
 }
+#endif
