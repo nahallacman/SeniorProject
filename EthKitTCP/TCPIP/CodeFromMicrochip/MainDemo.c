@@ -394,7 +394,7 @@ int main(void)
 
         //cals edits
         #if defined(STACK_USE_GENERIC_TCP_CLIENT_EXAMPLE)
-        char * ptr;
+        //char * ptr;
         //ptr = gettextLine();
          //GenericTCPClient(ptr);
         //GenericTCPClient();
