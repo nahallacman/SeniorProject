@@ -112,7 +112,9 @@ int cursor_y;
  * Fetched from: http://dimensionalrift.homelinux.net/combuster/mos3/?p=viewsource&file=/modules/gfx/font8_8.asm
  **/
  //tried a static declaration, but this may be inappropriate. Not sure how to make this define static and definable in the header.
- unsigned char font_map[128][8] =
+//unsigned char font_map[128][8] =
+extern const unsigned char font_map[128][8];
+/*
 {
 { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, },  // U+0000 (nul)
 { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, },  // U+0001 // keyboard enter placeholder
@@ -242,7 +244,7 @@ int cursor_y;
 { 0xe0, 0x30, 0x30, 0x1c, 0x30, 0x30, 0xe0, 0x00, },  // U+007D (})
 { 0x76, 0xdc, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, },  // U+007E (~)
             };
-
+*/
 char * keyboard_lookup(char number);
 
 void keyboard_setup(void);

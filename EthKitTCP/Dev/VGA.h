@@ -81,7 +81,8 @@ volatile unsigned long int VGA_VideoMemory[15000];
 //volatile unsigned long int VGA_VideoMemory[800];
 volatile unsigned long int *VGA_VideoMemoryIndex = VGA_VideoMemory;                                         //Pointer Index into Video Memory
 volatile unsigned long int *VGA_VideoScrollIndex = VGA_VideoMemory;                                         //Pointer Scrolling Index into Video Memory
-long int VGA_BackPorch[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};                                                  //Back porch buffer
+//long int VGA_BackPorch[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};                                                  //Back porch buffer
+extern const long int VGA_BackPorch[10]; 
 
 //volatile char VideoTextFrame[7500];
 
