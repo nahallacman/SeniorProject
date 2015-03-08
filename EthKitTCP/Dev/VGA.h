@@ -10,6 +10,7 @@
 
 //#include "PS2Common.h"
 #include "TestCommon.h"
+#include "PS2.h"
 
 #ifdef	__cplusplus
 extern "C" {
@@ -47,7 +48,9 @@ void ClearScreen(void);
 void MoveCursorLeft(void);
 void MoveCursorRight(void);
 
-int LineWidth = 25;
+//int LineWidth = 25;
+#define LineWidth 25
+//int LineWidth;
 
 int CursorLocation = 0;
 int LineLocationStart = 0;

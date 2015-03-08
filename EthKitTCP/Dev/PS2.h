@@ -16,7 +16,7 @@ extern "C" {
 #include "PS2Common.h"
 #include "TestCommon.h"
 //testing adds to fix unit tests
-//#include "VGA.h"
+#include "VGA.h"
 
 
 #ifdef __Microcontroller
@@ -75,8 +75,6 @@ int ShiftPressed;
 //buffer for line, should probably be moved later
 char textLine[1024];
 //int textlineindex = 0;
-
-
 int textlineindex;
 
 char * gettextLine(void);
@@ -85,9 +83,10 @@ char * gettextLine(void);
 
 
 //begining cursor functionality
-int cursor_x = 0;
-int cursor_y = 0;
-
+//int cursor_x = 0;
+int cursor_x;
+//int cursor_y = 0;
+int cursor_y;
 
  /**
   * font_map based on the file
@@ -112,7 +111,8 @@ int cursor_y = 0;
  *
  * Fetched from: http://dimensionalrift.homelinux.net/combuster/mos3/?p=viewsource&file=/modules/gfx/font8_8.asm
  **/
-unsigned char font_map[128][8] =
+ //tried a static declaration, but this may be inappropriate. Not sure how to make this define static and definable in the header.
+ unsigned char font_map[128][8] =
 {
 { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, },  // U+0000 (nul)
 { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, },  // U+0001 // keyboard enter placeholder
