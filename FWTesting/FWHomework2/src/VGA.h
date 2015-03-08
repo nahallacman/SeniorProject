@@ -47,10 +47,17 @@ void ClearScreen(void);
 
 void MoveCursorLeft(void);
 void MoveCursorRight(void);
+void MoveCursorUp(void);
+void MoveCursorDown(void);
 
 void placeChar(char * character);
 
+void ShiftScreenUp(void);
+void ShiftScreenDown(void);
+void ShiftScreenLeft(void);
+void ShiftScreenRight(void);
 
+void BlinkCursor(void);
 
 
 //int LineWidth = 25;
