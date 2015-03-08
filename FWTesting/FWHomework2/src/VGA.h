@@ -52,21 +52,28 @@ void MoveCursorRight(void);
 #define LineWidth 25
 //int LineWidth;
 
-int CursorLocation = 0;
-int LineLocationStart = 0;
-int LineLocationEnd = 1;
+//int CursorLocation = 0;
+int CursorLocation;
+//int LineLocationStart = 0;
+int LineLocationStart;
+//int LineLocationEnd = 1;
+int LineLocationEnd;
 
-int blinkstate = 0;
+//int blinkstate = 0;
+int blinkstate;
 
 //these need to be unchanging (const? or something?)
-int VGA_X_MAX = 800;
-int VGA_Y_MAX = 600;
+//int VGA_X_MAX = 800;
+#define VGA_X_MAX 800
+//int VGA_Y_MAX = 600;
+#define VGA_Y_MAX 600
 
 //for VGA version 2.0
 //int VGA_LineCount = 0;
 
 //const int VGA_VIDEO_MEMORY_SIZE = 15000;
-volatile int VGA_LineCount=0;                                                                               //Used to keep a track of current video line
+//volatile int VGA_LineCount=0;
+volatile int VGA_LineCount;                                                                     //Used to keep a track of current video line
 //volatile unsigned long int VGA_VideoMemory[VGA_VIDEO_MEMORY_SIZE];                                          //800 x 600 x 1bit Video Memory
 volatile unsigned long int VGA_VideoMemory[15000];
 //volatile unsigned long int VGA_VideoMemoryArray[600][25];
