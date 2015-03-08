@@ -1,7 +1,7 @@
 #include "PS2.h"
 
 
-const unsigned char font_map[128][8] = 
+unsigned char font_map[128][8] = 
 {
 { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, },  // U+0000 (nul)
 { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, },  // U+0001 // keyboard enter placeholder
@@ -132,10 +132,6 @@ const unsigned char font_map[128][8] =
 { 0x76, 0xdc, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, },  // U+007E (~)
             };
 
-#ifdef __Microcontroller
-
-#include <p32xxxx.h>
-
 char * keyboard_lookup(char number)
 {
     if(number > 0x20 && number < 0x80)
@@ -147,6 +143,10 @@ char * keyboard_lookup(char number)
         return font_map[0];
     }
 }
+			
+#ifdef __Microcontroller
+
+#include <p32xxxx.h>
 
 void keyboard_setup(void)
 {

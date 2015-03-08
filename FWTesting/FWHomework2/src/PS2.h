@@ -114,7 +114,7 @@ int cursor_y;
  **/
  //tried a static declaration, but this may be inappropriate. Not sure how to make this define static and definable in the header.
 //unsigned char font_map[128][8] =
-extern const unsigned char font_map[128][8];
+extern unsigned char font_map[128][8];
 /*
 {
 { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, },  // U+0000 (nul)
@@ -253,6 +253,10 @@ void keyboard_setup(void);
 void interpretKeypress(void);
 
 char translateKeypress(char);
+
+
+//trying to link the two files together for testing
+extern void placeChar(char * character);
 
 //test code that is excluded when running on the pic32 itself
 #ifndef __Microcontroller
