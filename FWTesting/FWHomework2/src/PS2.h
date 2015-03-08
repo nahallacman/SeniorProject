@@ -257,6 +257,17 @@ char translateKeypress(char);
 
 //trying to link the two files together for testing
 extern void placeChar(char * character);
+extern void ShiftScreenUp(void);
+extern void ShiftScreenDown(void);
+extern void ShiftScreenLeft(void);
+extern void ShiftScreenRight(void);
+extern void MoveCursorLeft(void);
+extern void MoveCursorRight(void);
+extern void MoveCursorUp(void);
+extern void MoveCursorDown(void);
+extern void BlinkCursor(void);
+extern void ClearScreen(void);
+extern void resetPlaceCharLocation(void);
 
 //test code that is excluded when running on the pic32 itself
 #ifndef __Microcontroller
