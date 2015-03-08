@@ -363,7 +363,7 @@ void writechar(char * character)
     //}
 }
 
-void placeChar(char * character)
+extern void placeChar(char * character)
 {
     
 

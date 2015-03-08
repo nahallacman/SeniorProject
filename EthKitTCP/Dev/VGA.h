@@ -39,6 +39,7 @@ void writeverticalline(int x1, int x2);
 void writepixel(int x, int y);
 
 //void writechar(char * character, int x, int y);
+
 void writechar(char * character);
 
 void resetPlaceCharLocation(void);
@@ -50,7 +51,7 @@ void MoveCursorRight(void);
 void MoveCursorUp(void);
 void MoveCursorDown(void);
 
-void placeChar(char * character);
+extern void placeChar(char * character);
 
 void ShiftScreenUp(void);
 void ShiftScreenDown(void);

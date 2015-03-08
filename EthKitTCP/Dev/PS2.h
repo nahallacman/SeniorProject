@@ -256,7 +256,7 @@ char translateKeypress(char);
 
 
 //trying to link the two files together for testing
-extern void placeChar(char * character);
+//extern void placeChar(char * character);
 extern void ShiftScreenUp(void);
 extern void ShiftScreenDown(void);
 extern void ShiftScreenLeft(void);
