@@ -1,9 +1,12 @@
-#include <plib.h>
+
 #include "VGA.h"
 //this include is soley for the  #define __Microcontroller line. It might be good to take that into another file.
-
+#include "TestCommon.h"
 
 #ifdef __Microcontroller
+
+//not sure about this placement, maybe it can go outside of the #ifdef?
+#include <plib.h>
 
 void VGA_Setup(void)
 {

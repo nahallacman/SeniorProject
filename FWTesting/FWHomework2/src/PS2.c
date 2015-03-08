@@ -1,5 +1,4 @@
 #include "PS2.h"
-#include "TestCommon.h"
 
 #ifdef __Microcontroller
 
@@ -275,7 +274,7 @@ void interpretKeypress(void)
                 //writechar(keyboard_lookup(textLine[textlineindex]), cursor_x, cursor_y);
                 placeChar(keyboard_lookup(textLine[textlineindex]));
 
-                textlineindex++;
+                 textlineindex++;
                 
             }
 

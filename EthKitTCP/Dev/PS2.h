@@ -74,7 +74,10 @@ int ShiftPressed;
 
 //buffer for line, should probably be moved later
 char textLine[1024];
-int textlineindex = 0;
+//int textlineindex = 0;
+
+
+int textlineindex;
 
 char * gettextLine(void);
 //int cursorlocation = 0;
