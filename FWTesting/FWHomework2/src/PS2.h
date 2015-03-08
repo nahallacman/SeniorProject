@@ -16,8 +16,9 @@ extern "C" {
 #include "PS2Common.h"
 #include "TestCommon.h"
 //testing adds to fix unit tests
+#ifndef __Microcontroller
 #include "VGA.h"
-
+#endif
 
 #ifdef __Microcontroller
 //set the priority of the ChangeNotificationISR

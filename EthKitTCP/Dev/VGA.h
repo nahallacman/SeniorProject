@@ -48,7 +48,7 @@ void ClearScreen(void);
 void MoveCursorLeft(void);
 void MoveCursorRight(void);
 
-extern void placeChar(char * character);
+void placeChar(char * character);
 
 
 
