@@ -12,7 +12,7 @@ const long int VGA_BackPorch[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
 void VGA_Setup(void)
 {
-	
+	VGA_VideoMemoryIndex = VGA_VideoMemory
 
     VGA_SetupVideoOutput();
 
