@@ -48,6 +48,11 @@ void ClearScreen(void);
 void MoveCursorLeft(void);
 void MoveCursorRight(void);
 
+extern void placeChar(char * character);
+
+
+
+
 //int LineWidth = 25;
 #define LineWidth 25
 //int LineWidth;
