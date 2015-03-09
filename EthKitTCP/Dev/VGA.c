@@ -1,17 +1,15 @@
-
 #include "VGA.h"
 //this include is soley for the  #define __Microcontroller line. It might be good to take that into another file.
 #include "TestCommon.h"
-
-//for _bswapw
-#include <plib.h>
 
 const long int VGA_BackPorch[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
 #ifdef __Microcontroller
 
 //not sure about this placement, maybe it can go outside of the #ifdef?
-
+//for _bswapw
+// and a lot more!
+#include <plib.h>
 
 void VGA_Setup(void)
 {
@@ -339,6 +337,7 @@ void writechar(char * character)
             //Bits = Bits << leftover2;
 
             //bitswapping to put the character in the correct place
+            //trying to make this compatable with other systems, not sure how to do that.
             Bits = _bswapw(Bits);
             
             //mask off the extra stuff that can creep in
