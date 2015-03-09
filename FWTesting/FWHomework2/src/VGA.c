@@ -1,17 +1,15 @@
-
 #include "VGA.h"
 //this include is soley for the  #define __Microcontroller line. It might be good to take that into another file.
 #include "TestCommon.h"
-
-//for _bswapw
-#include <plib.h>
 
 const long int VGA_BackPorch[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
 #ifdef __Microcontroller
 
 //not sure about this placement, maybe it can go outside of the #ifdef?
-
+//for _bswapw
+// and a lot more!
+#include <plib.h>
 
 void VGA_Setup(void)
 {
@@ -240,6 +238,17 @@ void T2ISR(void)
 
 }
 
+#else
+//replacement code for the bitswapping macro that is included in the pic32 system code
+//the microcontroller needs the other code as it is MUCH faster on the pic32
+uint32_t _bswap32(uint32_t a)
+{
+  a = ((a & 0x000000FF) << 24) |
+      ((a & 0x0000FF00) <<  8) |
+      ((a & 0x00FF0000) >>  8) |
+      ((a & 0xFF000000) >> 24);
+  return a;
+}
 
 #endif
 
@@ -338,9 +347,15 @@ void writechar(char * character)
             Bits = Bits << leftover;
             //Bits = Bits << leftover2;
 
+			#ifdef __Microcontroller
             //bitswapping to put the character in the correct place
-            Bits = _bswapw(Bits);
-            
+            //trying to make this compatable with other systems, not sure how to do that.
+				Bits = _bswapw(Bits);
+			#else
+				Bits = _bswap32(Bits);
+			//	Bits = bswap_32(Bits);
+			#endif
+			
             //mask off the extra stuff that can creep in
             if(leftover == 0x08)
             {

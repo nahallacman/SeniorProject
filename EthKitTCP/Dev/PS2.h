@@ -17,7 +17,7 @@ extern "C" {
 #include "TestCommon.h"
 //testing adds to fix unit tests
 #ifndef __Microcontroller
-#include "VGA.h"
+//#include "VGA.h"
 #endif
 
 #ifdef __Microcontroller

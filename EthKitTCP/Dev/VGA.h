@@ -8,6 +8,8 @@
 #ifndef VGA_H
 #define	VGA_H
 
+
+
 //#include "PS2Common.h"
 #include "TestCommon.h"
 //#include "PS2.h"
@@ -27,8 +29,13 @@ int test;
 void T2ISR(void);
 void VGA_Setup(void);
 void VGA_SetupVideoOutput(void);
-
+//#endif
+//#ifndef __Microcontroller
+#else
+#include <stdint.h>
+uint32_t _bswap32(uint32_t a);
 #endif
+
 
 void writefullhorizontalline(int line);
 void writefullverticalline(int column);
