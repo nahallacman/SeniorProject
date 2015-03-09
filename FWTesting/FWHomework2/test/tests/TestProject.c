@@ -1,6 +1,7 @@
 #include "unity.h"
 #include "PS2.h"
 #include "PS2Common.h"
+#include "VGA.h"
 
 
 void setUp(void)

@@ -1,5 +1,6 @@
 #include "unity.h"
-#include "source1.c"
+#include "source1.h"
+#include "source2.h"
 
 void setUp(void)
 {
