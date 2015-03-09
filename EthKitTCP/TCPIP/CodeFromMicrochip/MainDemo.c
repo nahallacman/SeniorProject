@@ -59,8 +59,14 @@
  * and this file must define the AppConfig variable as described below.
  */
 //cals edits
+
+
+#include "../../Dev/TestCommon.h"
+
 #include "../../Dev/PS2Common.h"
 #include <plib.h>
+
+void NewTCPClient(char * textToSend);
 //end cals edits
 
 
@@ -192,6 +198,8 @@ int main(void)
     
         keyboard_setup();
 
+#ifdef __Microcontroller
+        
     VGA_Setup();
 
 	INTCONbits.MVEC = 1; // turn on mutli vectored mode
@@ -213,6 +221,7 @@ int main(void)
     //T4STATE = 1;//initalize state machine for timer 4 / h sync
    //T2State = 0;
 
+#endif
 
     //end added by cal
 
@@ -291,7 +300,7 @@ int main(void)
     #if defined(WF_CS_TRIS)
     #if defined(DERIVE_KEY_FROM_PASSPHRASE_IN_HOST)
         g_WpsPassphrase.valid = FALSE;
-    #endif    /* defined(DERIVE_KEY_FROM_PASSPHRASE_IN_HOST) */
+    #endif   // defined(DERIVE_KEY_FROM_PASSPHRASE_IN_HOST) 
     WF_Connect();
     #endif
 
@@ -321,6 +330,7 @@ int main(void)
     mDNSMulticastFilterRegister();            
     #endif
 
+    
     // Now that all items are initialized, begin the co-operative
     // multitasking loop.  This infinite loop will continuously 
     // execute all stack-related tasks, as well as your own
@@ -348,6 +358,7 @@ int main(void)
 
         }
 
+        
         // Blink LED0 (right most one) every second.
         if(TickGet() - t >= TICK_SECOND/2ul)
         {
@@ -390,7 +401,11 @@ int main(void)
 
         //cals edits
         #if defined(STACK_USE_GENERIC_TCP_CLIENT_EXAMPLE)
-         GenericTCPClient();
+        //char * ptr;
+        //ptr = gettextLine();
+         //GenericTCPClient(ptr);
+        //GenericTCPClient();
+        NewTCPClient(gettextLine());
         #endif
        //end cals edits
         
@@ -481,7 +496,7 @@ int main(void)
                 WF_SetPSK(g_WpsPassphrase.passphrase.key);
                 g_WpsPassphrase.valid = FALSE;
             }
-        #endif    /* defined(DERIVE_KEY_FROM_PASSPHRASE_IN_HOST) */
+        #endif    // defined(DERIVE_KEY_FROM_PASSPHRASE_IN_HOST) 
 		#if defined(STACK_USE_AUTOUPDATE_HTTPSERVER) && defined(WF_CS_TRIS) && defined(MRF24WG)
 		{
 			static DWORD t_UpdateImage=0;
@@ -513,7 +528,9 @@ int main(void)
 			}
 		}
 		#endif
+
     }
+
 }
 
 #if defined(WF_CS_TRIS)

@@ -61,6 +61,7 @@
 #include "TCPIP Stack/TCPIP.h"
 
 //cals edit
+//#include "../../Dev/PS2.h"
 
 // Defines the server to be accessed for this application
 /*
@@ -200,6 +201,8 @@ void GenericTCPClient(void)
 			//cals edits
 			//TCPPutROMString(MySocket, (ROM BTYE*)"TEST ");
 			TCPPutROMString(MySocket, (ROM BYTE*)"TEST MESSAGE ");
+                        //TCPPutROMString(MySocket, (ROM BYTE*)textToSend);
+                        //TCPPutROMString(MySocket, (ROM BYTE*)textLine);
                         /*
 			// Place the application protocol data into the transmit buffer.  For this example, we are connected to an HTTP server, so we'll send an HTTP GET request.
 			TCPPutROMString(MySocket, (ROM BYTE*)"GET ");
@@ -260,6 +263,161 @@ void GenericTCPClient(void)
 			GenericTCPExampleState = SM_DONE;
 			break;
 	
+		case SM_DONE:
+			// Do nothing unless the user pushes BUTTON1 and wants to restart the whole connection/download process
+			if(BUTTON1_IO == 0u)
+				GenericTCPExampleState = SM_HOME;
+			break;
+	}
+}
+
+//#endif	//#if defined(STACK_USE_GENERIC_TCP_CLIENT_EXAMPLE)
+
+
+void NewTCPClient(char * textToSend)
+{
+	BYTE 				i;
+	WORD				w;
+	BYTE				vBuffer[9];
+	static DWORD		Timer;
+	static TCP_SOCKET	MySocket = INVALID_SOCKET;
+	static enum _GenericTCPExampleState
+	{
+		SM_HOME = 0,
+		SM_SOCKET_OBTAINED,
+		#if defined(STACK_USE_SSL_CLIENT)
+    	SM_START_SSL,
+    	#endif
+		SM_PROCESS_RESPONSE,
+		SM_DISCONNECT,
+		SM_DONE
+	} GenericTCPExampleState = SM_DONE;
+
+	switch(GenericTCPExampleState)
+	{
+		case SM_HOME:
+			// Connect a socket to the remote TCP server
+			MySocket = TCPOpen((DWORD)(PTR_BASE)&ServerName[0], TCP_OPEN_RAM_HOST, ServerPort, TCP_PURPOSE_GENERIC_TCP_CLIENT);
+
+			// Abort operation if no TCP socket of type TCP_PURPOSE_GENERIC_TCP_CLIENT is available
+			// If this ever happens, you need to go add one to TCPIPConfig.h
+			if(MySocket == INVALID_SOCKET)
+				break;
+
+			#if defined(STACK_USE_UART)
+			putrsUART((ROM char*)"\r\n\r\nConnecting using Microchip TCP API...\r\n");
+			#endif
+
+			GenericTCPExampleState++;
+			Timer = TickGet();
+			break;
+
+		case SM_SOCKET_OBTAINED:
+			// Wait for the remote server to accept our connection request
+			if(!TCPIsConnected(MySocket))
+			{
+				// Time out if too much time is spent in this state
+				if(TickGet()-Timer > 5*TICK_SECOND)
+				{
+					// Close the socket so it can be used by other modules
+					TCPDisconnect(MySocket);
+					MySocket = INVALID_SOCKET;
+					GenericTCPExampleState--;
+				}
+				break;
+			}
+
+			Timer = TickGet();
+
+    #if defined (STACK_USE_SSL_CLIENT)
+            if(!TCPStartSSLClient(MySocket,(void *)"thishost"))
+                break;
+			GenericTCPExampleState++;
+			break;
+
+        case SM_START_SSL:
+            if (TCPSSLIsHandshaking(MySocket))
+            {
+				if(TickGet()-Timer > 10*TICK_SECOND)
+				{
+					// Close the socket so it can be used by other modules
+					TCPDisconnect(MySocket);
+					MySocket = INVALID_SOCKET;
+					GenericTCPExampleState=SM_HOME;
+				}
+                break;
+            }
+    #endif
+
+			// Make certain the socket can be written to
+			if(TCPIsPutReady(MySocket) < 125u)
+				break;
+
+			//cals edits
+			//TCPPutROMString(MySocket, (ROM BTYE*)"TEST ");
+			TCPPutROMString(MySocket, (ROM BYTE*)"TEST MESSAGE ");
+                        TCPPutROMString(MySocket, (ROM BYTE*)textToSend);
+                        //TCPPutROMString(MySocket, (ROM BYTE*)textLine);
+                        /*
+			// Place the application protocol data into the transmit buffer.  For this example, we are connected to an HTTP server, so we'll send an HTTP GET request.
+			TCPPutROMString(MySocket, (ROM BYTE*)"GET ");
+			TCPPutROMString(MySocket, RemoteURL);
+			TCPPutROMString(MySocket, (ROM BYTE*)" HTTP/1.0\r\nHost: ");
+			TCPPutString(MySocket, ServerName);
+			TCPPutROMString(MySocket, (ROM BYTE*)"\r\nConnection: close\r\n\r\n");
+                         */
+
+			// Send the packet
+			TCPFlush(MySocket);
+			GenericTCPExampleState++;
+			break;
+
+		case SM_PROCESS_RESPONSE:
+			// Check to see if the remote node has disconnected from us or sent us any application data
+			// If application data is available, write it to the UART
+			if(!TCPIsConnected(MySocket))
+			{
+				GenericTCPExampleState = SM_DISCONNECT;
+				// Do not break;  We might still have data in the TCP RX FIFO waiting for us
+			}
+
+			// Get count of RX bytes waiting
+			w = TCPIsGetReady(MySocket);
+
+			// Obtian and print the server reply
+			i = sizeof(vBuffer)-1;
+			vBuffer[i] = '\0';
+			while(w)
+			{
+				if(w < i)
+				{
+					i = w;
+					vBuffer[i] = '\0';
+				}
+				w -= TCPGetArray(MySocket, vBuffer, i);
+				#if defined(STACK_USE_UART)
+				putsUART((char*)vBuffer);
+				#endif
+
+				// putsUART is a blocking call which will slow down the rest of the stack
+				// if we shovel the whole TCP RX FIFO into the serial port all at once.
+				// Therefore, let's break out after only one chunk most of the time.  The
+				// only exception is when the remote node disconncets from us and we need to
+				// use up all the data before changing states.
+				if(GenericTCPExampleState == SM_PROCESS_RESPONSE)
+					break;
+			}
+
+			break;
+
+		case SM_DISCONNECT:
+			// Close the socket so it can be used by other modules
+			// For this application, we wish to stay connected, but this state will still get entered if the remote server decides to disconnect
+			TCPDisconnect(MySocket);
+			MySocket = INVALID_SOCKET;
+			GenericTCPExampleState = SM_DONE;
+			break;
+
 		case SM_DONE:
 			// Do nothing unless the user pushes BUTTON1 and wants to restart the whole connection/download process
 			if(BUTTON1_IO == 0u)
