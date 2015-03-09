@@ -211,7 +211,7 @@ int main(void)
     //T3CONbits.ON = 1;
 	//T4CONbits.ON = 1;
 
-       SPI2CONbits.ON = 1;//turn SPI2 on
+       SPI4CONbits.ON = 1;//turn SPI2 on
     
     
    
