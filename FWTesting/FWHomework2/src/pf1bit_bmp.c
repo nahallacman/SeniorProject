@@ -128,13 +128,31 @@ void MakeBitmap(int * imgArray)
 			bytes[a] = 0x55;
 		}
 		*/
+		/*
 		int b;
 		for(b=0; b < 15000; b++)
 		{
 			//testPtr[b] = 0xFFFF0000;
 			testPtr[b] = imgArray[b];
 		}
-         
+         */
+		 
+		//raw copy works, but everything is not necessarily in the right place
+		//every 25 ints is a line, and there are 600 lines, making 15000 ints
+		int c, d, index, index2;
+		//this loop copies line by line
+		for(d=0; d < 600; d++)
+		{
+			for(c=0; c <= 25; c++)
+			{
+				index = d*25 + c;
+				index2 = (599*25) - d*25 + c;
+				testPtr[index] = imgArray[index2];
+			}
+		}
+		 
+		 
+		 
         fwrite(bytes,1,BytesSize,fp);  
         fclose(fp);
         printf("file saved\n");
