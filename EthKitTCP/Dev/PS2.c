@@ -737,7 +737,7 @@ char translateKeypress(char translate)
 				break;
 			}
 			break;
-                case 0x55: //=
+        case 0x55: //=
 	   		switch(ShiftPressed)
 			{
 			case 0:
@@ -779,7 +779,7 @@ char translateKeypress(char translate)
 				break;
 			case 1:
 				temp = 0x45; //E
-                                break;
+                break;
 			}
 			break;
 		case 0x2D: //r

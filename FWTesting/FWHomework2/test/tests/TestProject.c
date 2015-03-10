@@ -25,13 +25,18 @@ void testKeyboardInput(void)
 	//	testKeyboardAgitator(i);
 	//}
 	
-	//testKeyboardAgitator(0x61);
+	
 	//testKeyboardAgitator(0x62);
 	//testKeyboardAgitator(0x63);
 	//testKeyboardAgitator(0x64);	
 	printTestScreen();
 	
-
+	testKeyboardAgitator(0x76); // esc
+	
+	testKeyboardAgitator(0x16); // 1
+	
+	testKeyboardAgitator(0x1E); // 2
+	testKeyboardAgitator(0x26); // 3
 
 	//placeChar(keyboard_lookup('a'));
 	//placeChar(keyboard_lookup('b'));
