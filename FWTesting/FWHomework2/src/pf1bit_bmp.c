@@ -131,14 +131,15 @@ void MakeBitmap(int * imgArray)
 		int b;
 		for(b=0; b < 15000; b++)
 		{
+			//testPtr[b] = 0xFFFF0000;
 			testPtr[b] = imgArray[b];
 		}
          
         fwrite(bytes,1,BytesSize,fp);  
         fclose(fp);
         printf("file saved\n");
-        getchar();
-		//cals changes
+        //cals changes
+		//getchar();
         return;
  }
  

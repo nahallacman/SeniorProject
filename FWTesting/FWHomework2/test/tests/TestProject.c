@@ -25,10 +25,35 @@ void testKeyboardInput(void)
 	//	testKeyboardAgitator(i);
 	//}
 	
-	testKeyboardAgitator(0x61);
-	testKeyboardAgitator(0x62);
-	testKeyboardAgitator(0x63);
-	testKeyboardAgitator(0x64);	
+	//testKeyboardAgitator(0x61);
+	//testKeyboardAgitator(0x62);
+	//testKeyboardAgitator(0x63);
+	//testKeyboardAgitator(0x64);	
+	
+	char a;
+	int i;
+	for(i = 0; i < 10; i++)
+	{
+		for(a = 'a'; a <= 'z'; a++)
+		{
+			placeChar(keyboard_lookup(a));
+		}
+		for(a = 'A'; a <= 'Z'; a++)
+		{
+			placeChar(keyboard_lookup(a));
+		}
+	}
+	//placeChar(keyboard_lookup('a'));
+	//placeChar(keyboard_lookup('b'));
+	
+	
+	
+	//writefullverticalline(400);
+	//writefullverticalline(401);
+	//writefullverticalline(402);
+	//writefullverticalline(403);
+	//writefullverticalline(404);
+	//writefullverticalline(405);
 	
 	//change this to an assert instead of an if
 	if(KeysToProcess == 1)
