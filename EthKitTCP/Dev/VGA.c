@@ -644,3 +644,17 @@ void ShiftScreenRight()
     //   VGA_VideoMemory[i] = 0;
     //}
 }
+
+
+void printTestScreen(void)
+{
+	char a;
+	int i;
+	for(i = 0; i < 79; i++) // 95 * 78 = 7500
+	{
+		for(a = 0x20; a < 0x7F; a++) //95 characters
+		{
+			placeChar(keyboard_lookup(a));
+		}
+	}
+}

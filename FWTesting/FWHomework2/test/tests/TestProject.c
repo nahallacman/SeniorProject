@@ -29,20 +29,10 @@ void testKeyboardInput(void)
 	//testKeyboardAgitator(0x62);
 	//testKeyboardAgitator(0x63);
 	//testKeyboardAgitator(0x64);	
+	printTestScreen();
 	
-	char a;
-	int i;
-	for(i = 0; i < 10; i++)
-	{
-		for(a = 'a'; a <= 'z'; a++)
-		{
-			placeChar(keyboard_lookup(a));
-		}
-		for(a = 'A'; a <= 'Z'; a++)
-		{
-			placeChar(keyboard_lookup(a));
-		}
-	}
+
+
 	//placeChar(keyboard_lookup('a'));
 	//placeChar(keyboard_lookup('b'));
 	
@@ -68,3 +58,17 @@ void testKeyboardInput(void)
 
 	MakeBitmap((int *)VGA_VideoMemory);
 }
+/*
+void printTestScreen(void)
+{
+	char a;
+	int i;
+	for(i = 0; i < 79; i++) // 95 * 78 = 7500
+	{
+		for(a = 0x20; a < 0x7F; a++) //95 characters
+		{
+			placeChar(keyboard_lookup(a));
+		}
+	}
+}
+*/
