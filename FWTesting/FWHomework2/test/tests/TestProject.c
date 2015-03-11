@@ -35,56 +35,42 @@ void testFullScreenCharacterPrinting(void)
 	//need to make a bitmap comparator here
 }
 
+//tests the translateKeypress() function which takes scan codes from a keyboard and converts them into ascii
 void testTranslateKeypress(void)
 {
-	char test;
+	//41 items in these arrays
+	//this first part handles all the normal keypresses
+	uint8_t refPrintableArray[42] = {0x1C,0x32,0x21,0x23,0x24,0x2B,0x34,0x33,0x43,0x3B,0x42,0x4B,0x3A,0x31,0x44,0x4D,0x15,0x2D,0x1B,0x2C,0x3C,0x2A,0x1D,0x22,0x35,0x1A,0x45,0x16,0x1E,0x26,0x25,0x2E,0x36,0x3D,0x3E,0x46,0x0E,0x4E,0x55,0x5D,0x29};
+	uint8_t PrintableArray[42] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0','1','2','3','4','5','6','7','8','9','`','-','=','\\',' '};
+	uint8_t ShiftPrintableArray[42] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',')','!','@','#','$','%','^','&','*','(','~','_','+','|',' '};
 	
-	test = translateKeypress(0x16);
-	TEST_ASSERT_EQUAL_UINT8(test, 0x31);
+	//test all unshifted values
+	int i = 0;
+	for( i = 0; i < 41; i++)
+	{
+		TEST_ASSERT_EQUAL_UINT8(translateKeypress(refPrintableArray[i]), PrintableArray[i]);
+	}
 	
-	test = translateKeypress(0x5A); // enter, should return 0x01 for now
-	TEST_ASSERT_EQUAL_UINT8(test, 0x01);
+	//turn shift on
+	translateKeypress(0x12);
+	//test all shifted values
+	for( i = 0; i < 41; i++)
+	{
+		TEST_ASSERT_EQUAL_UINT8(translateKeypress(refPrintableArray[i]), ShiftPrintableArray[i]);
+	}
 	
-	test = translateKeypress(0x0E); //`
-	TEST_ASSERT_EQUAL_UINT8(test, 0x60); //` no shift: `
+	//this still needs to be extended to each other non-character keypress but they are harder to test
 	
-	translateKeypress(0x58); // caps lock, shift on
-	test = translateKeypress(0x0E); //`
-	TEST_ASSERT_EQUAL_UINT8(test, 0x7E); //` shift: ~	
-	translateKeypress(0x58); // caps lock, shift off
-
-	test = translateKeypress(0x16); //1
-	TEST_ASSERT_EQUAL_UINT8(test, 0x31); //1 no shift: 1
-	
-	translateKeypress(0x58); // caps lock, shift on
-	test = translateKeypress(0x16); //1
-	TEST_ASSERT_EQUAL_UINT8(test, 0x21); //1 shift: !	
-	translateKeypress(0x58); // caps lock, shift off
-	
-	test = translateKeypress(0x1E); //2
-	TEST_ASSERT_EQUAL_UINT8(test, 0x32); //2 no shift: 2
-	
-	translateKeypress(0x58); // caps lock, shift on
-	test = translateKeypress(0x1E); //2
-	TEST_ASSERT_EQUAL_UINT8(test, 0x40); //2 shift: @	
-	translateKeypress(0x58); // caps lock, shift off
-	
-	test = translateKeypress(0x26); //3
-	TEST_ASSERT_EQUAL_UINT8(test, 0x33); //3 no shift: 3
-	
-	translateKeypress(0x58); // caps lock, shift on
-	test = translateKeypress(0x26); //3
-	TEST_ASSERT_EQUAL_UINT8(test, 0x23); //3 shift: #	
-	translateKeypress(0x58); // caps lock, shift off	
-	
-	//this needs to be extended to test every key combination
 }
 
+//tests the keyboard_lookup() function completely.
 void testKeyboardLookup(void)
 {
 	//unsigned char test;
 	uint8_t test;
 	uint8_t * val;
+	int count;
+	//test all bitmaps that are in the valid range
 	for(test = 0; test < 0x80; test++)
 	{
 		//printf("KeyboardLookup, test = %X", test);
@@ -95,7 +81,17 @@ void testKeyboardLookup(void)
 			TEST_ASSERT_EQUAL_UINT8(val[i], font_map[test][i]);
 		}
 	}
-	
+	//test all bitmaps that are out of bounds which means they just return font_map[0]
+	for(test = 0x80, count = 0x80; count < 0x100; test++, count++)
+	{
+		//printf("KeyboardLookup, test = %X", test);
+		val = keyboard_lookup(test);
+		for(int i = 0; i < 8; i++)
+		{
+			//printf("KeyboardLookup, val[%d] = %X, font_map[%d][%d] = %X", i, val[i], test, i, font_map[test][i] );
+			TEST_ASSERT_EQUAL_UINT8(val[i], font_map[0][i]);
+		}
+	}
 }
 
 void testKeyboardInput(void)
@@ -149,17 +145,3 @@ void testKeyboardInput(void)
 
 	MakeBitmap((int *)VGA_VideoMemory);
 }
-/*
-void printTestScreen(void)
-{
-	char a;
-	int i;
-	for(i = 0; i < 79; i++) // 95 * 78 = 7500
-	{
-		for(a = 0x20; a < 0x7F; a++) //95 characters
-		{
-			placeChar(keyboard_lookup(a));
-		}
-	}
-}
-*/
