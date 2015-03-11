@@ -275,7 +275,7 @@ extern void resetPlaceCharLocation(void);
 void testKeyboardAgitator(uint8_t scanCode);
 #endif
 
-
+void processLine(uint8_t * textLinePtr);
 
 #ifdef	__cplusplus
 }

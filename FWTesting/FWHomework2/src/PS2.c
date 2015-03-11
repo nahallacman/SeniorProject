@@ -412,11 +412,15 @@ void interpretKeypress(void)
 
             if(temp2 == 0x01)// enter key was pressed
             {
+				/*
                 int i = 0;
                 for(i = 0; i < textlineindex; i++)
                 {
                     placeChar(keyboard_lookup(textLine[i]));
                 }
+				*/
+				//here the code should try to interpret the received command
+				processLine(textLine);
             }
 
 
@@ -1139,6 +1143,13 @@ uint8_t translateKeypress(uint8_t translate)
 uint8_t * gettextLine(void)
 {
     return textLine;
+}
+
+void processLine(uint8_t * textLinePtr)
+{
+	//const uint8_t commandIPTargetSet[] = "IPTargetSet";
+	
+	
 }
 
 #ifndef __Microcontroller
