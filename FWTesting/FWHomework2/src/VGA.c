@@ -290,12 +290,12 @@ void writefullverticalline(int column)
 
 void writehorizontalline(int y1, int y2)
 {
-    int i = 0;
+    //int i = 0;
 
 }
 void writeverticalline(int x1, int x2)
 {
-    int i = 0;
+    //int i = 0;
 }
 
 //so far only writes a pixel
@@ -524,8 +524,8 @@ void BlinkCursor(void)
         blinkstate = 0;
     }
      */
-    int x = 0;
-    int y = 0;
+    //int x = 0;
+    //int y = 0;
     int x_char = 0;
     int y_char = 0;
 
@@ -598,7 +598,7 @@ void ShiftScreenLeft()
     //move every ints into a buffer, then put them back in one int to the left
     int buffer = 0;
     int line = 0;
-    int i,j = 0;
+    int i = 0;
     //uint8_t * index = VGA_VideoMemory;
     for(line = 0; line < 600; line++)
     {
@@ -625,7 +625,7 @@ void ShiftScreenRight()
     //move every ints into a buffer, then put them back in one int to the right
     int buffer = 0;
     int line = 0;
-    int i,j = 0;
+    int i = 0;
     //uint8_t * index = VGA_VideoMemory;
     for(line = -1; line < 600; line++)
     {

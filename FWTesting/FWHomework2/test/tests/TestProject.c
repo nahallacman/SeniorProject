@@ -15,6 +15,7 @@ void tearDown(void)
 {
 }
 
+/*
 void testFullScreenCharacterPrinting(void)
 {
 	KeysToProcess = 0;
@@ -34,6 +35,7 @@ void testFullScreenCharacterPrinting(void)
 	MakeBitmap((int *)VGA_VideoMemory);
 	//need to make a bitmap comparator here
 }
+*/
 
 //tests the translateKeypress() function which takes scan codes from a keyboard and converts them into ascii
 void testTranslateKeypress(void)
@@ -64,6 +66,7 @@ void testTranslateKeypress(void)
 }
 
 //tests the keyboard_lookup() function completely.
+//uses every value a uint8_t can have, 0 to 0xFF
 void testKeyboardLookup(void)
 {
 	//unsigned char test;
@@ -121,9 +124,25 @@ void testKeyboardInput(void)
 	//placeChar(keyboard_lookup('a'));
 	//placeChar(keyboard_lookup('b'));
 	
-	
-	
+	//enter command: IPTargetSet
+	placeChar(keyboard_lookup('I'));
+	placeChar(keyboard_lookup('P'));
+	placeChar(keyboard_lookup('T'));
+	placeChar(keyboard_lookup('a'));
+	placeChar(keyboard_lookup('r'));
+	placeChar(keyboard_lookup('g'));
+	placeChar(keyboard_lookup('e'));
+	placeChar(keyboard_lookup('t'));
+	placeChar(keyboard_lookup('S'));
+	placeChar(keyboard_lookup('e'));
+	placeChar(keyboard_lookup('t'));
 
+	printf("text line = %s", textLine);
+	
+	//press enter
+	testKeyboardAgitator(0x5A);
+	
+	printf("text line after enter = %s", textLine);
 	
 	//writefullverticalline(400);
 	//writefullverticalline(401);

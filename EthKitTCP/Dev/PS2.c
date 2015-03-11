@@ -420,7 +420,7 @@ void interpretKeypress(void)
                 }
 				*/
 				//here the code should try to interpret the received command
-				processLine(textLine);
+		processLine(textLine);
             }
 
 
@@ -1147,9 +1147,44 @@ uint8_t * gettextLine(void)
 
 void processLine(uint8_t * textLinePtr)
 {
-	//const uint8_t commandIPTargetSet[] = "IPTargetSet";
+int valid_command;
+int z;
+valid_command = 1;
+
+#ifndef __Microcontroller
 	
-	
+	printf("test command = %s", textLinePtr);
+	printf("char printing = %c%c%c%c%c%c%c%c%c%c%c%c", textLinePtr[0], textLinePtr[1], textLinePtr[2], textLinePtr[3], textLinePtr[4], textLinePtr[5], textLinePtr[6], textLinePtr[7], textLinePtr[8], textLinePtr[9], textLinePtr[10], textLinePtr[11]);
+#endif
+
+for(z = 0; z < 11 && valid_command == 1; z++)
+{
+	if(textLinePtr[z] != commandIPTargetSet[z])
+	{
+		valid_command = 0;
+	}
+}
+//check if the last character is a space
+if(' ' != textLinePtr[11])
+{
+    valid_command = 0;
+}
+if(valid_command == 1)
+{
+	placeChar(keyboard_lookup('1'));
+	//interpret command
+	#ifndef __Microcontroller
+	printf("Valid command = %s", textLinePtr);
+	#endif
+}	
+else
+{
+	placeChar(keyboard_lookup('!'));
+	//try another command
+	#ifndef __Microcontroller
+	printf("Invalid command = %s", textLinePtr);
+	#endif
+}	
 }
 
 #ifndef __Microcontroller

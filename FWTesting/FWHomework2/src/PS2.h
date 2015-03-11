@@ -276,6 +276,7 @@ void testKeyboardAgitator(uint8_t scanCode);
 #endif
 
 void processLine(uint8_t * textLinePtr);
+static const uint8_t commandIPTargetSet[] = "IPTargetSet";
 
 #ifdef	__cplusplus
 }
