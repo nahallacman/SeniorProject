@@ -28,7 +28,7 @@
 /*
  int main() {
  */
-void MakeBitmap(int * imgArray)
+void MakeBitmap(int * imgArray, char * filename)
 { 
         
         static unsigned char color[1], /* 1 byte = 8 bits */
@@ -64,7 +64,8 @@ void MakeBitmap(int * imgArray)
         printf("OffBits= %d\n", OffBits);
         unsigned char bytes[BytesSize];
         //--------------------------      
-        FILE *fp = fopen("b12.bmp", "wb"); /* b - binary mode */
+		FILE *fp = fopen(filename, "wb"); /* b - binary mode */
+        //FILE *fp = fopen("b12.bmp", "wb"); /* b - binary mode */
         /* bmp file header */
         word[0]=19778;                                         fwrite(word,1,2,fp); /* file Type signature = BM */
         dword[0]=FileSize;                                     fwrite(dword,1,4,fp); /* FileSize */

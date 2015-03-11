@@ -53,6 +53,7 @@ void testTranslateKeypress(void)
 		TEST_ASSERT_EQUAL_UINT8(translateKeypress(refPrintableArray[i]), PrintableArray[i]);
 	}
 	
+	//TURNING SHIFT ON AND OFF THIS WAY WILL CHANGE IN THE FUTURE
 	//turn shift on
 	translateKeypress(0x12);
 	//test all shifted values
@@ -60,6 +61,8 @@ void testTranslateKeypress(void)
 	{
 		TEST_ASSERT_EQUAL_UINT8(translateKeypress(refPrintableArray[i]), ShiftPrintableArray[i]);
 	}
+	//turn shift back off
+	translateKeypress(0x59);
 	
 	//this still needs to be extended to each other non-character keypress but they are harder to test
 	
@@ -101,6 +104,12 @@ void testKeyboardInput(void)
 {
 	KeysToProcess = 0;
 	
+	uint8_t refPrintableArray[42] = {0x1C,0x32,0x21,0x23,0x24,0x2B,0x34,0x33,0x43,0x3B,0x42,0x4B,0x3A,0x31,0x44,0x4D,0x15,0x2D,0x1B,0x2C,0x3C,0x2A,0x1D,0x22,0x35,0x1A,0x45,0x16,0x1E,0x26,0x25,0x2E,0x36,0x3D,0x3E,0x46,0x0E,0x4E,0x55,0x5D,0x29};
+	uint8_t PrintableArray[42] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0','1','2','3','4','5','6','7','8','9','`','-','=','\\',' '};
+	//uint8_t StringToEnter[13] = {'i', 'p', 't', 'a', 'r', 'g', 'e', 't', 's', 'e', 't', ' '};
+	//uint8_t StringToEnter[3] = {'l', 's', ' '};
+	uint8_t StringToEnter[3] = {'c', 'd', ' '};
+	
 	//testKeyboardAgitator(0x30);
 	//char i;
 	//for(i = 0x61; i <= 0x7A; i++)
@@ -112,22 +121,62 @@ void testKeyboardInput(void)
 	//testKeyboardAgitator(0x62);
 	//testKeyboardAgitator(0x63);
 	//testKeyboardAgitator(0x64);	
+/*
+	//clear the screen by pressing esc
+	translateKeypress(0x76); // esc
+	//change this to an assert instead of an if
+	if(KeysToProcess == 1)
+	{
 
+		//process keystrokes
+		interpretKeypress();
+
+	}
+	*/
 	
-	//testKeyboardAgitator(0x76); // esc
-	//esc breaks things! figure it out later
-	// after esc is pressed bmp goes clear and never prints again.
-	
-	//testKeyboardAgitator(0x16); // 1
-	
-	//testKeyboardAgitator(0x1E); // 2
-	//testKeyboardAgitator(0x26); // 3
+//this bit of code takes a string and enters in the appropriate scan codes that match the string
+	int j = 0;
+	int k = 0;
+	for(k = 0; k < 3; k++)
+	{
+		for( j = 0; j < 41; j++)
+		{
+			if(PrintableArray[j] == StringToEnter[k])
+			{
+				testKeyboardAgitator(refPrintableArray[j]); // put the scan code into the system
+				if(KeysToProcess == 1) // then process it
+				{
+					//process keystrokes
+					interpretKeypress();
+				}
+			}
+		}
+	}
+	/*
+	int i = 0;
+	for( i = 0; i  < 41; i++)
+	{
+		testKeyboardAgitator(refPrintableArray[i]);
+		//change this to an assert instead of an if
+		if(KeysToProcess == 1)
+		{
+
+			//process keystrokes
+			interpretKeypress();
+
+		}
+	}
+		*/
 
 	//placeChar(keyboard_lookup('a'));
 	//placeChar(keyboard_lookup('b'));
 	
+	//press 1
+	//testKeyboardAgitator(0x16);
+	
 	//enter command: IPTargetSet
-	//translateKeypress(0x76);
+
+	/*
 	placeChar(keyboard_lookup('I'));
 	placeChar(keyboard_lookup('P'));
 	placeChar(keyboard_lookup('T'));
@@ -140,13 +189,13 @@ void testKeyboardInput(void)
 	placeChar(keyboard_lookup('e'));
 	placeChar(keyboard_lookup('t'));
 	placeChar(keyboard_lookup(' '));
+	
 
 	printf("text line = %s", textLine);
 	
-	//press enter
-	testKeyboardAgitator(0x5A);
+
+	*/
 	
-	printf("text line after enter = %s", textLine);
 	
 	//writefullverticalline(400);
 	//writefullverticalline(401);
@@ -154,7 +203,12 @@ void testKeyboardInput(void)
 	//writefullverticalline(403);
 	//writefullverticalline(404);
 	//writefullverticalline(405);
+
+
 	
+	
+	//press enter
+	testKeyboardAgitator(0x5A);
 	//change this to an assert instead of an if
 	if(KeysToProcess == 1)
 	{
@@ -164,7 +218,9 @@ void testKeyboardInput(void)
 
 	}
 	
+	printf("text line after processing keys and enter = %s", textLine);
+	
 	//int test[15000];
 
-	MakeBitmap((int *)VGA_VideoMemory);
+	MakeBitmap((int *)VGA_VideoMemory, "b1.bmp");
 }

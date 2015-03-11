@@ -396,19 +396,7 @@ void interpretKeypress(void)
             temp2 = translateKeypress(temp);
             // this is the hinge for the keyboard keypresses
 
-            //then add it to the textLine buffer and increase the index
-            if(temp2 != 0)
-            {
-                textLine[textlineindex] = temp2;
 
-                //then write the character to the screen
-
-                //writechar(keyboard_lookup(textLine[textlineindex]), cursor_x, cursor_y);
-                placeChar(keyboard_lookup(textLine[textlineindex]));
-
-                 textlineindex++;
-                
-            }
 
             if(temp2 == 0x01)// enter key was pressed
             {
@@ -419,34 +407,37 @@ void interpretKeypress(void)
                     placeChar(keyboard_lookup(textLine[i]));
                 }
 				*/
-				//here the code should try to interpret the received command
-				processLine(textLine);
+                //here the code should try to interpret the received command
+                processLine(textLine);
             }
-
-
-            //this cursor stuff can be taken out and move into the vga file itself.
-            //the keyboard shouldn't know about where the cursor is, the video file should know that
-            //probably should wrap writechar with the cursor stuff
-            if(cursor_x < 800)
+            else if(temp2 == 0x02) // esc key was pressed
             {
-                cursor_x += 8;
+                ClearScreen(); // esc will clear the screen for now
+                int i = 0;
+                for(i = 0; i < 1024; i++) // iterates and clears the line
+                {
+                    textLine[i] = 0;
+                }
+                textlineindex = 0; // reset the index
+                resetPlaceCharLocation(); // reset the screen beginning
             }
-            else
+            else if(temp2 == 0x03) // caps lock was pressed
             {
-                cursor_x = 0;
-                if(cursor_y < 600)
-                {
-                    cursor_y += 8;
-                }
-                else
-                {
-                    cursor_y = 0;
-                }
-                
+                ShiftPressed = !ShiftPressed;
             }
+            else if(temp2 != 0)  //if there is no special key pressed
+            {   //then add it to the textLine buffer and increase the index
+                textLine[textlineindex] = temp2;
 
+                //then write the character to the screen
 
+                //writechar(keyboard_lookup(textLine[textlineindex]), cursor_x, cursor_y);
+                placeChar(keyboard_lookup(textLine[textlineindex]));
 
+                //increase index
+                textlineindex++;
+
+            }
 
             //make buffer circular
             if(ps2BufferStart < ps2BufferSize )
@@ -476,7 +467,7 @@ uint8_t translateKeypress(uint8_t translate)
     int i = 0;
     if(translate == 0x58) // caps lock
     {
-        ShiftPressed = !ShiftPressed;
+        temp = 0x03;
     }
     else if(translate == 0x12) // left shift
     {
@@ -600,14 +591,7 @@ uint8_t translateKeypress(uint8_t translate)
 			break;
 		//start keyboard line: esc F1F2F3F4F5F6F7F8F9F10F11F12
 		case 0x76: // esc
-			ClearScreen(); // esc will clear the screen for now
-                        int i = 0;
-                        for(i = 0; i < 1024; i++) // iterates and clears the line
-                        {
-                            textLine[i] = 0;
-                        }
-                        textlineindex = 0; // reset the index
-                        resetPlaceCharLocation(); // reset the screen beginning
+                    temp = 0x02; // temp number for commands will be in range 0x01 - 0x19
 			break;
 		//start keyboard line: `1234567890-=
 		case 0x0E: //`
@@ -1147,44 +1131,87 @@ uint8_t * gettextLine(void)
 
 void processLine(uint8_t * textLinePtr)
 {
-int valid_command;
-int z;
-valid_command = 1;
+    int valid_command;
+    int z;
+    valid_command = 1;
 
-#ifndef __Microcontroller
-	
-	printf("test command = %s", textLinePtr);
-	printf("char printing = %c%c%c%c%c%c%c%c%c%c%c%c", textLinePtr[0], textLinePtr[1], textLinePtr[2], textLinePtr[3], textLinePtr[4], textLinePtr[5], textLinePtr[6], textLinePtr[7], textLinePtr[8], textLinePtr[9], textLinePtr[10], textLinePtr[11]);
-#endif
+    #ifndef __Microcontroller
 
-for(z = 0; z < 11 && valid_command == 1; z++)
-{
-	if(textLinePtr[z] != commandIPTargetSet[z])
-	{
-		valid_command = 0;
-	}
-}
-//check if the last character is a space
-if(' ' != textLinePtr[11])
-{
-    valid_command = 0;
-}
-if(valid_command == 1)
-{
-	placeChar(keyboard_lookup('1'));
-	//interpret command
-	#ifndef __Microcontroller
-	printf("Valid command = %s", textLinePtr);
-	#endif
-}	
-else
-{
-	placeChar(keyboard_lookup('!'));
-	//try another command
-	#ifndef __Microcontroller
-	printf("Invalid command = %s", textLinePtr);
-	#endif
-}	
+            printf("test command = %s", textLinePtr);
+            printf("char printing = %c%c%c%c%c%c%c%c%c%c%c%c", textLinePtr[0], textLinePtr[1], textLinePtr[2], textLinePtr[3], textLinePtr[4], textLinePtr[5], textLinePtr[6], textLinePtr[7], textLinePtr[8], textLinePtr[9], textLinePtr[10], textLinePtr[11]);
+    #endif
+
+    for(z = 0; z < 11 && valid_command == 1; z++)
+    {
+            if(textLinePtr[z] != commandIPTargetSet[z])
+            {
+                    valid_command = 0;
+            }
+    }
+    //check if the last character is a space
+    if(' ' != textLinePtr[11])
+    {
+        valid_command = 0;
+    }
+    if(valid_command == 0)
+    {
+        valid_command = 1;
+        for(z = 0; z < 2 && valid_command == 1; z++)
+        {
+                if(textLinePtr[z] != commandLS[z])
+                {
+                        valid_command = 0;
+                }
+        }
+        //check if the last character is a space
+        if(' ' != textLinePtr[2])
+        {
+            valid_command = 0;
+        }
+    }
+    if(valid_command == 0)
+    {
+        valid_command = 1;
+        for(z = 0; z < 2 && valid_command == 1; z++)
+        {
+                if(textLinePtr[z] != commandCD[z])
+                {
+                        valid_command = 0;
+                }
+        }
+        //check if the last character is a space
+        if(' ' != textLinePtr[2])
+        {
+            valid_command = 0;
+        }
+    }
+
+
+    if(valid_command == 1)
+    {
+            placeChar(keyboard_lookup('S'));
+            placeChar(keyboard_lookup('u'));
+            placeChar(keyboard_lookup('c'));
+            placeChar(keyboard_lookup('c'));
+            placeChar(keyboard_lookup('e'));
+            placeChar(keyboard_lookup('s'));
+            placeChar(keyboard_lookup('s'));
+            //interpret command
+            #ifndef __Microcontroller
+            printf("Valid command = %s", textLinePtr);
+            #endif
+    }
+    else
+    {
+            placeChar(keyboard_lookup('F'));
+            placeChar(keyboard_lookup('a'));
+            placeChar(keyboard_lookup('i'));
+            placeChar(keyboard_lookup('l'));
+            //try another command
+            #ifndef __Microcontroller
+            printf("Invalid command = %s", textLinePtr);
+            #endif
+    }	
 }
 
 #ifndef __Microcontroller
