@@ -1,7 +1,7 @@
 #include "PS2.h"
 
 
-unsigned char font_map[128][8] = 
+uint8_t font_map[128][8] = 
 {
 { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, },  // U+0000 (nul)
 { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, },  // U+0001 // keyboard enter placeholder
@@ -132,7 +132,7 @@ unsigned char font_map[128][8] =
 { 0x76, 0xdc, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, },  // U+007E (~)
             };
 
-char * keyboard_lookup(char number)
+uint8_t * keyboard_lookup(uint8_t number)
 {
     if(number > 0x20 && number < 0x80)
     {
@@ -331,8 +331,8 @@ void InputCapture2ISR(void)
 void interpretKeypress(void)
 {
     
-    char temp = 0;
-    char temp2 = 0;
+    uint8_t temp = 0;
+    uint8_t temp2 = 0;
 
     //circular buffer removal handling of the ps2Buffer
     if(ps2BufferNumItems > 0)
@@ -465,9 +465,10 @@ void interpretKeypress(void)
     }
 }
 
-char translateKeypress(char translate)
+//this function translates a passed in scan code to ascii (or maybe unicode?) character values that will be used to get the correct bitmaps for printing characters to the screen
+uint8_t translateKeypress(uint8_t translate)
 {
-    char temp = 0;
+    uint8_t temp = 0;
     int i = 0;
     if(translate == 0x58) // caps lock
     {
@@ -1135,14 +1136,14 @@ char translateKeypress(char translate)
     return temp;
 }
 
-char * gettextLine(void)
+uint8_t * gettextLine(void)
 {
     return textLine;
 }
 
 #ifndef __Microcontroller
 //this test agitator takes a scan code and adds it to the ps2Buffer so it can be processed with interpretKeypress
-void testKeyboardAgitator(char scanCode)
+void testKeyboardAgitator(uint8_t scanCode)
 {
    //circular buffer insert handling of the ps2Buffer
 	if(ps2BufferNumItems < ps2BufferSize)

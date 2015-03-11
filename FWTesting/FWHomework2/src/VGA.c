@@ -315,8 +315,8 @@ void writepixel(int x, int y)
 }
 
 //uses 8 characters in a 8x8 grid for characters, puts that character at position starting with x, y
-//void writechar(char * character, int x, int y)
-void writechar(char * character)
+//void writechar(uint8_t * character, int x, int y)
+void writechar(uint8_t * character)
 {
     int i = 0;
     //if(x < VGA_X_MAX && y < VGA_Y_MAX)
@@ -407,7 +407,7 @@ void writechar(char * character)
     //}
 }
 
-extern void placeChar(char * character)
+extern void placeChar(uint8_t * character)
 {
     
 
@@ -532,7 +532,7 @@ void BlinkCursor(void)
 
     y_char = (CursorLocation / 100);
     x_char =  CursorLocation - (y_char * 100);
-    char fullchar[8] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+    uint8_t fullchar[8] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
 
     //writechar(fullchar, x_char * 8, y_char * 8);
     writechar(fullchar);
@@ -546,7 +546,7 @@ void ShiftScreenUp()
     int buffer[25];
     int line = 0;
     int i,j = 0;
-    //char * index = VGA_VideoMemory;
+    //uint8_t * index = VGA_VideoMemory;
     for(line = 0; line < 599; line++)
     {
         for(i=0; i < 25; i++)
@@ -572,7 +572,7 @@ void ShiftScreenDown()
     int buffer[25];
     int line = 0;
     int i,j = 0;
-    //char * index = VGA_VideoMemory;
+    //uint8_t * index = VGA_VideoMemory;
     for(line = 598; line > -1; line--)
     {
         for(i=0; i < 25; i++)
@@ -599,7 +599,7 @@ void ShiftScreenLeft()
     int buffer = 0;
     int line = 0;
     int i,j = 0;
-    //char * index = VGA_VideoMemory;
+    //uint8_t * index = VGA_VideoMemory;
     for(line = 0; line < 600; line++)
     {
 
@@ -626,7 +626,7 @@ void ShiftScreenRight()
     int buffer = 0;
     int line = 0;
     int i,j = 0;
-    //char * index = VGA_VideoMemory;
+    //uint8_t * index = VGA_VideoMemory;
     for(line = -1; line < 600; line++)
     {
 
@@ -648,7 +648,7 @@ void ShiftScreenRight()
 
 void printTestScreen(void)
 {
-	char a;
+	uint8_t a;
 	int i;
 	for(i = 0; i < 79; i++) // 95 * 78 = 7500
 	{

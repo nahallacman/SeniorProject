@@ -13,6 +13,7 @@
 extern "C" {
 #endif
 
+#include <stdint.h>
 #include "PS2Common.h"
 #include "TestCommon.h"
 //testing adds to fix unit tests
@@ -74,11 +75,11 @@ int ps2BufferNumItems;
 int ShiftPressed;
 
 //buffer for line, should probably be moved later
-char textLine[1024];
+uint8_t textLine[1024];
 //int textlineindex = 0;
 int textlineindex;
 
-char * gettextLine(void);
+uint8_t * gettextLine(void);
 //int cursorlocation = 0;
 
 
@@ -113,8 +114,8 @@ int cursor_y;
  * Fetched from: http://dimensionalrift.homelinux.net/combuster/mos3/?p=viewsource&file=/modules/gfx/font8_8.asm
  **/
  //tried a static declaration, but this may be inappropriate. Not sure how to make this define static and definable in the header.
-//unsigned char font_map[128][8] =
-extern unsigned char font_map[128][8];
+//unsigned uint8_t font_map[128][8] =
+extern uint8_t font_map[128][8];
 /*
 {
 { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, },  // U+0000 (nul)
@@ -246,17 +247,17 @@ extern unsigned char font_map[128][8];
 { 0x76, 0xdc, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, },  // U+007E (~)
             };
 */
-char * keyboard_lookup(char number);
+uint8_t * keyboard_lookup(uint8_t number);
 
 void keyboard_setup(void);
 
 void interpretKeypress(void);
 
-char translateKeypress(char);
+uint8_t translateKeypress(uint8_t);
 
 
 //trying to link the two files together for testing
-extern void placeChar(char * character);
+extern void placeChar(uint8_t * character);
 extern void ShiftScreenUp(void);
 extern void ShiftScreenDown(void);
 extern void ShiftScreenLeft(void);
@@ -271,7 +272,7 @@ extern void resetPlaceCharLocation(void);
 
 //test code that is excluded when running on the pic32 itself
 #ifndef __Microcontroller
-void testKeyboardAgitator(char scanCode);
+void testKeyboardAgitator(uint8_t scanCode);
 #endif
 
 

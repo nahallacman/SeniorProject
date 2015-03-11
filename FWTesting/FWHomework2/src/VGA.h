@@ -9,7 +9,7 @@
 #define	VGA_H
 
 
-
+#include <stdint.h>
 //#include "PS2Common.h"
 #include "TestCommon.h"
 //#include "PS2.h"
@@ -32,7 +32,6 @@ void VGA_SetupVideoOutput(void);
 //#endif
 //#ifndef __Microcontroller
 #else
-#include <stdint.h>
 uint32_t _bswap32(uint32_t a);
 #endif
 
@@ -45,9 +44,9 @@ void writeverticalline(int x1, int x2);
 
 void writepixel(int x, int y);
 
-//void writechar(char * character, int x, int y);
+//void writechar(uint8_t * character, int x, int y);
 
-void writechar(char * character);
+void writechar(uint8_t * character);
 
 void resetPlaceCharLocation(void);
 
@@ -58,7 +57,7 @@ void MoveCursorRight(void);
 void MoveCursorUp(void);
 void MoveCursorDown(void);
 
-extern void placeChar(char * character);
+extern void placeChar(uint8_t * character);
 
 void ShiftScreenUp(void);
 void ShiftScreenDown(void);
@@ -110,7 +109,7 @@ volatile unsigned long int *VGA_VideoMemoryIndex;
 //long int VGA_BackPorch[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};                                                  //Back porch buffer
 extern const long int VGA_BackPorch[10]; 
 
-//volatile char VideoTextFrame[7500];
+//volatile uint8_t VideoTextFrame[7500];
 
 #ifdef	__cplusplus
 }
