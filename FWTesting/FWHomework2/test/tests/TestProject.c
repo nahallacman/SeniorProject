@@ -114,7 +114,9 @@ void testKeyboardInput(void)
 	//testKeyboardAgitator(0x64);	
 
 	
-	testKeyboardAgitator(0x76); // esc
+	//testKeyboardAgitator(0x76); // esc
+	//esc breaks things! figure it out later
+	// after esc is pressed bmp goes clear and never prints again.
 	
 	//testKeyboardAgitator(0x16); // 1
 	
@@ -125,6 +127,7 @@ void testKeyboardInput(void)
 	//placeChar(keyboard_lookup('b'));
 	
 	//enter command: IPTargetSet
+	//translateKeypress(0x76);
 	placeChar(keyboard_lookup('I'));
 	placeChar(keyboard_lookup('P'));
 	placeChar(keyboard_lookup('T'));
@@ -136,6 +139,7 @@ void testKeyboardInput(void)
 	placeChar(keyboard_lookup('S'));
 	placeChar(keyboard_lookup('e'));
 	placeChar(keyboard_lookup('t'));
+	placeChar(keyboard_lookup(' '));
 
 	printf("text line = %s", textLine);
 	

@@ -420,7 +420,7 @@ void interpretKeypress(void)
                 }
 				*/
 				//here the code should try to interpret the received command
-		processLine(textLine);
+				processLine(textLine);
             }
 
 
