@@ -66,7 +66,7 @@
 #include "../../Dev/PS2Common.h"
 #include <plib.h>
 
-void NewTCPClient(char * textToSend);
+void NewTCPClient(char * textToSend, BYTE * ServerName);
 //end cals edits
 
 
@@ -405,7 +405,7 @@ int main(void)
         //ptr = gettextLine();
          //GenericTCPClient(ptr);
         //GenericTCPClient();
-        NewTCPClient(gettextLine());
+        NewTCPClient(gettextLine(), getIPTarget());
         #endif
        //end cals edits
         

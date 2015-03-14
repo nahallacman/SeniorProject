@@ -72,7 +72,8 @@ static BYTE ServerName[] =	"www.google.com";
 #endif
 */
 
-static BYTE ServerName[] =	"192.168.11.55";
+//testing configuring the ip address externally
+//static BYTE ServerName[] =	"192.168.11.55";
 //end cals edits
 
 
@@ -119,6 +120,7 @@ static ROM BYTE RemoteURL[] = "/search?as_q=Microchip&as_sitesearch=microchip.co
   Returns:
   	None
   ***************************************************************************/
+/*
 void GenericTCPClient(void)
 {
 	BYTE 				i;
@@ -203,14 +205,14 @@ void GenericTCPClient(void)
 			TCPPutROMString(MySocket, (ROM BYTE*)"TEST MESSAGE ");
                         //TCPPutROMString(MySocket, (ROM BYTE*)textToSend);
                         //TCPPutROMString(MySocket, (ROM BYTE*)textLine);
-                        /*
+                        
 			// Place the application protocol data into the transmit buffer.  For this example, we are connected to an HTTP server, so we'll send an HTTP GET request.
-			TCPPutROMString(MySocket, (ROM BYTE*)"GET ");
-			TCPPutROMString(MySocket, RemoteURL);
-			TCPPutROMString(MySocket, (ROM BYTE*)" HTTP/1.0\r\nHost: ");
-			TCPPutString(MySocket, ServerName);
-			TCPPutROMString(MySocket, (ROM BYTE*)"\r\nConnection: close\r\n\r\n");
-                         */
+			//TCPPutROMString(MySocket, (ROM BYTE*)"GET ");
+			//TCPPutROMString(MySocket, RemoteURL);
+			//TCPPutROMString(MySocket, (ROM BYTE*)" HTTP/1.0\r\nHost: ");
+			//TCPPutString(MySocket, ServerName);
+			//TCPPutROMString(MySocket, (ROM BYTE*)"\r\nConnection: close\r\n\r\n");
+                         
                         
 			// Send the packet
 			TCPFlush(MySocket);
@@ -270,11 +272,11 @@ void GenericTCPClient(void)
 			break;
 	}
 }
-
+*/
 //#endif	//#if defined(STACK_USE_GENERIC_TCP_CLIENT_EXAMPLE)
 
 
-void NewTCPClient(char * textToSend)
+void NewTCPClient(char * textToSend, BYTE * ServerName)
 {
 	BYTE 				i;
 	WORD				w;
