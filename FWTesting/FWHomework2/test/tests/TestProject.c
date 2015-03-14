@@ -3,6 +3,7 @@
 #include "PS2Common.h"
 #include "VGA.h"
 #include "pf1bit_bmp.h"
+#include "comparefiles.h"
 
 //extern void keyboard_setup(void);
 
@@ -125,13 +126,10 @@ void testInputCommandIPTargetSet(void)
 	//clear the screen by pressing esc
 	testKeyboardAgitator(0x76); // esc
 	//change this to an assert instead of an if
-	if(KeysToProcess == 1)
-	{
+	TEST_ASSERT_EQUAL_INT(KeysToProcess, 1);
+	//process keystrokes
+	interpretKeypress();
 
-		//process keystrokes
-		interpretKeypress();
-
-	}
 	
 	
 //this bit of code takes a string and enters in the appropriate scan codes that match the string
@@ -218,9 +216,13 @@ void testInputCommandIPTargetSet(void)
 
 	}
 	
-	printf("text line after processing keys and enter = %s", textLine);
+	//printf("text line after processing keys and enter = %s", textLine);
 
 	MakeBitmap((int *)VGA_VideoMemory, "iptargetset_success.bmp");
+	
+	int compareInt;
+	compareInt = comparefiles("iptargetset_success.bmp", "iptargetset_success_ref.bmp");
+	TEST_ASSERT_EQUAL_INT(compareInt, 0);
 }
 
 void testInputCommandLS(void)
@@ -231,18 +233,15 @@ void testInputCommandLS(void)
 	uint8_t PrintableArray[42] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0','1','2','3','4','5','6','7','8','9','`','-','=','\\',' '};
 	//uint8_t StringToEnter[13] = {'i', 'p', 't', 'a', 'r', 'g', 'e', 't', 's', 'e', 't', ' '};
 	uint8_t StringToEnter[strlen] = {'l', 's', ' '};
-	
-	
+
+
 	//clear the screen by pressing esc
 	testKeyboardAgitator(0x76); // esc
 	//change this to an assert instead of an if
-	if(KeysToProcess == 1)
-	{
+	TEST_ASSERT_EQUAL_INT(KeysToProcess, 1);
+	//process keystrokes
+	interpretKeypress();
 
-		//process keystrokes
-		interpretKeypress();
-
-	}
 	
 	
 	//this bit of code takes a string and enters in the appropriate scan codes that match the string
@@ -275,7 +274,12 @@ void testInputCommandLS(void)
 
 	}
 	
-	printf("text line after processing keys and enter = %s", textLine);
+	//printf("text line after processing keys and enter = %s", textLine);
 
 	MakeBitmap((int *)VGA_VideoMemory, "ls_success.bmp");
+	
+	int compareInt;
+	compareInt = comparefiles("ls_success.bmp", "ls_success_ref.bmp");
+	TEST_ASSERT_EQUAL_INT(compareInt, 0);
+
 }
