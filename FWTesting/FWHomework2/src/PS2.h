@@ -279,6 +279,12 @@ void processLine(uint8_t * textLinePtr);
 static const uint8_t commandIPTargetSet[] = "iptargetset";
 static const uint8_t commandLS[] = "ls";
 static const uint8_t commandCD[] = "cd";
+#ifdef __Microcontroller
+char IPTarget[16] = "192.168.11.55";
+#else
+char IPTarget[16];
+#endif
+char * getIPTarget();
 
 #ifdef	__cplusplus
 }

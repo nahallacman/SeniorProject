@@ -1133,6 +1133,7 @@ void processLine(uint8_t * textLinePtr)
 {
     int valid_command;
     int z;
+    int z2;
     valid_command = 1;
 	
     for(z = 0; z < 11 && valid_command == 1; z++)
@@ -1147,6 +1148,16 @@ void processLine(uint8_t * textLinePtr)
     {
         valid_command = 0;
     }
+    else
+    {
+        //then get the next ___.___.___.___(null) 15 characters
+        //textLinePtr[12] to textLinePtr[27]
+        for(z2 = 0, z = 12; textLinePtr[z] != ' ' && z < 28; z++, z2++)
+        {
+            IPTarget[z2] = textLinePtr[z];
+        }
+    }
+
     if(valid_command == 0)
     {
         valid_command = 1;
@@ -1228,3 +1239,8 @@ void testKeyboardAgitator(uint8_t scanCode)
 	}
 }
 #endif
+
+char * getIPTarget()
+{
+    return IPTarget;
+}
