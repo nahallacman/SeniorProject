@@ -72,7 +72,7 @@ static BYTE ServerName[] =	"www.google.com";
 #endif
 */
 
-static BYTE ServerName[] =	"192.168.11.57";
+static BYTE ServerName[] =	"192.168.11.55";
 //end cals edits
 
 

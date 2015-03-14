@@ -397,7 +397,7 @@ void interpretKeypress(void)
             // this is the hinge for the keyboard keypresses
 
 
-
+			//this is where the non-printable keys are processed.
             if(temp2 == 0x01)// enter key was pressed
             {
 				/*
@@ -1134,13 +1134,7 @@ void processLine(uint8_t * textLinePtr)
     int valid_command;
     int z;
     valid_command = 1;
-
-    #ifndef __Microcontroller
-
-            printf("test command = %s", textLinePtr);
-            printf("char printing = %c%c%c%c%c%c%c%c%c%c%c%c", textLinePtr[0], textLinePtr[1], textLinePtr[2], textLinePtr[3], textLinePtr[4], textLinePtr[5], textLinePtr[6], textLinePtr[7], textLinePtr[8], textLinePtr[9], textLinePtr[10], textLinePtr[11]);
-    #endif
-
+	
     for(z = 0; z < 11 && valid_command == 1; z++)
     {
             if(textLinePtr[z] != commandIPTargetSet[z])
@@ -1197,9 +1191,7 @@ void processLine(uint8_t * textLinePtr)
             placeChar(keyboard_lookup('s'));
             placeChar(keyboard_lookup('s'));
             //interpret command
-            #ifndef __Microcontroller
-            printf("Valid command = %s", textLinePtr);
-            #endif
+
     }
     else
     {
@@ -1207,10 +1199,7 @@ void processLine(uint8_t * textLinePtr)
             placeChar(keyboard_lookup('a'));
             placeChar(keyboard_lookup('i'));
             placeChar(keyboard_lookup('l'));
-            //try another command
-            #ifndef __Microcontroller
-            printf("Invalid command = %s", textLinePtr);
-            #endif
+			//print error message?
     }	
 }
 
