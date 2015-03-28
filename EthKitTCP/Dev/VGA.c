@@ -658,6 +658,19 @@ void shiftTextRight(void)
     int line = 0;
     int i = 0;
     uint8_t * index = VGA_VideoMemory;
+	/*
+	for(line = 0; line < 16; line++)
+	{
+		for(i = 1; i < 101 ; i++)
+		{
+			index[(100* line) + i - 1] = index[(100* line) + i];
+		}
+		//index[(100*line)] 
+	}
+	*/
+	
+	
+	
     for(line = 0; line < 16; line++)
     {
 		cbuffer = index[(100*line) + 98 + 1];
@@ -673,15 +686,16 @@ void shiftTextRight(void)
 		//index[(100*line) + 100] = index[(100*line) + 99];
 		
 		//this code rotates each line left
-		/*
-		for( i = 0; i < 100; i++)
-		{
-			index[(100* line) + i] = index[(100* line) + i + 1];
-		}
-		*/
+		//for( i = 0; i < 100; i++)
+		//{
+		//	index[(100* line) + i] = index[(100* line) + i + 1];
+		//}
+		
 		//index[(100*line)] = 0;
         //index[(100*line) + 1] = 0;
     }
+	
+	
 	/*
 	for(line = 0; line < 8; line++)
 	{
