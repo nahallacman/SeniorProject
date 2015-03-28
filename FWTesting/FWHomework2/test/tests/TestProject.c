@@ -283,3 +283,56 @@ void testInputCommandLS(void)
 	TEST_ASSERT_EQUAL_INT(compareInt, 0);
 
 }
+
+void testShiftTextRight(void)
+{
+	KeysToProcess = 0;
+	
+	uint8_t refPrintableArray[42] = {0x1C,0x32,0x21,0x23,0x24,0x2B,0x34,0x33,0x43,0x3B,0x42,0x4B,0x3A,0x31,0x44,0x4D,0x15,0x2D,0x1B,0x2C,0x3C,0x2A,0x1D,0x22,0x35,0x1A,0x45,0x16,0x1E,0x26,0x25,0x2E,0x36,0x3D,0x3E,0x46,0x0E,0x4E,0x55,0x5D,0x29};
+	uint8_t PrintableArray[42] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0','1','2','3','4','5','6','7','8','9','`','-','=','\\',' '};
+	//uint8_t StringToEnter[13] = {'i', 'p', 't', 'a', 'r', 'g', 'e', 't', 's', 'e', 't', ' '};
+	uint8_t StringToEnter[105] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+	
+	//clear the screen by pressing esc
+	testKeyboardAgitator(0x76); // esc
+	//change this to an assert instead of an if
+	TEST_ASSERT_EQUAL_INT(KeysToProcess, 1);
+	//process keystrokes
+	interpretKeypress();
+	
+	//this bit of code takes a string and enters in the appropriate scan codes that match the string
+	int j = 0;
+	int k = 0;
+	for(k = 0; k < 105; k++) //this 79 may be off
+	{
+		for( j = 0; j < 41; j++)
+		{
+			if(PrintableArray[j] == StringToEnter[k])
+			{
+				testKeyboardAgitator(refPrintableArray[j]); // put the scan code into the system
+				if(KeysToProcess == 1) // then process it
+				{
+					//process keystrokes
+					interpretKeypress();
+				}
+			}
+		}
+	}
+	
+	
+	//press F1
+	testKeyboardAgitator(0x05);
+	//change this to an assert instead of an if
+	if(KeysToProcess == 1)
+	{
+		//process keystrokes
+		interpretKeypress();
+	}
+	
+	
+	MakeBitmap((int *)VGA_VideoMemory, "shifttextright_success.bmp");
+	
+	int compareInt;
+	compareInt = comparefiles("shifttextright_success.bmp", "shifttextright_success_ref.bmp");
+	TEST_ASSERT_EQUAL_INT(compareInt, 0);
+}

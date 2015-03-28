@@ -645,6 +645,62 @@ void ShiftScreenRight()
     //}
 }
 
+//this will shift just the first line of text to the right
+void shiftTextRight(void)
+{
+    //600 lines
+    //25 ints per line
+    //move every ints into a buffer, then put them back in one int to the right
+    int buffer = 0;
+    int line = 0;
+    int i = 0;
+    uint8_t * index = VGA_VideoMemory;
+    for(line = 0; line < 8; line++)
+    {
+		
+        for(i = 100; i > 1; i--)
+        {
+            index[(100* line) + i] = index[(100* line) + i - 1];
+        }
+		
+		
+		//this code rotates each line left
+		/*
+		for( i = 0; i < 100; i++)
+		{
+			index[(100* line) + i] = index[(100* line) + i + 1];
+		}
+		*/
+		//index[(100*line)] = 0;
+        //index[(100*line) + 1] = 0;
+    }
+	
+	for(line = 0; line < 8; line++)
+	{
+		//index[(100*line)] = 0;
+        index[(100*line) + 1] = 0;
+	}
+
+
+    /*
+    for(line = -1; line < 8; line++)
+    {
+
+        for(i = 25; i > 0; i--)
+        {
+            buffer = 0;
+            buffer = VGA_VideoMemory[(line * 25) + i];
+            VGA_VideoMemory[(line * 25) + i + 1] = buffer;
+        }
+        VGA_VideoMemory[(line * 25)] = 0;
+
+    }
+    */
+    //for(i=0; i < 25; i++)
+    //{
+    //   VGA_VideoMemory[i] = 0;
+    //}
+}
 
 void printTestScreen(void)
 {
