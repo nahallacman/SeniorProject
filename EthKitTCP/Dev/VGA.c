@@ -646,23 +646,31 @@ void ShiftScreenRight()
 }
 
 //this will shift just the first line of text to the right
+//then it will wrap to the second line of text
+//finally, it will repeat for every possible text line (600 / 8 = 75 lines)
 void shiftTextRight(void)
 {
     //600 lines
     //25 ints per line
     //move every ints into a buffer, then put them back in one int to the right
     int buffer = 0;
+	char cbuffer = 0;
     int line = 0;
     int i = 0;
     uint8_t * index = VGA_VideoMemory;
-    for(line = 0; line < 8; line++)
+    for(line = 0; line < 16; line++)
     {
+		cbuffer = index[(100*line) + 98 + 1];
+		//index[(100*line + 700) + 100] = index[(100*line) + 98 + 1];
 		
-        for(i = 100; i > 1; i--)
+        
+		for(i = 99; i > -1; i--)
         {
             index[(100* line) + i] = index[(100* line) + i - 1];
         }
-		
+		index[(100*line + 700) + 100] = cbuffer;
+	
+		//index[(100*line) + 100] = index[(100*line) + 99];
 		
 		//this code rotates each line left
 		/*
@@ -674,13 +682,13 @@ void shiftTextRight(void)
 		//index[(100*line)] = 0;
         //index[(100*line) + 1] = 0;
     }
-	
+	/*
 	for(line = 0; line < 8; line++)
 	{
 		//index[(100*line)] = 0;
         index[(100*line) + 1] = 0;
 	}
-
+*/
 
     /*
     for(line = -1; line < 8; line++)
