@@ -724,6 +724,28 @@ void shiftTextRight(void)
     //}
 }
 
+//this function will shift text to the left and word wrap across lines.
+void shiftTextLeft(void)
+{
+    char cbuffer = 0;
+    int line = 0;
+    int i = 0;
+    uint8_t * index = VGA_VideoMemory;
+
+    for(line = 0; line < 16; line++)
+    {
+		
+	cbuffer = index[(100* line) + 100];
+        for(i = 0; i < 99; i++)
+        {
+            index[(100* line) + i] = index[(100* line) + i + 1];
+        }
+	index[(100* line) + 99 - 700] = cbuffer;
+	//index[(100* line) + 99 - 100] = 0xFF;
+    }
+
+}
+
 void printTestScreen(void)
 {
 	uint8_t a;

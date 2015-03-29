@@ -593,10 +593,14 @@ uint8_t translateKeypress(uint8_t translate)
 		case 0x76: // esc
                     temp = 0x02; // temp number for commands will be in range 0x01 - 0x19
 			break;
-                case 0x05: // F1
-                    temp = 0;
-                    shiftTextRight();
-                    break;
+		case 0x05: // F1
+			temp = 0;
+			shiftTextRight();
+			break;
+		case 0x06: // F2
+			temp = 0;
+			shiftTextLeft();
+			break;
 		//start keyboard line: `1234567890-=
 		case 0x0E: //`
 			switch(ShiftPressed)
