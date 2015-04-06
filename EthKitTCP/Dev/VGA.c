@@ -316,7 +316,9 @@ void writepixel(int x, int y)
 
 //uses 8 characters in a 8x8 grid for characters, puts that character at position starting with x, y
 //void writechar(uint8_t * character, int x, int y)
-void writechar(uint8_t * character)
+
+//to make this function work appropriately, alter the CursorLocation to where you want to print, then call writechar()
+extern void writechar(uint8_t * character)
 {
     int i = 0;
     //if(x < VGA_X_MAX && y < VGA_Y_MAX)
@@ -431,6 +433,11 @@ void resetPlaceCharLocation(void)
     LineLocationEnd = 0;
 }
 
+extern int setandgetCursorLocation(int newcursorLocation)
+{
+     CursorLocation = newcursorLocation;
+     return CursorLocation;
+}
 void ClearScreen(void)
 {
     //clears the screen

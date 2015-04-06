@@ -1254,10 +1254,12 @@ char * getIPTarget()
 }
 
 //this function compares the two text lines and edits the old text line to equal the new text line
+//to make it work appropriately, edit the newtextLine and call this function.
 void CompareTextLines(void)
 {
     int i = 0;
     int j = 0;
+    int tempcursor = 0;
     for(i = 0; i < TEXTLINELENGTH && textLine[i] == newtextLine[i]; i++)
     {
 
@@ -1272,9 +1274,31 @@ void CompareTextLines(void)
         //then i is now the first difference between two lines.
         //this solution is alright for now, it does change the entire line from the beginning of changes to the end of the line
         //but it should go from the beginning of the changes to the end of the changes
+
+        tempcursor = setandgetCursorLocation(i);
+
         for( j = i; j < TEXTLINELENGTH; j++)
         {
             textLine[j] = newtextLine[j];
+            //here this function should call a print for a space first, then print the characters in the line until the end of the line.
+
+            writechar(keyboard_lookup(' '));
+            writechar(keyboard_lookup(newtextLine[j])); // new text line or text line?
+
+            //should the characters be printed first or the cursorlocation increased first?
+            //does the cursor location really need to be increased?
+            if(tempcursor < 7499)
+            {
+                tempcursor++;
+            }
+            else
+            {
+                tempcursor = 0;
+            }
+            //this increment may be incorrect, it can be removed 
+            //LineLocationEnd++;
+            setandgetCursorLocation(tempcursor);
+
         }
     }
 
