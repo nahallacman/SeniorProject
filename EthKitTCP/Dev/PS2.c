@@ -596,9 +596,9 @@ uint8_t translateKeypress(uint8_t translate)
 		case 0x05: // F1
 			temp = 0;
                         //copy iptargetset command with default IP address to newtextLine
-                        for(i = 0; i < DefaultIpTargetLength + 1; i++)
+                        for(i = 0; i < DefaultIpTargetCommandLength + 1; i++)
                         {
-                            newtextLine[i] = defaultIPTarget[i];
+                            newtextLine[i] = defaultIPTargetCommand[i];
                         }
 			CompareTextLines();
 			break;
