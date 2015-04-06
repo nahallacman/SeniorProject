@@ -436,10 +436,10 @@ extern void clearchar()
         for(i = 0; i < 8; i++)
         {
             Bits = 0;
-            Bits = VGA_VideoMemory[Byte];
+           Bits = VGA_VideoMemory[Byte];
 
             //probably don't need to shift? not positive
-            //Bits = Bits << leftover;
+            Bits = Bits << leftover;
 
             //Bits = Bits << leftover2;
 
@@ -451,12 +451,12 @@ extern void clearchar()
 				//mask off the extra stuff that can creep in
 				if(leftover == 0x08)
 				{
-					//Bits = Bits & 0x00FF0000;
+				//	Bits = Bits & 0x00FF0000;
                                     Bits = Bits & 0xFF00FFFF;
 				}
 				else if(leftover == 0x10)
 				{
-					//Bits = Bits & 0x0000FF00;
+				//	Bits = Bits & 0x0000FF00;
                                     Bits = Bits & 0xFFFF00FF;
 				}
 				else if(leftover == 0x18)
