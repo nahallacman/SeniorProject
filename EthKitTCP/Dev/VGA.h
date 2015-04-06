@@ -48,6 +48,7 @@ void writepixel(int x, int y);
 
 //this is extern so it can be controlled from PS2 stuff, probably shouldn't be permenant
 extern void writechar(uint8_t * character);
+extern void clearchar();
 
 void resetPlaceCharLocation(void);
 extern void setCursorLocation(int newcursorLocation);

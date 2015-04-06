@@ -1287,7 +1287,7 @@ void CompareTextLines(void)
             textLine[j] = newtextLine[j];
             //here this function should call a print for a space first, then print the characters in the line until the end of the line.
 
-            writechar(keyboard_lookup(' '));
+            clearchar();
             writechar(keyboard_lookup(newtextLine[j])); // new text line or text line?
 
             //should the characters be printed first or the cursorlocation increased first?

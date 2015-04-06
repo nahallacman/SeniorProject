@@ -409,6 +409,98 @@ extern void writechar(uint8_t * character)
     //}
 }
 
+
+extern void clearchar()
+{
+    int i = 0;
+    //if(x < VGA_X_MAX && y < VGA_Y_MAX)
+    //{
+        int y_char = 0;
+        int x_char = 0;
+        y_char = (CursorLocation / 100);
+        x_char =  CursorLocation - (y_char * 100);
+        int x_offset = x_char * 8;
+        int y_offset = y_char * 8;
+
+
+
+        int Bits;
+        int Byte;
+
+        //int leftover = x % 32;
+        int leftover =  x_offset % 32;
+
+        //Byte = (y*25) + (x/32);
+        Byte = (y_offset*25) + (x_offset/32);
+
+        for(i = 0; i < 8; i++)
+        {
+            Bits = 0;
+            //Bits = character[i];
+
+            Bits = Bits << leftover;
+            //Bits = Bits << leftover2;
+
+			#ifdef __Microcontroller
+            //bitswapping to put the character in the correct place
+            //this implementation is for PIC32 only and is faster on PIC32 hardware
+				Bits = _bswapw(Bits);
+
+				//mask off the extra stuff that can creep in
+				if(leftover == 0x08)
+				{
+					Bits = Bits & 0x00FF0000;
+				}
+				else if(leftover == 0x10)
+				{
+					Bits = Bits & 0x0000FF00;
+				}
+				else if(leftover == 0x18)
+				{
+					Bits = Bits & 0x000000FF;
+				}
+				else
+				{
+					Bits = Bits & 0xFF000000;
+				}
+
+			#else
+				//this is important for both types of processors
+				//but on the PC it can be slow since time is not as important.
+				//Bits = _bswap32(Bits);
+				//	Bits = bswap_32(Bits);
+
+				//mask off the extra stuff that can creep in
+				if(leftover == 0x08)
+				{
+					Bits = Bits & 0x0000FF00;
+				}
+				else if(leftover == 0x10)
+				{
+					Bits = Bits & 0x00FF0000;
+				}
+				else if(leftover == 0x18)
+				{
+					Bits = Bits & 0xFF000000;
+				}
+				else
+				{
+					Bits = Bits & 0x000000FF;
+				}
+
+
+
+			#endif
+
+
+
+            //write the bits to the video memory buffer
+            VGA_VideoMemory[Byte] |= Bits;
+            Byte += 25; // go down one line
+        }
+    //}
+}
+
 extern void placeChar(uint8_t * character)
 {
     
