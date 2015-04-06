@@ -1252,3 +1252,30 @@ char * getIPTarget()
 {
     return IPTarget;
 }
+
+//this function compares the two text lines and edits the old text line to equal the new text line
+void CompareTextLines(void)
+{
+    int i = 0;
+    int j = 0;
+    for(i = 0; i < TEXTLINELENGTH && textLine[i] == newtextLine[i]; i++)
+    {
+
+    }
+    if(i == TEXTLINELENGTH)
+    {
+        //then there is no difference, we are done
+        return;
+    }
+    else
+    {
+        //then i is now the first difference between two lines.
+        //this solution is alright for now, it does change the entire line from the beginning of changes to the end of the line
+        //but it should go from the beginning of the changes to the end of the changes
+        for( j = i; j < TEXTLINELENGTH; j++)
+        {
+            textLine[j] = newtextLine[j];
+        }
+    }
+
+}

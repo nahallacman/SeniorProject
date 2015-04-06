@@ -74,8 +74,14 @@ int ps2BufferNumItems;
 //int ShiftPressed = 0;
 int ShiftPressed;
 
+//defining the line length for the printed text line and the newtextLine
+#define TEXTLINELENGTH 1024
 //buffer for line, should probably be moved later
-uint8_t textLine[1024];
+uint8_t textLine[TEXTLINELENGTH];
+uint8_t newtextLine[TEXTLINELENGTH];
+
+void CompareTextLines(void);
+
 //int textlineindex = 0;
 int textlineindex;
 
