@@ -287,8 +287,8 @@ static const uint8_t commandLS[] = "ls";
 static const uint8_t commandCD[] = "cd";
 #ifdef __Microcontroller
 char IPTarget[16] = "192.168.11.56";
-#define DefaultIpTargetLength 14
-static char defaultIPTarget[DefaultIpTargetLength] = "192.168.11.56";
+#define DefaultIpTargetCommandLength 26
+static char defaultIPTargetCommand[DefaultIpTargetCommandLength] = "iptargetset 192.168.11.56";
 #else
 char IPTarget[16];
 #endif
