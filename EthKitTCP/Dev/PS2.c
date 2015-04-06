@@ -330,7 +330,7 @@ void InputCapture2ISR(void)
 
 void interpretKeypress(void)
 {
-    
+    int i = 0;
     uint8_t temp = 0;
     uint8_t temp2 = 0;
 
@@ -595,7 +595,12 @@ uint8_t translateKeypress(uint8_t translate)
 			break;
 		case 0x05: // F1
 			temp = 0;
-			shiftTextRight();
+                        //copy iptargetset command with default IP address to newtextLine
+                        for(i = 0; i < DefaultIpTargetLength + 1; i++)
+                        {
+                            newtextLine[i] = defaultIPTarget[i];
+                        }
+			CompareTextLines();
 			break;
 		case 0x06: // F2
 			temp = 0;
