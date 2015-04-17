@@ -436,73 +436,11 @@ extern void clearchar()
         for(i = 0; i < 8; i++)
         {
             Bits = 0;
-           Bits = VGA_VideoMemory[Byte];
-
-            //probably don't need to shift? not positive
-            Bits = Bits << leftover;
-
-            //Bits = Bits << leftover2;
-
-			#ifdef __Microcontroller
-            //bitswapping to put the character in the correct place
-            //this implementation is for PIC32 only and is faster on PIC32 hardware
-				Bits = _bswapw(Bits);
-
-				//mask off the extra stuff that can creep in
-				if(leftover == 0x08)
-				{
-				//	Bits = Bits & 0x00FF0000;
-                                    Bits = Bits & 0xFF00FFFF;
-				}
-				else if(leftover == 0x10)
-				{
-				//	Bits = Bits & 0x0000FF00;
-                                    Bits = Bits & 0xFFFF00FF;
-				}
-				else if(leftover == 0x18)
-				{
-					//Bits = Bits & 0x000000FF;
-                                        Bits = Bits & 0xFFFFFF00;
-				}
-				else
-				{
-					//Bits = Bits & 0xFF000000;
-                                        Bits = Bits & 0x00FFFFFF;
-				}
-
-			#else
-				//this is important for both types of processors
-				//but on the PC it can be slow since time is not as important.
-				//Bits = _bswap32(Bits);
-				//	Bits = bswap_32(Bits);
-
-				//mask off the extra stuff that can creep in
-				if(leftover == 0x08)
-				{
-					Bits = Bits & 0x0000FF00;
-				}
-				else if(leftover == 0x10)
-				{
-					Bits = Bits & 0x00FF0000;
-				}
-				else if(leftover == 0x18)
-				{
-					Bits = Bits & 0xFF000000;
-				}
-				else
-				{
-					Bits = Bits & 0x000000FF;
-				}
-
-
-
-			#endif
-
-
+           //Bits = VGA_VideoMemory[Byte];
 
             //write the bits to the video memory buffer
             VGA_VideoMemory[Byte] = Bits;
-            Byte += 25; // go down one line
+            Byte += 25; // go down one line4
         }
     //}
 }
