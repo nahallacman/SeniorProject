@@ -1325,11 +1325,14 @@ void CompareTextLines(void)
 void press_backspace(void)
 {
     int i = 0;
-    textlineindex--;
-    //copy from cursor location to end of line, shifting by one to compensate for the erased character
-    for(i = textlineindex; i < TEXTLINELENGTH - 1; i++ )
+    if(textlineindex < 0)
     {
+        textlineindex--;
+        //copy from cursor location to end of line, shifting by one to compensate for the erased character
+        for(i = textlineindex; i < TEXTLINELENGTH - 1; i++ )
+        {
         newtextLine[i] = textLine[i + 1];
+        }
     }
 
 }
