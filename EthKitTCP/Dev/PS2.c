@@ -1280,6 +1280,8 @@ void CompareTextLines(void)
         //this solution is alright for now, it does change the entire line from the beginning of changes to the end of the line
         //but it should go from the beginning of the changes to the end of the changes
 
+        clearchar(i, TEXTLINELENGTH); // maybe i-1?
+
         tempcursor = setandgetCursorLocation(i);
 
         for( j = i - 1; j < TEXTLINELENGTH; j++)
@@ -1287,7 +1289,7 @@ void CompareTextLines(void)
             textLine[j] = newtextLine[j];
             //here this function should call a print for a space first, then print the characters in the line until the end of the line.
 
-            clearchar();
+            
             writechar(keyboard_lookup(newtextLine[j])); // new text line or text line?
 
             //should the characters be printed first or the cursorlocation increased first?

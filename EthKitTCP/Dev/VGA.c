@@ -410,37 +410,48 @@ extern void writechar(uint8_t * character)
 }
 
 
-extern void clearchar()
+extern void clearchar(int start, int end)
 {
     int i = 0;
+    int j = 0;
     //if(x < VGA_X_MAX && y < VGA_Y_MAX)
     //{
         int y_char = 0;
         int x_char = 0;
-        y_char = (CursorLocation / 100);
-        x_char =  CursorLocation - (y_char * 100);
+
         int x_offset = x_char * 8;
         int y_offset = y_char * 8;
-
-
 
         int Bits;
         int Byte;
 
-        //int leftover = x % 32;
-        int leftover =  x_offset % 32;
-
-        //Byte = (y*25) + (x/32);
-        Byte = (y_offset*25) + (x_offset/32);
-
-        for(i = 0; i < 8; i++)
+        for(j = start; j < end; j++)
         {
-            Bits = 0;
-           //Bits = VGA_VideoMemory[Byte];
+            y_char = (j / 100);
+            x_char =  j - (y_char * 100);
+            x_offset = x_char * 8;
+            y_offset = y_char * 8;
 
-            //write the bits to the video memory buffer
-            VGA_VideoMemory[Byte] = Bits;
-            Byte += 25; // go down one line4
+
+
+
+            //int leftover = x % 32;
+            //int leftover =  x_offset % 32;
+
+            //Byte = (y*25) + (x/32);
+            Byte = (y_offset*25) + (x_offset/32);
+
+
+
+            for(i = 0; i < 8; i++)
+            {
+                Bits = 0;
+               //Bits = VGA_VideoMemory[Byte];
+
+                //write the bits to the video memory buffer
+                VGA_VideoMemory[Byte] = Bits;
+                Byte += 25; // go down one line4
+            }
         }
     //}
 }
