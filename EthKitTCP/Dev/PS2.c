@@ -425,6 +425,11 @@ void interpretKeypress(void)
             {
                 ShiftPressed = !ShiftPressed;
             }
+            else if(temp2 == 0x04) // backspace pressed
+            {
+
+                press_backspace();
+            }
             else if(temp2 != 0)  //if there is no special key pressed
             {   //then add it to the textLine buffer and increase the index
                 textLine[textlineindex] = temp2;
@@ -487,6 +492,10 @@ uint8_t translateKeypress(uint8_t translate)
 		case 0x5A: // enter
 			temp = 0x01;
 			break;
+                //start special key: backspace
+                case 0x66: // backspace
+                    temp = 0x04;
+                    break;
 		//start special keys: page up and page down
 		case 0x7D: // page up
 		switch(ShiftPressed)
@@ -1307,6 +1316,19 @@ void CompareTextLines(void)
             setandgetCursorLocation(tempcursor);
 
         }
+    }
+
+}
+
+//take out a character at the cursor location
+//shift all the characters from there to the end of the text line down
+void press_backspace(void)
+{
+    int i = 0;
+    //copy from cursor location to end of line, shifting by one to compensate for the erased character
+    for(i = textlineindex; i < TEXTLINELENGTH - 1; i++ )
+    {
+        newtextLine[i] = textLine[i + 1];
     }
 
 }

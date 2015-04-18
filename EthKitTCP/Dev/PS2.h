@@ -276,6 +276,11 @@ extern void BlinkCursor(void);
 extern void ClearScreen(void);
 extern void resetPlaceCharLocation(void);
 
+
+
+void press_backspace(void);
+
+
 //test code that is excluded when running on the pic32 itself
 #ifndef __Microcontroller
 void testKeyboardAgitator(uint8_t scanCode);
