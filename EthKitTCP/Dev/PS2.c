@@ -1291,9 +1291,9 @@ void CompareTextLines(void)
 
         clearchar(i, TEXTLINELENGTH); // maybe i-1?
 
-        tempcursor = setandgetCursorLocation(i);
+        tempcursor = setandgetCursorLocation(i - (i%4));
 
-        for( j = i - 1; j < TEXTLINELENGTH; j++)
+        for( j = i - (i % 4) - 1; j < TEXTLINELENGTH; j++)
         {
             textLine[j] = newtextLine[j];
             //here this function should call a print for a space first, then print the characters in the line until the end of the line.
