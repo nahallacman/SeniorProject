@@ -1255,6 +1255,8 @@ void CompareTextLines(void)
             
             writechar(keyboard_lookup(newtextLine[j])); // new text line or text line?
 
+            //MoveCursorRight();
+            
             //should the characters be printed first or the cursorlocation increased first?
             //does the cursor location really need to be increased?
             if(tempcursor < 7499)
@@ -1268,8 +1270,10 @@ void CompareTextLines(void)
             //this increment may be incorrect, it can be removed 
             //LineLocationEnd++;
             setandgetCursorLocation(tempcursor);
-
+            
         }
+        //this is a maybe, attempt to fix the delete issue
+        setandgetCursorLocation(tempcursor-1);
     }
 
 }
