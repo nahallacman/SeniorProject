@@ -1,0 +1,26 @@
+var struct_t_c_b =
+[
+    [ "bFINSent", "struct_t_c_b.html#ae7e84a3fa64de6e94ad093b762400e10", null ],
+    [ "bRemoteHostIsROM", "struct_t_c_b.html#a85e50d5129c9eaec6e4729cb5aacf312", null ],
+    [ "bRXNoneACKed1", "struct_t_c_b.html#acd4766b3fc8c443d8aceb1920fc58677", null ],
+    [ "bRXNoneACKed2", "struct_t_c_b.html#a22ffb6306d775b5180f9d9691240df08", null ],
+    [ "bSYNSent", "struct_t_c_b.html#a5d60ed0da9975f201bdb5832564f24a2", null ],
+    [ "dwRemoteHost", "struct_t_c_b.html#a3f09cd8c9167b802029195c759770966", null ],
+    [ "filler", "struct_t_c_b.html#a3cc9af5814583d98e4724f5dfb86c5b8", null ],
+    [ "flags", "struct_t_c_b.html#adc44e41369b7d7bebc66a88b5a289e72", null ],
+    [ "localPort", "struct_t_c_b.html#aa71085d8339f25c6ebce50737f9e58fb", null ],
+    [ "localSSLPort", "struct_t_c_b.html#a3bf31b0f800d38012b3d40e51af0ed80", null ],
+    [ "MySEQ", "struct_t_c_b.html#ab1e41ee8fe38bfb894ab8035087a3aeb", null ],
+    [ "niRemoteMACIP", "struct_t_c_b.html#a1bf5ec3f0c3c0241d01cc1b5e7f094cd", null ],
+    [ "remote", "struct_t_c_b.html#afadd907b992146d3bcfb2f95cc670731", null ],
+    [ "remotePort", "struct_t_c_b.html#aa316e3d5bcdbc999280ce3bb80ef116e", null ],
+    [ "RemoteSEQ", "struct_t_c_b.html#ad819775df364f9ddf85d4568ffe1ed18", null ],
+    [ "remoteWindow", "struct_t_c_b.html#a856e07e4c4285f8a0f28518aed9fc2bd", null ],
+    [ "retryCount", "struct_t_c_b.html#a122f749211c26b45afbac25b4a278b56", null ],
+    [ "retryInterval", "struct_t_c_b.html#a807f78c2939992452223356ae72340cf", null ],
+    [ "sHoleSize", "struct_t_c_b.html#a343884e48d9a59f81266a9e5cd1cb0b2", null ],
+    [ "txUnackedTail", "struct_t_c_b.html#a6a6329eb22236074b0f6b501ef3fdedf", null ],
+    [ "vSocketPurpose", "struct_t_c_b.html#a2c590b42dac0ddfc5ec2e193261815c5", null ],
+    [ "wFutureDataSize", "struct_t_c_b.html#a48cb8cf682effdf9221fef77ae582298", null ],
+    [ "wRemoteMSS", "struct_t_c_b.html#a3a4e74a03e65f7f665046aaac3127228", null ]
+];

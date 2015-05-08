@@ -1,0 +1,166 @@
+\hypertarget{_resource_requirements_rrCompiler}{}\section{Required Compiler}\label{_resource_requirements_rrCompiler}
+\begin{DoxyItemize}
+\item {\bfseries H\+I-\/\+T\+E\+C\+H C Compiler for P\+I\+C10/12/16 M\+C\+Us v9.\+81 or later}~\newline
+ If a non-\/\+P\+R\+O license is used to compile the framework, the maximum number of supported sensors will decrease. Noise testing was performed using the P\+R\+O license.~\newline
+ Using a third-\/party compiler may result in unknown behavior due to the heavy use of compile-\/time code formatting.~\newline
+\end{DoxyItemize}
+\hypertarget{_resource_requirements_rrModules}{}\section{Module Requirements}\label{_resource_requirements_rrModules}
+\begin{DoxyItemize}
+\item {\bfseries 8-\/bit Hardware Timer Module for Interrupt}~\newline
+ This module is used to schedule regular A\+D\+C scans on the sensors. 8-\/bit timers normally interrupt after 256 counts; however, the m\+Touch framework pre-\/loads the timer\textquotesingle{}s register with a pseudo-\/random seed value to slightly jitter the sampling rate. This means that the average number of counts before it interrupts is 224.~\newline
+ You control the timer\textquotesingle{}s prescaler and period registers.~\newline
+ N\+O\+T\+E\+: No timer is required if \#\+M\+T\+O\+U\+C\+H\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E is defined as M\+T\+O\+U\+C\+H\+\_\+\+C\+A\+L\+L\+E\+D\+\_\+\+F\+R\+O\+M\+\_\+\+M\+A\+I\+N\+L\+O\+O\+P.\end{DoxyItemize}
+\begin{DoxyItemize}
+\item {\bfseries Analog/\+Digital Converter}~\newline
+ The A\+D\+C is the core module used by the m\+Touch framework to acquire a sensor reading. If you wish to perform an A\+D\+C reading in between m\+Touch scans you will need to set the \#\+M\+T\+O\+U\+C\+H\+\_\+\+A\+D\+C\+\_\+\+C\+O\+N\+T\+R\+O\+L configuration option to M\+T\+O\+U\+C\+H\+\_\+\+R\+E\+L\+E\+A\+S\+E\+S\+\_\+\+A\+D\+C\+\_\+\+A\+F\+T\+E\+R\+\_\+\+S\+C\+A\+N. The A\+D\+C is initialized for the framework by the \hyperlink{m_touch_8c_ab73968cbb19d4ae25a65698c15906b65}{m\+Touch\+\_\+\+Init()} function.~\newline
+\end{DoxyItemize}
+\hypertarget{_resource_requirements_rrMemory}{}\section{Memory/\+Processing Requirements}\label{_resource_requirements_rrMemory}
+Roughly, the amount of time that will be spent in the m\+Touch I\+S\+R is based on the T\+M\+R0 prescaler value.
+
+\begin{center} \begin{TabularC}{2}
+\hline
+{\bfseries T\+M\+R0 Prescaler}&{\bfseries m\+Touch I\+S\+R Processing Duty Cycle} \\\cline{1-2}
+\PBS\centering 1&\PBS\centering {\itshape Invalid} \\\cline{1-2}
+\PBS\centering 2&\PBS\centering 40\% \\\cline{1-2}
+\PBS\centering 4&\PBS\centering 20\% \\\cline{1-2}
+\PBS\centering 8&\PBS\centering 10\% \\\cline{1-2}
+\end{TabularC}
+\end{center} 
+
+The program memory and R\+A\+M requirements are determined mainly by the number of sensors. \begin{center} \begin{TabularC}{2}
+\hline
+\begin{center}{\bfseries Code Size / Program Memory (words)}\end{center}  &\begin{center}{\bfseries Data Space / R\+A\+M (bytes)}\end{center}   \\\cline{1-2}
+\begin{TabularNC}{7}
+\hline
+~&\multicolumn{2}{p{(\linewidth-\tabcolsep*7-\arrayrulewidth*4)*2/7}|}{\PBS\centering {\bfseries Standard Midrange}}&\multicolumn{2}{p{(\linewidth-\tabcolsep*7-\arrayrulewidth*4)*2/7}|}{\PBS\centering {\bfseries Enhanced Midrange}}&\multicolumn{2}{p{(\linewidth-\tabcolsep*7-\arrayrulewidth*4)*2/7}|}{\PBS\centering {\bfseries Enhanced Midrange~\newline
+w/\+Hardware C\+V\+D} }\\\cline{1-7}
+\# Sensors&\PBS\centering {\bfseries P\+R\+O}&\PBS\centering {\bfseries L\+I\+T\+E}&\PBS\centering {\bfseries P\+R\+O}&\PBS\centering {\bfseries L\+I\+T\+E}&\PBS\centering {\bfseries P\+R\+O}&\PBS\centering {\bfseries L\+I\+T\+E} \\\cline{1-7}
+\PBS\centering 1&\PBS\centering 653&\PBS\centering 885&\PBS\centering 648&\PBS\centering 884&\PBS\centering 587&\PBS\centering 813 \\\cline{1-7}
+\PBS\centering 2&\PBS\centering 961&\PBS\centering 1367&\PBS\centering 937&\PBS\centering 1387&\PBS\centering 814&\PBS\centering 1291 \\\cline{1-7}
+\PBS\centering 3&\PBS\centering 1025&\PBS\centering 1432&\PBS\centering 1032&\PBS\centering 1483&\PBS\centering 819&\PBS\centering 1297 \\\cline{1-7}
+\PBS\centering 4&\PBS\centering 1089&\PBS\centering 1496&\PBS\centering 1112&\PBS\centering 1563&\PBS\centering 824&\PBS\centering 1302 \\\cline{1-7}
+\PBS\centering 5&\PBS\centering 1153&\PBS\centering 1563&\PBS\centering 1192&\PBS\centering 1643&\PBS\centering 829&\PBS\centering 1307 \\\cline{1-7}
+\PBS\centering 6&\PBS\centering 1221&\PBS\centering 1628&\PBS\centering 1272&\PBS\centering 1731&\PBS\centering 842&\PBS\centering 1320 \\\cline{1-7}
+\PBS\centering {\bfseries +1}&\PBS\centering {\bfseries +68}&\PBS\centering {\bfseries +65}&\PBS\centering {\bfseries +80}&\PBS\centering {\bfseries +88}&\PBS\centering {\bfseries +5}&\PBS\centering {\bfseries +5} \\\cline{1-7}
+Most Pressed&\PBS\centering +250&\PBS\centering +350&\PBS\centering +240&\PBS\centering +340&\PBS\centering +240&\PBS\centering +340 \\\cline{1-7}
+Matrix&\PBS\centering +450&\PBS\centering +730&\PBS\centering +430&\PBS\centering +640&\PBS\centering +430&\PBS\centering +640 \\\cline{1-7}
+Slider&\PBS\centering +480&\PBS\centering +750&\PBS\centering +460&\PBS\centering +680&\PBS\centering +460&\PBS\centering +680 \\\cline{1-7}
+Proximity&\PBS\centering +450&\PBS\centering +1100&\PBS\centering +420&\PBS\centering +740&\PBS\centering +420&\PBS\centering +740 \\\cline{1-7}
+\end{TabularNC}
+&\begin{TabularNC}{5}
+\hline
+~&\multicolumn{2}{p{(\linewidth-\tabcolsep*5-\arrayrulewidth*3)*2/5}|}{\PBS\centering {\bfseries Standard Midrange}}&\multicolumn{2}{p{(\linewidth-\tabcolsep*5-\arrayrulewidth*3)*2/5}|}{\PBS\centering {\bfseries Enhanced Midrange} }\\\cline{1-5}
+\# Sensors&\PBS\centering {\bfseries P\+R\+O}&\PBS\centering {\bfseries L\+I\+T\+E}&\PBS\centering {\bfseries P\+R\+O}&\PBS\centering {\bfseries L\+I\+T\+E} \\\cline{1-5}
+\PBS\centering 1&\PBS\centering 44&\PBS\centering 49&\PBS\centering 36&\PBS\centering 43 \\\cline{1-5}
+\PBS\centering 2&\PBS\centering 57&\PBS\centering 70&\PBS\centering 50&\PBS\centering 60 \\\cline{1-5}
+\PBS\centering 3&\PBS\centering 68&\PBS\centering 81&\PBS\centering 61&\PBS\centering 71 \\\cline{1-5}
+\PBS\centering 4&\PBS\centering 79&\PBS\centering 92&\PBS\centering 72&\PBS\centering 82 \\\cline{1-5}
+\PBS\centering 5&\PBS\centering 90&\PBS\centering 103&\PBS\centering 83&\PBS\centering 93 \\\cline{1-5}
+\PBS\centering 6&\PBS\centering 101&\PBS\centering 114&\PBS\centering 94&\PBS\centering 104 \\\cline{1-5}
+\PBS\centering {\bfseries +1}&\PBS\centering {\bfseries +11}&\PBS\centering {\bfseries +11}&\PBS\centering {\bfseries +11}&\PBS\centering {\bfseries +11} \\\cline{1-5}
+Most Pressed&\PBS\centering +17&\PBS\centering +15&\PBS\centering +10&\PBS\centering +11 \\\cline{1-5}
+Matrix&\PBS\centering +31&\PBS\centering +30&\PBS\centering +24&\PBS\centering +25 \\\cline{1-5}
+Slider&\PBS\centering +29&\PBS\centering +24&\PBS\centering +24&\PBS\centering +22 \\\cline{1-5}
+Proximity&\PBS\centering +28&\PBS\centering +33&\PBS\centering +26&\PBS\centering +27 \\\cline{1-5}
+\end{TabularNC}
+\\\cline{1-5}
+\end{TabularC}
+\end{center} \hypertarget{_resource_requirements_PICSupport}{}\section{Supported P\+I\+C® Microcontrollers}\label{_resource_requirements_PICSupport}
+\begin{DoxyItemize}
+\item {\bfseries P\+I\+C12/16\+F61x Family} 
+\begin{DoxyItemize}
+\item P\+I\+C12\+F/\+H\+V615 \+:\+: 2 sensor limit (Lite\+: 1 sensor limit) 
+\item P\+I\+C12\+F617 \+:\+: All 4 sensors supported 
+\item P\+I\+C16\+F/\+H\+V616 \+:\+: All 8 sensors supported 
+\end{DoxyItemize}\item {\bfseries P\+I\+C12/16\+F68x Family} 
+\begin{DoxyItemize}
+\item P\+I\+C12\+F683 \+:\+: All 4 sensors supported 
+\item P\+I\+C16\+F677 \+:\+: 8 sensor limit 
+\item P\+I\+C16\+F684 \+:\+: All 8 sensors supported 
+\item P\+I\+C16\+F685 \+:\+: All 12 sensors supported 
+\item P\+I\+C16\+F687 \+:\+: 8 sensor limit 
+\item P\+I\+C16\+F688 \+:\+: All 8 sensors supported 
+\item P\+I\+C16\+F689 \+:\+: All 12 sensors supported 
+\item P\+I\+C16\+F690 \+:\+: All 12 sensors supported 
+\end{DoxyItemize}\item {\bfseries P\+I\+C16\+F72x Family} 
+\begin{DoxyItemize}
+\item P\+I\+C16\+F/\+L\+F722 \+:\+: 7 sensor limit 
+\item P\+I\+C16\+F/\+L\+F722\+A \+:\+: 8 sensor limit 
+\item P\+I\+C16\+F/\+L\+F723 \+:\+: All 11 sensors supported 
+\item P\+I\+C16\+F/\+L\+F723\+A \+:\+: All 11 sensors supported 
+\item P\+I\+C16\+F/\+L\+F724 \+:\+: All 11 sensors supported 
+\item P\+I\+C16\+F/\+L\+F726 \+:\+: All 11 sensors supported 
+\item P\+I\+C16\+F/\+L\+F727 \+:\+: All 11 sensors supported 
+\end{DoxyItemize}\item {\bfseries P\+I\+C16\+F78x Family} 
+\begin{DoxyItemize}
+\item P\+I\+C16\+F/\+H\+V785 \+:\+: 9 sensor limit 
+\end{DoxyItemize}\item {\bfseries P\+I\+C16\+F150x Family} 
+\begin{DoxyItemize}
+\item P\+I\+C12(\+L)F1501 \+:\+: 2 sensor limit (Lite\+: 1 sensor limit) 
+\item P\+I\+C16(\+L)F1503 \+:\+: All 8 sensors supported 
+\item P\+I\+C16\+F/\+L\+F1507 \+:\+: All 12 sensors supported 
+\item P\+I\+C16\+F/\+L\+F1509 \+:\+: All 12 sensors supported 
+\end{DoxyItemize}\item {\bfseries P\+I\+C16\+F151x Family} 
+\begin{DoxyItemize}
+\item P\+I\+C16\+F/\+L\+F1512 (w/\+H\+C\+V\+D) \+:\+: 7 sensor limit 
+\item P\+I\+C16\+F/\+L\+F1513 (w/\+H\+C\+V\+D) \+:\+: 15 sensor limit 
+\item P\+I\+C16\+F/\+L\+F1516 \+:\+: All 17 sensors supported 
+\item P\+I\+C16\+F/\+L\+F1518 \+:\+: All 17 sensors supported 
+\item P\+I\+C16\+F/\+L\+F1517 \+:\+: All 28 sensors supported 
+\item P\+I\+C16\+F/\+L\+F1519 \+:\+: All 28 sensors supported 
+\end{DoxyItemize}\item {\bfseries P\+I\+C16\+F152x Family} 
+\begin{DoxyItemize}
+\item P\+I\+C16\+F/\+L\+F1526 \+:\+: All 30 sensors supported 
+\item P\+I\+C16\+F/\+L\+F1527 \+:\+: All 30 sensors supported 
+\item {\itshape This family does not support single-\/sensor applications.} 
+\end{DoxyItemize}\item {\bfseries P\+I\+C12\+L\+F155x Family} 
+\begin{DoxyItemize}
+\item P\+I\+C12\+L\+F1552 (w/\+H\+C\+V\+D) \+:\+: All 4 sensors supported 
+\end{DoxyItemize}\item {\bfseries P\+I\+C16\+F182x Family} 
+\begin{DoxyItemize}
+\item P\+I\+C12\+F/\+L\+F1822 \+:\+: All 4 sensors supported 
+\item P\+I\+C16\+F/\+L\+F1823 \+:\+: All 8 sensors supported 
+\item P\+I\+C16\+F/\+L\+F1824 \+:\+: All 8 sensors supported 
+\item P\+I\+C16\+F/\+L\+F1825 \+:\+: All 8 sensors supported 
+\item P\+I\+C16\+F/\+L\+F1826 \+:\+: All 12 sensors supported 
+\item P\+I\+C16\+F/\+L\+F1827 \+:\+: All 12 sensors supported 
+\item P\+I\+C16\+F/\+L\+F1828 \+:\+: All 12 sensors supported 
+\item P\+I\+C16\+F/\+L\+F1829 \+:\+: All 12 sensors supported 
+\end{DoxyItemize}\item {\bfseries P\+I\+C16\+F184x Family} 
+\begin{DoxyItemize}
+\item P\+I\+C12\+F/\+L\+F1840 \+:\+: All 4 sensors supported 
+\item P\+I\+C16\+F/\+L\+F1847 \+:\+: All 12 sensors supported 
+\end{DoxyItemize}\item {\bfseries P\+I\+C16\+L\+F190x Family} 
+\begin{DoxyItemize}
+\item P\+I\+C16\+L\+F1902 \+:\+: 8 sensor limit 
+\item P\+I\+C16\+L\+F1903 \+:\+: All 11 sensors supported 
+\item P\+I\+C16\+L\+F1906 \+:\+: All 11 sensors supported 
+\item P\+I\+C16\+L\+F1904 \+:\+: All 14 sensors supported 
+\item P\+I\+C16\+L\+F1907 \+:\+: All 14 sensors supported 
+\end{DoxyItemize}\item {\bfseries P\+I\+C16\+F193x Family} 
+\begin{DoxyItemize}
+\item P\+I\+C16\+F/\+L\+F1933 \+:\+: All 11 sensors supported 
+\item P\+I\+C16\+F/\+L\+F1936 \+:\+: All 11 sensors supported 
+\item P\+I\+C16\+F/\+L\+F1938 \+:\+: All 11 sensors supported 
+\item P\+I\+C16\+F/\+L\+F1934 \+:\+: All 14 sensors supported 
+\item P\+I\+C16\+F/\+L\+F1937 \+:\+: All 14 sensors supported 
+\item P\+I\+C16\+F/\+L\+F1939 \+:\+: All 14 sensors supported 
+\end{DoxyItemize}\item {\bfseries P\+I\+C16\+F194x Family} 
+\begin{DoxyItemize}
+\item P\+I\+C16\+F/\+L\+F1946 \+:\+: All 17 sensors supported 
+\item P\+I\+C16\+F/\+L\+F1947 \+:\+: All 17 sensors supported 
+\end{DoxyItemize}\item {\bfseries P\+I\+C18\+Fxx\+J50 Family} 
+\begin{DoxyItemize}
+\item P\+I\+C18\+F/\+L\+F24\+J50 \+:\+: All 10 sensors supported 
+\item P\+I\+C18\+F/\+L\+F25\+J50 \+:\+: All 10 sensors supported 
+\item P\+I\+C18\+F/\+L\+F26\+J50 \+:\+: All 10 sensors supported 
+\item P\+I\+C18\+F/\+L\+F44\+J50 \+:\+: All 13 sensors supported 
+\item P\+I\+C18\+F/\+L\+F45\+J50 \+:\+: All 13 sensors supported 
+\item P\+I\+C18\+F/\+L\+F46\+J50 \+:\+: All 13 sensors supported 
+\item P\+I\+C18\+F65\+J50 \+:\+: All 8 sensors supported 
+\item P\+I\+C18\+F66\+J50 \+:\+: All 8 sensors supported 
+\item P\+I\+C18\+F67\+J50 \+:\+: All 8 sensors supported 
+\item P\+I\+C18\+F85\+J50 \+:\+: All 12 sensors supported 
+\item P\+I\+C18\+F86\+J50 \+:\+: All 12 sensors supported 
+\item P\+I\+C18\+F87\+J50 \+:\+: All 12 sensors supported 
+\end{DoxyItemize}\end{DoxyItemize}

@@ -1,0 +1,167 @@
+\hypertarget{struct__m_d_n_s_resource_record}{}\section{\+\_\+m\+D\+N\+S\+Resource\+Record Struct Reference}
+\label{struct__m_d_n_s_resource_record}\index{\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}}
+
+
+Collaboration diagram for \+\_\+m\+D\+N\+S\+Resource\+Record\+:
+% FIG 0
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$ \hyperlink{struct__m_d_n_s_resource_record_a8be36ea024fc971417695fc83b58febb}{name}
+\item 
+\hyperlink{union_w_o_r_d___v_a_l}{W\+O\+R\+D\+\_\+\+V\+A\+L} \hyperlink{struct__m_d_n_s_resource_record_a9ae55e4e4d9170990e695b3165dfaf75}{type}
+\item 
+\hyperlink{union_w_o_r_d___v_a_l}{W\+O\+R\+D\+\_\+\+V\+A\+L} \hyperlink{struct__m_d_n_s_resource_record_a6c250cf4ef59c5f2a8b194d6204ca214}{class}
+\item 
+\hyperlink{union_d_w_o_r_d___v_a_l}{D\+W\+O\+R\+D\+\_\+\+V\+A\+L} \hyperlink{struct__m_d_n_s_resource_record_aa870a15d42c33e1020feae042f862068}{ttl}
+\item 
+\hyperlink{union_w_o_r_d___v_a_l}{W\+O\+R\+D\+\_\+\+V\+A\+L} \hyperlink{struct__m_d_n_s_resource_record_a6a0c8277d98664a2fb6307181c99b51f}{rdlength}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>IP\_ADDR \hyperlink{struct__m_d_n_s_resource_record_a9d9dd79513ec44cebf281f569e85eadc}{ip}\\
+\>struct \{\\
+\>\>\hyperlink{union_w_o_r_d___v_a_l}{WORD\_VAL} \hyperlink{struct__m_d_n_s_resource_record_ae7ba91b5092176acf23540d2526a36c5}{priority}\\
+\>\>\hyperlink{union_w_o_r_d___v_a_l}{WORD\_VAL} \hyperlink{struct__m_d_n_s_resource_record_a57cc215796b6e6ba53c773e1dc2f1932}{weight}\\
+\>\>\hyperlink{union_w_o_r_d___v_a_l}{WORD\_VAL} \hyperlink{struct__m_d_n_s_resource_record_a89033bfadfdf14dbf01960a1600fb682}{port}\\
+\>\} \hyperlink{struct__m_d_n_s_resource_record_ad81a3ff0d335297b2ed41298a66d2c9e}{srv}\\
+\}; \\
+
+\end{tabbing}\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$ \hyperlink{struct__m_d_n_s_resource_record_aac1fbe6e2e3029adacb4d570c7f6900c}{rdata}
+\item 
+struct \hyperlink{struct__m_d_n_s_process_ctx__common}{\+\_\+m\+D\+N\+S\+Process\+Ctx\+\_\+common} $\ast$ \hyperlink{struct__m_d_n_s_resource_record_a17a6eba9a7fe3cd1c3312e0d3bacc735}{p\+Owner\+Ctx}
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{struct__m_d_n_s_resource_record_a7c54cb0f9753b90be7ae144001428829}{valid}
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{struct__m_d_n_s_resource_record_a0c56094453067069894f36b474fe6937}{b\+Name\+And\+Type\+Matched}
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{struct__m_d_n_s_resource_record_a20ac22a1e4fb67a4ae0b833549256a22}{b\+Response\+Requested}
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{struct__m_d_n_s_resource_record_a6c797734e12d3891e823bc12596f9e77}{b\+Response\+Suppressed}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 178 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{struct__m_d_n_s_resource_record_a74f4f9be5c0d908aa0281456e7b92dda}{}\subsubsection[{"@508}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \} }\label{struct__m_d_n_s_resource_record_a74f4f9be5c0d908aa0281456e7b92dda}
+\hypertarget{struct__m_d_n_s_resource_record_a0c56094453067069894f36b474fe6937}{}\index{\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}!b\+Name\+And\+Type\+Matched@{b\+Name\+And\+Type\+Matched}}
+\index{b\+Name\+And\+Type\+Matched@{b\+Name\+And\+Type\+Matched}!\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}}
+\subsubsection[{b\+Name\+And\+Type\+Matched}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} b\+Name\+And\+Type\+Matched}\label{struct__m_d_n_s_resource_record_a0c56094453067069894f36b474fe6937}
+
+
+Definition at line 205 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+\hypertarget{struct__m_d_n_s_resource_record_a20ac22a1e4fb67a4ae0b833549256a22}{}\index{\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}!b\+Response\+Requested@{b\+Response\+Requested}}
+\index{b\+Response\+Requested@{b\+Response\+Requested}!\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}}
+\subsubsection[{b\+Response\+Requested}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} b\+Response\+Requested}\label{struct__m_d_n_s_resource_record_a20ac22a1e4fb67a4ae0b833549256a22}
+
+
+Definition at line 206 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+\hypertarget{struct__m_d_n_s_resource_record_a6c797734e12d3891e823bc12596f9e77}{}\index{\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}!b\+Response\+Suppressed@{b\+Response\+Suppressed}}
+\index{b\+Response\+Suppressed@{b\+Response\+Suppressed}!\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}}
+\subsubsection[{b\+Response\+Suppressed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} b\+Response\+Suppressed}\label{struct__m_d_n_s_resource_record_a6c797734e12d3891e823bc12596f9e77}
+
+
+Definition at line 207 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+\hypertarget{struct__m_d_n_s_resource_record_a6c250cf4ef59c5f2a8b194d6204ca214}{}\index{\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}!class@{class}}
+\index{class@{class}!\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}}
+\subsubsection[{class}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D\+\_\+\+V\+A\+L} class}\label{struct__m_d_n_s_resource_record_a6c250cf4ef59c5f2a8b194d6204ca214}
+
+
+Definition at line 182 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+\hypertarget{struct__m_d_n_s_resource_record_a9d9dd79513ec44cebf281f569e85eadc}{}\index{\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}!ip@{ip}}
+\index{ip@{ip}!\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}}
+\subsubsection[{ip}]{\setlength{\rightskip}{0pt plus 5cm}I\+P\+\_\+\+A\+D\+D\+R ip}\label{struct__m_d_n_s_resource_record_a9d9dd79513ec44cebf281f569e85eadc}
+
+
+Definition at line 187 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+\hypertarget{struct__m_d_n_s_resource_record_a8be36ea024fc971417695fc83b58febb}{}\index{\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}!name@{name}}
+\index{name@{name}!\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E}$\ast$ name}\label{struct__m_d_n_s_resource_record_a8be36ea024fc971417695fc83b58febb}
+
+
+Definition at line 180 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+\hypertarget{struct__m_d_n_s_resource_record_a89033bfadfdf14dbf01960a1600fb682}{}\index{\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}!port@{port}}
+\index{port@{port}!\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}}
+\subsubsection[{port}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D\+\_\+\+V\+A\+L} port}\label{struct__m_d_n_s_resource_record_a89033bfadfdf14dbf01960a1600fb682}
+
+
+Definition at line 192 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+\hypertarget{struct__m_d_n_s_resource_record_a17a6eba9a7fe3cd1c3312e0d3bacc735}{}\index{\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}!p\+Owner\+Ctx@{p\+Owner\+Ctx}}
+\index{p\+Owner\+Ctx@{p\+Owner\+Ctx}!\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}}
+\subsubsection[{p\+Owner\+Ctx}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf \+\_\+m\+D\+N\+S\+Process\+Ctx\+\_\+common}$\ast$ p\+Owner\+Ctx}\label{struct__m_d_n_s_resource_record_a17a6eba9a7fe3cd1c3312e0d3bacc735}
+
+
+Definition at line 202 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+\hypertarget{struct__m_d_n_s_resource_record_ae7ba91b5092176acf23540d2526a36c5}{}\index{\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}!priority@{priority}}
+\index{priority@{priority}!\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}}
+\subsubsection[{priority}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D\+\_\+\+V\+A\+L} priority}\label{struct__m_d_n_s_resource_record_ae7ba91b5092176acf23540d2526a36c5}
+
+
+Definition at line 190 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+\hypertarget{struct__m_d_n_s_resource_record_aac1fbe6e2e3029adacb4d570c7f6900c}{}\index{\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}!rdata@{rdata}}
+\index{rdata@{rdata}!\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}}
+\subsubsection[{rdata}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E}$\ast$ rdata}\label{struct__m_d_n_s_resource_record_aac1fbe6e2e3029adacb4d570c7f6900c}
+
+
+Definition at line 197 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+\hypertarget{struct__m_d_n_s_resource_record_a6a0c8277d98664a2fb6307181c99b51f}{}\index{\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}!rdlength@{rdlength}}
+\index{rdlength@{rdlength}!\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}}
+\subsubsection[{rdlength}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D\+\_\+\+V\+A\+L} rdlength}\label{struct__m_d_n_s_resource_record_a6a0c8277d98664a2fb6307181c99b51f}
+
+
+Definition at line 184 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+\hypertarget{struct__m_d_n_s_resource_record_ad81a3ff0d335297b2ed41298a66d2c9e}{}\index{\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}!srv@{srv}}
+\index{srv@{srv}!\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}}
+\subsubsection[{srv}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   srv}\label{struct__m_d_n_s_resource_record_ad81a3ff0d335297b2ed41298a66d2c9e}
+\hypertarget{struct__m_d_n_s_resource_record_aa870a15d42c33e1020feae042f862068}{}\index{\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}!ttl@{ttl}}
+\index{ttl@{ttl}!\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}}
+\subsubsection[{ttl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D\+\_\+\+V\+A\+L} ttl}\label{struct__m_d_n_s_resource_record_aa870a15d42c33e1020feae042f862068}
+
+
+Definition at line 183 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+\hypertarget{struct__m_d_n_s_resource_record_a9ae55e4e4d9170990e695b3165dfaf75}{}\index{\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}!type@{type}}
+\index{type@{type}!\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D\+\_\+\+V\+A\+L} type}\label{struct__m_d_n_s_resource_record_a9ae55e4e4d9170990e695b3165dfaf75}
+
+
+Definition at line 181 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+\hypertarget{struct__m_d_n_s_resource_record_a7c54cb0f9753b90be7ae144001428829}{}\index{\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}!valid@{valid}}
+\index{valid@{valid}!\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}}
+\subsubsection[{valid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} valid}\label{struct__m_d_n_s_resource_record_a7c54cb0f9753b90be7ae144001428829}
+
+
+Definition at line 204 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+\hypertarget{struct__m_d_n_s_resource_record_a57cc215796b6e6ba53c773e1dc2f1932}{}\index{\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}!weight@{weight}}
+\index{weight@{weight}!\+\_\+m\+D\+N\+S\+Resource\+Record@{\+\_\+m\+D\+N\+S\+Resource\+Record}}
+\subsubsection[{weight}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D\+\_\+\+V\+A\+L} weight}\label{struct__m_d_n_s_resource_record_a57cc215796b6e6ba53c773e1dc2f1932}
+
+
+Definition at line 191 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\hyperlink{_zeroconf_multicast_d_n_s_8c}{Zeroconf\+Multicast\+D\+N\+S.\+c}\end{DoxyCompactItemize}

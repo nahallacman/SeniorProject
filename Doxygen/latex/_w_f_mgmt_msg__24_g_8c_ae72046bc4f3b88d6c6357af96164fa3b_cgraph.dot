@@ -1,0 +1,26 @@
+digraph "WaitForMgmtResponseAndReadData"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="WaitForMgmtResponseAndReadData",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="WaitForMgmtResponse",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_mgmt_msg__24_g_8c.html#a55e056cb81b89b6d74963951bcfdf5ae"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="WFProcess",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_api_8h.html#ab40c33ce57709d716eea07a0a76b16dd"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="RawGetMgmtRxBuffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_raw_8h.html#ad4dc4ee21d997183f947293c0a52d293"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="WF_EintEnable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_api_8h.html#a939bc519999b13755ac6af4911d8fffb"];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="RawMountRxBuffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_raw_8h.html#abad9b6e42aa974dc86e7dd842911e2c5"];
+  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="DeallocateDataRxBuffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_raw_8h.html#a61c8aa69bc80ab5110a6b84d50bacced"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="RawRead",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_raw_8h.html#a80553d24a57673724467c812b2a00d7b"];
+  Node2 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="DeallocateMgmtRxBuffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_raw_8h.html#a479447fe09e853821ff2f38755885164"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+}

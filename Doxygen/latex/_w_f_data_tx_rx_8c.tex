@@ -1,0 +1,202 @@
+\hypertarget{_w_f_data_tx_rx_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Wi\+Fi/\+W\+F\+Data\+Tx\+Rx.c File Reference}
+\label{_w_f_data_tx_rx_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Wi\+Fi/\+W\+F\+Data\+Tx\+Rx.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Wi\+Fi/\+W\+F\+Data\+Tx\+Rx.\+c}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtx_data_preamble_struct}{tx\+Data\+Preamble\+Struct}
+\item 
+struct \hyperlink{structrx_data_preamble_struct}{rx\+Data\+Preamble\+Struct}
+\item 
+struct \hyperlink{structt_w_f_rx_data_indicate}{t\+W\+F\+Rx\+Data\+Indicate}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structtx_data_preamble_struct}{tx\+Data\+Preamble\+Struct} \hyperlink{_w_f_data_tx_rx_8c_a9fae968f0f8a379042d18ef4c8535431}{t\+Tx\+Data\+Preamble}
+\item 
+typedef struct \hyperlink{structrx_data_preamble_struct}{rx\+Data\+Preamble\+Struct} \hyperlink{_w_f_data_tx_rx_8c_ae09877989a8befd79b752cfdeaf91f88}{t\+Rx\+Data\+Preamble}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_w_f_data_tx_rx_8c_a72e6a14dc9339a7ce4bdbbe515c0ba68}{W\+F\+\_\+\+Tx\+Send\+Complete\+Data\+Packet} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+tx\+Data, \hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} length)
+\item 
+void \hyperlink{_w_f_data_tx_rx_8c_a8a350698d1d89b46e9a9ae37ef877737}{W\+F\+\_\+\+Rx\+Receive\+Complete\+Data\+Packet} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+rx\+Data, \hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} length)
+\item 
+void \hyperlink{_w_f_data_tx_rx_8c_a1e0e56e8ae6c5977a24937b953778678}{W\+F\+\_\+\+Tx\+Data\+Allocate\+Buffer} (\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} tx\+Data\+Packet\+Length)
+\item 
+void \hyperlink{_w_f_data_tx_rx_8c_ac716bab4b82ee4be76c366ba119ac2c4}{W\+F\+\_\+\+Tx\+Data\+Write} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+tx\+Data, \hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} length, \hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} start\+Index)
+\item 
+void \hyperlink{_w_f_data_tx_rx_8c_a536a932069cbd1758e64153fb4991dad}{W\+F\+\_\+\+Tx\+Data\+Send\+Packet} (\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} length)
+\item 
+void \hyperlink{_w_f_data_tx_rx_8c_aa1f8c28f75d0758f48c272c6bd98ebe5}{W\+F\+\_\+\+Rx\+Data\+Read\+Packet} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+rx\+Data, \hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} length, \hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} start\+Index)
+\item 
+void \hyperlink{_w_f_data_tx_rx_8c_ab3b83a64ed43dd63b8cccc36c94db937}{W\+F\+\_\+\+Rx\+Data\+Deallocate\+Buffer} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_w_f_data_tx_rx_8c_ae09877989a8befd79b752cfdeaf91f88}{}\index{W\+F\+Data\+Tx\+Rx.\+c@{W\+F\+Data\+Tx\+Rx.\+c}!t\+Rx\+Data\+Preamble@{t\+Rx\+Data\+Preamble}}
+\index{t\+Rx\+Data\+Preamble@{t\+Rx\+Data\+Preamble}!W\+F\+Data\+Tx\+Rx.\+c@{W\+F\+Data\+Tx\+Rx.\+c}}
+\subsubsection[{t\+Rx\+Data\+Preamble}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf rx\+Data\+Preamble\+Struct}  {\bf t\+Rx\+Data\+Preamble}}\label{_w_f_data_tx_rx_8c_ae09877989a8befd79b752cfdeaf91f88}
+\hypertarget{_w_f_data_tx_rx_8c_a9fae968f0f8a379042d18ef4c8535431}{}\index{W\+F\+Data\+Tx\+Rx.\+c@{W\+F\+Data\+Tx\+Rx.\+c}!t\+Tx\+Data\+Preamble@{t\+Tx\+Data\+Preamble}}
+\index{t\+Tx\+Data\+Preamble@{t\+Tx\+Data\+Preamble}!W\+F\+Data\+Tx\+Rx.\+c@{W\+F\+Data\+Tx\+Rx.\+c}}
+\subsubsection[{t\+Tx\+Data\+Preamble}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf tx\+Data\+Preamble\+Struct}  {\bf t\+Tx\+Data\+Preamble}}\label{_w_f_data_tx_rx_8c_a9fae968f0f8a379042d18ef4c8535431}
+
+
+\subsection{Function Documentation}
+\hypertarget{_w_f_data_tx_rx_8c_ab3b83a64ed43dd63b8cccc36c94db937}{}\index{W\+F\+Data\+Tx\+Rx.\+c@{W\+F\+Data\+Tx\+Rx.\+c}!W\+F\+\_\+\+Rx\+Data\+Deallocate\+Buffer@{W\+F\+\_\+\+Rx\+Data\+Deallocate\+Buffer}}
+\index{W\+F\+\_\+\+Rx\+Data\+Deallocate\+Buffer@{W\+F\+\_\+\+Rx\+Data\+Deallocate\+Buffer}!W\+F\+Data\+Tx\+Rx.\+c@{W\+F\+Data\+Tx\+Rx.\+c}}
+\subsubsection[{W\+F\+\_\+\+Rx\+Data\+Deallocate\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+Rx\+Data\+Deallocate\+Buffer (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_data_tx_rx_8c_ab3b83a64ed43dd63b8cccc36c94db937}
+
+
+Definition at line 362 of file W\+F\+Data\+Tx\+Rx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 0
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+\hypertarget{_w_f_data_tx_rx_8c_aa1f8c28f75d0758f48c272c6bd98ebe5}{}\index{W\+F\+Data\+Tx\+Rx.\+c@{W\+F\+Data\+Tx\+Rx.\+c}!W\+F\+\_\+\+Rx\+Data\+Read\+Packet@{W\+F\+\_\+\+Rx\+Data\+Read\+Packet}}
+\index{W\+F\+\_\+\+Rx\+Data\+Read\+Packet@{W\+F\+\_\+\+Rx\+Data\+Read\+Packet}!W\+F\+Data\+Tx\+Rx.\+c@{W\+F\+Data\+Tx\+Rx.\+c}}
+\subsubsection[{W\+F\+\_\+\+Rx\+Data\+Read\+Packet}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+Rx\+Data\+Read\+Packet (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+rx\+Data, }
+\item[{{\bf U\+I\+N\+T16}}]{length, }
+\item[{{\bf U\+I\+N\+T16}}]{start\+Index}
+\end{DoxyParamCaption}
+)}\label{_w_f_data_tx_rx_8c_aa1f8c28f75d0758f48c272c6bd98ebe5}
+
+
+Definition at line 308 of file W\+F\+Data\+Tx\+Rx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\hypertarget{_w_f_data_tx_rx_8c_a8a350698d1d89b46e9a9ae37ef877737}{}\index{W\+F\+Data\+Tx\+Rx.\+c@{W\+F\+Data\+Tx\+Rx.\+c}!W\+F\+\_\+\+Rx\+Receive\+Complete\+Data\+Packet@{W\+F\+\_\+\+Rx\+Receive\+Complete\+Data\+Packet}}
+\index{W\+F\+\_\+\+Rx\+Receive\+Complete\+Data\+Packet@{W\+F\+\_\+\+Rx\+Receive\+Complete\+Data\+Packet}!W\+F\+Data\+Tx\+Rx.\+c@{W\+F\+Data\+Tx\+Rx.\+c}}
+\subsubsection[{W\+F\+\_\+\+Rx\+Receive\+Complete\+Data\+Packet}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+Rx\+Receive\+Complete\+Data\+Packet (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+rx\+Data, }
+\item[{{\bf U\+I\+N\+T16}}]{length}
+\end{DoxyParamCaption}
+)}\label{_w_f_data_tx_rx_8c_a8a350698d1d89b46e9a9ae37ef877737}
+
+
+Definition at line 165 of file W\+F\+Data\+Tx\+Rx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+\hypertarget{_w_f_data_tx_rx_8c_a1e0e56e8ae6c5977a24937b953778678}{}\index{W\+F\+Data\+Tx\+Rx.\+c@{W\+F\+Data\+Tx\+Rx.\+c}!W\+F\+\_\+\+Tx\+Data\+Allocate\+Buffer@{W\+F\+\_\+\+Tx\+Data\+Allocate\+Buffer}}
+\index{W\+F\+\_\+\+Tx\+Data\+Allocate\+Buffer@{W\+F\+\_\+\+Tx\+Data\+Allocate\+Buffer}!W\+F\+Data\+Tx\+Rx.\+c@{W\+F\+Data\+Tx\+Rx.\+c}}
+\subsubsection[{W\+F\+\_\+\+Tx\+Data\+Allocate\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+Tx\+Data\+Allocate\+Buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T16}}]{tx\+Data\+Packet\+Length}
+\end{DoxyParamCaption}
+)}\label{_w_f_data_tx_rx_8c_a1e0e56e8ae6c5977a24937b953778678}
+
+
+Definition at line 195 of file W\+F\+Data\+Tx\+Rx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 5
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\hypertarget{_w_f_data_tx_rx_8c_a536a932069cbd1758e64153fb4991dad}{}\index{W\+F\+Data\+Tx\+Rx.\+c@{W\+F\+Data\+Tx\+Rx.\+c}!W\+F\+\_\+\+Tx\+Data\+Send\+Packet@{W\+F\+\_\+\+Tx\+Data\+Send\+Packet}}
+\index{W\+F\+\_\+\+Tx\+Data\+Send\+Packet@{W\+F\+\_\+\+Tx\+Data\+Send\+Packet}!W\+F\+Data\+Tx\+Rx.\+c@{W\+F\+Data\+Tx\+Rx.\+c}}
+\subsubsection[{W\+F\+\_\+\+Tx\+Data\+Send\+Packet}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+Tx\+Data\+Send\+Packet (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T16}}]{length}
+\end{DoxyParamCaption}
+)}\label{_w_f_data_tx_rx_8c_a536a932069cbd1758e64153fb4991dad}
+
+
+Definition at line 268 of file W\+F\+Data\+Tx\+Rx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 7
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 8
+
+
+\hypertarget{_w_f_data_tx_rx_8c_ac716bab4b82ee4be76c366ba119ac2c4}{}\index{W\+F\+Data\+Tx\+Rx.\+c@{W\+F\+Data\+Tx\+Rx.\+c}!W\+F\+\_\+\+Tx\+Data\+Write@{W\+F\+\_\+\+Tx\+Data\+Write}}
+\index{W\+F\+\_\+\+Tx\+Data\+Write@{W\+F\+\_\+\+Tx\+Data\+Write}!W\+F\+Data\+Tx\+Rx.\+c@{W\+F\+Data\+Tx\+Rx.\+c}}
+\subsubsection[{W\+F\+\_\+\+Tx\+Data\+Write}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+Tx\+Data\+Write (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+tx\+Data, }
+\item[{{\bf U\+I\+N\+T16}}]{length, }
+\item[{{\bf U\+I\+N\+T16}}]{start\+Index}
+\end{DoxyParamCaption}
+)}\label{_w_f_data_tx_rx_8c_ac716bab4b82ee4be76c366ba119ac2c4}
+
+
+Definition at line 228 of file W\+F\+Data\+Tx\+Rx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 9
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 10
+
+
+\hypertarget{_w_f_data_tx_rx_8c_a72e6a14dc9339a7ce4bdbbe515c0ba68}{}\index{W\+F\+Data\+Tx\+Rx.\+c@{W\+F\+Data\+Tx\+Rx.\+c}!W\+F\+\_\+\+Tx\+Send\+Complete\+Data\+Packet@{W\+F\+\_\+\+Tx\+Send\+Complete\+Data\+Packet}}
+\index{W\+F\+\_\+\+Tx\+Send\+Complete\+Data\+Packet@{W\+F\+\_\+\+Tx\+Send\+Complete\+Data\+Packet}!W\+F\+Data\+Tx\+Rx.\+c@{W\+F\+Data\+Tx\+Rx.\+c}}
+\subsubsection[{W\+F\+\_\+\+Tx\+Send\+Complete\+Data\+Packet}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+Tx\+Send\+Complete\+Data\+Packet (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+tx\+Data, }
+\item[{{\bf U\+I\+N\+T16}}]{length}
+\end{DoxyParamCaption}
+)}\label{_w_f_data_tx_rx_8c_a72e6a14dc9339a7ce4bdbbe515c0ba68}
+
+
+Definition at line 138 of file W\+F\+Data\+Tx\+Rx.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 11
+
+

@@ -1,0 +1,122 @@
+\hypertarget{_progress_bar_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Graphics/\+Progress\+Bar.c File Reference}
+\label{_progress_bar_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Graphics/\+Progress\+Bar.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Graphics/\+Progress\+Bar.\+c}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_progress_bar_8c_af2e400fca30f54edb012ad8eb6970dc1}{Pb\+Word\+To\+String} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} value, X\+C\+H\+A\+R $\ast$buffer)
+\item 
+\hyperlink{struct_p_r_o_g_r_e_s_s_b_a_r}{P\+R\+O\+G\+R\+E\+S\+S\+B\+A\+R} $\ast$ \hyperlink{_progress_bar_8c_a8946d265b423560fb9120376bf0c1afd}{Pb\+Create} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} I\+D, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} left, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} top, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} right, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} bottom, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} state, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} pos, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} range, \hyperlink{struct_g_o_l___s_c_h_e_m_e}{G\+O\+L\+\_\+\+S\+C\+H\+E\+M\+E} $\ast$p\+Scheme)
+\item 
+void \hyperlink{_progress_bar_8c_aaee52fc3a1f8da13a7b4c15e6df6a89a}{Pb\+Set\+Pos} (\hyperlink{struct_p_r_o_g_r_e_s_s_b_a_r}{P\+R\+O\+G\+R\+E\+S\+S\+B\+A\+R} $\ast$p\+Pb, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} position)
+\item 
+void \hyperlink{_progress_bar_8c_acc5c023663255fc10bc5f3def526bf6e}{Pb\+Set\+Range} (\hyperlink{struct_p_r_o_g_r_e_s_s_b_a_r}{P\+R\+O\+G\+R\+E\+S\+S\+B\+A\+R} $\ast$p\+Pb, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} range)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_progress_bar_8c_af53fc739f52c6e83ebae24403ead45f1}{Pb\+Translate\+Msg} (\hyperlink{struct_p_r_o_g_r_e_s_s_b_a_r}{P\+R\+O\+G\+R\+E\+S\+S\+B\+A\+R} $\ast$p\+Pb, \hyperlink{struct_g_o_l___m_s_g}{G\+O\+L\+\_\+\+M\+S\+G} $\ast$p\+Msg)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_progress_bar_8c_a5afb6fade21d0a76246e6e38a656b5a8}{Pb\+Draw} (void $\ast$p\+Obj)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_progress_bar_8c_a8946d265b423560fb9120376bf0c1afd}{}\index{Progress\+Bar.\+c@{Progress\+Bar.\+c}!Pb\+Create@{Pb\+Create}}
+\index{Pb\+Create@{Pb\+Create}!Progress\+Bar.\+c@{Progress\+Bar.\+c}}
+\subsubsection[{Pb\+Create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\+R\+O\+G\+R\+E\+S\+S\+B\+A\+R}$\ast$ Pb\+Create (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{I\+D, }
+\item[{{\bf S\+H\+O\+R\+T}}]{left, }
+\item[{{\bf S\+H\+O\+R\+T}}]{top, }
+\item[{{\bf S\+H\+O\+R\+T}}]{right, }
+\item[{{\bf S\+H\+O\+R\+T}}]{bottom, }
+\item[{{\bf W\+O\+R\+D}}]{state, }
+\item[{{\bf W\+O\+R\+D}}]{pos, }
+\item[{{\bf W\+O\+R\+D}}]{range, }
+\item[{{\bf G\+O\+L\+\_\+\+S\+C\+H\+E\+M\+E} $\ast$}]{p\+Scheme}
+\end{DoxyParamCaption}
+)}\label{_progress_bar_8c_a8946d265b423560fb9120376bf0c1afd}
+
+
+Definition at line 95 of file Progress\+Bar.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 0
+
+
+\hypertarget{_progress_bar_8c_a5afb6fade21d0a76246e6e38a656b5a8}{}\index{Progress\+Bar.\+c@{Progress\+Bar.\+c}!Pb\+Draw@{Pb\+Draw}}
+\index{Pb\+Draw@{Pb\+Draw}!Progress\+Bar.\+c@{Progress\+Bar.\+c}}
+\subsubsection[{Pb\+Draw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Pb\+Draw (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{p\+Obj}
+\end{DoxyParamCaption}
+)}\label{_progress_bar_8c_a5afb6fade21d0a76246e6e38a656b5a8}
+
+
+Definition at line 215 of file Progress\+Bar.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\hypertarget{_progress_bar_8c_aaee52fc3a1f8da13a7b4c15e6df6a89a}{}\index{Progress\+Bar.\+c@{Progress\+Bar.\+c}!Pb\+Set\+Pos@{Pb\+Set\+Pos}}
+\index{Pb\+Set\+Pos@{Pb\+Set\+Pos}!Progress\+Bar.\+c@{Progress\+Bar.\+c}}
+\subsubsection[{Pb\+Set\+Pos}]{\setlength{\rightskip}{0pt plus 5cm}void Pb\+Set\+Pos (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+R\+O\+G\+R\+E\+S\+S\+B\+A\+R} $\ast$}]{p\+Pb, }
+\item[{{\bf W\+O\+R\+D}}]{position}
+\end{DoxyParamCaption}
+)}\label{_progress_bar_8c_aaee52fc3a1f8da13a7b4c15e6df6a89a}
+
+
+Definition at line 146 of file Progress\+Bar.\+c.
+
+\hypertarget{_progress_bar_8c_acc5c023663255fc10bc5f3def526bf6e}{}\index{Progress\+Bar.\+c@{Progress\+Bar.\+c}!Pb\+Set\+Range@{Pb\+Set\+Range}}
+\index{Pb\+Set\+Range@{Pb\+Set\+Range}!Progress\+Bar.\+c@{Progress\+Bar.\+c}}
+\subsubsection[{Pb\+Set\+Range}]{\setlength{\rightskip}{0pt plus 5cm}void Pb\+Set\+Range (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+R\+O\+G\+R\+E\+S\+S\+B\+A\+R} $\ast$}]{p\+Pb, }
+\item[{{\bf W\+O\+R\+D}}]{range}
+\end{DoxyParamCaption}
+)}\label{_progress_bar_8c_acc5c023663255fc10bc5f3def526bf6e}
+
+
+Definition at line 160 of file Progress\+Bar.\+c.
+
+\hypertarget{_progress_bar_8c_af53fc739f52c6e83ebae24403ead45f1}{}\index{Progress\+Bar.\+c@{Progress\+Bar.\+c}!Pb\+Translate\+Msg@{Pb\+Translate\+Msg}}
+\index{Pb\+Translate\+Msg@{Pb\+Translate\+Msg}!Progress\+Bar.\+c@{Progress\+Bar.\+c}}
+\subsubsection[{Pb\+Translate\+Msg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Pb\+Translate\+Msg (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+R\+O\+G\+R\+E\+S\+S\+B\+A\+R} $\ast$}]{p\+Pb, }
+\item[{{\bf G\+O\+L\+\_\+\+M\+S\+G} $\ast$}]{p\+Msg}
+\end{DoxyParamCaption}
+)}\label{_progress_bar_8c_af53fc739f52c6e83ebae24403ead45f1}
+
+
+Definition at line 176 of file Progress\+Bar.\+c.
+
+\hypertarget{_progress_bar_8c_af2e400fca30f54edb012ad8eb6970dc1}{}\index{Progress\+Bar.\+c@{Progress\+Bar.\+c}!Pb\+Word\+To\+String@{Pb\+Word\+To\+String}}
+\index{Pb\+Word\+To\+String@{Pb\+Word\+To\+String}!Progress\+Bar.\+c@{Progress\+Bar.\+c}}
+\subsubsection[{Pb\+Word\+To\+String}]{\setlength{\rightskip}{0pt plus 5cm}void Pb\+Word\+To\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{value, }
+\item[{X\+C\+H\+A\+R $\ast$}]{buffer}
+\end{DoxyParamCaption}
+)}\label{_progress_bar_8c_af2e400fca30f54edb012ad8eb6970dc1}
+
+
+Definition at line 60 of file Progress\+Bar.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+

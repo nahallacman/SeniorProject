@@ -1,0 +1,236 @@
+\hypertarget{_list_box_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Graphics/\+List\+Box.c File Reference}
+\label{_list_box_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Graphics/\+List\+Box.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Graphics/\+List\+Box.\+c}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_l_i_s_t_b_o_x}{L\+I\+S\+T\+B\+O\+X} $\ast$ \hyperlink{_list_box_8c_a46b6f8a76f784014b5f7dbee460a6cf9}{Lb\+Create} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} I\+D, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} left, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} top, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} right, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} bottom, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} state, X\+C\+H\+A\+R $\ast$p\+Text, \hyperlink{struct_g_o_l___s_c_h_e_m_e}{G\+O\+L\+\_\+\+S\+C\+H\+E\+M\+E} $\ast$p\+Scheme)
+\item 
+\hyperlink{struct_l_i_s_t_i_t_e_m}{L\+I\+S\+T\+I\+T\+E\+M} $\ast$ \hyperlink{_list_box_8c_aae7252a45670c2e17013f114cc1d3ccc}{Lb\+Add\+Item} (\hyperlink{struct_l_i_s_t_b_o_x}{L\+I\+S\+T\+B\+O\+X} $\ast$p\+Lb, \hyperlink{struct_l_i_s_t_i_t_e_m}{L\+I\+S\+T\+I\+T\+E\+M} $\ast$p\+Prev\+Item, X\+C\+H\+A\+R $\ast$p\+Text, void $\ast$p\+Bitmap, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} status, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} data)
+\item 
+void \hyperlink{_list_box_8c_a5b8cff5acfebcb6ad78023bc50b2980a}{Lb\+Del\+Item} (\hyperlink{struct_l_i_s_t_b_o_x}{L\+I\+S\+T\+B\+O\+X} $\ast$p\+Lb, \hyperlink{struct_l_i_s_t_i_t_e_m}{L\+I\+S\+T\+I\+T\+E\+M} $\ast$p\+Item)
+\item 
+void \hyperlink{_list_box_8c_a27f29cd6beb91a22dc6a899cb37ab111}{Lb\+Del\+Items\+List} (void $\ast$p\+Obj)
+\item 
+\hyperlink{struct_l_i_s_t_i_t_e_m}{L\+I\+S\+T\+I\+T\+E\+M} $\ast$ \hyperlink{_list_box_8c_acc3e97e0844d72aaa5e0334645305f76}{Lb\+Get\+Sel} (\hyperlink{struct_l_i_s_t_b_o_x}{L\+I\+S\+T\+B\+O\+X} $\ast$p\+Lb, \hyperlink{struct_l_i_s_t_i_t_e_m}{L\+I\+S\+T\+I\+T\+E\+M} $\ast$p\+From\+Item)
+\item 
+void \hyperlink{_list_box_8c_a325ec836378381d8655bd74ccb2ebd43}{Lb\+Change\+Sel} (\hyperlink{struct_l_i_s_t_b_o_x}{L\+I\+S\+T\+B\+O\+X} $\ast$p\+Lb, \hyperlink{struct_l_i_s_t_i_t_e_m}{L\+I\+S\+T\+I\+T\+E\+M} $\ast$p\+Item)
+\item 
+void \hyperlink{_list_box_8c_aa68984aab317bdaeb2f1f2f69c7e2353}{Lb\+Set\+Focused\+Item} (\hyperlink{struct_l_i_s_t_b_o_x}{L\+I\+S\+T\+B\+O\+X} $\ast$p\+Lb, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} index)
+\item 
+\hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} \hyperlink{_list_box_8c_abc09596a0908ee277ec43d4cc3ca72b3}{Lb\+Get\+Focused\+Item} (\hyperlink{struct_l_i_s_t_b_o_x}{L\+I\+S\+T\+B\+O\+X} $\ast$p\+Lb)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_list_box_8c_a118d9198ffb2c9bc640ece694b110c0a}{Lb\+Translate\+Msg} (void $\ast$p\+Obj, \hyperlink{struct_g_o_l___m_s_g}{G\+O\+L\+\_\+\+M\+S\+G} $\ast$p\+Msg)
+\item 
+void \hyperlink{_list_box_8c_a4008f854489065e63b564f804db6dba8}{Lb\+Msg\+Default} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} translated\+Msg, void $\ast$p\+Obj, \hyperlink{struct_g_o_l___m_s_g}{G\+O\+L\+\_\+\+M\+S\+G} $\ast$p\+Msg)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_list_box_8c_a758bba266f1d0788d9a0c4b97b7c64da}{Lb\+Draw} (void $\ast$p\+Obj)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_list_box_8c_aae7252a45670c2e17013f114cc1d3ccc}{}\index{List\+Box.\+c@{List\+Box.\+c}!Lb\+Add\+Item@{Lb\+Add\+Item}}
+\index{Lb\+Add\+Item@{Lb\+Add\+Item}!List\+Box.\+c@{List\+Box.\+c}}
+\subsubsection[{Lb\+Add\+Item}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+I\+S\+T\+I\+T\+E\+M}$\ast$ Lb\+Add\+Item (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+I\+S\+T\+B\+O\+X} $\ast$}]{p\+Lb, }
+\item[{{\bf L\+I\+S\+T\+I\+T\+E\+M} $\ast$}]{p\+Prev\+Item, }
+\item[{X\+C\+H\+A\+R $\ast$}]{p\+Text, }
+\item[{void $\ast$}]{p\+Bitmap, }
+\item[{{\bf W\+O\+R\+D}}]{status, }
+\item[{{\bf W\+O\+R\+D}}]{data}
+\end{DoxyParamCaption}
+)}\label{_list_box_8c_aae7252a45670c2e17013f114cc1d3ccc}
+
+
+Definition at line 148 of file List\+Box.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+\hypertarget{_list_box_8c_a325ec836378381d8655bd74ccb2ebd43}{}\index{List\+Box.\+c@{List\+Box.\+c}!Lb\+Change\+Sel@{Lb\+Change\+Sel}}
+\index{Lb\+Change\+Sel@{Lb\+Change\+Sel}!List\+Box.\+c@{List\+Box.\+c}}
+\subsubsection[{Lb\+Change\+Sel}]{\setlength{\rightskip}{0pt plus 5cm}void Lb\+Change\+Sel (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+I\+S\+T\+B\+O\+X} $\ast$}]{p\+Lb, }
+\item[{{\bf L\+I\+S\+T\+I\+T\+E\+M} $\ast$}]{p\+Item}
+\end{DoxyParamCaption}
+)}\label{_list_box_8c_a325ec836378381d8655bd74ccb2ebd43}
+
+
+Definition at line 299 of file List\+Box.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+\hypertarget{_list_box_8c_a46b6f8a76f784014b5f7dbee460a6cf9}{}\index{List\+Box.\+c@{List\+Box.\+c}!Lb\+Create@{Lb\+Create}}
+\index{Lb\+Create@{Lb\+Create}!List\+Box.\+c@{List\+Box.\+c}}
+\subsubsection[{Lb\+Create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+I\+S\+T\+B\+O\+X}$\ast$ Lb\+Create (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{I\+D, }
+\item[{{\bf S\+H\+O\+R\+T}}]{left, }
+\item[{{\bf S\+H\+O\+R\+T}}]{top, }
+\item[{{\bf S\+H\+O\+R\+T}}]{right, }
+\item[{{\bf S\+H\+O\+R\+T}}]{bottom, }
+\item[{{\bf W\+O\+R\+D}}]{state, }
+\item[{X\+C\+H\+A\+R $\ast$}]{p\+Text, }
+\item[{{\bf G\+O\+L\+\_\+\+S\+C\+H\+E\+M\+E} $\ast$}]{p\+Scheme}
+\end{DoxyParamCaption}
+)}\label{_list_box_8c_a46b6f8a76f784014b5f7dbee460a6cf9}
+
+
+Definition at line 59 of file List\+Box.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+\hypertarget{_list_box_8c_a5b8cff5acfebcb6ad78023bc50b2980a}{}\index{List\+Box.\+c@{List\+Box.\+c}!Lb\+Del\+Item@{Lb\+Del\+Item}}
+\index{Lb\+Del\+Item@{Lb\+Del\+Item}!List\+Box.\+c@{List\+Box.\+c}}
+\subsubsection[{Lb\+Del\+Item}]{\setlength{\rightskip}{0pt plus 5cm}void Lb\+Del\+Item (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+I\+S\+T\+B\+O\+X} $\ast$}]{p\+Lb, }
+\item[{{\bf L\+I\+S\+T\+I\+T\+E\+M} $\ast$}]{p\+Item}
+\end{DoxyParamCaption}
+)}\label{_list_box_8c_a5b8cff5acfebcb6ad78023bc50b2980a}
+
+
+Definition at line 208 of file List\+Box.\+c.
+
+\hypertarget{_list_box_8c_a27f29cd6beb91a22dc6a899cb37ab111}{}\index{List\+Box.\+c@{List\+Box.\+c}!Lb\+Del\+Items\+List@{Lb\+Del\+Items\+List}}
+\index{Lb\+Del\+Items\+List@{Lb\+Del\+Items\+List}!List\+Box.\+c@{List\+Box.\+c}}
+\subsubsection[{Lb\+Del\+Items\+List}]{\setlength{\rightskip}{0pt plus 5cm}void Lb\+Del\+Items\+List (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{p\+Obj}
+\end{DoxyParamCaption}
+)}\label{_list_box_8c_a27f29cd6beb91a22dc6a899cb37ab111}
+
+
+Definition at line 238 of file List\+Box.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\hypertarget{_list_box_8c_a758bba266f1d0788d9a0c4b97b7c64da}{}\index{List\+Box.\+c@{List\+Box.\+c}!Lb\+Draw@{Lb\+Draw}}
+\index{Lb\+Draw@{Lb\+Draw}!List\+Box.\+c@{List\+Box.\+c}}
+\subsubsection[{Lb\+Draw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Lb\+Draw (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{p\+Obj}
+\end{DoxyParamCaption}
+)}\label{_list_box_8c_a758bba266f1d0788d9a0c4b97b7c64da}
+
+
+Definition at line 560 of file List\+Box.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 5
+
+
+\hypertarget{_list_box_8c_abc09596a0908ee277ec43d4cc3ca72b3}{}\index{List\+Box.\+c@{List\+Box.\+c}!Lb\+Get\+Focused\+Item@{Lb\+Get\+Focused\+Item}}
+\index{Lb\+Get\+Focused\+Item@{Lb\+Get\+Focused\+Item}!List\+Box.\+c@{List\+Box.\+c}}
+\subsubsection[{Lb\+Get\+Focused\+Item}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+H\+O\+R\+T} Lb\+Get\+Focused\+Item (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+I\+S\+T\+B\+O\+X} $\ast$}]{p\+Lb}
+\end{DoxyParamCaption}
+)}\label{_list_box_8c_abc09596a0908ee277ec43d4cc3ca72b3}
+
+
+Definition at line 375 of file List\+Box.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\hypertarget{_list_box_8c_acc3e97e0844d72aaa5e0334645305f76}{}\index{List\+Box.\+c@{List\+Box.\+c}!Lb\+Get\+Sel@{Lb\+Get\+Sel}}
+\index{Lb\+Get\+Sel@{Lb\+Get\+Sel}!List\+Box.\+c@{List\+Box.\+c}}
+\subsubsection[{Lb\+Get\+Sel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+I\+S\+T\+I\+T\+E\+M}$\ast$ Lb\+Get\+Sel (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+I\+S\+T\+B\+O\+X} $\ast$}]{p\+Lb, }
+\item[{{\bf L\+I\+S\+T\+I\+T\+E\+M} $\ast$}]{p\+From\+Item}
+\end{DoxyParamCaption}
+)}\label{_list_box_8c_acc3e97e0844d72aaa5e0334645305f76}
+
+
+Definition at line 271 of file List\+Box.\+c.
+
+\hypertarget{_list_box_8c_a4008f854489065e63b564f804db6dba8}{}\index{List\+Box.\+c@{List\+Box.\+c}!Lb\+Msg\+Default@{Lb\+Msg\+Default}}
+\index{Lb\+Msg\+Default@{Lb\+Msg\+Default}!List\+Box.\+c@{List\+Box.\+c}}
+\subsubsection[{Lb\+Msg\+Default}]{\setlength{\rightskip}{0pt plus 5cm}void Lb\+Msg\+Default (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{translated\+Msg, }
+\item[{void $\ast$}]{p\+Obj, }
+\item[{{\bf G\+O\+L\+\_\+\+M\+S\+G} $\ast$}]{p\+Msg}
+\end{DoxyParamCaption}
+)}\label{_list_box_8c_a4008f854489065e63b564f804db6dba8}
+
+
+Definition at line 467 of file List\+Box.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 7
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 8
+
+
+\hypertarget{_list_box_8c_aa68984aab317bdaeb2f1f2f69c7e2353}{}\index{List\+Box.\+c@{List\+Box.\+c}!Lb\+Set\+Focused\+Item@{Lb\+Set\+Focused\+Item}}
+\index{Lb\+Set\+Focused\+Item@{Lb\+Set\+Focused\+Item}!List\+Box.\+c@{List\+Box.\+c}}
+\subsubsection[{Lb\+Set\+Focused\+Item}]{\setlength{\rightskip}{0pt plus 5cm}void Lb\+Set\+Focused\+Item (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+I\+S\+T\+B\+O\+X} $\ast$}]{p\+Lb, }
+\item[{{\bf S\+H\+O\+R\+T}}]{index}
+\end{DoxyParamCaption}
+)}\label{_list_box_8c_aa68984aab317bdaeb2f1f2f69c7e2353}
+
+
+Definition at line 335 of file List\+Box.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 9
+
+
+\hypertarget{_list_box_8c_a118d9198ffb2c9bc640ece694b110c0a}{}\index{List\+Box.\+c@{List\+Box.\+c}!Lb\+Translate\+Msg@{Lb\+Translate\+Msg}}
+\index{Lb\+Translate\+Msg@{Lb\+Translate\+Msg}!List\+Box.\+c@{List\+Box.\+c}}
+\subsubsection[{Lb\+Translate\+Msg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Lb\+Translate\+Msg (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{p\+Obj, }
+\item[{{\bf G\+O\+L\+\_\+\+M\+S\+G} $\ast$}]{p\+Msg}
+\end{DoxyParamCaption}
+)}\label{_list_box_8c_a118d9198ffb2c9bc640ece694b110c0a}
+
+
+Definition at line 403 of file List\+Box.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 10
+
+

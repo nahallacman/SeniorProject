@@ -1,0 +1,611 @@
+\hypertarget{_w_f_connection_algorithm_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Wi\+Fi/\+W\+F\+Connection\+Algorithm.c File Reference}
+\label{_w_f_connection_algorithm_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Wi\+Fi/\+W\+F\+Connection\+Algorithm.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Wi\+Fi/\+W\+F\+Connection\+Algorithm.\+c}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structca_element_response_struct}{ca\+Element\+Response\+Struct}
+\item 
+struct \hyperlink{structcm_info_response_struct}{cm\+Info\+Response\+Struct}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structca_element_response_struct}{ca\+Element\+Response\+Struct} \hyperlink{_w_f_connection_algorithm_8c_a81faa502fc15fe394c6779af217796a0}{t\+C\+A\+Element\+Response\+Hdr}
+\item 
+typedef struct \hyperlink{structcm_info_response_struct}{cm\+Info\+Response\+Struct} \hyperlink{_w_f_connection_algorithm_8c_aa37d595a2da99ea4bcd9b6d09a057865}{t\+C\+M\+Info\+Response\+Hdr}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_a354558d70eddff49418afb1825f45e70}{W\+F\+\_\+\+C\+A\+Set\+Elements} (\hyperlink{_w_f_api_8h_ad08a4909f68d789a28e69a6126dd1b15}{t\+W\+F\+C\+A\+Elements} $\ast$p\+\_\+elements)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_aebc000a7bd9056334c8af58bb5e5ff62}{W\+F\+\_\+\+C\+A\+Set\+Elements\+N} (const \hyperlink{_w_f_api_8h_ad08a4909f68d789a28e69a6126dd1b15}{t\+W\+F\+C\+A\+Elements} $\ast$p\+\_\+elements)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_abb8c817fe85f5a5ce4f8bd9b36cdc000}{W\+F\+\_\+\+C\+A\+Get\+Elements} (\hyperlink{_w_f_api_8h_ad08a4909f68d789a28e69a6126dd1b15}{t\+W\+F\+C\+A\+Elements} $\ast$p\+\_\+elements)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_aeb07455ae851ac2fa85683080917f72e}{W\+F\+\_\+\+C\+A\+Set\+Scan\+Type} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} scan\+Type)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_abc0b2780b092c49b8e12b49942577a8f}{W\+F\+\_\+\+C\+A\+Get\+Scan\+Type} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+scan\+Type)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_a996fd4122376048dd2093c409d7d361d}{W\+F\+\_\+\+C\+A\+Set\+Min\+Channel\+Time} (\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} min\+Channel\+Time)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_ac9b039ebe989d9ae1de5cdeecdd430ec}{W\+F\+\_\+\+C\+A\+Get\+Min\+Channel\+Time} (\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} $\ast$p\+\_\+min\+Channel\+Time)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_affa43b8dc54eb4fa85ffae0f8e1805c9}{W\+F\+\_\+\+C\+A\+Set\+Max\+Channel\+Time} (\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} max\+Channel\+Time)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_a835f929625cc3ad0d485f2f2f93b52cf}{W\+F\+\_\+\+C\+A\+Get\+Max\+Channel\+Time} (\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} $\ast$p\+\_\+max\+Channel\+Time)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_a56565aedb72c256730f79bfa54fa0b5d}{W\+F\+\_\+\+C\+A\+Set\+Probe\+Delay} (\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} probe\+Delay)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_a0c330fbf0012cc9752efb84fcd60f714}{W\+F\+\_\+\+C\+A\+Get\+Probe\+Delay} (\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} $\ast$p\+\_\+probe\+Delay)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_aebfbd0006b848ac020c2edbe4a9df6b0}{W\+F\+\_\+\+C\+A\+Set\+Scan\+Count} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} scan\+Count)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_acaeb381630e75742cd90a61d7cab3a90}{W\+F\+\_\+\+C\+A\+Get\+Scan\+Count} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+scan\+Count)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_a2b1451b5973a9dc53bf059dc38a7957e}{W\+F\+\_\+\+C\+A\+Set\+Rssi} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} rssi)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_af490752a25065ce54e25ed0df235e4dd}{W\+F\+\_\+\+C\+A\+Get\+Rssi} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+rssi)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_a1dd4d6ce5f35976c5db997ca8fc12f67}{W\+F\+\_\+\+C\+A\+Set\+Connection\+Profile\+List} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} cp\+List\mbox{[}W\+F\+\_\+\+C\+P\+\_\+\+L\+I\+S\+T\+\_\+\+L\+E\+N\+G\+T\+H\mbox{]})
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_ab5e6b6738745ce0499e409ab9b083138}{W\+F\+\_\+\+C\+A\+Get\+Connection\+Profile\+List} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} cp\+List\mbox{[}W\+F\+\_\+\+C\+P\+\_\+\+L\+I\+S\+T\+\_\+\+L\+E\+N\+G\+T\+H\mbox{]})
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_a0b71b62f554de292605b2db948b5cb88}{W\+F\+\_\+\+C\+A\+Set\+List\+Retry\+Count} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} list\+Retry\+Count)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_a4929443d10a439f1701ffbf7b639b412}{W\+F\+\_\+\+C\+A\+Get\+List\+Retry\+Count} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+list\+Retry\+Count)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_a013f9773db425eb3b67e697783aca976}{W\+F\+\_\+\+C\+A\+Set\+Event\+Notification\+Action} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} event\+Notification\+Action)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_a409bf6e3539bd39121318ee795654b69}{W\+F\+\_\+\+C\+A\+Get\+Event\+Notification\+Action} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+event\+Notification\+Action)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_a9082468838130e6f49497132167e0cbd}{W\+F\+\_\+\+C\+A\+Set\+Beacon\+Timeout\+Action} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} beacon\+Timeout\+Action)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_a57da65dae78f21f64201f02ea9595ffd}{W\+F\+\_\+\+C\+A\+Get\+Beacon\+Timeout\+Action} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+beacon\+Timeout\+Action)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_a06fb74897ce3107324d519a046a8f999}{W\+F\+\_\+\+C\+A\+Set\+Deauth\+Action} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} deauth\+Action)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_a89ea89f40aeaee32aae7603ca9650d37}{W\+F\+\_\+\+C\+A\+Get\+Deauth\+Action} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+deauth\+Action)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_a6ed99affeba625c352c222e8bd31855a}{W\+F\+\_\+\+C\+A\+Set\+Channel\+List} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+channel\+List, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} num\+Channels)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_a535aaa61cfb555a7eb08e9e6a95c1069}{W\+F\+\_\+\+C\+A\+Get\+Channel\+List} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+channel\+List, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+num\+Channels)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_abb395c4d664328459cb38b0b54565b72}{W\+F\+\_\+\+C\+A\+Set\+Listen\+Interval} (\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} listen\+Interval)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_abe03744baf5359162d53f9dabdd7bbd8}{W\+F\+\_\+\+C\+A\+Set\+Dtim\+Interval} (\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} dtim\+Interval)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_a966427b28d179ec9a83c66b7a8e7134a}{W\+F\+\_\+\+C\+A\+Get\+Listen\+Interval} (\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} $\ast$p\+\_\+listen\+Interval)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_a4fd58217ca387562a85f3c454959538d}{W\+F\+\_\+\+C\+A\+Set\+Beacon\+Period} (\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} beacon\+Period)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_ae43d4e96c12aaf5bed7e0f0919425b46}{W\+F\+\_\+\+C\+A\+Get\+Beacon\+Period} (\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} $\ast$beacon\+Period)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_a8582eefd09f3902e748562ec403c6c6c}{W\+F\+\_\+\+C\+A\+Get\+Dtim\+Interval} (\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} $\ast$p\+\_\+dtim\+Interval)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_add8bbf23f263db010611407a3b6318a5}{W\+F\+\_\+\+C\+A\+Set\+Beacon\+Timeout} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} beacon\+Timeout)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_a46ffaf1b62f4b93285925b61cb844ba7}{W\+F\+\_\+\+C\+A\+Get\+Beacon\+Timeout} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+beacon\+Timeout)
+\item 
+\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{_w_f_connection_algorithm_8c_a25f289ea4de3780a4fa2d68b4f092cfa}{Get\+Event\+Notification\+Mask} (void)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_abd1db8ad1bed45b1de536a75a286dc60}{W\+F\+\_\+\+Disable\+Module\+Connection\+Manager} (void)
+\item 
+void \hyperlink{_w_f_connection_algorithm_8c_aef84111bc2ecb45261caf173e3be8614}{W\+F\+\_\+\+C\+M\+Info\+Get\+F\+S\+M\+Stats} (\hyperlink{structt_w_f_c_m_info_f_s_m_stats}{t\+W\+F\+C\+M\+Info\+F\+S\+M\+Stats} $\ast$p\+\_\+info)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_w_f_connection_algorithm_8c_a81faa502fc15fe394c6779af217796a0}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!t\+C\+A\+Element\+Response\+Hdr@{t\+C\+A\+Element\+Response\+Hdr}}
+\index{t\+C\+A\+Element\+Response\+Hdr@{t\+C\+A\+Element\+Response\+Hdr}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{t\+C\+A\+Element\+Response\+Hdr}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf ca\+Element\+Response\+Struct}  {\bf t\+C\+A\+Element\+Response\+Hdr}}\label{_w_f_connection_algorithm_8c_a81faa502fc15fe394c6779af217796a0}
+\hypertarget{_w_f_connection_algorithm_8c_aa37d595a2da99ea4bcd9b6d09a057865}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!t\+C\+M\+Info\+Response\+Hdr@{t\+C\+M\+Info\+Response\+Hdr}}
+\index{t\+C\+M\+Info\+Response\+Hdr@{t\+C\+M\+Info\+Response\+Hdr}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{t\+C\+M\+Info\+Response\+Hdr}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf cm\+Info\+Response\+Struct}  {\bf t\+C\+M\+Info\+Response\+Hdr}}\label{_w_f_connection_algorithm_8c_aa37d595a2da99ea4bcd9b6d09a057865}
+
+
+\subsection{Function Documentation}
+\hypertarget{_w_f_connection_algorithm_8c_a25f289ea4de3780a4fa2d68b4f092cfa}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!Get\+Event\+Notification\+Mask@{Get\+Event\+Notification\+Mask}}
+\index{Get\+Event\+Notification\+Mask@{Get\+Event\+Notification\+Mask}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{Get\+Event\+Notification\+Mask}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} Get\+Event\+Notification\+Mask (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_a25f289ea4de3780a4fa2d68b4f092cfa}
+
+
+Definition at line 1501 of file W\+F\+Connection\+Algorithm.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+\hypertarget{_w_f_connection_algorithm_8c_ae43d4e96c12aaf5bed7e0f0919425b46}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Get\+Beacon\+Period@{W\+F\+\_\+\+C\+A\+Get\+Beacon\+Period}}
+\index{W\+F\+\_\+\+C\+A\+Get\+Beacon\+Period@{W\+F\+\_\+\+C\+A\+Get\+Beacon\+Period}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Get\+Beacon\+Period}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Get\+Beacon\+Period (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T16} $\ast$}]{beacon\+Period}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_ae43d4e96c12aaf5bed7e0f0919425b46}
+
+
+Definition at line 1297 of file W\+F\+Connection\+Algorithm.\+c.
+
+\hypertarget{_w_f_connection_algorithm_8c_a46ffaf1b62f4b93285925b61cb844ba7}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Get\+Beacon\+Timeout@{W\+F\+\_\+\+C\+A\+Get\+Beacon\+Timeout}}
+\index{W\+F\+\_\+\+C\+A\+Get\+Beacon\+Timeout@{W\+F\+\_\+\+C\+A\+Get\+Beacon\+Timeout}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Get\+Beacon\+Timeout}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Get\+Beacon\+Timeout (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+beacon\+Timeout}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_a46ffaf1b62f4b93285925b61cb844ba7}
+
+
+Definition at line 1419 of file W\+F\+Connection\+Algorithm.\+c.
+
+\hypertarget{_w_f_connection_algorithm_8c_a57da65dae78f21f64201f02ea9595ffd}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Get\+Beacon\+Timeout\+Action@{W\+F\+\_\+\+C\+A\+Get\+Beacon\+Timeout\+Action}}
+\index{W\+F\+\_\+\+C\+A\+Get\+Beacon\+Timeout\+Action@{W\+F\+\_\+\+C\+A\+Get\+Beacon\+Timeout\+Action}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Get\+Beacon\+Timeout\+Action}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Get\+Beacon\+Timeout\+Action (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+beacon\+Timeout\+Action}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_a57da65dae78f21f64201f02ea9595ffd}
+
+
+Definition at line 958 of file W\+F\+Connection\+Algorithm.\+c.
+
+\hypertarget{_w_f_connection_algorithm_8c_a535aaa61cfb555a7eb08e9e6a95c1069}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Get\+Channel\+List@{W\+F\+\_\+\+C\+A\+Get\+Channel\+List}}
+\index{W\+F\+\_\+\+C\+A\+Get\+Channel\+List@{W\+F\+\_\+\+C\+A\+Get\+Channel\+List}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Get\+Channel\+List}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Get\+Channel\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+channel\+List, }
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+num\+Channels}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_a535aaa61cfb555a7eb08e9e6a95c1069}
+
+
+Definition at line 1093 of file W\+F\+Connection\+Algorithm.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+\hypertarget{_w_f_connection_algorithm_8c_ab5e6b6738745ce0499e409ab9b083138}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Get\+Connection\+Profile\+List@{W\+F\+\_\+\+C\+A\+Get\+Connection\+Profile\+List}}
+\index{W\+F\+\_\+\+C\+A\+Get\+Connection\+Profile\+List@{W\+F\+\_\+\+C\+A\+Get\+Connection\+Profile\+List}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Get\+Connection\+Profile\+List}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Get\+Connection\+Profile\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{cp\+List\mbox{[}\+W\+F\+\_\+\+C\+P\+\_\+\+L\+I\+S\+T\+\_\+\+L\+E\+N\+G\+T\+H\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_ab5e6b6738745ce0499e409ab9b083138}
+
+
+Definition at line 747 of file W\+F\+Connection\+Algorithm.\+c.
+
+\hypertarget{_w_f_connection_algorithm_8c_a89ea89f40aeaee32aae7603ca9650d37}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Get\+Deauth\+Action@{W\+F\+\_\+\+C\+A\+Get\+Deauth\+Action}}
+\index{W\+F\+\_\+\+C\+A\+Get\+Deauth\+Action@{W\+F\+\_\+\+C\+A\+Get\+Deauth\+Action}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Get\+Deauth\+Action}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Get\+Deauth\+Action (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+deauth\+Action}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_a89ea89f40aeaee32aae7603ca9650d37}
+
+
+Definition at line 1025 of file W\+F\+Connection\+Algorithm.\+c.
+
+\hypertarget{_w_f_connection_algorithm_8c_a8582eefd09f3902e748562ec403c6c6c}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Get\+Dtim\+Interval@{W\+F\+\_\+\+C\+A\+Get\+Dtim\+Interval}}
+\index{W\+F\+\_\+\+C\+A\+Get\+Dtim\+Interval@{W\+F\+\_\+\+C\+A\+Get\+Dtim\+Interval}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Get\+Dtim\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Get\+Dtim\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T16} $\ast$}]{p\+\_\+dtim\+Interval}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_a8582eefd09f3902e748562ec403c6c6c}
+
+
+Definition at line 1331 of file W\+F\+Connection\+Algorithm.\+c.
+
+\hypertarget{_w_f_connection_algorithm_8c_abb8c817fe85f5a5ce4f8bd9b36cdc000}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Get\+Elements@{W\+F\+\_\+\+C\+A\+Get\+Elements}}
+\index{W\+F\+\_\+\+C\+A\+Get\+Elements@{W\+F\+\_\+\+C\+A\+Get\+Elements}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Get\+Elements}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Get\+Elements (
+\begin{DoxyParamCaption}
+\item[{{\bf t\+W\+F\+C\+A\+Elements} $\ast$}]{p\+\_\+elements}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_abb8c817fe85f5a5ce4f8bd9b36cdc000}
+
+
+Definition at line 260 of file W\+F\+Connection\+Algorithm.\+c.
+
+\hypertarget{_w_f_connection_algorithm_8c_a409bf6e3539bd39121318ee795654b69}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Get\+Event\+Notification\+Action@{W\+F\+\_\+\+C\+A\+Get\+Event\+Notification\+Action}}
+\index{W\+F\+\_\+\+C\+A\+Get\+Event\+Notification\+Action@{W\+F\+\_\+\+C\+A\+Get\+Event\+Notification\+Action}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Get\+Event\+Notification\+Action}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Get\+Event\+Notification\+Action (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+event\+Notification\+Action}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_a409bf6e3539bd39121318ee795654b69}
+
+
+Definition at line 895 of file W\+F\+Connection\+Algorithm.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+\hypertarget{_w_f_connection_algorithm_8c_a966427b28d179ec9a83c66b7a8e7134a}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Get\+Listen\+Interval@{W\+F\+\_\+\+C\+A\+Get\+Listen\+Interval}}
+\index{W\+F\+\_\+\+C\+A\+Get\+Listen\+Interval@{W\+F\+\_\+\+C\+A\+Get\+Listen\+Interval}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Get\+Listen\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Get\+Listen\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T16} $\ast$}]{p\+\_\+listen\+Interval}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_a966427b28d179ec9a83c66b7a8e7134a}
+
+
+Definition at line 1231 of file W\+F\+Connection\+Algorithm.\+c.
+
+\hypertarget{_w_f_connection_algorithm_8c_a4929443d10a439f1701ffbf7b639b412}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Get\+List\+Retry\+Count@{W\+F\+\_\+\+C\+A\+Get\+List\+Retry\+Count}}
+\index{W\+F\+\_\+\+C\+A\+Get\+List\+Retry\+Count@{W\+F\+\_\+\+C\+A\+Get\+List\+Retry\+Count}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Get\+List\+Retry\+Count}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Get\+List\+Retry\+Count (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+list\+Retry\+Count}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_a4929443d10a439f1701ffbf7b639b412}
+
+
+Definition at line 812 of file W\+F\+Connection\+Algorithm.\+c.
+
+\hypertarget{_w_f_connection_algorithm_8c_a835f929625cc3ad0d485f2f2f93b52cf}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Get\+Max\+Channel\+Time@{W\+F\+\_\+\+C\+A\+Get\+Max\+Channel\+Time}}
+\index{W\+F\+\_\+\+C\+A\+Get\+Max\+Channel\+Time@{W\+F\+\_\+\+C\+A\+Get\+Max\+Channel\+Time}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Get\+Max\+Channel\+Time}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Get\+Max\+Channel\+Time (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T16} $\ast$}]{p\+\_\+max\+Channel\+Time}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_a835f929625cc3ad0d485f2f2f93b52cf}
+
+
+Definition at line 475 of file W\+F\+Connection\+Algorithm.\+c.
+
+\hypertarget{_w_f_connection_algorithm_8c_ac9b039ebe989d9ae1de5cdeecdd430ec}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Get\+Min\+Channel\+Time@{W\+F\+\_\+\+C\+A\+Get\+Min\+Channel\+Time}}
+\index{W\+F\+\_\+\+C\+A\+Get\+Min\+Channel\+Time@{W\+F\+\_\+\+C\+A\+Get\+Min\+Channel\+Time}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Get\+Min\+Channel\+Time}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Get\+Min\+Channel\+Time (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T16} $\ast$}]{p\+\_\+min\+Channel\+Time}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_ac9b039ebe989d9ae1de5cdeecdd430ec}
+
+
+Definition at line 407 of file W\+F\+Connection\+Algorithm.\+c.
+
+\hypertarget{_w_f_connection_algorithm_8c_a0c330fbf0012cc9752efb84fcd60f714}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Get\+Probe\+Delay@{W\+F\+\_\+\+C\+A\+Get\+Probe\+Delay}}
+\index{W\+F\+\_\+\+C\+A\+Get\+Probe\+Delay@{W\+F\+\_\+\+C\+A\+Get\+Probe\+Delay}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Get\+Probe\+Delay}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Get\+Probe\+Delay (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T16} $\ast$}]{p\+\_\+probe\+Delay}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_a0c330fbf0012cc9752efb84fcd60f714}
+
+
+Definition at line 541 of file W\+F\+Connection\+Algorithm.\+c.
+
+\hypertarget{_w_f_connection_algorithm_8c_af490752a25065ce54e25ed0df235e4dd}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Get\+Rssi@{W\+F\+\_\+\+C\+A\+Get\+Rssi}}
+\index{W\+F\+\_\+\+C\+A\+Get\+Rssi@{W\+F\+\_\+\+C\+A\+Get\+Rssi}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Get\+Rssi}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Get\+Rssi (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+rssi}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_af490752a25065ce54e25ed0df235e4dd}
+
+
+Definition at line 681 of file W\+F\+Connection\+Algorithm.\+c.
+
+\hypertarget{_w_f_connection_algorithm_8c_acaeb381630e75742cd90a61d7cab3a90}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Get\+Scan\+Count@{W\+F\+\_\+\+C\+A\+Get\+Scan\+Count}}
+\index{W\+F\+\_\+\+C\+A\+Get\+Scan\+Count@{W\+F\+\_\+\+C\+A\+Get\+Scan\+Count}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Get\+Scan\+Count}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Get\+Scan\+Count (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+scan\+Count}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_acaeb381630e75742cd90a61d7cab3a90}
+
+
+Definition at line 606 of file W\+F\+Connection\+Algorithm.\+c.
+
+\hypertarget{_w_f_connection_algorithm_8c_abc0b2780b092c49b8e12b49942577a8f}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Get\+Scan\+Type@{W\+F\+\_\+\+C\+A\+Get\+Scan\+Type}}
+\index{W\+F\+\_\+\+C\+A\+Get\+Scan\+Type@{W\+F\+\_\+\+C\+A\+Get\+Scan\+Type}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Get\+Scan\+Type}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Get\+Scan\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+scan\+Type}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_abc0b2780b092c49b8e12b49942577a8f}
+
+
+Definition at line 342 of file W\+F\+Connection\+Algorithm.\+c.
+
+\hypertarget{_w_f_connection_algorithm_8c_a4fd58217ca387562a85f3c454959538d}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Set\+Beacon\+Period@{W\+F\+\_\+\+C\+A\+Set\+Beacon\+Period}}
+\index{W\+F\+\_\+\+C\+A\+Set\+Beacon\+Period@{W\+F\+\_\+\+C\+A\+Set\+Beacon\+Period}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Set\+Beacon\+Period}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Set\+Beacon\+Period (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T16}}]{beacon\+Period}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_a4fd58217ca387562a85f3c454959538d}
+
+
+Definition at line 1265 of file W\+F\+Connection\+Algorithm.\+c.
+
+\hypertarget{_w_f_connection_algorithm_8c_add8bbf23f263db010611407a3b6318a5}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Set\+Beacon\+Timeout@{W\+F\+\_\+\+C\+A\+Set\+Beacon\+Timeout}}
+\index{W\+F\+\_\+\+C\+A\+Set\+Beacon\+Timeout@{W\+F\+\_\+\+C\+A\+Set\+Beacon\+Timeout}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Set\+Beacon\+Timeout}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Set\+Beacon\+Timeout (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{beacon\+Timeout}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_add8bbf23f263db010611407a3b6318a5}
+
+
+Definition at line 1378 of file W\+F\+Connection\+Algorithm.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\hypertarget{_w_f_connection_algorithm_8c_a9082468838130e6f49497132167e0cbd}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Set\+Beacon\+Timeout\+Action@{W\+F\+\_\+\+C\+A\+Set\+Beacon\+Timeout\+Action}}
+\index{W\+F\+\_\+\+C\+A\+Set\+Beacon\+Timeout\+Action@{W\+F\+\_\+\+C\+A\+Set\+Beacon\+Timeout\+Action}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Set\+Beacon\+Timeout\+Action}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Set\+Beacon\+Timeout\+Action (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{beacon\+Timeout\+Action}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_a9082468838130e6f49497132167e0cbd}
+
+
+Definition at line 925 of file W\+F\+Connection\+Algorithm.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+\hypertarget{_w_f_connection_algorithm_8c_a6ed99affeba625c352c222e8bd31855a}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Set\+Channel\+List@{W\+F\+\_\+\+C\+A\+Set\+Channel\+List}}
+\index{W\+F\+\_\+\+C\+A\+Set\+Channel\+List@{W\+F\+\_\+\+C\+A\+Set\+Channel\+List}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Set\+Channel\+List}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Set\+Channel\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+channel\+List, }
+\item[{{\bf U\+I\+N\+T8}}]{num\+Channels}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_a6ed99affeba625c352c222e8bd31855a}
+
+
+Definition at line 1059 of file W\+F\+Connection\+Algorithm.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 5
+
+
+\hypertarget{_w_f_connection_algorithm_8c_a1dd4d6ce5f35976c5db997ca8fc12f67}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Set\+Connection\+Profile\+List@{W\+F\+\_\+\+C\+A\+Set\+Connection\+Profile\+List}}
+\index{W\+F\+\_\+\+C\+A\+Set\+Connection\+Profile\+List@{W\+F\+\_\+\+C\+A\+Set\+Connection\+Profile\+List}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Set\+Connection\+Profile\+List}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Set\+Connection\+Profile\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{cp\+List\mbox{[}\+W\+F\+\_\+\+C\+P\+\_\+\+L\+I\+S\+T\+\_\+\+L\+E\+N\+G\+T\+H\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_a1dd4d6ce5f35976c5db997ca8fc12f67}
+
+
+Definition at line 714 of file W\+F\+Connection\+Algorithm.\+c.
+
+\hypertarget{_w_f_connection_algorithm_8c_a06fb74897ce3107324d519a046a8f999}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Set\+Deauth\+Action@{W\+F\+\_\+\+C\+A\+Set\+Deauth\+Action}}
+\index{W\+F\+\_\+\+C\+A\+Set\+Deauth\+Action@{W\+F\+\_\+\+C\+A\+Set\+Deauth\+Action}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Set\+Deauth\+Action}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Set\+Deauth\+Action (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{deauth\+Action}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_a06fb74897ce3107324d519a046a8f999}
+
+
+Definition at line 993 of file W\+F\+Connection\+Algorithm.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\hypertarget{_w_f_connection_algorithm_8c_abe03744baf5359162d53f9dabdd7bbd8}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Set\+Dtim\+Interval@{W\+F\+\_\+\+C\+A\+Set\+Dtim\+Interval}}
+\index{W\+F\+\_\+\+C\+A\+Set\+Dtim\+Interval@{W\+F\+\_\+\+C\+A\+Set\+Dtim\+Interval}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Set\+Dtim\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Set\+Dtim\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T16}}]{dtim\+Interval}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_abe03744baf5359162d53f9dabdd7bbd8}
+
+
+Definition at line 1187 of file W\+F\+Connection\+Algorithm.\+c.
+
+\hypertarget{_w_f_connection_algorithm_8c_a354558d70eddff49418afb1825f45e70}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Set\+Elements@{W\+F\+\_\+\+C\+A\+Set\+Elements}}
+\index{W\+F\+\_\+\+C\+A\+Set\+Elements@{W\+F\+\_\+\+C\+A\+Set\+Elements}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Set\+Elements}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Set\+Elements (
+\begin{DoxyParamCaption}
+\item[{{\bf t\+W\+F\+C\+A\+Elements} $\ast$}]{p\+\_\+elements}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_a354558d70eddff49418afb1825f45e70}
+
+
+Definition at line 152 of file W\+F\+Connection\+Algorithm.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 7
+
+
+\hypertarget{_w_f_connection_algorithm_8c_aebc000a7bd9056334c8af58bb5e5ff62}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Set\+Elements\+N@{W\+F\+\_\+\+C\+A\+Set\+Elements\+N}}
+\index{W\+F\+\_\+\+C\+A\+Set\+Elements\+N@{W\+F\+\_\+\+C\+A\+Set\+Elements\+N}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Set\+Elements\+N}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Set\+Elements\+N (
+\begin{DoxyParamCaption}
+\item[{const {\bf t\+W\+F\+C\+A\+Elements} $\ast$}]{p\+\_\+elements}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_aebc000a7bd9056334c8af58bb5e5ff62}
+
+
+Definition at line 217 of file W\+F\+Connection\+Algorithm.\+c.
+
+\hypertarget{_w_f_connection_algorithm_8c_a013f9773db425eb3b67e697783aca976}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Set\+Event\+Notification\+Action@{W\+F\+\_\+\+C\+A\+Set\+Event\+Notification\+Action}}
+\index{W\+F\+\_\+\+C\+A\+Set\+Event\+Notification\+Action@{W\+F\+\_\+\+C\+A\+Set\+Event\+Notification\+Action}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Set\+Event\+Notification\+Action}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Set\+Event\+Notification\+Action (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{event\+Notification\+Action}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_a013f9773db425eb3b67e697783aca976}
+
+
+Definition at line 854 of file W\+F\+Connection\+Algorithm.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 8
+
+
+\hypertarget{_w_f_connection_algorithm_8c_abb395c4d664328459cb38b0b54565b72}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Set\+Listen\+Interval@{W\+F\+\_\+\+C\+A\+Set\+Listen\+Interval}}
+\index{W\+F\+\_\+\+C\+A\+Set\+Listen\+Interval@{W\+F\+\_\+\+C\+A\+Set\+Listen\+Interval}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Set\+Listen\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Set\+Listen\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T16}}]{listen\+Interval}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_abb395c4d664328459cb38b0b54565b72}
+
+
+Definition at line 1152 of file W\+F\+Connection\+Algorithm.\+c.
+
+\hypertarget{_w_f_connection_algorithm_8c_a0b71b62f554de292605b2db948b5cb88}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Set\+List\+Retry\+Count@{W\+F\+\_\+\+C\+A\+Set\+List\+Retry\+Count}}
+\index{W\+F\+\_\+\+C\+A\+Set\+List\+Retry\+Count@{W\+F\+\_\+\+C\+A\+Set\+List\+Retry\+Count}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Set\+List\+Retry\+Count}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Set\+List\+Retry\+Count (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{list\+Retry\+Count}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_a0b71b62f554de292605b2db948b5cb88}
+
+
+Definition at line 783 of file W\+F\+Connection\+Algorithm.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 9
+
+
+\hypertarget{_w_f_connection_algorithm_8c_affa43b8dc54eb4fa85ffae0f8e1805c9}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Set\+Max\+Channel\+Time@{W\+F\+\_\+\+C\+A\+Set\+Max\+Channel\+Time}}
+\index{W\+F\+\_\+\+C\+A\+Set\+Max\+Channel\+Time@{W\+F\+\_\+\+C\+A\+Set\+Max\+Channel\+Time}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Set\+Max\+Channel\+Time}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Set\+Max\+Channel\+Time (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T16}}]{max\+Channel\+Time}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_affa43b8dc54eb4fa85ffae0f8e1805c9}
+
+
+Definition at line 444 of file W\+F\+Connection\+Algorithm.\+c.
+
+\hypertarget{_w_f_connection_algorithm_8c_a996fd4122376048dd2093c409d7d361d}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Set\+Min\+Channel\+Time@{W\+F\+\_\+\+C\+A\+Set\+Min\+Channel\+Time}}
+\index{W\+F\+\_\+\+C\+A\+Set\+Min\+Channel\+Time@{W\+F\+\_\+\+C\+A\+Set\+Min\+Channel\+Time}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Set\+Min\+Channel\+Time}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Set\+Min\+Channel\+Time (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T16}}]{min\+Channel\+Time}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_a996fd4122376048dd2093c409d7d361d}
+
+
+Definition at line 375 of file W\+F\+Connection\+Algorithm.\+c.
+
+\hypertarget{_w_f_connection_algorithm_8c_a56565aedb72c256730f79bfa54fa0b5d}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Set\+Probe\+Delay@{W\+F\+\_\+\+C\+A\+Set\+Probe\+Delay}}
+\index{W\+F\+\_\+\+C\+A\+Set\+Probe\+Delay@{W\+F\+\_\+\+C\+A\+Set\+Probe\+Delay}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Set\+Probe\+Delay}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Set\+Probe\+Delay (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T16}}]{probe\+Delay}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_a56565aedb72c256730f79bfa54fa0b5d}
+
+
+Definition at line 510 of file W\+F\+Connection\+Algorithm.\+c.
+
+\hypertarget{_w_f_connection_algorithm_8c_a2b1451b5973a9dc53bf059dc38a7957e}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Set\+Rssi@{W\+F\+\_\+\+C\+A\+Set\+Rssi}}
+\index{W\+F\+\_\+\+C\+A\+Set\+Rssi@{W\+F\+\_\+\+C\+A\+Set\+Rssi}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Set\+Rssi}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Set\+Rssi (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{rssi}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_a2b1451b5973a9dc53bf059dc38a7957e}
+
+
+Definition at line 648 of file W\+F\+Connection\+Algorithm.\+c.
+
+\hypertarget{_w_f_connection_algorithm_8c_aebfbd0006b848ac020c2edbe4a9df6b0}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Set\+Scan\+Count@{W\+F\+\_\+\+C\+A\+Set\+Scan\+Count}}
+\index{W\+F\+\_\+\+C\+A\+Set\+Scan\+Count@{W\+F\+\_\+\+C\+A\+Set\+Scan\+Count}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Set\+Scan\+Count}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Set\+Scan\+Count (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{scan\+Count}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_aebfbd0006b848ac020c2edbe4a9df6b0}
+
+
+Definition at line 576 of file W\+F\+Connection\+Algorithm.\+c.
+
+\hypertarget{_w_f_connection_algorithm_8c_aeb07455ae851ac2fa85683080917f72e}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+A\+Set\+Scan\+Type@{W\+F\+\_\+\+C\+A\+Set\+Scan\+Type}}
+\index{W\+F\+\_\+\+C\+A\+Set\+Scan\+Type@{W\+F\+\_\+\+C\+A\+Set\+Scan\+Type}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+A\+Set\+Scan\+Type}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+A\+Set\+Scan\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{scan\+Type}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_aeb07455ae851ac2fa85683080917f72e}
+
+
+Definition at line 305 of file W\+F\+Connection\+Algorithm.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 10
+
+
+\hypertarget{_w_f_connection_algorithm_8c_aef84111bc2ecb45261caf173e3be8614}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+C\+M\+Info\+Get\+F\+S\+M\+Stats@{W\+F\+\_\+\+C\+M\+Info\+Get\+F\+S\+M\+Stats}}
+\index{W\+F\+\_\+\+C\+M\+Info\+Get\+F\+S\+M\+Stats@{W\+F\+\_\+\+C\+M\+Info\+Get\+F\+S\+M\+Stats}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+M\+Info\+Get\+F\+S\+M\+Stats}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+M\+Info\+Get\+F\+S\+M\+Stats (
+\begin{DoxyParamCaption}
+\item[{{\bf t\+W\+F\+C\+M\+Info\+F\+S\+M\+Stats} $\ast$}]{p\+\_\+info}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_aef84111bc2ecb45261caf173e3be8614}
+
+
+Definition at line 1684 of file W\+F\+Connection\+Algorithm.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 11
+
+
+\hypertarget{_w_f_connection_algorithm_8c_abd1db8ad1bed45b1de536a75a286dc60}{}\index{W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}!W\+F\+\_\+\+Disable\+Module\+Connection\+Manager@{W\+F\+\_\+\+Disable\+Module\+Connection\+Manager}}
+\index{W\+F\+\_\+\+Disable\+Module\+Connection\+Manager@{W\+F\+\_\+\+Disable\+Module\+Connection\+Manager}!W\+F\+Connection\+Algorithm.\+c@{W\+F\+Connection\+Algorithm.\+c}}
+\subsubsection[{W\+F\+\_\+\+Disable\+Module\+Connection\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+Disable\+Module\+Connection\+Manager (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_algorithm_8c_abd1db8ad1bed45b1de536a75a286dc60}
+
+
+Definition at line 1644 of file W\+F\+Connection\+Algorithm.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 12
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 13
+
+

@@ -1,0 +1,106 @@
+\hypertarget{_digital_meter_8h}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+Graphics/\+Digital\+Meter.h File Reference}
+\label{_digital_meter_8h}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+Graphics/\+Digital\+Meter.\+h@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+Graphics/\+Digital\+Meter.\+h}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_d_i_g_i_t_a_l_m_e_t_e_r}{D\+I\+G\+I\+T\+A\+L\+M\+E\+T\+E\+R}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_digital_meter_8h_a872a1d1b6b349a23aaa858b07b935706}{Dm\+Set\+Value} (\hyperlink{struct_d_i_g_i_t_a_l_m_e_t_e_r}{D\+I\+G\+I\+T\+A\+L\+M\+E\+T\+E\+R} $\ast$p\+Dm, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} Value)
+\item 
+\hyperlink{struct_d_i_g_i_t_a_l_m_e_t_e_r}{D\+I\+G\+I\+T\+A\+L\+M\+E\+T\+E\+R} $\ast$ \hyperlink{_digital_meter_8h_a92fc022c971174401fc933ed2fc8a852}{Dm\+Create} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} I\+D, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} left, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} top, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} right, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} bottom, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} state, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} Value, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} No\+Of\+Digits, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} Dot\+Pos, \hyperlink{struct_g_o_l___s_c_h_e_m_e}{G\+O\+L\+\_\+\+S\+C\+H\+E\+M\+E} $\ast$p\+Scheme)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_digital_meter_8h_a41532bb7778cd0e6fbaf396dda7fa013}{Dm\+Translate\+Msg} (void $\ast$p\+Obj, \hyperlink{struct_g_o_l___m_s_g}{G\+O\+L\+\_\+\+M\+S\+G} $\ast$p\+Msg)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_digital_meter_8h_a2270225980edf29eb09aa3215e445c95}{Dm\+Draw} (void $\ast$p\+Obj)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_digital_meter_8h_a92fc022c971174401fc933ed2fc8a852}{}\index{Digital\+Meter.\+h@{Digital\+Meter.\+h}!Dm\+Create@{Dm\+Create}}
+\index{Dm\+Create@{Dm\+Create}!Digital\+Meter.\+h@{Digital\+Meter.\+h}}
+\subsubsection[{Dm\+Create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+I\+G\+I\+T\+A\+L\+M\+E\+T\+E\+R}$\ast$ Dm\+Create (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{I\+D, }
+\item[{{\bf S\+H\+O\+R\+T}}]{left, }
+\item[{{\bf S\+H\+O\+R\+T}}]{top, }
+\item[{{\bf S\+H\+O\+R\+T}}]{right, }
+\item[{{\bf S\+H\+O\+R\+T}}]{bottom, }
+\item[{{\bf W\+O\+R\+D}}]{state, }
+\item[{{\bf D\+W\+O\+R\+D}}]{Value, }
+\item[{{\bf B\+Y\+T\+E}}]{No\+Of\+Digits, }
+\item[{{\bf B\+Y\+T\+E}}]{Dot\+Pos, }
+\item[{{\bf G\+O\+L\+\_\+\+S\+C\+H\+E\+M\+E} $\ast$}]{p\+Scheme}
+\end{DoxyParamCaption}
+)}\label{_digital_meter_8h_a92fc022c971174401fc933ed2fc8a852}
+
+
+Definition at line 93 of file Digital\+Meter.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 0
+
+
+\hypertarget{_digital_meter_8h_a2270225980edf29eb09aa3215e445c95}{}\index{Digital\+Meter.\+h@{Digital\+Meter.\+h}!Dm\+Draw@{Dm\+Draw}}
+\index{Dm\+Draw@{Dm\+Draw}!Digital\+Meter.\+h@{Digital\+Meter.\+h}}
+\subsubsection[{Dm\+Draw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Dm\+Draw (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{p\+Obj}
+\end{DoxyParamCaption}
+)}\label{_digital_meter_8h_a2270225980edf29eb09aa3215e445c95}
+
+
+Definition at line 208 of file Digital\+Meter.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\hypertarget{_digital_meter_8h_a872a1d1b6b349a23aaa858b07b935706}{}\index{Digital\+Meter.\+h@{Digital\+Meter.\+h}!Dm\+Set\+Value@{Dm\+Set\+Value}}
+\index{Dm\+Set\+Value@{Dm\+Set\+Value}!Digital\+Meter.\+h@{Digital\+Meter.\+h}}
+\subsubsection[{Dm\+Set\+Value}]{\setlength{\rightskip}{0pt plus 5cm}void Dm\+Set\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+I\+G\+I\+T\+A\+L\+M\+E\+T\+E\+R} $\ast$}]{p\+Dm, }
+\item[{{\bf D\+W\+O\+R\+D}}]{Value}
+\end{DoxyParamCaption}
+)}\label{_digital_meter_8h_a872a1d1b6b349a23aaa858b07b935706}
+
+
+Definition at line 152 of file Digital\+Meter.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+\hypertarget{_digital_meter_8h_a41532bb7778cd0e6fbaf396dda7fa013}{}\index{Digital\+Meter.\+h@{Digital\+Meter.\+h}!Dm\+Translate\+Msg@{Dm\+Translate\+Msg}}
+\index{Dm\+Translate\+Msg@{Dm\+Translate\+Msg}!Digital\+Meter.\+h@{Digital\+Meter.\+h}}
+\subsubsection[{Dm\+Translate\+Msg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Dm\+Translate\+Msg (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{p\+Obj, }
+\item[{{\bf G\+O\+L\+\_\+\+M\+S\+G} $\ast$}]{p\+Msg}
+\end{DoxyParamCaption}
+)}\label{_digital_meter_8h_a41532bb7778cd0e6fbaf396dda7fa013}
+
+
+Definition at line 169 of file Digital\+Meter.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+

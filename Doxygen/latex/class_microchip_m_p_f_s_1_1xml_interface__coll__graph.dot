@@ -1,0 +1,36 @@
+digraph "xmlInterface"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="xmlInterface",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" MPFS2" ];
+  Node2 [label="MainMPFS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_microchip_m_p_f_s_1_1_main_m_p_f_s.html"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="JFrame",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" advSetting" ];
+  Node4 [label="AdvanceSettings",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_microchip_m_p_f_s_1_1_advance_settings.html"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="JDialog",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" icon" ];
+  Node6 [label="ImageIcon",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node2 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mainMpfs" ];
+  Node7 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" uploadSettings" ];
+  Node7 [label="UploadSettings",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_microchip_m_p_f_s_1_1_upload_settings.html"];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" icon" ];
+  Node2 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" MPFS2" ];
+  Node8 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" generateLog" ];
+  Node8 [label="List\< String \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" icon" ];
+  Node9 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" uploadProtocol" ];
+  Node9 [label="MainMPFS.UPLOAD_PROTOCOL\l_OPTION",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$enum_microchip_m_p_f_s_1_1_main_m_p_f_s_1_1_u_p_l_o_a_d___p_r_o_t_o_c_o_l___o_p_t_i_o_n.html"];
+  Node10 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" aboutBox" ];
+  Node10 [label="AboutBox",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_microchip_m_p_f_s_1_1_about_box.html"];
+  Node11 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="JDialog",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" icon" ];
+  Node12 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" outPutVersion" ];
+  Node12 [label="MainMPFS.MPFS_OUTPUT\l_VERSION",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$enum_microchip_m_p_f_s_1_1_main_m_p_f_s_1_1_m_p_f_s___o_u_t_p_u_t___v_e_r_s_i_o_n.html"];
+  Node1 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" xmlIntrf" ];
+}

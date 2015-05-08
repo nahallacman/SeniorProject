@@ -1,0 +1,457 @@
+\hypertarget{_v_g_a_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Dev/\+V\+G\+A.c File Reference}
+\label{_v_g_a_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Dev/\+V\+G\+A.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Dev/\+V\+G\+A.\+c}}
+{\ttfamily \#include \char`\"{}V\+G\+A.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Test\+Common.\+h\char`\"{}}\\*
+Include dependency graph for V\+G\+A.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{_v_g_a_8c_a70a1baebed80d9631cc4a999fc3cda5d}{\+\_\+bswap32} (uint32\+\_\+t a)
+\item 
+void \hyperlink{_v_g_a_8c_a404c4fd746b185b08d63449a9c14049c}{writefullhorizontalline} (int line)
+\item 
+void \hyperlink{_v_g_a_8c_aa99b12cab66ebdbdf0d5b9c2e00a9c15}{writefullverticalline} (int column)
+\item 
+void \hyperlink{_v_g_a_8c_a822a698d29ce7edb349352481b65db74}{writehorizontalline} (int y1, int y2)
+\item 
+void \hyperlink{_v_g_a_8c_a0058c3096abb8e78f7ab293ab42daff8}{writeverticalline} (int x1, int x2)
+\item 
+void \hyperlink{_v_g_a_8c_ad6061cbae4f54062026bae527e5dee9a}{writepixel} (int x, int y)
+\item 
+void \hyperlink{_v_g_a_8c_a138be10f3475a5272dc866ab13d34ebe}{writechar} (uint8\+\_\+t $\ast$character)
+\item 
+void \hyperlink{_v_g_a_8c_a62abd37a46e00ef5754e42fdd601cb9f}{clearchar} (int start, int end)
+\item 
+void \hyperlink{_v_g_a_8c_a29bab149333c107091c1b286e05ac315}{place\+Char} (uint8\+\_\+t $\ast$character)
+\item 
+void \hyperlink{_v_g_a_8c_aeca62116778bb6c13245089867ded8d9}{reset\+Place\+Char\+Location} (void)
+\item 
+int \hyperlink{_v_g_a_8c_a3a7d62c4f2983e6e2e2f4da56f36befc}{setandget\+Cursor\+Location} (int newcursor\+Location)
+\item 
+void \hyperlink{_v_g_a_8c_a5473c6cfd6c580642133754e141ca556}{Clear\+Screen} (void)
+\item 
+void \hyperlink{_v_g_a_8c_a7804524381705ec22e0efc3a1326dd69}{Move\+Cursor\+Left} (void)
+\item 
+void \hyperlink{_v_g_a_8c_ac177699cfeda15e4b887864f6eacc5e3}{Move\+Cursor\+Right} (void)
+\item 
+void \hyperlink{_v_g_a_8c_ae9337ec3c6ea47f10d329cd99d7a29f9}{Move\+Cursor\+Up} (void)
+\item 
+void \hyperlink{_v_g_a_8c_ac8e40e0b08b773c5f3fc0b303fe562de}{Move\+Cursor\+Down} (void)
+\item 
+void \hyperlink{_v_g_a_8c_acea8175bc07b5d0ba9f3f78d0c00c4a7}{Blink\+Cursor} (void)
+\item 
+void \hyperlink{_v_g_a_8c_ac087c08f80c03fa662b95603afbe19eb}{Shift\+Screen\+Up} ()
+\item 
+void \hyperlink{_v_g_a_8c_a7658a533b49674fdef8006fdcf6a694b}{Shift\+Screen\+Down} ()
+\item 
+void \hyperlink{_v_g_a_8c_ac1761d7d3dfc7d3514362f41649c1e93}{Shift\+Screen\+Left} ()
+\item 
+void \hyperlink{_v_g_a_8c_a3468671ccd9c43681712ba1cd515a7f0}{Shift\+Screen\+Right} ()
+\item 
+void \hyperlink{_v_g_a_8c_ab5c64bd9429e61e28c56cc7b35fb1f88}{shift\+Text\+Right} (void)
+\item 
+void \hyperlink{_v_g_a_8c_a1ff9068d637ee1bf5b357186033e3623}{shift\+Text\+Left} (void)
+\item 
+void \hyperlink{_v_g_a_8c_ab66a8865de62d9daefab9f8abf026478}{print\+Test\+Screen} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const long int \hyperlink{_v_g_a_8c_a64539db1fe3ee5a5aee9c5e8ea5b151c}{V\+G\+A\+\_\+\+Back\+Porch} \mbox{[}10\mbox{]} = \{0, 0, 0, 0, 0, 0, 0, 0, 0, 0\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_v_g_a_8c_a70a1baebed80d9631cc4a999fc3cda5d}{}\index{V\+G\+A.\+c@{V\+G\+A.\+c}!\+\_\+bswap32@{\+\_\+bswap32}}
+\index{\+\_\+bswap32@{\+\_\+bswap32}!V\+G\+A.\+c@{V\+G\+A.\+c}}
+\subsubsection[{\+\_\+bswap32}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t \+\_\+bswap32 (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{a}
+\end{DoxyParamCaption}
+)}\label{_v_g_a_8c_a70a1baebed80d9631cc4a999fc3cda5d}
+
+
+Definition at line 244 of file V\+G\+A.\+c.
+
+\hypertarget{_v_g_a_8c_acea8175bc07b5d0ba9f3f78d0c00c4a7}{}\index{V\+G\+A.\+c@{V\+G\+A.\+c}!Blink\+Cursor@{Blink\+Cursor}}
+\index{Blink\+Cursor@{Blink\+Cursor}!V\+G\+A.\+c@{V\+G\+A.\+c}}
+\subsubsection[{Blink\+Cursor}]{\setlength{\rightskip}{0pt plus 5cm}void Blink\+Cursor (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_v_g_a_8c_acea8175bc07b5d0ba9f3f78d0c00c4a7}
+
+
+Definition at line 567 of file V\+G\+A.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\hypertarget{_v_g_a_8c_a62abd37a46e00ef5754e42fdd601cb9f}{}\index{V\+G\+A.\+c@{V\+G\+A.\+c}!clearchar@{clearchar}}
+\index{clearchar@{clearchar}!V\+G\+A.\+c@{V\+G\+A.\+c}}
+\subsubsection[{clearchar}]{\setlength{\rightskip}{0pt plus 5cm}void clearchar (
+\begin{DoxyParamCaption}
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}\label{_v_g_a_8c_a62abd37a46e00ef5754e42fdd601cb9f}
+
+
+Definition at line 413 of file V\+G\+A.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\hypertarget{_v_g_a_8c_a5473c6cfd6c580642133754e141ca556}{}\index{V\+G\+A.\+c@{V\+G\+A.\+c}!Clear\+Screen@{Clear\+Screen}}
+\index{Clear\+Screen@{Clear\+Screen}!V\+G\+A.\+c@{V\+G\+A.\+c}}
+\subsubsection[{Clear\+Screen}]{\setlength{\rightskip}{0pt plus 5cm}void Clear\+Screen (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_v_g_a_8c_a5473c6cfd6c580642133754e141ca556}
+
+
+Definition at line 488 of file V\+G\+A.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+\hypertarget{_v_g_a_8c_ac8e40e0b08b773c5f3fc0b303fe562de}{}\index{V\+G\+A.\+c@{V\+G\+A.\+c}!Move\+Cursor\+Down@{Move\+Cursor\+Down}}
+\index{Move\+Cursor\+Down@{Move\+Cursor\+Down}!V\+G\+A.\+c@{V\+G\+A.\+c}}
+\subsubsection[{Move\+Cursor\+Down}]{\setlength{\rightskip}{0pt plus 5cm}void Move\+Cursor\+Down (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_v_g_a_8c_ac8e40e0b08b773c5f3fc0b303fe562de}
+
+
+Definition at line 551 of file V\+G\+A.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 5
+
+
+\hypertarget{_v_g_a_8c_a7804524381705ec22e0efc3a1326dd69}{}\index{V\+G\+A.\+c@{V\+G\+A.\+c}!Move\+Cursor\+Left@{Move\+Cursor\+Left}}
+\index{Move\+Cursor\+Left@{Move\+Cursor\+Left}!V\+G\+A.\+c@{V\+G\+A.\+c}}
+\subsubsection[{Move\+Cursor\+Left}]{\setlength{\rightskip}{0pt plus 5cm}void Move\+Cursor\+Left (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_v_g_a_8c_a7804524381705ec22e0efc3a1326dd69}
+
+
+Definition at line 498 of file V\+G\+A.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\hypertarget{_v_g_a_8c_ac177699cfeda15e4b887864f6eacc5e3}{}\index{V\+G\+A.\+c@{V\+G\+A.\+c}!Move\+Cursor\+Right@{Move\+Cursor\+Right}}
+\index{Move\+Cursor\+Right@{Move\+Cursor\+Right}!V\+G\+A.\+c@{V\+G\+A.\+c}}
+\subsubsection[{Move\+Cursor\+Right}]{\setlength{\rightskip}{0pt plus 5cm}void Move\+Cursor\+Right (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_v_g_a_8c_ac177699cfeda15e4b887864f6eacc5e3}
+
+
+Definition at line 519 of file V\+G\+A.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 7
+
+
+\hypertarget{_v_g_a_8c_ae9337ec3c6ea47f10d329cd99d7a29f9}{}\index{V\+G\+A.\+c@{V\+G\+A.\+c}!Move\+Cursor\+Up@{Move\+Cursor\+Up}}
+\index{Move\+Cursor\+Up@{Move\+Cursor\+Up}!V\+G\+A.\+c@{V\+G\+A.\+c}}
+\subsubsection[{Move\+Cursor\+Up}]{\setlength{\rightskip}{0pt plus 5cm}void Move\+Cursor\+Up (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_v_g_a_8c_ae9337ec3c6ea47f10d329cd99d7a29f9}
+
+
+Definition at line 535 of file V\+G\+A.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 8
+
+
+\hypertarget{_v_g_a_8c_a29bab149333c107091c1b286e05ac315}{}\index{V\+G\+A.\+c@{V\+G\+A.\+c}!place\+Char@{place\+Char}}
+\index{place\+Char@{place\+Char}!V\+G\+A.\+c@{V\+G\+A.\+c}}
+\subsubsection[{place\+Char}]{\setlength{\rightskip}{0pt plus 5cm}void place\+Char (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{character}
+\end{DoxyParamCaption}
+)}\label{_v_g_a_8c_a29bab149333c107091c1b286e05ac315}
+
+
+Definition at line 459 of file V\+G\+A.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 9
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 10
+
+
+\hypertarget{_v_g_a_8c_ab66a8865de62d9daefab9f8abf026478}{}\index{V\+G\+A.\+c@{V\+G\+A.\+c}!print\+Test\+Screen@{print\+Test\+Screen}}
+\index{print\+Test\+Screen@{print\+Test\+Screen}!V\+G\+A.\+c@{V\+G\+A.\+c}}
+\subsubsection[{print\+Test\+Screen}]{\setlength{\rightskip}{0pt plus 5cm}void print\+Test\+Screen (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_v_g_a_8c_ab66a8865de62d9daefab9f8abf026478}
+
+
+Definition at line 803 of file V\+G\+A.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 11
+
+
+\hypertarget{_v_g_a_8c_aeca62116778bb6c13245089867ded8d9}{}\index{V\+G\+A.\+c@{V\+G\+A.\+c}!reset\+Place\+Char\+Location@{reset\+Place\+Char\+Location}}
+\index{reset\+Place\+Char\+Location@{reset\+Place\+Char\+Location}!V\+G\+A.\+c@{V\+G\+A.\+c}}
+\subsubsection[{reset\+Place\+Char\+Location}]{\setlength{\rightskip}{0pt plus 5cm}void reset\+Place\+Char\+Location (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_v_g_a_8c_aeca62116778bb6c13245089867ded8d9}
+
+
+Definition at line 477 of file V\+G\+A.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 12
+
+
+\hypertarget{_v_g_a_8c_a3a7d62c4f2983e6e2e2f4da56f36befc}{}\index{V\+G\+A.\+c@{V\+G\+A.\+c}!setandget\+Cursor\+Location@{setandget\+Cursor\+Location}}
+\index{setandget\+Cursor\+Location@{setandget\+Cursor\+Location}!V\+G\+A.\+c@{V\+G\+A.\+c}}
+\subsubsection[{setandget\+Cursor\+Location}]{\setlength{\rightskip}{0pt plus 5cm}int setandget\+Cursor\+Location (
+\begin{DoxyParamCaption}
+\item[{int}]{newcursor\+Location}
+\end{DoxyParamCaption}
+)}\label{_v_g_a_8c_a3a7d62c4f2983e6e2e2f4da56f36befc}
+
+
+Definition at line 483 of file V\+G\+A.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 13
+
+
+\hypertarget{_v_g_a_8c_a7658a533b49674fdef8006fdcf6a694b}{}\index{V\+G\+A.\+c@{V\+G\+A.\+c}!Shift\+Screen\+Down@{Shift\+Screen\+Down}}
+\index{Shift\+Screen\+Down@{Shift\+Screen\+Down}!V\+G\+A.\+c@{V\+G\+A.\+c}}
+\subsubsection[{Shift\+Screen\+Down}]{\setlength{\rightskip}{0pt plus 5cm}void Shift\+Screen\+Down (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_v_g_a_8c_a7658a533b49674fdef8006fdcf6a694b}
+
+
+Definition at line 622 of file V\+G\+A.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 14
+
+
+\hypertarget{_v_g_a_8c_ac1761d7d3dfc7d3514362f41649c1e93}{}\index{V\+G\+A.\+c@{V\+G\+A.\+c}!Shift\+Screen\+Left@{Shift\+Screen\+Left}}
+\index{Shift\+Screen\+Left@{Shift\+Screen\+Left}!V\+G\+A.\+c@{V\+G\+A.\+c}}
+\subsubsection[{Shift\+Screen\+Left}]{\setlength{\rightskip}{0pt plus 5cm}void Shift\+Screen\+Left (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_v_g_a_8c_ac1761d7d3dfc7d3514362f41649c1e93}
+
+
+Definition at line 648 of file V\+G\+A.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 15
+
+
+\hypertarget{_v_g_a_8c_a3468671ccd9c43681712ba1cd515a7f0}{}\index{V\+G\+A.\+c@{V\+G\+A.\+c}!Shift\+Screen\+Right@{Shift\+Screen\+Right}}
+\index{Shift\+Screen\+Right@{Shift\+Screen\+Right}!V\+G\+A.\+c@{V\+G\+A.\+c}}
+\subsubsection[{Shift\+Screen\+Right}]{\setlength{\rightskip}{0pt plus 5cm}void Shift\+Screen\+Right (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_v_g_a_8c_a3468671ccd9c43681712ba1cd515a7f0}
+
+
+Definition at line 675 of file V\+G\+A.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 16
+
+
+\hypertarget{_v_g_a_8c_ac087c08f80c03fa662b95603afbe19eb}{}\index{V\+G\+A.\+c@{V\+G\+A.\+c}!Shift\+Screen\+Up@{Shift\+Screen\+Up}}
+\index{Shift\+Screen\+Up@{Shift\+Screen\+Up}!V\+G\+A.\+c@{V\+G\+A.\+c}}
+\subsubsection[{Shift\+Screen\+Up}]{\setlength{\rightskip}{0pt plus 5cm}void Shift\+Screen\+Up (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_v_g_a_8c_ac087c08f80c03fa662b95603afbe19eb}
+
+
+Definition at line 596 of file V\+G\+A.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 17
+
+
+\hypertarget{_v_g_a_8c_a1ff9068d637ee1bf5b357186033e3623}{}\index{V\+G\+A.\+c@{V\+G\+A.\+c}!shift\+Text\+Left@{shift\+Text\+Left}}
+\index{shift\+Text\+Left@{shift\+Text\+Left}!V\+G\+A.\+c@{V\+G\+A.\+c}}
+\subsubsection[{shift\+Text\+Left}]{\setlength{\rightskip}{0pt plus 5cm}void shift\+Text\+Left (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_v_g_a_8c_a1ff9068d637ee1bf5b357186033e3623}
+
+
+Definition at line 782 of file V\+G\+A.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 18
+
+
+\hypertarget{_v_g_a_8c_ab5c64bd9429e61e28c56cc7b35fb1f88}{}\index{V\+G\+A.\+c@{V\+G\+A.\+c}!shift\+Text\+Right@{shift\+Text\+Right}}
+\index{shift\+Text\+Right@{shift\+Text\+Right}!V\+G\+A.\+c@{V\+G\+A.\+c}}
+\subsubsection[{shift\+Text\+Right}]{\setlength{\rightskip}{0pt plus 5cm}void shift\+Text\+Right (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_v_g_a_8c_ab5c64bd9429e61e28c56cc7b35fb1f88}
+
+
+Definition at line 705 of file V\+G\+A.\+c.
+
+\hypertarget{_v_g_a_8c_a138be10f3475a5272dc866ab13d34ebe}{}\index{V\+G\+A.\+c@{V\+G\+A.\+c}!writechar@{writechar}}
+\index{writechar@{writechar}!V\+G\+A.\+c@{V\+G\+A.\+c}}
+\subsubsection[{writechar}]{\setlength{\rightskip}{0pt plus 5cm}void writechar (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{character}
+\end{DoxyParamCaption}
+)}\label{_v_g_a_8c_a138be10f3475a5272dc866ab13d34ebe}
+
+
+Definition at line 321 of file V\+G\+A.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 19
+
+
+\hypertarget{_v_g_a_8c_a404c4fd746b185b08d63449a9c14049c}{}\index{V\+G\+A.\+c@{V\+G\+A.\+c}!writefullhorizontalline@{writefullhorizontalline}}
+\index{writefullhorizontalline@{writefullhorizontalline}!V\+G\+A.\+c@{V\+G\+A.\+c}}
+\subsubsection[{writefullhorizontalline}]{\setlength{\rightskip}{0pt plus 5cm}void writefullhorizontalline (
+\begin{DoxyParamCaption}
+\item[{int}]{line}
+\end{DoxyParamCaption}
+)}\label{_v_g_a_8c_a404c4fd746b185b08d63449a9c14049c}
+
+
+Definition at line 256 of file V\+G\+A.\+c.
+
+\hypertarget{_v_g_a_8c_aa99b12cab66ebdbdf0d5b9c2e00a9c15}{}\index{V\+G\+A.\+c@{V\+G\+A.\+c}!writefullverticalline@{writefullverticalline}}
+\index{writefullverticalline@{writefullverticalline}!V\+G\+A.\+c@{V\+G\+A.\+c}}
+\subsubsection[{writefullverticalline}]{\setlength{\rightskip}{0pt plus 5cm}void writefullverticalline (
+\begin{DoxyParamCaption}
+\item[{int}]{column}
+\end{DoxyParamCaption}
+)}\label{_v_g_a_8c_aa99b12cab66ebdbdf0d5b9c2e00a9c15}
+
+
+Definition at line 266 of file V\+G\+A.\+c.
+
+\hypertarget{_v_g_a_8c_a822a698d29ce7edb349352481b65db74}{}\index{V\+G\+A.\+c@{V\+G\+A.\+c}!writehorizontalline@{writehorizontalline}}
+\index{writehorizontalline@{writehorizontalline}!V\+G\+A.\+c@{V\+G\+A.\+c}}
+\subsubsection[{writehorizontalline}]{\setlength{\rightskip}{0pt plus 5cm}void writehorizontalline (
+\begin{DoxyParamCaption}
+\item[{int}]{y1, }
+\item[{int}]{y2}
+\end{DoxyParamCaption}
+)}\label{_v_g_a_8c_a822a698d29ce7edb349352481b65db74}
+
+
+Definition at line 291 of file V\+G\+A.\+c.
+
+\hypertarget{_v_g_a_8c_ad6061cbae4f54062026bae527e5dee9a}{}\index{V\+G\+A.\+c@{V\+G\+A.\+c}!writepixel@{writepixel}}
+\index{writepixel@{writepixel}!V\+G\+A.\+c@{V\+G\+A.\+c}}
+\subsubsection[{writepixel}]{\setlength{\rightskip}{0pt plus 5cm}void writepixel (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{_v_g_a_8c_ad6061cbae4f54062026bae527e5dee9a}
+
+
+Definition at line 302 of file V\+G\+A.\+c.
+
+\hypertarget{_v_g_a_8c_a0058c3096abb8e78f7ab293ab42daff8}{}\index{V\+G\+A.\+c@{V\+G\+A.\+c}!writeverticalline@{writeverticalline}}
+\index{writeverticalline@{writeverticalline}!V\+G\+A.\+c@{V\+G\+A.\+c}}
+\subsubsection[{writeverticalline}]{\setlength{\rightskip}{0pt plus 5cm}void writeverticalline (
+\begin{DoxyParamCaption}
+\item[{int}]{x1, }
+\item[{int}]{x2}
+\end{DoxyParamCaption}
+)}\label{_v_g_a_8c_a0058c3096abb8e78f7ab293ab42daff8}
+
+
+Definition at line 296 of file V\+G\+A.\+c.
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{_v_g_a_8c_a64539db1fe3ee5a5aee9c5e8ea5b151c}{}\index{V\+G\+A.\+c@{V\+G\+A.\+c}!V\+G\+A\+\_\+\+Back\+Porch@{V\+G\+A\+\_\+\+Back\+Porch}}
+\index{V\+G\+A\+\_\+\+Back\+Porch@{V\+G\+A\+\_\+\+Back\+Porch}!V\+G\+A.\+c@{V\+G\+A.\+c}}
+\subsubsection[{V\+G\+A\+\_\+\+Back\+Porch}]{\setlength{\rightskip}{0pt plus 5cm}const long int V\+G\+A\+\_\+\+Back\+Porch\mbox{[}10\mbox{]} = \{0, 0, 0, 0, 0, 0, 0, 0, 0, 0\}}\label{_v_g_a_8c_a64539db1fe3ee5a5aee9c5e8ea5b151c}
+
+
+Definition at line 5 of file V\+G\+A.\+c.
+

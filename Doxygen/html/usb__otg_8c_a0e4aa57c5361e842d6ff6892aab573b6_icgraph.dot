@@ -1,0 +1,29 @@
+digraph "USBOTGClearSRPReady"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="USBOTGClearSRPReady",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="USBDeviceTasks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__device_8c.html#af35807553af66eab5b5d459fa13b274e"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="USBOTGInitializeDeviceStack",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__otg_8c.html#a24df6380f3917b867cf25d53dd5216a5"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="USBOTGInitialize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__otg_8c.html#a1821d7229191e748ee716d497b14e5a2"];
+  Node4 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="USB_OTGEventHandler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__otg_8c.html#ac5d1852c92a2364bf541966638962f42"];
+  Node5 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="USBHostTasks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host_8c.html#acc6184ed42d388b3d1a3fbc889c7cd68"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="USBHostCDC_ApiDeviceDetect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__cdc__interface_8c.html#aebb742aa385542e9b8163cea4f7604fc"];
+  Node6 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="USBOTGInitializeHostStack",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__otg_8c.html#af98c8bdc0cfbf9860490d6ae5a9d22da"];
+  Node8 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="USBOTGSelectRole",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__otg_8c.html#a6b7e526fa731f878145d8a05ac1afc02"];
+  Node9 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

@@ -1,0 +1,299 @@
+\hypertarget{m_touch__acquisition_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch\+\_\+acquisition.c File Reference}
+\label{m_touch__acquisition_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch\+\_\+acquisition.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch\+\_\+acquisition.\+c}}
+
+
+Implements scanning procedure for the framework which performs the m\+Touch acquisition and provides an oversampled, scaled integer value representing the relative capacitance of the sensor.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{m_touch__acquisition_8c_a76f244c380bcb78535fbc4b5d086b720}{m\+Touch\+\_\+\+Decimation\+Filter} (void)
+\item 
+void \hyperlink{m_touch__acquisition_8c_a91439b80a8405a79abffe038c8aba548}{m\+Touch\+\_\+\+Wait\+For\+Go\+Done} (void)
+\item 
+void \hyperlink{m_touch__acquisition_8c_a4b228af88722e7b340ab2fc561309216}{m\+Touch\+\_\+\+Store\+Scan\+A} (void)
+\item 
+void \hyperlink{m_touch__acquisition_8c_af756bb107972edbea40abb69edca89c5}{m\+Touch\+\_\+\+Store\+Scan\+B} (void)
+\item 
+void \hyperlink{m_touch__acquisition_8c_ad4b3c623e779e2b0cbe5a8ace84c1561}{m\+Touch\+\_\+\+Change\+Mode} (uint8\+\_\+t)
+\item 
+void \hyperlink{m_touch__acquisition_8c_a5c62bf914c0353b75955a34212c1faae}{m\+Touch\+\_\+\+Change\+Mode} (void)
+\item 
+\hyperlink{m_touch__acquisition_8c_ae1846c1507fc938b2655991ace5385fa}{M\+T\+O\+U\+C\+H\+\_\+\+S\+C\+A\+N\+\_\+\+P\+R\+O\+T\+O\+T\+Y\+P\+E\+S} ()
+\item 
+void interrupt \hyperlink{group___acquisition_gaeeee5d5e14eaff7df78e9ad5d7ac9769}{m\+Touch\+\_\+\+Scan} (void)
+\begin{DoxyCompactList}\small\item\em Implements the framework\textquotesingle{}s active-\/mode acquisition routine. Sometimes implemented as an I\+S\+R, sometimes as a normal function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const uint8\+\_\+t \hyperlink{m_touch__acquisition_8c_aa6113b852b1bf643a431e1f900886e9d}{m\+Touch\+\_\+mode0} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E0\+\_\+\+N\+U\+M\+\_\+\+S\+E\+N\+S\+O\+R\+S+1\mbox{]} = M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E0\+\_\+\+V\+A\+R\+\_\+\+I\+N\+I\+T
+\item 
+const uint8\+\_\+t \hyperlink{m_touch__acquisition_8c_a0fb58b1f4044cef554e2cb60143b1de9}{m\+Touch\+\_\+mode1} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E1\+\_\+\+N\+U\+M\+\_\+\+S\+E\+N\+S\+O\+R\+S+1\mbox{]} = M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E1\+\_\+\+V\+A\+R\+\_\+\+I\+N\+I\+T
+\item 
+const uint8\+\_\+t \hyperlink{m_touch__acquisition_8c_a3193a6f9b2faff154df2435d773083ae}{m\+Touch\+\_\+mode2} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E2\+\_\+\+N\+U\+M\+\_\+\+S\+E\+N\+S\+O\+R\+S+1\mbox{]} = M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E2\+\_\+\+V\+A\+R\+\_\+\+I\+N\+I\+T
+\item 
+const uint8\+\_\+t \hyperlink{m_touch__acquisition_8c_a2a99926e1354813091edfd2c77dfe7ed}{m\+Touch\+\_\+mode3} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E3\+\_\+\+N\+U\+M\+\_\+\+S\+E\+N\+S\+O\+R\+S+1\mbox{]} = M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E3\+\_\+\+V\+A\+R\+\_\+\+I\+N\+I\+T
+\item 
+const uint8\+\_\+t \hyperlink{m_touch__acquisition_8c_a0cc8ce87f55a8ce180d24872bb8026fc}{m\+Touch\+\_\+mode4} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E4\+\_\+\+N\+U\+M\+\_\+\+S\+E\+N\+S\+O\+R\+S+1\mbox{]} = M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E4\+\_\+\+V\+A\+R\+\_\+\+I\+N\+I\+T
+\item 
+const uint8\+\_\+t \hyperlink{m_touch__acquisition_8c_aff5bcef04cd27c4b23f3e45ae401cd7d}{m\+Touch\+\_\+mode5} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E5\+\_\+\+N\+U\+M\+\_\+\+S\+E\+N\+S\+O\+R\+S+1\mbox{]} = M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E5\+\_\+\+V\+A\+R\+\_\+\+I\+N\+I\+T
+\item 
+const uint8\+\_\+t \hyperlink{m_touch__acquisition_8c_acbb2bff021f63c735c1dd22421d3c93d}{m\+Touch\+\_\+mode6} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E6\+\_\+\+N\+U\+M\+\_\+\+S\+E\+N\+S\+O\+R\+S+1\mbox{]} = M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E6\+\_\+\+V\+A\+R\+\_\+\+I\+N\+I\+T
+\item 
+const uint8\+\_\+t \hyperlink{m_touch__acquisition_8c_ae07453e07195cbb7d6dbdad1f0cd1084}{m\+Touch\+\_\+mode7} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E7\+\_\+\+N\+U\+M\+\_\+\+S\+E\+N\+S\+O\+R\+S+1\mbox{]} = M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E7\+\_\+\+V\+A\+R\+\_\+\+I\+N\+I\+T
+\item 
+const uint8\+\_\+t $\ast$const \hyperlink{m_touch__acquisition_8c_ac6e10bb8cfb806594e8224193d95ec40}{m\+Touch\+\_\+mode} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+\_\+\+M\+O\+D\+E\+S\mbox{]} = M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E\+\_\+\+V\+A\+R\+\_\+\+I\+N\+I\+T
+\item 
+const uint8\+\_\+t \hyperlink{m_touch__acquisition_8c_ac5f356c01fbf14b25b402e94ac62ce00}{m\+Touch\+\_\+\+Oversample\+\_\+\+Default} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]} = M\+T\+O\+U\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+O\+V\+E\+R\+S\+A\+M\+P\+L\+E\+\_\+\+I\+N\+I\+T
+\item 
+void($\ast$const \hyperlink{m_touch__acquisition_8c_af67749fc5d04faeb760250212ec682a4}{m\+Touch\+\_\+\+Scan\+A} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]})(void) = M\+T\+O\+U\+C\+H\+\_\+\+S\+C\+A\+N\+A\+\_\+\+V\+A\+R\+\_\+\+I\+N\+I\+T
+\item 
+void($\ast$const \hyperlink{m_touch__acquisition_8c_a012eaa2610ea954a92ec444967c034e3}{m\+Touch\+\_\+\+Scan\+B} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]})(void) = M\+T\+O\+U\+C\+H\+\_\+\+S\+C\+A\+N\+B\+\_\+\+V\+A\+R\+\_\+\+I\+N\+I\+T
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf m\+Touch Acquisition I\+S\+R Variables}\par
+{\em These variables are used by the I\+S\+R of the m\+Touch Framework and should not be directly accessed by the main loop application. }\begin{DoxyCompactItemize}
+\item 
+\hyperlink{unionm_touch___acquisition_data}{m\+Touch\+\_\+\+Acquisition\+Data} \hyperlink{m_touch__acquisition_8c_a699585423cd352f17a4edc5388970d20}{m\+Touch\+\_\+acq\+Data} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]}
+\begin{DoxyCompactList}\small\item\em Internal m\+Touch acquisition variable structure. \end{DoxyCompactList}\item 
+\hyperlink{unionm_touch___acquisition_data}{m\+Touch\+\_\+\+Acquisition\+Data} $\ast$ \hyperlink{m_touch__acquisition_8c_a8f8a194adac063defb2f867926eacd77}{m\+Touch\+\_\+current\+Acq\+Data}
+\item 
+uint16\+\_\+t \hyperlink{m_touch__acquisition_8c_a6e24f307e58e95e12550082469099ae2}{m\+Touch\+\_\+sensor\+Data} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]}
+\begin{DoxyCompactList}\small\item\em Latch register storing the latest m\+Touch acquisition results. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{group___acquisition_ga6890b3a94dbdd045d66ec2b025cddda6}{m\+Touch\+\_\+last\+Result}
+\begin{DoxyCompactList}\small\item\em Stores the last active-\/mode A\+D\+C result for differential calculation. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group___acquisition_gaf6d2f71af7a6dfd8571cbd141c40053e}{m\+Touch\+\_\+delay\+Count}
+\begin{DoxyCompactList}\small\item\em Delay counter variable used in C\+V\+D scan sequence. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{m_touch__acquisition_8c_ac9181f1601e76c0ab3a4458c424ff707}{m\+Touch\+\_\+mode\+Index}
+\item 
+const uint8\+\_\+t $\ast$ \hyperlink{m_touch__acquisition_8c_ad74b3f8b877c7b7d513b9212d54dcb82}{m\+Touch\+\_\+current\+Scan}
+\item 
+uint8\+\_\+t \hyperlink{m_touch__acquisition_8c_aa3e2c47e7ecc16a50818d512103a10a9}{m\+Touch\+\_\+oversample} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]}
+\item 
+uint8\+\_\+t \hyperlink{group___acquisition_ga800eae7ce7292a55c5d60975179ea26a}{m\+Touch\+\_\+jitter} = 0x55
+\begin{DoxyCompactList}\small\item\em Stores the current random seed value for jittering. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+Implements scanning procedure for the framework which performs the m\+Touch acquisition and provides an oversampled, scaled integer value representing the relative capacitance of the sensor. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{m_touch__acquisition_8c_ad4b3c623e779e2b0cbe5a8ace84c1561}{}\index{m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}!m\+Touch\+\_\+\+Change\+Mode@{m\+Touch\+\_\+\+Change\+Mode}}
+\index{m\+Touch\+\_\+\+Change\+Mode@{m\+Touch\+\_\+\+Change\+Mode}!m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}}
+\subsubsection[{m\+Touch\+\_\+\+Change\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Touch\+\_\+\+Change\+Mode (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{}
+\end{DoxyParamCaption}
+)}\label{m_touch__acquisition_8c_ad4b3c623e779e2b0cbe5a8ace84c1561}
+
+
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+\hypertarget{m_touch__acquisition_8c_a5c62bf914c0353b75955a34212c1faae}{}\index{m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}!m\+Touch\+\_\+\+Change\+Mode@{m\+Touch\+\_\+\+Change\+Mode}}
+\index{m\+Touch\+\_\+\+Change\+Mode@{m\+Touch\+\_\+\+Change\+Mode}!m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}}
+\subsubsection[{m\+Touch\+\_\+\+Change\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Touch\+\_\+\+Change\+Mode (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_touch__acquisition_8c_a5c62bf914c0353b75955a34212c1faae}
+\hypertarget{m_touch__acquisition_8c_a76f244c380bcb78535fbc4b5d086b720}{}\index{m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}!m\+Touch\+\_\+\+Decimation\+Filter@{m\+Touch\+\_\+\+Decimation\+Filter}}
+\index{m\+Touch\+\_\+\+Decimation\+Filter@{m\+Touch\+\_\+\+Decimation\+Filter}!m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}}
+\subsubsection[{m\+Touch\+\_\+\+Decimation\+Filter}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Touch\+\_\+\+Decimation\+Filter (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_touch__acquisition_8c_a76f244c380bcb78535fbc4b5d086b720}
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+\hypertarget{m_touch__acquisition_8c_ae1846c1507fc938b2655991ace5385fa}{}\index{m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}!M\+T\+O\+U\+C\+H\+\_\+\+S\+C\+A\+N\+\_\+\+P\+R\+O\+T\+O\+T\+Y\+P\+E\+S@{M\+T\+O\+U\+C\+H\+\_\+\+S\+C\+A\+N\+\_\+\+P\+R\+O\+T\+O\+T\+Y\+P\+E\+S}}
+\index{M\+T\+O\+U\+C\+H\+\_\+\+S\+C\+A\+N\+\_\+\+P\+R\+O\+T\+O\+T\+Y\+P\+E\+S@{M\+T\+O\+U\+C\+H\+\_\+\+S\+C\+A\+N\+\_\+\+P\+R\+O\+T\+O\+T\+Y\+P\+E\+S}!m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}}
+\subsubsection[{M\+T\+O\+U\+C\+H\+\_\+\+S\+C\+A\+N\+\_\+\+P\+R\+O\+T\+O\+T\+Y\+P\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}M\+T\+O\+U\+C\+H\+\_\+\+S\+C\+A\+N\+\_\+\+P\+R\+O\+T\+O\+T\+Y\+P\+E\+S (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{m_touch__acquisition_8c_ae1846c1507fc938b2655991ace5385fa}
+\hypertarget{m_touch__acquisition_8c_a4b228af88722e7b340ab2fc561309216}{}\index{m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}!m\+Touch\+\_\+\+Store\+Scan\+A@{m\+Touch\+\_\+\+Store\+Scan\+A}}
+\index{m\+Touch\+\_\+\+Store\+Scan\+A@{m\+Touch\+\_\+\+Store\+Scan\+A}!m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}}
+\subsubsection[{m\+Touch\+\_\+\+Store\+Scan\+A}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Touch\+\_\+\+Store\+Scan\+A (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_touch__acquisition_8c_a4b228af88722e7b340ab2fc561309216}
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\hypertarget{m_touch__acquisition_8c_af756bb107972edbea40abb69edca89c5}{}\index{m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}!m\+Touch\+\_\+\+Store\+Scan\+B@{m\+Touch\+\_\+\+Store\+Scan\+B}}
+\index{m\+Touch\+\_\+\+Store\+Scan\+B@{m\+Touch\+\_\+\+Store\+Scan\+B}!m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}}
+\subsubsection[{m\+Touch\+\_\+\+Store\+Scan\+B}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Touch\+\_\+\+Store\+Scan\+B (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_touch__acquisition_8c_af756bb107972edbea40abb69edca89c5}
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\hypertarget{m_touch__acquisition_8c_a91439b80a8405a79abffe038c8aba548}{}\index{m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}!m\+Touch\+\_\+\+Wait\+For\+Go\+Done@{m\+Touch\+\_\+\+Wait\+For\+Go\+Done}}
+\index{m\+Touch\+\_\+\+Wait\+For\+Go\+Done@{m\+Touch\+\_\+\+Wait\+For\+Go\+Done}!m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}}
+\subsubsection[{m\+Touch\+\_\+\+Wait\+For\+Go\+Done}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Touch\+\_\+\+Wait\+For\+Go\+Done (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_touch__acquisition_8c_a91439b80a8405a79abffe038c8aba548}
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{m_touch__acquisition_8c_a699585423cd352f17a4edc5388970d20}{}\index{m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}!m\+Touch\+\_\+acq\+Data@{m\+Touch\+\_\+acq\+Data}}
+\index{m\+Touch\+\_\+acq\+Data@{m\+Touch\+\_\+acq\+Data}!m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}}
+\subsubsection[{m\+Touch\+\_\+acq\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf m\+Touch\+\_\+\+Acquisition\+Data} m\+Touch\+\_\+acq\+Data\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]}}\label{m_touch__acquisition_8c_a699585423cd352f17a4edc5388970d20}
+
+
+Internal m\+Touch acquisition variable structure. 
+
+
+
+Definition at line 88 of file m\+Touch\+\_\+acquisition.\+c.
+
+\hypertarget{m_touch__acquisition_8c_a8f8a194adac063defb2f867926eacd77}{}\index{m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}!m\+Touch\+\_\+current\+Acq\+Data@{m\+Touch\+\_\+current\+Acq\+Data}}
+\index{m\+Touch\+\_\+current\+Acq\+Data@{m\+Touch\+\_\+current\+Acq\+Data}!m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}}
+\subsubsection[{m\+Touch\+\_\+current\+Acq\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf m\+Touch\+\_\+\+Acquisition\+Data}$\ast$ m\+Touch\+\_\+current\+Acq\+Data}\label{m_touch__acquisition_8c_a8f8a194adac063defb2f867926eacd77}
+
+
+Definition at line 89 of file m\+Touch\+\_\+acquisition.\+c.
+
+\hypertarget{m_touch__acquisition_8c_ad74b3f8b877c7b7d513b9212d54dcb82}{}\index{m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}!m\+Touch\+\_\+current\+Scan@{m\+Touch\+\_\+current\+Scan}}
+\index{m\+Touch\+\_\+current\+Scan@{m\+Touch\+\_\+current\+Scan}!m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}}
+\subsubsection[{m\+Touch\+\_\+current\+Scan}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t m\+Touch\+\_\+current\+Scan}\label{m_touch__acquisition_8c_ad74b3f8b877c7b7d513b9212d54dcb82}
+
+
+Definition at line 97 of file m\+Touch\+\_\+acquisition.\+c.
+
+\hypertarget{m_touch__acquisition_8c_ac6e10bb8cfb806594e8224193d95ec40}{}\index{m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}!m\+Touch\+\_\+mode@{m\+Touch\+\_\+mode}}
+\index{m\+Touch\+\_\+mode@{m\+Touch\+\_\+mode}!m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}}
+\subsubsection[{m\+Touch\+\_\+mode}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\+\_\+t$\ast$ const m\+Touch\+\_\+mode\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+\_\+\+M\+O\+D\+E\+S\mbox{]} = M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E\+\_\+\+V\+A\+R\+\_\+\+I\+N\+I\+T}\label{m_touch__acquisition_8c_ac6e10bb8cfb806594e8224193d95ec40}
+
+
+Definition at line 160 of file m\+Touch\+\_\+acquisition.\+c.
+
+\hypertarget{m_touch__acquisition_8c_aa6113b852b1bf643a431e1f900886e9d}{}\index{m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}!m\+Touch\+\_\+mode0@{m\+Touch\+\_\+mode0}}
+\index{m\+Touch\+\_\+mode0@{m\+Touch\+\_\+mode0}!m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}}
+\subsubsection[{m\+Touch\+\_\+mode0}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\+\_\+t m\+Touch\+\_\+mode0\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E0\+\_\+\+N\+U\+M\+\_\+\+S\+E\+N\+S\+O\+R\+S+1\mbox{]} = M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E0\+\_\+\+V\+A\+R\+\_\+\+I\+N\+I\+T}\label{m_touch__acquisition_8c_aa6113b852b1bf643a431e1f900886e9d}
+
+
+Definition at line 138 of file m\+Touch\+\_\+acquisition.\+c.
+
+\hypertarget{m_touch__acquisition_8c_a0fb58b1f4044cef554e2cb60143b1de9}{}\index{m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}!m\+Touch\+\_\+mode1@{m\+Touch\+\_\+mode1}}
+\index{m\+Touch\+\_\+mode1@{m\+Touch\+\_\+mode1}!m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}}
+\subsubsection[{m\+Touch\+\_\+mode1}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\+\_\+t m\+Touch\+\_\+mode1\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E1\+\_\+\+N\+U\+M\+\_\+\+S\+E\+N\+S\+O\+R\+S+1\mbox{]} = M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E1\+\_\+\+V\+A\+R\+\_\+\+I\+N\+I\+T}\label{m_touch__acquisition_8c_a0fb58b1f4044cef554e2cb60143b1de9}
+
+
+Definition at line 139 of file m\+Touch\+\_\+acquisition.\+c.
+
+\hypertarget{m_touch__acquisition_8c_a3193a6f9b2faff154df2435d773083ae}{}\index{m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}!m\+Touch\+\_\+mode2@{m\+Touch\+\_\+mode2}}
+\index{m\+Touch\+\_\+mode2@{m\+Touch\+\_\+mode2}!m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}}
+\subsubsection[{m\+Touch\+\_\+mode2}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\+\_\+t m\+Touch\+\_\+mode2\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E2\+\_\+\+N\+U\+M\+\_\+\+S\+E\+N\+S\+O\+R\+S+1\mbox{]} = M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E2\+\_\+\+V\+A\+R\+\_\+\+I\+N\+I\+T}\label{m_touch__acquisition_8c_a3193a6f9b2faff154df2435d773083ae}
+
+
+Definition at line 142 of file m\+Touch\+\_\+acquisition.\+c.
+
+\hypertarget{m_touch__acquisition_8c_a2a99926e1354813091edfd2c77dfe7ed}{}\index{m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}!m\+Touch\+\_\+mode3@{m\+Touch\+\_\+mode3}}
+\index{m\+Touch\+\_\+mode3@{m\+Touch\+\_\+mode3}!m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}}
+\subsubsection[{m\+Touch\+\_\+mode3}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\+\_\+t m\+Touch\+\_\+mode3\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E3\+\_\+\+N\+U\+M\+\_\+\+S\+E\+N\+S\+O\+R\+S+1\mbox{]} = M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E3\+\_\+\+V\+A\+R\+\_\+\+I\+N\+I\+T}\label{m_touch__acquisition_8c_a2a99926e1354813091edfd2c77dfe7ed}
+
+
+Definition at line 145 of file m\+Touch\+\_\+acquisition.\+c.
+
+\hypertarget{m_touch__acquisition_8c_a0cc8ce87f55a8ce180d24872bb8026fc}{}\index{m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}!m\+Touch\+\_\+mode4@{m\+Touch\+\_\+mode4}}
+\index{m\+Touch\+\_\+mode4@{m\+Touch\+\_\+mode4}!m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}}
+\subsubsection[{m\+Touch\+\_\+mode4}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\+\_\+t m\+Touch\+\_\+mode4\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E4\+\_\+\+N\+U\+M\+\_\+\+S\+E\+N\+S\+O\+R\+S+1\mbox{]} = M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E4\+\_\+\+V\+A\+R\+\_\+\+I\+N\+I\+T}\label{m_touch__acquisition_8c_a0cc8ce87f55a8ce180d24872bb8026fc}
+
+
+Definition at line 148 of file m\+Touch\+\_\+acquisition.\+c.
+
+\hypertarget{m_touch__acquisition_8c_aff5bcef04cd27c4b23f3e45ae401cd7d}{}\index{m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}!m\+Touch\+\_\+mode5@{m\+Touch\+\_\+mode5}}
+\index{m\+Touch\+\_\+mode5@{m\+Touch\+\_\+mode5}!m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}}
+\subsubsection[{m\+Touch\+\_\+mode5}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\+\_\+t m\+Touch\+\_\+mode5\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E5\+\_\+\+N\+U\+M\+\_\+\+S\+E\+N\+S\+O\+R\+S+1\mbox{]} = M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E5\+\_\+\+V\+A\+R\+\_\+\+I\+N\+I\+T}\label{m_touch__acquisition_8c_aff5bcef04cd27c4b23f3e45ae401cd7d}
+
+
+Definition at line 151 of file m\+Touch\+\_\+acquisition.\+c.
+
+\hypertarget{m_touch__acquisition_8c_acbb2bff021f63c735c1dd22421d3c93d}{}\index{m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}!m\+Touch\+\_\+mode6@{m\+Touch\+\_\+mode6}}
+\index{m\+Touch\+\_\+mode6@{m\+Touch\+\_\+mode6}!m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}}
+\subsubsection[{m\+Touch\+\_\+mode6}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\+\_\+t m\+Touch\+\_\+mode6\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E6\+\_\+\+N\+U\+M\+\_\+\+S\+E\+N\+S\+O\+R\+S+1\mbox{]} = M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E6\+\_\+\+V\+A\+R\+\_\+\+I\+N\+I\+T}\label{m_touch__acquisition_8c_acbb2bff021f63c735c1dd22421d3c93d}
+
+
+Definition at line 154 of file m\+Touch\+\_\+acquisition.\+c.
+
+\hypertarget{m_touch__acquisition_8c_ae07453e07195cbb7d6dbdad1f0cd1084}{}\index{m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}!m\+Touch\+\_\+mode7@{m\+Touch\+\_\+mode7}}
+\index{m\+Touch\+\_\+mode7@{m\+Touch\+\_\+mode7}!m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}}
+\subsubsection[{m\+Touch\+\_\+mode7}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\+\_\+t m\+Touch\+\_\+mode7\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E7\+\_\+\+N\+U\+M\+\_\+\+S\+E\+N\+S\+O\+R\+S+1\mbox{]} = M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+E7\+\_\+\+V\+A\+R\+\_\+\+I\+N\+I\+T}\label{m_touch__acquisition_8c_ae07453e07195cbb7d6dbdad1f0cd1084}
+
+
+Definition at line 157 of file m\+Touch\+\_\+acquisition.\+c.
+
+\hypertarget{m_touch__acquisition_8c_ac9181f1601e76c0ab3a4458c424ff707}{}\index{m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}!m\+Touch\+\_\+mode\+Index@{m\+Touch\+\_\+mode\+Index}}
+\index{m\+Touch\+\_\+mode\+Index@{m\+Touch\+\_\+mode\+Index}!m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}}
+\subsubsection[{m\+Touch\+\_\+mode\+Index}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t m\+Touch\+\_\+mode\+Index}\label{m_touch__acquisition_8c_ac9181f1601e76c0ab3a4458c424ff707}
+
+
+Definition at line 96 of file m\+Touch\+\_\+acquisition.\+c.
+
+\hypertarget{m_touch__acquisition_8c_aa3e2c47e7ecc16a50818d512103a10a9}{}\index{m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}!m\+Touch\+\_\+oversample@{m\+Touch\+\_\+oversample}}
+\index{m\+Touch\+\_\+oversample@{m\+Touch\+\_\+oversample}!m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}}
+\subsubsection[{m\+Touch\+\_\+oversample}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t m\+Touch\+\_\+oversample\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]}}\label{m_touch__acquisition_8c_aa3e2c47e7ecc16a50818d512103a10a9}
+
+
+Definition at line 104 of file m\+Touch\+\_\+acquisition.\+c.
+
+\hypertarget{m_touch__acquisition_8c_ac5f356c01fbf14b25b402e94ac62ce00}{}\index{m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}!m\+Touch\+\_\+\+Oversample\+\_\+\+Default@{m\+Touch\+\_\+\+Oversample\+\_\+\+Default}}
+\index{m\+Touch\+\_\+\+Oversample\+\_\+\+Default@{m\+Touch\+\_\+\+Oversample\+\_\+\+Default}!m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}}
+\subsubsection[{m\+Touch\+\_\+\+Oversample\+\_\+\+Default}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\+\_\+t m\+Touch\+\_\+\+Oversample\+\_\+\+Default\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]} = M\+T\+O\+U\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+O\+V\+E\+R\+S\+A\+M\+P\+L\+E\+\_\+\+I\+N\+I\+T}\label{m_touch__acquisition_8c_ac5f356c01fbf14b25b402e94ac62ce00}
+
+
+Definition at line 164 of file m\+Touch\+\_\+acquisition.\+c.
+
+\hypertarget{m_touch__acquisition_8c_af67749fc5d04faeb760250212ec682a4}{}\index{m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}!m\+Touch\+\_\+\+Scan\+A@{m\+Touch\+\_\+\+Scan\+A}}
+\index{m\+Touch\+\_\+\+Scan\+A@{m\+Touch\+\_\+\+Scan\+A}!m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}}
+\subsubsection[{m\+Touch\+\_\+\+Scan\+A}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$const m\+Touch\+\_\+\+Scan\+A\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]})(void) = M\+T\+O\+U\+C\+H\+\_\+\+S\+C\+A\+N\+A\+\_\+\+V\+A\+R\+\_\+\+I\+N\+I\+T}\label{m_touch__acquisition_8c_af67749fc5d04faeb760250212ec682a4}
+
+
+Definition at line 167 of file m\+Touch\+\_\+acquisition.\+c.
+
+\hypertarget{m_touch__acquisition_8c_a012eaa2610ea954a92ec444967c034e3}{}\index{m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}!m\+Touch\+\_\+\+Scan\+B@{m\+Touch\+\_\+\+Scan\+B}}
+\index{m\+Touch\+\_\+\+Scan\+B@{m\+Touch\+\_\+\+Scan\+B}!m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}}
+\subsubsection[{m\+Touch\+\_\+\+Scan\+B}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$const m\+Touch\+\_\+\+Scan\+B\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]})(void) = M\+T\+O\+U\+C\+H\+\_\+\+S\+C\+A\+N\+B\+\_\+\+V\+A\+R\+\_\+\+I\+N\+I\+T}\label{m_touch__acquisition_8c_a012eaa2610ea954a92ec444967c034e3}
+
+
+Definition at line 168 of file m\+Touch\+\_\+acquisition.\+c.
+
+\hypertarget{m_touch__acquisition_8c_a6e24f307e58e95e12550082469099ae2}{}\index{m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}!m\+Touch\+\_\+sensor\+Data@{m\+Touch\+\_\+sensor\+Data}}
+\index{m\+Touch\+\_\+sensor\+Data@{m\+Touch\+\_\+sensor\+Data}!m\+Touch\+\_\+acquisition.\+c@{m\+Touch\+\_\+acquisition.\+c}}
+\subsubsection[{m\+Touch\+\_\+sensor\+Data}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t m\+Touch\+\_\+sensor\+Data\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]}}\label{m_touch__acquisition_8c_a6e24f307e58e95e12550082469099ae2}
+
+
+Latch register storing the latest m\+Touch acquisition results. 
+
+
+
+Definition at line 90 of file m\+Touch\+\_\+acquisition.\+c.
+

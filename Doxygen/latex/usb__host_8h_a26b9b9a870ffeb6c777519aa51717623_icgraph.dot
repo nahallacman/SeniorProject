@@ -1,0 +1,31 @@
+digraph "USBHostTransferIsComplete"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="USBHostTransferIsComplete",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="AndroidAppIsWriteComplete",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__android_8c.html#a13a0d2e1011374dcdf39d8b670354816"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="AndroidAppIsReadComplete",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__android_8c.html#a554f249b3e321009c4c9eebfa7086c05"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="USBHostAudioV1ReceiveAudioData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__audio__v1_8c.html#a7e8225c49c425f01d701bfc19def1d6d"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="USBHostAudioV1SetInterface\lFullBandwidth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__audio__v1_8c.html#a36b0b9dacba16ed6814e80bb7d1b28fb"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="USBHostAudioV1SetInterface\lZeroBandwidth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__audio__v1_8c.html#ae4fcdb5b497fe8a416d7b791ea44aa37"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="USBHostCDCTasks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__cdc_8c.html#a6e595b04dc00545e596306e7f4b3fa3d"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="USBHostCDC_ApiDeviceDetect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__cdc__interface_8c.html#aebb742aa385542e9b8163cea4f7604fc"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="USBHostCDCEventHandler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__cdc_8c.html#ae649881c3336ca01be846a3edc875946"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="USBHostGenericTasks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__generic_8c.html#abd6ca7e1f63df6b4ed20110b719b2a1c"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="USBHostHIDTasks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__hid_8c.html#a7339c9ce88c387efd28375603415b491"];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="USBHostMIDITransferIsComplete",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__midi_8c.html#a6665273de0449ec7f98be52f8dc2a46c"];
+  Node1 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="USBHostMSDTasks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__msd_8c.html#aa41223ae18108ca0d663875f47a3ae37"];
+}

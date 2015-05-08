@@ -1,0 +1,88 @@
+\hypertarget{structm_touch___state_variables}{}\section{m\+Touch\+\_\+\+State\+Variables Union Reference}
+\label{structm_touch___state_variables}\index{m\+Touch\+\_\+\+State\+Variables@{m\+Touch\+\_\+\+State\+Variables}}
+
+
+Contains sensor and state variables.  
+
+
+
+
+{\ttfamily \#include $<$m\+Touch.\+h$>$}
+
+
+
+Collaboration diagram for m\+Touch\+\_\+\+State\+Variables\+:
+% FIG 0
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \hyperlink{structm_touch___state_variables_a99c520ba011c1d8bcb6a72ffd51196c9}{sample\+Counter}
+\item 
+uint8\+\_\+t \hyperlink{structm_touch___state_variables_a5413f90a1ad32d11a00aa20df8d9ba3c}{sample\+Counter}
+\item 
+uint16\+\_\+t \hyperlink{structm_touch___state_variables_ac0aad0e526866eb2e45ffabeaa89453d}{inactivity}
+\begin{DoxyCompactList}\small\item\em Counter to track the number of consecutive decode calls in a row where all sensors are considered released. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{structm_touch___state_variables_a5b3fdb1d6accca0c21fbf4ae06912074}{inactivity}
+\begin{DoxyCompactList}\small\item\em Same as above, but implemented more efficiently if the counter will not be exceeding 255. \end{DoxyCompactList}\item 
+\hyperlink{structm_touch___sensor_variables}{m\+Touch\+\_\+\+Sensor\+Variables} \hyperlink{structm_touch___state_variables_a4205dd81984b86d07522a6bd719e2c99}{sensor} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains sensor and state variables. 
+
+By defining this as a union, the variable space is able to be reused regardless of differences in the variables\textquotesingle{} sizes and quantity. 
+
+Definition at line 155 of file m\+Touch.\+h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{structm_touch___state_variables_ac0aad0e526866eb2e45ffabeaa89453d}{}\index{m\+Touch\+\_\+\+State\+Variables@{m\+Touch\+\_\+\+State\+Variables}!inactivity@{inactivity}}
+\index{inactivity@{inactivity}!m\+Touch\+\_\+\+State\+Variables@{m\+Touch\+\_\+\+State\+Variables}}
+\subsubsection[{inactivity}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t inactivity}\label{structm_touch___state_variables_ac0aad0e526866eb2e45ffabeaa89453d}
+
+
+Counter to track the number of consecutive decode calls in a row where all sensors are considered released. 
+
+
+
+Definition at line 165 of file m\+Touch.\+h.
+
+\hypertarget{structm_touch___state_variables_a5b3fdb1d6accca0c21fbf4ae06912074}{}\index{m\+Touch\+\_\+\+State\+Variables@{m\+Touch\+\_\+\+State\+Variables}!inactivity@{inactivity}}
+\index{inactivity@{inactivity}!m\+Touch\+\_\+\+State\+Variables@{m\+Touch\+\_\+\+State\+Variables}}
+\subsubsection[{inactivity}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t inactivity}\label{structm_touch___state_variables_a5b3fdb1d6accca0c21fbf4ae06912074}
+
+
+Same as above, but implemented more efficiently if the counter will not be exceeding 255. 
+
+
+
+Definition at line 167 of file m\+Touch.\+h.
+
+\hypertarget{structm_touch___state_variables_a99c520ba011c1d8bcb6a72ffd51196c9}{}\index{m\+Touch\+\_\+\+State\+Variables@{m\+Touch\+\_\+\+State\+Variables}!sample\+Counter@{sample\+Counter}}
+\index{sample\+Counter@{sample\+Counter}!m\+Touch\+\_\+\+State\+Variables@{m\+Touch\+\_\+\+State\+Variables}}
+\subsubsection[{sample\+Counter}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t sample\+Counter}\label{structm_touch___state_variables_a99c520ba011c1d8bcb6a72ffd51196c9}
+
+
+Definition at line 158 of file m\+Touch.\+h.
+
+\hypertarget{structm_touch___state_variables_a5413f90a1ad32d11a00aa20df8d9ba3c}{}\index{m\+Touch\+\_\+\+State\+Variables@{m\+Touch\+\_\+\+State\+Variables}!sample\+Counter@{sample\+Counter}}
+\index{sample\+Counter@{sample\+Counter}!m\+Touch\+\_\+\+State\+Variables@{m\+Touch\+\_\+\+State\+Variables}}
+\subsubsection[{sample\+Counter}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t sample\+Counter}\label{structm_touch___state_variables_a5413f90a1ad32d11a00aa20df8d9ba3c}
+
+
+Definition at line 160 of file m\+Touch.\+h.
+
+\hypertarget{structm_touch___state_variables_a4205dd81984b86d07522a6bd719e2c99}{}\index{m\+Touch\+\_\+\+State\+Variables@{m\+Touch\+\_\+\+State\+Variables}!sensor@{sensor}}
+\index{sensor@{sensor}!m\+Touch\+\_\+\+State\+Variables@{m\+Touch\+\_\+\+State\+Variables}}
+\subsubsection[{sensor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf m\+Touch\+\_\+\+Sensor\+Variables} sensor\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]}}\label{structm_touch___state_variables_a4205dd81984b86d07522a6bd719e2c99}
+
+
+Definition at line 171 of file m\+Touch.\+h.
+
+
+
+The documentation for this union was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/\hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h}{m\+Touch.\+h}\end{DoxyCompactItemize}

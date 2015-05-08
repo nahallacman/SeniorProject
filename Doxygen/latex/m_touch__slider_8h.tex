@@ -1,0 +1,88 @@
+\hypertarget{m_touch__slider_8h}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch\+\_\+slider.h File Reference}
+\label{m_touch__slider_8h}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch\+\_\+slider.\+h@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch\+\_\+slider.\+h}}
+
+
+Internal framework header file for generating the framework\textquotesingle{}s slider code.  
+
+
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{unionm_touch__wheel_status}{m\+Touch\+\_\+wheel\+Status}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{m_touch__slider_8h_a91b84db8022a8e579ec6b950a2bac713}{m\+Touch\+\_\+wheel\+Direction} \{ \hyperlink{m_touch__slider_8h_a91b84db8022a8e579ec6b950a2bac713a2cfd26645610dcc1b60ef742bbae7960}{N\+O\+S\+C\+R\+O\+L\+L\+I\+N\+G}, 
+\hyperlink{m_touch__slider_8h_a91b84db8022a8e579ec6b950a2bac713a436e34ac11f92a71ed5b0c06a6cba180}{C\+L\+O\+C\+K\+W\+I\+S\+E}, 
+\hyperlink{m_touch__slider_8h_a91b84db8022a8e579ec6b950a2bac713a4b4f0ee700ba806e729c8d4cbb3c1f7b}{C\+O\+U\+N\+T\+E\+R\+C\+L\+O\+C\+K\+W\+I\+S\+E}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{unionm_touch__wheel_status}{m\+Touch\+\_\+wheel\+Status} \hyperlink{m_touch__slider_8h_af9d6e15d1a2fbd454cca618c8ece73be}{wheel\+Status}
+\item 
+int8\+\_\+t \hyperlink{m_touch__slider_8h_ac2c5314c25c8d60a9fdc2a57bf36efa3}{scrolling\+Step} \mbox{[}S\+P\+E\+E\+D\+L\+O\+G\+W\+I\+N\+D\+O\+W\mbox{]}
+\item 
+uint8\+\_\+t \hyperlink{m_touch__slider_8h_ac3b9b7ec421a36839342ce32844d4663}{last\+Slidervalue} = 0
+\item 
+int16\+\_\+t \hyperlink{m_touch__slider_8h_adee4307424522bba1d025c101a11a402}{last\+Speed} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Internal framework header file for generating the framework\textquotesingle{}s slider code. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{m_touch__slider_8h_a91b84db8022a8e579ec6b950a2bac713}{}\index{m\+Touch\+\_\+slider.\+h@{m\+Touch\+\_\+slider.\+h}!m\+Touch\+\_\+wheel\+Direction@{m\+Touch\+\_\+wheel\+Direction}}
+\index{m\+Touch\+\_\+wheel\+Direction@{m\+Touch\+\_\+wheel\+Direction}!m\+Touch\+\_\+slider.\+h@{m\+Touch\+\_\+slider.\+h}}
+\subsubsection[{m\+Touch\+\_\+wheel\+Direction}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf m\+Touch\+\_\+wheel\+Direction}}\label{m_touch__slider_8h_a91b84db8022a8e579ec6b950a2bac713}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{N\+O\+S\+C\+R\+O\+L\+L\+I\+N\+G@{N\+O\+S\+C\+R\+O\+L\+L\+I\+N\+G}!m\+Touch\+\_\+slider.\+h@{m\+Touch\+\_\+slider.\+h}}\index{m\+Touch\+\_\+slider.\+h@{m\+Touch\+\_\+slider.\+h}!N\+O\+S\+C\+R\+O\+L\+L\+I\+N\+G@{N\+O\+S\+C\+R\+O\+L\+L\+I\+N\+G}}\item[{\em 
+\hypertarget{m_touch__slider_8h_a91b84db8022a8e579ec6b950a2bac713a2cfd26645610dcc1b60ef742bbae7960}{}N\+O\+S\+C\+R\+O\+L\+L\+I\+N\+G\label{m_touch__slider_8h_a91b84db8022a8e579ec6b950a2bac713a2cfd26645610dcc1b60ef742bbae7960}
+}]\index{C\+L\+O\+C\+K\+W\+I\+S\+E@{C\+L\+O\+C\+K\+W\+I\+S\+E}!m\+Touch\+\_\+slider.\+h@{m\+Touch\+\_\+slider.\+h}}\index{m\+Touch\+\_\+slider.\+h@{m\+Touch\+\_\+slider.\+h}!C\+L\+O\+C\+K\+W\+I\+S\+E@{C\+L\+O\+C\+K\+W\+I\+S\+E}}\item[{\em 
+\hypertarget{m_touch__slider_8h_a91b84db8022a8e579ec6b950a2bac713a436e34ac11f92a71ed5b0c06a6cba180}{}C\+L\+O\+C\+K\+W\+I\+S\+E\label{m_touch__slider_8h_a91b84db8022a8e579ec6b950a2bac713a436e34ac11f92a71ed5b0c06a6cba180}
+}]\index{C\+O\+U\+N\+T\+E\+R\+C\+L\+O\+C\+K\+W\+I\+S\+E@{C\+O\+U\+N\+T\+E\+R\+C\+L\+O\+C\+K\+W\+I\+S\+E}!m\+Touch\+\_\+slider.\+h@{m\+Touch\+\_\+slider.\+h}}\index{m\+Touch\+\_\+slider.\+h@{m\+Touch\+\_\+slider.\+h}!C\+O\+U\+N\+T\+E\+R\+C\+L\+O\+C\+K\+W\+I\+S\+E@{C\+O\+U\+N\+T\+E\+R\+C\+L\+O\+C\+K\+W\+I\+S\+E}}\item[{\em 
+\hypertarget{m_touch__slider_8h_a91b84db8022a8e579ec6b950a2bac713a4b4f0ee700ba806e729c8d4cbb3c1f7b}{}C\+O\+U\+N\+T\+E\+R\+C\+L\+O\+C\+K\+W\+I\+S\+E\label{m_touch__slider_8h_a91b84db8022a8e579ec6b950a2bac713a4b4f0ee700ba806e729c8d4cbb3c1f7b}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 1168 of file m\+Touch\+\_\+slider.\+h.
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{m_touch__slider_8h_ac3b9b7ec421a36839342ce32844d4663}{}\index{m\+Touch\+\_\+slider.\+h@{m\+Touch\+\_\+slider.\+h}!last\+Slidervalue@{last\+Slidervalue}}
+\index{last\+Slidervalue@{last\+Slidervalue}!m\+Touch\+\_\+slider.\+h@{m\+Touch\+\_\+slider.\+h}}
+\subsubsection[{last\+Slidervalue}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t last\+Slidervalue = 0}\label{m_touch__slider_8h_ac3b9b7ec421a36839342ce32844d4663}
+
+
+Definition at line 1192 of file m\+Touch\+\_\+slider.\+h.
+
+\hypertarget{m_touch__slider_8h_adee4307424522bba1d025c101a11a402}{}\index{m\+Touch\+\_\+slider.\+h@{m\+Touch\+\_\+slider.\+h}!last\+Speed@{last\+Speed}}
+\index{last\+Speed@{last\+Speed}!m\+Touch\+\_\+slider.\+h@{m\+Touch\+\_\+slider.\+h}}
+\subsubsection[{last\+Speed}]{\setlength{\rightskip}{0pt plus 5cm}int16\+\_\+t last\+Speed = 0}\label{m_touch__slider_8h_adee4307424522bba1d025c101a11a402}
+
+
+Definition at line 1193 of file m\+Touch\+\_\+slider.\+h.
+
+\hypertarget{m_touch__slider_8h_ac2c5314c25c8d60a9fdc2a57bf36efa3}{}\index{m\+Touch\+\_\+slider.\+h@{m\+Touch\+\_\+slider.\+h}!scrolling\+Step@{scrolling\+Step}}
+\index{scrolling\+Step@{scrolling\+Step}!m\+Touch\+\_\+slider.\+h@{m\+Touch\+\_\+slider.\+h}}
+\subsubsection[{scrolling\+Step}]{\setlength{\rightskip}{0pt plus 5cm}int8\+\_\+t scrolling\+Step\mbox{[}S\+P\+E\+E\+D\+L\+O\+G\+W\+I\+N\+D\+O\+W\mbox{]}}\label{m_touch__slider_8h_ac2c5314c25c8d60a9fdc2a57bf36efa3}
+
+
+Definition at line 1191 of file m\+Touch\+\_\+slider.\+h.
+
+\hypertarget{m_touch__slider_8h_af9d6e15d1a2fbd454cca618c8ece73be}{}\index{m\+Touch\+\_\+slider.\+h@{m\+Touch\+\_\+slider.\+h}!wheel\+Status@{wheel\+Status}}
+\index{wheel\+Status@{wheel\+Status}!m\+Touch\+\_\+slider.\+h@{m\+Touch\+\_\+slider.\+h}}
+\subsubsection[{wheel\+Status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf m\+Touch\+\_\+wheel\+Status} wheel\+Status}\label{m_touch__slider_8h_af9d6e15d1a2fbd454cca618c8ece73be}
+
+
+Definition at line 1186 of file m\+Touch\+\_\+slider.\+h.
+

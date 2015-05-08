@@ -1,0 +1,12 @@
+digraph "ModeSenseResponse"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="ModeSenseResponse",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" BlockDsc" ];
+  Node2 [label="tBlockDescriptor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structt_block_descriptor.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Header" ];
+  Node3 [label="tModeParamHdr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structt_mode_param_hdr.html"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" modePage" ];
+  Node4 [label="tModePage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structt_mode_page.html"];
+}

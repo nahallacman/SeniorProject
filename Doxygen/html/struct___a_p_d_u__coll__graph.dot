@@ -1,0 +1,25 @@
+digraph "_APDU"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="_APDU",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" abrt" ,fontname="Helvetica"];
+  Node2 [label="_ABRT_apdu",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct___a_b_r_t__apdu.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" rlrq" ,fontname="Helvetica"];
+  Node3 [label="_RLRQ_apdu",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct___r_l_r_q__apdu.html"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" aarq" ,fontname="Helvetica"];
+  Node4 [label="_AARQ_apdu",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct___a_a_r_q__apdu.html"];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" data_proto_list" ,fontname="Helvetica"];
+  Node5 [label="_DataProtoList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct___data_proto_list.html"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" value" ,fontname="Helvetica"];
+  Node6 [label="_DataProto",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct___data_proto.html"];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" data_proto_info" ,fontname="Helvetica"];
+  Node7 [label="_Any",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct___any.html"];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" prst" ,fontname="Helvetica"];
+  Node8 [label="_octet_string",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct__octet__string.html"];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" rlre" ,fontname="Helvetica"];
+  Node9 [label="_RLRE_apdu",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct___r_l_r_e__apdu.html"];
+  Node10 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" aare" ,fontname="Helvetica"];
+  Node10 [label="_AARE_apdu",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct___a_a_r_e__apdu.html"];
+  Node6 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" selected_data_proto" ,fontname="Helvetica"];
+}

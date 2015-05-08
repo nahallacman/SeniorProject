@@ -1,0 +1,117 @@
+\hypertarget{m_touch_cap_tmr_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/m\+Touch\+Cap\+Lib/m\+Touch\+Cap\+Tmr.c File Reference}
+\label{m_touch_cap_tmr_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/m\+Touch\+Cap\+Lib/m\+Touch\+Cap\+Tmr.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/m\+Touch\+Cap\+Lib/m\+Touch\+Cap\+Tmr.\+c}}
+{\ttfamily \#include \char`\"{}m\+Touch\+Config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}m\+Touch\+Cap\+A\+P\+I.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}m\+Touch\+Cap\+Tmr.\+h\char`\"{}}\\*
+Include dependency graph for m\+Touch\+Cap\+Tmr.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{m_touch_cap_tmr_8c_a8798188184f69dc0589c35329a8c3a70}{T\+I\+M\+E\+R\+C\+A\+L\+L\+B\+A\+C\+K\+F\+U\+N\+C} (void)
+\item 
+void \hyperlink{m_touch_cap_tmr_8c_a95a5ad3090a0d696db8e2ba8d8ad1b95}{m\+Touch\+Cap\+Tmr\+\_\+\+Ignore\+Current\+Data} (\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} Flag)
+\item 
+void \hyperlink{m_touch_cap_tmr_8c_acca8db96d35ff1f5a811cdad2f7e4855}{m\+Touch\+Cap\+Tmr\+\_\+\+Init\+Timer4} (void)
+\item 
+void \hyperlink{m_touch_cap_tmr_8c_a29c8167f92ec2f61ce3c583a60de9e74}{m\+Touch\+Cap\+Tmr\+\_\+\+Set\+Period\+Timer4} (unsigned int time)
+\item 
+void \hyperlink{m_touch_cap_tmr_8c_a658d34790c3c95468f75de1fea845bea}{\+\_\+\+\_\+\+I\+S\+R} (\+\_\+\+T\+I\+M\+E\+R\+\_\+4\+\_\+\+V\+E\+C\+T\+O\+R, I\+P\+L1\+S\+O\+F\+T)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{m_touch_cap_tmr_8c_aae08735017d546825e91a08e381b16b6}{Em\+Touch\+Data\+Ready}
+\item 
+volatile \hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{m_touch_cap_tmr_8c_ac03252b9348c2aefe965f72792f59bd1}{Ignore\+Current\+Data\+Flag} = \hyperlink{_generic_type_defs_8h_afbf708854fe02af8475a9ba02f3196cbaa1e095cc966dbecf6a0d8aad75348d1a}{F\+A\+L\+S\+E}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{m_touch_cap_tmr_8c_a658d34790c3c95468f75de1fea845bea}{}\index{m\+Touch\+Cap\+Tmr.\+c@{m\+Touch\+Cap\+Tmr.\+c}!\+\_\+\+\_\+\+I\+S\+R@{\+\_\+\+\_\+\+I\+S\+R}}
+\index{\+\_\+\+\_\+\+I\+S\+R@{\+\_\+\+\_\+\+I\+S\+R}!m\+Touch\+Cap\+Tmr.\+c@{m\+Touch\+Cap\+Tmr.\+c}}
+\subsubsection[{\+\_\+\+\_\+\+I\+S\+R}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+\+\_\+\+I\+S\+R (
+\begin{DoxyParamCaption}
+\item[{\+\_\+\+T\+I\+M\+E\+R\+\_\+4\+\_\+\+V\+E\+C\+T\+O\+R}]{, }
+\item[{I\+P\+L1\+S\+O\+F\+T}]{}
+\end{DoxyParamCaption}
+)}\label{m_touch_cap_tmr_8c_a658d34790c3c95468f75de1fea845bea}
+
+
+Definition at line 140 of file m\+Touch\+Cap\+Tmr.\+c.
+
+\hypertarget{m_touch_cap_tmr_8c_a95a5ad3090a0d696db8e2ba8d8ad1b95}{}\index{m\+Touch\+Cap\+Tmr.\+c@{m\+Touch\+Cap\+Tmr.\+c}!m\+Touch\+Cap\+Tmr\+\_\+\+Ignore\+Current\+Data@{m\+Touch\+Cap\+Tmr\+\_\+\+Ignore\+Current\+Data}}
+\index{m\+Touch\+Cap\+Tmr\+\_\+\+Ignore\+Current\+Data@{m\+Touch\+Cap\+Tmr\+\_\+\+Ignore\+Current\+Data}!m\+Touch\+Cap\+Tmr.\+c@{m\+Touch\+Cap\+Tmr.\+c}}
+\subsubsection[{m\+Touch\+Cap\+Tmr\+\_\+\+Ignore\+Current\+Data}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Touch\+Cap\+Tmr\+\_\+\+Ignore\+Current\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+O\+O\+L}}]{Flag}
+\end{DoxyParamCaption}
+)}\label{m_touch_cap_tmr_8c_a95a5ad3090a0d696db8e2ba8d8ad1b95}
+
+
+Definition at line 65 of file m\+Touch\+Cap\+Tmr.\+c.
+
+\hypertarget{m_touch_cap_tmr_8c_acca8db96d35ff1f5a811cdad2f7e4855}{}\index{m\+Touch\+Cap\+Tmr.\+c@{m\+Touch\+Cap\+Tmr.\+c}!m\+Touch\+Cap\+Tmr\+\_\+\+Init\+Timer4@{m\+Touch\+Cap\+Tmr\+\_\+\+Init\+Timer4}}
+\index{m\+Touch\+Cap\+Tmr\+\_\+\+Init\+Timer4@{m\+Touch\+Cap\+Tmr\+\_\+\+Init\+Timer4}!m\+Touch\+Cap\+Tmr.\+c@{m\+Touch\+Cap\+Tmr.\+c}}
+\subsubsection[{m\+Touch\+Cap\+Tmr\+\_\+\+Init\+Timer4}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Touch\+Cap\+Tmr\+\_\+\+Init\+Timer4 (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_touch_cap_tmr_8c_acca8db96d35ff1f5a811cdad2f7e4855}
+
+
+Definition at line 85 of file m\+Touch\+Cap\+Tmr.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\hypertarget{m_touch_cap_tmr_8c_a29c8167f92ec2f61ce3c583a60de9e74}{}\index{m\+Touch\+Cap\+Tmr.\+c@{m\+Touch\+Cap\+Tmr.\+c}!m\+Touch\+Cap\+Tmr\+\_\+\+Set\+Period\+Timer4@{m\+Touch\+Cap\+Tmr\+\_\+\+Set\+Period\+Timer4}}
+\index{m\+Touch\+Cap\+Tmr\+\_\+\+Set\+Period\+Timer4@{m\+Touch\+Cap\+Tmr\+\_\+\+Set\+Period\+Timer4}!m\+Touch\+Cap\+Tmr.\+c@{m\+Touch\+Cap\+Tmr.\+c}}
+\subsubsection[{m\+Touch\+Cap\+Tmr\+\_\+\+Set\+Period\+Timer4}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Touch\+Cap\+Tmr\+\_\+\+Set\+Period\+Timer4 (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{time}
+\end{DoxyParamCaption}
+)}\label{m_touch_cap_tmr_8c_a29c8167f92ec2f61ce3c583a60de9e74}
+
+
+Definition at line 124 of file m\+Touch\+Cap\+Tmr.\+c.
+
+\hypertarget{m_touch_cap_tmr_8c_a8798188184f69dc0589c35329a8c3a70}{}\index{m\+Touch\+Cap\+Tmr.\+c@{m\+Touch\+Cap\+Tmr.\+c}!T\+I\+M\+E\+R\+C\+A\+L\+L\+B\+A\+C\+K\+F\+U\+N\+C@{T\+I\+M\+E\+R\+C\+A\+L\+L\+B\+A\+C\+K\+F\+U\+N\+C}}
+\index{T\+I\+M\+E\+R\+C\+A\+L\+L\+B\+A\+C\+K\+F\+U\+N\+C@{T\+I\+M\+E\+R\+C\+A\+L\+L\+B\+A\+C\+K\+F\+U\+N\+C}!m\+Touch\+Cap\+Tmr.\+c@{m\+Touch\+Cap\+Tmr.\+c}}
+\subsubsection[{T\+I\+M\+E\+R\+C\+A\+L\+L\+B\+A\+C\+K\+F\+U\+N\+C}]{\setlength{\rightskip}{0pt plus 5cm}void T\+I\+M\+E\+R\+C\+A\+L\+L\+B\+A\+C\+K\+F\+U\+N\+C (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_touch_cap_tmr_8c_a8798188184f69dc0589c35329a8c3a70}
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{m_touch_cap_tmr_8c_aae08735017d546825e91a08e381b16b6}{}\index{m\+Touch\+Cap\+Tmr.\+c@{m\+Touch\+Cap\+Tmr.\+c}!Em\+Touch\+Data\+Ready@{Em\+Touch\+Data\+Ready}}
+\index{Em\+Touch\+Data\+Ready@{Em\+Touch\+Data\+Ready}!m\+Touch\+Cap\+Tmr.\+c@{m\+Touch\+Cap\+Tmr.\+c}}
+\subsubsection[{Em\+Touch\+Data\+Ready}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf U\+I\+N\+T8} Em\+Touch\+Data\+Ready}\label{m_touch_cap_tmr_8c_aae08735017d546825e91a08e381b16b6}
+External Variables 
+
+Definition at line 93 of file m\+Touch\+Cap\+A\+P\+I.\+c.
+
+\hypertarget{m_touch_cap_tmr_8c_ac03252b9348c2aefe965f72792f59bd1}{}\index{m\+Touch\+Cap\+Tmr.\+c@{m\+Touch\+Cap\+Tmr.\+c}!Ignore\+Current\+Data\+Flag@{Ignore\+Current\+Data\+Flag}}
+\index{Ignore\+Current\+Data\+Flag@{Ignore\+Current\+Data\+Flag}!m\+Touch\+Cap\+Tmr.\+c@{m\+Touch\+Cap\+Tmr.\+c}}
+\subsubsection[{Ignore\+Current\+Data\+Flag}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf B\+O\+O\+L} Ignore\+Current\+Data\+Flag = {\bf F\+A\+L\+S\+E}}\label{m_touch_cap_tmr_8c_ac03252b9348c2aefe965f72792f59bd1}
+
+
+Definition at line 60 of file m\+Touch\+Cap\+Tmr.\+c.
+

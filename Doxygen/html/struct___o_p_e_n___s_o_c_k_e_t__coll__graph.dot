@@ -1,0 +1,20 @@
+digraph "_OPEN_SOCKET"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="_OPEN_SOCKET",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" socketStart" ,fontname="Helvetica"];
+  Node2 [label="_MIWI_TICK",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$union___m_i_w_i___t_i_c_k.html"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" byte" ,fontname="Helvetica"];
+  Node3 [label="_MIWI_TICK_bytes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct___m_i_w_i___t_i_c_k_1_1___m_i_w_i___t_i_c_k__bytes.html"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" word" ,fontname="Helvetica"];
+  Node4 [label="_MIWI_TICK_words",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct___m_i_w_i___t_i_c_k_1_1___m_i_w_i___t_i_c_k__words.html"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ShortAddress1" ,fontname="Helvetica"];
+  Node5 [label="WORD_VAL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$union_w_o_r_d___v_a_l.html"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" bits\nbyte" ,fontname="Helvetica"];
+  Node6 [label="__PACKED",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_w_o_r_d___v_a_l_1_1_____p_a_c_k_e_d.html"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" status" ,fontname="Helvetica"];
+  Node7 [label="_OPEN_SOCKET_STATUS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$union___o_p_e_n___s_o_c_k_e_t_1_1___o_p_e_n___s_o_c_k_e_t___s_t_a_t_u_s.html"];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" bits" ,fontname="Helvetica"];
+  Node8 [label="_OPEN_SOCKET_STATUS_bits",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct___o_p_e_n___s_o_c_k_e_t_1_1___o_p_e_n___s_o_c_k_e_t___s_t_a_t_u_s_1_1___o_p_e_n___s_o_c_k_e_t___s_t_a_t_u_s__bits.html"];
+}

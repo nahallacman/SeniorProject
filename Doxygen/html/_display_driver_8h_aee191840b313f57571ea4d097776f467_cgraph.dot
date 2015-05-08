@@ -1,0 +1,36 @@
+digraph "PutImageDrv"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="PutImageDrv",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="ROPBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mchp_gfx_drv_8c.html#a0c6cf4c2bc9ef68c22b09f6ced12e887"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="ExternalMemoryCallback",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_primitive_8h.html#ae99cb247f7820909774ce7f4d345fc55"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="DrvGetImageColorDepth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mchp_gfx_drv_8c.html#a8789e5b54f148a8f95277f12199ad908"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="PutImage1BPPEDS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mchp_gfx_drv_8c.html#a4208b0edc173be1c383303a918036d21"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="DrvGetImageWidth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mchp_gfx_drv_8c.html#a05ead627e39e37639c948aeb1b0055e2"];
+  Node5 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="DrvGetImageHeight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mchp_gfx_drv_8c.html#a196ad1219f94614d21e8f7c20dfa9d54"];
+  Node5 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="IsPaletteEnabled",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mchp_gfx_drv_8c.html#a9c8f2ffee9f5da7b256c9d504b9524f3"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="PutImage4BPPEDS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mchp_gfx_drv_8c.html#aa4f334e326f1e32b14b17588dedd6bc7"];
+  Node9 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="PutImage8BPPEDS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mchp_gfx_drv_8c.html#a81bfde5cbdba014db52090c770cbf472"];
+  Node10 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="PutImage16BPPEDS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mchp_gfx_drv_8c.html#a48026f6dba24749b390f5a671923da57"];
+  Node11 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

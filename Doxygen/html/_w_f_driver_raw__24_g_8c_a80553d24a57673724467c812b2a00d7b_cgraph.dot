@@ -1,0 +1,19 @@
+digraph "RawRead"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="RawRead",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="RawSetIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_driver_raw__24_g_8c.html#a0992ec8558dd60d4d002ea18d557dcdc"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Write16BitWFRegister",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_driver_prv_8h.html#a914c1bea2233e373d5f6180b0be32b03"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TickGet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_tick_8h.html#a035d1d3f8afdca7abedf588ee1b20af0"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Read16BitWFRegister",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_driver_prv_8h.html#a0bf9eb8a56860f2fccbf68f53ca8eb46"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="RawGetByte",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_driver_raw__24_g_8c.html#a0f9f450b78d964f8b34c2f3d50472527"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="ReadWFArray",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_driver_prv_8h.html#ab01f171165bfff9b15b269ac4c4c5574"];
+}

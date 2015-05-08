@@ -1,0 +1,59 @@
+\hypertarget{usb__function__generic_8h}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+U\+S\+B/usb\+\_\+function\+\_\+generic.h File Reference}
+\label{usb__function__generic_8h}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+U\+S\+B/usb\+\_\+function\+\_\+generic.\+h@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+U\+S\+B/usb\+\_\+function\+\_\+generic.\+h}}
+{\ttfamily \#include \char`\"{}Generic\+Type\+Defs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\+\_\+config.\+h\char`\"{}}\\*
+Include dependency graph for usb\+\_\+function\+\_\+generic.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{usb__function__generic_8h_acd5a69b3f3bd2c6c2daa281b0c7f6c8e}{U\+S\+B\+Gen\+Write}(ep,  data,  len)~\hyperlink{usb__device_8h_a1c44e85849009caee0ac562178e8a65a}{U\+S\+B\+Tx\+One\+Packet}(ep,data,len)
+\item 
+\#define \hyperlink{usb__function__generic_8h_a76fb8a3b270ba760e3ab045eaa4c5a4a}{U\+S\+B\+Gen\+Read}(ep,  data,  len)~\hyperlink{usb__device_8h_a117bd703b9fbeb1741e3cef100936d76}{U\+S\+B\+Rx\+One\+Packet}(ep,data,len)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{usb__function__generic_8h_ae6902a85c2f5556f449b8c9cafa4d884}{U\+S\+B\+Check\+Vendor\+Request} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{usb__function__generic_8h_a76fb8a3b270ba760e3ab045eaa4c5a4a}{}\index{usb\+\_\+function\+\_\+generic.\+h@{usb\+\_\+function\+\_\+generic.\+h}!U\+S\+B\+Gen\+Read@{U\+S\+B\+Gen\+Read}}
+\index{U\+S\+B\+Gen\+Read@{U\+S\+B\+Gen\+Read}!usb\+\_\+function\+\_\+generic.\+h@{usb\+\_\+function\+\_\+generic.\+h}}
+\subsubsection[{U\+S\+B\+Gen\+Read}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+Gen\+Read(
+\begin{DoxyParamCaption}
+\item[{}]{ep, }
+\item[{}]{data, }
+\item[{}]{len}
+\end{DoxyParamCaption}
+)~{\bf U\+S\+B\+Rx\+One\+Packet}(ep,data,len)}\label{usb__function__generic_8h_a76fb8a3b270ba760e3ab045eaa4c5a4a}
+
+
+Definition at line 192 of file usb\+\_\+function\+\_\+generic.\+h.
+
+\hypertarget{usb__function__generic_8h_acd5a69b3f3bd2c6c2daa281b0c7f6c8e}{}\index{usb\+\_\+function\+\_\+generic.\+h@{usb\+\_\+function\+\_\+generic.\+h}!U\+S\+B\+Gen\+Write@{U\+S\+B\+Gen\+Write}}
+\index{U\+S\+B\+Gen\+Write@{U\+S\+B\+Gen\+Write}!usb\+\_\+function\+\_\+generic.\+h@{usb\+\_\+function\+\_\+generic.\+h}}
+\subsubsection[{U\+S\+B\+Gen\+Write}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+Gen\+Write(
+\begin{DoxyParamCaption}
+\item[{}]{ep, }
+\item[{}]{data, }
+\item[{}]{len}
+\end{DoxyParamCaption}
+)~{\bf U\+S\+B\+Tx\+One\+Packet}(ep,data,len)}\label{usb__function__generic_8h_acd5a69b3f3bd2c6c2daa281b0c7f6c8e}
+I N C L U D E S D E F I N I T I O N S S T R U C T U R E S E X T E R N S P U B L I C P R O T O T Y P E S 
+
+Definition at line 152 of file usb\+\_\+function\+\_\+generic.\+h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{usb__function__generic_8h_ae6902a85c2f5556f449b8c9cafa4d884}{}\index{usb\+\_\+function\+\_\+generic.\+h@{usb\+\_\+function\+\_\+generic.\+h}!U\+S\+B\+Check\+Vendor\+Request@{U\+S\+B\+Check\+Vendor\+Request}}
+\index{U\+S\+B\+Check\+Vendor\+Request@{U\+S\+B\+Check\+Vendor\+Request}!usb\+\_\+function\+\_\+generic.\+h@{usb\+\_\+function\+\_\+generic.\+h}}
+\subsubsection[{U\+S\+B\+Check\+Vendor\+Request}]{\setlength{\rightskip}{0pt plus 5cm}void U\+S\+B\+Check\+Vendor\+Request (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{usb__function__generic_8h_ae6902a85c2f5556f449b8c9cafa4d884}

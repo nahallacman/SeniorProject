@@ -1,0 +1,198 @@
+\hypertarget{_chart_8h}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+Graphics/\+Chart.h File Reference}
+\label{_chart_8h}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+Graphics/\+Chart.\+h@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+Graphics/\+Chart.\+h}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_d_a_t_a_s_e_r_i_e_s}{D\+A\+T\+A\+S\+E\+R\+I\+E\+S}
+\item 
+struct \hyperlink{struct_c_h_a_r_t_p_a_r_a_m}{C\+H\+A\+R\+T\+P\+A\+R\+A\+M}
+\item 
+struct \hyperlink{struct_c_h_a_r_t}{C\+H\+A\+R\+T}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} \hyperlink{_chart_8h_a78111311e1d84698cec19c87990b6854}{Ch\+Set\+Data\+Series} (\hyperlink{struct_c_h_a_r_t}{C\+H\+A\+R\+T} $\ast$p\+Ch, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} series\+Num, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} status)
+\item 
+\hyperlink{struct_c_h_a_r_t}{C\+H\+A\+R\+T} $\ast$ \hyperlink{_chart_8h_a5acd1aa33b2b87e8c6d976c1bcdfadf9}{Ch\+Create} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} I\+D, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} left, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} top, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} right, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} bottom, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} state, \hyperlink{struct_d_a_t_a_s_e_r_i_e_s}{D\+A\+T\+A\+S\+E\+R\+I\+E\+S} $\ast$p\+Data, \hyperlink{struct_c_h_a_r_t_p_a_r_a_m}{C\+H\+A\+R\+T\+P\+A\+R\+A\+M} $\ast$p\+Param, \hyperlink{struct_g_o_l___s_c_h_e_m_e}{G\+O\+L\+\_\+\+S\+C\+H\+E\+M\+E} $\ast$p\+Scheme)
+\item 
+\hyperlink{struct_d_a_t_a_s_e_r_i_e_s}{D\+A\+T\+A\+S\+E\+R\+I\+E\+S} $\ast$ \hyperlink{_chart_8h_ae3c5494cf1fcf039014ce3a8bdcea0bd}{Ch\+Add\+Data\+Series} (\hyperlink{struct_c_h_a_r_t}{C\+H\+A\+R\+T} $\ast$p\+Ch, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} n\+Samples, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} $\ast$p\+Data, X\+C\+H\+A\+R $\ast$p\+Name)
+\item 
+void \hyperlink{_chart_8h_a86a34c982d0e9fec306ed1836293686e}{Ch\+Free\+Data\+Series} (void $\ast$p\+Obj)
+\item 
+void \hyperlink{_chart_8h_ad2e41b63ef9e9d77d58e8c9374c6ea82}{Ch\+Remove\+Data\+Series} (\hyperlink{struct_c_h_a_r_t}{C\+H\+A\+R\+T} $\ast$p\+Ch, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} number)
+\item 
+void \hyperlink{_chart_8h_a20aba995892b1a4e034408de92fb30de}{Ch\+Set\+Value\+Range} (\hyperlink{struct_c_h_a_r_t}{C\+H\+A\+R\+T} $\ast$p\+Ch, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} min, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} max)
+\item 
+void \hyperlink{_chart_8h_a094d1453443cc5aa65667697ea9654e3}{Ch\+Set\+Percent\+Range} (\hyperlink{struct_c_h_a_r_t}{C\+H\+A\+R\+T} $\ast$p\+Ch, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} min, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} max)
+\item 
+void \hyperlink{_chart_8h_ae0eadd7547f38e95b80a016656178538}{Ch\+Set\+Sample\+Range} (\hyperlink{struct_c_h_a_r_t}{C\+H\+A\+R\+T} $\ast$p\+Ch, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} start, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} end)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_chart_8h_a7e8931d7896ba402bcd4a7a3df3eb1ee}{Ch\+Translate\+Msg} (void $\ast$p\+Obj, \hyperlink{struct_g_o_l___m_s_g}{G\+O\+L\+\_\+\+M\+S\+G} $\ast$p\+Msg)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_chart_8h_ae94d3144d62a125f960cc138130721bb}{Ch\+Draw} (void $\ast$p\+Obj)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_chart_8h_ae3c5494cf1fcf039014ce3a8bdcea0bd}{}\index{Chart.\+h@{Chart.\+h}!Ch\+Add\+Data\+Series@{Ch\+Add\+Data\+Series}}
+\index{Ch\+Add\+Data\+Series@{Ch\+Add\+Data\+Series}!Chart.\+h@{Chart.\+h}}
+\subsubsection[{Ch\+Add\+Data\+Series}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+A\+T\+A\+S\+E\+R\+I\+E\+S}$\ast$ Ch\+Add\+Data\+Series (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+H\+A\+R\+T} $\ast$}]{p\+Ch, }
+\item[{{\bf W\+O\+R\+D}}]{n\+Samples, }
+\item[{{\bf W\+O\+R\+D} $\ast$}]{p\+Data, }
+\item[{X\+C\+H\+A\+R $\ast$}]{p\+Name}
+\end{DoxyParamCaption}
+)}\label{_chart_8h_ae3c5494cf1fcf039014ce3a8bdcea0bd}
+
+
+Definition at line 2785 of file Chart.\+c.
+
+\hypertarget{_chart_8h_a5acd1aa33b2b87e8c6d976c1bcdfadf9}{}\index{Chart.\+h@{Chart.\+h}!Ch\+Create@{Ch\+Create}}
+\index{Ch\+Create@{Ch\+Create}!Chart.\+h@{Chart.\+h}}
+\subsubsection[{Ch\+Create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+H\+A\+R\+T}$\ast$ Ch\+Create (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{I\+D, }
+\item[{{\bf S\+H\+O\+R\+T}}]{left, }
+\item[{{\bf S\+H\+O\+R\+T}}]{top, }
+\item[{{\bf S\+H\+O\+R\+T}}]{right, }
+\item[{{\bf S\+H\+O\+R\+T}}]{bottom, }
+\item[{{\bf W\+O\+R\+D}}]{state, }
+\item[{{\bf D\+A\+T\+A\+S\+E\+R\+I\+E\+S} $\ast$}]{p\+Data, }
+\item[{{\bf C\+H\+A\+R\+T\+P\+A\+R\+A\+M} $\ast$}]{p\+Param, }
+\item[{{\bf G\+O\+L\+\_\+\+S\+C\+H\+E\+M\+E} $\ast$}]{p\+Scheme}
+\end{DoxyParamCaption}
+)}\label{_chart_8h_a5acd1aa33b2b87e8c6d976c1bcdfadf9}
+
+
+Definition at line 84 of file Chart.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 0
+
+
+\hypertarget{_chart_8h_ae94d3144d62a125f960cc138130721bb}{}\index{Chart.\+h@{Chart.\+h}!Ch\+Draw@{Ch\+Draw}}
+\index{Ch\+Draw@{Ch\+Draw}!Chart.\+h@{Chart.\+h}}
+\subsubsection[{Ch\+Draw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Ch\+Draw (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{p\+Obj}
+\end{DoxyParamCaption}
+)}\label{_chart_8h_ae94d3144d62a125f960cc138130721bb}
+
+
+Definition at line 399 of file Chart.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\hypertarget{_chart_8h_a86a34c982d0e9fec306ed1836293686e}{}\index{Chart.\+h@{Chart.\+h}!Ch\+Free\+Data\+Series@{Ch\+Free\+Data\+Series}}
+\index{Ch\+Free\+Data\+Series@{Ch\+Free\+Data\+Series}!Chart.\+h@{Chart.\+h}}
+\subsubsection[{Ch\+Free\+Data\+Series}]{\setlength{\rightskip}{0pt plus 5cm}void Ch\+Free\+Data\+Series (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{p\+Obj}
+\end{DoxyParamCaption}
+)}\label{_chart_8h_a86a34c982d0e9fec306ed1836293686e}
+
+
+Definition at line 2825 of file Chart.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\hypertarget{_chart_8h_ad2e41b63ef9e9d77d58e8c9374c6ea82}{}\index{Chart.\+h@{Chart.\+h}!Ch\+Remove\+Data\+Series@{Ch\+Remove\+Data\+Series}}
+\index{Ch\+Remove\+Data\+Series@{Ch\+Remove\+Data\+Series}!Chart.\+h@{Chart.\+h}}
+\subsubsection[{Ch\+Remove\+Data\+Series}]{\setlength{\rightskip}{0pt plus 5cm}void Ch\+Remove\+Data\+Series (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+H\+A\+R\+T} $\ast$}]{p\+Ch, }
+\item[{{\bf W\+O\+R\+D}}]{number}
+\end{DoxyParamCaption}
+)}\label{_chart_8h_ad2e41b63ef9e9d77d58e8c9374c6ea82}
+
+
+Definition at line 2865 of file Chart.\+c.
+
+\hypertarget{_chart_8h_a78111311e1d84698cec19c87990b6854}{}\index{Chart.\+h@{Chart.\+h}!Ch\+Set\+Data\+Series@{Ch\+Set\+Data\+Series}}
+\index{Ch\+Set\+Data\+Series@{Ch\+Set\+Data\+Series}!Chart.\+h@{Chart.\+h}}
+\subsubsection[{Ch\+Set\+Data\+Series}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+H\+O\+R\+T} Ch\+Set\+Data\+Series (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+H\+A\+R\+T} $\ast$}]{p\+Ch, }
+\item[{{\bf W\+O\+R\+D}}]{series\+Num, }
+\item[{{\bf B\+Y\+T\+E}}]{status}
+\end{DoxyParamCaption}
+)}\label{_chart_8h_a78111311e1d84698cec19c87990b6854}
+
+
+Definition at line 2928 of file Chart.\+c.
+
+\hypertarget{_chart_8h_a094d1453443cc5aa65667697ea9654e3}{}\index{Chart.\+h@{Chart.\+h}!Ch\+Set\+Percent\+Range@{Ch\+Set\+Percent\+Range}}
+\index{Ch\+Set\+Percent\+Range@{Ch\+Set\+Percent\+Range}!Chart.\+h@{Chart.\+h}}
+\subsubsection[{Ch\+Set\+Percent\+Range}]{\setlength{\rightskip}{0pt plus 5cm}void Ch\+Set\+Percent\+Range (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+H\+A\+R\+T} $\ast$}]{p\+Ch, }
+\item[{{\bf W\+O\+R\+D}}]{min, }
+\item[{{\bf W\+O\+R\+D}}]{max}
+\end{DoxyParamCaption}
+)}\label{_chart_8h_a094d1453443cc5aa65667697ea9654e3}
+
+
+Definition at line 3007 of file Chart.\+c.
+
+\hypertarget{_chart_8h_ae0eadd7547f38e95b80a016656178538}{}\index{Chart.\+h@{Chart.\+h}!Ch\+Set\+Sample\+Range@{Ch\+Set\+Sample\+Range}}
+\index{Ch\+Set\+Sample\+Range@{Ch\+Set\+Sample\+Range}!Chart.\+h@{Chart.\+h}}
+\subsubsection[{Ch\+Set\+Sample\+Range}]{\setlength{\rightskip}{0pt plus 5cm}void Ch\+Set\+Sample\+Range (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+H\+A\+R\+T} $\ast$}]{p\+Ch, }
+\item[{{\bf W\+O\+R\+D}}]{start, }
+\item[{{\bf W\+O\+R\+D}}]{end}
+\end{DoxyParamCaption}
+)}\label{_chart_8h_ae0eadd7547f38e95b80a016656178538}
+
+
+Definition at line 2971 of file Chart.\+c.
+
+\hypertarget{_chart_8h_a20aba995892b1a4e034408de92fb30de}{}\index{Chart.\+h@{Chart.\+h}!Ch\+Set\+Value\+Range@{Ch\+Set\+Value\+Range}}
+\index{Ch\+Set\+Value\+Range@{Ch\+Set\+Value\+Range}!Chart.\+h@{Chart.\+h}}
+\subsubsection[{Ch\+Set\+Value\+Range}]{\setlength{\rightskip}{0pt plus 5cm}void Ch\+Set\+Value\+Range (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+H\+A\+R\+T} $\ast$}]{p\+Ch, }
+\item[{{\bf W\+O\+R\+D}}]{min, }
+\item[{{\bf W\+O\+R\+D}}]{max}
+\end{DoxyParamCaption}
+)}\label{_chart_8h_a20aba995892b1a4e034408de92fb30de}
+
+
+Definition at line 2990 of file Chart.\+c.
+
+\hypertarget{_chart_8h_a7e8931d7896ba402bcd4a7a3df3eb1ee}{}\index{Chart.\+h@{Chart.\+h}!Ch\+Translate\+Msg@{Ch\+Translate\+Msg}}
+\index{Ch\+Translate\+Msg@{Ch\+Translate\+Msg}!Chart.\+h@{Chart.\+h}}
+\subsubsection[{Ch\+Translate\+Msg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Ch\+Translate\+Msg (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{p\+Obj, }
+\item[{{\bf G\+O\+L\+\_\+\+M\+S\+G} $\ast$}]{p\+Msg}
+\end{DoxyParamCaption}
+)}\label{_chart_8h_a7e8931d7896ba402bcd4a7a3df3eb1ee}
+
+
+Definition at line 177 of file Chart.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+

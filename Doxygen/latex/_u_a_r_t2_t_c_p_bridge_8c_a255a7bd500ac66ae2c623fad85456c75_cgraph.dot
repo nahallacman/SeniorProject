@@ -1,0 +1,42 @@
+digraph "UART2TCPBridgeTask"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="UART2TCPBridgeTask",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="TCPOpen",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_t_c_p_8h.html#a7b763068bda0dba69136cc2f9ed88aa9"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="TickGet",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_tick_8h.html#a035d1d3f8afdca7abedf588ee1b20af0"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="TCPWasReset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_t_c_p_8h.html#ad66bc7b8521da8dc7e4d7768a8544705"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="TCPDisconnect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_t_c_p_8h.html#aacb150778e6f5cf748b05b0e0568f30e"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="DNSEndUsage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_d_n_s_8h.html#a27e8ba4b66a0d78061be23911cd3a426"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="UDPClose",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_u_d_p_8h.html#ab324430d82f92d41aec441f45ddf7d0f"];
+  Node5 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="SSLTxRecord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_s_l_8h.html#a1cef416e587e77f9aeda9fbe53edf3ed"];
+  Node5 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="SSLTxMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_s_l_8h.html#ae047f0c0ce6b7f6cdc5fe8098bfef8ee"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="TCPIsConnected",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_t_c_p_8h.html#afd4cf67bce7972d9e528bc05bcabc226"];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="TCPIsPutReady",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_t_c_p_8h.html#a10e1123d9bd8d1d94a6b9e10c2e8176c"];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="TCPPutArray",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_t_c_p_8h.html#a4a136ac435439c2ec4eddf4b547f29c6"];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="TCPIsPutReady",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_t_c_p_8c.html#a10e1123d9bd8d1d94a6b9e10c2e8176c"];
+  Node12 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="TCPFlush",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_t_c_p_8c.html#a01c3ec541c50e1d0422f8b6e26e8a25b"];
+  Node12 -> Node15 [color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="TickGetDiv256",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_tick_8h.html#a8f71f847e48f802c831fb86c7fb8326a"];
+  Node1 -> Node16 [color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="TCPIsGetReady",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_t_c_p_8h.html#a9fbb66288f62395d4b85180958dc3f85"];
+  Node1 -> Node17 [color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="TCPGetArray",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_t_c_p_8h.html#afcce2e17242d8eb1448966cbdd12eb3f"];
+  Node17 -> Node18 [color="midnightblue",fontsize="10",style="solid"];
+  Node18 [label="TCPIsGetReady",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_t_c_p_8c.html#a9fbb66288f62395d4b85180958dc3f85"];
+  Node17 -> Node15 [color="midnightblue",fontsize="10",style="solid"];
+}

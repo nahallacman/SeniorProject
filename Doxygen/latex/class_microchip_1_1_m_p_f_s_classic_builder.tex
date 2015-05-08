@@ -1,0 +1,166 @@
+\hypertarget{class_microchip_1_1_m_p_f_s_classic_builder}{}\section{M\+P\+F\+S\+Classic\+Builder Class Reference}
+\label{class_microchip_1_1_m_p_f_s_classic_builder}\index{M\+P\+F\+S\+Classic\+Builder@{M\+P\+F\+S\+Classic\+Builder}}
+
+
+Inheritance diagram for M\+P\+F\+S\+Classic\+Builder\+:
+% FIG 0
+
+
+Collaboration diagram for M\+P\+F\+S\+Classic\+Builder\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_microchip_1_1_m_p_f_s_classic_builder_a0509e1176f43c5b94e3af0cd80cf6a81}{M\+P\+F\+S\+Classic\+Builder} (String \hyperlink{class_microchip_1_1_m_p_f_s_builder_a50bcab31eeaf73bd5975d595d2bbe8cf}{local\+Path}, String \hyperlink{class_microchip_1_1_m_p_f_s_builder_ab110f2474a6be5f43ee032058d6ddd65}{local\+File})
+\begin{DoxyCompactList}\small\item\em Creates a new M\+P\+F\+S Classic image builder \end{DoxyCompactList}\item 
+override bool \hyperlink{class_microchip_1_1_m_p_f_s_classic_builder_aabf44779c0c6c813d9d25aa890fae0cf}{Add\+File} (String local\+Name, String image\+Name)
+\begin{DoxyCompactList}\small\item\em Adds a file to the M\+P\+F\+S image \end{DoxyCompactList}\item 
+override bool \hyperlink{class_microchip_1_1_m_p_f_s_classic_builder_afed308f440de4af9b943d9e0bb4e4ced}{Add\+Directory} (String data\+Path, String image\+Path)
+\begin{DoxyCompactList}\small\item\em Adds a directory to the M\+P\+F\+S image. All non-\/hidden files will be included. \end{DoxyCompactList}\item 
+override bool \hyperlink{class_microchip_1_1_m_p_f_s_classic_builder_a6b6e569a945c1c9c3e59c93a353f006b}{Generate} (\hyperlink{namespace_microchip_aa4ebbf0f9a9e92e601f6a9aac07b5e1e}{M\+P\+F\+S\+Output\+Format} format)
+\begin{DoxyCompactList}\small\item\em Generates the M\+P\+F\+S image and any necessary support files \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+U\+Int32 \hyperlink{class_microchip_1_1_m_p_f_s_classic_builder_acaab17b4edbb5ac622af4c56cccfb60b}{Reserve\+Block}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 165 of file M\+P\+F\+Slib.\+cs.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_microchip_1_1_m_p_f_s_classic_builder_a0509e1176f43c5b94e3af0cd80cf6a81}{}\index{Microchip\+::\+M\+P\+F\+S\+Classic\+Builder@{Microchip\+::\+M\+P\+F\+S\+Classic\+Builder}!M\+P\+F\+S\+Classic\+Builder@{M\+P\+F\+S\+Classic\+Builder}}
+\index{M\+P\+F\+S\+Classic\+Builder@{M\+P\+F\+S\+Classic\+Builder}!Microchip\+::\+M\+P\+F\+S\+Classic\+Builder@{Microchip\+::\+M\+P\+F\+S\+Classic\+Builder}}
+\subsubsection[{M\+P\+F\+S\+Classic\+Builder}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+P\+F\+S\+Classic\+Builder} (
+\begin{DoxyParamCaption}
+\item[{String}]{local\+Path, }
+\item[{String}]{local\+File}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_microchip_1_1_m_p_f_s_classic_builder_a0509e1176f43c5b94e3af0cd80cf6a81}
+
+
+Creates a new M\+P\+F\+S Classic image builder 
+
+
+\begin{DoxyParams}{Parameters}
+{\em local\+Path} & The directory to save the image in\\
+\hline
+{\em local\+File} & The output file name for the image\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 177 of file M\+P\+F\+Slib.\+cs.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_microchip_1_1_m_p_f_s_classic_builder_afed308f440de4af9b943d9e0bb4e4ced}{}\index{Microchip\+::\+M\+P\+F\+S\+Classic\+Builder@{Microchip\+::\+M\+P\+F\+S\+Classic\+Builder}!Add\+Directory@{Add\+Directory}}
+\index{Add\+Directory@{Add\+Directory}!Microchip\+::\+M\+P\+F\+S\+Classic\+Builder@{Microchip\+::\+M\+P\+F\+S\+Classic\+Builder}}
+\subsubsection[{Add\+Directory}]{\setlength{\rightskip}{0pt plus 5cm}override bool Add\+Directory (
+\begin{DoxyParamCaption}
+\item[{String}]{data\+Path, }
+\item[{String}]{image\+Path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_microchip_1_1_m_p_f_s_classic_builder_afed308f440de4af9b943d9e0bb4e4ced}
+
+
+Adds a directory to the M\+P\+F\+S image. All non-\/hidden files will be included. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+Path} & The local directory to search\\
+\hline
+{\em image\+Path} & Ignored for M\+P\+F\+S Classic\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_microchip_1_1_m_p_f_s_builder_a900413fb1fb5bba441654920de06b81d}{M\+P\+F\+S\+Builder}.
+
+
+
+Definition at line 304 of file M\+P\+F\+Slib.\+cs.
+
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+\hypertarget{class_microchip_1_1_m_p_f_s_classic_builder_aabf44779c0c6c813d9d25aa890fae0cf}{}\index{Microchip\+::\+M\+P\+F\+S\+Classic\+Builder@{Microchip\+::\+M\+P\+F\+S\+Classic\+Builder}!Add\+File@{Add\+File}}
+\index{Add\+File@{Add\+File}!Microchip\+::\+M\+P\+F\+S\+Classic\+Builder@{Microchip\+::\+M\+P\+F\+S\+Classic\+Builder}}
+\subsubsection[{Add\+File}]{\setlength{\rightskip}{0pt plus 5cm}override bool Add\+File (
+\begin{DoxyParamCaption}
+\item[{String}]{local\+Name, }
+\item[{String}]{image\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_microchip_1_1_m_p_f_s_classic_builder_aabf44779c0c6c813d9d25aa890fae0cf}
+
+
+Adds a file to the M\+P\+F\+S image 
+
+
+\begin{DoxyParams}{Parameters}
+{\em local\+Name} & Local file name to read\\
+\hline
+{\em image\+Name} & Name to use in image file\\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_microchip_1_1_m_p_f_s_builder_ad20e3945d7451ee3ca6909ce34780774}{M\+P\+F\+S\+Builder}.
+
+
+
+Definition at line 260 of file M\+P\+F\+Slib.\+cs.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\hypertarget{class_microchip_1_1_m_p_f_s_classic_builder_a6b6e569a945c1c9c3e59c93a353f006b}{}\index{Microchip\+::\+M\+P\+F\+S\+Classic\+Builder@{Microchip\+::\+M\+P\+F\+S\+Classic\+Builder}!Generate@{Generate}}
+\index{Generate@{Generate}!Microchip\+::\+M\+P\+F\+S\+Classic\+Builder@{Microchip\+::\+M\+P\+F\+S\+Classic\+Builder}}
+\subsubsection[{Generate}]{\setlength{\rightskip}{0pt plus 5cm}override bool Generate (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+P\+F\+S\+Output\+Format}}]{format}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_microchip_1_1_m_p_f_s_classic_builder_a6b6e569a945c1c9c3e59c93a353f006b}
+
+
+Generates the M\+P\+F\+S image and any necessary support files 
+
+
+
+Implements \hyperlink{class_microchip_1_1_m_p_f_s_builder_a287235d1a30bc3bb959b1c3b38fb154a}{M\+P\+F\+S\+Builder}.
+
+
+
+Definition at line 337 of file M\+P\+F\+Slib.\+cs.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{class_microchip_1_1_m_p_f_s_classic_builder_acaab17b4edbb5ac622af4c56cccfb60b}{}\index{Microchip\+::\+M\+P\+F\+S\+Classic\+Builder@{Microchip\+::\+M\+P\+F\+S\+Classic\+Builder}!Reserve\+Block@{Reserve\+Block}}
+\index{Reserve\+Block@{Reserve\+Block}!Microchip\+::\+M\+P\+F\+S\+Classic\+Builder@{Microchip\+::\+M\+P\+F\+S\+Classic\+Builder}}
+\subsubsection[{Reserve\+Block}]{\setlength{\rightskip}{0pt plus 5cm}U\+Int32 Reserve\+Block}\label{class_microchip_1_1_m_p_f_s_classic_builder_acaab17b4edbb5ac622af4c56cccfb60b}
+
+
+Definition at line 168 of file M\+P\+F\+Slib.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Utilities/\+Source/\+M\+P\+F\+Slib/\+M\+P\+F\+Slib/\hyperlink{_m_p_f_slib_8cs}{M\+P\+F\+Slib.\+cs}\end{DoxyCompactItemize}

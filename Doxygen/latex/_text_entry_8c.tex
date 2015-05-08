@@ -1,0 +1,292 @@
+\hypertarget{_text_entry_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Graphics/\+Text\+Entry.c File Reference}
+\label{_text_entry_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Graphics/\+Text\+Entry.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Graphics/\+Text\+Entry.\+c}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_t_e_x_t_e_n_t_r_y}{T\+E\+X\+T\+E\+N\+T\+R\+Y} $\ast$ \hyperlink{_text_entry_8c_af1d2045c270eadb98c741942dabfa52a}{Te\+Create} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} I\+D, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} left, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} top, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} right, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} bottom, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} state, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} horizontal\+Keys, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} vertical\+Keys, X\+C\+H\+A\+R $\ast$p\+Text\mbox{[}$\,$\mbox{]}, void $\ast$p\+Buffer, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} buffer\+Length, void $\ast$p\+Display\+Font, \hyperlink{struct_g_o_l___s_c_h_e_m_e}{G\+O\+L\+\_\+\+S\+C\+H\+E\+M\+E} $\ast$p\+Scheme)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_text_entry_8c_a8bdd75439fcce4ea923987097241c6ce}{Te\+Draw} (void $\ast$p\+Obj)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_text_entry_8c_ab2acb3da3260d2d9f04adfe666acc6bc}{Te\+Translate\+Msg} (void $\ast$p\+Obj, \hyperlink{struct_g_o_l___m_s_g}{G\+O\+L\+\_\+\+M\+S\+G} $\ast$p\+Msg)
+\item 
+void \hyperlink{_text_entry_8c_a9a1bff0a97c5f7f686f8c499de5ef2f6}{Te\+Msg\+Default} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} translated\+Msg, void $\ast$p\+Obj, \hyperlink{struct_g_o_l___m_s_g}{G\+O\+L\+\_\+\+M\+S\+G} $\ast$p\+Msg)
+\item 
+void \hyperlink{_text_entry_8c_a7211f368c7e86a5410bdf5be4f18f14a}{Te\+Clear\+Buffer} (\hyperlink{struct_t_e_x_t_e_n_t_r_y}{T\+E\+X\+T\+E\+N\+T\+R\+Y} $\ast$p\+Te)
+\item 
+void \hyperlink{_text_entry_8c_ac7944a40a7edaa5d01710bd3ce7c4f95}{Te\+Set\+Buffer} (\hyperlink{struct_t_e_x_t_e_n_t_r_y}{T\+E\+X\+T\+E\+N\+T\+R\+Y} $\ast$p\+Te, X\+C\+H\+A\+R $\ast$p\+Text, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} Max\+Size)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_text_entry_8c_a9c00836029ac39f118d238dc42372b07}{Te\+Is\+Key\+Pressed} (\hyperlink{struct_t_e_x_t_e_n_t_r_y}{T\+E\+X\+T\+E\+N\+T\+R\+Y} $\ast$p\+Te, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} index)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_text_entry_8c_a95f80c21f63e808583cefa79b43a6a26}{Te\+Set\+Key\+Command} (\hyperlink{struct_t_e_x_t_e_n_t_r_y}{T\+E\+X\+T\+E\+N\+T\+R\+Y} $\ast$p\+Te, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} index, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} command)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_text_entry_8c_af101f64dab7d3b2104b7d430fed9de8e}{Te\+Get\+Key\+Command} (\hyperlink{struct_t_e_x_t_e_n_t_r_y}{T\+E\+X\+T\+E\+N\+T\+R\+Y} $\ast$p\+Te, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} index)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_text_entry_8c_a26d8466b174133c5e6af5f4981826ec7}{Te\+Set\+Key\+Text} (\hyperlink{struct_t_e_x_t_e_n_t_r_y}{T\+E\+X\+T\+E\+N\+T\+R\+Y} $\ast$p\+Te, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} index, X\+C\+H\+A\+R $\ast$p\+Text)
+\item 
+\hyperlink{struct_k_e_y_m_e_m_b_e_r}{K\+E\+Y\+M\+E\+M\+B\+E\+R} $\ast$ \hyperlink{_text_entry_8c_a353d5a1a69d84d077156da6e9856380f}{Te\+Create\+Key\+Members} (\hyperlink{struct_t_e_x_t_e_n_t_r_y}{T\+E\+X\+T\+E\+N\+T\+R\+Y} $\ast$p\+Te, X\+C\+H\+A\+R $\ast$p\+Text\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{_text_entry_8c_a3a562ce3f3012fcd6d59ee8befc41446}{Te\+Del\+Key\+Members} (void $\ast$p\+Obj)
+\item 
+void \hyperlink{_text_entry_8c_a2e3394b21e67216d8f1ef2313eb9ad45}{Te\+Space\+Char} (\hyperlink{struct_t_e_x_t_e_n_t_r_y}{T\+E\+X\+T\+E\+N\+T\+R\+Y} $\ast$p\+Te)
+\item 
+void \hyperlink{_text_entry_8c_adc2dbe1c2ff21d5d6e8a4a9913656af7}{Te\+Add\+Char} (\hyperlink{struct_t_e_x_t_e_n_t_r_y}{T\+E\+X\+T\+E\+N\+T\+R\+Y} $\ast$p\+Te)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_text_entry_8c_adc2dbe1c2ff21d5d6e8a4a9913656af7}{}\index{Text\+Entry.\+c@{Text\+Entry.\+c}!Te\+Add\+Char@{Te\+Add\+Char}}
+\index{Te\+Add\+Char@{Te\+Add\+Char}!Text\+Entry.\+c@{Text\+Entry.\+c}}
+\subsubsection[{Te\+Add\+Char}]{\setlength{\rightskip}{0pt plus 5cm}void Te\+Add\+Char (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+E\+X\+T\+E\+N\+T\+R\+Y} $\ast$}]{p\+Te}
+\end{DoxyParamCaption}
+)}\label{_text_entry_8c_adc2dbe1c2ff21d5d6e8a4a9913656af7}
+
+
+Definition at line 1097 of file Text\+Entry.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+\hypertarget{_text_entry_8c_a7211f368c7e86a5410bdf5be4f18f14a}{}\index{Text\+Entry.\+c@{Text\+Entry.\+c}!Te\+Clear\+Buffer@{Te\+Clear\+Buffer}}
+\index{Te\+Clear\+Buffer@{Te\+Clear\+Buffer}!Text\+Entry.\+c@{Text\+Entry.\+c}}
+\subsubsection[{Te\+Clear\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}void Te\+Clear\+Buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+E\+X\+T\+E\+N\+T\+R\+Y} $\ast$}]{p\+Te}
+\end{DoxyParamCaption}
+)}\label{_text_entry_8c_a7211f368c7e86a5410bdf5be4f18f14a}
+
+
+Definition at line 802 of file Text\+Entry.\+c.
+
+\hypertarget{_text_entry_8c_af1d2045c270eadb98c741942dabfa52a}{}\index{Text\+Entry.\+c@{Text\+Entry.\+c}!Te\+Create@{Te\+Create}}
+\index{Te\+Create@{Te\+Create}!Text\+Entry.\+c@{Text\+Entry.\+c}}
+\subsubsection[{Te\+Create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\+E\+X\+T\+E\+N\+T\+R\+Y}$\ast$ Te\+Create (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{I\+D, }
+\item[{{\bf S\+H\+O\+R\+T}}]{left, }
+\item[{{\bf S\+H\+O\+R\+T}}]{top, }
+\item[{{\bf S\+H\+O\+R\+T}}]{right, }
+\item[{{\bf S\+H\+O\+R\+T}}]{bottom, }
+\item[{{\bf W\+O\+R\+D}}]{state, }
+\item[{{\bf S\+H\+O\+R\+T}}]{horizontal\+Keys, }
+\item[{{\bf S\+H\+O\+R\+T}}]{vertical\+Keys, }
+\item[{X\+C\+H\+A\+R $\ast$}]{p\+Text\mbox{[}$\,$\mbox{]}, }
+\item[{void $\ast$}]{p\+Buffer, }
+\item[{{\bf W\+O\+R\+D}}]{buffer\+Length, }
+\item[{void $\ast$}]{p\+Display\+Font, }
+\item[{{\bf G\+O\+L\+\_\+\+S\+C\+H\+E\+M\+E} $\ast$}]{p\+Scheme}
+\end{DoxyParamCaption}
+)}\label{_text_entry_8c_af1d2045c270eadb98c741942dabfa52a}
+
+
+Definition at line 68 of file Text\+Entry.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+\hypertarget{_text_entry_8c_a353d5a1a69d84d077156da6e9856380f}{}\index{Text\+Entry.\+c@{Text\+Entry.\+c}!Te\+Create\+Key\+Members@{Te\+Create\+Key\+Members}}
+\index{Te\+Create\+Key\+Members@{Te\+Create\+Key\+Members}!Text\+Entry.\+c@{Text\+Entry.\+c}}
+\subsubsection[{Te\+Create\+Key\+Members}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\+E\+Y\+M\+E\+M\+B\+E\+R}$\ast$ Te\+Create\+Key\+Members (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+E\+X\+T\+E\+N\+T\+R\+Y} $\ast$}]{p\+Te, }
+\item[{X\+C\+H\+A\+R $\ast$}]{p\+Text\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{_text_entry_8c_a353d5a1a69d84d077156da6e9856380f}
+
+
+Definition at line 968 of file Text\+Entry.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\hypertarget{_text_entry_8c_a3a562ce3f3012fcd6d59ee8befc41446}{}\index{Text\+Entry.\+c@{Text\+Entry.\+c}!Te\+Del\+Key\+Members@{Te\+Del\+Key\+Members}}
+\index{Te\+Del\+Key\+Members@{Te\+Del\+Key\+Members}!Text\+Entry.\+c@{Text\+Entry.\+c}}
+\subsubsection[{Te\+Del\+Key\+Members}]{\setlength{\rightskip}{0pt plus 5cm}void Te\+Del\+Key\+Members (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{p\+Obj}
+\end{DoxyParamCaption}
+)}\label{_text_entry_8c_a3a562ce3f3012fcd6d59ee8befc41446}
+
+
+Definition at line 1055 of file Text\+Entry.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+\hypertarget{_text_entry_8c_a8bdd75439fcce4ea923987097241c6ce}{}\index{Text\+Entry.\+c@{Text\+Entry.\+c}!Te\+Draw@{Te\+Draw}}
+\index{Te\+Draw@{Te\+Draw}!Text\+Entry.\+c@{Text\+Entry.\+c}}
+\subsubsection[{Te\+Draw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Te\+Draw (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{p\+Obj}
+\end{DoxyParamCaption}
+)}\label{_text_entry_8c_a8bdd75439fcce4ea923987097241c6ce}
+
+
+Definition at line 144 of file Text\+Entry.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 5
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\hypertarget{_text_entry_8c_af101f64dab7d3b2104b7d430fed9de8e}{}\index{Text\+Entry.\+c@{Text\+Entry.\+c}!Te\+Get\+Key\+Command@{Te\+Get\+Key\+Command}}
+\index{Te\+Get\+Key\+Command@{Te\+Get\+Key\+Command}!Text\+Entry.\+c@{Text\+Entry.\+c}}
+\subsubsection[{Te\+Get\+Key\+Command}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Te\+Get\+Key\+Command (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+E\+X\+T\+E\+N\+T\+R\+Y} $\ast$}]{p\+Te, }
+\item[{{\bf W\+O\+R\+D}}]{index}
+\end{DoxyParamCaption}
+)}\label{_text_entry_8c_af101f64dab7d3b2104b7d430fed9de8e}
+
+
+Definition at line 913 of file Text\+Entry.\+c.
+
+\hypertarget{_text_entry_8c_a9c00836029ac39f118d238dc42372b07}{}\index{Text\+Entry.\+c@{Text\+Entry.\+c}!Te\+Is\+Key\+Pressed@{Te\+Is\+Key\+Pressed}}
+\index{Te\+Is\+Key\+Pressed@{Te\+Is\+Key\+Pressed}!Text\+Entry.\+c@{Text\+Entry.\+c}}
+\subsubsection[{Te\+Is\+Key\+Pressed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} Te\+Is\+Key\+Pressed (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+E\+X\+T\+E\+N\+T\+R\+Y} $\ast$}]{p\+Te, }
+\item[{{\bf W\+O\+R\+D}}]{index}
+\end{DoxyParamCaption}
+)}\label{_text_entry_8c_a9c00836029ac39f118d238dc42372b07}
+
+
+Definition at line 853 of file Text\+Entry.\+c.
+
+\hypertarget{_text_entry_8c_a9a1bff0a97c5f7f686f8c499de5ef2f6}{}\index{Text\+Entry.\+c@{Text\+Entry.\+c}!Te\+Msg\+Default@{Te\+Msg\+Default}}
+\index{Te\+Msg\+Default@{Te\+Msg\+Default}!Text\+Entry.\+c@{Text\+Entry.\+c}}
+\subsubsection[{Te\+Msg\+Default}]{\setlength{\rightskip}{0pt plus 5cm}void Te\+Msg\+Default (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{translated\+Msg, }
+\item[{void $\ast$}]{p\+Obj, }
+\item[{{\bf G\+O\+L\+\_\+\+M\+S\+G} $\ast$}]{p\+Msg}
+\end{DoxyParamCaption}
+)}\label{_text_entry_8c_a9a1bff0a97c5f7f686f8c499de5ef2f6}
+
+
+Definition at line 751 of file Text\+Entry.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 7
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 8
+
+
+\hypertarget{_text_entry_8c_ac7944a40a7edaa5d01710bd3ce7c4f95}{}\index{Text\+Entry.\+c@{Text\+Entry.\+c}!Te\+Set\+Buffer@{Te\+Set\+Buffer}}
+\index{Te\+Set\+Buffer@{Te\+Set\+Buffer}!Text\+Entry.\+c@{Text\+Entry.\+c}}
+\subsubsection[{Te\+Set\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}void Te\+Set\+Buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+E\+X\+T\+E\+N\+T\+R\+Y} $\ast$}]{p\+Te, }
+\item[{X\+C\+H\+A\+R $\ast$}]{p\+Text, }
+\item[{{\bf W\+O\+R\+D}}]{Max\+Size}
+\end{DoxyParamCaption}
+)}\label{_text_entry_8c_ac7944a40a7edaa5d01710bd3ce7c4f95}
+
+
+Definition at line 823 of file Text\+Entry.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 9
+
+
+\hypertarget{_text_entry_8c_a95f80c21f63e808583cefa79b43a6a26}{}\index{Text\+Entry.\+c@{Text\+Entry.\+c}!Te\+Set\+Key\+Command@{Te\+Set\+Key\+Command}}
+\index{Te\+Set\+Key\+Command@{Te\+Set\+Key\+Command}!Text\+Entry.\+c@{Text\+Entry.\+c}}
+\subsubsection[{Te\+Set\+Key\+Command}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} Te\+Set\+Key\+Command (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+E\+X\+T\+E\+N\+T\+R\+Y} $\ast$}]{p\+Te, }
+\item[{{\bf W\+O\+R\+D}}]{index, }
+\item[{{\bf W\+O\+R\+D}}]{command}
+\end{DoxyParamCaption}
+)}\label{_text_entry_8c_a95f80c21f63e808583cefa79b43a6a26}
+
+
+Definition at line 886 of file Text\+Entry.\+c.
+
+\hypertarget{_text_entry_8c_a26d8466b174133c5e6af5f4981826ec7}{}\index{Text\+Entry.\+c@{Text\+Entry.\+c}!Te\+Set\+Key\+Text@{Te\+Set\+Key\+Text}}
+\index{Te\+Set\+Key\+Text@{Te\+Set\+Key\+Text}!Text\+Entry.\+c@{Text\+Entry.\+c}}
+\subsubsection[{Te\+Set\+Key\+Text}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} Te\+Set\+Key\+Text (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+E\+X\+T\+E\+N\+T\+R\+Y} $\ast$}]{p\+Te, }
+\item[{{\bf W\+O\+R\+D}}]{index, }
+\item[{X\+C\+H\+A\+R $\ast$}]{p\+Text}
+\end{DoxyParamCaption}
+)}\label{_text_entry_8c_a26d8466b174133c5e6af5f4981826ec7}
+
+
+Definition at line 940 of file Text\+Entry.\+c.
+
+\hypertarget{_text_entry_8c_a2e3394b21e67216d8f1ef2313eb9ad45}{}\index{Text\+Entry.\+c@{Text\+Entry.\+c}!Te\+Space\+Char@{Te\+Space\+Char}}
+\index{Te\+Space\+Char@{Te\+Space\+Char}!Text\+Entry.\+c@{Text\+Entry.\+c}}
+\subsubsection[{Te\+Space\+Char}]{\setlength{\rightskip}{0pt plus 5cm}void Te\+Space\+Char (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+E\+X\+T\+E\+N\+T\+R\+Y} $\ast$}]{p\+Te}
+\end{DoxyParamCaption}
+)}\label{_text_entry_8c_a2e3394b21e67216d8f1ef2313eb9ad45}
+
+
+Definition at line 1080 of file Text\+Entry.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 10
+
+
+\hypertarget{_text_entry_8c_ab2acb3da3260d2d9f04adfe666acc6bc}{}\index{Text\+Entry.\+c@{Text\+Entry.\+c}!Te\+Translate\+Msg@{Te\+Translate\+Msg}}
+\index{Te\+Translate\+Msg@{Te\+Translate\+Msg}!Text\+Entry.\+c@{Text\+Entry.\+c}}
+\subsubsection[{Te\+Translate\+Msg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Te\+Translate\+Msg (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{p\+Obj, }
+\item[{{\bf G\+O\+L\+\_\+\+M\+S\+G} $\ast$}]{p\+Msg}
+\end{DoxyParamCaption}
+)}\label{_text_entry_8c_ab2acb3da3260d2d9f04adfe666acc6bc}
+
+
+Definition at line 591 of file Text\+Entry.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 11
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 12
+
+

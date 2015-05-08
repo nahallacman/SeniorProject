@@ -1,0 +1,20 @@
+digraph "UpdateDisplayNow"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="UpdateDisplayNow",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="SetActivePage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mchp_gfx_l_c_c_8c.html#a9f5d38445eabc479104a965d95d8138e"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="SetVisualPage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mchp_gfx_l_c_c_8c.html#a3383609f9ef2171aefd0f27a65a1507d"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="CopyPageWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mchp_gfx_l_c_c_8c.html#aa86a27ea23433c7857baca8776f27347"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="AlphaBlendWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mchp_gfx_l_c_c_8c.html#a8b9f9ce94044b21cca3c07c2145f10a4"];
+  Node5 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="GetPixel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mchp_gfx_l_c_c_8c.html#afe36dedd609740e62ec3bf37d2f63534"];
+  Node5 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="PutPixel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mchp_gfx_l_c_c_8c.html#accd6f33a37aade41c6304c670190aa58"];
+}

@@ -1,0 +1,188 @@
+\hypertarget{_a_r_p_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+A\+R\+P.c File Reference}
+\label{_a_r_p_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+A\+R\+P.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+A\+R\+P.\+c}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_generic_type_defs_8h_abdfff23a0f3483b45f7abc457927a1e8}{C\+H\+A\+R} \hyperlink{_a_r_p_8c_ad8ae203560ca5f011a69c891df2664c9}{A\+R\+P\+Register\+Callbacks} (struct \hyperlink{structarp__app__callbacks}{arp\+\_\+app\+\_\+callbacks} $\ast$app)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_a_r_p_8c_a150c4e4a15848c521000994301907c5b}{A\+R\+P\+De\+Register\+Callbacks} (\hyperlink{_generic_type_defs_8h_abdfff23a0f3483b45f7abc457927a1e8}{C\+H\+A\+R} reg\+\_\+id)
+\item 
+void \hyperlink{_a_r_p_8c_abed1b0ea4d6feeea0af06487f6193a5f}{A\+R\+P\+Process\+Rx\+Pkt} (\hyperlink{_a_r_p_8h_a9b85aa4504d5f450f3a4453703fb9b23}{A\+R\+P\+\_\+\+P\+A\+C\+K\+E\+T} $\ast$packet)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_a_r_p_8c_a08ef88a80eac112205ecd84dbbc5a481}{A\+R\+P\+Send\+Pkt} (\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} Src\+I\+P\+Addr, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} Dest\+I\+P\+Addr, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} op\+\_\+req)
+\item 
+void \hyperlink{_a_r_p_8c_a3cfc3a5e8219655fda663e05975b5db9}{A\+R\+P\+Init} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_a_r_p_8c_ae6b09602087182367ecb4c724550be90}{A\+R\+P\+Process} (void)
+\item 
+void \hyperlink{_a_r_p_8c_aa58da534afc0a0b8d9c87d7ec6a7c599}{A\+R\+P\+Resolve} (I\+P\+\_\+\+A\+D\+D\+R $\ast$I\+P\+Addr)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_a_r_p_8c_ab6db95d6f77786a0e13c0bda086c958a}{A\+R\+P\+Is\+Resolved} (I\+P\+\_\+\+A\+D\+D\+R $\ast$I\+P\+Addr, \hyperlink{_stack_tsk_8h_ad13a037a42c866ac11db19330b840589}{M\+A\+C\+\_\+\+A\+D\+D\+R} $\ast$M\+A\+C\+Addr)
+\item 
+void \hyperlink{_a_r_p_8c_a664371001b953f0f7b7d93e37db0c813}{Swap\+A\+R\+P\+Packet} (\hyperlink{_a_r_p_8h_a9b85aa4504d5f450f3a4453703fb9b23}{A\+R\+P\+\_\+\+P\+A\+C\+K\+E\+T} $\ast$p)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_a_r_p_8c_a150c4e4a15848c521000994301907c5b}{}\index{A\+R\+P.\+c@{A\+R\+P.\+c}!A\+R\+P\+De\+Register\+Callbacks@{A\+R\+P\+De\+Register\+Callbacks}}
+\index{A\+R\+P\+De\+Register\+Callbacks@{A\+R\+P\+De\+Register\+Callbacks}!A\+R\+P.\+c@{A\+R\+P.\+c}}
+\subsubsection[{A\+R\+P\+De\+Register\+Callbacks}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} A\+R\+P\+De\+Register\+Callbacks (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+H\+A\+R}}]{reg\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{_a_r_p_8c_a150c4e4a15848c521000994301907c5b}
+
+
+Definition at line 184 of file A\+R\+P.\+c.
+
+\hypertarget{_a_r_p_8c_a3cfc3a5e8219655fda663e05975b5db9}{}\index{A\+R\+P.\+c@{A\+R\+P.\+c}!A\+R\+P\+Init@{A\+R\+P\+Init}}
+\index{A\+R\+P\+Init@{A\+R\+P\+Init}!A\+R\+P.\+c@{A\+R\+P.\+c}}
+\subsubsection[{A\+R\+P\+Init}]{\setlength{\rightskip}{0pt plus 5cm}void A\+R\+P\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_a_r_p_8c_a3cfc3a5e8219655fda663e05975b5db9}
+
+
+Definition at line 397 of file A\+R\+P.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+\hypertarget{_a_r_p_8c_ab6db95d6f77786a0e13c0bda086c958a}{}\index{A\+R\+P.\+c@{A\+R\+P.\+c}!A\+R\+P\+Is\+Resolved@{A\+R\+P\+Is\+Resolved}}
+\index{A\+R\+P\+Is\+Resolved@{A\+R\+P\+Is\+Resolved}!A\+R\+P.\+c@{A\+R\+P.\+c}}
+\subsubsection[{A\+R\+P\+Is\+Resolved}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} A\+R\+P\+Is\+Resolved (
+\begin{DoxyParamCaption}
+\item[{I\+P\+\_\+\+A\+D\+D\+R $\ast$}]{I\+P\+Addr, }
+\item[{{\bf M\+A\+C\+\_\+\+A\+D\+D\+R} $\ast$}]{M\+A\+C\+Addr}
+\end{DoxyParamCaption}
+)}\label{_a_r_p_8c_ab6db95d6f77786a0e13c0bda086c958a}
+
+
+Definition at line 677 of file A\+R\+P.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+\hypertarget{_a_r_p_8c_ae6b09602087182367ecb4c724550be90}{}\index{A\+R\+P.\+c@{A\+R\+P.\+c}!A\+R\+P\+Process@{A\+R\+P\+Process}}
+\index{A\+R\+P\+Process@{A\+R\+P\+Process}!A\+R\+P.\+c@{A\+R\+P.\+c}}
+\subsubsection[{A\+R\+P\+Process}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} A\+R\+P\+Process (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_a_r_p_8c_ae6b09602087182367ecb4c724550be90}
+
+
+Definition at line 436 of file A\+R\+P.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\hypertarget{_a_r_p_8c_abed1b0ea4d6feeea0af06487f6193a5f}{}\index{A\+R\+P.\+c@{A\+R\+P.\+c}!A\+R\+P\+Process\+Rx\+Pkt@{A\+R\+P\+Process\+Rx\+Pkt}}
+\index{A\+R\+P\+Process\+Rx\+Pkt@{A\+R\+P\+Process\+Rx\+Pkt}!A\+R\+P.\+c@{A\+R\+P.\+c}}
+\subsubsection[{A\+R\+P\+Process\+Rx\+Pkt}]{\setlength{\rightskip}{0pt plus 5cm}void A\+R\+P\+Process\+Rx\+Pkt (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+R\+P\+\_\+\+P\+A\+C\+K\+E\+T} $\ast$}]{packet}
+\end{DoxyParamCaption}
+)}\label{_a_r_p_8c_abed1b0ea4d6feeea0af06487f6193a5f}
+
+
+Definition at line 213 of file A\+R\+P.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+\hypertarget{_a_r_p_8c_ad8ae203560ca5f011a69c891df2664c9}{}\index{A\+R\+P.\+c@{A\+R\+P.\+c}!A\+R\+P\+Register\+Callbacks@{A\+R\+P\+Register\+Callbacks}}
+\index{A\+R\+P\+Register\+Callbacks@{A\+R\+P\+Register\+Callbacks}!A\+R\+P.\+c@{A\+R\+P.\+c}}
+\subsubsection[{A\+R\+P\+Register\+Callbacks}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+H\+A\+R} A\+R\+P\+Register\+Callbacks (
+\begin{DoxyParamCaption}
+\item[{struct {\bf arp\+\_\+app\+\_\+callbacks} $\ast$}]{app}
+\end{DoxyParamCaption}
+)}\label{_a_r_p_8c_ad8ae203560ca5f011a69c891df2664c9}
+
+
+Definition at line 145 of file A\+R\+P.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 5
+
+
+\hypertarget{_a_r_p_8c_aa58da534afc0a0b8d9c87d7ec6a7c599}{}\index{A\+R\+P.\+c@{A\+R\+P.\+c}!A\+R\+P\+Resolve@{A\+R\+P\+Resolve}}
+\index{A\+R\+P\+Resolve@{A\+R\+P\+Resolve}!A\+R\+P.\+c@{A\+R\+P.\+c}}
+\subsubsection[{A\+R\+P\+Resolve}]{\setlength{\rightskip}{0pt plus 5cm}void A\+R\+P\+Resolve (
+\begin{DoxyParamCaption}
+\item[{I\+P\+\_\+\+A\+D\+D\+R $\ast$}]{I\+P\+Addr}
+\end{DoxyParamCaption}
+)}\label{_a_r_p_8c_aa58da534afc0a0b8d9c87d7ec6a7c599}
+
+
+Definition at line 592 of file A\+R\+P.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\hypertarget{_a_r_p_8c_a08ef88a80eac112205ecd84dbbc5a481}{}\index{A\+R\+P.\+c@{A\+R\+P.\+c}!A\+R\+P\+Send\+Pkt@{A\+R\+P\+Send\+Pkt}}
+\index{A\+R\+P\+Send\+Pkt@{A\+R\+P\+Send\+Pkt}!A\+R\+P.\+c@{A\+R\+P.\+c}}
+\subsubsection[{A\+R\+P\+Send\+Pkt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} A\+R\+P\+Send\+Pkt (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+W\+O\+R\+D}}]{Src\+I\+P\+Addr, }
+\item[{{\bf D\+W\+O\+R\+D}}]{Dest\+I\+P\+Addr, }
+\item[{{\bf B\+Y\+T\+E}}]{op\+\_\+req}
+\end{DoxyParamCaption}
+)}\label{_a_r_p_8c_a08ef88a80eac112205ecd84dbbc5a481}
+
+
+Definition at line 284 of file A\+R\+P.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 7
+
+
+\hypertarget{_a_r_p_8c_a664371001b953f0f7b7d93e37db0c813}{}\index{A\+R\+P.\+c@{A\+R\+P.\+c}!Swap\+A\+R\+P\+Packet@{Swap\+A\+R\+P\+Packet}}
+\index{Swap\+A\+R\+P\+Packet@{Swap\+A\+R\+P\+Packet}!A\+R\+P.\+c@{A\+R\+P.\+c}}
+\subsubsection[{Swap\+A\+R\+P\+Packet}]{\setlength{\rightskip}{0pt plus 5cm}void Swap\+A\+R\+P\+Packet (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+R\+P\+\_\+\+P\+A\+C\+K\+E\+T} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\label{_a_r_p_8c_a664371001b953f0f7b7d93e37db0c813}
+
+
+Definition at line 711 of file A\+R\+P.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 8
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 9
+
+

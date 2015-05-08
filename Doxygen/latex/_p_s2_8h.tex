@@ -1,0 +1,593 @@
+\hypertarget{_p_s2_8h}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Dev/\+P\+S2.h File Reference}
+\label{_p_s2_8h}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Dev/\+P\+S2.\+h@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Dev/\+P\+S2.\+h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}P\+S2\+Common.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Test\+Common.\+h\char`\"{}}\\*
+Include dependency graph for P\+S2.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_p_s2_8h_a4b8578b52cb39af2122c5047a8520757}{ps2\+Buffer\+Size}~100
+\item 
+\#define \hyperlink{_p_s2_8h_a01882b20b26727e0c233e94a4c863459}{T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H}~1024
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_p_s2_8h_a48945a9d13c0e9aa46dc3f1302c00223}{Compare\+Text\+Lines} (void)
+\item 
+uint8\+\_\+t $\ast$ \hyperlink{_p_s2_8h_a3a060fca8f2dde6562e2f243414d47d7}{gettext\+Line} (void)
+\item 
+uint8\+\_\+t $\ast$ \hyperlink{_p_s2_8h_ae311e9417c9347d550643de4daea45e5}{keyboard\+\_\+lookup} (uint8\+\_\+t number)
+\item 
+void \hyperlink{_p_s2_8h_a1c9949e161f05ecf2ba74181c4fdd1af}{keyboard\+\_\+setup} (void)
+\item 
+void \hyperlink{_p_s2_8h_aeb389b24fcb4bf0ef1cc98315dab5e5f}{interpret\+Keypress} (void)
+\item 
+uint8\+\_\+t \hyperlink{_p_s2_8h_a01ddbbb07d07e31ed7bce301ba934d43}{translate\+Keypress} (uint8\+\_\+t)
+\item 
+void \hyperlink{_p_s2_8h_a29bab149333c107091c1b286e05ac315}{place\+Char} (uint8\+\_\+t $\ast$character)
+\item 
+void \hyperlink{_p_s2_8h_a819307bdf0c8c8a841a2305637d102c2}{Shift\+Screen\+Up} (void)
+\item 
+void \hyperlink{_p_s2_8h_a030e6b6983ff846d9cca945c743c40b2}{Shift\+Screen\+Down} (void)
+\item 
+void \hyperlink{_p_s2_8h_a16432961ed8b60a6197456a6d92e4ddc}{Shift\+Screen\+Left} (void)
+\item 
+void \hyperlink{_p_s2_8h_a9c1bdbae316b73cb3580823f20c413f3}{Shift\+Screen\+Right} (void)
+\item 
+void \hyperlink{_p_s2_8h_a7804524381705ec22e0efc3a1326dd69}{Move\+Cursor\+Left} (void)
+\item 
+void \hyperlink{_p_s2_8h_ac177699cfeda15e4b887864f6eacc5e3}{Move\+Cursor\+Right} (void)
+\item 
+void \hyperlink{_p_s2_8h_ae9337ec3c6ea47f10d329cd99d7a29f9}{Move\+Cursor\+Up} (void)
+\item 
+void \hyperlink{_p_s2_8h_ac8e40e0b08b773c5f3fc0b303fe562de}{Move\+Cursor\+Down} (void)
+\item 
+void \hyperlink{_p_s2_8h_acea8175bc07b5d0ba9f3f78d0c00c4a7}{Blink\+Cursor} (void)
+\item 
+void \hyperlink{_p_s2_8h_a5473c6cfd6c580642133754e141ca556}{Clear\+Screen} (void)
+\item 
+void \hyperlink{_p_s2_8h_aeca62116778bb6c13245089867ded8d9}{reset\+Place\+Char\+Location} (void)
+\item 
+void \hyperlink{_p_s2_8h_afb368b3eb12755cae8787b96e467e0e3}{press\+\_\+backspace} (void)
+\item 
+void \hyperlink{_p_s2_8h_a5391d4586620db9cb2c8e96627f37f7e}{test\+Keyboard\+Agitator} (uint8\+\_\+t scan\+Code)
+\item 
+void \hyperlink{_p_s2_8h_aee82caceba560f01202c4459ba4497c7}{process\+Line} (uint8\+\_\+t $\ast$text\+Line\+Ptr)
+\item 
+char $\ast$ \hyperlink{_p_s2_8h_abe73bcf82b19d9727d29850864eac8b8}{get\+I\+P\+Target} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_p_s2_8h_a2725544e7a06f2eb04622b77b3b57ac7}{values} \mbox{[}23\mbox{]}
+\item 
+int \hyperlink{_p_s2_8h_a54e2cac8504e2abd41419a6177c97344}{I\+C1\+State}
+\item 
+int \hyperlink{_p_s2_8h_ab100c3940bcc51c739758e8ab77b5330}{scancode}
+\item 
+int \hyperlink{_p_s2_8h_a7d0767b3a211317df10f5b01f5402d18}{ps2\+Buffer\+End\+Index}
+\item 
+int \hyperlink{_p_s2_8h_a8631eed927347d2af2042273a5e835e8}{ps2\+Buffer} \mbox{[}100\mbox{]}
+\item 
+int \hyperlink{_p_s2_8h_a4b47033f07f05416b1337b1c3469df6c}{Keys\+To\+Process}
+\item 
+int \hyperlink{_p_s2_8h_adb5fec5145465bea5af5eec1e194a1b7}{ps2\+Buffer\+Start}
+\item 
+int \hyperlink{_p_s2_8h_a6191505e87fa160d36f50dfb2f69233e}{ps2\+Buffer\+Num\+Items}
+\item 
+int \hyperlink{_p_s2_8h_a2083ba3e6f9cee8c4694d88b456e6d24}{Shift\+Pressed}
+\item 
+uint8\+\_\+t \hyperlink{_p_s2_8h_a78a502c5ea8364e4c06aea5ff4361c8f}{text\+Line} \mbox{[}\hyperlink{_p_s2_8h_a01882b20b26727e0c233e94a4c863459}{T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H}\mbox{]}
+\item 
+uint8\+\_\+t \hyperlink{_p_s2_8h_a4eddb259269e1401df5b56698f231263}{newtext\+Line} \mbox{[}\hyperlink{_p_s2_8h_a01882b20b26727e0c233e94a4c863459}{T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H}\mbox{]}
+\item 
+int \hyperlink{_p_s2_8h_a03356a6fa7a8df1d0db97d710cd234ee}{textlineindex}
+\item 
+uint8\+\_\+t \hyperlink{_p_s2_8h_a7cda0ad58ffd2ffb3ab59b7cad3a947c}{font\+\_\+map} \mbox{[}128\mbox{]}\mbox{[}8\mbox{]}
+\item 
+char \hyperlink{_p_s2_8h_aa4e0d20faf2f41acbf49d137715ba813}{I\+P\+Target} \mbox{[}16\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_p_s2_8h_a4b8578b52cb39af2122c5047a8520757}{}\index{P\+S2.\+h@{P\+S2.\+h}!ps2\+Buffer\+Size@{ps2\+Buffer\+Size}}
+\index{ps2\+Buffer\+Size@{ps2\+Buffer\+Size}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{ps2\+Buffer\+Size}]{\setlength{\rightskip}{0pt plus 5cm}\#define ps2\+Buffer\+Size~100}\label{_p_s2_8h_a4b8578b52cb39af2122c5047a8520757}
+
+
+Definition at line 46 of file P\+S2.\+h.
+
+\hypertarget{_p_s2_8h_a01882b20b26727e0c233e94a4c863459}{}\index{P\+S2.\+h@{P\+S2.\+h}!T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H@{T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H}}
+\index{T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H@{T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H~1024}\label{_p_s2_8h_a01882b20b26727e0c233e94a4c863459}
+
+
+Definition at line 53 of file P\+S2.\+h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_p_s2_8h_acea8175bc07b5d0ba9f3f78d0c00c4a7}{}\index{P\+S2.\+h@{P\+S2.\+h}!Blink\+Cursor@{Blink\+Cursor}}
+\index{Blink\+Cursor@{Blink\+Cursor}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{Blink\+Cursor}]{\setlength{\rightskip}{0pt plus 5cm}void Blink\+Cursor (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8h_acea8175bc07b5d0ba9f3f78d0c00c4a7}
+
+
+Definition at line 567 of file V\+G\+A.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\hypertarget{_p_s2_8h_a5473c6cfd6c580642133754e141ca556}{}\index{P\+S2.\+h@{P\+S2.\+h}!Clear\+Screen@{Clear\+Screen}}
+\index{Clear\+Screen@{Clear\+Screen}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{Clear\+Screen}]{\setlength{\rightskip}{0pt plus 5cm}void Clear\+Screen (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8h_a5473c6cfd6c580642133754e141ca556}
+
+
+Definition at line 488 of file V\+G\+A.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\hypertarget{_p_s2_8h_a48945a9d13c0e9aa46dc3f1302c00223}{}\index{P\+S2.\+h@{P\+S2.\+h}!Compare\+Text\+Lines@{Compare\+Text\+Lines}}
+\index{Compare\+Text\+Lines@{Compare\+Text\+Lines}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{Compare\+Text\+Lines}]{\setlength{\rightskip}{0pt plus 5cm}void Compare\+Text\+Lines (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8h_a48945a9d13c0e9aa46dc3f1302c00223}
+
+
+Definition at line 1226 of file P\+S2.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 5
+
+
+\hypertarget{_p_s2_8h_abe73bcf82b19d9727d29850864eac8b8}{}\index{P\+S2.\+h@{P\+S2.\+h}!get\+I\+P\+Target@{get\+I\+P\+Target}}
+\index{get\+I\+P\+Target@{get\+I\+P\+Target}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{get\+I\+P\+Target}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+I\+P\+Target (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8h_abe73bcf82b19d9727d29850864eac8b8}
+
+
+Definition at line 1219 of file P\+S2.\+c.
+
+\hypertarget{_p_s2_8h_a3a060fca8f2dde6562e2f243414d47d7}{}\index{P\+S2.\+h@{P\+S2.\+h}!gettext\+Line@{gettext\+Line}}
+\index{gettext\+Line@{gettext\+Line}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{gettext\+Line}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t$\ast$ gettext\+Line (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8h_a3a060fca8f2dde6562e2f243414d47d7}
+
+
+Definition at line 1103 of file P\+S2.\+c.
+
+\hypertarget{_p_s2_8h_aeb389b24fcb4bf0ef1cc98315dab5e5f}{}\index{P\+S2.\+h@{P\+S2.\+h}!interpret\+Keypress@{interpret\+Keypress}}
+\index{interpret\+Keypress@{interpret\+Keypress}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{interpret\+Keypress}]{\setlength{\rightskip}{0pt plus 5cm}void interpret\+Keypress (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8h_aeb389b24fcb4bf0ef1cc98315dab5e5f}
+
+
+Definition at line 287 of file P\+S2.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 6
+
+
+\hypertarget{_p_s2_8h_ae311e9417c9347d550643de4daea45e5}{}\index{P\+S2.\+h@{P\+S2.\+h}!keyboard\+\_\+lookup@{keyboard\+\_\+lookup}}
+\index{keyboard\+\_\+lookup@{keyboard\+\_\+lookup}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{keyboard\+\_\+lookup}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t$\ast$ keyboard\+\_\+lookup (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{number}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8h_ae311e9417c9347d550643de4daea45e5}
+
+
+Definition at line 135 of file P\+S2.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 7
+
+
+\hypertarget{_p_s2_8h_a1c9949e161f05ecf2ba74181c4fdd1af}{}\index{P\+S2.\+h@{P\+S2.\+h}!keyboard\+\_\+setup@{keyboard\+\_\+setup}}
+\index{keyboard\+\_\+setup@{keyboard\+\_\+setup}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{keyboard\+\_\+setup}]{\setlength{\rightskip}{0pt plus 5cm}void keyboard\+\_\+setup (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8h_a1c9949e161f05ecf2ba74181c4fdd1af}
+
+
+Definition at line 151 of file P\+S2.\+c.
+
+\hypertarget{_p_s2_8h_ac8e40e0b08b773c5f3fc0b303fe562de}{}\index{P\+S2.\+h@{P\+S2.\+h}!Move\+Cursor\+Down@{Move\+Cursor\+Down}}
+\index{Move\+Cursor\+Down@{Move\+Cursor\+Down}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{Move\+Cursor\+Down}]{\setlength{\rightskip}{0pt plus 5cm}void Move\+Cursor\+Down (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8h_ac8e40e0b08b773c5f3fc0b303fe562de}
+
+
+Definition at line 551 of file V\+G\+A.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 8
+
+
+\hypertarget{_p_s2_8h_a7804524381705ec22e0efc3a1326dd69}{}\index{P\+S2.\+h@{P\+S2.\+h}!Move\+Cursor\+Left@{Move\+Cursor\+Left}}
+\index{Move\+Cursor\+Left@{Move\+Cursor\+Left}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{Move\+Cursor\+Left}]{\setlength{\rightskip}{0pt plus 5cm}void Move\+Cursor\+Left (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8h_a7804524381705ec22e0efc3a1326dd69}
+
+
+Definition at line 498 of file V\+G\+A.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 9
+
+
+\hypertarget{_p_s2_8h_ac177699cfeda15e4b887864f6eacc5e3}{}\index{P\+S2.\+h@{P\+S2.\+h}!Move\+Cursor\+Right@{Move\+Cursor\+Right}}
+\index{Move\+Cursor\+Right@{Move\+Cursor\+Right}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{Move\+Cursor\+Right}]{\setlength{\rightskip}{0pt plus 5cm}void Move\+Cursor\+Right (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8h_ac177699cfeda15e4b887864f6eacc5e3}
+
+
+Definition at line 519 of file V\+G\+A.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 10
+
+
+\hypertarget{_p_s2_8h_ae9337ec3c6ea47f10d329cd99d7a29f9}{}\index{P\+S2.\+h@{P\+S2.\+h}!Move\+Cursor\+Up@{Move\+Cursor\+Up}}
+\index{Move\+Cursor\+Up@{Move\+Cursor\+Up}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{Move\+Cursor\+Up}]{\setlength{\rightskip}{0pt plus 5cm}void Move\+Cursor\+Up (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8h_ae9337ec3c6ea47f10d329cd99d7a29f9}
+
+
+Definition at line 535 of file V\+G\+A.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 11
+
+
+\hypertarget{_p_s2_8h_a29bab149333c107091c1b286e05ac315}{}\index{P\+S2.\+h@{P\+S2.\+h}!place\+Char@{place\+Char}}
+\index{place\+Char@{place\+Char}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{place\+Char}]{\setlength{\rightskip}{0pt plus 5cm}void place\+Char (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{character}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8h_a29bab149333c107091c1b286e05ac315}
+
+
+Definition at line 459 of file V\+G\+A.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 12
+
+
+\hypertarget{_p_s2_8h_afb368b3eb12755cae8787b96e467e0e3}{}\index{P\+S2.\+h@{P\+S2.\+h}!press\+\_\+backspace@{press\+\_\+backspace}}
+\index{press\+\_\+backspace@{press\+\_\+backspace}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{press\+\_\+backspace}]{\setlength{\rightskip}{0pt plus 5cm}void press\+\_\+backspace (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8h_afb368b3eb12755cae8787b96e467e0e3}
+
+
+Definition at line 1279 of file P\+S2.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 13
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 14
+
+
+\hypertarget{_p_s2_8h_aee82caceba560f01202c4459ba4497c7}{}\index{P\+S2.\+h@{P\+S2.\+h}!process\+Line@{process\+Line}}
+\index{process\+Line@{process\+Line}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{process\+Line}]{\setlength{\rightskip}{0pt plus 5cm}void process\+Line (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{text\+Line\+Ptr}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8h_aee82caceba560f01202c4459ba4497c7}
+
+
+Definition at line 1108 of file P\+S2.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 15
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 16
+
+
+\hypertarget{_p_s2_8h_aeca62116778bb6c13245089867ded8d9}{}\index{P\+S2.\+h@{P\+S2.\+h}!reset\+Place\+Char\+Location@{reset\+Place\+Char\+Location}}
+\index{reset\+Place\+Char\+Location@{reset\+Place\+Char\+Location}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{reset\+Place\+Char\+Location}]{\setlength{\rightskip}{0pt plus 5cm}void reset\+Place\+Char\+Location (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8h_aeca62116778bb6c13245089867ded8d9}
+
+
+Definition at line 477 of file V\+G\+A.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 17
+
+
+\hypertarget{_p_s2_8h_a030e6b6983ff846d9cca945c743c40b2}{}\index{P\+S2.\+h@{P\+S2.\+h}!Shift\+Screen\+Down@{Shift\+Screen\+Down}}
+\index{Shift\+Screen\+Down@{Shift\+Screen\+Down}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{Shift\+Screen\+Down}]{\setlength{\rightskip}{0pt plus 5cm}void Shift\+Screen\+Down (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8h_a030e6b6983ff846d9cca945c743c40b2}
+
+
+Definition at line 622 of file V\+G\+A.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 18
+
+
+\hypertarget{_p_s2_8h_a16432961ed8b60a6197456a6d92e4ddc}{}\index{P\+S2.\+h@{P\+S2.\+h}!Shift\+Screen\+Left@{Shift\+Screen\+Left}}
+\index{Shift\+Screen\+Left@{Shift\+Screen\+Left}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{Shift\+Screen\+Left}]{\setlength{\rightskip}{0pt plus 5cm}void Shift\+Screen\+Left (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8h_a16432961ed8b60a6197456a6d92e4ddc}
+
+
+Definition at line 648 of file V\+G\+A.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 19
+
+
+\hypertarget{_p_s2_8h_a9c1bdbae316b73cb3580823f20c413f3}{}\index{P\+S2.\+h@{P\+S2.\+h}!Shift\+Screen\+Right@{Shift\+Screen\+Right}}
+\index{Shift\+Screen\+Right@{Shift\+Screen\+Right}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{Shift\+Screen\+Right}]{\setlength{\rightskip}{0pt plus 5cm}void Shift\+Screen\+Right (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8h_a9c1bdbae316b73cb3580823f20c413f3}
+
+
+Definition at line 675 of file V\+G\+A.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 20
+
+
+\hypertarget{_p_s2_8h_a819307bdf0c8c8a841a2305637d102c2}{}\index{P\+S2.\+h@{P\+S2.\+h}!Shift\+Screen\+Up@{Shift\+Screen\+Up}}
+\index{Shift\+Screen\+Up@{Shift\+Screen\+Up}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{Shift\+Screen\+Up}]{\setlength{\rightskip}{0pt plus 5cm}void Shift\+Screen\+Up (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8h_a819307bdf0c8c8a841a2305637d102c2}
+
+
+Definition at line 596 of file V\+G\+A.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 21
+
+
+\hypertarget{_p_s2_8h_a5391d4586620db9cb2c8e96627f37f7e}{}\index{P\+S2.\+h@{P\+S2.\+h}!test\+Keyboard\+Agitator@{test\+Keyboard\+Agitator}}
+\index{test\+Keyboard\+Agitator@{test\+Keyboard\+Agitator}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{test\+Keyboard\+Agitator}]{\setlength{\rightskip}{0pt plus 5cm}void test\+Keyboard\+Agitator (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{scan\+Code}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8h_a5391d4586620db9cb2c8e96627f37f7e}
+\hypertarget{_p_s2_8h_a01ddbbb07d07e31ed7bce301ba934d43}{}\index{P\+S2.\+h@{P\+S2.\+h}!translate\+Keypress@{translate\+Keypress}}
+\index{translate\+Keypress@{translate\+Keypress}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{translate\+Keypress}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t translate\+Keypress (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8h_a01ddbbb07d07e31ed7bce301ba934d43}
+
+
+Definition at line 423 of file P\+S2.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 22
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 23
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{_p_s2_8h_a7cda0ad58ffd2ffb3ab59b7cad3a947c}{}\index{P\+S2.\+h@{P\+S2.\+h}!font\+\_\+map@{font\+\_\+map}}
+\index{font\+\_\+map@{font\+\_\+map}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{font\+\_\+map}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t font\+\_\+map\mbox{[}128\mbox{]}\mbox{[}8\mbox{]}}\label{_p_s2_8h_a7cda0ad58ffd2ffb3ab59b7cad3a947c}
+font\+\_\+map based on the file \href{http://users.ices.utexas.edu/~lenharth/cs378/fall13/font8x8.h}{\tt http\+://users.\+ices.\+utexas.\+edu/$\sim$lenharth/cs378/fall13/font8x8.\+h} released with comments below\+:
+
+8x8 monochrome bitmap fonts for rendering Author\+: Daniel Hepper \href{mailto:daniel@hepper.net}{\tt daniel@hepper.\+net}
+
+License\+: Public Domain
+
+Based on\+: // Summary\+: font8x8.\+h // 8x8 monochrome bitmap fonts for rendering // // Author\+: // Marcel Sondaar // International Business Machines (public domain V\+G\+A fonts) // // License\+: // Public Domain
+
+Fetched from\+: \href{http://dimensionalrift.homelinux.net/combuster/mos3/?p=viewsource&file=/modules/gfx/font8_8.asm}{\tt http\+://dimensionalrift.\+homelinux.\+net/combuster/mos3/?p=viewsource\&file=/modules/gfx/font8\+\_\+8.\+asm} 
+
+Definition at line 4 of file P\+S2.\+c.
+
+\hypertarget{_p_s2_8h_a54e2cac8504e2abd41419a6177c97344}{}\index{P\+S2.\+h@{P\+S2.\+h}!I\+C1\+State@{I\+C1\+State}}
+\index{I\+C1\+State@{I\+C1\+State}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{I\+C1\+State}]{\setlength{\rightskip}{0pt plus 5cm}int I\+C1\+State}\label{_p_s2_8h_a54e2cac8504e2abd41419a6177c97344}
+
+
+Definition at line 34 of file P\+S2.\+h.
+
+\hypertarget{_p_s2_8h_aa4e0d20faf2f41acbf49d137715ba813}{}\index{P\+S2.\+h@{P\+S2.\+h}!I\+P\+Target@{I\+P\+Target}}
+\index{I\+P\+Target@{I\+P\+Target}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{I\+P\+Target}]{\setlength{\rightskip}{0pt plus 5cm}char I\+P\+Target\mbox{[}16\mbox{]}}\label{_p_s2_8h_aa4e0d20faf2f41acbf49d137715ba813}
+
+
+Definition at line 274 of file P\+S2.\+h.
+
+\hypertarget{_p_s2_8h_a4b47033f07f05416b1337b1c3469df6c}{}\index{P\+S2.\+h@{P\+S2.\+h}!Keys\+To\+Process@{Keys\+To\+Process}}
+\index{Keys\+To\+Process@{Keys\+To\+Process}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{Keys\+To\+Process}]{\setlength{\rightskip}{0pt plus 5cm}int Keys\+To\+Process}\label{_p_s2_8h_a4b47033f07f05416b1337b1c3469df6c}
+
+
+Definition at line 40 of file P\+S2.\+h.
+
+\hypertarget{_p_s2_8h_a4eddb259269e1401df5b56698f231263}{}\index{P\+S2.\+h@{P\+S2.\+h}!newtext\+Line@{newtext\+Line}}
+\index{newtext\+Line@{newtext\+Line}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{newtext\+Line}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t newtext\+Line\mbox{[}{\bf T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H}\mbox{]}}\label{_p_s2_8h_a4eddb259269e1401df5b56698f231263}
+
+
+Definition at line 56 of file P\+S2.\+h.
+
+\hypertarget{_p_s2_8h_a8631eed927347d2af2042273a5e835e8}{}\index{P\+S2.\+h@{P\+S2.\+h}!ps2\+Buffer@{ps2\+Buffer}}
+\index{ps2\+Buffer@{ps2\+Buffer}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{ps2\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}int ps2\+Buffer\mbox{[}100\mbox{]}}\label{_p_s2_8h_a8631eed927347d2af2042273a5e835e8}
+
+
+Definition at line 37 of file P\+S2.\+h.
+
+\hypertarget{_p_s2_8h_a7d0767b3a211317df10f5b01f5402d18}{}\index{P\+S2.\+h@{P\+S2.\+h}!ps2\+Buffer\+End\+Index@{ps2\+Buffer\+End\+Index}}
+\index{ps2\+Buffer\+End\+Index@{ps2\+Buffer\+End\+Index}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{ps2\+Buffer\+End\+Index}]{\setlength{\rightskip}{0pt plus 5cm}int ps2\+Buffer\+End\+Index}\label{_p_s2_8h_a7d0767b3a211317df10f5b01f5402d18}
+
+
+Definition at line 36 of file P\+S2.\+h.
+
+\hypertarget{_p_s2_8h_a6191505e87fa160d36f50dfb2f69233e}{}\index{P\+S2.\+h@{P\+S2.\+h}!ps2\+Buffer\+Num\+Items@{ps2\+Buffer\+Num\+Items}}
+\index{ps2\+Buffer\+Num\+Items@{ps2\+Buffer\+Num\+Items}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{ps2\+Buffer\+Num\+Items}]{\setlength{\rightskip}{0pt plus 5cm}int ps2\+Buffer\+Num\+Items}\label{_p_s2_8h_a6191505e87fa160d36f50dfb2f69233e}
+
+
+Definition at line 47 of file P\+S2.\+h.
+
+\hypertarget{_p_s2_8h_adb5fec5145465bea5af5eec1e194a1b7}{}\index{P\+S2.\+h@{P\+S2.\+h}!ps2\+Buffer\+Start@{ps2\+Buffer\+Start}}
+\index{ps2\+Buffer\+Start@{ps2\+Buffer\+Start}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{ps2\+Buffer\+Start}]{\setlength{\rightskip}{0pt plus 5cm}int ps2\+Buffer\+Start}\label{_p_s2_8h_adb5fec5145465bea5af5eec1e194a1b7}
+
+
+Definition at line 44 of file P\+S2.\+h.
+
+\hypertarget{_p_s2_8h_ab100c3940bcc51c739758e8ab77b5330}{}\index{P\+S2.\+h@{P\+S2.\+h}!scancode@{scancode}}
+\index{scancode@{scancode}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{scancode}]{\setlength{\rightskip}{0pt plus 5cm}int scancode}\label{_p_s2_8h_ab100c3940bcc51c739758e8ab77b5330}
+
+
+Definition at line 35 of file P\+S2.\+h.
+
+\hypertarget{_p_s2_8h_a2083ba3e6f9cee8c4694d88b456e6d24}{}\index{P\+S2.\+h@{P\+S2.\+h}!Shift\+Pressed@{Shift\+Pressed}}
+\index{Shift\+Pressed@{Shift\+Pressed}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{Shift\+Pressed}]{\setlength{\rightskip}{0pt plus 5cm}int Shift\+Pressed}\label{_p_s2_8h_a2083ba3e6f9cee8c4694d88b456e6d24}
+
+
+Definition at line 50 of file P\+S2.\+h.
+
+\hypertarget{_p_s2_8h_a78a502c5ea8364e4c06aea5ff4361c8f}{}\index{P\+S2.\+h@{P\+S2.\+h}!text\+Line@{text\+Line}}
+\index{text\+Line@{text\+Line}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{text\+Line}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t text\+Line\mbox{[}{\bf T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H}\mbox{]}}\label{_p_s2_8h_a78a502c5ea8364e4c06aea5ff4361c8f}
+
+
+Definition at line 55 of file P\+S2.\+h.
+
+\hypertarget{_p_s2_8h_a03356a6fa7a8df1d0db97d710cd234ee}{}\index{P\+S2.\+h@{P\+S2.\+h}!textlineindex@{textlineindex}}
+\index{textlineindex@{textlineindex}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{textlineindex}]{\setlength{\rightskip}{0pt plus 5cm}int textlineindex}\label{_p_s2_8h_a03356a6fa7a8df1d0db97d710cd234ee}
+
+
+Definition at line 62 of file P\+S2.\+h.
+
+\hypertarget{_p_s2_8h_a2725544e7a06f2eb04622b77b3b57ac7}{}\index{P\+S2.\+h@{P\+S2.\+h}!values@{values}}
+\index{values@{values}!P\+S2.\+h@{P\+S2.\+h}}
+\subsubsection[{values}]{\setlength{\rightskip}{0pt plus 5cm}int values\mbox{[}23\mbox{]}}\label{_p_s2_8h_a2725544e7a06f2eb04622b77b3b57ac7}
+
+
+Definition at line 33 of file P\+S2.\+h.
+

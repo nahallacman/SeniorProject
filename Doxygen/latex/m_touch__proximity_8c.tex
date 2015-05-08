@@ -1,0 +1,94 @@
+\hypertarget{m_touch__proximity_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch\+\_\+proximity.c File Reference}
+\label{m_touch__proximity_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch\+\_\+proximity.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch\+\_\+proximity.\+c}}
+
+
+Implements the m\+Touch proximity decoding, if enabled.  
+
+
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structm_touch___prox___variables}{m\+Touch\+\_\+\+Prox\+\_\+\+Variables}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{m_touch__proximity_8c_ab986cf22f4d984c3f9340d358325f05f}{m\+Touch\+\_\+\+Prox\+Init} (void)
+\item 
+void \hyperlink{m_touch__proximity_8c_a747a889ec6abd0170eecdafd9499769b}{m\+Touch\+\_\+\+Prox\+Update\+Baseline} (void)
+\item 
+uint8\+\_\+t \hyperlink{m_touch__proximity_8c_ad816e19fbe296786defa4bb48326b123}{m\+Touch\+\_\+\+Prox\+State\+Machine} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structm_touch___prox___variables}{m\+Touch\+\_\+\+Prox\+\_\+\+Variables} \hyperlink{m_touch__proximity_8c_ad57818770117a022417cb051e42a8a87}{m\+Touch\+\_\+prox\+Variables} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+P\+R\+O\+X\+I\+M\+I\+T\+Y\mbox{]}
+\item 
+const uint8\+\_\+t \hyperlink{m_touch__proximity_8c_a6ef114330d994e607c6521573e9fe08c}{m\+Touch\+\_\+prox\+Index} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]} = M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+O\+X\+I\+N\+D\+E\+X\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+I\+N\+I\+T
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements the m\+Touch proximity decoding, if enabled. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{m_touch__proximity_8c_ab986cf22f4d984c3f9340d358325f05f}{}\index{m\+Touch\+\_\+proximity.\+c@{m\+Touch\+\_\+proximity.\+c}!m\+Touch\+\_\+\+Prox\+Init@{m\+Touch\+\_\+\+Prox\+Init}}
+\index{m\+Touch\+\_\+\+Prox\+Init@{m\+Touch\+\_\+\+Prox\+Init}!m\+Touch\+\_\+proximity.\+c@{m\+Touch\+\_\+proximity.\+c}}
+\subsubsection[{m\+Touch\+\_\+\+Prox\+Init}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Touch\+\_\+\+Prox\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_touch__proximity_8c_ab986cf22f4d984c3f9340d358325f05f}
+
+
+Definition at line 85 of file m\+Touch\+\_\+proximity.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+\hypertarget{m_touch__proximity_8c_ad816e19fbe296786defa4bb48326b123}{}\index{m\+Touch\+\_\+proximity.\+c@{m\+Touch\+\_\+proximity.\+c}!m\+Touch\+\_\+\+Prox\+State\+Machine@{m\+Touch\+\_\+\+Prox\+State\+Machine}}
+\index{m\+Touch\+\_\+\+Prox\+State\+Machine@{m\+Touch\+\_\+\+Prox\+State\+Machine}!m\+Touch\+\_\+proximity.\+c@{m\+Touch\+\_\+proximity.\+c}}
+\subsubsection[{m\+Touch\+\_\+\+Prox\+State\+Machine}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t m\+Touch\+\_\+\+Prox\+State\+Machine (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_touch__proximity_8c_ad816e19fbe296786defa4bb48326b123}
+
+
+Definition at line 120 of file m\+Touch\+\_\+proximity.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+\hypertarget{m_touch__proximity_8c_a747a889ec6abd0170eecdafd9499769b}{}\index{m\+Touch\+\_\+proximity.\+c@{m\+Touch\+\_\+proximity.\+c}!m\+Touch\+\_\+\+Prox\+Update\+Baseline@{m\+Touch\+\_\+\+Prox\+Update\+Baseline}}
+\index{m\+Touch\+\_\+\+Prox\+Update\+Baseline@{m\+Touch\+\_\+\+Prox\+Update\+Baseline}!m\+Touch\+\_\+proximity.\+c@{m\+Touch\+\_\+proximity.\+c}}
+\subsubsection[{m\+Touch\+\_\+\+Prox\+Update\+Baseline}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Touch\+\_\+\+Prox\+Update\+Baseline (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_touch__proximity_8c_a747a889ec6abd0170eecdafd9499769b}
+
+
+\subsection{Variable Documentation}
+\hypertarget{m_touch__proximity_8c_a6ef114330d994e607c6521573e9fe08c}{}\index{m\+Touch\+\_\+proximity.\+c@{m\+Touch\+\_\+proximity.\+c}!m\+Touch\+\_\+prox\+Index@{m\+Touch\+\_\+prox\+Index}}
+\index{m\+Touch\+\_\+prox\+Index@{m\+Touch\+\_\+prox\+Index}!m\+Touch\+\_\+proximity.\+c@{m\+Touch\+\_\+proximity.\+c}}
+\subsubsection[{m\+Touch\+\_\+prox\+Index}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\+\_\+t m\+Touch\+\_\+prox\+Index\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]} = M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+O\+X\+I\+N\+D\+E\+X\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+I\+N\+I\+T}\label{m_touch__proximity_8c_a6ef114330d994e607c6521573e9fe08c}
+
+
+Definition at line 82 of file m\+Touch\+\_\+proximity.\+c.
+
+\hypertarget{m_touch__proximity_8c_ad57818770117a022417cb051e42a8a87}{}\index{m\+Touch\+\_\+proximity.\+c@{m\+Touch\+\_\+proximity.\+c}!m\+Touch\+\_\+prox\+Variables@{m\+Touch\+\_\+prox\+Variables}}
+\index{m\+Touch\+\_\+prox\+Variables@{m\+Touch\+\_\+prox\+Variables}!m\+Touch\+\_\+proximity.\+c@{m\+Touch\+\_\+proximity.\+c}}
+\subsubsection[{m\+Touch\+\_\+prox\+Variables}]{\setlength{\rightskip}{0pt plus 5cm}{\bf m\+Touch\+\_\+\+Prox\+\_\+\+Variables} m\+Touch\+\_\+prox\+Variables\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+P\+R\+O\+X\+I\+M\+I\+T\+Y\mbox{]}}\label{m_touch__proximity_8c_ad57818770117a022417cb051e42a8a87}
+
+
+Definition at line 73 of file m\+Touch\+\_\+proximity.\+c.
+

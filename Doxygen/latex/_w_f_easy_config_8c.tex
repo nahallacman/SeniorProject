@@ -1,0 +1,224 @@
+\hypertarget{_w_f_easy_config_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Wi\+Fi/\+W\+F\+Easy\+Config.c File Reference}
+\label{_w_f_easy_config_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Wi\+Fi/\+W\+F\+Easy\+Config.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Wi\+Fi/\+W\+F\+Easy\+Config.\+c}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_w_f_easy_config_8c_acd85a567866d4e3fe423a0509ed82cca}{W\+F\+Easy\+Config\+Init} ()
+\item 
+void \hyperlink{_w_f_easy_config_8c_a6f8219cd9d99ef06b643df3c3c8a3d43}{W\+F\+Easy\+Config\+Mgr} ()
+\item 
+void \hyperlink{_w_f_easy_config_8c_aa05ff7888378e0629d155c119671c89f}{W\+F\+Init\+Scan} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} \hyperlink{_w_f_easy_config_8c_ace3a4ed8433cd067c9ea749703b517ba}{W\+F\+Start\+Scan} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} \hyperlink{_w_f_easy_config_8c_acf8dafbca83e5b265a2c0d0b9c0a8aef}{W\+F\+Retrieve\+Scan\+Result} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} Idx, \hyperlink{structt_w_f_scan_result}{t\+W\+F\+Scan\+Result} $\ast$p\+\_\+\+Scan\+Result)
+\item 
+void \hyperlink{_w_f_easy_config_8c_afa8b477fb8f2af0e721c73e032014e3b}{W\+F\+Scan\+Event\+Handler} (\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} scan\+Results)
+\item 
+void \hyperlink{_w_f_easy_config_8c_a9ee98a055eabf09aabe634ad613fd399}{W\+F\+Get\+Scan\+Results} (void)
+\item 
+void \hyperlink{_w_f_easy_config_8c_a71922ce0d81f02a29466f8aa9074fbde}{W\+F\+Display\+Scan\+Mgr} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structt_w_f_scan_ctx}{t\+W\+F\+Scan\+Ctx} \hyperlink{_w_f_easy_config_8c_a493edf2c88b2312db78b8c4963560950}{g\+\_\+\+Scan\+Ctx}
+\item 
+\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{_w_f_easy_config_8c_a7f2db0c44f4d25440944a571e73924f3}{Connection\+Profile\+I\+D}
+\item 
+\hyperlink{structt_w_f_easy_config_ctx}{t\+W\+F\+Easy\+Config\+Ctx} \hyperlink{_w_f_easy_config_8c_a6958ade60fe86292c4aef57dc327fe9c}{g\+\_\+easy\+Config\+Ctx}
+\item 
+\hyperlink{structt_w_f_scan_result}{t\+W\+F\+Scan\+Result} \hyperlink{_w_f_easy_config_8c_a0fa554350955c8f8a8075eb5bb07266b}{pre\+Scan\+Result} \mbox{[}50\mbox{]}
+\item 
+\hyperlink{_w_f_api_8h_a023463cdff2bc01542e11e5824294bb2}{t\+W\+F\+Hibernate} \hyperlink{_w_f_easy_config_8c_aca3c2db2dde38d5af0fc3b7f23fb49aa}{W\+F\+\_\+hibernate}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_w_f_easy_config_8c_a71922ce0d81f02a29466f8aa9074fbde}{}\index{W\+F\+Easy\+Config.\+c@{W\+F\+Easy\+Config.\+c}!W\+F\+Display\+Scan\+Mgr@{W\+F\+Display\+Scan\+Mgr}}
+\index{W\+F\+Display\+Scan\+Mgr@{W\+F\+Display\+Scan\+Mgr}!W\+F\+Easy\+Config.\+c@{W\+F\+Easy\+Config.\+c}}
+\subsubsection[{W\+F\+Display\+Scan\+Mgr}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+Display\+Scan\+Mgr (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_easy_config_8c_a71922ce0d81f02a29466f8aa9074fbde}
+
+
+Definition at line 348 of file W\+F\+Easy\+Config.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 0
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+\hypertarget{_w_f_easy_config_8c_acd85a567866d4e3fe423a0509ed82cca}{}\index{W\+F\+Easy\+Config.\+c@{W\+F\+Easy\+Config.\+c}!W\+F\+Easy\+Config\+Init@{W\+F\+Easy\+Config\+Init}}
+\index{W\+F\+Easy\+Config\+Init@{W\+F\+Easy\+Config\+Init}!W\+F\+Easy\+Config.\+c@{W\+F\+Easy\+Config.\+c}}
+\subsubsection[{W\+F\+Easy\+Config\+Init}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+Easy\+Config\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_easy_config_8c_acd85a567866d4e3fe423a0509ed82cca}
+
+
+Definition at line 82 of file W\+F\+Easy\+Config.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\hypertarget{_w_f_easy_config_8c_a6f8219cd9d99ef06b643df3c3c8a3d43}{}\index{W\+F\+Easy\+Config.\+c@{W\+F\+Easy\+Config.\+c}!W\+F\+Easy\+Config\+Mgr@{W\+F\+Easy\+Config\+Mgr}}
+\index{W\+F\+Easy\+Config\+Mgr@{W\+F\+Easy\+Config\+Mgr}!W\+F\+Easy\+Config.\+c@{W\+F\+Easy\+Config.\+c}}
+\subsubsection[{W\+F\+Easy\+Config\+Mgr}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+Easy\+Config\+Mgr (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_easy_config_8c_a6f8219cd9d99ef06b643df3c3c8a3d43}
+
+
+Definition at line 98 of file W\+F\+Easy\+Config.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\hypertarget{_w_f_easy_config_8c_a9ee98a055eabf09aabe634ad613fd399}{}\index{W\+F\+Easy\+Config.\+c@{W\+F\+Easy\+Config.\+c}!W\+F\+Get\+Scan\+Results@{W\+F\+Get\+Scan\+Results}}
+\index{W\+F\+Get\+Scan\+Results@{W\+F\+Get\+Scan\+Results}!W\+F\+Easy\+Config.\+c@{W\+F\+Easy\+Config.\+c}}
+\subsubsection[{W\+F\+Get\+Scan\+Results}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+Get\+Scan\+Results (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_easy_config_8c_a9ee98a055eabf09aabe634ad613fd399}
+
+
+Definition at line 326 of file W\+F\+Easy\+Config.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+\hypertarget{_w_f_easy_config_8c_aa05ff7888378e0629d155c119671c89f}{}\index{W\+F\+Easy\+Config.\+c@{W\+F\+Easy\+Config.\+c}!W\+F\+Init\+Scan@{W\+F\+Init\+Scan}}
+\index{W\+F\+Init\+Scan@{W\+F\+Init\+Scan}!W\+F\+Easy\+Config.\+c@{W\+F\+Easy\+Config.\+c}}
+\subsubsection[{W\+F\+Init\+Scan}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+Init\+Scan (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_easy_config_8c_aa05ff7888378e0629d155c119671c89f}
+
+
+Definition at line 268 of file W\+F\+Easy\+Config.\+c.
+
+\hypertarget{_w_f_easy_config_8c_acf8dafbca83e5b265a2c0d0b9c0a8aef}{}\index{W\+F\+Easy\+Config.\+c@{W\+F\+Easy\+Config.\+c}!W\+F\+Retrieve\+Scan\+Result@{W\+F\+Retrieve\+Scan\+Result}}
+\index{W\+F\+Retrieve\+Scan\+Result@{W\+F\+Retrieve\+Scan\+Result}!W\+F\+Easy\+Config.\+c@{W\+F\+Easy\+Config.\+c}}
+\subsubsection[{W\+F\+Retrieve\+Scan\+Result}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T16} W\+F\+Retrieve\+Scan\+Result (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{Idx, }
+\item[{{\bf t\+W\+F\+Scan\+Result} $\ast$}]{p\+\_\+\+Scan\+Result}
+\end{DoxyParamCaption}
+)}\label{_w_f_easy_config_8c_acf8dafbca83e5b265a2c0d0b9c0a8aef}
+
+
+Definition at line 296 of file W\+F\+Easy\+Config.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 5
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\hypertarget{_w_f_easy_config_8c_afa8b477fb8f2af0e721c73e032014e3b}{}\index{W\+F\+Easy\+Config.\+c@{W\+F\+Easy\+Config.\+c}!W\+F\+Scan\+Event\+Handler@{W\+F\+Scan\+Event\+Handler}}
+\index{W\+F\+Scan\+Event\+Handler@{W\+F\+Scan\+Event\+Handler}!W\+F\+Easy\+Config.\+c@{W\+F\+Easy\+Config.\+c}}
+\subsubsection[{W\+F\+Scan\+Event\+Handler}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+Scan\+Event\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T16}}]{scan\+Results}
+\end{DoxyParamCaption}
+)}\label{_w_f_easy_config_8c_afa8b477fb8f2af0e721c73e032014e3b}
+
+
+Definition at line 309 of file W\+F\+Easy\+Config.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 7
+
+
+\hypertarget{_w_f_easy_config_8c_ace3a4ed8433cd067c9ea749703b517ba}{}\index{W\+F\+Easy\+Config.\+c@{W\+F\+Easy\+Config.\+c}!W\+F\+Start\+Scan@{W\+F\+Start\+Scan}}
+\index{W\+F\+Start\+Scan@{W\+F\+Start\+Scan}!W\+F\+Easy\+Config.\+c@{W\+F\+Easy\+Config.\+c}}
+\subsubsection[{W\+F\+Start\+Scan}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T16} W\+F\+Start\+Scan (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_easy_config_8c_ace3a4ed8433cd067c9ea749703b517ba}
+
+
+Definition at line 279 of file W\+F\+Easy\+Config.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 8
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 9
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{_w_f_easy_config_8c_a7f2db0c44f4d25440944a571e73924f3}{}\index{W\+F\+Easy\+Config.\+c@{W\+F\+Easy\+Config.\+c}!Connection\+Profile\+I\+D@{Connection\+Profile\+I\+D}}
+\index{Connection\+Profile\+I\+D@{Connection\+Profile\+I\+D}!W\+F\+Easy\+Config.\+c@{W\+F\+Easy\+Config.\+c}}
+\subsubsection[{Connection\+Profile\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} Connection\+Profile\+I\+D}\label{_w_f_easy_config_8c_a7f2db0c44f4d25440944a571e73924f3}
+
+
+Definition at line 185 of file Main\+Demo.\+c.
+
+\hypertarget{_w_f_easy_config_8c_a6958ade60fe86292c4aef57dc327fe9c}{}\index{W\+F\+Easy\+Config.\+c@{W\+F\+Easy\+Config.\+c}!g\+\_\+easy\+Config\+Ctx@{g\+\_\+easy\+Config\+Ctx}}
+\index{g\+\_\+easy\+Config\+Ctx@{g\+\_\+easy\+Config\+Ctx}!W\+F\+Easy\+Config.\+c@{W\+F\+Easy\+Config.\+c}}
+\subsubsection[{g\+\_\+easy\+Config\+Ctx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\+W\+F\+Easy\+Config\+Ctx} g\+\_\+easy\+Config\+Ctx}\label{_w_f_easy_config_8c_a6958ade60fe86292c4aef57dc327fe9c}
+
+
+Definition at line 69 of file W\+F\+Easy\+Config.\+c.
+
+\hypertarget{_w_f_easy_config_8c_a493edf2c88b2312db78b8c4963560950}{}\index{W\+F\+Easy\+Config.\+c@{W\+F\+Easy\+Config.\+c}!g\+\_\+\+Scan\+Ctx@{g\+\_\+\+Scan\+Ctx}}
+\index{g\+\_\+\+Scan\+Ctx@{g\+\_\+\+Scan\+Ctx}!W\+F\+Easy\+Config.\+c@{W\+F\+Easy\+Config.\+c}}
+\subsubsection[{g\+\_\+\+Scan\+Ctx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\+W\+F\+Scan\+Ctx} g\+\_\+\+Scan\+Ctx}\label{_w_f_easy_config_8c_a493edf2c88b2312db78b8c4963560950}
+
+
+Definition at line 62 of file W\+F\+Easy\+Config.\+c.
+
+\hypertarget{_w_f_easy_config_8c_a0fa554350955c8f8a8075eb5bb07266b}{}\index{W\+F\+Easy\+Config.\+c@{W\+F\+Easy\+Config.\+c}!pre\+Scan\+Result@{pre\+Scan\+Result}}
+\index{pre\+Scan\+Result@{pre\+Scan\+Result}!W\+F\+Easy\+Config.\+c@{W\+F\+Easy\+Config.\+c}}
+\subsubsection[{pre\+Scan\+Result}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\+W\+F\+Scan\+Result} pre\+Scan\+Result\mbox{[}50\mbox{]}}\label{_w_f_easy_config_8c_a0fa554350955c8f8a8075eb5bb07266b}
+
+
+Definition at line 72 of file W\+F\+Easy\+Config.\+c.
+
+\hypertarget{_w_f_easy_config_8c_aca3c2db2dde38d5af0fc3b7f23fb49aa}{}\index{W\+F\+Easy\+Config.\+c@{W\+F\+Easy\+Config.\+c}!W\+F\+\_\+hibernate@{W\+F\+\_\+hibernate}}
+\index{W\+F\+\_\+hibernate@{W\+F\+\_\+hibernate}!W\+F\+Easy\+Config.\+c@{W\+F\+Easy\+Config.\+c}}
+\subsubsection[{W\+F\+\_\+hibernate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\+W\+F\+Hibernate} W\+F\+\_\+hibernate}\label{_w_f_easy_config_8c_aca3c2db2dde38d5af0fc3b7f23fb49aa}
+
+
+Definition at line 96 of file W\+F\+Console\+Iwconfig.\+c.
+

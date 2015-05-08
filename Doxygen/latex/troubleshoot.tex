@@ -1,0 +1,272 @@
+\begin{DoxyItemize}
+\item \hyperlink{ts-Comms}{Establishing P\+C Communications} \item \hyperlink{digCom}{Communication Implementation} \item \hyperlink{BCPGUI}{Backwards-\/compatible U\+A\+R\+T for previous Profilab G\+U\+I version} \end{DoxyItemize}
+\hypertarget{ts-Comms}{}\section{P\+C Communications -\/ Troubleshooting}\label{ts-Comms}
+\begin{center} \begin{TabularC}{1}
+\hline
+\begin{center}{\bfseries I\+M\+P\+O\+R\+T\+A\+N\+T I\+M\+P\+O\+R\+T\+A\+N\+T I\+M\+P\+O\+R\+T\+A\+N\+T I\+M\+P\+O\+R\+T\+A\+N\+T I\+M\+P\+O\+R\+T\+A\+N\+T I\+M\+P\+O\+R\+T\+A\+N\+T I\+M\+P\+O\+R\+T\+A\+N\+T I\+M\+P\+O\+R\+T\+A\+N\+T}\end{center} 
+
+The default P\+I\+C\+Kit Serial (P\+K\+S\+A) is not loaded with the correct hex file. To use the P\+K\+S\+A to communicate with the P\+C, one of two hex files must be programmed into the P\+K\+S\+A. A utility program has been provided to help with this step.
+
+The two hex files you must choose from\+: \begin{DoxyItemize}
+\item {\bfseries U\+A\+R\+T\+\_\+\+U\+S\+B\+\_\+\+P\+I\+C\+Kit\+Serial\+\_\+\+V1.\+40.\+hex} \+:\+: When prompted, choose this hex file if you are implementing {\bfseries one-\/way communication}. This hex file will make your P\+K\+S\+A enumerate on the P\+C as a C\+O\+M port. The P\+K\+S\+A will now function as a U\+A\+R\+T-\/to-\/\+U\+S\+B converter. You can then view A\+S\+C\+I\+I data in a terminal window or use the m\+Touch One-\/\+Way G\+U\+I to graph the data in real-\/time. \item {\bfseries P\+K\+S-\/0307-\/\+W\+I\+T\+H\+B\+O\+O\+T-\/0103.\+H\+E\+X} \+:\+: When prompted, choose this hex file if you are implementing {\bfseries two-\/way communication}. This hex file is an updated version of the factory default firmware. Your P\+K\+S\+A will behave exactly as before, but with additional support for R\+S-\/232 break characters. You can then use the m\+Touch Two-\/\+Way G\+U\+I to change configuration values at run-\/time and view the effect on the sensors in real-\/time.\end{DoxyItemize}
+The P\+I\+C\+Kit Serial Loader Utility is located in {\ttfamily Your M\+L\+A Directory/m\+Touch\+Cap\+Demos/\+Utilities/\+P\+I\+C12\+F P\+I\+C16\+F Utilities/\+P\+I\+C\+Kit Serial Loader}
+
+The \hyperlink{PKSARS232}{P\+I\+C\+Kit Serial Loader Guide} provides more information.
+
+\begin{center}{\bfseries I\+M\+P\+O\+R\+T\+A\+N\+T I\+M\+P\+O\+R\+T\+A\+N\+T I\+M\+P\+O\+R\+T\+A\+N\+T I\+M\+P\+O\+R\+T\+A\+N\+T I\+M\+P\+O\+R\+T\+A\+N\+T I\+M\+P\+O\+R\+T\+A\+N\+T I\+M\+P\+O\+R\+T\+A\+N\+T I\+M\+P\+O\+R\+T\+A\+N\+T}\end{center}   \\\cline{1-1}
+\end{TabularC}
+\end{center} 
+
+~\newline
+~\newline
+
+
+There are two main types of communication built in to the m\+Touch Framework\textquotesingle{}s m\+Comm module\+: \begin{DoxyItemize}
+\item \hyperlink{ts-Comms-1way}{One-\/way communication} is handled through U\+A\+R\+T only. It outputs A\+S\+C\+I\+I data to be read from a terminal window or from a G\+U\+I that reads C\+O\+M ports, such as the m\+Touch One-\/\+Way G\+U\+I. You can find the m\+Touch One-\/\+Way G\+U\+I in {\ttfamily Your M\+L\+A Directory/m\+Touch\+Cap\+Demos/\+Utilities/\+P\+I\+C12\+F P\+I\+C16\+F Utilities/m\+Touch One-\/\+Way G\+U\+I}~\newline
+~\newline
+ If you wish to use the P\+I\+C\+Kit Serial with this communication type, it must be loaded with the U\+A\+R\+T-\/to-\/\+U\+S\+B firmware. See \hyperlink{PKSARS232}{this guide} for information on loading this hex file to your P\+K\+S\+A.~\newline
+ \begin{DoxyNote}{Note}
+For backward compatibility with previous versions of the Profilab G\+U\+I, please follow \hyperlink{BCPGUI}{this guide}.~\newline
+~\newline
+ 
+\end{DoxyNote}
+\item {\bfseries Two-\/way communication} can be implemented with U\+A\+R\+T, I2\+C, and S\+P\+I. ~\newline
+~\newline
+ \href{../mComm Users Guide.pdf}{\tt {\bfseries User\textquotesingle{}s Configuration Guide -\/ (P\+D\+F)}}~\newline
+ \href{../mComm Programmers Guide.pdf}{\tt {\bfseries Programmer\textquotesingle{}s Guide -\/ (P\+D\+F)}}~\newline
+ \href{../mTouch 2-Way GUI User Guide.pdf}{\tt {\bfseries m\+Touch 2-\/\+Way G\+U\+I User Guide -\/ (P\+D\+F)}}~\newline
+~\newline
+ The protocol allows for efficient, direct access to E\+E\+P\+R\+O\+M and R\+A\+M for both reading and writing. The data is binary, so must be interpretted by a master instead of a terminal window. This mode allows changing values at run-\/time and execution of user commands. This option is used for communicating to the m\+Touch Two-\/\+Way G\+U\+I and for implementing custom board-\/level communications.~\newline
+~\newline
+ If you wish to use the P\+I\+C\+Kit Serial with the U\+A\+R\+T two-\/way communication type, the P\+K\+S\+A firmware must be updated to the latest P\+K\+S\+A version to support break characters. See \hyperlink{PKSARS232}{this guide} for information on updating the P\+K\+S\+A hex file.~\newline
+~\newline
+ \end{DoxyItemize}
+\hypertarget{ts-Comms-1way}{}\subsection{P\+C Communications \+:\+: One-\/way U\+A\+R\+T A\+S\+C\+I\+I output}\label{ts-Comms-1way}
+
+\begin{DoxyEnumerate}
+\item Make sure the \hyperlink{m_comm__config_8h}{m\+Comm\+\_\+config.\+h} file is properly configured. 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define MCOMM\_ENABLED}
+\textcolor{preprocessor}{#define MCOMM\_TYPE                    MCOMM\_UART\_ONE\_WAY}
+\textcolor{preprocessor}{#define MCOMM\_UART\_BAUDRATE           38400                       // (or) other valid baud rate option}
+\end{DoxyCode}
+ 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define MCOMM\_UART\_1WAY\_MODULE        MCOMM\_UART\_HARDWARE\_MODULE  // (or)
+       MCOMM\_UART\_SOFTWARE\_IMPLEMENTATION}
+
+    \textcolor{comment}{// If MCOMM\_UART\_SOFTWARE\_IMPLEMENTATION is chosen:}
+\textcolor{preprocessor}{    #define MCOMM\_UART\_SOFT\_TXPORT        PORTA}
+\textcolor{preprocessor}{    #define MCOMM\_UART\_SOFT\_TXTRIS        TRISA   }
+\textcolor{preprocessor}{    #define MCOMM\_UART\_SOFT\_TXPIN         5       // <-- The bit of the PORT/TRIS register}
+\textcolor{preprocessor}{                                                  //     NOT the hardware pin on the device}
+\end{DoxyCode}
+ 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define MCOMM\_UART\_1WAY\_OUTPUT        MCOMM\_UART\_1WAY\_DECIMAL     // (or) MCOMM\_UART\_1WAY\_HEX        }
+\textcolor{preprocessor}{#define MCOMM\_UART\_1WAY\_DELIMITER     ';'                         }
+\end{DoxyCode}
+ If you wish to use the P\+I\+C18\+F P\+I\+C24\+F One-\/\+Way G\+U\+I, force the m\+Comm module to follow the G\+U\+I\textquotesingle{}s packet structure by defining this value\+: 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define MCOMM\_UART\_1WAY\_OUT\_GUIv1\_1}
+\end{DoxyCode}
+ The following options will determine what values are output by the U\+A\+R\+T. Matrix output is not supported by the G\+U\+I but may be seen from a terminal window. 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define MCOMM\_UART\_1WAY\_OUT\_STATE             // <-- If defined, outputs the state mask}
+\textcolor{preprocessor}{#define MCOMM\_UART\_1WAY\_OUT\_TOGGLE            // <-- If defined, outputs the toggle state mask}
+\textcolor{preprocessor}{#define MCOMM\_UART\_1WAY\_OUT\_SLIDER            // <-- If defined, outputs the slider output value}
+\textcolor{preprocessor}{#define MCOMM\_UART\_1WAY\_OUT\_MATRIX            // <-- If defined, outputs the matrix press coordinate}
+\textcolor{preprocessor}{#define MCOMM\_UART\_1WAY\_OUT\_READING           // <-- If defined, outputs the raw reading values}
+\textcolor{preprocessor}{#define MCOMM\_UART\_1WAY\_OUT\_BASELINE          // <-- If defined, outputs the sensor baseline values}
+\end{DoxyCode}
+
+
+If you are using a processor with an A\+P\+F\+C\+O\+N register that allows for multiple pins to be used as \textquotesingle{}T\+X\textquotesingle{}, your application is responsible for initializing A\+P\+F\+C\+O\+N to the correct value for your hardware layout. The m\+Touch framework will warn you about this when compiling. To remove this warning, uncomment the \#define at the bottom of \hyperlink{m_touch__config_8h}{m\+Touch\+\_\+config.\+h}\+: 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define APFCON\_INITIALIZED    // For processors with an APFCON register(s), this }
+                              \textcolor{comment}{// #define can be uncommented to stop the mTouch }
+                              \textcolor{comment}{// Framework from producing a "remember to set }
+                              \textcolor{comment}{// APFCON" warning.}
+                              \textcolor{comment}{//}
+                              \textcolor{comment}{// RULE OF PROGRAMMING #4: Register bits initialize, }
+                              \textcolor{comment}{//      by law, to the value you don't want. Always }
+                              \textcolor{comment}{//      explicitly initialize.}
+\end{DoxyCode}
+
+
+
+\item Program the board normally (not in debug mode) and connect the P\+K\+S\+A to both the P\+C and the board.~\newline
+
+
+
+\item Make sure both the P\+I\+C and the P\+K\+S\+A are being supplied with power. Either\+: 
+\begin{DoxyItemize}
+\item Supply power to the P\+I\+C from an external source that is also supplying power to the P\+K\+S\+A\textquotesingle{}s P\+W\+R and G\+N\+D pins. 
+\item Supply power to the P\+I\+C from the P\+K\+S\+A by pressing and holding the black button for 3 seconds until the green power L\+E\+D turns on. 
+\item Supply power to the P\+I\+C from an external source that is N\+O\+T connected to the P\+W\+R/\+G\+N\+D pins of the P\+K\+S\+A and then supply power to the P\+K\+S\+A by pressing on its black button for 3 seconds until the green power L\+E\+D turns on. 
+\end{DoxyItemize}\begin{DoxyNote}{Note}
+Be careful not to supply power to the P\+I\+C from two different sources as you may destroy the board.
+\end{DoxyNote}
+
+\item Is the P\+K\+S\+A\textquotesingle{}s red L\+E\+D on?~\newline
+ If no -\/ 
+\begin{DoxyItemize}
+\item Use a scope to verify the T\+X pin of the P\+K\+S\+A is receiving data from the P\+I\+C. 
+\item If it is, the P\+K\+S\+A\textquotesingle{}s firmware has not been updated to perform as a U\+A\+R\+T-\/to-\/\+U\+S\+B converter. See \hyperlink{PKSARS232}{this guide} on using the P\+K\+S\+A loader utility to reflash the P\+I\+C\+Kit Serial Analyzer\textquotesingle{}s firmware. 
+\end{DoxyItemize}If yes -\/ continue to 5.
+
+
+\item Determine which C\+O\+M port has been assigned to the P\+K\+S\+A.~\newline
+ In Windows -\/ 
+\begin{DoxyItemize}
+\item Right click \textquotesingle{}My Computer\textquotesingle{} --$>$ Properties --$>$ Hardware --$>$ Device Manager 
+\item You should find it listed under \char`\"{}\+Ports (\+C\+O\+M)\char`\"{}. 
+\end{DoxyItemize}If it\textquotesingle{}s not there, you need to reinstall the Windows driver for the U\+A\+R\+T-\/to-\/\+U\+S\+B behavior. The driver can be found in the P\+K\+S\+A Loader Utility\textquotesingle{}s folder. Correct installation is based on the version of Windows you are using, but can be accomplished by right clicking the file and selecting \textquotesingle{}Install\textquotesingle{} in most cases.
+
+
+\item Open the m\+Touch One-\/\+Way G\+U\+I and make sure the communication settings are set to\+:~\newline
+~\newline
+ 
+\begin{DoxyItemize}
+\item The baud rate you have chosen for \#\+M\+T\+O\+U\+C\+H\+\_\+\+U\+A\+R\+T\+\_\+\+B\+A\+U\+D\+R\+A\+T\+E in \hyperlink{m_comm__config_8h}{m\+Comm\+\_\+config.\+h}. 
+\item C\+O\+M Port dependant on current assignment in Device Manager. 
+\end{DoxyItemize}
+\end{DoxyEnumerate}\hypertarget{digCom}{}\section{Communication Implementation}\label{digCom}
+{\bfseries This is for one-\/way communications and only describes the packet structure for the m\+Touch One-\/\+Way G\+U\+I}.
+
+The communication module of the m\+Touch Framework has been designed to talk to the included m\+Touch One-\/\+Way G\+U\+I by default but can easily be adapted to meet your needs. The framework handles all initialization requirements once it knows the P\+I\+C\textquotesingle{}s oscillator speed and desired baud rate.
+
+The data packets being sent to the G\+U\+I are as shown\+: 
+\begin{DoxyCode}
+16bitMaskofSensorStates;Sensor0Reading;Sensor1Reading;...;SensorNReading(CR)(LF)
+\end{DoxyCode}
+ which looks like this when populated\+: 
+\begin{DoxyCode}
+00000;02301;02354;02332;02296;02318
+\end{DoxyCode}
+ \begin{DoxyNote}{Note}
+A {\ttfamily 1} in the bit mask means the sensor is pressed. A {\ttfamily 0} means that it is released.
+\end{DoxyNote}
+The data is sent in decimal format with a maximum of 5 digits by default. \hypertarget{BCPGUI}{}\section{P\+C Communications \+:\+: Backward Compatibility \+:\+: One-\/way U\+A\+R\+T Profilab G\+U\+I v1.0}\label{BCPGUI}
+The new version of the one-\/way U\+A\+R\+T G\+U\+I uses a different A\+S\+C\+I\+I protocol to support the larger feature set of the m\+Touch Framework. The old packet structure was\+: \begin{DoxyItemize}
+\item Semi-\/colon delimited \item First byte\+: Button state mask \item Graph data of all other integers until C\+R/\+L\+F 
+\begin{DoxyCode}
+Example: 00001;00100;01000;10000;
+\end{DoxyCode}
+\end{DoxyItemize}
+
+\begin{DoxyEnumerate}
+\item How to adjust \hyperlink{m_comm__config_8h}{m\+Comm\+\_\+config.\+h} file configuration. 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define MCOMM\_ENABLED                                             // Must be defined}
+\textcolor{preprocessor}{#define MCOMM\_TYPE                    MCOMM\_UART\_ONE\_WAY          // Must be defined to this value}
+\textcolor{preprocessor}{#define MCOMM\_UART\_BAUDRATE           38400                       // (or) other valid baud rate option}
+\end{DoxyCode}
+ 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define MCOMM\_UART\_1WAY\_MODULE        MCOMM\_UART\_HARDWARE\_MODULE  // (or)
+       MCOMM\_UART\_SOFTWARE\_IMPLEMENTATION}
+
+  \textcolor{comment}{// If MCOMM\_UART\_SOFTWARE\_IMPLEMENTATION is chosen:}
+\textcolor{preprocessor}{  #define MCOMM\_UART\_SOFT\_TXPORT        PORTA}
+\textcolor{preprocessor}{  #define MCOMM\_UART\_SOFT\_TXTRIS        TRISA   }
+\textcolor{preprocessor}{  #define MCOMM\_UART\_SOFT\_TXPIN         5       // <-- The bit of the PORT/TRIS register}
+\textcolor{preprocessor}{                                                //     NOT the hardware pin on the device}
+\end{DoxyCode}
+ 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define MCOMM\_UART\_1WAY\_OUTPUT        MCOMM\_UART\_1WAY\_DECIMAL     // (or) MCOMM\_UART\_1WAY\_HEX        }
+\textcolor{preprocessor}{#define MCOMM\_UART\_1WAY\_DELIMITER     ';'                         // <-- IMPORTANT                  }
+\end{DoxyCode}
+
+
+
+\item Modify the bottom half of the \hyperlink{m_comm_8c}{m\+Comm.\+c} function\+: \hyperlink{m_comm_8c_a8bfb942a7ae7836ae9748b1c294ece05}{m\+Comm\+\_\+\+Service()}~\newline
+~\newline
+ {\bfseries Replace this code\+:} 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#if defined(MCOMM\_ONE\_WAY\_ENABLED)}
+    \textcolor{comment}{// OUTPUT LOGIC FOR ONE-WAY COMMUNICATIONS.}
+
+\textcolor{preprocessor}{    #if defined(MCOMM\_UART\_1WAY\_OUT\_STATE)}
+    \hyperlink{m_comm_8c_af25da52c9da7c8fa9337c43ad5d7a1b6}{mComm\_UART\_Int2ASCII}((uint16\_t)\hyperlink{m_touch_8c_ab288c49098e419b3232336a4245b757d}{mTouch\_stateMask});
+\textcolor{preprocessor}{    #else}
+    \hyperlink{m_comm_8c_af25da52c9da7c8fa9337c43ad5d7a1b6}{mComm\_UART\_Int2ASCII}(0);
+\textcolor{preprocessor}{    #endif}
+    
+\textcolor{preprocessor}{    #if defined(MCOMM\_UART\_1WAY\_OUT\_TOGGLE) && defined(MTOUCH\_TOGGLE\_ENABLED)}
+    \hyperlink{m_comm_8c_af25da52c9da7c8fa9337c43ad5d7a1b6}{mComm\_UART\_Int2ASCII}((uint16\_t)\hyperlink{m_touch_8c_a827719a95ea3e7c38efa02c8e1188015}{mTouch\_toggle});
+\textcolor{preprocessor}{    #else}
+    \hyperlink{m_comm_8c_af25da52c9da7c8fa9337c43ad5d7a1b6}{mComm\_UART\_Int2ASCII}(0);
+\textcolor{preprocessor}{    #endif}
+    
+\textcolor{preprocessor}{    #if defined(MCOMM\_UART\_1WAY\_OUT\_SLIDER) && defined(MTOUCH\_NUMBER\_OF\_SLIDERS) &&
+       (MTOUCH\_NUMBER\_OF\_SLIDERS > 0)}
+    \hyperlink{m_comm_8c_a239a6ceb1aeca100de01f2522fb3ca2c}{mComm\_UART\_Char2ASCII}(\hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a8d74be95f98e1d233f912708ef99d445}{mTouch\_slider}[0]);            
+\textcolor{preprocessor}{    #else}
+    \hyperlink{m_comm_8c_a239a6ceb1aeca100de01f2522fb3ca2c}{mComm\_UART\_Char2ASCII}(0);
+\textcolor{preprocessor}{    #endif}
+
+\textcolor{preprocessor}{    #if defined(MCOMM\_UART\_1WAY\_OUT\_MATRIX) && defined(MTOUCH\_MATRIX\_ENABLED)}
+    \hyperlink{m_comm_8c_a52e190faf8c2c0afe082c6ab232da4c8}{mComm\_UART\_PutChar}(\textcolor{charliteral}{'('});
+    \textcolor{keywordflow}{if} (mTouch\_Matrix\_isPressed())
+    \{
+        \hyperlink{m_comm_8c_a52e190faf8c2c0afe082c6ab232da4c8}{mComm\_UART\_PutChar}((uint8\_t)(mTouch\_Matrix\_getColumn()) + 0x30);
+        \hyperlink{m_comm_8c_a52e190faf8c2c0afe082c6ab232da4c8}{mComm\_UART\_PutChar}(\textcolor{charliteral}{':'});
+        \hyperlink{m_comm_8c_a52e190faf8c2c0afe082c6ab232da4c8}{mComm\_UART\_PutChar}((uint8\_t)(mTouch\_Matrix\_getRow())    + 0x30);
+    \}
+    \textcolor{keywordflow}{else}
+    \{
+        \hyperlink{m_comm_8c_a52e190faf8c2c0afe082c6ab232da4c8}{mComm\_UART\_PutChar}(\textcolor{charliteral}{'x'});
+        \hyperlink{m_comm_8c_a52e190faf8c2c0afe082c6ab232da4c8}{mComm\_UART\_PutChar}(\textcolor{charliteral}{':'});
+        \hyperlink{m_comm_8c_a52e190faf8c2c0afe082c6ab232da4c8}{mComm\_UART\_PutChar}(\textcolor{charliteral}{'x'});
+    \}
+    \hyperlink{m_comm_8c_a52e190faf8c2c0afe082c6ab232da4c8}{mComm\_UART\_PutChar}(\textcolor{charliteral}{')'});
+    \hyperlink{m_comm_8c_a52e190faf8c2c0afe082c6ab232da4c8}{mComm\_UART\_PutChar}(MCOMM\_UART\_1WAY\_DELIMITER);
+\textcolor{preprocessor}{    #endif}
+    
+\textcolor{preprocessor}{    #if defined(MCOMM\_UART\_1WAY\_OUT\_READING) || defined(MCOMM\_UART\_1WAY\_OUT\_BASELINE)}
+    \textcolor{keywordflow}{for} (uint8\_t i = 0; i < MTOUCH\_NUMBER\_SENSORS; i++)
+    \{
+\textcolor{preprocessor}{        #if defined(MCOMM\_UART\_1WAY\_OUT\_READING)}
+        \hyperlink{m_comm_8c_af25da52c9da7c8fa9337c43ad5d7a1b6}{mComm\_UART\_Int2ASCII}(mTouch\_GetSensor(i));      
+\textcolor{preprocessor}{        #endif                                          }
+\textcolor{preprocessor}{        #if defined(MCOMM\_UART\_1WAY\_OUT\_BASELINE)}
+        \hyperlink{m_comm_8c_af25da52c9da7c8fa9337c43ad5d7a1b6}{mComm\_UART\_Int2ASCII}(mTouch\_GetAverage(i));     
+\textcolor{preprocessor}{        #endif}
+    \}
+\textcolor{preprocessor}{    #endif}
+    
+    \hyperlink{m_comm_8c_a52e190faf8c2c0afe082c6ab232da4c8}{mComm\_UART\_PutChar}(0x0D);   \textcolor{comment}{// CR                   }
+    \hyperlink{m_comm_8c_a52e190faf8c2c0afe082c6ab232da4c8}{mComm\_UART\_PutChar}(0x0A);   \textcolor{comment}{// LF}
+
+\textcolor{preprocessor}{#endif}
+\end{DoxyCode}
+
+
+{\bfseries With this code\+:} 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#if defined(MCOMM\_ONE\_WAY\_ENABLED)}
+    \textcolor{comment}{// OUTPUT LOGIC FOR ONE-WAY COMMUNICATIONS.}
+
+    \hyperlink{m_comm_8c_af25da52c9da7c8fa9337c43ad5d7a1b6}{mComm\_UART\_Int2ASCII}((uint16\_t)\hyperlink{m_touch_8c_ab288c49098e419b3232336a4245b757d}{mTouch\_stateMask});
+    
+\textcolor{preprocessor}{    #if defined(MCOMM\_UART\_1WAY\_OUT\_READING) || defined(MCOMM\_UART\_1WAY\_OUT\_BASELINE)}
+    \textcolor{keywordflow}{for} (uint8\_t i = 0; i < MTOUCH\_NUMBER\_SENSORS; i++)
+    \{
+\textcolor{preprocessor}{        #if defined(MCOMM\_UART\_1WAY\_OUT\_READING)}
+        \hyperlink{m_comm_8c_af25da52c9da7c8fa9337c43ad5d7a1b6}{mComm\_UART\_Int2ASCII}(mTouch\_GetSensor(i));      
+\textcolor{preprocessor}{        #endif                                          }
+\textcolor{preprocessor}{        #if defined(MCOMM\_UART\_1WAY\_OUT\_BASELINE)}
+        \hyperlink{m_comm_8c_af25da52c9da7c8fa9337c43ad5d7a1b6}{mComm\_UART\_Int2ASCII}(mTouch\_GetAverage(i));     
+\textcolor{preprocessor}{        #endif}
+    \}
+\textcolor{preprocessor}{    #endif}
+    
+    \hyperlink{m_comm_8c_a52e190faf8c2c0afe082c6ab232da4c8}{mComm\_UART\_PutChar}(0x0D);   \textcolor{comment}{// CR                   }
+    \hyperlink{m_comm_8c_a52e190faf8c2c0afe082c6ab232da4c8}{mComm\_UART\_PutChar}(0x0A);   \textcolor{comment}{// LF}
+
+\textcolor{preprocessor}{#endif}
+\end{DoxyCode}
+ 
+\end{DoxyEnumerate}

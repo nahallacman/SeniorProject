@@ -1,0 +1,140 @@
+\hypertarget{unionm_touch___acquisition_data}{}\section{m\+Touch\+\_\+\+Acquisition\+Data Union Reference}
+\label{unionm_touch___acquisition_data}\index{m\+Touch\+\_\+\+Acquisition\+Data@{m\+Touch\+\_\+\+Acquisition\+Data}}
+
+
+Structure used to implement both a 12-\/bit and a 20-\/bit variable inside a single 32-\/bit array.  
+
+
+
+
+{\ttfamily \#include $<$m\+Touch.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{unionm_touch___acquisition_data_a7a41c6ef718cad373b525faf8cb8fa7b}{all}
+\begin{DoxyCompactList}\small\item\em Accesses full 32-\/bit register. \end{DoxyCompactList}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint16\_t \hyperlink{unionm_touch___acquisition_data_a38249ee73b8e39f22e0fb89f58e3199a}{invalid}\\
+\>uint16\_t \hyperlink{unionm_touch___acquisition_data_ac5f38113a34f9eab3e7782eade81d266}{v}\\
+\>\>{\em Result\textquotesingle{}s value (must have bottom 4 bits shifted out) }\\
+\} \hyperlink{unionm_touch___acquisition_data_aa9f33fb9109737957f344599a3935aa6}{result}\\
+
+\end{tabbing}\begin{DoxyCompactList}\small\item\em Decimate-\/filtered differential A\+D\+C result register. \end{DoxyCompactList}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint24\_t \hyperlink{unionm_touch___acquisition_data_a2ac4eeaa6f2e6b470ddb2deec565fa7c}{v}\\
+\>\>{\em Accumulator\textquotesingle{}s value (must have top 4 bits masked off) }\\
+\>uint8\_t \hyperlink{unionm_touch___acquisition_data_a478aacccaad155596a89d6d5873b4b5e}{invalid}\\
+\} \hyperlink{unionm_touch___acquisition_data_a7b21f05f3c5dab574b956e7a6429f403}{accumulator}\\
+
+\end{tabbing}\begin{DoxyCompactList}\small\item\em Accumulator array for sensor oversampling. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure used to implement both a 12-\/bit and a 20-\/bit variable inside a single 32-\/bit array. 
+
+The 12-\/bit result value is stored in the M\+S\+Bs of the 32-\/bit array. When processing the \textquotesingle{}result\textquotesingle{} variable, we will need to always right shift by 4. See the A\+S\+C\+I\+I drawing, below, for a clearer picture of what\textquotesingle{}s happening.
+
+
+\begin{DoxyCode}
+\textcolor{comment}{// .\_\_\_\_\_.\_\_\_\_\_.\_\_\_\_\_.\_\_\_\_\_.}
+\textcolor{comment}{// |xx xx xx|--|}
+\textcolor{comment}{//  result  }
+\end{DoxyCode}
+
+
+The 20-\/bit accumulation register is stored in the L\+S\+Bs of the 32-\/bit array. When processing this variable, we will need to always mask off the 4 M\+Sbs since those are part of the result variable.
+
+
+\begin{DoxyCode}
+\textcolor{comment}{//  .\_\_\_\_\_.\_\_\_\_\_.\_\_\_\_\_.\_\_\_\_\_.}
+\textcolor{comment}{//        |--|xx xx xx xx xx|}
+\textcolor{comment}{//               accumulator}
+\end{DoxyCode}
+
+
+Together, the variables are able to fit into a single 32-\/bit register, as shown\+:
+
+
+\begin{DoxyCode}
+\textcolor{comment}{// .\_\_\_\_\_.\_\_\_\_\_.\_\_\_\_\_.\_\_\_\_\_.}
+\textcolor{comment}{// |xx xx xx|xx xx xx xx xx|}
+\textcolor{comment}{//  result      accumulator}
+\end{DoxyCode}
+ 
+
+Definition at line 210 of file m\+Touch.\+h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{unionm_touch___acquisition_data_a7b21f05f3c5dab574b956e7a6429f403}{}\index{m\+Touch\+\_\+\+Acquisition\+Data@{m\+Touch\+\_\+\+Acquisition\+Data}!accumulator@{accumulator}}
+\index{accumulator@{accumulator}!m\+Touch\+\_\+\+Acquisition\+Data@{m\+Touch\+\_\+\+Acquisition\+Data}}
+\subsubsection[{accumulator}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   accumulator}\label{unionm_touch___acquisition_data_a7b21f05f3c5dab574b956e7a6429f403}
+
+
+Accumulator array for sensor oversampling. 
+
+\hypertarget{unionm_touch___acquisition_data_a7a41c6ef718cad373b525faf8cb8fa7b}{}\index{m\+Touch\+\_\+\+Acquisition\+Data@{m\+Touch\+\_\+\+Acquisition\+Data}!all@{all}}
+\index{all@{all}!m\+Touch\+\_\+\+Acquisition\+Data@{m\+Touch\+\_\+\+Acquisition\+Data}}
+\subsubsection[{all}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t all}\label{unionm_touch___acquisition_data_a7a41c6ef718cad373b525faf8cb8fa7b}
+
+
+Accesses full 32-\/bit register. 
+
+
+
+Definition at line 212 of file m\+Touch.\+h.
+
+\hypertarget{unionm_touch___acquisition_data_a38249ee73b8e39f22e0fb89f58e3199a}{}\index{m\+Touch\+\_\+\+Acquisition\+Data@{m\+Touch\+\_\+\+Acquisition\+Data}!invalid@{invalid}}
+\index{invalid@{invalid}!m\+Touch\+\_\+\+Acquisition\+Data@{m\+Touch\+\_\+\+Acquisition\+Data}}
+\subsubsection[{invalid}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t invalid}\label{unionm_touch___acquisition_data_a38249ee73b8e39f22e0fb89f58e3199a}
+
+
+Definition at line 216 of file m\+Touch.\+h.
+
+\hypertarget{unionm_touch___acquisition_data_a478aacccaad155596a89d6d5873b4b5e}{}\index{m\+Touch\+\_\+\+Acquisition\+Data@{m\+Touch\+\_\+\+Acquisition\+Data}!invalid@{invalid}}
+\index{invalid@{invalid}!m\+Touch\+\_\+\+Acquisition\+Data@{m\+Touch\+\_\+\+Acquisition\+Data}}
+\subsubsection[{invalid}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t invalid}\label{unionm_touch___acquisition_data_a478aacccaad155596a89d6d5873b4b5e}
+
+
+Definition at line 223 of file m\+Touch.\+h.
+
+\hypertarget{unionm_touch___acquisition_data_aa9f33fb9109737957f344599a3935aa6}{}\index{m\+Touch\+\_\+\+Acquisition\+Data@{m\+Touch\+\_\+\+Acquisition\+Data}!result@{result}}
+\index{result@{result}!m\+Touch\+\_\+\+Acquisition\+Data@{m\+Touch\+\_\+\+Acquisition\+Data}}
+\subsubsection[{result}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   result}\label{unionm_touch___acquisition_data_aa9f33fb9109737957f344599a3935aa6}
+
+
+Decimate-\/filtered differential A\+D\+C result register. 
+
+\hypertarget{unionm_touch___acquisition_data_ac5f38113a34f9eab3e7782eade81d266}{}\index{m\+Touch\+\_\+\+Acquisition\+Data@{m\+Touch\+\_\+\+Acquisition\+Data}!v@{v}}
+\index{v@{v}!m\+Touch\+\_\+\+Acquisition\+Data@{m\+Touch\+\_\+\+Acquisition\+Data}}
+\subsubsection[{v}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t v}\label{unionm_touch___acquisition_data_ac5f38113a34f9eab3e7782eade81d266}
+
+
+Result\textquotesingle{}s value (must have bottom 4 bits shifted out) 
+
+
+
+Definition at line 217 of file m\+Touch.\+h.
+
+\hypertarget{unionm_touch___acquisition_data_a2ac4eeaa6f2e6b470ddb2deec565fa7c}{}\index{m\+Touch\+\_\+\+Acquisition\+Data@{m\+Touch\+\_\+\+Acquisition\+Data}!v@{v}}
+\index{v@{v}!m\+Touch\+\_\+\+Acquisition\+Data@{m\+Touch\+\_\+\+Acquisition\+Data}}
+\subsubsection[{v}]{\setlength{\rightskip}{0pt plus 5cm}uint24\+\_\+t v}\label{unionm_touch___acquisition_data_a2ac4eeaa6f2e6b470ddb2deec565fa7c}
+
+
+Accumulator\textquotesingle{}s value (must have top 4 bits masked off) 
+
+
+
+Definition at line 222 of file m\+Touch.\+h.
+
+
+
+The documentation for this union was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/\hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h}{m\+Touch.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,191 @@
+\hypertarget{_c_f-_bit_01transaction_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+M\+D\+D File System/\+C\+F-\/\+Bit transaction.\+c File Reference}
+\label{_c_f-_bit_01transaction_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+M\+D\+D File System/\+C\+F-\/\+Bit transaction.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+M\+D\+D File System/\+C\+F-\/\+Bit transaction.\+c}}
+{\ttfamily \#include \char`\"{}C\+F-\/ Bit transaction.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Generic\+Type\+Defs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}F\+S\+I\+O.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}F\+S\+Defs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}string.\+h\char`\"{}}\\*
+Include dependency graph for C\+F-\/\+Bit transaction.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_c_f-_bit_01transaction_8c_ad8bb829eafee87e07a79cb75c3a40207}{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Init\+I\+O} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_c_f-_bit_01transaction_8c_a3e3cb8714ab05c9eb06c1256cb66207e}{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Media\+Detect} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_c_f-_bit_01transaction_8c_a5a37a6a14c1346909d87f15e269b95a7}{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Write\+Protect\+State} (void)
+\item 
+void \hyperlink{_c_f-_bit_01transaction_8c_a760749cb805dc17eef5fe99a0c9fb846}{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+C\+Fwait} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_c_f-_bit_01transaction_8c_aea3f7bb910466bb42e9fcf2aceda94f8}{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+C\+Fread} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} add)
+\item 
+\hyperlink{struct_m_e_d_i_a___i_n_f_o_r_m_a_t_i_o_n}{M\+E\+D\+I\+A\+\_\+\+I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N} $\ast$ \hyperlink{_c_f-_bit_01transaction_8c_abd4c5a1d26d68946be679479a2a5eef0}{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Media\+Initialize} (void)
+\item 
+void \hyperlink{_c_f-_bit_01transaction_8c_afc2cd706413b4c18704118b998c8c6e8}{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+C\+Fwrite} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} add, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} d)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_c_f-_bit_01transaction_8c_ae551a9db136538043e335b190be37bf0}{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Sector\+Read} (\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} sector\+\_\+addr, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$buffer)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_c_f-_bit_01transaction_8c_a81f63cd1faa8e11e6efc392ade8f31d0}{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Sector\+Write} (\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} sector\+\_\+addr, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$buffer, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} allow\+Write\+To\+Zero)
+\item 
+void \hyperlink{_c_f-_bit_01transaction_8c_a961fdaec439b5994b172fce068502152}{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Shutdown\+Media} (\hyperlink{struct_d_i_s_k}{D\+I\+S\+K} $\ast$dsk)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_c_f-_bit_01transaction_8c_aea3f7bb910466bb42e9fcf2aceda94f8}{}\index{C\+F-\/\+Bit transaction.\+c@{C\+F-\/\+Bit transaction.\+c}!M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+C\+Fread@{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+C\+Fread}}
+\index{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+C\+Fread@{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+C\+Fread}!C\+F-\/\+Bit transaction.\+c@{C\+F-\/\+Bit transaction.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+C\+Fread}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+C\+Fread (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{add}
+\end{DoxyParamCaption}
+)}\label{_c_f-_bit_01transaction_8c_aea3f7bb910466bb42e9fcf2aceda94f8}
+
+
+Definition at line 184 of file C\+F-\/\+Bit transaction.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\hypertarget{_c_f-_bit_01transaction_8c_a760749cb805dc17eef5fe99a0c9fb846}{}\index{C\+F-\/\+Bit transaction.\+c@{C\+F-\/\+Bit transaction.\+c}!M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+C\+Fwait@{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+C\+Fwait}}
+\index{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+C\+Fwait@{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+C\+Fwait}!C\+F-\/\+Bit transaction.\+c@{C\+F-\/\+Bit transaction.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+C\+Fwait}]{\setlength{\rightskip}{0pt plus 5cm}void M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+C\+Fwait (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_c_f-_bit_01transaction_8c_a760749cb805dc17eef5fe99a0c9fb846}
+
+
+Definition at line 162 of file C\+F-\/\+Bit transaction.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\hypertarget{_c_f-_bit_01transaction_8c_afc2cd706413b4c18704118b998c8c6e8}{}\index{C\+F-\/\+Bit transaction.\+c@{C\+F-\/\+Bit transaction.\+c}!M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+C\+Fwrite@{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+C\+Fwrite}}
+\index{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+C\+Fwrite@{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+C\+Fwrite}!C\+F-\/\+Bit transaction.\+c@{C\+F-\/\+Bit transaction.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+C\+Fwrite}]{\setlength{\rightskip}{0pt plus 5cm}void M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+C\+Fwrite (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{add, }
+\item[{{\bf B\+Y\+T\+E}}]{d}
+\end{DoxyParamCaption}
+)}\label{_c_f-_bit_01transaction_8c_afc2cd706413b4c18704118b998c8c6e8}
+
+
+Definition at line 255 of file C\+F-\/\+Bit transaction.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 5
+
+
+\hypertarget{_c_f-_bit_01transaction_8c_ad8bb829eafee87e07a79cb75c3a40207}{}\index{C\+F-\/\+Bit transaction.\+c@{C\+F-\/\+Bit transaction.\+c}!M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Init\+I\+O@{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Init\+I\+O}}
+\index{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Init\+I\+O@{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Init\+I\+O}!C\+F-\/\+Bit transaction.\+c@{C\+F-\/\+Bit transaction.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Init\+I\+O}]{\setlength{\rightskip}{0pt plus 5cm}void M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Init\+I\+O (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_c_f-_bit_01transaction_8c_ad8bb829eafee87e07a79cb75c3a40207}
+
+
+Definition at line 69 of file C\+F-\/\+Bit transaction.\+c.
+
+\hypertarget{_c_f-_bit_01transaction_8c_a3e3cb8714ab05c9eb06c1256cb66207e}{}\index{C\+F-\/\+Bit transaction.\+c@{C\+F-\/\+Bit transaction.\+c}!M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Media\+Detect@{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Media\+Detect}}
+\index{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Media\+Detect@{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Media\+Detect}!C\+F-\/\+Bit transaction.\+c@{C\+F-\/\+Bit transaction.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Media\+Detect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Media\+Detect (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_c_f-_bit_01transaction_8c_a3e3cb8714ab05c9eb06c1256cb66207e}
+
+
+Definition at line 117 of file C\+F-\/\+Bit transaction.\+c.
+
+\hypertarget{_c_f-_bit_01transaction_8c_abd4c5a1d26d68946be679479a2a5eef0}{}\index{C\+F-\/\+Bit transaction.\+c@{C\+F-\/\+Bit transaction.\+c}!M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Media\+Initialize@{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Media\+Initialize}}
+\index{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Media\+Initialize@{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Media\+Initialize}!C\+F-\/\+Bit transaction.\+c@{C\+F-\/\+Bit transaction.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Media\+Initialize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+E\+D\+I\+A\+\_\+\+I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N}$\ast$ M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Media\+Initialize (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_c_f-_bit_01transaction_8c_abd4c5a1d26d68946be679479a2a5eef0}
+
+
+Definition at line 231 of file C\+F-\/\+Bit transaction.\+c.
+
+\hypertarget{_c_f-_bit_01transaction_8c_ae551a9db136538043e335b190be37bf0}{}\index{C\+F-\/\+Bit transaction.\+c@{C\+F-\/\+Bit transaction.\+c}!M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Sector\+Read@{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Sector\+Read}}
+\index{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Sector\+Read@{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Sector\+Read}!C\+F-\/\+Bit transaction.\+c@{C\+F-\/\+Bit transaction.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Sector\+Read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Sector\+Read (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+W\+O\+R\+D}}]{sector\+\_\+addr, }
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{buffer}
+\end{DoxyParamCaption}
+)}\label{_c_f-_bit_01transaction_8c_ae551a9db136538043e335b190be37bf0}
+
+
+Definition at line 312 of file C\+F-\/\+Bit transaction.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 6
+
+
+\hypertarget{_c_f-_bit_01transaction_8c_a81f63cd1faa8e11e6efc392ade8f31d0}{}\index{C\+F-\/\+Bit transaction.\+c@{C\+F-\/\+Bit transaction.\+c}!M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Sector\+Write@{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Sector\+Write}}
+\index{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Sector\+Write@{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Sector\+Write}!C\+F-\/\+Bit transaction.\+c@{C\+F-\/\+Bit transaction.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Sector\+Write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Sector\+Write (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+W\+O\+R\+D}}]{sector\+\_\+addr, }
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{buffer, }
+\item[{{\bf B\+Y\+T\+E}}]{allow\+Write\+To\+Zero}
+\end{DoxyParamCaption}
+)}\label{_c_f-_bit_01transaction_8c_a81f63cd1faa8e11e6efc392ade8f31d0}
+
+
+Definition at line 389 of file C\+F-\/\+Bit transaction.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 7
+
+
+\hypertarget{_c_f-_bit_01transaction_8c_a961fdaec439b5994b172fce068502152}{}\index{C\+F-\/\+Bit transaction.\+c@{C\+F-\/\+Bit transaction.\+c}!M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Shutdown\+Media@{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Shutdown\+Media}}
+\index{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Shutdown\+Media@{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Shutdown\+Media}!C\+F-\/\+Bit transaction.\+c@{C\+F-\/\+Bit transaction.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Shutdown\+Media}]{\setlength{\rightskip}{0pt plus 5cm}void M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Shutdown\+Media (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+I\+S\+K} $\ast$}]{dsk}
+\end{DoxyParamCaption}
+)}\label{_c_f-_bit_01transaction_8c_a961fdaec439b5994b172fce068502152}
+
+
+Definition at line 457 of file C\+F-\/\+Bit transaction.\+c.
+
+\hypertarget{_c_f-_bit_01transaction_8c_a5a37a6a14c1346909d87f15e269b95a7}{}\index{C\+F-\/\+Bit transaction.\+c@{C\+F-\/\+Bit transaction.\+c}!M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Write\+Protect\+State@{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Write\+Protect\+State}}
+\index{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Write\+Protect\+State@{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Write\+Protect\+State}!C\+F-\/\+Bit transaction.\+c@{C\+F-\/\+Bit transaction.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Write\+Protect\+State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} M\+D\+D\+\_\+\+C\+F\+B\+T\+\_\+\+Write\+Protect\+State (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_c_f-_bit_01transaction_8c_a5a37a6a14c1346909d87f15e269b95a7}
+
+
+Definition at line 139 of file C\+F-\/\+Bit transaction.\+c.
+

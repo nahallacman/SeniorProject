@@ -1,0 +1,26 @@
+var union_____p_h_y_c_t_r_lbits__t =
+[
+    [ "__pad0__", "union_____p_h_y_c_t_r_lbits__t.html#adf71f3d8410c1f1dbbc96680a92c49af", null ],
+    [ "__pad1__", "union_____p_h_y_c_t_r_lbits__t.html#acaf2d0924a107ec6e8d2e31febaf66f9", null ],
+    [ "__pad2__", "union_____p_h_y_c_t_r_lbits__t.html#a4d97cc5f7d51d22fc2bf3eab35c9cb7f", null ],
+    [ "__pad3__", "union_____p_h_y_c_t_r_lbits__t.html#ad7d7cee33e0c7f447abc4d171c628dd4", null ],
+    [ "__pad4__", "union_____p_h_y_c_t_r_lbits__t.html#a8d1e932de3f1bdec682271c90f2ca15c", null ],
+    [ "__pad5__", "union_____p_h_y_c_t_r_lbits__t.html#a6df3bf63e0997c63a76308dd8e93971e", null ],
+    [ "AUTODONE", "union_____p_h_y_c_t_r_lbits__t.html#ad238dd3a8b84eda366fc8a19c6037eb5", null ],
+    [ "BIST_FE", "union_____p_h_y_c_t_r_lbits__t.html#a163b6a7bcb1fcbc1d1031b2bea863558", null ],
+    [ "BIST_START", "union_____p_h_y_c_t_r_lbits__t.html#af0cf5692015bec08a0f9573a5b1e31a5", null ],
+    [ "BIST_STATUS", "union_____p_h_y_c_t_r_lbits__t.html#aa2441b02968e26802be8c27fe13b2670", null ],
+    [ "BP_STRETCH", "union_____p_h_y_c_t_r_lbits__t.html#a6e2fc081657adb88ec35adca60b26f59", null ],
+    [ "ENABLE_4B5B", "union_____p_h_y_c_t_r_lbits__t.html#aa7e55b5482aacc5ef122817a689f46c5", null ],
+    [ "FORCE_MDIX", "union_____p_h_y_c_t_r_lbits__t.html#ab098e1df2ec30fe7609da13ae5529f5c", null ],
+    [ "GPO", "union_____p_h_y_c_t_r_lbits__t.html#a93071ef0e9f696741e0fc90011de4633", null ],
+    [ "LED_CFG", "union_____p_h_y_c_t_r_lbits__t.html#a82dd39bbcd32e1e7365136884d962219", null ],
+    [ "MDIX_EN", "union_____p_h_y_c_t_r_lbits__t.html#ab76ff99cb6cc0595d87d68e0266d703a", null ],
+    [ "PAUSE_RX", "union_____p_h_y_c_t_r_lbits__t.html#a52bf3c25d68cf73955ef6fcdc2195995", null ],
+    [ "PAUSE_TX", "union_____p_h_y_c_t_r_lbits__t.html#af25af8b9e750728b4b6df8c50b30558a", null ],
+    [ "PHYADDR", "union_____p_h_y_c_t_r_lbits__t.html#a4a51675b3f1a91ed3427a311fadb0f95", null ],
+    [ "PSR_15", "union_____p_h_y_c_t_r_lbits__t.html#a8e23e3592770577bea4fb8233543f651", null ],
+    [ "SCRMBL_DISBL", "union_____p_h_y_c_t_r_lbits__t.html#a55219a321aa70bccb26465498f8caaf0", null ],
+    [ "SPEED", "union_____p_h_y_c_t_r_lbits__t.html#a95fd4dafd860304d6b44d4fb14881daa", null ],
+    [ "w", "union_____p_h_y_c_t_r_lbits__t.html#a160850a4684a3e82c2323033964f2e98", null ]
+];

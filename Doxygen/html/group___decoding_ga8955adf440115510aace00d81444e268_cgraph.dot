@@ -1,0 +1,38 @@
+digraph "mTouch_Decode"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="mTouch_Decode",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="mTouch_FindMostPressed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$m_touch_8c.html#ac8cfeefacb22ca490c1adbedd6fefcc1"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="mTouch_ProxStateMachine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$m_touch__proximity_8c.html#ad816e19fbe296786defa4bb48326b123"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="mTouch_ButtonStateMachine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$m_touch_8c.html#a375aad16aafd424786ba67e79cc454d3"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="mTouch_UpdateBaseline",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___decoding.html#gad860d35191988afa8f9d02bcb946c08b",tooltip="Updates the baseline for the given sensor with the given value. "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="mTouch_SliderDecode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h.html#a1bb12f1a1c629bbfccbef2723ef626fc"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="mTouch_UpdateMatrixOutput",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$m_touch_8c.html#afdcb5b33e2c73a81f71714ad360f1f50"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="mComm_Service",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$m_comm_8c.html#a8bfb942a7ae7836ae9748b1c294ece05"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="mComm_UART_SendACKorNACK",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$m_comm_8c.html#af342943db55e1a4a0d9e9c3b9e32b37a"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="mComm_UART_PutChar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$m_comm_8c.html#a52e190faf8c2c0afe082c6ab232da4c8"];
+  Node8 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="mComm_Process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$m_comm_8c.html#a233a49570a500f2391ef8e894e465241"];
+  Node11 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="mComm_ErrorIterator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$m_comm_8h.html#a993aa704b4a1c9ddc6fca5fdc80fa6aa"];
+  Node8 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="mComm_UART_Int2ASCII",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$m_comm_8c.html#af25da52c9da7c8fa9337c43ad5d7a1b6"];
+  Node13 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="mComm_UART_Char2ASCII",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$m_comm_8c.html#a239a6ceb1aeca100de01f2522fb3ca2c"];
+  Node14 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="mTouch_ChangeMode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h.html#ad4b3c623e779e2b0cbe5a8ace84c1561"];
+}

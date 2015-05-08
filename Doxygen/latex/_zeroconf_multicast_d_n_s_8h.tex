@@ -1,0 +1,242 @@
+\hypertarget{_zeroconf_multicast_d_n_s_8h}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+T\+C\+P\+I\+P Stack/\+Zeroconf\+Multicast\+D\+N\+S.h File Reference}
+\label{_zeroconf_multicast_d_n_s_8h}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+T\+C\+P\+I\+P Stack/\+Zeroconf\+Multicast\+D\+N\+S.\+h@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+T\+C\+P\+I\+P Stack/\+Zeroconf\+Multicast\+D\+N\+S.\+h}}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_zeroconf_multicast_d_n_s_8h_a8a22ff380a60ecd4608976bae2e2c1f1}{M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E} \{ \hyperlink{_zeroconf_multicast_d_n_s_8h_a8a22ff380a60ecd4608976bae2e2c1f1ab1a71e36890d076a13bc3a2adbe6d566}{M\+D\+N\+S\+D\+\_\+\+S\+U\+C\+C\+E\+S\+S} = 0, 
+\hyperlink{_zeroconf_multicast_d_n_s_8h_a8a22ff380a60ecd4608976bae2e2c1f1a9efbf2e770680778fc6781cb7a4750c2}{M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+B\+U\+S\+Y} = 1, 
+\hyperlink{_zeroconf_multicast_d_n_s_8h_a8a22ff380a60ecd4608976bae2e2c1f1a3767b9358acf14cc9065d9bb7536e7f3}{M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+N\+F\+L\+I\+C\+T} = 2, 
+\hyperlink{_zeroconf_multicast_d_n_s_8h_a8a22ff380a60ecd4608976bae2e2c1f1a2fc5fb859e2b41a177137298b8322e59}{M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+I\+N\+V\+A\+L} = 3
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_zeroconf_multicast_d_n_s_8h_adf52d26b251ad70adb7ca097394986d1}{m\+D\+N\+S\+Initialize} (const char $\ast$sz\+Host\+Name)
+\item 
+void \hyperlink{_zeroconf_multicast_d_n_s_8h_a2b66183d48d7fd2050e1661557927e1e}{m\+D\+N\+S\+Process} (void)
+\item 
+void \hyperlink{_zeroconf_multicast_d_n_s_8h_a59102f379c587b47f8c065d2cba9d3d7}{m\+D\+N\+S\+Fill\+Host\+Record} (void)
+\item 
+\hyperlink{_zeroconf_multicast_d_n_s_8h_a8a22ff380a60ecd4608976bae2e2c1f1}{M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E} \hyperlink{_zeroconf_multicast_d_n_s_8h_a94e0e69fcab99df54995728d46f9d705}{m\+D\+N\+S\+Service\+Register} (const char $\ast$name, const char $\ast$regtype, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} port, const \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$txt\+Record, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} auto\+\_\+rename, void($\ast$call\+\_\+back)(char $\ast$name, \hyperlink{_zeroconf_multicast_d_n_s_8h_a8a22ff380a60ecd4608976bae2e2c1f1}{M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E} err, void $\ast$context), void $\ast$context)
+\item 
+\hyperlink{_zeroconf_multicast_d_n_s_8h_a8a22ff380a60ecd4608976bae2e2c1f1}{M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E} \hyperlink{_zeroconf_multicast_d_n_s_8h_aa057fa57f0614721f5f7f3ddeaf02def}{m\+D\+N\+S\+Service\+De\+Register} ()
+\item 
+\hyperlink{_zeroconf_multicast_d_n_s_8h_a8a22ff380a60ecd4608976bae2e2c1f1}{M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E} \hyperlink{_zeroconf_multicast_d_n_s_8h_a966ef56bb5b560e219237ab1a72da199}{m\+D\+N\+S\+Service\+Update} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} port, const \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$txt\+\_\+record)
+\item 
+\hyperlink{_zeroconf_multicast_d_n_s_8h_a8a22ff380a60ecd4608976bae2e2c1f1}{M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E} \hyperlink{_zeroconf_multicast_d_n_s_8h_ade7f51beb8028f44a9267489ca00b9b6}{m\+D\+N\+S\+Host\+Register} (const char $\ast$host\+\_\+name)
+\item 
+\hyperlink{_zeroconf_multicast_d_n_s_8h_a8a22ff380a60ecd4608976bae2e2c1f1}{M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E} \hyperlink{_zeroconf_multicast_d_n_s_8h_a3253063bc42dff909f35b3737051ef09}{m\+D\+N\+S\+Multicast\+Filter\+Register} (void)
+\item 
+void \hyperlink{_zeroconf_multicast_d_n_s_8h_adbad294cbcf56ad3b687c20feb020e5c}{m\+D\+N\+S\+Dump\+Info} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_zeroconf_multicast_d_n_s_8h_a8a22ff380a60ecd4608976bae2e2c1f1}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+h@{Zeroconf\+Multicast\+D\+N\+S.\+h}!M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E@{M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E}}
+\index{M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E@{M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E}!Zeroconf\+Multicast\+D\+N\+S.\+h@{Zeroconf\+Multicast\+D\+N\+S.\+h}}
+\subsubsection[{M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E}}\label{_zeroconf_multicast_d_n_s_8h_a8a22ff380a60ecd4608976bae2e2c1f1}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\+D\+N\+S\+D\+\_\+\+S\+U\+C\+C\+E\+S\+S@{M\+D\+N\+S\+D\+\_\+\+S\+U\+C\+C\+E\+S\+S}!Zeroconf\+Multicast\+D\+N\+S.\+h@{Zeroconf\+Multicast\+D\+N\+S.\+h}}\index{Zeroconf\+Multicast\+D\+N\+S.\+h@{Zeroconf\+Multicast\+D\+N\+S.\+h}!M\+D\+N\+S\+D\+\_\+\+S\+U\+C\+C\+E\+S\+S@{M\+D\+N\+S\+D\+\_\+\+S\+U\+C\+C\+E\+S\+S}}\item[{\em 
+\hypertarget{_zeroconf_multicast_d_n_s_8h_a8a22ff380a60ecd4608976bae2e2c1f1ab1a71e36890d076a13bc3a2adbe6d566}{}M\+D\+N\+S\+D\+\_\+\+S\+U\+C\+C\+E\+S\+S\label{_zeroconf_multicast_d_n_s_8h_a8a22ff380a60ecd4608976bae2e2c1f1ab1a71e36890d076a13bc3a2adbe6d566}
+}]\index{M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+B\+U\+S\+Y@{M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+B\+U\+S\+Y}!Zeroconf\+Multicast\+D\+N\+S.\+h@{Zeroconf\+Multicast\+D\+N\+S.\+h}}\index{Zeroconf\+Multicast\+D\+N\+S.\+h@{Zeroconf\+Multicast\+D\+N\+S.\+h}!M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+B\+U\+S\+Y@{M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+B\+U\+S\+Y}}\item[{\em 
+\hypertarget{_zeroconf_multicast_d_n_s_8h_a8a22ff380a60ecd4608976bae2e2c1f1a9efbf2e770680778fc6781cb7a4750c2}{}M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+B\+U\+S\+Y\label{_zeroconf_multicast_d_n_s_8h_a8a22ff380a60ecd4608976bae2e2c1f1a9efbf2e770680778fc6781cb7a4750c2}
+}]\index{M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+N\+F\+L\+I\+C\+T@{M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+N\+F\+L\+I\+C\+T}!Zeroconf\+Multicast\+D\+N\+S.\+h@{Zeroconf\+Multicast\+D\+N\+S.\+h}}\index{Zeroconf\+Multicast\+D\+N\+S.\+h@{Zeroconf\+Multicast\+D\+N\+S.\+h}!M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+N\+F\+L\+I\+C\+T@{M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+N\+F\+L\+I\+C\+T}}\item[{\em 
+\hypertarget{_zeroconf_multicast_d_n_s_8h_a8a22ff380a60ecd4608976bae2e2c1f1a3767b9358acf14cc9065d9bb7536e7f3}{}M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+N\+F\+L\+I\+C\+T\label{_zeroconf_multicast_d_n_s_8h_a8a22ff380a60ecd4608976bae2e2c1f1a3767b9358acf14cc9065d9bb7536e7f3}
+}]\index{M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+I\+N\+V\+A\+L@{M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+I\+N\+V\+A\+L}!Zeroconf\+Multicast\+D\+N\+S.\+h@{Zeroconf\+Multicast\+D\+N\+S.\+h}}\index{Zeroconf\+Multicast\+D\+N\+S.\+h@{Zeroconf\+Multicast\+D\+N\+S.\+h}!M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+I\+N\+V\+A\+L@{M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+I\+N\+V\+A\+L}}\item[{\em 
+\hypertarget{_zeroconf_multicast_d_n_s_8h_a8a22ff380a60ecd4608976bae2e2c1f1a2fc5fb859e2b41a177137298b8322e59}{}M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+I\+N\+V\+A\+L\label{_zeroconf_multicast_d_n_s_8h_a8a22ff380a60ecd4608976bae2e2c1f1a2fc5fb859e2b41a177137298b8322e59}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 113 of file Zeroconf\+Multicast\+D\+N\+S.\+h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_zeroconf_multicast_d_n_s_8h_adbad294cbcf56ad3b687c20feb020e5c}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+h@{Zeroconf\+Multicast\+D\+N\+S.\+h}!m\+D\+N\+S\+Dump\+Info@{m\+D\+N\+S\+Dump\+Info}}
+\index{m\+D\+N\+S\+Dump\+Info@{m\+D\+N\+S\+Dump\+Info}!Zeroconf\+Multicast\+D\+N\+S.\+h@{Zeroconf\+Multicast\+D\+N\+S.\+h}}
+\subsubsection[{m\+D\+N\+S\+Dump\+Info}]{\setlength{\rightskip}{0pt plus 5cm}void m\+D\+N\+S\+Dump\+Info (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8h_adbad294cbcf56ad3b687c20feb020e5c}
+
+
+Definition at line 2996 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+\hypertarget{_zeroconf_multicast_d_n_s_8h_a59102f379c587b47f8c065d2cba9d3d7}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+h@{Zeroconf\+Multicast\+D\+N\+S.\+h}!m\+D\+N\+S\+Fill\+Host\+Record@{m\+D\+N\+S\+Fill\+Host\+Record}}
+\index{m\+D\+N\+S\+Fill\+Host\+Record@{m\+D\+N\+S\+Fill\+Host\+Record}!Zeroconf\+Multicast\+D\+N\+S.\+h@{Zeroconf\+Multicast\+D\+N\+S.\+h}}
+\subsubsection[{m\+D\+N\+S\+Fill\+Host\+Record}]{\setlength{\rightskip}{0pt plus 5cm}void m\+D\+N\+S\+Fill\+Host\+Record (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8h_a59102f379c587b47f8c065d2cba9d3d7}
+
+
+Definition at line 2433 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8h_ade7f51beb8028f44a9267489ca00b9b6}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+h@{Zeroconf\+Multicast\+D\+N\+S.\+h}!m\+D\+N\+S\+Host\+Register@{m\+D\+N\+S\+Host\+Register}}
+\index{m\+D\+N\+S\+Host\+Register@{m\+D\+N\+S\+Host\+Register}!Zeroconf\+Multicast\+D\+N\+S.\+h@{Zeroconf\+Multicast\+D\+N\+S.\+h}}
+\subsubsection[{m\+D\+N\+S\+Host\+Register}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E} m\+D\+N\+S\+Host\+Register (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{host\+\_\+name}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8h_ade7f51beb8028f44a9267489ca00b9b6}
+
+
+Definition at line 2451 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8h_adf52d26b251ad70adb7ca097394986d1}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+h@{Zeroconf\+Multicast\+D\+N\+S.\+h}!m\+D\+N\+S\+Initialize@{m\+D\+N\+S\+Initialize}}
+\index{m\+D\+N\+S\+Initialize@{m\+D\+N\+S\+Initialize}!Zeroconf\+Multicast\+D\+N\+S.\+h@{Zeroconf\+Multicast\+D\+N\+S.\+h}}
+\subsubsection[{m\+D\+N\+S\+Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void m\+D\+N\+S\+Initialize (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{sz\+Host\+Name}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8h_adf52d26b251ad70adb7ca097394986d1}
+
+
+Definition at line 2478 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8h_a3253063bc42dff909f35b3737051ef09}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+h@{Zeroconf\+Multicast\+D\+N\+S.\+h}!m\+D\+N\+S\+Multicast\+Filter\+Register@{m\+D\+N\+S\+Multicast\+Filter\+Register}}
+\index{m\+D\+N\+S\+Multicast\+Filter\+Register@{m\+D\+N\+S\+Multicast\+Filter\+Register}!Zeroconf\+Multicast\+D\+N\+S.\+h@{Zeroconf\+Multicast\+D\+N\+S.\+h}}
+\subsubsection[{m\+D\+N\+S\+Multicast\+Filter\+Register}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E} m\+D\+N\+S\+Multicast\+Filter\+Register (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8h_a3253063bc42dff909f35b3737051ef09}
+Zeroconf uses 224.\+0.\+0.\+251 =$>$ E0.\+00.\+00.\+F\+B =$>$ 1110\+\_\+0000.\+0000\+\_\+0000.\+0000\+\_\+0000.\+1111\+\_\+1011 Lower 23 bits are mapped to the multicast M\+A\+C address, prepended by 01\+:00\+:5\+E. This becomes 0000\+\_\+0001\+:0000\+\_\+0000\+:0101\+\_\+1110\+:0000\+\_\+0000\+:0000\+\_\+0000\+:1111\+\_\+1011 =$>$ 01\+:00\+:5\+E\+:00\+:00\+:F\+B 
+
+Definition at line 2956 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 5
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8h_a2b66183d48d7fd2050e1661557927e1e}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+h@{Zeroconf\+Multicast\+D\+N\+S.\+h}!m\+D\+N\+S\+Process@{m\+D\+N\+S\+Process}}
+\index{m\+D\+N\+S\+Process@{m\+D\+N\+S\+Process}!Zeroconf\+Multicast\+D\+N\+S.\+h@{Zeroconf\+Multicast\+D\+N\+S.\+h}}
+\subsubsection[{m\+D\+N\+S\+Process}]{\setlength{\rightskip}{0pt plus 5cm}void m\+D\+N\+S\+Process (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8h_a2b66183d48d7fd2050e1661557927e1e}
+
+
+Definition at line 2891 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 7
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 8
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8h_aa057fa57f0614721f5f7f3ddeaf02def}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+h@{Zeroconf\+Multicast\+D\+N\+S.\+h}!m\+D\+N\+S\+Service\+De\+Register@{m\+D\+N\+S\+Service\+De\+Register}}
+\index{m\+D\+N\+S\+Service\+De\+Register@{m\+D\+N\+S\+Service\+De\+Register}!Zeroconf\+Multicast\+D\+N\+S.\+h@{Zeroconf\+Multicast\+D\+N\+S.\+h}}
+\subsubsection[{m\+D\+N\+S\+Service\+De\+Register}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E} m\+D\+N\+S\+Service\+De\+Register (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8h_aa057fa57f0614721f5f7f3ddeaf02def}
+
+
+Definition at line 1276 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 9
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8h_a94e0e69fcab99df54995728d46f9d705}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+h@{Zeroconf\+Multicast\+D\+N\+S.\+h}!m\+D\+N\+S\+Service\+Register@{m\+D\+N\+S\+Service\+Register}}
+\index{m\+D\+N\+S\+Service\+Register@{m\+D\+N\+S\+Service\+Register}!Zeroconf\+Multicast\+D\+N\+S.\+h@{Zeroconf\+Multicast\+D\+N\+S.\+h}}
+\subsubsection[{m\+D\+N\+S\+Service\+Register}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E} m\+D\+N\+S\+Service\+Register (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{regtype, }
+\item[{{\bf W\+O\+R\+D}}]{port, }
+\item[{const {\bf B\+Y\+T\+E} $\ast$}]{txt\+Record, }
+\item[{{\bf B\+Y\+T\+E}}]{auto\+\_\+rename, }
+\item[{void($\ast$)(char $\ast$name, {\bf M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E} err, void $\ast$context)}]{call\+\_\+back, }
+\item[{void $\ast$}]{context}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8h_a94e0e69fcab99df54995728d46f9d705}
+
+
+Definition at line 1374 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 10
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 11
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8h_a966ef56bb5b560e219237ab1a72da199}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+h@{Zeroconf\+Multicast\+D\+N\+S.\+h}!m\+D\+N\+S\+Service\+Update@{m\+D\+N\+S\+Service\+Update}}
+\index{m\+D\+N\+S\+Service\+Update@{m\+D\+N\+S\+Service\+Update}!Zeroconf\+Multicast\+D\+N\+S.\+h@{Zeroconf\+Multicast\+D\+N\+S.\+h}}
+\subsubsection[{m\+D\+N\+S\+Service\+Update}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E} m\+D\+N\+S\+Service\+Update (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{port, }
+\item[{const {\bf B\+Y\+T\+E} $\ast$}]{txt\+\_\+record}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8h_a966ef56bb5b560e219237ab1a72da199}
+
+
+Definition at line 1212 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 12
+
+

@@ -1,0 +1,358 @@
+\hypertarget{_internal_01_flash_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+M\+D\+D File System/\+Internal Flash.\+c File Reference}
+\label{_internal_01_flash_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+M\+D\+D File System/\+Internal Flash.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+M\+D\+D File System/\+Internal Flash.\+c}}
+{\ttfamily \#include \char`\"{}Compiler.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}M\+D\+D File System/\+F\+S\+I\+O.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}M\+D\+D File System/\+F\+S\+Defs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}string.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}M\+D\+D File System/\+Internal Flash.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Hardware\+Profile.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}F\+Sconfig.\+h\char`\"{}}\\*
+Include dependency graph for Internal Flash.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_internal_01_flash_8c_aa0cafcbf84570ca296510db5f2b39dba}{N\+V\+M\+\_\+\+U\+N\+L\+O\+C\+K\+\_\+\+K\+E\+Y}~(\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E})0x\+B5
+\item 
+\#define \hyperlink{_internal_01_flash_8c_a3782f3be1582f9a1c69eed8690e8ed04}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+F\+L\+A\+S\+H\+\_\+\+P\+R\+O\+G\+R\+A\+M\+\_\+\+W\+O\+R\+D}~0x4003
+\item 
+\#define \hyperlink{_internal_01_flash_8c_a317a149ef57f5c4e005dd4b2661ca2a0}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+F\+L\+A\+S\+H\+\_\+\+E\+R\+A\+S\+E}~0x4042
+\item 
+\#define \hyperlink{_internal_01_flash_8c_a98933689100ac6237da4739b03dc1ed3}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+F\+L\+A\+S\+H\+\_\+\+P\+R\+O\+G\+R\+A\+M\+\_\+\+P\+A\+G\+E}~0x4001
+\item 
+\#define \hyperlink{_internal_01_flash_8c_a9139e35b6a7857baf24808da65eb9573}{P\+T\+R\+\_\+\+S\+I\+Z\+E}~\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_internal_01_flash_8c_a96113e664634bb9a91e454e9246dd4cd}{Erase\+Block} (R\+O\+M \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$dest)
+\item 
+void \hyperlink{_internal_01_flash_8c_a0f73588423a91690bb5608abb1ae652d}{Write\+Row} (void)
+\item 
+void \hyperlink{_internal_01_flash_8c_ad9bfaf0e6f48396f0767162ea62eeab3}{Write\+Byte} (unsigned char)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_internal_01_flash_8c_a477331baab18d704e6a8f36a5f7b27cc}{D\+I\+S\+Kmount} (\hyperlink{struct_d_i_s_k}{D\+I\+S\+K} $\ast$dsk)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_internal_01_flash_8c_a7db7c692f57ae591bcbcda26833552a6}{Load\+M\+B\+R} (\hyperlink{struct_d_i_s_k}{D\+I\+S\+K} $\ast$dsk)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_internal_01_flash_8c_ad2f0426848c078bb63c0dc4aa5092f65}{Load\+Boot\+Sector} (\hyperlink{struct_d_i_s_k}{D\+I\+S\+K} $\ast$dsk)
+\item 
+void \hyperlink{_internal_01_flash_8c_a5051d074e6b2361e58b3ea5585443e25}{Delayms} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} milliseconds)
+\item 
+\hyperlink{struct_m_e_d_i_a___i_n_f_o_r_m_a_t_i_o_n}{M\+E\+D\+I\+A\+\_\+\+I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N} $\ast$ \hyperlink{_internal_01_flash_8c_aa9040a59616b9ac19c02dc5eb82ea953}{Media\+Initialize} (void)
+\item 
+void \hyperlink{_internal_01_flash_8c_a29da5d5efe259ebec7a528aaaa314ccd}{Unlock\+And\+Activate} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E})
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_internal_01_flash_8c_aba79edd91844a1ae97b834a3e941bc85}{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Media\+Detect} ()
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_internal_01_flash_8c_a66ea2cdc9ee8a59b5b15e8c2e7e7881f}{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Read\+Sector\+Size} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} \hyperlink{_internal_01_flash_8c_a1b4f4fca500b2218688ec351d81a0acc}{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Read\+Capacity} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_internal_01_flash_8c_ab529c2df98f6617f725dc2b6e1b34182}{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Init\+I\+O} (void)
+\item 
+\hyperlink{struct_m_e_d_i_a___i_n_f_o_r_m_a_t_i_o_n}{M\+E\+D\+I\+A\+\_\+\+I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N} $\ast$ \hyperlink{_internal_01_flash_8c_adc59f1fc896e670ccbcd50b45d5d5da3}{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Media\+Initialize} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_internal_01_flash_8c_a6c996d5c2a5a9b3fa0127a06d2c47c0f}{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Sector\+Read} (\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} sector\+\_\+addr, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$buffer)
+\item 
+volatile unsigned char file\+\_\+buffer\mbox{[}E\+R\+A\+S\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E\mbox{]} \hyperlink{_internal_01_flash_8c_a6da4886d43446f1113e7d5f483b625cd}{\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((far, aligned))
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_internal_01_flash_8c_a0ed1feec6036885ec15fe7f0ec5837a5}{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Sector\+Write} (\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} sector\+\_\+addr, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$buffer, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} allow\+Write\+To\+Zero)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_internal_01_flash_8c_aa10fa6995cc585ea12d0a25720c02ddc}{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Write\+Protect\+State} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+R\+O\+M \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$ \hyperlink{_internal_01_flash_8c_a0b3d47ddd61e611b7616c2f891f84664}{File\+Address} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_internal_01_flash_8c_a317a149ef57f5c4e005dd4b2661ca2a0}{}\index{Internal Flash.\+c@{Internal Flash.\+c}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+F\+L\+A\+S\+H\+\_\+\+E\+R\+A\+S\+E@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+F\+L\+A\+S\+H\+\_\+\+E\+R\+A\+S\+E}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+F\+L\+A\+S\+H\+\_\+\+E\+R\+A\+S\+E@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+F\+L\+A\+S\+H\+\_\+\+E\+R\+A\+S\+E}!Internal Flash.\+c@{Internal Flash.\+c}}
+\subsubsection[{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+F\+L\+A\+S\+H\+\_\+\+E\+R\+A\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+F\+L\+A\+S\+H\+\_\+\+E\+R\+A\+S\+E~0x4042}\label{_internal_01_flash_8c_a317a149ef57f5c4e005dd4b2661ca2a0}
+
+
+Definition at line 334 of file Internal Flash.\+c.
+
+\hypertarget{_internal_01_flash_8c_a98933689100ac6237da4739b03dc1ed3}{}\index{Internal Flash.\+c@{Internal Flash.\+c}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+F\+L\+A\+S\+H\+\_\+\+P\+R\+O\+G\+R\+A\+M\+\_\+\+P\+A\+G\+E@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+F\+L\+A\+S\+H\+\_\+\+P\+R\+O\+G\+R\+A\+M\+\_\+\+P\+A\+G\+E}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+F\+L\+A\+S\+H\+\_\+\+P\+R\+O\+G\+R\+A\+M\+\_\+\+P\+A\+G\+E@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+F\+L\+A\+S\+H\+\_\+\+P\+R\+O\+G\+R\+A\+M\+\_\+\+P\+A\+G\+E}!Internal Flash.\+c@{Internal Flash.\+c}}
+\subsubsection[{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+F\+L\+A\+S\+H\+\_\+\+P\+R\+O\+G\+R\+A\+M\+\_\+\+P\+A\+G\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+F\+L\+A\+S\+H\+\_\+\+P\+R\+O\+G\+R\+A\+M\+\_\+\+P\+A\+G\+E~0x4001}\label{_internal_01_flash_8c_a98933689100ac6237da4739b03dc1ed3}
+
+
+Definition at line 335 of file Internal Flash.\+c.
+
+\hypertarget{_internal_01_flash_8c_a3782f3be1582f9a1c69eed8690e8ed04}{}\index{Internal Flash.\+c@{Internal Flash.\+c}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+F\+L\+A\+S\+H\+\_\+\+P\+R\+O\+G\+R\+A\+M\+\_\+\+W\+O\+R\+D@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+F\+L\+A\+S\+H\+\_\+\+P\+R\+O\+G\+R\+A\+M\+\_\+\+W\+O\+R\+D}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+F\+L\+A\+S\+H\+\_\+\+P\+R\+O\+G\+R\+A\+M\+\_\+\+W\+O\+R\+D@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+F\+L\+A\+S\+H\+\_\+\+P\+R\+O\+G\+R\+A\+M\+\_\+\+W\+O\+R\+D}!Internal Flash.\+c@{Internal Flash.\+c}}
+\subsubsection[{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+F\+L\+A\+S\+H\+\_\+\+P\+R\+O\+G\+R\+A\+M\+\_\+\+W\+O\+R\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+F\+L\+A\+S\+H\+\_\+\+P\+R\+O\+G\+R\+A\+M\+\_\+\+W\+O\+R\+D~0x4003}\label{_internal_01_flash_8c_a3782f3be1582f9a1c69eed8690e8ed04}
+
+
+Definition at line 333 of file Internal Flash.\+c.
+
+\hypertarget{_internal_01_flash_8c_aa0cafcbf84570ca296510db5f2b39dba}{}\index{Internal Flash.\+c@{Internal Flash.\+c}!N\+V\+M\+\_\+\+U\+N\+L\+O\+C\+K\+\_\+\+K\+E\+Y@{N\+V\+M\+\_\+\+U\+N\+L\+O\+C\+K\+\_\+\+K\+E\+Y}}
+\index{N\+V\+M\+\_\+\+U\+N\+L\+O\+C\+K\+\_\+\+K\+E\+Y@{N\+V\+M\+\_\+\+U\+N\+L\+O\+C\+K\+\_\+\+K\+E\+Y}!Internal Flash.\+c@{Internal Flash.\+c}}
+\subsubsection[{N\+V\+M\+\_\+\+U\+N\+L\+O\+C\+K\+\_\+\+K\+E\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+V\+M\+\_\+\+U\+N\+L\+O\+C\+K\+\_\+\+K\+E\+Y~({\bf B\+Y\+T\+E})0x\+B5}\label{_internal_01_flash_8c_aa0cafcbf84570ca296510db5f2b39dba}
+
+
+Definition at line 90 of file Internal Flash.\+c.
+
+\hypertarget{_internal_01_flash_8c_a9139e35b6a7857baf24808da65eb9573}{}\index{Internal Flash.\+c@{Internal Flash.\+c}!P\+T\+R\+\_\+\+S\+I\+Z\+E@{P\+T\+R\+\_\+\+S\+I\+Z\+E}}
+\index{P\+T\+R\+\_\+\+S\+I\+Z\+E@{P\+T\+R\+\_\+\+S\+I\+Z\+E}!Internal Flash.\+c@{Internal Flash.\+c}}
+\subsubsection[{P\+T\+R\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+T\+R\+\_\+\+S\+I\+Z\+E~{\bf W\+O\+R\+D}}\label{_internal_01_flash_8c_a9139e35b6a7857baf24808da65eb9573}
+
+
+Definition at line 343 of file Internal Flash.\+c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_internal_01_flash_8c_a6da4886d43446f1113e7d5f483b625cd}{}\index{Internal Flash.\+c@{Internal Flash.\+c}!\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}!Internal Flash.\+c@{Internal Flash.\+c}}
+\subsubsection[{\+\_\+\+\_\+attribute\+\_\+\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}volatile unsigned char file\+\_\+buffer \mbox{[}E\+R\+A\+S\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E\mbox{]} \+\_\+\+\_\+attribute\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{(far, aligned)}]{}
+\end{DoxyParamCaption}
+)}\label{_internal_01_flash_8c_a6da4886d43446f1113e7d5f483b625cd}
+\hypertarget{_internal_01_flash_8c_a5051d074e6b2361e58b3ea5585443e25}{}\index{Internal Flash.\+c@{Internal Flash.\+c}!Delayms@{Delayms}}
+\index{Delayms@{Delayms}!Internal Flash.\+c@{Internal Flash.\+c}}
+\subsubsection[{Delayms}]{\setlength{\rightskip}{0pt plus 5cm}void Delayms (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{milliseconds}
+\end{DoxyParamCaption}
+)}\label{_internal_01_flash_8c_a5051d074e6b2361e58b3ea5585443e25}
+
+
+Definition at line 393 of file F\+S Phys Interface Template.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+\hypertarget{_internal_01_flash_8c_a477331baab18d704e6a8f36a5f7b27cc}{}\index{Internal Flash.\+c@{Internal Flash.\+c}!D\+I\+S\+Kmount@{D\+I\+S\+Kmount}}
+\index{D\+I\+S\+Kmount@{D\+I\+S\+Kmount}!Internal Flash.\+c@{Internal Flash.\+c}}
+\subsubsection[{D\+I\+S\+Kmount}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} D\+I\+S\+Kmount (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+I\+S\+K} $\ast$}]{dsk}
+\end{DoxyParamCaption}
+)}\label{_internal_01_flash_8c_a477331baab18d704e6a8f36a5f7b27cc}
+
+
+Definition at line 1557 of file F\+S\+I\+O.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\hypertarget{_internal_01_flash_8c_a96113e664634bb9a91e454e9246dd4cd}{}\index{Internal Flash.\+c@{Internal Flash.\+c}!Erase\+Block@{Erase\+Block}}
+\index{Erase\+Block@{Erase\+Block}!Internal Flash.\+c@{Internal Flash.\+c}}
+\subsubsection[{Erase\+Block}]{\setlength{\rightskip}{0pt plus 5cm}void Erase\+Block (
+\begin{DoxyParamCaption}
+\item[{R\+O\+M {\bf B\+Y\+T\+E} $\ast$}]{dest}
+\end{DoxyParamCaption}
+)}\label{_internal_01_flash_8c_a96113e664634bb9a91e454e9246dd4cd}
+
+
+Definition at line 656 of file Internal Flash.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 5
+
+
+\hypertarget{_internal_01_flash_8c_ad2f0426848c078bb63c0dc4aa5092f65}{}\index{Internal Flash.\+c@{Internal Flash.\+c}!Load\+Boot\+Sector@{Load\+Boot\+Sector}}
+\index{Load\+Boot\+Sector@{Load\+Boot\+Sector}!Internal Flash.\+c@{Internal Flash.\+c}}
+\subsubsection[{Load\+Boot\+Sector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} Load\+Boot\+Sector (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+I\+S\+K} $\ast$}]{dsk}
+\end{DoxyParamCaption}
+)}\label{_internal_01_flash_8c_ad2f0426848c078bb63c0dc4aa5092f65}
+
+
+Definition at line 1780 of file F\+S\+I\+O.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\hypertarget{_internal_01_flash_8c_a7db7c692f57ae591bcbcda26833552a6}{}\index{Internal Flash.\+c@{Internal Flash.\+c}!Load\+M\+B\+R@{Load\+M\+B\+R}}
+\index{Load\+M\+B\+R@{Load\+M\+B\+R}!Internal Flash.\+c@{Internal Flash.\+c}}
+\subsubsection[{Load\+M\+B\+R}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} Load\+M\+B\+R (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+I\+S\+K} $\ast$}]{dsk}
+\end{DoxyParamCaption}
+)}\label{_internal_01_flash_8c_a7db7c692f57ae591bcbcda26833552a6}
+
+
+Definition at line 1631 of file F\+S\+I\+O.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 7
+
+
+\hypertarget{_internal_01_flash_8c_ab529c2df98f6617f725dc2b6e1b34182}{}\index{Internal Flash.\+c@{Internal Flash.\+c}!M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Init\+I\+O@{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Init\+I\+O}}
+\index{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Init\+I\+O@{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Init\+I\+O}!Internal Flash.\+c@{Internal Flash.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Init\+I\+O}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Init\+I\+O (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_internal_01_flash_8c_ab529c2df98f6617f725dc2b6e1b34182}
+
+
+Definition at line 179 of file Internal Flash.\+c.
+
+\hypertarget{_internal_01_flash_8c_aba79edd91844a1ae97b834a3e941bc85}{}\index{Internal Flash.\+c@{Internal Flash.\+c}!M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Media\+Detect@{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Media\+Detect}}
+\index{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Media\+Detect@{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Media\+Detect}!Internal Flash.\+c@{Internal Flash.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Media\+Detect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Media\+Detect (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_internal_01_flash_8c_aba79edd91844a1ae97b834a3e941bc85}
+
+
+Definition at line 108 of file Internal Flash.\+c.
+
+\hypertarget{_internal_01_flash_8c_adc59f1fc896e670ccbcd50b45d5d5da3}{}\index{Internal Flash.\+c@{Internal Flash.\+c}!M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Media\+Initialize@{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Media\+Initialize}}
+\index{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Media\+Initialize@{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Media\+Initialize}!Internal Flash.\+c@{Internal Flash.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Media\+Initialize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+E\+D\+I\+A\+\_\+\+I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N}$\ast$ M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Media\+Initialize (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_internal_01_flash_8c_adc59f1fc896e670ccbcd50b45d5d5da3}
+
+
+Definition at line 197 of file Internal Flash.\+c.
+
+\hypertarget{_internal_01_flash_8c_a1b4f4fca500b2218688ec351d81a0acc}{}\index{Internal Flash.\+c@{Internal Flash.\+c}!M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Read\+Capacity@{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Read\+Capacity}}
+\index{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Read\+Capacity@{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Read\+Capacity}!Internal Flash.\+c@{Internal Flash.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Read\+Capacity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Read\+Capacity (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_internal_01_flash_8c_a1b4f4fca500b2218688ec351d81a0acc}
+
+
+Definition at line 150 of file Internal Flash.\+c.
+
+\hypertarget{_internal_01_flash_8c_a66ea2cdc9ee8a59b5b15e8c2e7e7881f}{}\index{Internal Flash.\+c@{Internal Flash.\+c}!M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Read\+Sector\+Size@{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Read\+Sector\+Size}}
+\index{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Read\+Sector\+Size@{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Read\+Sector\+Size}!Internal Flash.\+c@{Internal Flash.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Read\+Sector\+Size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Read\+Sector\+Size (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_internal_01_flash_8c_a66ea2cdc9ee8a59b5b15e8c2e7e7881f}
+
+
+Definition at line 128 of file Internal Flash.\+c.
+
+\hypertarget{_internal_01_flash_8c_a6c996d5c2a5a9b3fa0127a06d2c47c0f}{}\index{Internal Flash.\+c@{Internal Flash.\+c}!M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Sector\+Read@{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Sector\+Read}}
+\index{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Sector\+Read@{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Sector\+Read}!Internal Flash.\+c@{Internal Flash.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Sector\+Read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Sector\+Read (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+W\+O\+R\+D}}]{sector\+\_\+addr, }
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{buffer}
+\end{DoxyParamCaption}
+)}\label{_internal_01_flash_8c_a6c996d5c2a5a9b3fa0127a06d2c47c0f}
+
+
+Definition at line 276 of file Internal Flash.\+c.
+
+\hypertarget{_internal_01_flash_8c_a0ed1feec6036885ec15fe7f0ec5837a5}{}\index{Internal Flash.\+c@{Internal Flash.\+c}!M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Sector\+Write@{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Sector\+Write}}
+\index{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Sector\+Write@{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Sector\+Write}!Internal Flash.\+c@{Internal Flash.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Sector\+Write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Sector\+Write (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+W\+O\+R\+D}}]{sector\+\_\+addr, }
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{buffer, }
+\item[{{\bf B\+Y\+T\+E}}]{allow\+Write\+To\+Zero}
+\end{DoxyParamCaption}
+)}\label{_internal_01_flash_8c_a0ed1feec6036885ec15fe7f0ec5837a5}
+
+
+Definition at line 525 of file Internal Flash.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 8
+
+
+\hypertarget{_internal_01_flash_8c_aa10fa6995cc585ea12d0a25720c02ddc}{}\index{Internal Flash.\+c@{Internal Flash.\+c}!M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Write\+Protect\+State@{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Write\+Protect\+State}}
+\index{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Write\+Protect\+State@{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Write\+Protect\+State}!Internal Flash.\+c@{Internal Flash.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Write\+Protect\+State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} M\+D\+D\+\_\+\+Int\+Flash\+\_\+\+Write\+Protect\+State (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_internal_01_flash_8c_aa10fa6995cc585ea12d0a25720c02ddc}
+
+
+Definition at line 791 of file Internal Flash.\+c.
+
+\hypertarget{_internal_01_flash_8c_aa9040a59616b9ac19c02dc5eb82ea953}{}\index{Internal Flash.\+c@{Internal Flash.\+c}!Media\+Initialize@{Media\+Initialize}}
+\index{Media\+Initialize@{Media\+Initialize}!Internal Flash.\+c@{Internal Flash.\+c}}
+\subsubsection[{Media\+Initialize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+E\+D\+I\+A\+\_\+\+I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N}$\ast$ Media\+Initialize (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_internal_01_flash_8c_aa9040a59616b9ac19c02dc5eb82ea953}
+\hypertarget{_internal_01_flash_8c_a29da5d5efe259ebec7a528aaaa314ccd}{}\index{Internal Flash.\+c@{Internal Flash.\+c}!Unlock\+And\+Activate@{Unlock\+And\+Activate}}
+\index{Unlock\+And\+Activate@{Unlock\+And\+Activate}!Internal Flash.\+c@{Internal Flash.\+c}}
+\subsubsection[{Unlock\+And\+Activate}]{\setlength{\rightskip}{0pt plus 5cm}void Unlock\+And\+Activate (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{Unlock\+Key}
+\end{DoxyParamCaption}
+)}\label{_internal_01_flash_8c_a29da5d5efe259ebec7a528aaaa314ccd}
+
+
+Definition at line 687 of file Internal Flash.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 9
+
+
+\hypertarget{_internal_01_flash_8c_ad9bfaf0e6f48396f0767162ea62eeab3}{}\index{Internal Flash.\+c@{Internal Flash.\+c}!Write\+Byte@{Write\+Byte}}
+\index{Write\+Byte@{Write\+Byte}!Internal Flash.\+c@{Internal Flash.\+c}}
+\subsubsection[{Write\+Byte}]{\setlength{\rightskip}{0pt plus 5cm}void Write\+Byte (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{char}
+\end{DoxyParamCaption}
+)}\label{_internal_01_flash_8c_ad9bfaf0e6f48396f0767162ea62eeab3}
+\hypertarget{_internal_01_flash_8c_a0f73588423a91690bb5608abb1ae652d}{}\index{Internal Flash.\+c@{Internal Flash.\+c}!Write\+Row@{Write\+Row}}
+\index{Write\+Row@{Write\+Row}!Internal Flash.\+c@{Internal Flash.\+c}}
+\subsubsection[{Write\+Row}]{\setlength{\rightskip}{0pt plus 5cm}void Write\+Row (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_internal_01_flash_8c_a0f73588423a91690bb5608abb1ae652d}
+
+
+\subsection{Variable Documentation}
+\hypertarget{_internal_01_flash_8c_a0b3d47ddd61e611b7616c2f891f84664}{}\index{Internal Flash.\+c@{Internal Flash.\+c}!File\+Address@{File\+Address}}
+\index{File\+Address@{File\+Address}!Internal Flash.\+c@{Internal Flash.\+c}}
+\subsubsection[{File\+Address}]{\setlength{\rightskip}{0pt plus 5cm}R\+O\+M {\bf B\+Y\+T\+E}$\ast$ File\+Address = 0}\label{_internal_01_flash_8c_a0b3d47ddd61e611b7616c2f891f84664}
+
+
+Definition at line 345 of file Internal Flash.\+c.
+

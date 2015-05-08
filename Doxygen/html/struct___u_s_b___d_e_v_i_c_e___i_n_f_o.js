@@ -1,0 +1,25 @@
+var struct___u_s_b___d_e_v_i_c_e___i_n_f_o =
+[
+    [ "attributesOTG", "struct___u_s_b___d_e_v_i_c_e___i_n_f_o.html#a542053df7d6ed3ea90dd473b47c89a33", null ],
+    [ "bfAllowHNP", "struct___u_s_b___d_e_v_i_c_e___i_n_f_o.html#ab06942cd55103371c9a12df3434ad20c", null ],
+    [ "bfConfiguredOTG", "struct___u_s_b___d_e_v_i_c_e___i_n_f_o.html#ac97d3ee4cd248fe3ac1b115f51676983", null ],
+    [ "bfIsLowSpeed", "struct___u_s_b___d_e_v_i_c_e___i_n_f_o.html#a77763c24cdf3b68802237ca7753da495", null ],
+    [ "bfPingPongIn", "struct___u_s_b___d_e_v_i_c_e___i_n_f_o.html#aacbbfdf7f0f7fe6727162a0d3336b75b", null ],
+    [ "bfPingPongOut", "struct___u_s_b___d_e_v_i_c_e___i_n_f_o.html#acdc7545fe4c2b1d39b8f3c205b9cca10", null ],
+    [ "bfSupportsOTG", "struct___u_s_b___d_e_v_i_c_e___i_n_f_o.html#ad01f78af2505e332f75535a1ab357f81", null ],
+    [ "bfUseDeviceClientDriver", "struct___u_s_b___d_e_v_i_c_e___i_n_f_o.html#ac336845ad4093057b92b89df2c9ed9a6", null ],
+    [ "bfUseEP0Driver", "struct___u_s_b___d_e_v_i_c_e___i_n_f_o.html#aaaa1870f5801878f674d0b4224db8fad", null ],
+    [ "currentConfiguration", "struct___u_s_b___d_e_v_i_c_e___i_n_f_o.html#a1480af8b85197825908880c1b95a7bfa", null ],
+    [ "currentConfigurationDescriptor", "struct___u_s_b___d_e_v_i_c_e___i_n_f_o.html#a6e7131dde9ec6a941e277e72dc602bf4", null ],
+    [ "currentConfigurationPower", "struct___u_s_b___d_e_v_i_c_e___i_n_f_o.html#a58b65ab35d2386c0c9658c8ca1ed53da", null ],
+    [ "deviceAddress", "struct___u_s_b___d_e_v_i_c_e___i_n_f_o.html#aa1d659071a17ee8d0172d34d6783b517", null ],
+    [ "deviceAddressAndSpeed", "struct___u_s_b___d_e_v_i_c_e___i_n_f_o.html#a481c1b0003e3f825eaabb84db7d63f88", null ],
+    [ "deviceClientDriver", "struct___u_s_b___d_e_v_i_c_e___i_n_f_o.html#a4ead2264d70f86ec792ea2c477d4b0d3", null ],
+    [ "deviceEP0Driver", "struct___u_s_b___d_e_v_i_c_e___i_n_f_o.html#a8deaadba809721fa4d0b12ce4a21474b", null ],
+    [ "errorCode", "struct___u_s_b___d_e_v_i_c_e___i_n_f_o.html#aeed843858495988cfbec7df4f05862cb", null ],
+    [ "flags", "struct___u_s_b___d_e_v_i_c_e___i_n_f_o.html#ab8e4ee0112b6fd87de91b5cce90fded1", null ],
+    [ "pConfigurationDescriptorList", "struct___u_s_b___d_e_v_i_c_e___i_n_f_o.html#a5da75aa594bc20c0b9b850550184d217", null ],
+    [ "pEndpoint0", "struct___u_s_b___d_e_v_i_c_e___i_n_f_o.html#a95e31a8455619787001321a1ce122782", null ],
+    [ "pInterfaceList", "struct___u_s_b___d_e_v_i_c_e___i_n_f_o.html#a3858a517074df05e06ca0e9fe78bf525", null ],
+    [ "val", "struct___u_s_b___d_e_v_i_c_e___i_n_f_o.html#a1ba23d624885cedce131033610c85094", null ]
+];

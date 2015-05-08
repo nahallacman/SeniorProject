@@ -1,0 +1,465 @@
+\hypertarget{_s_d-_s_p_i_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+M\+D\+D File System/\+S\+D-\/\+S\+P\+I.c File Reference}
+\label{_s_d-_s_p_i_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+M\+D\+D File System/\+S\+D-\/\+S\+P\+I.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+M\+D\+D File System/\+S\+D-\/\+S\+P\+I.\+c}}
+{\ttfamily \#include \char`\"{}Compiler.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Generic\+Type\+Defs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Hardware\+Profile.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}M\+D\+D File System/\+F\+S\+I\+O.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}M\+D\+D File System/\+F\+S\+Defs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}M\+D\+D File System/\+S\+D-\/\+S\+P\+I.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}string.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}F\+Sconfig.\+h\char`\"{}}\\*
+Include dependency graph for S\+D-\/\+S\+P\+I.c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_s_d-_s_p_i_8c_a5d378e74d32d2c729f8c02e1038fcd4a}{Send\+Media\+Slow\+Cmd}~\hyperlink{_s_d-_s_p_i_8c_a88d057eb424e5ae206be5465387b2e0a}{Send\+M\+M\+C\+Cmd}
+\item 
+\#define \hyperlink{_s_d-_s_p_i_8c_ac8426536455869c8e1fac618a62fb708}{Write\+S\+P\+I\+Slow}~\hyperlink{_s_d-_s_p_i_8c_ab4e7f228a81fb435b37e82b99fb27bb5}{Write\+S\+P\+I\+M}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_s_d-_s_p_i_8c_a5051d074e6b2361e58b3ea5585443e25}{Delayms} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} milliseconds)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_s_d-_s_p_i_8c_a4990e32f9f0abd51bb486f148ab98875}{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Read\+Media} (void)
+\item 
+\hyperlink{struct_m_e_d_i_a___i_n_f_o_r_m_a_t_i_o_n}{M\+E\+D\+I\+A\+\_\+\+I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N} $\ast$ \hyperlink{_s_d-_s_p_i_8c_a399249708046e5c18471a82c2e8119ab}{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Media\+Initialize} (void)
+\item 
+\hyperlink{union_m_m_c___r_e_s_p_o_n_s_e}{M\+M\+C\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E} \hyperlink{_s_d-_s_p_i_8c_a88d057eb424e5ae206be5465387b2e0a}{Send\+M\+M\+C\+Cmd} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} cmd, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} address)
+\item 
+void \hyperlink{_s_d-_s_p_i_8c_abb14b787d26043d7597171c47429dcef}{Init\+S\+P\+I\+Slow\+Mode} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_s_d-_s_p_i_8c_a30887940b056f7563f2c31cfdc9b9527}{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Media\+Detect} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_s_d-_s_p_i_8c_a20a071eb0f4d5fdcd574d4c359686d71}{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Read\+Sector\+Size} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} \hyperlink{_s_d-_s_p_i_8c_abf7ff1b0a96625e8108c47957de8d46d}{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Read\+Capacity} (void)
+\item 
+void \hyperlink{_s_d-_s_p_i_8c_aa57c9a50f2928e5fa73b694820d0b9ee}{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Init\+I\+O} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_s_d-_s_p_i_8c_a8f03681bf00e9f6d8f31581f55ad7c1d}{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Shutdown\+Media} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_s_d-_s_p_i_8c_a36e18542755f672a02b549ba9d9a5b3d}{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Sector\+Read} (\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} sector\+\_\+addr, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$buffer)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_s_d-_s_p_i_8c_aa23a73d4e8ad01a7431a1f09195be6e9}{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Async\+Read\+Tasks} (\hyperlink{struct_a_s_y_n_c___i_o}{A\+S\+Y\+N\+C\+\_\+\+I\+O} $\ast$info)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_s_d-_s_p_i_8c_a020ed7ef9ebcf7dce1002ef668c2a32e}{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Async\+Write\+Tasks} (\hyperlink{struct_a_s_y_n_c___i_o}{A\+S\+Y\+N\+C\+\_\+\+I\+O} $\ast$info)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_s_d-_s_p_i_8c_a1d6db29d5e24aebec87110db1ca5823d}{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Sector\+Write} (\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} sector\+\_\+addr, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$buffer, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} allow\+Write\+To\+Zero)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_s_d-_s_p_i_8c_a27a3238b87bb45f8d37c958982ace55e}{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Write\+Protect\+State} (void)
+\item 
+void \hyperlink{_s_d-_s_p_i_8c_a046824de7bd39b019b942d8ef3643546}{Close\+S\+P\+I\+M} (void)
+\item 
+unsigned char \hyperlink{_s_d-_s_p_i_8c_ab4e7f228a81fb435b37e82b99fb27bb5}{Write\+S\+P\+I\+M} (unsigned char data\+\_\+out)
+\item 
+void \hyperlink{_s_d-_s_p_i_8c_a7c6595aec33f6c0757dc30133f3a1646}{Open\+S\+P\+I\+M} (unsigned int sync\+\_\+mode)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} \hyperlink{_s_d-_s_p_i_8c_a6339523d4a5e4a949a160d07ee4c39c0}{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+final\+L\+B\+A}
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_s_d-_s_p_i_8c_a4e9107c4b54b4f4b6e3d3419838a6433}{g\+Media\+Sector\+Size}
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_s_d-_s_p_i_8c_a1add6537f239a64057ced48518073f6c}{g\+S\+D\+Mode}
+\item 
+const \hyperlink{structtyp_m_m_c___c_m_d}{typ\+M\+M\+C\+\_\+\+C\+M\+D} \hyperlink{_s_d-_s_p_i_8c_ab6715f92255ff9a1b45df34c10c4803a}{sdmmc\+\_\+cmdtable} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_s_d-_s_p_i_8c_a5d378e74d32d2c729f8c02e1038fcd4a}{}\index{S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}!Send\+Media\+Slow\+Cmd@{Send\+Media\+Slow\+Cmd}}
+\index{Send\+Media\+Slow\+Cmd@{Send\+Media\+Slow\+Cmd}!S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}}
+\subsubsection[{Send\+Media\+Slow\+Cmd}]{\setlength{\rightskip}{0pt plus 5cm}\#define Send\+Media\+Slow\+Cmd~{\bf Send\+M\+M\+C\+Cmd}}\label{_s_d-_s_p_i_8c_a5d378e74d32d2c729f8c02e1038fcd4a}
+
+
+Definition at line 169 of file S\+D-\/\+S\+P\+I.\+c.
+
+\hypertarget{_s_d-_s_p_i_8c_ac8426536455869c8e1fac618a62fb708}{}\index{S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}!Write\+S\+P\+I\+Slow@{Write\+S\+P\+I\+Slow}}
+\index{Write\+S\+P\+I\+Slow@{Write\+S\+P\+I\+Slow}!S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}}
+\subsubsection[{Write\+S\+P\+I\+Slow}]{\setlength{\rightskip}{0pt plus 5cm}\#define Write\+S\+P\+I\+Slow~{\bf Write\+S\+P\+I\+M}}\label{_s_d-_s_p_i_8c_ac8426536455869c8e1fac618a62fb708}
+
+
+Definition at line 170 of file S\+D-\/\+S\+P\+I.\+c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_s_d-_s_p_i_8c_a046824de7bd39b019b942d8ef3643546}{}\index{S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}!Close\+S\+P\+I\+M@{Close\+S\+P\+I\+M}}
+\index{Close\+S\+P\+I\+M@{Close\+S\+P\+I\+M}!S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}}
+\subsubsection[{Close\+S\+P\+I\+M}]{\setlength{\rightskip}{0pt plus 5cm}void Close\+S\+P\+I\+M (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_s_d-_s_p_i_8c_a046824de7bd39b019b942d8ef3643546}
+
+
+Definition at line 1877 of file S\+D-\/\+S\+P\+I.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+\hypertarget{_s_d-_s_p_i_8c_a5051d074e6b2361e58b3ea5585443e25}{}\index{S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}!Delayms@{Delayms}}
+\index{Delayms@{Delayms}!S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}}
+\subsubsection[{Delayms}]{\setlength{\rightskip}{0pt plus 5cm}void Delayms (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{milliseconds}
+\end{DoxyParamCaption}
+)}\label{_s_d-_s_p_i_8c_a5051d074e6b2361e58b3ea5585443e25}
+
+
+Definition at line 1842 of file S\+D-\/\+S\+P\+I.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\hypertarget{_s_d-_s_p_i_8c_abb14b787d26043d7597171c47429dcef}{}\index{S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}!Init\+S\+P\+I\+Slow\+Mode@{Init\+S\+P\+I\+Slow\+Mode}}
+\index{Init\+S\+P\+I\+Slow\+Mode@{Init\+S\+P\+I\+Slow\+Mode}!S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}}
+\subsubsection[{Init\+S\+P\+I\+Slow\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}void Init\+S\+P\+I\+Slow\+Mode (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_s_d-_s_p_i_8c_abb14b787d26043d7597171c47429dcef}
+
+
+Definition at line 2168 of file S\+D-\/\+S\+P\+I.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+\hypertarget{_s_d-_s_p_i_8c_aa23a73d4e8ad01a7431a1f09195be6e9}{}\index{S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}!M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Async\+Read\+Tasks@{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Async\+Read\+Tasks}}
+\index{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Async\+Read\+Tasks@{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Async\+Read\+Tasks}!S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Async\+Read\+Tasks}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Async\+Read\+Tasks (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+S\+Y\+N\+C\+\_\+\+I\+O} $\ast$}]{info}
+\end{DoxyParamCaption}
+)}\label{_s_d-_s_p_i_8c_aa23a73d4e8ad01a7431a1f09195be6e9}
+
+
+Definition at line 916 of file S\+D-\/\+S\+P\+I.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 5
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\hypertarget{_s_d-_s_p_i_8c_a020ed7ef9ebcf7dce1002ef668c2a32e}{}\index{S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}!M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Async\+Write\+Tasks@{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Async\+Write\+Tasks}}
+\index{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Async\+Write\+Tasks@{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Async\+Write\+Tasks}!S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Async\+Write\+Tasks}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Async\+Write\+Tasks (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+S\+Y\+N\+C\+\_\+\+I\+O} $\ast$}]{info}
+\end{DoxyParamCaption}
+)}\label{_s_d-_s_p_i_8c_a020ed7ef9ebcf7dce1002ef668c2a32e}
+
+
+Definition at line 1353 of file S\+D-\/\+S\+P\+I.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 7
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 8
+
+
+\hypertarget{_s_d-_s_p_i_8c_aa57c9a50f2928e5fa73b694820d0b9ee}{}\index{S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}!M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Init\+I\+O@{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Init\+I\+O}}
+\index{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Init\+I\+O@{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Init\+I\+O}!S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Init\+I\+O}]{\setlength{\rightskip}{0pt plus 5cm}void M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Init\+I\+O (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_s_d-_s_p_i_8c_aa57c9a50f2928e5fa73b694820d0b9ee}
+
+
+Definition at line 433 of file S\+D-\/\+S\+P\+I.\+c.
+
+\hypertarget{_s_d-_s_p_i_8c_a30887940b056f7563f2c31cfdc9b9527}{}\index{S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}!M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Media\+Detect@{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Media\+Detect}}
+\index{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Media\+Detect@{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Media\+Detect}!S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Media\+Detect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Media\+Detect (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_s_d-_s_p_i_8c_a30887940b056f7563f2c31cfdc9b9527}
+
+
+Definition at line 248 of file S\+D-\/\+S\+P\+I.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 9
+
+
+\hypertarget{_s_d-_s_p_i_8c_a399249708046e5c18471a82c2e8119ab}{}\index{S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}!M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Media\+Initialize@{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Media\+Initialize}}
+\index{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Media\+Initialize@{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Media\+Initialize}!S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Media\+Initialize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+E\+D\+I\+A\+\_\+\+I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N}$\ast$ M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Media\+Initialize (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_s_d-_s_p_i_8c_a399249708046e5c18471a82c2e8119ab}
+
+
+Definition at line 2278 of file S\+D-\/\+S\+P\+I.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 10
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 11
+
+
+\hypertarget{_s_d-_s_p_i_8c_abf7ff1b0a96625e8108c47957de8d46d}{}\index{S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}!M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Read\+Capacity@{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Read\+Capacity}}
+\index{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Read\+Capacity@{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Read\+Capacity}!S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Read\+Capacity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Read\+Capacity (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_s_d-_s_p_i_8c_abf7ff1b0a96625e8108c47957de8d46d}
+
+
+Definition at line 406 of file S\+D-\/\+S\+P\+I.\+c.
+
+\hypertarget{_s_d-_s_p_i_8c_a4990e32f9f0abd51bb486f148ab98875}{}\index{S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}!M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Read\+Media@{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Read\+Media}}
+\index{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Read\+Media@{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Read\+Media}!S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Read\+Media}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Read\+Media (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_s_d-_s_p_i_8c_a4990e32f9f0abd51bb486f148ab98875}
+
+
+Definition at line 1959 of file S\+D-\/\+S\+P\+I.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 12
+
+
+\hypertarget{_s_d-_s_p_i_8c_a20a071eb0f4d5fdcd574d4c359686d71}{}\index{S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}!M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Read\+Sector\+Size@{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Read\+Sector\+Size}}
+\index{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Read\+Sector\+Size@{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Read\+Sector\+Size}!S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Read\+Sector\+Size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Read\+Sector\+Size (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_s_d-_s_p_i_8c_a20a071eb0f4d5fdcd574d4c359686d71}
+
+
+Definition at line 380 of file S\+D-\/\+S\+P\+I.\+c.
+
+\hypertarget{_s_d-_s_p_i_8c_a36e18542755f672a02b549ba9d9a5b3d}{}\index{S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}!M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Sector\+Read@{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Sector\+Read}}
+\index{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Sector\+Read@{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Sector\+Read}!S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Sector\+Read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Sector\+Read (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+W\+O\+R\+D}}]{sector\+\_\+addr, }
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{buffer}
+\end{DoxyParamCaption}
+)}\label{_s_d-_s_p_i_8c_a36e18542755f672a02b549ba9d9a5b3d}
+
+
+Definition at line 756 of file S\+D-\/\+S\+P\+I.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 13
+
+
+\hypertarget{_s_d-_s_p_i_8c_a1d6db29d5e24aebec87110db1ca5823d}{}\index{S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}!M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Sector\+Write@{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Sector\+Write}}
+\index{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Sector\+Write@{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Sector\+Write}!S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Sector\+Write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Sector\+Write (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+W\+O\+R\+D}}]{sector\+\_\+addr, }
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{buffer, }
+\item[{{\bf B\+Y\+T\+E}}]{allow\+Write\+To\+Zero}
+\end{DoxyParamCaption}
+)}\label{_s_d-_s_p_i_8c_a1d6db29d5e24aebec87110db1ca5823d}
+
+
+Definition at line 1753 of file S\+D-\/\+S\+P\+I.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 14
+
+
+\hypertarget{_s_d-_s_p_i_8c_a8f03681bf00e9f6d8f31581f55ad7c1d}{}\index{S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}!M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Shutdown\+Media@{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Shutdown\+Media}}
+\index{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Shutdown\+Media@{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Shutdown\+Media}!S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Shutdown\+Media}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Shutdown\+Media (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_s_d-_s_p_i_8c_a8f03681bf00e9f6d8f31581f55ad7c1d}
+
+
+Definition at line 472 of file S\+D-\/\+S\+P\+I.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 15
+
+
+\hypertarget{_s_d-_s_p_i_8c_a27a3238b87bb45f8d37c958982ace55e}{}\index{S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}!M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Write\+Protect\+State@{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Write\+Protect\+State}}
+\index{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Write\+Protect\+State@{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Write\+Protect\+State}!S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Write\+Protect\+State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+\+Write\+Protect\+State (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_s_d-_s_p_i_8c_a27a3238b87bb45f8d37c958982ace55e}
+
+
+Definition at line 1815 of file S\+D-\/\+S\+P\+I.\+c.
+
+\hypertarget{_s_d-_s_p_i_8c_a7c6595aec33f6c0757dc30133f3a1646}{}\index{S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}!Open\+S\+P\+I\+M@{Open\+S\+P\+I\+M}}
+\index{Open\+S\+P\+I\+M@{Open\+S\+P\+I\+M}!S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}}
+\subsubsection[{Open\+S\+P\+I\+M}]{\setlength{\rightskip}{0pt plus 5cm}void Open\+S\+P\+I\+M (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{sync\+\_\+mode}
+\end{DoxyParamCaption}
+)}\label{_s_d-_s_p_i_8c_a7c6595aec33f6c0757dc30133f3a1646}
+
+
+Definition at line 2005 of file S\+D-\/\+S\+P\+I.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 16
+
+
+\hypertarget{_s_d-_s_p_i_8c_a88d057eb424e5ae206be5465387b2e0a}{}\index{S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}!Send\+M\+M\+C\+Cmd@{Send\+M\+M\+C\+Cmd}}
+\index{Send\+M\+M\+C\+Cmd@{Send\+M\+M\+C\+Cmd}!S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}}
+\subsubsection[{Send\+M\+M\+C\+Cmd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+M\+C\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E} Send\+M\+M\+C\+Cmd (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{cmd, }
+\item[{{\bf D\+W\+O\+R\+D}}]{address}
+\end{DoxyParamCaption}
+)}\label{_s_d-_s_p_i_8c_a88d057eb424e5ae206be5465387b2e0a}
+
+
+Definition at line 512 of file S\+D-\/\+S\+P\+I.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 17
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 18
+
+
+\hypertarget{_s_d-_s_p_i_8c_ab4e7f228a81fb435b37e82b99fb27bb5}{}\index{S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}!Write\+S\+P\+I\+M@{Write\+S\+P\+I\+M}}
+\index{Write\+S\+P\+I\+M@{Write\+S\+P\+I\+M}!S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}}
+\subsubsection[{Write\+S\+P\+I\+M}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Write\+S\+P\+I\+M (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{data\+\_\+out}
+\end{DoxyParamCaption}
+)}\label{_s_d-_s_p_i_8c_ab4e7f228a81fb435b37e82b99fb27bb5}
+
+
+Definition at line 1912 of file S\+D-\/\+S\+P\+I.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 19
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{_s_d-_s_p_i_8c_a4e9107c4b54b4f4b6e3d3419838a6433}{}\index{S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}!g\+Media\+Sector\+Size@{g\+Media\+Sector\+Size}}
+\index{g\+Media\+Sector\+Size@{g\+Media\+Sector\+Size}!S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}}
+\subsubsection[{g\+Media\+Sector\+Size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} g\+Media\+Sector\+Size}\label{_s_d-_s_p_i_8c_a4e9107c4b54b4f4b6e3d3419838a6433}
+
+
+Definition at line 82 of file S\+D-\/\+S\+P\+I.\+c.
+
+\hypertarget{_s_d-_s_p_i_8c_a1add6537f239a64057ced48518073f6c}{}\index{S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}!g\+S\+D\+Mode@{g\+S\+D\+Mode}}
+\index{g\+S\+D\+Mode@{g\+S\+D\+Mode}!S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}}
+\subsubsection[{g\+S\+D\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} g\+S\+D\+Mode}\label{_s_d-_s_p_i_8c_a1add6537f239a64057ced48518073f6c}
+
+
+Definition at line 83 of file S\+D-\/\+S\+P\+I.\+c.
+
+\hypertarget{_s_d-_s_p_i_8c_a6339523d4a5e4a949a160d07ee4c39c0}{}\index{S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}!M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+final\+L\+B\+A@{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+final\+L\+B\+A}}
+\index{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+final\+L\+B\+A@{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+final\+L\+B\+A}!S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+final\+L\+B\+A}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} M\+D\+D\+\_\+\+S\+D\+S\+P\+I\+\_\+final\+L\+B\+A}\label{_s_d-_s_p_i_8c_a6339523d4a5e4a949a160d07ee4c39c0}
+
+
+Definition at line 81 of file S\+D-\/\+S\+P\+I.\+c.
+
+\hypertarget{_s_d-_s_p_i_8c_ab6715f92255ff9a1b45df34c10c4803a}{}\index{S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}!sdmmc\+\_\+cmdtable@{sdmmc\+\_\+cmdtable}}
+\index{sdmmc\+\_\+cmdtable@{sdmmc\+\_\+cmdtable}!S\+D-\/\+S\+P\+I.\+c@{S\+D-\/\+S\+P\+I.\+c}}
+\subsubsection[{sdmmc\+\_\+cmdtable}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf typ\+M\+M\+C\+\_\+\+C\+M\+D} sdmmc\+\_\+cmdtable\mbox{[}$\,$\mbox{]}}\label{_s_d-_s_p_i_8c_ab6715f92255ff9a1b45df34c10c4803a}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+
+\{
+    
+    \{\hyperlink{_s_d-_s_p_i_8h_a02703e9cab5d95013737adbdbe93c0b0}{cmdGO\_IDLE\_STATE},          0x95,   \hyperlink{_s_d-_s_p_i_8h_a69658e0ba42c5888b733c1ef68ae5187af8d87ff07efe24755164f550526f4dac}{R1},     \hyperlink{_s_d-_s_p_i_8h_a6a2e6b3670a920656095b739efe77613}{NODATA}\},
+    \{\hyperlink{_s_d-_s_p_i_8h_a51321e259b663dc7ea15c4c43b9c54df}{cmdSEND\_OP\_COND},           0xF9,   \hyperlink{_s_d-_s_p_i_8h_a69658e0ba42c5888b733c1ef68ae5187af8d87ff07efe24755164f550526f4dac}{R1},     \hyperlink{_s_d-_s_p_i_8h_a6a2e6b3670a920656095b739efe77613}{NODATA}\},
+    \{\hyperlink{_s_d-_s_p_i_8h_a6b12e0aa6067fd1100de3375a72918a6}{cmdSEND\_IF\_COND},            0x87,   \hyperlink{_s_d-_s_p_i_8h_a69658e0ba42c5888b733c1ef68ae5187a054fa446dec19779f7d15d8cc5fca5cf}{R7},     \hyperlink{_s_d-_s_p_i_8h_a6a2e6b3670a920656095b739efe77613}{NODATA}\},
+    \{\hyperlink{_s_d-_s_p_i_8h_a6909d22ca448c3785d1c65b31d93f205}{cmdSEND\_CSD},               0xAF,   \hyperlink{_s_d-_s_p_i_8h_a69658e0ba42c5888b733c1ef68ae5187af8d87ff07efe24755164f550526f4dac}{R1},     \hyperlink{_s_d-_s_p_i_8h_a60c157f738d808af36cc86bd1fc4361d}{MOREDATA}\},
+    \{\hyperlink{_s_d-_s_p_i_8h_ad780cd6b5490b6d4a1252a8412910bc3}{cmdSEND\_CID},               0x1B,   \hyperlink{_s_d-_s_p_i_8h_a69658e0ba42c5888b733c1ef68ae5187af8d87ff07efe24755164f550526f4dac}{R1},     \hyperlink{_s_d-_s_p_i_8h_a60c157f738d808af36cc86bd1fc4361d}{MOREDATA}\},
+    \{\hyperlink{_s_d-_s_p_i_8h_a92488a89aa80daa3fa01cc0295956170}{cmdSTOP\_TRANSMISSION},      0xC3,   \hyperlink{_s_d-_s_p_i_8h_a69658e0ba42c5888b733c1ef68ae5187a84a6472e3715e282b0e48f89ce721f9a}{R1b},    \hyperlink{_s_d-_s_p_i_8h_a6a2e6b3670a920656095b739efe77613}{NODATA}\},
+    \{\hyperlink{_s_d-_s_p_i_8h_a523f8e42b1b3dda864c422ed2b1e43a5}{cmdSEND\_STATUS},            0xAF,   \hyperlink{_s_d-_s_p_i_8h_a69658e0ba42c5888b733c1ef68ae5187a629d7b403cea5f826352f3aefb9a6d6a}{R2},     \hyperlink{_s_d-_s_p_i_8h_a6a2e6b3670a920656095b739efe77613}{NODATA}\},
+    \{\hyperlink{_s_d-_s_p_i_8h_a82811428d69219f685fe5e0437a7b945}{cmdSET\_BLOCKLEN},           0xFF,   \hyperlink{_s_d-_s_p_i_8h_a69658e0ba42c5888b733c1ef68ae5187af8d87ff07efe24755164f550526f4dac}{R1},     \hyperlink{_s_d-_s_p_i_8h_a6a2e6b3670a920656095b739efe77613}{NODATA}\},
+    \{\hyperlink{_s_d-_s_p_i_8h_ad0770ce608d10cbd323bdd45f677b7f5}{cmdREAD\_SINGLE\_BLOCK},      0xFF,   \hyperlink{_s_d-_s_p_i_8h_a69658e0ba42c5888b733c1ef68ae5187af8d87ff07efe24755164f550526f4dac}{R1},     \hyperlink{_s_d-_s_p_i_8h_a60c157f738d808af36cc86bd1fc4361d}{MOREDATA}\},
+    \{\hyperlink{_s_d-_s_p_i_8h_a7912a0c224e11ce5cb668554cd9785e4}{cmdREAD\_MULTI\_BLOCK},       0xFF,   \hyperlink{_s_d-_s_p_i_8h_a69658e0ba42c5888b733c1ef68ae5187af8d87ff07efe24755164f550526f4dac}{R1},     \hyperlink{_s_d-_s_p_i_8h_a60c157f738d808af36cc86bd1fc4361d}{MOREDATA}\},
+    \{\hyperlink{_s_d-_s_p_i_8h_a985e7c6e61fb0844cfe6e03019908757}{cmdWRITE\_SINGLE\_BLOCK},     0xFF,   \hyperlink{_s_d-_s_p_i_8h_a69658e0ba42c5888b733c1ef68ae5187af8d87ff07efe24755164f550526f4dac}{R1},     \hyperlink{_s_d-_s_p_i_8h_a60c157f738d808af36cc86bd1fc4361d}{MOREDATA}\},
+    \{\hyperlink{_s_d-_s_p_i_8h_aac74c1e4a10eac10e017bc3bd2ee551f}{cmdWRITE\_MULTI\_BLOCK},      0xFF,   \hyperlink{_s_d-_s_p_i_8h_a69658e0ba42c5888b733c1ef68ae5187af8d87ff07efe24755164f550526f4dac}{R1},     \hyperlink{_s_d-_s_p_i_8h_a60c157f738d808af36cc86bd1fc4361d}{MOREDATA}\}, 
+    \{\hyperlink{_s_d-_s_p_i_8h_a65242b334820603ef4054109ce2a91bf}{cmdTAG\_SECTOR\_START},       0xFF,   \hyperlink{_s_d-_s_p_i_8h_a69658e0ba42c5888b733c1ef68ae5187af8d87ff07efe24755164f550526f4dac}{R1},     \hyperlink{_s_d-_s_p_i_8h_a6a2e6b3670a920656095b739efe77613}{NODATA}\},
+    \{\hyperlink{_s_d-_s_p_i_8h_a6d014a8c52b6d808062758b56d326628}{cmdTAG\_SECTOR\_END},         0xFF,   \hyperlink{_s_d-_s_p_i_8h_a69658e0ba42c5888b733c1ef68ae5187af8d87ff07efe24755164f550526f4dac}{R1},     \hyperlink{_s_d-_s_p_i_8h_a6a2e6b3670a920656095b739efe77613}{NODATA}\},
+    \{\hyperlink{_s_d-_s_p_i_8h_a55e232e684a6de207665213bcc67e424}{cmdERASE},                  0xDF,   \hyperlink{_s_d-_s_p_i_8h_a69658e0ba42c5888b733c1ef68ae5187a84a6472e3715e282b0e48f89ce721f9a}{R1b},    \hyperlink{_s_d-_s_p_i_8h_a6a2e6b3670a920656095b739efe77613}{NODATA}\},
+    \{\hyperlink{_s_d-_s_p_i_8h_a32a5729b94f9ac752c06ae1f6dfcefcd}{cmdAPP\_CMD},                0x73,   \hyperlink{_s_d-_s_p_i_8h_a69658e0ba42c5888b733c1ef68ae5187af8d87ff07efe24755164f550526f4dac}{R1},     \hyperlink{_s_d-_s_p_i_8h_a6a2e6b3670a920656095b739efe77613}{NODATA}\},
+    \{\hyperlink{_s_d-_s_p_i_8h_a0ebbbf357fbcdd931f01c7bc66c44613}{cmdREAD\_OCR},               0x25,   \hyperlink{_s_d-_s_p_i_8h_a69658e0ba42c5888b733c1ef68ae5187a054fa446dec19779f7d15d8cc5fca5cf}{R7},     \hyperlink{_s_d-_s_p_i_8h_a6a2e6b3670a920656095b739efe77613}{NODATA}\},
+    \{\hyperlink{_s_d-_s_p_i_8h_adf8889d02075afb8d9a115538ed85846}{cmdCRC\_ON\_OFF},             0x25,   \hyperlink{_s_d-_s_p_i_8h_a69658e0ba42c5888b733c1ef68ae5187af8d87ff07efe24755164f550526f4dac}{R1},     \hyperlink{_s_d-_s_p_i_8h_a6a2e6b3670a920656095b739efe77613}{NODATA}\},
+    \{\hyperlink{_s_d-_s_p_i_8h_a1823d137ba816c2789769b7237e92aa8}{cmdSD\_SEND\_OP\_COND},        0xFF,   \hyperlink{_s_d-_s_p_i_8h_a69658e0ba42c5888b733c1ef68ae5187a054fa446dec19779f7d15d8cc5fca5cf}{R7},     \hyperlink{_s_d-_s_p_i_8h_a6a2e6b3670a920656095b739efe77613}{NODATA}\}, 
+    \{\hyperlink{_s_d-_s_p_i_8h_aaeca80cb394e4cc0de547098849512dc}{cmdSET\_WR\_BLK\_ERASE\_COUNT}, 0xFF,   \hyperlink{_s_d-_s_p_i_8h_a69658e0ba42c5888b733c1ef68ae5187af8d87ff07efe24755164f550526f4dac}{R1},     
+      \hyperlink{_s_d-_s_p_i_8h_a6a2e6b3670a920656095b739efe77613}{NODATA}\}
+\}
+\end{DoxyCode}
+
+
+Definition at line 95 of file S\+D-\/\+S\+P\+I.\+c.
+

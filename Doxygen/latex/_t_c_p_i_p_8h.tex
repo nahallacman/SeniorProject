@@ -1,0 +1,118 @@
+\hypertarget{_t_c_p_i_p_8h}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+T\+C\+P\+I\+P Stack/\+T\+C\+P\+I\+P.h File Reference}
+\label{_t_c_p_i_p_8h}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+T\+C\+P\+I\+P Stack/\+T\+C\+P\+I\+P.\+h@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+T\+C\+P\+I\+P Stack/\+T\+C\+P\+I\+P.\+h}}
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Generic\+Type\+Defs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Compiler.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Hardware\+Profile.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}T\+C\+P\+I\+P\+Config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}T\+C\+P\+I\+P Stack/\+Stack\+Tsk.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}T\+C\+P\+I\+P Stack/\+Helpers.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}T\+C\+P\+I\+P Stack/\+Delay.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}T\+C\+P\+I\+P Stack/\+Tick.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}T\+C\+P\+I\+P Stack/\+M\+A\+C.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}T\+C\+P\+I\+P Stack/\+I\+P.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}T\+C\+P\+I\+P Stack/\+A\+R\+P.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}T\+C\+P\+I\+P Stack/\+X\+E\+E\+P\+R\+O\+M.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}T\+C\+P\+I\+P Stack/\+S\+P\+I\+Flash.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}T\+C\+P\+I\+P Stack/\+S\+P\+I\+R\+A\+M.\+h\char`\"{}}\\*
+Include dependency graph for T\+C\+P\+I\+P.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_t_c_p_i_p_8h_aa90f0ece55bdfd61e8dfe021ef4cf5fc}{T\+C\+P\+I\+P\+\_\+\+S\+T\+A\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N}~\char`\"{}v5.\+42\char`\"{}
+\item 
+\#define \hyperlink{_t_c_p_i_p_8h_a634ac06604795b74535036ac7f1bcf65}{N\+E\+T\+W\+O\+R\+K\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S}~(1u)
+\item 
+\#define \hyperlink{_t_c_p_i_p_8h_a549f153af94a2b817eab3299340f356a}{T\+C\+P\+\_\+\+E\+T\+H\+\_\+\+R\+A\+M}~0u
+\item 
+\#define \hyperlink{_t_c_p_i_p_8h_a210df6a3fb94c11b62f4b9ee7e6e72a9}{T\+C\+P\+\_\+\+E\+T\+H\+\_\+\+R\+A\+M\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S}~(B\+A\+S\+E\+\_\+\+T\+C\+B\+\_\+\+A\+D\+D\+R)
+\item 
+\#define \hyperlink{_t_c_p_i_p_8h_ad99c356df1c988fee2f09394bc482e98}{T\+C\+P\+\_\+\+P\+I\+C\+\_\+\+R\+A\+M}~1u
+\item 
+\#define \hyperlink{_t_c_p_i_p_8h_a14d76c6ef5cd97ad5de2b01c9cc7b3f4}{T\+C\+P\+\_\+\+P\+I\+C\+\_\+\+R\+A\+M\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S}~((P\+T\+R\+\_\+\+B\+A\+S\+E)\&T\+C\+P\+Buffer\+In\+P\+I\+C\mbox{[}0\mbox{]})
+\item 
+\#define \hyperlink{_t_c_p_i_p_8h_aba628f222575a1aeed0f684edb39351b}{T\+C\+P\+\_\+\+S\+P\+I\+\_\+\+R\+A\+M}~2u
+\item 
+\#define \hyperlink{_t_c_p_i_p_8h_a4f92c3804a4603ec0778b98834764851}{T\+C\+P\+\_\+\+E\+T\+H\+\_\+\+R\+A\+M\+\_\+\+S\+I\+Z\+E}~0u
+\item 
+\#define \hyperlink{_t_c_p_i_p_8h_ac286b416939941cfc8ae4212a92e16e4}{T\+C\+P\+\_\+\+P\+I\+C\+\_\+\+R\+A\+M\+\_\+\+S\+I\+Z\+E}~0u
+\item 
+\#define \hyperlink{_t_c_p_i_p_8h_a75b511078d49e6f61adc139aec3e6a74}{T\+C\+P\+\_\+\+S\+P\+I\+\_\+\+R\+A\+M\+\_\+\+S\+I\+Z\+E}~0u
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_t_c_p_i_p_8h_a634ac06604795b74535036ac7f1bcf65}{}\index{T\+C\+P\+I\+P.\+h@{T\+C\+P\+I\+P.\+h}!N\+E\+T\+W\+O\+R\+K\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S@{N\+E\+T\+W\+O\+R\+K\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S}}
+\index{N\+E\+T\+W\+O\+R\+K\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S@{N\+E\+T\+W\+O\+R\+K\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S}!T\+C\+P\+I\+P.\+h@{T\+C\+P\+I\+P.\+h}}
+\subsubsection[{N\+E\+T\+W\+O\+R\+K\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+E\+T\+W\+O\+R\+K\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S~(1u)}\label{_t_c_p_i_p_8h_a634ac06604795b74535036ac7f1bcf65}
+
+
+Definition at line 64 of file T\+C\+P\+I\+P.\+h.
+
+\hypertarget{_t_c_p_i_p_8h_a549f153af94a2b817eab3299340f356a}{}\index{T\+C\+P\+I\+P.\+h@{T\+C\+P\+I\+P.\+h}!T\+C\+P\+\_\+\+E\+T\+H\+\_\+\+R\+A\+M@{T\+C\+P\+\_\+\+E\+T\+H\+\_\+\+R\+A\+M}}
+\index{T\+C\+P\+\_\+\+E\+T\+H\+\_\+\+R\+A\+M@{T\+C\+P\+\_\+\+E\+T\+H\+\_\+\+R\+A\+M}!T\+C\+P\+I\+P.\+h@{T\+C\+P\+I\+P.\+h}}
+\subsubsection[{T\+C\+P\+\_\+\+E\+T\+H\+\_\+\+R\+A\+M}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+C\+P\+\_\+\+E\+T\+H\+\_\+\+R\+A\+M~0u}\label{_t_c_p_i_p_8h_a549f153af94a2b817eab3299340f356a}
+
+
+Definition at line 72 of file T\+C\+P\+I\+P.\+h.
+
+\hypertarget{_t_c_p_i_p_8h_a210df6a3fb94c11b62f4b9ee7e6e72a9}{}\index{T\+C\+P\+I\+P.\+h@{T\+C\+P\+I\+P.\+h}!T\+C\+P\+\_\+\+E\+T\+H\+\_\+\+R\+A\+M\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S@{T\+C\+P\+\_\+\+E\+T\+H\+\_\+\+R\+A\+M\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S}}
+\index{T\+C\+P\+\_\+\+E\+T\+H\+\_\+\+R\+A\+M\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S@{T\+C\+P\+\_\+\+E\+T\+H\+\_\+\+R\+A\+M\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S}!T\+C\+P\+I\+P.\+h@{T\+C\+P\+I\+P.\+h}}
+\subsubsection[{T\+C\+P\+\_\+\+E\+T\+H\+\_\+\+R\+A\+M\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+C\+P\+\_\+\+E\+T\+H\+\_\+\+R\+A\+M\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S~(B\+A\+S\+E\+\_\+\+T\+C\+B\+\_\+\+A\+D\+D\+R)}\label{_t_c_p_i_p_8h_a210df6a3fb94c11b62f4b9ee7e6e72a9}
+
+
+Definition at line 74 of file T\+C\+P\+I\+P.\+h.
+
+\hypertarget{_t_c_p_i_p_8h_a4f92c3804a4603ec0778b98834764851}{}\index{T\+C\+P\+I\+P.\+h@{T\+C\+P\+I\+P.\+h}!T\+C\+P\+\_\+\+E\+T\+H\+\_\+\+R\+A\+M\+\_\+\+S\+I\+Z\+E@{T\+C\+P\+\_\+\+E\+T\+H\+\_\+\+R\+A\+M\+\_\+\+S\+I\+Z\+E}}
+\index{T\+C\+P\+\_\+\+E\+T\+H\+\_\+\+R\+A\+M\+\_\+\+S\+I\+Z\+E@{T\+C\+P\+\_\+\+E\+T\+H\+\_\+\+R\+A\+M\+\_\+\+S\+I\+Z\+E}!T\+C\+P\+I\+P.\+h@{T\+C\+P\+I\+P.\+h}}
+\subsubsection[{T\+C\+P\+\_\+\+E\+T\+H\+\_\+\+R\+A\+M\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+C\+P\+\_\+\+E\+T\+H\+\_\+\+R\+A\+M\+\_\+\+S\+I\+Z\+E~0u}\label{_t_c_p_i_p_8h_a4f92c3804a4603ec0778b98834764851}
+
+
+Definition at line 207 of file T\+C\+P\+I\+P.\+h.
+
+\hypertarget{_t_c_p_i_p_8h_ad99c356df1c988fee2f09394bc482e98}{}\index{T\+C\+P\+I\+P.\+h@{T\+C\+P\+I\+P.\+h}!T\+C\+P\+\_\+\+P\+I\+C\+\_\+\+R\+A\+M@{T\+C\+P\+\_\+\+P\+I\+C\+\_\+\+R\+A\+M}}
+\index{T\+C\+P\+\_\+\+P\+I\+C\+\_\+\+R\+A\+M@{T\+C\+P\+\_\+\+P\+I\+C\+\_\+\+R\+A\+M}!T\+C\+P\+I\+P.\+h@{T\+C\+P\+I\+P.\+h}}
+\subsubsection[{T\+C\+P\+\_\+\+P\+I\+C\+\_\+\+R\+A\+M}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+C\+P\+\_\+\+P\+I\+C\+\_\+\+R\+A\+M~1u}\label{_t_c_p_i_p_8h_ad99c356df1c988fee2f09394bc482e98}
+
+
+Definition at line 76 of file T\+C\+P\+I\+P.\+h.
+
+\hypertarget{_t_c_p_i_p_8h_a14d76c6ef5cd97ad5de2b01c9cc7b3f4}{}\index{T\+C\+P\+I\+P.\+h@{T\+C\+P\+I\+P.\+h}!T\+C\+P\+\_\+\+P\+I\+C\+\_\+\+R\+A\+M\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S@{T\+C\+P\+\_\+\+P\+I\+C\+\_\+\+R\+A\+M\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S}}
+\index{T\+C\+P\+\_\+\+P\+I\+C\+\_\+\+R\+A\+M\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S@{T\+C\+P\+\_\+\+P\+I\+C\+\_\+\+R\+A\+M\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S}!T\+C\+P\+I\+P.\+h@{T\+C\+P\+I\+P.\+h}}
+\subsubsection[{T\+C\+P\+\_\+\+P\+I\+C\+\_\+\+R\+A\+M\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+C\+P\+\_\+\+P\+I\+C\+\_\+\+R\+A\+M\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S~((P\+T\+R\+\_\+\+B\+A\+S\+E)\&T\+C\+P\+Buffer\+In\+P\+I\+C\mbox{[}0\mbox{]})}\label{_t_c_p_i_p_8h_a14d76c6ef5cd97ad5de2b01c9cc7b3f4}
+
+
+Definition at line 78 of file T\+C\+P\+I\+P.\+h.
+
+\hypertarget{_t_c_p_i_p_8h_ac286b416939941cfc8ae4212a92e16e4}{}\index{T\+C\+P\+I\+P.\+h@{T\+C\+P\+I\+P.\+h}!T\+C\+P\+\_\+\+P\+I\+C\+\_\+\+R\+A\+M\+\_\+\+S\+I\+Z\+E@{T\+C\+P\+\_\+\+P\+I\+C\+\_\+\+R\+A\+M\+\_\+\+S\+I\+Z\+E}}
+\index{T\+C\+P\+\_\+\+P\+I\+C\+\_\+\+R\+A\+M\+\_\+\+S\+I\+Z\+E@{T\+C\+P\+\_\+\+P\+I\+C\+\_\+\+R\+A\+M\+\_\+\+S\+I\+Z\+E}!T\+C\+P\+I\+P.\+h@{T\+C\+P\+I\+P.\+h}}
+\subsubsection[{T\+C\+P\+\_\+\+P\+I\+C\+\_\+\+R\+A\+M\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+C\+P\+\_\+\+P\+I\+C\+\_\+\+R\+A\+M\+\_\+\+S\+I\+Z\+E~0u}\label{_t_c_p_i_p_8h_ac286b416939941cfc8ae4212a92e16e4}
+
+
+Definition at line 208 of file T\+C\+P\+I\+P.\+h.
+
+\hypertarget{_t_c_p_i_p_8h_aba628f222575a1aeed0f684edb39351b}{}\index{T\+C\+P\+I\+P.\+h@{T\+C\+P\+I\+P.\+h}!T\+C\+P\+\_\+\+S\+P\+I\+\_\+\+R\+A\+M@{T\+C\+P\+\_\+\+S\+P\+I\+\_\+\+R\+A\+M}}
+\index{T\+C\+P\+\_\+\+S\+P\+I\+\_\+\+R\+A\+M@{T\+C\+P\+\_\+\+S\+P\+I\+\_\+\+R\+A\+M}!T\+C\+P\+I\+P.\+h@{T\+C\+P\+I\+P.\+h}}
+\subsubsection[{T\+C\+P\+\_\+\+S\+P\+I\+\_\+\+R\+A\+M}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+C\+P\+\_\+\+S\+P\+I\+\_\+\+R\+A\+M~2u}\label{_t_c_p_i_p_8h_aba628f222575a1aeed0f684edb39351b}
+
+
+Definition at line 80 of file T\+C\+P\+I\+P.\+h.
+
+\hypertarget{_t_c_p_i_p_8h_a75b511078d49e6f61adc139aec3e6a74}{}\index{T\+C\+P\+I\+P.\+h@{T\+C\+P\+I\+P.\+h}!T\+C\+P\+\_\+\+S\+P\+I\+\_\+\+R\+A\+M\+\_\+\+S\+I\+Z\+E@{T\+C\+P\+\_\+\+S\+P\+I\+\_\+\+R\+A\+M\+\_\+\+S\+I\+Z\+E}}
+\index{T\+C\+P\+\_\+\+S\+P\+I\+\_\+\+R\+A\+M\+\_\+\+S\+I\+Z\+E@{T\+C\+P\+\_\+\+S\+P\+I\+\_\+\+R\+A\+M\+\_\+\+S\+I\+Z\+E}!T\+C\+P\+I\+P.\+h@{T\+C\+P\+I\+P.\+h}}
+\subsubsection[{T\+C\+P\+\_\+\+S\+P\+I\+\_\+\+R\+A\+M\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+C\+P\+\_\+\+S\+P\+I\+\_\+\+R\+A\+M\+\_\+\+S\+I\+Z\+E~0u}\label{_t_c_p_i_p_8h_a75b511078d49e6f61adc139aec3e6a74}
+
+
+Definition at line 209 of file T\+C\+P\+I\+P.\+h.
+
+\hypertarget{_t_c_p_i_p_8h_aa90f0ece55bdfd61e8dfe021ef4cf5fc}{}\index{T\+C\+P\+I\+P.\+h@{T\+C\+P\+I\+P.\+h}!T\+C\+P\+I\+P\+\_\+\+S\+T\+A\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N@{T\+C\+P\+I\+P\+\_\+\+S\+T\+A\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N}}
+\index{T\+C\+P\+I\+P\+\_\+\+S\+T\+A\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N@{T\+C\+P\+I\+P\+\_\+\+S\+T\+A\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N}!T\+C\+P\+I\+P.\+h@{T\+C\+P\+I\+P.\+h}}
+\subsubsection[{T\+C\+P\+I\+P\+\_\+\+S\+T\+A\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+C\+P\+I\+P\+\_\+\+S\+T\+A\+C\+K\+\_\+\+V\+E\+R\+S\+I\+O\+N~\char`\"{}v5.\+42\char`\"{}}\label{_t_c_p_i_p_8h_aa90f0ece55bdfd61e8dfe021ef4cf5fc}
+
+
+Definition at line 52 of file T\+C\+P\+I\+P.\+h.
+

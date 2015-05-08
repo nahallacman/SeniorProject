@@ -1,0 +1,185 @@
+\hypertarget{m_touch_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.c File Reference}
+\label{m_touch_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+c}}
+
+
+Implements the post-\/acquisition filtering and decoding of the m\+Touch sensors.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{m_touch_8c_ab73968cbb19d4ae25a65698c15906b65}{m\+Touch\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Main initialization routine for all m\+Touch framework modules including the built-\/in communication module, if enabled. \end{DoxyCompactList}\item 
+void \hyperlink{group___decoding_ga8955adf440115510aace00d81444e268}{m\+Touch\+\_\+\+Decode} (void)
+\begin{DoxyCompactList}\small\item\em Updates the state of each active-\/mode sensor using the latest acquisition value. \end{DoxyCompactList}\item 
+void \hyperlink{group___decoding_gad860d35191988afa8f9d02bcb946c08b}{m\+Touch\+\_\+\+Update\+Baseline} (void)
+\begin{DoxyCompactList}\small\item\em Updates the baseline for the given sensor with the given value. \end{DoxyCompactList}\item 
+\hypertarget{m_touch_8c_ad155881d69a8795e0c91a6eede8c0308}{}void {\bfseries m\+Touch\+\_\+\+Change\+State} (void)\label{m_touch_8c_ad155881d69a8795e0c91a6eede8c0308}
+
+\item 
+uint8\+\_\+t \hyperlink{m_touch_8c_a375aad16aafd424786ba67e79cc454d3}{m\+Touch\+\_\+\+Button\+State\+Machine} (void)
+\item 
+\hypertarget{m_touch_8c_ac8cfeefacb22ca490c1adbedd6fefcc1}{}void {\bfseries m\+Touch\+\_\+\+Find\+Most\+Pressed} (uint8\+\_\+t)\label{m_touch_8c_ac8cfeefacb22ca490c1adbedd6fefcc1}
+
+\item 
+\hypertarget{m_touch_8c_afdcb5b33e2c73a81f71714ad360f1f50}{}void {\bfseries m\+Touch\+\_\+\+Update\+Matrix\+Output} (void)\label{m_touch_8c_afdcb5b33e2c73a81f71714ad360f1f50}
+
+\item 
+\hypertarget{m_touch_8c_a4e75a069b800f4deceefc6974a2b6e90}{}void {\bfseries m\+Touch\+\_\+\+Error\+Detect} (void)\label{m_touch_8c_a4e75a069b800f4deceefc6974a2b6e90}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{m_touch_8c_a0e2a8ea4196b78b7aa765058fd758cd1}{}uint8\+\_\+t($\ast$const {\bfseries m\+Touch\+\_\+\+State\+Machine} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]})(void)\label{m_touch_8c_a0e2a8ea4196b78b7aa765058fd758cd1}
+
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Global Sensor Variables}\par
+{\em These variables store information about the current state of the sensors. They should only ever be updated by the m\+Touch framework, but may be read globally so that special actions can be taken based on the sensors\textquotesingle{} status. Refer to the m\+Touch.\+h file for more information about these variables. }\begin{DoxyCompactItemize}
+\item 
+\hypertarget{m_touch_8c_ab678fb469a6bdd3d0b75cc4b48adf504}{}\hyperlink{structm_touch___state}{m\+Touch\+\_\+\+State} \hyperlink{m_touch_8c_ab678fb469a6bdd3d0b75cc4b48adf504}{m\+Touch\+\_\+state}\label{m_touch_8c_ab678fb469a6bdd3d0b75cc4b48adf504}
+
+\begin{DoxyCompactList}\small\item\em Tracks the state of the m\+Touch algorithm. \end{DoxyCompactList}\item 
+\hypertarget{m_touch_8c_affc22e96882bd0d8b258dd2241fe3fd9}{}\hyperlink{structm_touch___state_variables}{m\+Touch\+\_\+\+State\+Variables} \hyperlink{m_touch_8c_affc22e96882bd0d8b258dd2241fe3fd9}{m\+Touch\+\_\+state\+Vars}\label{m_touch_8c_affc22e96882bd0d8b258dd2241fe3fd9}
+
+\begin{DoxyCompactList}\small\item\em Stores all state-\/temporary variables to be reinitialized each mode change. \end{DoxyCompactList}\item 
+\hypertarget{m_touch_8c_a64be528d090489e1cc2bd740d55501ac}{}uint16\+\_\+t \hyperlink{m_touch_8c_a64be528d090489e1cc2bd740d55501ac}{m\+Touch\+\_\+average} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]}\label{m_touch_8c_a64be528d090489e1cc2bd740d55501ac}
+
+\begin{DoxyCompactList}\small\item\em Array to track the unpressed value of each sensor. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{m_touch_8c_ab288c49098e419b3232336a4245b757d}{m\+Touch\+\_\+state\+Mask}
+\begin{DoxyCompactList}\small\item\em Stores the state of each sensor in a bit mask for output by m\+Comm when there are 16 or fewer sensors. \end{DoxyCompactList}\item 
+\hypertarget{m_touch_8c_a702d784953ba5bda08d044ce70491eab}{}uint16\+\_\+t \hyperlink{m_touch_8c_a702d784953ba5bda08d044ce70491eab}{m\+Touch\+\_\+deltas} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]}\label{m_touch_8c_a702d784953ba5bda08d044ce70491eab}
+
+\begin{DoxyCompactList}\small\item\em Stores the latest delta value for each sensor. Only needed for functions that must compare sensors\textquotesingle{} relative shift amounts with each other. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{m_touch_8c_a827719a95ea3e7c38efa02c8e1188015}{m\+Touch\+\_\+toggle}
+\begin{DoxyCompactList}\small\item\em Toggle state register when there are 16 or fewer sensors. \end{DoxyCompactList}\item 
+\hypertarget{m_touch_8c_a87da226c0ba1ce6c8a452ead526b366d}{}uint8\+\_\+t \hyperlink{m_touch_8c_a87da226c0ba1ce6c8a452ead526b366d}{m\+Touch\+\_\+matrix}\label{m_touch_8c_a87da226c0ba1ce6c8a452ead526b366d}
+
+\begin{DoxyCompactList}\small\item\em Stores the current matrix output value for access by main application. \end{DoxyCompactList}\item 
+\hypertarget{m_touch_8c_a7c093cdeafc06345997ee5d8fa518d9f}{}uint8\+\_\+t \hyperlink{m_touch_8c_a7c093cdeafc06345997ee5d8fa518d9f}{m\+Touch\+\_\+matrix\+\_\+latch}\label{m_touch_8c_a7c093cdeafc06345997ee5d8fa518d9f}
+
+\begin{DoxyCompactList}\small\item\em Stores the last matrix value for comparison with the new one. \end{DoxyCompactList}\item 
+\hypertarget{m_touch_8c_ad0f396a12de88542d2461383d4bcc506}{}\hyperlink{structm_touch___most_pressed_data}{m\+Touch\+\_\+\+Most\+Pressed\+Data} $\ast$ {\bfseries m\+Touch\+\_\+most\+Pressed}\label{m_touch_8c_ad0f396a12de88542d2461383d4bcc506}
+
+\item 
+\hypertarget{m_touch_8c_af2398619b264fd3f03386d89de32da07}{}\hyperlink{structm_touch___most_pressed_data}{m\+Touch\+\_\+\+Most\+Pressed\+Data} {\bfseries m\+Touch\+\_\+most\+Pressed\+Data} \mbox{[}3\mbox{]}\label{m_touch_8c_af2398619b264fd3f03386d89de32da07}
+
+\item 
+const \hyperlink{structm_touch___most_pressed_index}{m\+Touch\+\_\+\+Most\+Pressed\+Index} {\bfseries m\+Touch\+\_\+most\+Pressed\+Index} \mbox{[}3\mbox{]}
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Constant Threshold Arrays}\par
+{\em These arrays are stored in program memory at compile time, so they do not require R\+A\+M. The downside to this implementation is that their values cannot be updated at runtime. If this is something your application requires, further editing will be needed. }\begin{DoxyCompactItemize}
+\item 
+\hypertarget{m_touch_8c_ab29410255e81d186a19b48c01053fc96}{}const uint16\+\_\+t \hyperlink{m_touch_8c_ab29410255e81d186a19b48c01053fc96}{m\+Touch\+\_\+press\+Threshold} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]} = P\+R\+E\+S\+S\+\_\+\+T\+H\+R\+E\+S\+H\+O\+L\+D\+\_\+\+I\+N\+I\+T\label{m_touch_8c_ab29410255e81d186a19b48c01053fc96}
+
+\begin{DoxyCompactList}\small\item\em Constant array containing the press threshold for each sensor. \end{DoxyCompactList}\item 
+\hypertarget{m_touch_8c_a8684610eda16ac0df01d05ec5d7c362c}{}const uint16\+\_\+t \hyperlink{m_touch_8c_a8684610eda16ac0df01d05ec5d7c362c}{m\+Touch\+\_\+release\+Threshold} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]} = R\+E\+L\+E\+A\+S\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+L\+D\+\_\+\+I\+N\+I\+T\label{m_touch_8c_a8684610eda16ac0df01d05ec5d7c362c}
+
+\begin{DoxyCompactList}\small\item\em Constant array containing the release threshold for each sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+Implements the post-\/acquisition filtering and decoding of the m\+Touch sensors. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{m_touch_8c_a375aad16aafd424786ba67e79cc454d3}{}\index{m\+Touch.\+c@{m\+Touch.\+c}!m\+Touch\+\_\+\+Button\+State\+Machine@{m\+Touch\+\_\+\+Button\+State\+Machine}}
+\index{m\+Touch\+\_\+\+Button\+State\+Machine@{m\+Touch\+\_\+\+Button\+State\+Machine}!m\+Touch.\+c@{m\+Touch.\+c}}
+\subsubsection[{m\+Touch\+\_\+\+Button\+State\+Machine}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t m\+Touch\+\_\+\+Button\+State\+Machine (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_touch_8c_a375aad16aafd424786ba67e79cc454d3}
+\hypertarget{mTouch.c_InitState}{}\subsection{Initialization State}\label{mTouch.c_InitState}
+The default state of all sensors on power up. Once sensors leave this state, they do not return. Initialization begins by decrementing the timer variable for the sensor. If \#timer has not yet reached 0, the are\+Initialized and all\+Released flags are cleared to prevent any advanced decoding logic, such as sliders and wheels, or communications from occuring. Once \#timer reaches 0, the sensor transitions to the \#\+M\+T\+O\+U\+C\+H\+\_\+\+R\+E\+L\+E\+A\+S\+E\+D state, the debounce counter is reset to the value needed to enter the pressed state, and the baseline is updated to equal to the current sensor value.\hypertarget{mTouch.c_ReleaseState}{}\subsection{Released State}\label{mTouch.c_ReleaseState}
+This state can be entered from either the \#\+M\+T\+O\+U\+C\+H\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+I\+N\+G or \#\+M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+E\+S\+S\+E\+D state. The only way to leave this state is by creating enough consecutive positive shifts of the reading above the baseline to overflow the \#debounce variable for the sensor. Once this is done, the sensor will enter the pressed state.~\newline
+ The code for this section begins by checking to see if the latest reading is greater than the baseline by at least the press threshold. If it is, the debounce variable is decremented. Once the debounce value has been reached 0, the sensor will change to the \#\+M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+E\+S\+S\+E\+D state, reset the debounce counter, initialize the press timer (if enabled), toggle the toggle bit, and clear the \textquotesingle{}all\+Released\textquotesingle{} flag.~\newline
+ If the threshold has not been crossed, the debounce counter is reset to the initial press debounce value and the baseline is updated.
+
+\begin{DoxyNote}{Note}
+This is the only state and condition where the baseline is able to be updated, and we only use the latest reading to update the baseline once we know it\textquotesingle{}s not crossing any thresholds.
+\end{DoxyNote}
+\hypertarget{mTouch.c_PressState}{}\subsection{Pressed State}\label{mTouch.c_PressState}
+A sensor can only enter this state from the \#\+M\+T\+O\+U\+C\+H\+\_\+\+R\+E\+L\+E\+A\+S\+E\+D state, but there are two ways to leave\+: First, by being in the state for too long and allowing the press timer to run out. Second, by having a the delta value smaller than the release threshold on enough consecutive scans to cause the debounce counter to reach 0.
+
+The code for this section begins by decrementing and checking the \#timer variable to see if it has reached 0. If so, the sensor transfers to the \#\+M\+T\+O\+U\+C\+H\+\_\+\+R\+E\+L\+E\+A\+S\+E\+D state, the debounce counter is reset and the baseline is re-\/initialized to the sensor\textquotesingle{}s current reading. The baseline is reset to allow for a quick recovery if some environmental condition caused the sensor to become stuck. See the \#\+N\+E\+G\+A\+T\+I\+V\+E\+\_\+\+C\+A\+P\+A\+C\+I\+T\+A\+N\+C\+E configuration option for the different behaviors that can be implemented to quickly allow the baseline to re-\/settle to the unpressed value.
+
+If the timer has not yet reached 0, the reading is checked against the release threshold. If the difference between the sensor\textquotesingle{}s reading and the baseline (delta) is less than the release threshold, the debounce variable is decremented in the same manner as the press timer. When it reaches 0, the sensor enters the \#\+M\+T\+O\+U\+C\+H\+\_\+\+R\+E\+L\+E\+A\+S\+E\+D state and the debounce counter is set to debounce value required to enter the pressed state. If it has not crossed the threshold (meaning\+: the delta value is still large enough to register as a press), the debounce counter is reset to the release debounce value.
+
+\begin{DoxyNote}{Note}
+The baseline is never updated while the sensor is pressed so the system can remember where the unpressed value should end up. Because of this, the baseline can be better thought of as a released-\/state average.
+\end{DoxyNote}
+
+
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+\hypertarget{m_touch_8c_ab73968cbb19d4ae25a65698c15906b65}{}\index{m\+Touch.\+c@{m\+Touch.\+c}!m\+Touch\+\_\+\+Init@{m\+Touch\+\_\+\+Init}}
+\index{m\+Touch\+\_\+\+Init@{m\+Touch\+\_\+\+Init}!m\+Touch.\+c@{m\+Touch.\+c}}
+\subsubsection[{m\+Touch\+\_\+\+Init}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Touch\+\_\+\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_touch_8c_ab73968cbb19d4ae25a65698c15906b65}
+
+
+Main initialization routine for all m\+Touch framework modules including the built-\/in communication module, if enabled. 
+
+\hypertarget{mTouch.c_InitImp}{}\subsection{Framework Initialization Notes}\label{mTouch.c_InitImp}
+
+\begin{DoxyEnumerate}
+\item Loop through all enabled, active sensors and initialize their variables.
+\item Loop through all enabled sliders and initialize the slider\textquotesingle{}s output value.
+\item Initialize mode variables and flags
+\item Initialize non-\/array system variables
+\item Initialize the D\+A\+C\+O\+U\+T pin when it is used as a guard ring.
+\item Initialize the A\+D\+C module for m\+Touch operation.
+\item Initialization complete -\/ enable active-\/mode m\+Touch scanning.
+\end{DoxyEnumerate}
+
+~\newline
+~\newline
+ 
+
+\subsection{Variable Documentation}
+\hypertarget{m_touch_8c_a5d6c0fb3a30070bee2ecccbfb65da43a}{}\index{m\+Touch.\+c@{m\+Touch.\+c}!m\+Touch\+\_\+most\+Pressed\+Index@{m\+Touch\+\_\+most\+Pressed\+Index}}
+\index{m\+Touch\+\_\+most\+Pressed\+Index@{m\+Touch\+\_\+most\+Pressed\+Index}!m\+Touch.\+c@{m\+Touch.\+c}}
+\subsubsection[{m\+Touch\+\_\+most\+Pressed\+Index}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf m\+Touch\+\_\+\+Most\+Pressed\+Index} m\+Touch\+\_\+most\+Pressed\+Index}\label{m_touch_8c_a5d6c0fb3a30070bee2ecccbfb65da43a}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=    \{   
+                                                                            \{ MTOUCH\_SENSOR\_START,         
+       MTOUCH\_SENSOR\_END        \},
+                                                                            \{ MTOUCH\_MATRIX\_ROW\_START,     
+       MTOUCH\_MATRIX\_ROW\_END    \},
+                                                                            \{ MTOUCH\_MATRIX\_COLUMN\_START,  
+       MTOUCH\_MATRIX\_COLUMN\_END \}
+                                                                        \}
+\end{DoxyCode}
+\hypertarget{m_touch_8c_ab288c49098e419b3232336a4245b757d}{}\index{m\+Touch.\+c@{m\+Touch.\+c}!m\+Touch\+\_\+state\+Mask@{m\+Touch\+\_\+state\+Mask}}
+\index{m\+Touch\+\_\+state\+Mask@{m\+Touch\+\_\+state\+Mask}!m\+Touch.\+c@{m\+Touch.\+c}}
+\subsubsection[{m\+Touch\+\_\+state\+Mask}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t m\+Touch\+\_\+state\+Mask}\label{m_touch_8c_ab288c49098e419b3232336a4245b757d}
+
+
+Stores the state of each sensor in a bit mask for output by m\+Comm when there are 16 or fewer sensors. 
+
+Stores the state of each sensor in a bit mask for output by m\+Comm when there are 8 or fewer sensors.
+
+Stores the state of each sensor in a bit mask for output by m\+Comm when there are 32 or fewer sensors.
+
+Stores the state of each sensor in a bit mask for output by m\+Comm when there are 24 or fewer sensors. \hypertarget{m_touch_8c_a827719a95ea3e7c38efa02c8e1188015}{}\index{m\+Touch.\+c@{m\+Touch.\+c}!m\+Touch\+\_\+toggle@{m\+Touch\+\_\+toggle}}
+\index{m\+Touch\+\_\+toggle@{m\+Touch\+\_\+toggle}!m\+Touch.\+c@{m\+Touch.\+c}}
+\subsubsection[{m\+Touch\+\_\+toggle}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t m\+Touch\+\_\+toggle}\label{m_touch_8c_a827719a95ea3e7c38efa02c8e1188015}
+
+
+Toggle state register when there are 16 or fewer sensors. 
+
+Toggle state register when there are 8 or fewer sensors.
+
+Toggle state register when there are 25 or more sensors.
+
+Toggle state register when there are 24 or fewer sensors. 

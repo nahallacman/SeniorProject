@@ -1,0 +1,27 @@
+digraph "USBHostHIDInitialize"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="USBHostHIDInitialize",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UART2PrintString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uart2_8c.html#a4f250e76dccb6dc8450c04efbc8e9a8f"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UART2PutChar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uart2_8c.html#a23f0e312ef33167a4c51b6b353135e89"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UART2PutHex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uart2_8c.html#af13e4f872814dbf76917927d9237a44f"];
+  Node4 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UART2PutDec",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uart2_8c.html#a58c86457543e83b150d2fb442f08c66d"];
+  Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="USBHostIssueDeviceRequest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host_8h.html#a17f2dbf6b2ef2c47a52dc50b64776344"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="_USB_ResetDATA0",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host_8c.html#a5d09188ddf7b972f9b2f54d11c0081f6"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="_USB_FindEndpoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host_8c.html#ae449b4da12d04e5c006874382c84caab"];
+  Node6 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="_USB_InitControlWrite",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host_8c.html#a058419fc74add8358df667b00c827581"];
+  Node6 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="_USB_InitControlRead",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host_8c.html#af241c7058876aad3e2680b191af50a5c"];
+}

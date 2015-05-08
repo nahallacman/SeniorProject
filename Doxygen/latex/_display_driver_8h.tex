@@ -1,0 +1,606 @@
+\hypertarget{_display_driver_8h}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+Graphics/\+Display\+Driver.h File Reference}
+\label{_display_driver_8h}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+Graphics/\+Display\+Driver.\+h@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+Graphics/\+Display\+Driver.\+h}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_display_driver_8h_a6d4d054030dc1ccdc7b875d4877ec9b7}{Reset\+Device} (void)
+\item 
+void \hyperlink{_display_driver_8h_a7357fefe765f4c4f087675ffbf100472}{Transparent\+Color\+Enable} (\hyperlink{gfxcolors_8h_a0658edb6e7bd88d6e9a185711893441c}{G\+F\+X\+\_\+\+C\+O\+L\+O\+R} color)
+\item 
+void \hyperlink{_display_driver_8h_a9f5d38445eabc479104a965d95d8138e}{Set\+Active\+Page} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} page)
+\item 
+void \hyperlink{_display_driver_8h_a3383609f9ef2171aefd0f27a65a1507d}{Set\+Visual\+Page} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} page)
+\item 
+void \hyperlink{_display_driver_8h_a6cfa4c1d70b95212032ceea31f84406b}{Put\+Pixel} (\hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} x, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} y)
+\item 
+\hyperlink{gfxcolors_8h_a0658edb6e7bd88d6e9a185711893441c}{G\+F\+X\+\_\+\+C\+O\+L\+O\+R} \hyperlink{_display_driver_8h_a185610c056fa52b47bb4d0ee89e0fa74}{Get\+Pixel} (\hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} x, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} y)
+\item 
+void \hyperlink{_display_driver_8h_acaeb6c748e0548309c45660d7f0d5402}{Set\+Clip\+Rgn} (\hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} left, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} top, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} right, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} bottom)
+\item 
+void \hyperlink{_display_driver_8h_a0deff569455e2b978876f72085a6f467}{Set\+Clip} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} control)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_display_driver_8h_a37671e247ab1de22a9bdb1945746d217}{Is\+Device\+Busy} ()
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_display_driver_8h_aee191840b313f57571ea4d097776f467}{Put\+Image\+Drv} (\hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} left, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} top, void $\ast$image, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} stretch, void $\ast$p\+Partial\+Image\+Data)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_display_driver_8h_a7d14fe0c47113698c0cba37eaea624aa}{Copy\+Window} (\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} src\+Addr, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} dst\+Addr,\textbackslash{}\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} src\+X, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} src\+Y,\textbackslash{}\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} dst\+X, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} dst\+Y,\textbackslash{}\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} width, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} height)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_display_driver_8h_a4d9c11932c17f537f130645191843755}{Copy\+Block} (\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} src\+Addr, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} dst\+Addr, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} src\+Offset, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} dst\+Offset, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} width, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} height)
+\item 
+void \hyperlink{_display_driver_8h_ae0413a5cf5980493bbce72de567558df}{Copy\+Page\+Window} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} src\+Page, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} dst\+Page,\textbackslash{}\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} src\+X, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} src\+Y,\textbackslash{}\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} dst\+X, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} dst\+Y,\textbackslash{}\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} width, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} height)
+\item 
+void \hyperlink{_display_driver_8h_aa71c77c63ca0d089c6319ffb085a5c96}{Switch\+On\+Double\+Buffering} (void)
+\item 
+void \hyperlink{_display_driver_8h_ab50e395ee13cfd48871193bc4f54be8b}{Switch\+Off\+Double\+Buffering} (void)
+\item 
+void \hyperlink{_display_driver_8h_a57bc1a2e49d1b5dc46bd7fb538c7c0bf}{\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((always\+\_\+inline)) Invalidate\+All(void)
+\item 
+void \hyperlink{_display_driver_8h_a053a6a241a56cee1146d537768969abf}{Invalidate\+Rectangle} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} left, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} top, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} right, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} bottom)
+\item 
+void \hyperlink{_display_driver_8h_ad9446e11a4c1005c96973cd73911ca17}{Request\+Display\+Update} (void)
+\item 
+void \hyperlink{_display_driver_8h_a9a8ad1167b88569cdd7f8aafc4f48ba2}{Update\+Display\+Now} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} \hyperlink{_display_driver_8h_a506b6d314396b5ddf03dc34b9d63056c}{Get\+Draw\+Buffer\+Address} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} \hyperlink{_display_driver_8h_a05a7145edd6ee58fc5b48c17ea2b087c}{Get\+Frame\+Buffer\+Address} (void)
+\item 
+void \hyperlink{_display_driver_8h_a5aedb9585841927714ec988d95b21971}{G\+F\+X\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+Setup\+Draw\+Update} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} startx, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} starty, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} endx, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} endy)
+\item 
+void \hyperlink{_display_driver_8h_a561b13096a6795a7ae72408135f1f64a}{G\+F\+X\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+Complete\+Draw\+Update} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} startx, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} starty, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} endx, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} endy)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{gfxcolors_8h_a0658edb6e7bd88d6e9a185711893441c}{G\+F\+X\+\_\+\+C\+O\+L\+O\+R} \hyperlink{_display_driver_8h_ad517ba3ea19540181df3b14084330044}{\+\_\+color}
+\item 
+\hyperlink{gfxcolors_8h_a0658edb6e7bd88d6e9a185711893441c}{G\+F\+X\+\_\+\+C\+O\+L\+O\+R} \hyperlink{_display_driver_8h_a38d2cb9c90167a56c5a35fed935e1d89}{\+\_\+chrcolor}
+\item 
+\hyperlink{gfxcolors_8h_a0658edb6e7bd88d6e9a185711893441c}{G\+F\+X\+\_\+\+C\+O\+L\+O\+R} \hyperlink{_display_driver_8h_a6950b9960eff7c43d368acad00a339cf}{\+\_\+color\+Transparent}
+\item 
+\hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} \hyperlink{_display_driver_8h_a7ad2796fa60efe2b93589bd1c527d850}{\+\_\+color\+Transparent\+Enable}
+\item 
+\hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} \hyperlink{_display_driver_8h_a891ad71179a7b654f4957e77bd1241e5}{\+\_\+clip\+Rgn}
+\item 
+\hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} \hyperlink{_display_driver_8h_aceea25b060b0ee1e967c2a18994a8e64}{\+\_\+clip\+Left}
+\item 
+\hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} \hyperlink{_display_driver_8h_a468c3933725fa839333ba298c406eee9}{\+\_\+clip\+Top}
+\item 
+\hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} \hyperlink{_display_driver_8h_a1a84342fb83dd2e11ea36612e293171e}{\+\_\+clip\+Right}
+\item 
+\hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} \hyperlink{_display_driver_8h_a822da21656f03466871beeded4956a10}{\+\_\+clip\+Bottom}
+\item 
+volatile \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} \hyperlink{_display_driver_8h_af5d91b4b7cba3fb19cd32be3f90f7257}{\+\_\+\+Page\+Table} \mbox{[}G\+F\+X\+\_\+\+D\+R\+V\+\_\+\+P\+A\+G\+E\+\_\+\+C\+O\+U\+N\+T\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_display_driver_8h_a57bc1a2e49d1b5dc46bd7fb538c7c0bf}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{\+\_\+\+\_\+attribute\+\_\+\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+\+\_\+attribute\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{(always\+\_\+inline)}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{_display_driver_8h_a57bc1a2e49d1b5dc46bd7fb538c7c0bf}
+
+
+Definition at line 695 of file Display\+Driver.\+h.
+
+\hypertarget{_display_driver_8h_a4d9c11932c17f537f130645191843755}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!Copy\+Block@{Copy\+Block}}
+\index{Copy\+Block@{Copy\+Block}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{Copy\+Block}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Copy\+Block (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+W\+O\+R\+D}}]{src\+Addr, }
+\item[{{\bf D\+W\+O\+R\+D}}]{dst\+Addr, }
+\item[{{\bf D\+W\+O\+R\+D}}]{src\+Offset, }
+\item[{{\bf D\+W\+O\+R\+D}}]{dst\+Offset, }
+\item[{{\bf W\+O\+R\+D}}]{width, }
+\item[{{\bf W\+O\+R\+D}}]{height}
+\end{DoxyParamCaption}
+)}\label{_display_driver_8h_a4d9c11932c17f537f130645191843755}
+
+
+Definition at line 950 of file mchp\+Gfx\+Drv.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+\hypertarget{_display_driver_8h_ae0413a5cf5980493bbce72de567558df}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!Copy\+Page\+Window@{Copy\+Page\+Window}}
+\index{Copy\+Page\+Window@{Copy\+Page\+Window}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{Copy\+Page\+Window}]{\setlength{\rightskip}{0pt plus 5cm}void Copy\+Page\+Window (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{src\+Page, }
+\item[{{\bf B\+Y\+T\+E}}]{dst\+Page, }
+\item[{\textbackslash{}{\bf W\+O\+R\+D}}]{src\+X, }
+\item[{{\bf W\+O\+R\+D}}]{src\+Y, }
+\item[{\textbackslash{}{\bf W\+O\+R\+D}}]{dst\+X, }
+\item[{{\bf W\+O\+R\+D}}]{dst\+Y, }
+\item[{\textbackslash{}{\bf W\+O\+R\+D}}]{width, }
+\item[{{\bf W\+O\+R\+D}}]{height}
+\end{DoxyParamCaption}
+)}\label{_display_driver_8h_ae0413a5cf5980493bbce72de567558df}
+
+
+Definition at line 1093 of file mchp\+Gfx\+Drv.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\hypertarget{_display_driver_8h_a7d14fe0c47113698c0cba37eaea624aa}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!Copy\+Window@{Copy\+Window}}
+\index{Copy\+Window@{Copy\+Window}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{Copy\+Window}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Copy\+Window (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+W\+O\+R\+D}}]{src\+Addr, }
+\item[{{\bf D\+W\+O\+R\+D}}]{dst\+Addr, }
+\item[{\textbackslash{}{\bf W\+O\+R\+D}}]{src\+X, }
+\item[{{\bf W\+O\+R\+D}}]{src\+Y, }
+\item[{\textbackslash{}{\bf W\+O\+R\+D}}]{dst\+X, }
+\item[{{\bf W\+O\+R\+D}}]{dst\+Y, }
+\item[{\textbackslash{}{\bf W\+O\+R\+D}}]{width, }
+\item[{{\bf W\+O\+R\+D}}]{height}
+\end{DoxyParamCaption}
+)}\label{_display_driver_8h_a7d14fe0c47113698c0cba37eaea624aa}
+
+
+Definition at line 994 of file mchp\+Gfx\+Drv.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+\hypertarget{_display_driver_8h_a506b6d314396b5ddf03dc34b9d63056c}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!Get\+Draw\+Buffer\+Address@{Get\+Draw\+Buffer\+Address}}
+\index{Get\+Draw\+Buffer\+Address@{Get\+Draw\+Buffer\+Address}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{Get\+Draw\+Buffer\+Address}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} Get\+Draw\+Buffer\+Address (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_display_driver_8h_a506b6d314396b5ddf03dc34b9d63056c}
+
+
+Definition at line 151 of file mchp\+Gfx\+Drv.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 5
+
+
+\hypertarget{_display_driver_8h_a05a7145edd6ee58fc5b48c17ea2b087c}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!Get\+Frame\+Buffer\+Address@{Get\+Frame\+Buffer\+Address}}
+\index{Get\+Frame\+Buffer\+Address@{Get\+Frame\+Buffer\+Address}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{Get\+Frame\+Buffer\+Address}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} Get\+Frame\+Buffer\+Address (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_display_driver_8h_a05a7145edd6ee58fc5b48c17ea2b087c}
+
+
+Definition at line 172 of file mchp\+Gfx\+Drv.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\hypertarget{_display_driver_8h_a185610c056fa52b47bb4d0ee89e0fa74}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!Get\+Pixel@{Get\+Pixel}}
+\index{Get\+Pixel@{Get\+Pixel}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{Get\+Pixel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+F\+X\+\_\+\+C\+O\+L\+O\+R} Get\+Pixel (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+H\+O\+R\+T}}]{x, }
+\item[{{\bf S\+H\+O\+R\+T}}]{y}
+\end{DoxyParamCaption}
+)}\label{_display_driver_8h_a185610c056fa52b47bb4d0ee89e0fa74}
+
+
+Definition at line 158 of file Custom\+Display\+Driver.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 7
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 8
+
+
+\hypertarget{_display_driver_8h_a561b13096a6795a7ae72408135f1f64a}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!G\+F\+X\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+Complete\+Draw\+Update@{G\+F\+X\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+Complete\+Draw\+Update}}
+\index{G\+F\+X\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+Complete\+Draw\+Update@{G\+F\+X\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+Complete\+Draw\+Update}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{G\+F\+X\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+Complete\+Draw\+Update}]{\setlength{\rightskip}{0pt plus 5cm}void G\+F\+X\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+Complete\+Draw\+Update (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{startx, }
+\item[{{\bf W\+O\+R\+D}}]{starty, }
+\item[{{\bf W\+O\+R\+D}}]{endx, }
+\item[{{\bf W\+O\+R\+D}}]{endy}
+\end{DoxyParamCaption}
+)}\label{_display_driver_8h_a561b13096a6795a7ae72408135f1f64a}
+
+
+Here is the caller graph for this function\+:
+% FIG 9
+
+
+\hypertarget{_display_driver_8h_a5aedb9585841927714ec988d95b21971}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!G\+F\+X\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+Setup\+Draw\+Update@{G\+F\+X\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+Setup\+Draw\+Update}}
+\index{G\+F\+X\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+Setup\+Draw\+Update@{G\+F\+X\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+Setup\+Draw\+Update}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{G\+F\+X\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+Setup\+Draw\+Update}]{\setlength{\rightskip}{0pt plus 5cm}void G\+F\+X\+\_\+\+D\+R\+I\+V\+E\+R\+\_\+\+Setup\+Draw\+Update (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{startx, }
+\item[{{\bf W\+O\+R\+D}}]{starty, }
+\item[{{\bf W\+O\+R\+D}}]{endx, }
+\item[{{\bf W\+O\+R\+D}}]{endy}
+\end{DoxyParamCaption}
+)}\label{_display_driver_8h_a5aedb9585841927714ec988d95b21971}
+
+
+Here is the caller graph for this function\+:
+% FIG 10
+
+
+\hypertarget{_display_driver_8h_a053a6a241a56cee1146d537768969abf}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!Invalidate\+Rectangle@{Invalidate\+Rectangle}}
+\index{Invalidate\+Rectangle@{Invalidate\+Rectangle}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{Invalidate\+Rectangle}]{\setlength{\rightskip}{0pt plus 5cm}void Invalidate\+Rectangle (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{left, }
+\item[{{\bf W\+O\+R\+D}}]{top, }
+\item[{{\bf W\+O\+R\+D}}]{right, }
+\item[{{\bf W\+O\+R\+D}}]{bottom}
+\end{DoxyParamCaption}
+)}\label{_display_driver_8h_a053a6a241a56cee1146d537768969abf}
+
+
+Definition at line 6668 of file mchp\+Gfx\+Drv.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 11
+
+
+\hypertarget{_display_driver_8h_a37671e247ab1de22a9bdb1945746d217}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!Is\+Device\+Busy@{Is\+Device\+Busy}}
+\index{Is\+Device\+Busy@{Is\+Device\+Busy}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{Is\+Device\+Busy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Is\+Device\+Busy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_display_driver_8h_a37671e247ab1de22a9bdb1945746d217}
+
+
+Definition at line 1841 of file drv\+T\+F\+T001.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 12
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 13
+
+
+\hypertarget{_display_driver_8h_aee191840b313f57571ea4d097776f467}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!Put\+Image\+Drv@{Put\+Image\+Drv}}
+\index{Put\+Image\+Drv@{Put\+Image\+Drv}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{Put\+Image\+Drv}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Put\+Image\+Drv (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+H\+O\+R\+T}}]{left, }
+\item[{{\bf S\+H\+O\+R\+T}}]{top, }
+\item[{void $\ast$}]{image, }
+\item[{{\bf B\+Y\+T\+E}}]{stretch, }
+\item[{void $\ast$}]{p\+Partial\+Image\+Data}
+\end{DoxyParamCaption}
+)}\label{_display_driver_8h_aee191840b313f57571ea4d097776f467}
+
+
+Definition at line 5993 of file mchp\+Gfx\+Drv.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 14
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 15
+
+
+\hypertarget{_display_driver_8h_a6cfa4c1d70b95212032ceea31f84406b}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!Put\+Pixel@{Put\+Pixel}}
+\index{Put\+Pixel@{Put\+Pixel}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{Put\+Pixel}]{\setlength{\rightskip}{0pt plus 5cm}void Put\+Pixel (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+H\+O\+R\+T}}]{x, }
+\item[{{\bf S\+H\+O\+R\+T}}]{y}
+\end{DoxyParamCaption}
+)}\label{_display_driver_8h_a6cfa4c1d70b95212032ceea31f84406b}
+
+
+Definition at line 139 of file Custom\+Display\+Driver.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 16
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 17
+
+
+\hypertarget{_display_driver_8h_ad9446e11a4c1005c96973cd73911ca17}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!Request\+Display\+Update@{Request\+Display\+Update}}
+\index{Request\+Display\+Update@{Request\+Display\+Update}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{Request\+Display\+Update}]{\setlength{\rightskip}{0pt plus 5cm}void Request\+Display\+Update (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_display_driver_8h_ad9446e11a4c1005c96973cd73911ca17}
+
+
+Definition at line 6832 of file mchp\+Gfx\+Drv.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 18
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 19
+
+
+\hypertarget{_display_driver_8h_a6d4d054030dc1ccdc7b875d4877ec9b7}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!Reset\+Device@{Reset\+Device}}
+\index{Reset\+Device@{Reset\+Device}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{Reset\+Device}]{\setlength{\rightskip}{0pt plus 5cm}void Reset\+Device (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_display_driver_8h_a6d4d054030dc1ccdc7b875d4877ec9b7}
+
+
+Definition at line 120 of file Custom\+Display\+Driver.\+c.
+
+\hypertarget{_display_driver_8h_a9f5d38445eabc479104a965d95d8138e}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!Set\+Active\+Page@{Set\+Active\+Page}}
+\index{Set\+Active\+Page@{Set\+Active\+Page}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{Set\+Active\+Page}]{\setlength{\rightskip}{0pt plus 5cm}void Set\+Active\+Page (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{page}
+\end{DoxyParamCaption}
+)}\label{_display_driver_8h_a9f5d38445eabc479104a965d95d8138e}
+
+
+Definition at line 1240 of file mchp\+Gfx\+L\+C\+C.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 20
+
+
+\hypertarget{_display_driver_8h_a0deff569455e2b978876f72085a6f467}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!Set\+Clip@{Set\+Clip}}
+\index{Set\+Clip@{Set\+Clip}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{Set\+Clip}]{\setlength{\rightskip}{0pt plus 5cm}void Set\+Clip (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{control}
+\end{DoxyParamCaption}
+)}\label{_display_driver_8h_a0deff569455e2b978876f72085a6f467}
+
+
+Definition at line 701 of file mchp\+Gfx\+Drv.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 21
+
+
+\hypertarget{_display_driver_8h_acaeb6c748e0548309c45660d7f0d5402}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!Set\+Clip\+Rgn@{Set\+Clip\+Rgn}}
+\index{Set\+Clip\+Rgn@{Set\+Clip\+Rgn}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{Set\+Clip\+Rgn}]{\setlength{\rightskip}{0pt plus 5cm}void Set\+Clip\+Rgn (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+H\+O\+R\+T}}]{left, }
+\item[{{\bf S\+H\+O\+R\+T}}]{top, }
+\item[{{\bf S\+H\+O\+R\+T}}]{right, }
+\item[{{\bf S\+H\+O\+R\+T}}]{bottom}
+\end{DoxyParamCaption}
+)}\label{_display_driver_8h_acaeb6c748e0548309c45660d7f0d5402}
+
+
+Definition at line 736 of file mchp\+Gfx\+Drv.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 22
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 23
+
+
+\hypertarget{_display_driver_8h_a3383609f9ef2171aefd0f27a65a1507d}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!Set\+Visual\+Page@{Set\+Visual\+Page}}
+\index{Set\+Visual\+Page@{Set\+Visual\+Page}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{Set\+Visual\+Page}]{\setlength{\rightskip}{0pt plus 5cm}void Set\+Visual\+Page (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{page}
+\end{DoxyParamCaption}
+)}\label{_display_driver_8h_a3383609f9ef2171aefd0f27a65a1507d}
+
+
+Definition at line 1245 of file mchp\+Gfx\+L\+C\+C.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 24
+
+
+\hypertarget{_display_driver_8h_ab50e395ee13cfd48871193bc4f54be8b}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!Switch\+Off\+Double\+Buffering@{Switch\+Off\+Double\+Buffering}}
+\index{Switch\+Off\+Double\+Buffering@{Switch\+Off\+Double\+Buffering}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{Switch\+Off\+Double\+Buffering}]{\setlength{\rightskip}{0pt plus 5cm}void Switch\+Off\+Double\+Buffering (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_display_driver_8h_ab50e395ee13cfd48871193bc4f54be8b}
+
+
+Definition at line 6640 of file mchp\+Gfx\+Drv.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 25
+
+
+\hypertarget{_display_driver_8h_aa71c77c63ca0d089c6319ffb085a5c96}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!Switch\+On\+Double\+Buffering@{Switch\+On\+Double\+Buffering}}
+\index{Switch\+On\+Double\+Buffering@{Switch\+On\+Double\+Buffering}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{Switch\+On\+Double\+Buffering}]{\setlength{\rightskip}{0pt plus 5cm}void Switch\+On\+Double\+Buffering (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_display_driver_8h_aa71c77c63ca0d089c6319ffb085a5c96}
+
+
+Definition at line 6614 of file mchp\+Gfx\+Drv.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 26
+
+
+\hypertarget{_display_driver_8h_a7357fefe765f4c4f087675ffbf100472}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!Transparent\+Color\+Enable@{Transparent\+Color\+Enable}}
+\index{Transparent\+Color\+Enable@{Transparent\+Color\+Enable}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{Transparent\+Color\+Enable}]{\setlength{\rightskip}{0pt plus 5cm}void Transparent\+Color\+Enable (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+F\+X\+\_\+\+C\+O\+L\+O\+R}}]{color}
+\end{DoxyParamCaption}
+)}\label{_display_driver_8h_a7357fefe765f4c4f087675ffbf100472}
+
+
+Definition at line 680 of file drv\+T\+F\+T001.\+c.
+
+\hypertarget{_display_driver_8h_a9a8ad1167b88569cdd7f8aafc4f48ba2}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!Update\+Display\+Now@{Update\+Display\+Now}}
+\index{Update\+Display\+Now@{Update\+Display\+Now}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{Update\+Display\+Now}]{\setlength{\rightskip}{0pt plus 5cm}void Update\+Display\+Now (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_display_driver_8h_a9a8ad1167b88569cdd7f8aafc4f48ba2}
+
+
+Definition at line 6813 of file mchp\+Gfx\+Drv.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 27
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 28
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{_display_driver_8h_a38d2cb9c90167a56c5a35fed935e1d89}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!\+\_\+chrcolor@{\+\_\+chrcolor}}
+\index{\+\_\+chrcolor@{\+\_\+chrcolor}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{\+\_\+chrcolor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+F\+X\+\_\+\+C\+O\+L\+O\+R} \+\_\+chrcolor}\label{_display_driver_8h_a38d2cb9c90167a56c5a35fed935e1d89}
+
+
+Definition at line 207 of file mchp\+Gfx\+Drv.\+c.
+
+\hypertarget{_display_driver_8h_a822da21656f03466871beeded4956a10}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!\+\_\+clip\+Bottom@{\+\_\+clip\+Bottom}}
+\index{\+\_\+clip\+Bottom@{\+\_\+clip\+Bottom}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{\+\_\+clip\+Bottom}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+H\+O\+R\+T} \+\_\+clip\+Bottom}\label{_display_driver_8h_a822da21656f03466871beeded4956a10}
+
+
+Definition at line 49 of file Custom\+Display\+Driver.\+c.
+
+\hypertarget{_display_driver_8h_aceea25b060b0ee1e967c2a18994a8e64}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!\+\_\+clip\+Left@{\+\_\+clip\+Left}}
+\index{\+\_\+clip\+Left@{\+\_\+clip\+Left}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{\+\_\+clip\+Left}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+H\+O\+R\+T} \+\_\+clip\+Left}\label{_display_driver_8h_aceea25b060b0ee1e967c2a18994a8e64}
+
+
+Definition at line 46 of file Custom\+Display\+Driver.\+c.
+
+\hypertarget{_display_driver_8h_a891ad71179a7b654f4957e77bd1241e5}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!\+\_\+clip\+Rgn@{\+\_\+clip\+Rgn}}
+\index{\+\_\+clip\+Rgn@{\+\_\+clip\+Rgn}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{\+\_\+clip\+Rgn}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+H\+O\+R\+T} \+\_\+clip\+Rgn}\label{_display_driver_8h_a891ad71179a7b654f4957e77bd1241e5}
+
+
+Definition at line 43 of file Custom\+Display\+Driver.\+c.
+
+\hypertarget{_display_driver_8h_a1a84342fb83dd2e11ea36612e293171e}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!\+\_\+clip\+Right@{\+\_\+clip\+Right}}
+\index{\+\_\+clip\+Right@{\+\_\+clip\+Right}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{\+\_\+clip\+Right}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+H\+O\+R\+T} \+\_\+clip\+Right}\label{_display_driver_8h_a1a84342fb83dd2e11ea36612e293171e}
+
+
+Definition at line 48 of file Custom\+Display\+Driver.\+c.
+
+\hypertarget{_display_driver_8h_a468c3933725fa839333ba298c406eee9}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!\+\_\+clip\+Top@{\+\_\+clip\+Top}}
+\index{\+\_\+clip\+Top@{\+\_\+clip\+Top}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{\+\_\+clip\+Top}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+H\+O\+R\+T} \+\_\+clip\+Top}\label{_display_driver_8h_a468c3933725fa839333ba298c406eee9}
+
+
+Definition at line 47 of file Custom\+Display\+Driver.\+c.
+
+\hypertarget{_display_driver_8h_ad517ba3ea19540181df3b14084330044}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!\+\_\+color@{\+\_\+color}}
+\index{\+\_\+color@{\+\_\+color}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{\+\_\+color}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+F\+X\+\_\+\+C\+O\+L\+O\+R} \+\_\+color}\label{_display_driver_8h_ad517ba3ea19540181df3b14084330044}
+
+
+Definition at line 52 of file Custom\+Display\+Driver.\+c.
+
+\hypertarget{_display_driver_8h_a6950b9960eff7c43d368acad00a339cf}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!\+\_\+color\+Transparent@{\+\_\+color\+Transparent}}
+\index{\+\_\+color\+Transparent@{\+\_\+color\+Transparent}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{\+\_\+color\+Transparent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+F\+X\+\_\+\+C\+O\+L\+O\+R} \+\_\+color\+Transparent}\label{_display_driver_8h_a6950b9960eff7c43d368acad00a339cf}
+
+
+Definition at line 94 of file drv\+T\+F\+T001.\+c.
+
+\hypertarget{_display_driver_8h_a7ad2796fa60efe2b93589bd1c527d850}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!\+\_\+color\+Transparent\+Enable@{\+\_\+color\+Transparent\+Enable}}
+\index{\+\_\+color\+Transparent\+Enable@{\+\_\+color\+Transparent\+Enable}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{\+\_\+color\+Transparent\+Enable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+H\+O\+R\+T} \+\_\+color\+Transparent\+Enable}\label{_display_driver_8h_a7ad2796fa60efe2b93589bd1c527d850}
+
+
+Definition at line 95 of file drv\+T\+F\+T001.\+c.
+
+\hypertarget{_display_driver_8h_af5d91b4b7cba3fb19cd32be3f90f7257}{}\index{Display\+Driver.\+h@{Display\+Driver.\+h}!\+\_\+\+Page\+Table@{\+\_\+\+Page\+Table}}
+\index{\+\_\+\+Page\+Table@{\+\_\+\+Page\+Table}!Display\+Driver.\+h@{Display\+Driver.\+h}}
+\subsubsection[{\+\_\+\+Page\+Table}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf D\+W\+O\+R\+D} \+\_\+\+Page\+Table\mbox{[}G\+F\+X\+\_\+\+D\+R\+V\+\_\+\+P\+A\+G\+E\+\_\+\+C\+O\+U\+N\+T\mbox{]}}\label{_display_driver_8h_af5d91b4b7cba3fb19cd32be3f90f7257}
+
+
+Definition at line 236 of file mchp\+Gfx\+Drv.\+c.
+

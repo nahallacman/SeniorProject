@@ -1,0 +1,1071 @@
+\hypertarget{_w_f_mac__24_g_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Wi\+Fi/\+W\+F\+Mac\+\_\+24\+G.c File Reference}
+\label{_w_f_mac__24_g_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Wi\+Fi/\+W\+F\+Mac\+\_\+24\+G.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Wi\+Fi/\+W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structt_rx_preamble}{t\+Rx\+Preamble}
+\item 
+struct \hyperlink{struct___e_n_c___p_r_e_a_m_b_l_e}{\+\_\+\+E\+N\+C\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E}
+\item 
+struct \hyperlink{structt_w_f_rx_preamble}{t\+W\+F\+Rx\+Preamble}
+\item 
+struct \hyperlink{structt_w_f_tx_preamble}{t\+W\+F\+Tx\+Preamble}
+\item 
+struct \hyperlink{structsec__wep40}{sec\+\_\+wep40}
+\item 
+struct \hyperlink{structsec__wep104}{sec\+\_\+wep104}
+\item 
+struct \hyperlink{structsec__wpa__psk}{sec\+\_\+wpa\+\_\+psk}
+\item 
+struct \hyperlink{structsec__wps}{sec\+\_\+wps}
+\item 
+union \hyperlink{unionsec__key}{sec\+\_\+key}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct___e_n_c___p_r_e_a_m_b_l_e}{\+\_\+\+E\+N\+C\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E} \hyperlink{_w_f_mac__24_g_8c_af458a76ab9b31d07de1ce35b5d4fa24e}{E\+N\+C\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \\*
+\hyperlink{_w_f_mac__24_g_8c_a7a12c8a94be2baae88850348994f01d1a5611249f5c4eb3fde3ad3d20334176c0}{A\+U\+T\+H\+\_\+\+O\+P\+E\+N} = 0x01, 
+\hyperlink{_w_f_mac__24_g_8c_a7a12c8a94be2baae88850348994f01d1a90870da11cf3408b057beb4abf9fe1bb}{A\+U\+T\+H\+\_\+\+W\+P\+A\+\_\+\+P\+S\+K} = 0x02, 
+\hyperlink{_w_f_mac__24_g_8c_a7a12c8a94be2baae88850348994f01d1a271d518f1afa4a1670ebaede7a8b6084}{A\+U\+T\+H\+\_\+\+S\+H\+A\+R\+E\+D} = 0x04, 
+\hyperlink{_w_f_mac__24_g_8c_a7a12c8a94be2baae88850348994f01d1a205288fb1e6fc9671d9909d9d4ea3688}{A\+U\+T\+H\+\_\+\+W\+P\+A} = 0x08, 
+\\*
+\hyperlink{_w_f_mac__24_g_8c_a7a12c8a94be2baae88850348994f01d1ae98df70539b6e1eeb0d28bc223a4588c}{A\+U\+T\+H\+\_\+\+W\+P\+A2} = 0x10, 
+\hyperlink{_w_f_mac__24_g_8c_a7a12c8a94be2baae88850348994f01d1ac24ee2c2098f0a76fe72aec33847b36c}{A\+U\+T\+H\+\_\+\+W\+P\+A2\+\_\+\+P\+S\+K} = 0x20
+ \}
+\item 
+enum \{ \hyperlink{_w_f_mac__24_g_8c_a324626c8a5e99e28c43d895e854b3694aa606c88585aef66d517064307840dc78}{E\+N\+C\+\_\+\+N\+O\+N\+E} = 0x01, 
+\hyperlink{_w_f_mac__24_g_8c_a324626c8a5e99e28c43d895e854b3694a262a60837fed432845e35b21c575a933}{E\+N\+C\+\_\+\+W\+E\+P} = 0x02, 
+\hyperlink{_w_f_mac__24_g_8c_a324626c8a5e99e28c43d895e854b3694ab2b730394694dc4d50dad59b6ffa79b0}{E\+N\+C\+\_\+\+T\+K\+I\+P} = 0x04, 
+\hyperlink{_w_f_mac__24_g_8c_a324626c8a5e99e28c43d895e854b3694a6798f01f06bcb427c77a85b4ada890b9}{E\+N\+C\+\_\+\+A\+E\+S} = 0x08
+ \}
+\item 
+enum \{ \hyperlink{_w_f_mac__24_g_8c_a15f60f1631b78927a1e9efd95cac5a55a148cd463996edb984515926194fb7dcb}{W\+E\+P\+\_\+\+S\+H\+O\+R\+T\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E} = 5, 
+\hyperlink{_w_f_mac__24_g_8c_a15f60f1631b78927a1e9efd95cac5a55a9587427e9d079aadaf8488a3597ea2f9}{W\+E\+P\+\_\+\+L\+O\+N\+G\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E} = 13
+ \}
+\item 
+enum \{ \\*
+\hyperlink{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfa7c88ab8d3223bd219f9d580419581a91}{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+N\+O\+N\+E}, 
+\hyperlink{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfa98ef4823984b444cb54e0beb96c9eb37}{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+O\+P\+E\+N}, 
+\hyperlink{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfa4d98ff1c85dbd216193e6b2f5539ad8e}{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+K\+E\+Y40}, 
+\hyperlink{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfaad8db76474838acabec979544eb0cbd7}{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+K\+E\+Y104}, 
+\\*
+\hyperlink{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfae8a019f221e5f1ec1074801d63b61a22}{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+O\+P\+E\+N\+\_\+\+K\+E\+Y40}, 
+\hyperlink{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfab42e157c82494e8bc391fea161ca4bf7}{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+O\+P\+E\+N\+\_\+\+K\+E\+Y104}, 
+\hyperlink{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfac719e0fbc67b321b712b06a9e2fb917a}{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A1\+\_\+\+P\+S\+K\+\_\+\+K\+E\+Y}, 
+\hyperlink{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfad542a191e1fe4415c8204922bbc7ff33}{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A1\+\_\+\+P\+S\+K\+\_\+\+P\+A\+S\+S}, 
+\\*
+\hyperlink{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfa5cab7e3677943762a15ab089cba52a08}{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A2\+\_\+\+P\+S\+K\+\_\+\+K\+E\+Y}, 
+\hyperlink{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfafca7439268a7dd00a4ae8ddf9cfe9603}{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A2\+\_\+\+P\+S\+K\+\_\+\+P\+A\+S\+S}, 
+\hyperlink{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfa6e6c1952f69f2df7ddfe72489d3f7046}{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A\+U\+T\+O\+\_\+\+P\+S\+K\+\_\+\+K\+E\+Y}, 
+\hyperlink{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfa4614df97ac7ba2b475efa2bec0e14b56}{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A\+U\+T\+O\+\_\+\+P\+S\+K\+\_\+\+P\+A\+S\+S}, 
+\\*
+\hyperlink{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfadc59f3cfac0a83b7d48d129fdac22994}{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A\+\_\+\+E\+N\+T\+E\+R\+P\+R\+I\+S\+E}, 
+\hyperlink{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfa098cfe36b51c15d550baba77c67a27da}{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+S\+\_\+\+P\+I\+N}, 
+\hyperlink{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfa0a63996e08cd78cc99e0337dc216182c}{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+S\+\_\+\+P\+S\+B}
+ \}
+\item 
+enum \{ \hyperlink{_w_f_mac__24_g_8c_ac5b95f02723021833cc47477b06a962ca589c29c2ea5ff7dc0f68dbc2a417aef6}{W\+E\+P\+\_\+\+K\+E\+Y\+I\+D\+X\+\_\+\+M\+A\+X} = 4, 
+\hyperlink{_w_f_mac__24_g_8c_ac5b95f02723021833cc47477b06a962cae209eaa08a8ad04a792aaac2f273acd6}{M\+S\+K\+\_\+\+M\+A\+X} = 64, 
+\hyperlink{_w_f_mac__24_g_8c_ac5b95f02723021833cc47477b06a962ca517c727c7d72dd5269105ce55a67c6ce}{P\+I\+N\+\_\+\+M\+A\+X} = 8
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_w_f_mac__24_g_8c_acc1c001c9f03fdf84e96825635f466f4}{W\+F\+\_\+\+Output\+Connection\+Context} (void)
+\item 
+void \hyperlink{_w_f_mac__24_g_8c_a943f344af782b8f55c1636da4e5b8dfd}{Validate\+Config} (void)
+\item 
+void \hyperlink{_w_f_mac__24_g_8c_a112a0c7a8a37f72cab76a6fcd3f4a4e1}{W\+F\+\_\+\+Connect} (void)
+\item 
+void \hyperlink{_w_f_mac__24_g_8c_a71922ce0d81f02a29466f8aa9074fbde}{W\+F\+Display\+Scan\+Mgr} ()
+\item 
+\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{_w_f_mac__24_g_8c_a06ed5fb19c9846933c7f52287a4c3514}{Get\+Read\+Ptr\+Raw\+Window} ()
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_w_f_mac__24_g_8c_a08ef88a80eac112205ecd84dbbc5a481}{A\+R\+P\+Send\+Pkt} (\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} Src\+I\+P\+Addr, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} Dest\+I\+P\+Addr, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} op\+\_\+req)
+\item 
+void \hyperlink{_w_f_mac__24_g_8c_a1570c09fc866aec85a413c831e292fda}{W\+F\+Periodic\+Gratuitous\+Arp} (void)
+\item 
+void \hyperlink{_w_f_mac__24_g_8c_a7fb5adc7bc64ab3c4663821580ca90b4}{Retrieve\+Binary\+Key} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} cpid)
+\item 
+void \hyperlink{_w_f_mac__24_g_8c_a74c4ae494d118879a5d3798a74c3b905}{M\+A\+C\+Process} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} \hyperlink{_w_f_mac__24_g_8c_a33d9392f2c2945d2abd90efcf0327a9a}{W\+F\+Get\+T\+C\+B\+Size} (void)
+\item 
+void \hyperlink{_w_f_mac__24_g_8c_a26cccc5919dcabb5777c3f6127648e9f}{M\+A\+C\+Init} (void)
+\item 
+void \hyperlink{_w_f_mac__24_g_8c_a603b51b2b499556c0633b2af9b06ee9a}{Raw\+Init} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_w_f_mac__24_g_8c_a0b700fbc3ad2a6c7c389026bfd38e0f1}{M\+A\+C\+Is\+Linked} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_w_f_mac__24_g_8c_a99937ac52db1a95f86ca59779640bcbe}{M\+A\+C\+Is\+Tx\+Ready} (void)
+\item 
+void \hyperlink{_w_f_mac__24_g_8c_aafb6ca77b1c8439e6ea19a16231b9afa}{Raw\+Get\+Mgmt\+Rx\+Buffer} (\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} $\ast$p\+\_\+num\+Bytes)
+\item 
+void \hyperlink{_w_f_mac__24_g_8c_a6f0a2614cde1253e6edcc78d1a069b79}{M\+A\+C\+Discard\+Rx} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_w_f_mac__24_g_8c_a853f9bc96814d6d6ff8ef7a19f84d973}{M\+A\+C\+Get\+Free\+Rx\+Size} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_w_f_mac__24_g_8c_a18cabbf973ecec4ba5b67dc2c729b753}{M\+A\+C\+Get\+Header} (\hyperlink{_stack_tsk_8h_ad13a037a42c866ac11db19330b840589}{M\+A\+C\+\_\+\+A\+D\+D\+R} $\ast$remote, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$type)
+\item 
+void \hyperlink{_w_f_mac__24_g_8c_af507be7571c519d47045cc4254f7ff54}{M\+A\+C\+Put\+Header} (\hyperlink{_stack_tsk_8h_ad13a037a42c866ac11db19330b840589}{M\+A\+C\+\_\+\+A\+D\+D\+R} $\ast$remote, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} type, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} data\+Len)
+\item 
+void \hyperlink{_w_f_mac__24_g_8c_a3729591a4e059f3e892d79013502b874}{M\+A\+C\+Put\+General\+Header} (\hyperlink{_stack_tsk_8h_ad13a037a42c866ac11db19330b840589}{M\+A\+C\+\_\+\+A\+D\+D\+R} $\ast$remote, \hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} type, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} data\+Len)
+\item 
+void \hyperlink{_w_f_mac__24_g_8c_a38dc2cc8c71b2f6bfe51ea8db2acc67c}{M\+A\+C\+Flush} (void)
+\item 
+void \hyperlink{_w_f_mac__24_g_8c_aa73b1ce45818243c98e3efd00b9f4bd9}{M\+A\+C\+Set\+Read\+Ptr\+In\+Rx} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} offset)
+\item 
+P\+T\+R\+\_\+\+B\+A\+S\+E \hyperlink{_w_f_mac__24_g_8c_a76abcd85736be75ac9dee35b573bb90d}{M\+A\+C\+Set\+Write\+Ptr} (P\+T\+R\+\_\+\+B\+A\+S\+E address)
+\item 
+P\+T\+R\+\_\+\+B\+A\+S\+E \hyperlink{_w_f_mac__24_g_8c_aad63644420d87642a890d2f41abb7454}{M\+A\+C\+Set\+Read\+Ptr} (P\+T\+R\+\_\+\+B\+A\+S\+E address)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_w_f_mac__24_g_8c_a2b00386ff2f004b8375d5a4d13a09b5a}{M\+A\+C\+Calc\+Rx\+Checksum} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} offset, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} len)
+\item 
+void \hyperlink{_w_f_mac__24_g_8c_a4442711ab4c3d47ffc913476630330e2}{M\+A\+C\+Mem\+Copy\+Async} (P\+T\+R\+\_\+\+B\+A\+S\+E dest\+Addr, P\+T\+R\+\_\+\+B\+A\+S\+E source\+Addr, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} len)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_w_f_mac__24_g_8c_a72d4a1a3347c7316acbae4d96ba44f63}{M\+A\+C\+Is\+Mem\+Copy\+Done} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_w_f_mac__24_g_8c_aa6349c5f4caefa31c52a7ad03e3213f4}{M\+A\+C\+Get} ()
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_w_f_mac__24_g_8c_a89d13e85195c0d00f308194305845016}{M\+A\+C\+Get\+Array} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$val, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} len)
+\item 
+void \hyperlink{_w_f_mac__24_g_8c_a9a1910d847af55acbfd90ef175be44b9}{M\+A\+C\+Put} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} val)
+\item 
+void \hyperlink{_w_f_mac__24_g_8c_a87a779bb5e5f2c7ffc444f52d696efa2}{M\+A\+C\+Put\+Array} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$val, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} len)
+\item 
+void \hyperlink{_w_f_mac__24_g_8c_aa820326baa2d0dbc487c32301b9ad436}{M\+A\+C\+Put\+R\+O\+M\+Array} (R\+O\+M \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$val, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} len)
+\item 
+void \hyperlink{_w_f_mac__24_g_8c_aa78e5e02014bf06b525b5e47a3eb7ce0}{M\+A\+C\+Power\+Down} (void)
+\item 
+void \hyperlink{_w_f_mac__24_g_8c_a4f34a40501dcc65dfd7a673c0620a6e0}{M\+A\+C\+Power\+Up} (void)
+\item 
+void \hyperlink{_w_f_mac__24_g_8c_ac4b1209e343829937708405b184890da}{Raw\+Send\+Untampered\+Data} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+Req, \hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} len)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_w_f_mac__24_g_8c_a2e5031b0e0826a0f5db5135eb755ae32}{Raw\+Calculate\+Checksum} (\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} length)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_w_f_mac__24_g_8c_af14a0a88eef0ca101814acf1157f42a3}{Calc\+I\+P\+Buffer\+Checksum} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} len)
+\item 
+void \hyperlink{_w_f_mac__24_g_8c_a92a10f987a20a2873ce6f1d82687baa0}{W\+F\+Mac\+\_\+\+Empty\+Func} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_w_f_api_8h_a023463cdff2bc01542e11e5824294bb2}{t\+W\+F\+Hibernate} \hyperlink{_w_f_mac__24_g_8c_aca3c2db2dde38d5af0fc3b7f23fb49aa}{W\+F\+\_\+hibernate}
+\item 
+\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} \hyperlink{_w_f_mac__24_g_8c_add5c8f7fcb7245c5667b2048d1ad184f}{g\+\_\+rx\+Buffer\+Length}
+\item 
+int \hyperlink{_w_f_mac__24_g_8c_a5a1a0d0cfc6af3af0b80d73eb982096f}{W\+F\+Arp\+Broadcast\+Interval\+Sec} = 5
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_w_f_mac__24_g_8c_af458a76ab9b31d07de1ce35b5d4fa24e}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!E\+N\+C\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E@{E\+N\+C\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E}}
+\index{E\+N\+C\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E@{E\+N\+C\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{E\+N\+C\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+E\+N\+C\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E}  {\bf E\+N\+C\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E}}\label{_w_f_mac__24_g_8c_af458a76ab9b31d07de1ce35b5d4fa24e}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_w_f_mac__24_g_8c_a7a12c8a94be2baae88850348994f01d1}{}\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{_w_f_mac__24_g_8c_a7a12c8a94be2baae88850348994f01d1}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\+U\+T\+H\+\_\+\+O\+P\+E\+N@{A\+U\+T\+H\+\_\+\+O\+P\+E\+N}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!A\+U\+T\+H\+\_\+\+O\+P\+E\+N@{A\+U\+T\+H\+\_\+\+O\+P\+E\+N}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_a7a12c8a94be2baae88850348994f01d1a5611249f5c4eb3fde3ad3d20334176c0}{}A\+U\+T\+H\+\_\+\+O\+P\+E\+N\label{_w_f_mac__24_g_8c_a7a12c8a94be2baae88850348994f01d1a5611249f5c4eb3fde3ad3d20334176c0}
+}]\index{A\+U\+T\+H\+\_\+\+W\+P\+A\+\_\+\+P\+S\+K@{A\+U\+T\+H\+\_\+\+W\+P\+A\+\_\+\+P\+S\+K}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!A\+U\+T\+H\+\_\+\+W\+P\+A\+\_\+\+P\+S\+K@{A\+U\+T\+H\+\_\+\+W\+P\+A\+\_\+\+P\+S\+K}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_a7a12c8a94be2baae88850348994f01d1a90870da11cf3408b057beb4abf9fe1bb}{}A\+U\+T\+H\+\_\+\+W\+P\+A\+\_\+\+P\+S\+K\label{_w_f_mac__24_g_8c_a7a12c8a94be2baae88850348994f01d1a90870da11cf3408b057beb4abf9fe1bb}
+}]\index{A\+U\+T\+H\+\_\+\+S\+H\+A\+R\+E\+D@{A\+U\+T\+H\+\_\+\+S\+H\+A\+R\+E\+D}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!A\+U\+T\+H\+\_\+\+S\+H\+A\+R\+E\+D@{A\+U\+T\+H\+\_\+\+S\+H\+A\+R\+E\+D}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_a7a12c8a94be2baae88850348994f01d1a271d518f1afa4a1670ebaede7a8b6084}{}A\+U\+T\+H\+\_\+\+S\+H\+A\+R\+E\+D\label{_w_f_mac__24_g_8c_a7a12c8a94be2baae88850348994f01d1a271d518f1afa4a1670ebaede7a8b6084}
+}]\index{A\+U\+T\+H\+\_\+\+W\+P\+A@{A\+U\+T\+H\+\_\+\+W\+P\+A}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!A\+U\+T\+H\+\_\+\+W\+P\+A@{A\+U\+T\+H\+\_\+\+W\+P\+A}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_a7a12c8a94be2baae88850348994f01d1a205288fb1e6fc9671d9909d9d4ea3688}{}A\+U\+T\+H\+\_\+\+W\+P\+A\label{_w_f_mac__24_g_8c_a7a12c8a94be2baae88850348994f01d1a205288fb1e6fc9671d9909d9d4ea3688}
+}]\index{A\+U\+T\+H\+\_\+\+W\+P\+A2@{A\+U\+T\+H\+\_\+\+W\+P\+A2}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!A\+U\+T\+H\+\_\+\+W\+P\+A2@{A\+U\+T\+H\+\_\+\+W\+P\+A2}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_a7a12c8a94be2baae88850348994f01d1ae98df70539b6e1eeb0d28bc223a4588c}{}A\+U\+T\+H\+\_\+\+W\+P\+A2\label{_w_f_mac__24_g_8c_a7a12c8a94be2baae88850348994f01d1ae98df70539b6e1eeb0d28bc223a4588c}
+}]\index{A\+U\+T\+H\+\_\+\+W\+P\+A2\+\_\+\+P\+S\+K@{A\+U\+T\+H\+\_\+\+W\+P\+A2\+\_\+\+P\+S\+K}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!A\+U\+T\+H\+\_\+\+W\+P\+A2\+\_\+\+P\+S\+K@{A\+U\+T\+H\+\_\+\+W\+P\+A2\+\_\+\+P\+S\+K}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_a7a12c8a94be2baae88850348994f01d1ac24ee2c2098f0a76fe72aec33847b36c}{}A\+U\+T\+H\+\_\+\+W\+P\+A2\+\_\+\+P\+S\+K\label{_w_f_mac__24_g_8c_a7a12c8a94be2baae88850348994f01d1ac24ee2c2098f0a76fe72aec33847b36c}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 397 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+\hypertarget{_w_f_mac__24_g_8c_a324626c8a5e99e28c43d895e854b3694}{}\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{_w_f_mac__24_g_8c_a324626c8a5e99e28c43d895e854b3694}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{E\+N\+C\+\_\+\+N\+O\+N\+E@{E\+N\+C\+\_\+\+N\+O\+N\+E}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!E\+N\+C\+\_\+\+N\+O\+N\+E@{E\+N\+C\+\_\+\+N\+O\+N\+E}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_a324626c8a5e99e28c43d895e854b3694aa606c88585aef66d517064307840dc78}{}E\+N\+C\+\_\+\+N\+O\+N\+E\label{_w_f_mac__24_g_8c_a324626c8a5e99e28c43d895e854b3694aa606c88585aef66d517064307840dc78}
+}]\index{E\+N\+C\+\_\+\+W\+E\+P@{E\+N\+C\+\_\+\+W\+E\+P}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!E\+N\+C\+\_\+\+W\+E\+P@{E\+N\+C\+\_\+\+W\+E\+P}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_a324626c8a5e99e28c43d895e854b3694a262a60837fed432845e35b21c575a933}{}E\+N\+C\+\_\+\+W\+E\+P\label{_w_f_mac__24_g_8c_a324626c8a5e99e28c43d895e854b3694a262a60837fed432845e35b21c575a933}
+}]\index{E\+N\+C\+\_\+\+T\+K\+I\+P@{E\+N\+C\+\_\+\+T\+K\+I\+P}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!E\+N\+C\+\_\+\+T\+K\+I\+P@{E\+N\+C\+\_\+\+T\+K\+I\+P}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_a324626c8a5e99e28c43d895e854b3694ab2b730394694dc4d50dad59b6ffa79b0}{}E\+N\+C\+\_\+\+T\+K\+I\+P\label{_w_f_mac__24_g_8c_a324626c8a5e99e28c43d895e854b3694ab2b730394694dc4d50dad59b6ffa79b0}
+}]\index{E\+N\+C\+\_\+\+A\+E\+S@{E\+N\+C\+\_\+\+A\+E\+S}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!E\+N\+C\+\_\+\+A\+E\+S@{E\+N\+C\+\_\+\+A\+E\+S}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_a324626c8a5e99e28c43d895e854b3694a6798f01f06bcb427c77a85b4ada890b9}{}E\+N\+C\+\_\+\+A\+E\+S\label{_w_f_mac__24_g_8c_a324626c8a5e99e28c43d895e854b3694a6798f01f06bcb427c77a85b4ada890b9}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 406 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+\hypertarget{_w_f_mac__24_g_8c_a15f60f1631b78927a1e9efd95cac5a55}{}\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{_w_f_mac__24_g_8c_a15f60f1631b78927a1e9efd95cac5a55}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{W\+E\+P\+\_\+\+S\+H\+O\+R\+T\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E@{W\+E\+P\+\_\+\+S\+H\+O\+R\+T\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!W\+E\+P\+\_\+\+S\+H\+O\+R\+T\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E@{W\+E\+P\+\_\+\+S\+H\+O\+R\+T\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_a15f60f1631b78927a1e9efd95cac5a55a148cd463996edb984515926194fb7dcb}{}W\+E\+P\+\_\+\+S\+H\+O\+R\+T\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E\label{_w_f_mac__24_g_8c_a15f60f1631b78927a1e9efd95cac5a55a148cd463996edb984515926194fb7dcb}
+}]\index{W\+E\+P\+\_\+\+L\+O\+N\+G\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E@{W\+E\+P\+\_\+\+L\+O\+N\+G\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!W\+E\+P\+\_\+\+L\+O\+N\+G\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E@{W\+E\+P\+\_\+\+L\+O\+N\+G\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_a15f60f1631b78927a1e9efd95cac5a55a9587427e9d079aadaf8488a3597ea2f9}{}W\+E\+P\+\_\+\+L\+O\+N\+G\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+Z\+E\label{_w_f_mac__24_g_8c_a15f60f1631b78927a1e9efd95cac5a55a9587427e9d079aadaf8488a3597ea2f9}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 413 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+\hypertarget{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4df}{}\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4df}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+N\+O\+N\+E@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+N\+O\+N\+E}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+N\+O\+N\+E@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+N\+O\+N\+E}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfa7c88ab8d3223bd219f9d580419581a91}{}S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+N\+O\+N\+E\label{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfa7c88ab8d3223bd219f9d580419581a91}
+}]\index{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+O\+P\+E\+N@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+O\+P\+E\+N}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+O\+P\+E\+N@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+O\+P\+E\+N}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfa98ef4823984b444cb54e0beb96c9eb37}{}S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+O\+P\+E\+N\label{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfa98ef4823984b444cb54e0beb96c9eb37}
+}]\index{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+K\+E\+Y40@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+K\+E\+Y40}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+K\+E\+Y40@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+K\+E\+Y40}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfa4d98ff1c85dbd216193e6b2f5539ad8e}{}S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+K\+E\+Y40\label{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfa4d98ff1c85dbd216193e6b2f5539ad8e}
+}]\index{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+K\+E\+Y104@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+K\+E\+Y104}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+K\+E\+Y104@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+K\+E\+Y104}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfaad8db76474838acabec979544eb0cbd7}{}S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+K\+E\+Y104\label{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfaad8db76474838acabec979544eb0cbd7}
+}]\index{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+O\+P\+E\+N\+\_\+\+K\+E\+Y40@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+O\+P\+E\+N\+\_\+\+K\+E\+Y40}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+O\+P\+E\+N\+\_\+\+K\+E\+Y40@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+O\+P\+E\+N\+\_\+\+K\+E\+Y40}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfae8a019f221e5f1ec1074801d63b61a22}{}S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+O\+P\+E\+N\+\_\+\+K\+E\+Y40\label{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfae8a019f221e5f1ec1074801d63b61a22}
+}]\index{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+O\+P\+E\+N\+\_\+\+K\+E\+Y104@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+O\+P\+E\+N\+\_\+\+K\+E\+Y104}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+O\+P\+E\+N\+\_\+\+K\+E\+Y104@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+O\+P\+E\+N\+\_\+\+K\+E\+Y104}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfab42e157c82494e8bc391fea161ca4bf7}{}S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+O\+P\+E\+N\+\_\+\+K\+E\+Y104\label{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfab42e157c82494e8bc391fea161ca4bf7}
+}]\index{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A1\+\_\+\+P\+S\+K\+\_\+\+K\+E\+Y@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A1\+\_\+\+P\+S\+K\+\_\+\+K\+E\+Y}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A1\+\_\+\+P\+S\+K\+\_\+\+K\+E\+Y@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A1\+\_\+\+P\+S\+K\+\_\+\+K\+E\+Y}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfac719e0fbc67b321b712b06a9e2fb917a}{}S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A1\+\_\+\+P\+S\+K\+\_\+\+K\+E\+Y\label{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfac719e0fbc67b321b712b06a9e2fb917a}
+}]\index{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A1\+\_\+\+P\+S\+K\+\_\+\+P\+A\+S\+S@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A1\+\_\+\+P\+S\+K\+\_\+\+P\+A\+S\+S}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A1\+\_\+\+P\+S\+K\+\_\+\+P\+A\+S\+S@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A1\+\_\+\+P\+S\+K\+\_\+\+P\+A\+S\+S}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfad542a191e1fe4415c8204922bbc7ff33}{}S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A1\+\_\+\+P\+S\+K\+\_\+\+P\+A\+S\+S\label{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfad542a191e1fe4415c8204922bbc7ff33}
+}]\index{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A2\+\_\+\+P\+S\+K\+\_\+\+K\+E\+Y@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A2\+\_\+\+P\+S\+K\+\_\+\+K\+E\+Y}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A2\+\_\+\+P\+S\+K\+\_\+\+K\+E\+Y@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A2\+\_\+\+P\+S\+K\+\_\+\+K\+E\+Y}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfa5cab7e3677943762a15ab089cba52a08}{}S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A2\+\_\+\+P\+S\+K\+\_\+\+K\+E\+Y\label{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfa5cab7e3677943762a15ab089cba52a08}
+}]\index{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A2\+\_\+\+P\+S\+K\+\_\+\+P\+A\+S\+S@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A2\+\_\+\+P\+S\+K\+\_\+\+P\+A\+S\+S}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A2\+\_\+\+P\+S\+K\+\_\+\+P\+A\+S\+S@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A2\+\_\+\+P\+S\+K\+\_\+\+P\+A\+S\+S}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfafca7439268a7dd00a4ae8ddf9cfe9603}{}S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A2\+\_\+\+P\+S\+K\+\_\+\+P\+A\+S\+S\label{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfafca7439268a7dd00a4ae8ddf9cfe9603}
+}]\index{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A\+U\+T\+O\+\_\+\+P\+S\+K\+\_\+\+K\+E\+Y@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A\+U\+T\+O\+\_\+\+P\+S\+K\+\_\+\+K\+E\+Y}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A\+U\+T\+O\+\_\+\+P\+S\+K\+\_\+\+K\+E\+Y@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A\+U\+T\+O\+\_\+\+P\+S\+K\+\_\+\+K\+E\+Y}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfa6e6c1952f69f2df7ddfe72489d3f7046}{}S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A\+U\+T\+O\+\_\+\+P\+S\+K\+\_\+\+K\+E\+Y\label{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfa6e6c1952f69f2df7ddfe72489d3f7046}
+}]\index{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A\+U\+T\+O\+\_\+\+P\+S\+K\+\_\+\+P\+A\+S\+S@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A\+U\+T\+O\+\_\+\+P\+S\+K\+\_\+\+P\+A\+S\+S}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A\+U\+T\+O\+\_\+\+P\+S\+K\+\_\+\+P\+A\+S\+S@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A\+U\+T\+O\+\_\+\+P\+S\+K\+\_\+\+P\+A\+S\+S}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfa4614df97ac7ba2b475efa2bec0e14b56}{}S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A\+U\+T\+O\+\_\+\+P\+S\+K\+\_\+\+P\+A\+S\+S\label{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfa4614df97ac7ba2b475efa2bec0e14b56}
+}]\index{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A\+\_\+\+E\+N\+T\+E\+R\+P\+R\+I\+S\+E@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A\+\_\+\+E\+N\+T\+E\+R\+P\+R\+I\+S\+E}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A\+\_\+\+E\+N\+T\+E\+R\+P\+R\+I\+S\+E@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A\+\_\+\+E\+N\+T\+E\+R\+P\+R\+I\+S\+E}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfadc59f3cfac0a83b7d48d129fdac22994}{}S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A\+\_\+\+E\+N\+T\+E\+R\+P\+R\+I\+S\+E\label{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfadc59f3cfac0a83b7d48d129fdac22994}
+}]\index{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+S\+\_\+\+P\+I\+N@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+S\+\_\+\+P\+I\+N}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+S\+\_\+\+P\+I\+N@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+S\+\_\+\+P\+I\+N}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfa098cfe36b51c15d550baba77c67a27da}{}S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+S\+\_\+\+P\+I\+N\label{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfa098cfe36b51c15d550baba77c67a27da}
+}]\index{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+S\+\_\+\+P\+S\+B@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+S\+\_\+\+P\+S\+B}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+S\+\_\+\+P\+S\+B@{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+S\+\_\+\+P\+S\+B}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfa0a63996e08cd78cc99e0337dc216182c}{}S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+S\+\_\+\+P\+S\+B\label{_w_f_mac__24_g_8c_aa3759d2ddcc12f3f5ef5a8a3ffa4a4dfa0a63996e08cd78cc99e0337dc216182c}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 418 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+\hypertarget{_w_f_mac__24_g_8c_ac5b95f02723021833cc47477b06a962c}{}\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{_w_f_mac__24_g_8c_ac5b95f02723021833cc47477b06a962c}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{W\+E\+P\+\_\+\+K\+E\+Y\+I\+D\+X\+\_\+\+M\+A\+X@{W\+E\+P\+\_\+\+K\+E\+Y\+I\+D\+X\+\_\+\+M\+A\+X}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!W\+E\+P\+\_\+\+K\+E\+Y\+I\+D\+X\+\_\+\+M\+A\+X@{W\+E\+P\+\_\+\+K\+E\+Y\+I\+D\+X\+\_\+\+M\+A\+X}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_ac5b95f02723021833cc47477b06a962ca589c29c2ea5ff7dc0f68dbc2a417aef6}{}W\+E\+P\+\_\+\+K\+E\+Y\+I\+D\+X\+\_\+\+M\+A\+X\label{_w_f_mac__24_g_8c_ac5b95f02723021833cc47477b06a962ca589c29c2ea5ff7dc0f68dbc2a417aef6}
+}]\index{M\+S\+K\+\_\+\+M\+A\+X@{M\+S\+K\+\_\+\+M\+A\+X}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!M\+S\+K\+\_\+\+M\+A\+X@{M\+S\+K\+\_\+\+M\+A\+X}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_ac5b95f02723021833cc47477b06a962cae209eaa08a8ad04a792aaac2f273acd6}{}M\+S\+K\+\_\+\+M\+A\+X\label{_w_f_mac__24_g_8c_ac5b95f02723021833cc47477b06a962cae209eaa08a8ad04a792aaac2f273acd6}
+}]\index{P\+I\+N\+\_\+\+M\+A\+X@{P\+I\+N\+\_\+\+M\+A\+X}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!P\+I\+N\+\_\+\+M\+A\+X@{P\+I\+N\+\_\+\+M\+A\+X}}\item[{\em 
+\hypertarget{_w_f_mac__24_g_8c_ac5b95f02723021833cc47477b06a962ca517c727c7d72dd5269105ce55a67c6ce}{}P\+I\+N\+\_\+\+M\+A\+X\label{_w_f_mac__24_g_8c_ac5b95f02723021833cc47477b06a962ca517c727c7d72dd5269105ce55a67c6ce}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 436 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_w_f_mac__24_g_8c_a08ef88a80eac112205ecd84dbbc5a481}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!A\+R\+P\+Send\+Pkt@{A\+R\+P\+Send\+Pkt}}
+\index{A\+R\+P\+Send\+Pkt@{A\+R\+P\+Send\+Pkt}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{A\+R\+P\+Send\+Pkt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} A\+R\+P\+Send\+Pkt (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+W\+O\+R\+D}}]{Src\+I\+P\+Addr, }
+\item[{{\bf D\+W\+O\+R\+D}}]{Dest\+I\+P\+Addr, }
+\item[{{\bf B\+Y\+T\+E}}]{op\+\_\+req}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_a08ef88a80eac112205ecd84dbbc5a481}
+
+
+Definition at line 284 of file A\+R\+P.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+\hypertarget{_w_f_mac__24_g_8c_af14a0a88eef0ca101814acf1157f42a3}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!Calc\+I\+P\+Buffer\+Checksum@{Calc\+I\+P\+Buffer\+Checksum}}
+\index{Calc\+I\+P\+Buffer\+Checksum@{Calc\+I\+P\+Buffer\+Checksum}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{Calc\+I\+P\+Buffer\+Checksum}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Calc\+I\+P\+Buffer\+Checksum (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{len}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_af14a0a88eef0ca101814acf1157f42a3}
+
+
+Definition at line 2033 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\hypertarget{_w_f_mac__24_g_8c_a06ed5fb19c9846933c7f52287a4c3514}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!Get\+Read\+Ptr\+Raw\+Window@{Get\+Read\+Ptr\+Raw\+Window}}
+\index{Get\+Read\+Ptr\+Raw\+Window@{Get\+Read\+Ptr\+Raw\+Window}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{Get\+Read\+Ptr\+Raw\+Window}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} Get\+Read\+Ptr\+Raw\+Window (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_a06ed5fb19c9846933c7f52287a4c3514}
+
+
+Definition at line 238 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\hypertarget{_w_f_mac__24_g_8c_a2b00386ff2f004b8375d5a4d13a09b5a}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!M\+A\+C\+Calc\+Rx\+Checksum@{M\+A\+C\+Calc\+Rx\+Checksum}}
+\index{M\+A\+C\+Calc\+Rx\+Checksum@{M\+A\+C\+Calc\+Rx\+Checksum}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{M\+A\+C\+Calc\+Rx\+Checksum}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} M\+A\+C\+Calc\+Rx\+Checksum (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{offset, }
+\item[{{\bf W\+O\+R\+D}}]{len}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_a2b00386ff2f004b8375d5a4d13a09b5a}
+
+
+Definition at line 1534 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 5
+
+
+\hypertarget{_w_f_mac__24_g_8c_a6f0a2614cde1253e6edcc78d1a069b79}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!M\+A\+C\+Discard\+Rx@{M\+A\+C\+Discard\+Rx}}
+\index{M\+A\+C\+Discard\+Rx@{M\+A\+C\+Discard\+Rx}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{M\+A\+C\+Discard\+Rx}]{\setlength{\rightskip}{0pt plus 5cm}void M\+A\+C\+Discard\+Rx (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_a6f0a2614cde1253e6edcc78d1a069b79}
+
+
+Definition at line 1086 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 6
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 7
+
+
+\hypertarget{_w_f_mac__24_g_8c_a38dc2cc8c71b2f6bfe51ea8db2acc67c}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!M\+A\+C\+Flush@{M\+A\+C\+Flush}}
+\index{M\+A\+C\+Flush@{M\+A\+C\+Flush}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{M\+A\+C\+Flush}]{\setlength{\rightskip}{0pt plus 5cm}void M\+A\+C\+Flush (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_a38dc2cc8c71b2f6bfe51ea8db2acc67c}
+
+
+Definition at line 1417 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 8
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 9
+
+
+\hypertarget{_w_f_mac__24_g_8c_aa6349c5f4caefa31c52a7ad03e3213f4}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!M\+A\+C\+Get@{M\+A\+C\+Get}}
+\index{M\+A\+C\+Get@{M\+A\+C\+Get}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{M\+A\+C\+Get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} M\+A\+C\+Get (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_aa6349c5f4caefa31c52a7ad03e3213f4}
+
+
+Definition at line 1783 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 10
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 11
+
+
+\hypertarget{_w_f_mac__24_g_8c_a89d13e85195c0d00f308194305845016}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!M\+A\+C\+Get\+Array@{M\+A\+C\+Get\+Array}}
+\index{M\+A\+C\+Get\+Array@{M\+A\+C\+Get\+Array}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{M\+A\+C\+Get\+Array}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} M\+A\+C\+Get\+Array (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{val, }
+\item[{{\bf W\+O\+R\+D}}]{len}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_a89d13e85195c0d00f308194305845016}
+
+
+Definition at line 1816 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 12
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 13
+
+
+\hypertarget{_w_f_mac__24_g_8c_a853f9bc96814d6d6ff8ef7a19f84d973}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!M\+A\+C\+Get\+Free\+Rx\+Size@{M\+A\+C\+Get\+Free\+Rx\+Size}}
+\index{M\+A\+C\+Get\+Free\+Rx\+Size@{M\+A\+C\+Get\+Free\+Rx\+Size}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{M\+A\+C\+Get\+Free\+Rx\+Size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} M\+A\+C\+Get\+Free\+Rx\+Size (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_a853f9bc96814d6d6ff8ef7a19f84d973}
+
+
+Definition at line 1113 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+\hypertarget{_w_f_mac__24_g_8c_a18cabbf973ecec4ba5b67dc2c729b753}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!M\+A\+C\+Get\+Header@{M\+A\+C\+Get\+Header}}
+\index{M\+A\+C\+Get\+Header@{M\+A\+C\+Get\+Header}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{M\+A\+C\+Get\+Header}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} M\+A\+C\+Get\+Header (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+A\+C\+\_\+\+A\+D\+D\+R} $\ast$}]{remote, }
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{type}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_a18cabbf973ecec4ba5b67dc2c729b753}
+
+
+Definition at line 1211 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 14
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 15
+
+
+\hypertarget{_w_f_mac__24_g_8c_a26cccc5919dcabb5777c3f6127648e9f}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!M\+A\+C\+Init@{M\+A\+C\+Init}}
+\index{M\+A\+C\+Init@{M\+A\+C\+Init}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{M\+A\+C\+Init}]{\setlength{\rightskip}{0pt plus 5cm}void M\+A\+C\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_a26cccc5919dcabb5777c3f6127648e9f}
+
+
+Definition at line 930 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 16
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 17
+
+
+\hypertarget{_w_f_mac__24_g_8c_a0b700fbc3ad2a6c7c389026bfd38e0f1}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!M\+A\+C\+Is\+Linked@{M\+A\+C\+Is\+Linked}}
+\index{M\+A\+C\+Is\+Linked@{M\+A\+C\+Is\+Linked}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{M\+A\+C\+Is\+Linked}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} M\+A\+C\+Is\+Linked (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_a0b700fbc3ad2a6c7c389026bfd38e0f1}
+
+
+Definition at line 1008 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 18
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 19
+
+
+\hypertarget{_w_f_mac__24_g_8c_a72d4a1a3347c7316acbae4d96ba44f63}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!M\+A\+C\+Is\+Mem\+Copy\+Done@{M\+A\+C\+Is\+Mem\+Copy\+Done}}
+\index{M\+A\+C\+Is\+Mem\+Copy\+Done@{M\+A\+C\+Is\+Mem\+Copy\+Done}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{M\+A\+C\+Is\+Mem\+Copy\+Done}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} M\+A\+C\+Is\+Mem\+Copy\+Done (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_a72d4a1a3347c7316acbae4d96ba44f63}
+
+
+Definition at line 1759 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 20
+
+
+\hypertarget{_w_f_mac__24_g_8c_a99937ac52db1a95f86ca59779640bcbe}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!M\+A\+C\+Is\+Tx\+Ready@{M\+A\+C\+Is\+Tx\+Ready}}
+\index{M\+A\+C\+Is\+Tx\+Ready@{M\+A\+C\+Is\+Tx\+Ready}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{M\+A\+C\+Is\+Tx\+Ready}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} M\+A\+C\+Is\+Tx\+Ready (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_a99937ac52db1a95f86ca59779640bcbe}
+
+
+Definition at line 1036 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 21
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 22
+
+
+\hypertarget{_w_f_mac__24_g_8c_a4442711ab4c3d47ffc913476630330e2}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!M\+A\+C\+Mem\+Copy\+Async@{M\+A\+C\+Mem\+Copy\+Async}}
+\index{M\+A\+C\+Mem\+Copy\+Async@{M\+A\+C\+Mem\+Copy\+Async}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{M\+A\+C\+Mem\+Copy\+Async}]{\setlength{\rightskip}{0pt plus 5cm}void M\+A\+C\+Mem\+Copy\+Async (
+\begin{DoxyParamCaption}
+\item[{P\+T\+R\+\_\+\+B\+A\+S\+E}]{dest\+Addr, }
+\item[{P\+T\+R\+\_\+\+B\+A\+S\+E}]{source\+Addr, }
+\item[{{\bf W\+O\+R\+D}}]{len}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_a4442711ab4c3d47ffc913476630330e2}
+
+
+Definition at line 1582 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 23
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 24
+
+
+\hypertarget{_w_f_mac__24_g_8c_aa78e5e02014bf06b525b5e47a3eb7ce0}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!M\+A\+C\+Power\+Down@{M\+A\+C\+Power\+Down}}
+\index{M\+A\+C\+Power\+Down@{M\+A\+C\+Power\+Down}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{M\+A\+C\+Power\+Down}]{\setlength{\rightskip}{0pt plus 5cm}void M\+A\+C\+Power\+Down (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_aa78e5e02014bf06b525b5e47a3eb7ce0}
+
+
+Definition at line 1944 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+\hypertarget{_w_f_mac__24_g_8c_a4f34a40501dcc65dfd7a673c0620a6e0}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!M\+A\+C\+Power\+Up@{M\+A\+C\+Power\+Up}}
+\index{M\+A\+C\+Power\+Up@{M\+A\+C\+Power\+Up}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{M\+A\+C\+Power\+Up}]{\setlength{\rightskip}{0pt plus 5cm}void M\+A\+C\+Power\+Up (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_a4f34a40501dcc65dfd7a673c0620a6e0}
+
+
+Definition at line 1970 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+\hypertarget{_w_f_mac__24_g_8c_a74c4ae494d118879a5d3798a74c3b905}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!M\+A\+C\+Process@{M\+A\+C\+Process}}
+\index{M\+A\+C\+Process@{M\+A\+C\+Process}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{M\+A\+C\+Process}]{\setlength{\rightskip}{0pt plus 5cm}void M\+A\+C\+Process (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_a74c4ae494d118879a5d3798a74c3b905}
+
+
+Definition at line 846 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 25
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 26
+
+
+\hypertarget{_w_f_mac__24_g_8c_a9a1910d847af55acbfd90ef175be44b9}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!M\+A\+C\+Put@{M\+A\+C\+Put}}
+\index{M\+A\+C\+Put@{M\+A\+C\+Put}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{M\+A\+C\+Put}]{\setlength{\rightskip}{0pt plus 5cm}void M\+A\+C\+Put (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{val}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_a9a1910d847af55acbfd90ef175be44b9}
+
+
+Definition at line 1859 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 27
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 28
+
+
+\hypertarget{_w_f_mac__24_g_8c_a87a779bb5e5f2c7ffc444f52d696efa2}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!M\+A\+C\+Put\+Array@{M\+A\+C\+Put\+Array}}
+\index{M\+A\+C\+Put\+Array@{M\+A\+C\+Put\+Array}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{M\+A\+C\+Put\+Array}]{\setlength{\rightskip}{0pt plus 5cm}void M\+A\+C\+Put\+Array (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{val, }
+\item[{{\bf W\+O\+R\+D}}]{len}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_a87a779bb5e5f2c7ffc444f52d696efa2}
+
+
+Definition at line 1888 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 29
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 30
+
+
+\hypertarget{_w_f_mac__24_g_8c_a3729591a4e059f3e892d79013502b874}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!M\+A\+C\+Put\+General\+Header@{M\+A\+C\+Put\+General\+Header}}
+\index{M\+A\+C\+Put\+General\+Header@{M\+A\+C\+Put\+General\+Header}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{M\+A\+C\+Put\+General\+Header}]{\setlength{\rightskip}{0pt plus 5cm}void M\+A\+C\+Put\+General\+Header (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+A\+C\+\_\+\+A\+D\+D\+R} $\ast$}]{remote, }
+\item[{{\bf U\+I\+N\+T16}}]{type, }
+\item[{{\bf W\+O\+R\+D}}]{data\+Len}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_a3729591a4e059f3e892d79013502b874}
+
+
+Definition at line 1364 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 31
+
+
+\hypertarget{_w_f_mac__24_g_8c_af507be7571c519d47045cc4254f7ff54}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!M\+A\+C\+Put\+Header@{M\+A\+C\+Put\+Header}}
+\index{M\+A\+C\+Put\+Header@{M\+A\+C\+Put\+Header}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{M\+A\+C\+Put\+Header}]{\setlength{\rightskip}{0pt plus 5cm}void M\+A\+C\+Put\+Header (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+A\+C\+\_\+\+A\+D\+D\+R} $\ast$}]{remote, }
+\item[{{\bf B\+Y\+T\+E}}]{type, }
+\item[{{\bf W\+O\+R\+D}}]{data\+Len}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_af507be7571c519d47045cc4254f7ff54}
+
+
+Definition at line 1311 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 32
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 33
+
+
+\hypertarget{_w_f_mac__24_g_8c_aa820326baa2d0dbc487c32301b9ad436}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!M\+A\+C\+Put\+R\+O\+M\+Array@{M\+A\+C\+Put\+R\+O\+M\+Array}}
+\index{M\+A\+C\+Put\+R\+O\+M\+Array@{M\+A\+C\+Put\+R\+O\+M\+Array}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{M\+A\+C\+Put\+R\+O\+M\+Array}]{\setlength{\rightskip}{0pt plus 5cm}void M\+A\+C\+Put\+R\+O\+M\+Array (
+\begin{DoxyParamCaption}
+\item[{R\+O\+M {\bf B\+Y\+T\+E} $\ast$}]{val, }
+\item[{{\bf W\+O\+R\+D}}]{len}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_aa820326baa2d0dbc487c32301b9ad436}
+
+
+Definition at line 1916 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 34
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 35
+
+
+\hypertarget{_w_f_mac__24_g_8c_aad63644420d87642a890d2f41abb7454}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!M\+A\+C\+Set\+Read\+Ptr@{M\+A\+C\+Set\+Read\+Ptr}}
+\index{M\+A\+C\+Set\+Read\+Ptr@{M\+A\+C\+Set\+Read\+Ptr}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{M\+A\+C\+Set\+Read\+Ptr}]{\setlength{\rightskip}{0pt plus 5cm}P\+T\+R\+\_\+\+B\+A\+S\+E M\+A\+C\+Set\+Read\+Ptr (
+\begin{DoxyParamCaption}
+\item[{P\+T\+R\+\_\+\+B\+A\+S\+E}]{address}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_aad63644420d87642a890d2f41abb7454}
+
+
+Definition at line 1503 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 36
+
+
+\hypertarget{_w_f_mac__24_g_8c_aa73b1ce45818243c98e3efd00b9f4bd9}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!M\+A\+C\+Set\+Read\+Ptr\+In\+Rx@{M\+A\+C\+Set\+Read\+Ptr\+In\+Rx}}
+\index{M\+A\+C\+Set\+Read\+Ptr\+In\+Rx@{M\+A\+C\+Set\+Read\+Ptr\+In\+Rx}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{M\+A\+C\+Set\+Read\+Ptr\+In\+Rx}]{\setlength{\rightskip}{0pt plus 5cm}void M\+A\+C\+Set\+Read\+Ptr\+In\+Rx (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{offset}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_aa73b1ce45818243c98e3efd00b9f4bd9}
+
+
+Definition at line 1454 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 37
+
+
+\hypertarget{_w_f_mac__24_g_8c_a76abcd85736be75ac9dee35b573bb90d}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!M\+A\+C\+Set\+Write\+Ptr@{M\+A\+C\+Set\+Write\+Ptr}}
+\index{M\+A\+C\+Set\+Write\+Ptr@{M\+A\+C\+Set\+Write\+Ptr}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{M\+A\+C\+Set\+Write\+Ptr}]{\setlength{\rightskip}{0pt plus 5cm}P\+T\+R\+\_\+\+B\+A\+S\+E M\+A\+C\+Set\+Write\+Ptr (
+\begin{DoxyParamCaption}
+\item[{P\+T\+R\+\_\+\+B\+A\+S\+E}]{address}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_a76abcd85736be75ac9dee35b573bb90d}
+
+
+Definition at line 1476 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 38
+
+
+\hypertarget{_w_f_mac__24_g_8c_a2e5031b0e0826a0f5db5135eb755ae32}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!Raw\+Calculate\+Checksum@{Raw\+Calculate\+Checksum}}
+\index{Raw\+Calculate\+Checksum@{Raw\+Calculate\+Checksum}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{Raw\+Calculate\+Checksum}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Raw\+Calculate\+Checksum (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T16}}]{length}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_a2e5031b0e0826a0f5db5135eb755ae32}
+
+
+Definition at line 266 of file W\+F\+Driver\+Raw\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 39
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 40
+
+
+\hypertarget{_w_f_mac__24_g_8c_aafb6ca77b1c8439e6ea19a16231b9afa}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!Raw\+Get\+Mgmt\+Rx\+Buffer@{Raw\+Get\+Mgmt\+Rx\+Buffer}}
+\index{Raw\+Get\+Mgmt\+Rx\+Buffer@{Raw\+Get\+Mgmt\+Rx\+Buffer}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{Raw\+Get\+Mgmt\+Rx\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}void Raw\+Get\+Mgmt\+Rx\+Buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T16} $\ast$}]{p\+\_\+num\+Bytes}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_aafb6ca77b1c8439e6ea19a16231b9afa}
+
+
+Definition at line 1058 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 41
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 42
+
+
+\hypertarget{_w_f_mac__24_g_8c_a603b51b2b499556c0633b2af9b06ee9a}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!Raw\+Init@{Raw\+Init}}
+\index{Raw\+Init@{Raw\+Init}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{Raw\+Init}]{\setlength{\rightskip}{0pt plus 5cm}void Raw\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_a603b51b2b499556c0633b2af9b06ee9a}
+
+
+Definition at line 954 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 43
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 44
+
+
+\hypertarget{_w_f_mac__24_g_8c_ac4b1209e343829937708405b184890da}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!Raw\+Send\+Untampered\+Data@{Raw\+Send\+Untampered\+Data}}
+\index{Raw\+Send\+Untampered\+Data@{Raw\+Send\+Untampered\+Data}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{Raw\+Send\+Untampered\+Data}]{\setlength{\rightskip}{0pt plus 5cm}void Raw\+Send\+Untampered\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+Req, }
+\item[{{\bf U\+I\+N\+T16}}]{len}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_ac4b1209e343829937708405b184890da}
+
+
+Definition at line 1977 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 45
+
+
+\hypertarget{_w_f_mac__24_g_8c_a7fb5adc7bc64ab3c4663821580ca90b4}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!Retrieve\+Binary\+Key@{Retrieve\+Binary\+Key}}
+\index{Retrieve\+Binary\+Key@{Retrieve\+Binary\+Key}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{Retrieve\+Binary\+Key}]{\setlength{\rightskip}{0pt plus 5cm}void Retrieve\+Binary\+Key (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{cpid}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_a7fb5adc7bc64ab3c4663821580ca90b4}
+
+
+Definition at line 685 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 46
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 47
+
+
+\hypertarget{_w_f_mac__24_g_8c_a943f344af782b8f55c1636da4e5b8dfd}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!Validate\+Config@{Validate\+Config}}
+\index{Validate\+Config@{Validate\+Config}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{Validate\+Config}]{\setlength{\rightskip}{0pt plus 5cm}void Validate\+Config (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_a943f344af782b8f55c1636da4e5b8dfd}
+
+
+Here is the caller graph for this function\+:
+% FIG 48
+
+
+\hypertarget{_w_f_mac__24_g_8c_a112a0c7a8a37f72cab76a6fcd3f4a4e1}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!W\+F\+\_\+\+Connect@{W\+F\+\_\+\+Connect}}
+\index{W\+F\+\_\+\+Connect@{W\+F\+\_\+\+Connect}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{W\+F\+\_\+\+Connect}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+Connect (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_a112a0c7a8a37f72cab76a6fcd3f4a4e1}
+
+
+Definition at line 548 of file Main\+Demo.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 49
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 50
+
+
+\hypertarget{_w_f_mac__24_g_8c_acc1c001c9f03fdf84e96825635f466f4}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!W\+F\+\_\+\+Output\+Connection\+Context@{W\+F\+\_\+\+Output\+Connection\+Context}}
+\index{W\+F\+\_\+\+Output\+Connection\+Context@{W\+F\+\_\+\+Output\+Connection\+Context}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{W\+F\+\_\+\+Output\+Connection\+Context}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+Output\+Connection\+Context (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_acc1c001c9f03fdf84e96825635f466f4}
+
+
+Here is the caller graph for this function\+:
+% FIG 51
+
+
+\hypertarget{_w_f_mac__24_g_8c_a71922ce0d81f02a29466f8aa9074fbde}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!W\+F\+Display\+Scan\+Mgr@{W\+F\+Display\+Scan\+Mgr}}
+\index{W\+F\+Display\+Scan\+Mgr@{W\+F\+Display\+Scan\+Mgr}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{W\+F\+Display\+Scan\+Mgr}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+Display\+Scan\+Mgr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_a71922ce0d81f02a29466f8aa9074fbde}
+
+
+Definition at line 348 of file W\+F\+Easy\+Config.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 52
+
+
+\hypertarget{_w_f_mac__24_g_8c_a33d9392f2c2945d2abd90efcf0327a9a}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!W\+F\+Get\+T\+C\+B\+Size@{W\+F\+Get\+T\+C\+B\+Size}}
+\index{W\+F\+Get\+T\+C\+B\+Size@{W\+F\+Get\+T\+C\+B\+Size}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{W\+F\+Get\+T\+C\+B\+Size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T16} W\+F\+Get\+T\+C\+B\+Size (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_a33d9392f2c2945d2abd90efcf0327a9a}
+
+
+Definition at line 907 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 53
+
+
+\hypertarget{_w_f_mac__24_g_8c_a92a10f987a20a2873ce6f1d82687baa0}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!W\+F\+Mac\+\_\+\+Empty\+Func@{W\+F\+Mac\+\_\+\+Empty\+Func}}
+\index{W\+F\+Mac\+\_\+\+Empty\+Func@{W\+F\+Mac\+\_\+\+Empty\+Func}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{W\+F\+Mac\+\_\+\+Empty\+Func}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+Mac\+\_\+\+Empty\+Func (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_a92a10f987a20a2873ce6f1d82687baa0}
+
+
+Definition at line 2046 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+\hypertarget{_w_f_mac__24_g_8c_a1570c09fc866aec85a413c831e292fda}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!W\+F\+Periodic\+Gratuitous\+Arp@{W\+F\+Periodic\+Gratuitous\+Arp}}
+\index{W\+F\+Periodic\+Gratuitous\+Arp@{W\+F\+Periodic\+Gratuitous\+Arp}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{W\+F\+Periodic\+Gratuitous\+Arp}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+Periodic\+Gratuitous\+Arp (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_mac__24_g_8c_a1570c09fc866aec85a413c831e292fda}
+
+
+Definition at line 372 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 54
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 55
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{_w_f_mac__24_g_8c_add5c8f7fcb7245c5667b2048d1ad184f}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!g\+\_\+rx\+Buffer\+Length@{g\+\_\+rx\+Buffer\+Length}}
+\index{g\+\_\+rx\+Buffer\+Length@{g\+\_\+rx\+Buffer\+Length}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{g\+\_\+rx\+Buffer\+Length}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T16} g\+\_\+rx\+Buffer\+Length}\label{_w_f_mac__24_g_8c_add5c8f7fcb7245c5667b2048d1ad184f}
+
+
+Definition at line 215 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+\hypertarget{_w_f_mac__24_g_8c_aca3c2db2dde38d5af0fc3b7f23fb49aa}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!W\+F\+\_\+hibernate@{W\+F\+\_\+hibernate}}
+\index{W\+F\+\_\+hibernate@{W\+F\+\_\+hibernate}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{W\+F\+\_\+hibernate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\+W\+F\+Hibernate} W\+F\+\_\+hibernate}\label{_w_f_mac__24_g_8c_aca3c2db2dde38d5af0fc3b7f23fb49aa}
+
+
+Definition at line 167 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+\hypertarget{_w_f_mac__24_g_8c_a5a1a0d0cfc6af3af0b80d73eb982096f}{}\index{W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}!W\+F\+Arp\+Broadcast\+Interval\+Sec@{W\+F\+Arp\+Broadcast\+Interval\+Sec}}
+\index{W\+F\+Arp\+Broadcast\+Interval\+Sec@{W\+F\+Arp\+Broadcast\+Interval\+Sec}!W\+F\+Mac\+\_\+24\+G.\+c@{W\+F\+Mac\+\_\+24\+G.\+c}}
+\subsubsection[{W\+F\+Arp\+Broadcast\+Interval\+Sec}]{\setlength{\rightskip}{0pt plus 5cm}int W\+F\+Arp\+Broadcast\+Interval\+Sec = 5}\label{_w_f_mac__24_g_8c_a5a1a0d0cfc6af3af0b80d73eb982096f}
+
+
+Definition at line 358 of file W\+F\+Mac\+\_\+24\+G.\+c.
+

@@ -1,0 +1,101 @@
+\hypertarget{struct___u_s_b___b_u_s___i_n_f_o}{}\section{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O Struct Reference}
+\label{struct___u_s_b___b_u_s___i_n_f_o}\index{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O@{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O}}
+
+
+{\ttfamily \#include $<$usb\+\_\+host\+\_\+local.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE} \hyperlink{struct___u_s_b___b_u_s___i_n_f_o_a44ec6f69f6ac33a28ff318552adaa715}{bfControlTransfersDone}: 1\\
+\>\>\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE} \hyperlink{struct___u_s_b___b_u_s___i_n_f_o_ad72576dc404bab2e2d816f02e42b0d6e}{bfInterruptTransfersDone}: 1\\
+\>\>\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE} \hyperlink{struct___u_s_b___b_u_s___i_n_f_o_aed0c0e8e0dd59a9b0a90c999c4a2380b}{bfIsochronousTransfersDone}: 1\\
+\>\>\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE} \hyperlink{struct___u_s_b___b_u_s___i_n_f_o_a568bd0a15ab25019de0c94c11ece58ed}{bfBulkTransfersDone}: 1\\
+\>\>\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE} \hyperlink{struct___u_s_b___b_u_s___i_n_f_o_ac774231d00164030a0a2800a73541337}{bfTokenAlreadyWritten}: 1\\
+\>\} \\
+\>\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{WORD} \hyperlink{struct___u_s_b___b_u_s___i_n_f_o_a1ba23d624885cedce131033610c85094}{val}\\
+\} \hyperlink{struct___u_s_b___b_u_s___i_n_f_o_aa12cc3aeba275737fc7a365890815557}{flags}\\
+
+\end{tabbing}\item 
+volatile \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{struct___u_s_b___b_u_s___i_n_f_o_a17e3a601d3baee999eaac517dc3f985d}{last\+Bulk\+Transaction}
+\item 
+volatile \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{struct___u_s_b___b_u_s___i_n_f_o_a8b0cd03c8c8abb35b455a92d0bedf1ae}{count\+Bulk\+Transactions}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 391 of file usb\+\_\+host\+\_\+local.\+h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{struct___u_s_b___b_u_s___i_n_f_o_a568bd0a15ab25019de0c94c11ece58ed}{}\index{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O@{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O}!bf\+Bulk\+Transfers\+Done@{bf\+Bulk\+Transfers\+Done}}
+\index{bf\+Bulk\+Transfers\+Done@{bf\+Bulk\+Transfers\+Done}!\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O@{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O}}
+\subsubsection[{bf\+Bulk\+Transfers\+Done}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} bf\+Bulk\+Transfers\+Done}\label{struct___u_s_b___b_u_s___i_n_f_o_a568bd0a15ab25019de0c94c11ece58ed}
+
+
+Definition at line 400 of file usb\+\_\+host\+\_\+local.\+h.
+
+\hypertarget{struct___u_s_b___b_u_s___i_n_f_o_a44ec6f69f6ac33a28ff318552adaa715}{}\index{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O@{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O}!bf\+Control\+Transfers\+Done@{bf\+Control\+Transfers\+Done}}
+\index{bf\+Control\+Transfers\+Done@{bf\+Control\+Transfers\+Done}!\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O@{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O}}
+\subsubsection[{bf\+Control\+Transfers\+Done}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} bf\+Control\+Transfers\+Done}\label{struct___u_s_b___b_u_s___i_n_f_o_a44ec6f69f6ac33a28ff318552adaa715}
+
+
+Definition at line 397 of file usb\+\_\+host\+\_\+local.\+h.
+
+\hypertarget{struct___u_s_b___b_u_s___i_n_f_o_ad72576dc404bab2e2d816f02e42b0d6e}{}\index{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O@{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O}!bf\+Interrupt\+Transfers\+Done@{bf\+Interrupt\+Transfers\+Done}}
+\index{bf\+Interrupt\+Transfers\+Done@{bf\+Interrupt\+Transfers\+Done}!\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O@{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O}}
+\subsubsection[{bf\+Interrupt\+Transfers\+Done}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} bf\+Interrupt\+Transfers\+Done}\label{struct___u_s_b___b_u_s___i_n_f_o_ad72576dc404bab2e2d816f02e42b0d6e}
+
+
+Definition at line 398 of file usb\+\_\+host\+\_\+local.\+h.
+
+\hypertarget{struct___u_s_b___b_u_s___i_n_f_o_aed0c0e8e0dd59a9b0a90c999c4a2380b}{}\index{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O@{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O}!bf\+Isochronous\+Transfers\+Done@{bf\+Isochronous\+Transfers\+Done}}
+\index{bf\+Isochronous\+Transfers\+Done@{bf\+Isochronous\+Transfers\+Done}!\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O@{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O}}
+\subsubsection[{bf\+Isochronous\+Transfers\+Done}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} bf\+Isochronous\+Transfers\+Done}\label{struct___u_s_b___b_u_s___i_n_f_o_aed0c0e8e0dd59a9b0a90c999c4a2380b}
+
+
+Definition at line 399 of file usb\+\_\+host\+\_\+local.\+h.
+
+\hypertarget{struct___u_s_b___b_u_s___i_n_f_o_ac774231d00164030a0a2800a73541337}{}\index{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O@{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O}!bf\+Token\+Already\+Written@{bf\+Token\+Already\+Written}}
+\index{bf\+Token\+Already\+Written@{bf\+Token\+Already\+Written}!\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O@{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O}}
+\subsubsection[{bf\+Token\+Already\+Written}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} bf\+Token\+Already\+Written}\label{struct___u_s_b___b_u_s___i_n_f_o_ac774231d00164030a0a2800a73541337}
+
+
+Definition at line 401 of file usb\+\_\+host\+\_\+local.\+h.
+
+\hypertarget{struct___u_s_b___b_u_s___i_n_f_o_a8b0cd03c8c8abb35b455a92d0bedf1ae}{}\index{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O@{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O}!count\+Bulk\+Transactions@{count\+Bulk\+Transactions}}
+\index{count\+Bulk\+Transactions@{count\+Bulk\+Transactions}!\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O@{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O}}
+\subsubsection[{count\+Bulk\+Transactions}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf B\+Y\+T\+E} count\+Bulk\+Transactions}\label{struct___u_s_b___b_u_s___i_n_f_o_a8b0cd03c8c8abb35b455a92d0bedf1ae}
+
+
+Definition at line 407 of file usb\+\_\+host\+\_\+local.\+h.
+
+\hypertarget{struct___u_s_b___b_u_s___i_n_f_o_aa12cc3aeba275737fc7a365890815557}{}\index{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O@{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O}!flags@{flags}}
+\index{flags@{flags}!\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O@{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O}}
+\subsubsection[{flags}]{\setlength{\rightskip}{0pt plus 5cm}volatile \{ ... \}                     flags}\label{struct___u_s_b___b_u_s___i_n_f_o_aa12cc3aeba275737fc7a365890815557}
+\hypertarget{struct___u_s_b___b_u_s___i_n_f_o_a17e3a601d3baee999eaac517dc3f985d}{}\index{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O@{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O}!last\+Bulk\+Transaction@{last\+Bulk\+Transaction}}
+\index{last\+Bulk\+Transaction@{last\+Bulk\+Transaction}!\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O@{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O}}
+\subsubsection[{last\+Bulk\+Transaction}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf B\+Y\+T\+E} last\+Bulk\+Transaction}\label{struct___u_s_b___b_u_s___i_n_f_o_a17e3a601d3baee999eaac517dc3f985d}
+
+
+Definition at line 406 of file usb\+\_\+host\+\_\+local.\+h.
+
+\hypertarget{struct___u_s_b___b_u_s___i_n_f_o_a1ba23d624885cedce131033610c85094}{}\index{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O@{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O}!val@{val}}
+\index{val@{val}!\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O@{\+\_\+\+U\+S\+B\+\_\+\+B\+U\+S\+\_\+\+I\+N\+F\+O}}
+\subsubsection[{val}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} val}\label{struct___u_s_b___b_u_s___i_n_f_o_a1ba23d624885cedce131033610c85094}
+
+
+Definition at line 403 of file usb\+\_\+host\+\_\+local.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+U\+S\+B/\hyperlink{usb__host__local_8h}{usb\+\_\+host\+\_\+local.\+h}\end{DoxyCompactItemize}

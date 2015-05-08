@@ -1,0 +1,67 @@
+\hypertarget{_changelog_cl020101}{}\section{Version 2.\+2}\label{_changelog_cl020101}
+\begin{DoxyItemize}
+\item Bug Fixes\+: 
+\begin{DoxyItemize}
+\item Sensors\textquotesingle{} oversampling counter variable now only updates if a scan occurred. 
+\item Unique oversampling values enabled for only one sensor is now gracefully handled without throwing errors. 
+\item I2\+C slave no longer occasionally fails to execute write operations. 
+\end{DoxyItemize}\item Added support for hardware C\+V\+D handling \item Demo main.\+c files now have a few additional \#if blocks to reduce compile-\/time errors when minor configuration changes are made. \item Solved a compile-\/time-\/error bug with P\+I\+C16\+F72x devices when running at 16\+M\+Hz \item Added device support\+: 
+\begin{DoxyItemize}
+\item P\+I\+C16(\+L)F1501/3 
+\item P\+I\+C16(\+L)F1512/3 
+\item P\+I\+C12(\+L)F1552 
+\end{DoxyItemize}\end{DoxyItemize}
+\hypertarget{_changelog_cl0201}{}\section{Version 2.\+1}\label{_changelog_cl0201}
+\begin{DoxyItemize}
+\item Enabling a non-\/\+T\+M\+R0 timer will now also automatically enable the P\+E\+I\+E bit for automatic interrupt use (\hyperlink{m_touch_8c}{m\+Touch.\+c}) \item Default one-\/way communications now supports the updated Profilab G\+U\+I supplied with this framework package (\hyperlink{m_comm__config_8h}{m\+Comm\+\_\+config.\+h} / \hyperlink{m_comm_8c}{m\+Comm.\+c}) \item Configuration values can now be stored in R\+A\+M (m\+Touch\+\_\+config\+Options) instead of E\+E\+P\+R\+O\+M for use in the two-\/way communications. See M\+T\+O\+U\+C\+H\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+S\+T\+O\+R\+E\+D\+\_\+\+A\+S\+\_\+\+R\+A\+M in \hyperlink{m_touch__config_8h}{m\+Touch\+\_\+config.\+h} \item Individual the oversampling array initialization has been changed to automatically adjust its size based on M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S (\hyperlink{m_touch__acquisition_8c}{m\+Touch\+\_\+acquisition.\+c}) \item When m\+Touch controls the I\+S\+R, it will now correctly exit from the function if the m\+Touch timer was not responsible for the interrupt (\hyperlink{m_touch__acquisition_8c}{m\+Touch\+\_\+acquisition.\+c}) \item Fixed an issue with the D\+A\+C configuration in the hardware profiles of the 182x and 184x families \item Fixed a bug with the initial E\+E\+P\+R\+O\+M byte check -\/ previously the E\+E\+P\+R\+O\+M would revert to factory settings on reset. (\hyperlink{m_touch__eeprom_8c}{m\+Touch\+\_\+eeprom.\+c}) \item Fixed the m\+Touch\+\_\+\+Clear\+Toggle(i) A\+P\+I macro\+: Logical \textquotesingle{}not\textquotesingle{} ({\bfseries !}) changed to bit-\/wise \textquotesingle{}not\textquotesingle{} ({\bfseries $\sim$}).\end{DoxyItemize}
+\hypertarget{_changelog_cl0200}{}\section{Version 2.\+0}\label{_changelog_cl0200}
+\begin{DoxyItemize}
+\item Added support for a large number of processors. Refer to this documentations \textquotesingle{}\hyperlink{_resource_requirements_PICSupport}{Resource Requirements}\textquotesingle{} page for a full listing. \item The acquisition module has been reworked for added efficiency. 
+\begin{DoxyItemize}
+\item The assembly-\/coded jump table has been replaced with a compiler-\/generated look-\/up table. 
+\item The \textquotesingle{}scan a\textquotesingle{} and \textquotesingle{}scan b\textquotesingle{} portions of each sensor\textquotesingle{}s m\+Touch waveform are dedicated functions that are dynamically generated at compile-\/time by the preprocessor macros. This eliminates the previous limitation on the number of sensors due to the rising length of the single m\+Touch acquisition function. 
+\item Individual oversampling values can be enabled from the \hyperlink{m_touch__config__cvd_advanced_8h}{m\+Touch\+\_\+config\+\_\+cvd\+Advanced.\+h} file. 
+\end{DoxyItemize}\item Structures have been implemented for a large number of m\+Touch variables to maximize the efficiency of R\+A\+M resources. Several previously supported processors are now able to implement more sensors due to this change. \item New features\+: 
+\begin{DoxyItemize}
+\item \hyperlink{featMode}{Scanning modes} allow different sensor configurations to be scanned based on the application\textquotesingle{}s state. 
+\item Built-\/in \hyperlink{featProximity}{proximity sensor} support with median filter. (\hyperlink{m_touch__config_8h}{m\+Touch\+\_\+config.\+h}) 
+\item \hyperlink{featSliders}{Sliders and wheels} can be implemented by editing the \hyperlink{m_touch__config__slider_8h}{m\+Touch\+\_\+config\+\_\+slider.\+h} options. Supports up to 10 sliders with 8 sensors per slider. 
+\item A \hyperlink{featMostPressed}{most-\/pressed algorithm} can be implemented by uncommenting \#\+M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+S\+T\+\_\+\+P\+R\+E\+S\+S\+E\+D\+\_\+\+O\+N\+L\+Y. (\hyperlink{m_touch__config_8h}{m\+Touch\+\_\+config.\+h}) 
+\item Toggle mode is now available by uncommenting \#\+M\+T\+O\+U\+C\+H\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+E\+N\+A\+B\+L\+E\+D. (\hyperlink{m_touch__config_8h}{m\+Touch\+\_\+config.\+h}) It will toggle the output\textquotesingle{}s value only when it detects a new press -\/ not when it sees a release. Example A\+P\+I available in main.\+c. 
+\item \hyperlink{featGuard}{Guard rings/shields} can be implemented using any general I\+O pin or through the D\+A\+C\+O\+U\+T pin. (\hyperlink{m_touch__config__cvd_advanced_8h}{m\+Touch\+\_\+config\+\_\+cvd\+Advanced.\+h}) 
+\item Support for \hyperlink{featMatrix}{matrix configurations} can be implemented to automatically decode the rows and columns with debouncing and a dedicated most-\/pressed algorithm to ensure quality coordinate results. (\hyperlink{m_touch__config_8h}{m\+Touch\+\_\+config.\+h}) 
+\item \hyperlink{featMutual}{Mutual coupling drives} can be implemented to detect increased coupling between two interconnected sensors. (\hyperlink{m_touch__config__cvd_advanced_8h}{m\+Touch\+\_\+config\+\_\+cvd\+Advanced.\+h}) 
+\item m\+Comm communications module added. See \hyperlink{m_comm__config_8h}{m\+Comm\+\_\+config.\+h} 
+\begin{DoxyItemize}
+\item Implements I2\+C, S\+P\+I, and U\+A\+R\+T two-\/way communications to allow changing of configuration values at run-\/time. 
+\item Configuration options and thresholds are stored in E\+E\+P\+R\+O\+M when this is implemented by defining \#\+M\+T\+O\+U\+C\+H\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+E\+N\+A\+B\+L\+E\+D in \hyperlink{m_touch__config_8h}{m\+Touch\+\_\+config.\+h} 
+\item Implements 1-\/way U\+A\+R\+T communications in hardware or by using a software-\/implementation. 
+\end{DoxyItemize}
+\end{DoxyItemize}\item New configuration options\+: 
+\begin{DoxyItemize}
+\item \#\+M\+T\+O\+U\+C\+H\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E adjusts the way the framework integrates with the application (\hyperlink{m_touch__config_8h}{m\+Touch\+\_\+config.\+h}) 
+\item \#\+M\+T\+O\+U\+C\+H\+\_\+\+I\+S\+R\+\_\+\+T\+I\+M\+E\+R changes which 8-\/bit timer is used for the m\+Touch interrupt (\hyperlink{m_touch__config_8h}{m\+Touch\+\_\+config.\+h}) 
+\item \#\+M\+T\+O\+U\+C\+H\+\_\+\+S\+C\+A\+N\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+A\+L\+I\+T\+Y alternates between scanning one sensor per interrupt or scanning all sensors once per interrupt (\hyperlink{m_touch__config_8h}{m\+Touch\+\_\+config.\+h}) 
+\item \#\+M\+T\+O\+U\+C\+H\+\_\+\+A\+D\+C\+\_\+\+C\+O\+N\+T\+R\+O\+L determines whether the framework releases the A\+D\+C after performing its scan (\hyperlink{m_touch__config_8h}{m\+Touch\+\_\+config.\+h}) 
+\item \#\+A\+P\+F\+C\+O\+N\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+E\+D can be used to disable \char`\"{}make sure you initialize\char`\"{} warnings on parts with A\+P\+F\+C\+O\+N registers (\hyperlink{m_touch__config_8h}{m\+Touch\+\_\+config.\+h}) 
+\item \#\+M\+T\+O\+U\+C\+H\+\_\+\+D\+E\+C\+I\+M\+A\+T\+I\+O\+N\+\_\+\+M\+A\+X\+\_\+\+S\+T\+E\+P adjusts the maximum step size for sensors while going through the decimation filter (\hyperlink{m_touch__config_8h}{m\+Touch\+\_\+config.\+h}) 
+\item \#\+M\+T\+O\+U\+C\+H\+\_\+\+J\+I\+T\+T\+E\+R\+\_\+\+B\+I\+T\+S adjusts the number of bits used to implement the random seed value for jittering (\hyperlink{m_touch__config_8h}{m\+Touch\+\_\+config.\+h}) 
+\item \#\+C\+V\+D\+\_\+\+F\+O\+R\+C\+E\+\_\+\+R\+E\+F\+\_\+\+D\+A\+C can be defined to force the C\+V\+D acquisition to use the D\+A\+C as the reference for the A\+D\+C\textquotesingle{}s hold capacitor (\hyperlink{m_touch__config__cvd_advanced_8h}{m\+Touch\+\_\+config\+\_\+cvd\+Advanced.\+h}) 
+\end{DoxyItemize}\item Configuration option \#\+C\+V\+D\+\_\+\+J\+I\+T\+T\+E\+R\+\_\+\+E\+N\+A\+B\+L\+E has been removed. To disable jittering, set the \#\+M\+T\+O\+U\+C\+H\+\_\+\+J\+I\+T\+T\+E\+R\+\_\+\+B\+I\+T\+S value to 0. \item \#\+M\+T\+O\+U\+C\+H\+\_\+\+S\+C\+A\+L\+I\+N\+G has been adjusted to allow a larger number of scaling options. (\hyperlink{m_touch__config_8h}{m\+Touch\+\_\+config.\+h})\end{DoxyItemize}
+\hypertarget{_changelog_cl0101}{}\section{Version 1.\+1}\label{_changelog_cl0101}
+\begin{DoxyItemize}
+\item Non-\/enhanced Core Device Support \item H\+I-\/\+T\+E\+C\+H 9.\+81 Lite and Standard Compiler Support \item Acquisition variable array \#sensor\+\_\+data is now initialized to 0x47\+F to reduce the required initialization time \item New configuration option \#\+C\+V\+D\+\_\+\+S\+E\+T\+T\+L\+I\+N\+G\+\_\+\+D\+E\+L\+A\+Y adjusts the amount of time the C\+V\+D acquisition will wait for the voltages on the external sensor and internal A\+D\+C hold capacitor to settle. See \hyperlink{ts-Waveform}{this guide} for more information. \item New configuration option \#\+C\+V\+D\+\_\+\+C\+H\+O\+L\+D\+\_\+\+C\+H\+A\+R\+G\+E\+\_\+\+D\+E\+L\+A\+Y adjusts the amount of time the C\+V\+D acquisition will wait for the voltage on the internal A\+D\+C hold capacitor to reach steady state (V\textsubscript{D\+D} or V\textsubscript{S\+S}) before connecting the two capacitors and allowing their voltages to settle. See \hyperlink{ts-Waveform}{this guide} for more information. \item The scan order of the C\+V\+D acquisition has been reversed to ensure maximum sensitivity for larger external sensor capacitances. This means the waveform will change when viewed on a scope. See \hyperlink{ts-Waveform}{this guide} for more information. \item \#\+G\+E\+N\+E\+R\+A\+T\+E\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N() and \#\+G\+E\+N\+E\+R\+A\+T\+E\+\_\+\+J\+U\+M\+P\+\_\+\+T\+A\+B\+L\+E() macros have been redesigned with a more elegant implementation. \item The m\+Touch.\+h file has been split-\/in-\/two in order to accomodate the \hyperlink{namespace_microchip}{Microchip} Application Libraries\textquotesingle{} directory structure. A local copy of m\+Touch.\+h should be included in your application\textquotesingle{}s includes directory. \hyperlink{m_touch__process_configuration_8h}{m\+Touch\+\_\+process\+Configuration.\+h}, the other half of the original m\+Touch.\+h file, only needs to be available in the library folders and does not require a local copy. \item Sensor 0\textquotesingle{}s reference is now defined in the process configuration header file to help de-\/clutter the acquisition.\+c file. \item Many documentation updates including\+: 
+\begin{DoxyItemize}
+\item New \textquotesingle{}Optimizing Performance\textquotesingle{} sections designed to make it easier to solve common problems\+: 
+\begin{DoxyItemize}
+\item \hyperlink{ts-Sensitivity}{Increasing Sensitivity} 
+\item \hyperlink{ts-ResponseTime}{Adjusting the Response Time} 
+\item \hyperlink{ts-Waveform}{Tuning the C\+V\+D Waveform} 
+\item \hyperlink{ts-Comms}{Establishing P\+C Communications} 
+\end{DoxyItemize}
+\item Redesigned main page to help new users find information 
+\item Guides to creating new projects in \hyperlink{GettingStartedNewP8}{M\+P\+L\+A\+B 8} and \hyperlink{GettingStartedNewPX}{M\+P\+L\+A\+B X} 
+\end{DoxyItemize}\end{DoxyItemize}
+\hypertarget{_changelog_cl0100}{}\section{Version 1.\+0 -\/ First Public Release}\label{_changelog_cl0100}
+\begin{DoxyItemize}
+\item 64-\/\+Pin Device Support \item H\+I-\/\+T\+E\+C\+H 9.\+81 P\+R\+O Compiler Support \item Comm/\+Hardware\+Profile update to support devices with $>$1 U\+A\+R\+T modules \item New M\+T\+O\+U\+C\+H\+\_\+\+C\+O\+M\+M\+\_\+\+A\+S\+C\+I\+I\+\_\+\+R\+E\+A\+D\+I\+N\+G and M\+T\+O\+U\+C\+H\+\_\+\+C\+O\+M\+M\+\_\+\+A\+S\+C\+I\+I\+\_\+\+B\+A\+S\+E\+L\+I\+N\+E configuration options to quickly adjust comm output \end{DoxyItemize}

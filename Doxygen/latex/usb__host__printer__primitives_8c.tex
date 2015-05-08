@@ -1,0 +1,54 @@
+\hypertarget{usb__host__printer__primitives_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+U\+S\+B/\+Printer Host Driver/usb\+\_\+host\+\_\+printer\+\_\+primitives.c File Reference}
+\label{usb__host__printer__primitives_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+U\+S\+B/\+Printer Host Driver/usb\+\_\+host\+\_\+printer\+\_\+primitives.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+U\+S\+B/\+Printer Host Driver/usb\+\_\+host\+\_\+printer\+\_\+primitives.\+c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Graphics/\+Graphics.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}U\+S\+B/usb.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}U\+S\+B/usb\+\_\+host\+\_\+printer\+\_\+primitives.\+h\char`\"{}}\\*
+Include dependency graph for usb\+\_\+host\+\_\+printer\+\_\+primitives.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{usb__host__printer__primitives_8c_ad1a878962b7ce05c1834f04341597821}{U\+S\+B\+\_\+\+M\+A\+L\+L\+O\+C}(size)~malloc(size)
+\item 
+\#define \hyperlink{usb__host__printer__primitives_8c_a08a085581de0e53cde8e567ddf62f24f}{U\+S\+B\+\_\+\+F\+R\+E\+E}(ptr)~free(ptr)
+\item 
+\#define \hyperlink{usb__host__printer__primitives_8c_a0d2718457d63c6258a27aece819cefe1}{U\+S\+B\+\_\+\+F\+R\+E\+E\+\_\+\+A\+N\+D\+\_\+\+C\+L\+E\+A\+R}(ptr)~\{\hyperlink{usb__host_8c_a08a085581de0e53cde8e567ddf62f24f}{U\+S\+B\+\_\+\+F\+R\+E\+E}(ptr); ptr = N\+U\+L\+L;\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{usb__host__printer__primitives_8c_a08a085581de0e53cde8e567ddf62f24f}{}\index{usb\+\_\+host\+\_\+printer\+\_\+primitives.\+c@{usb\+\_\+host\+\_\+printer\+\_\+primitives.\+c}!U\+S\+B\+\_\+\+F\+R\+E\+E@{U\+S\+B\+\_\+\+F\+R\+E\+E}}
+\index{U\+S\+B\+\_\+\+F\+R\+E\+E@{U\+S\+B\+\_\+\+F\+R\+E\+E}!usb\+\_\+host\+\_\+printer\+\_\+primitives.\+c@{usb\+\_\+host\+\_\+printer\+\_\+primitives.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+F\+R\+E\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+F\+R\+E\+E(
+\begin{DoxyParamCaption}
+\item[{}]{ptr}
+\end{DoxyParamCaption}
+)~free(ptr)}\label{usb__host__printer__primitives_8c_a08a085581de0e53cde8e567ddf62f24f}
+
+
+Definition at line 74 of file usb\+\_\+host\+\_\+printer\+\_\+primitives.\+c.
+
+\hypertarget{usb__host__printer__primitives_8c_a0d2718457d63c6258a27aece819cefe1}{}\index{usb\+\_\+host\+\_\+printer\+\_\+primitives.\+c@{usb\+\_\+host\+\_\+printer\+\_\+primitives.\+c}!U\+S\+B\+\_\+\+F\+R\+E\+E\+\_\+\+A\+N\+D\+\_\+\+C\+L\+E\+A\+R@{U\+S\+B\+\_\+\+F\+R\+E\+E\+\_\+\+A\+N\+D\+\_\+\+C\+L\+E\+A\+R}}
+\index{U\+S\+B\+\_\+\+F\+R\+E\+E\+\_\+\+A\+N\+D\+\_\+\+C\+L\+E\+A\+R@{U\+S\+B\+\_\+\+F\+R\+E\+E\+\_\+\+A\+N\+D\+\_\+\+C\+L\+E\+A\+R}!usb\+\_\+host\+\_\+printer\+\_\+primitives.\+c@{usb\+\_\+host\+\_\+printer\+\_\+primitives.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+F\+R\+E\+E\+\_\+\+A\+N\+D\+\_\+\+C\+L\+E\+A\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+F\+R\+E\+E\+\_\+\+A\+N\+D\+\_\+\+C\+L\+E\+A\+R(
+\begin{DoxyParamCaption}
+\item[{}]{ptr}
+\end{DoxyParamCaption}
+)~\{{\bf U\+S\+B\+\_\+\+F\+R\+E\+E}(ptr); ptr = N\+U\+L\+L;\}}\label{usb__host__printer__primitives_8c_a0d2718457d63c6258a27aece819cefe1}
+
+
+Definition at line 77 of file usb\+\_\+host\+\_\+printer\+\_\+primitives.\+c.
+
+\hypertarget{usb__host__printer__primitives_8c_ad1a878962b7ce05c1834f04341597821}{}\index{usb\+\_\+host\+\_\+printer\+\_\+primitives.\+c@{usb\+\_\+host\+\_\+printer\+\_\+primitives.\+c}!U\+S\+B\+\_\+\+M\+A\+L\+L\+O\+C@{U\+S\+B\+\_\+\+M\+A\+L\+L\+O\+C}}
+\index{U\+S\+B\+\_\+\+M\+A\+L\+L\+O\+C@{U\+S\+B\+\_\+\+M\+A\+L\+L\+O\+C}!usb\+\_\+host\+\_\+printer\+\_\+primitives.\+c@{usb\+\_\+host\+\_\+printer\+\_\+primitives.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+M\+A\+L\+L\+O\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+M\+A\+L\+L\+O\+C(
+\begin{DoxyParamCaption}
+\item[{}]{size}
+\end{DoxyParamCaption}
+)~malloc(size)}\label{usb__host__printer__primitives_8c_ad1a878962b7ce05c1834f04341597821}
+
+
+Definition at line 70 of file usb\+\_\+host\+\_\+printer\+\_\+primitives.\+c.
+

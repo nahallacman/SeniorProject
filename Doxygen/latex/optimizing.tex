@@ -1,0 +1,233 @@
+\begin{DoxyItemize}
+\item \hyperlink{ts-Sensitivity}{Increasing Sensitivity} \item \hyperlink{ts-ResponseTime}{Adjusting the Response Time} \item \hyperlink{ts-Waveform}{Tuning the C\+V\+D Waveform} \item \hyperlink{digCom}{Communication Implementation} \end{DoxyItemize}
+\hypertarget{ts-Sensitivity}{}\section{Increasing Sensitivity -\/ Optimizing Performance}\label{ts-Sensitivity}
+\begin{DoxyItemize}
+\item {\bfseries 1. Make sure your application\textquotesingle{}s C\+V\+D waveform is correct.}~\newline
+~\newline
+ See the \hyperlink{ts-Waveform}{Waveform Optimization guide} for help with this process.\end{DoxyItemize}
+~\newline
+
+
+\begin{DoxyItemize}
+\item {\bfseries 2. Use \#\+M\+T\+O\+U\+C\+H\+\_\+\+S\+A\+M\+P\+L\+E\+S\+\_\+\+P\+E\+R\+\_\+\+S\+C\+A\+N to increase the amount of oversampling.}~\newline
+~\newline
+ All applications will want to oversample at least 8 times to ensure random noise cannot significantly affect the sensor\textquotesingle{}s reading.~\newline
+ ~\newline
+ Most applications oversample between 30-\/50 times.~\newline
+ ~\newline
+ The diminishing returns on sensitivity when increasing this value occur at an exponential rate. This means there is only a small difference at 70 and 80 samples, while there is a very large difference between 10 and 20 samples.\end{DoxyItemize}
+~\newline
+
+
+\begin{DoxyItemize}
+\item {\bfseries 3. Change \#\+M\+T\+O\+U\+C\+H\+\_\+\+S\+C\+A\+L\+I\+N\+G to 1 to eliminate resolution loss.}~\newline
+~\newline
+ When the acquisition module has oversampled \#\+M\+T\+O\+U\+C\+H\+\_\+\+S\+A\+M\+P\+L\+E\+S\+\_\+\+P\+E\+R\+\_\+\+S\+C\+A\+N number of times, the final sum must be moved from a 24-\/bit array to a 16-\/bit array. The reading value cannot be allowed to exceed the 16-\/bit limit of 65535. To prevent this from occuring, the framework will use \#\+M\+T\+O\+U\+C\+H\+\_\+\+S\+C\+A\+L\+I\+N\+G to determine what to divide the accumulation register by. This results in a slight loss in resolution. If this is a concern for your application, setting \#\+M\+T\+O\+U\+C\+H\+\_\+\+S\+C\+A\+L\+I\+N\+G value to 1 will eliminate this step.~\newline
+ ~\newline
+ It is your responsibility to ensure the C\+V\+D\textquotesingle{}s reading cannot exceed 65535.\end{DoxyItemize}
+~\newline
+
+
+\begin{DoxyItemize}
+\item {\bfseries 4. Check that the baseline is not becoming corrupted.}~\newline
+~\newline
+ If your baseline is updating too quickly, you may be losing some sensitivity because the baseline is no longer equal to the sensor\textquotesingle{}s unpressed value. To check this, uncomment \#\+M\+T\+O\+U\+C\+H\+\_\+\+C\+O\+M\+M\+\_\+\+A\+S\+C\+I\+I\+\_\+\+B\+A\+S\+E\+L\+I\+N\+E in the configuration file and view the baseline in real time with the reading.~\newline
+ ~\newline
+ If the baseline is updating too quickly, you can slow it down by increasing the value of \#\+M\+T\+O\+U\+C\+H\+\_\+\+B\+A\+S\+E\+L\+I\+N\+E\+\_\+\+W\+E\+I\+G\+H\+T and \#\+M\+T\+O\+U\+C\+H\+\_\+\+B\+A\+S\+E\+L\+I\+N\+E\+\_\+\+R\+A\+T\+E.~\newline
+ ~\newline
+ If the baseline is becoming corrupted due to fast tapping on the sensor, use the \#\+M\+T\+O\+U\+C\+H\+\_\+\+N\+E\+G\+A\+T\+I\+V\+E\+\_\+\+C\+A\+P\+A\+C\+I\+T\+A\+N\+C\+E configuration option to adjust how the baseline behaves when the reading has fallen below the baseline. For fast-\/tapping systems, setting this value to 1 is recommended. Using the \textquotesingle{}2\textquotesingle{} value for this option is only recommended for systems that are not going to have any noise spikes.\end{DoxyItemize}
+~\newline
+
+
+\begin{DoxyItemize}
+\item {\bfseries 5. Decrease the amount of parasitic capacitance affecting the sensor and its trace.}~\newline
+~\newline
+ The amount of parasitic capacitance on the sensor will directly impact its maximum level of sensitivity. Eliminate ground planes near your sensor and make sure its trace path is not running near any high-\/current or digital lines. This is particularly important for proximity sensors and normal touch sensors with long traces. \end{DoxyItemize}
+\hypertarget{ts-ResponseTime}{}\section{Faster Response Time -\/ Optimizing Performance}\label{ts-ResponseTime}
+The response time of your system is going to be determined by the equation\+: 
+\begin{DoxyCode}
+Response Time = mTouch ISR Interrupt Rate * MTOUCH\_NUMBER\_SENSORS * MTOUCH\_SAMPLES\_PER\_SCAN * 
+      MTOUCH\_DEBOUNCE\_PRESS
+\end{DoxyCode}
+
+
+~\newline
+
+
+{\bfseries Suggestions for Making the Response Time Faster\+:}~\newline
+
+
+~\newline
+
+
+\begin{DoxyItemize}
+\item {\bfseries 1. Decrease \#\+M\+T\+O\+U\+C\+H\+\_\+\+S\+A\+M\+P\+L\+E\+S\+\_\+\+P\+E\+R\+\_\+\+S\+C\+A\+N to reduce the amount of oversampling.}~\newline
+~\newline
+ This configuration option should never drop below 10 in normal applications. The higher this value is, the more stable the sensor\textquotesingle{}s readings will be coming out of the acquisition I\+S\+R. However -\/ the diminishing returns on this value follow an exponential curve. In other words, the increase in signal fidelity when changing from 10 to 20 samples is about the same as changing from 40 to 80.\end{DoxyItemize}
+~\newline
+
+
+\begin{DoxyItemize}
+\item {\bfseries 2. Reduce the T\+M\+R0 Prescaler value.}~\newline
+~\newline
+ This will increase the rate at which the timer\textquotesingle{}s counter will increment. Do not set this value to 1\+:1 or the interrupt will occur too quickly to allow processing in the main loop. This value is determined by the application when it initializes the O\+P\+T\+I\+O\+N register. The framework does not adjust this register.\end{DoxyItemize}
+~\newline
+
+
+\begin{DoxyItemize}
+\item {\bfseries 3. Increase the P\+I\+C\textquotesingle{}s oscillator frequency.}~\newline
+~\newline
+ This will increase the rate at which the timer\textquotesingle{}s counter will increment, but will also increase the amount of power needed by the P\+I\+C.\end{DoxyItemize}
+~\newline
+
+
+\begin{DoxyItemize}
+\item {\bfseries 4. Decrease \#\+M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S.}~\newline
+~\newline
+ The m\+Touch Framework scans all sensors completely before returning the result to be processed by the main loop application. Reducing the number of sensors being scanned will reduce the number of times the I\+S\+R must be called before new data is available.\end{DoxyItemize}
+~\newline
+
+
+\begin{DoxyItemize}
+\item {\bfseries 5. Reduce the amount of debouncing required to change sensor states.}~\newline
+~\newline
+ There are two debounce values available\+:~\newline
+ \#\+M\+T\+O\+U\+C\+H\+\_\+\+D\+E\+B\+O\+U\+N\+C\+E\+\_\+\+P\+R\+E\+S\+S is for the R\+E\+L\+E\+A\+S\+E-\/to-\/\+P\+R\+E\+S\+S transition.~\newline
+ \#\+M\+T\+O\+U\+C\+H\+\_\+\+D\+E\+B\+O\+U\+N\+C\+E\+\_\+\+R\+E\+L\+E\+A\+S\+E is for the P\+R\+E\+S\+S-\/to-\/\+R\+E\+L\+E\+A\+S\+E transition. \end{DoxyItemize}
+\hypertarget{ts-Waveform}{}\section{Tuning the C\+V\+D Waveform -\/ Optimizing Performance}\label{ts-Waveform}
+\hypertarget{ts-_waveform_mTouch}{}\subsection{C\+V\+D Waveform Steps}\label{ts-_waveform_mTouch}
+{\ttfamily C\+V\+D \+:\+: Capacitive Voltage Divider}~\newline
+ {\ttfamily D\+A\+C \+:\+: Digital-\/to-\/\+Analog Converter}~\newline
+ {\ttfamily A\+D\+C \+:\+: Analog-\/to-\/\+Digital Converter}~\newline
+ {\ttfamily T\textsubscript{A\+D} \+:\+: Time required for the A\+D\+C to complete one bit conversion.}~\newline
+~\newline
+
+
+
+\begin{DoxyItemize}
+\item Stage 1 (a) \+:\+: Pre-\/charge 
+\begin{DoxyItemize}
+\item The sensor is set to {\bfseries output low}. 
+\item Either\+: 
+\begin{DoxyItemize}
+\item The D\+A\+C is set to {\bfseries V\textsubscript{D\+D}} and the A\+D\+C mux is pointed to the D\+A\+C. 
+\item Another analog channel is set as {\bfseries output high} and the A\+D\+C mux is pointed to that channel. 
+\end{DoxyItemize}
+\item (Delay, based on \#\+C\+V\+D\+\_\+\+C\+H\+O\+L\+D\+\_\+\+C\+H\+A\+R\+G\+E\+\_\+\+D\+E\+L\+A\+Y) 
+\end{DoxyItemize}~\newline
+~\newline
+ 
+\item Stage 2 (a) \+:\+: Acquisition / Settling 
+\begin{DoxyItemize}
+\item The sensor is set to an {\bfseries input}. 
+\item The A\+D\+C mux is updated to point to the sensor. 
+\item (Delay, based on \#\+C\+V\+D\+\_\+\+S\+E\+T\+T\+L\+I\+N\+G\+\_\+\+D\+E\+L\+A\+Y) 
+\end{DoxyItemize}~\newline
+~\newline
+ 
+\item Stage 3 (a) \+:\+: Sampling 
+\begin{DoxyItemize}
+\item The A\+D\+C\textquotesingle{}s G\+O/n\+D\+O\+N\+E bit is set. 
+\item The A\+D\+C mux waits 1/2 T\textsubscript{A\+D} then disconnects from the sensor. 
+\item (The m\+Touch framework automatically delays the necessary time for the mux to disconnect.) 
+\item The sensor is set to an {\bfseries output}. 
+\end{DoxyItemize}
+\end{DoxyItemize}The A\+D\+C conversion completes while math is being performed on the previous m\+Touch scan result. 
+\begin{DoxyItemize}
+\item Stage 1 (b) \+:\+: Pre-\/charge 
+\begin{DoxyItemize}
+\item The sensor is set to {\bfseries output high}. 
+\item Either\+: 
+\begin{DoxyItemize}
+\item The D\+A\+C (digital-\/to-\/analog converter) is set to {\bfseries V\textsubscript{S\+S}} and the A\+D\+C (analog-\/to-\/digital converter) mux is pointed to the D\+A\+C. 
+\item Another analog channel is set as {\bfseries output low} and the A\+D\+C mux is pointed to that channel. 
+\end{DoxyItemize}
+\item (Delay, based on \#\+C\+V\+D\+\_\+\+C\+H\+O\+L\+D\+\_\+\+C\+H\+A\+R\+G\+E\+\_\+\+D\+E\+L\+A\+Y) 
+\end{DoxyItemize}~\newline
+~\newline
+ 
+\item Stage 2 (b) \+:\+: Acquisition / Settling 
+\begin{DoxyItemize}
+\item The sensor is set to an {\bfseries input}. 
+\item The A\+D\+C mux is updated to point to the sensor. 
+\item (Delay, based on \#\+C\+V\+D\+\_\+\+S\+E\+T\+T\+L\+I\+N\+G\+\_\+\+D\+E\+L\+A\+Y) 
+\end{DoxyItemize}~\newline
+~\newline
+ 
+\item Stage 3 (b) \+:\+: Sampling 
+\begin{DoxyItemize}
+\item The A\+D\+C\textquotesingle{}s G\+O/n\+D\+O\+N\+E bit is set. 
+\item The A\+D\+C mux waits 1/2 T\textsubscript{A\+D} then disconnects from the sensor. 
+\item (The m\+Touch framework automatically delays the necessary time for the mux to disconnect.) 
+\item The sensor is set to an {\bfseries output}. 
+\end{DoxyItemize}
+\end{DoxyItemize}The A\+D\+C conversion completes. When finished, the first scan is subtracted from the second. The second scan is offset by 1024 to make sure this subtract never goes negative.\hypertarget{ts-_waveform_mTouch}{}\subsection{C\+V\+D Waveform Steps}\label{ts-_waveform_mTouch}
+Below is a picture of what the C\+V\+D waveform should look like on a scope. Note that sensor lines are used both for scanning themselves and the other sensors. You may notice the sensor being pulled high and low during other sensor\textquotesingle{}s scans.
+
+
+
+The m\+Touch framework provides the ability to tune the timing of C\+V\+D waveform for specific hardware designs. The amount of parasitic capacitance, the size of the sensor, the size of the sensor\textquotesingle{}s series resistor, and V\textsubscript{D\+D} all play a role in determining the amount of time required to charge/discharge during each step of the scan.
+
+ ~\newline
+
+
+\begin{DoxyItemize}
+\item {\bfseries C\+V\+D\+\_\+\+C\+H\+O\+L\+D\+\_\+\+C\+H\+A\+R\+G\+E\+\_\+\+D\+E\+L\+A\+Y}~\newline
+~\newline
+ This value determines the amount of time provided for charging the internal hold capacitor of the A\+D\+C. ~\newline
+~\newline
+ If this value is {\bfseries too small}\+: There will be noticable crosstalk between closely-\/indexed sensors that is not related to the hardware layout of the application.~\newline
+ If this value is {\bfseries too large}\+: The m\+Touch I\+S\+R will take an unnecessarily long amount of time to execute.~\newline
+~\newline
+ {\bfseries To correctly set this value\+:} 
+\begin{DoxyEnumerate}
+\item Set this value to 0, compile and program. 
+\item Look at the raw values on the m\+Touch One-\/\+Way G\+U\+I or through a terminal program.~\newline
+ You can find the m\+Touch One-\/\+Way G\+U\+I in {\ttfamily Your M\+L\+A Directory/m\+Touch\+Cap\+Demos/\+Utilities/\+P\+I\+C12\+F P\+I\+C16\+F Utilities/m\+Touch One-\/\+Way G\+U\+I} 
+\item Produce the largest shift possible on the sensor with the highest amount of capacitance by pressing on it. (\char`\"{}\+Highest Capacitance\char`\"{} usually corresponds to the sensor with the highest unpressed raw value.) 
+\begin{DoxyItemize}
+\item Do you notice a strange crosstalk behavior on a different sensor? If no, leave this value to 0. If yes... 
+\end{DoxyItemize}
+\item Increase the delay until the crosstalk behavior is eliminated. 
+\end{DoxyEnumerate}~\newline
+ Once you\textquotesingle{}ve solved the crosstalk for the sensor with the highest amount of capacitance, the others will be fine as well and you have correctly tuned the Chold delay time.\end{DoxyItemize}
+~\newline
+
+
+\begin{DoxyItemize}
+\item {\bfseries C\+V\+D\+\_\+\+S\+E\+T\+T\+L\+I\+N\+G\+\_\+\+D\+E\+L\+A\+Y}~\newline
+~\newline
+ This value determines the amount of time provided for the external sensor and internal hold capacitor to charge-\/average their voltages.~\newline
+~\newline
+ If this value is {\bfseries too small}\+: The sensors will not be as sensitive as they could be and your sensor\textquotesingle{}s readings will be V\textsubscript{D\+D} dependant.~\newline
+ If this value is {\bfseries too large}\+: The noise immunity of the system will not be as robust as it could be.~\newline
+~\newline
+ {\bfseries To correctly set this value\+:} 
+\begin{DoxyEnumerate}
+\item Set this value to 0, compile and program. 
+\item Look at the raw values on the m\+Touch One-\/\+Way G\+U\+I or through a terminal program while powering the system at the desired V\textsubscript{D\+D} level.~\newline
+ You can find the m\+Touch One-\/\+Way G\+U\+I in {\ttfamily Your M\+L\+A Directory/m\+Touch\+Cap\+Demos/\+Utilities/\+P\+I\+C12\+F P\+I\+C16\+F Utilities/m\+Touch One-\/\+Way G\+U\+I} 
+\item Adjust V\textsubscript{D\+D} by plus and minus 0.\+5\+V 
+\begin{DoxyItemize}
+\item Do you notice any change in the unpressed value as V\textsubscript{D\+D} is changing? If no, leave this value alone. If yes... 
+\end{DoxyItemize}
+\item Increase the delay until the sensor\textquotesingle{}s reading no longer changes as V\textsubscript{D\+D} changes. 
+\end{DoxyEnumerate}~\newline
+ Once this has occurred, the settling time has been correctly tuned to provide the maximum amount of sensitivity while minimizing the framework\textquotesingle{}s susceptibility to noise. \end{DoxyItemize}
+\hypertarget{digCom}{}\section{Communication Implementation}\label{digCom}
+{\bfseries This is for one-\/way communications and only describes the packet structure for the m\+Touch One-\/\+Way G\+U\+I}.
+
+The communication module of the m\+Touch Framework has been designed to talk to the included m\+Touch One-\/\+Way G\+U\+I by default but can easily be adapted to meet your needs. The framework handles all initialization requirements once it knows the P\+I\+C\textquotesingle{}s oscillator speed and desired baud rate.
+
+The data packets being sent to the G\+U\+I are as shown\+: 
+\begin{DoxyCode}
+16bitMaskofSensorStates;Sensor0Reading;Sensor1Reading;...;SensorNReading(CR)(LF)
+\end{DoxyCode}
+ which looks like this when populated\+: 
+\begin{DoxyCode}
+00000;02301;02354;02332;02296;02318
+\end{DoxyCode}
+ \begin{DoxyNote}{Note}
+A {\ttfamily 1} in the bit mask means the sensor is pressed. A {\ttfamily 0} means that it is released.
+\end{DoxyNote}
+The data is sent in decimal format with a maximum of 5 digits by default. 

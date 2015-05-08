@@ -1,0 +1,108 @@
+\hypertarget{usb__host__charger_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+U\+S\+B/\+Charger Host Driver/usb\+\_\+host\+\_\+charger.c File Reference}
+\label{usb__host__charger_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+U\+S\+B/\+Charger Host Driver/usb\+\_\+host\+\_\+charger.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+U\+S\+B/\+Charger Host Driver/usb\+\_\+host\+\_\+charger.\+c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Generic\+Type\+Defs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}U\+S\+B/usb.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}U\+S\+B/usb\+\_\+host\+\_\+charger.\+h\char`\"{}}\\*
+Include dependency graph for usb\+\_\+host\+\_\+charger.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__charger_8c_a0efb2c1bc0f7ddb0c32149c401d8f506}{U\+S\+B\+Host\+Charger\+Initialize} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} address, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} flags, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} client\+Driver\+I\+D)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__charger_8c_abc3228ca8fd62b202f1aa62381cb528b}{U\+S\+B\+Host\+Charger\+Event\+Handler} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} address, \hyperlink{usb__common_8h_a58f011a3d1f4cad0e69a9bf036fb847c}{U\+S\+B\+\_\+\+E\+V\+E\+N\+T} event, void $\ast$data, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} size)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__charger_8c_ab1ede38f6dc24b865c38083e713c02f3}{U\+S\+B\+Host\+Charger\+Device\+Detached} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} device\+Address)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__charger_8c_ac4c2839e36a97122a7ab14c9c00391b6}{U\+S\+B\+Host\+Charger\+Get\+Device\+Address} (\hyperlink{struct_u_s_b___c_h_a_r_g_i_n_g___d_e_v_i_c_e___i_d}{U\+S\+B\+\_\+\+C\+H\+A\+R\+G\+I\+N\+G\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+D} $\ast$p\+Dev\+I\+D)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{usb__host__charger_8c_adfd67491fb91ebf54077f50ed8be2760}{current\+Charging\+Record}
+\item 
+\hyperlink{struct_u_s_b___c_h_a_r_g_i_n_g___d_e_v_i_c_e}{U\+S\+B\+\_\+\+C\+H\+A\+R\+G\+I\+N\+G\+\_\+\+D\+E\+V\+I\+C\+E} \hyperlink{usb__host__charger_8c_a170b167913de8dacd8b12b334043f3a6}{usb\+Charging\+Devices} \mbox{[}\hyperlink{usb__host__charger_8h_ab4e744d4601d6a513ad6616ed6faec23}{U\+S\+B\+\_\+\+M\+A\+X\+\_\+\+C\+H\+A\+R\+G\+I\+N\+G\+\_\+\+D\+E\+V\+I\+C\+E\+S}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{usb__host__charger_8c_ab1ede38f6dc24b865c38083e713c02f3}{}\index{usb\+\_\+host\+\_\+charger.\+c@{usb\+\_\+host\+\_\+charger.\+c}!U\+S\+B\+Host\+Charger\+Device\+Detached@{U\+S\+B\+Host\+Charger\+Device\+Detached}}
+\index{U\+S\+B\+Host\+Charger\+Device\+Detached@{U\+S\+B\+Host\+Charger\+Device\+Detached}!usb\+\_\+host\+\_\+charger.\+c@{usb\+\_\+host\+\_\+charger.\+c}}
+\subsubsection[{U\+S\+B\+Host\+Charger\+Device\+Detached}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} U\+S\+B\+Host\+Charger\+Device\+Detached (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{device\+Address}
+\end{DoxyParamCaption}
+)}\label{usb__host__charger_8c_ab1ede38f6dc24b865c38083e713c02f3}
+
+
+Definition at line 284 of file usb\+\_\+host\+\_\+charger.\+c.
+
+\hypertarget{usb__host__charger_8c_abc3228ca8fd62b202f1aa62381cb528b}{}\index{usb\+\_\+host\+\_\+charger.\+c@{usb\+\_\+host\+\_\+charger.\+c}!U\+S\+B\+Host\+Charger\+Event\+Handler@{U\+S\+B\+Host\+Charger\+Event\+Handler}}
+\index{U\+S\+B\+Host\+Charger\+Event\+Handler@{U\+S\+B\+Host\+Charger\+Event\+Handler}!usb\+\_\+host\+\_\+charger.\+c@{usb\+\_\+host\+\_\+charger.\+c}}
+\subsubsection[{U\+S\+B\+Host\+Charger\+Event\+Handler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} U\+S\+B\+Host\+Charger\+Event\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{address, }
+\item[{{\bf U\+S\+B\+\_\+\+E\+V\+E\+N\+T}}]{event, }
+\item[{void $\ast$}]{data, }
+\item[{{\bf D\+W\+O\+R\+D}}]{size}
+\end{DoxyParamCaption}
+)}\label{usb__host__charger_8c_abc3228ca8fd62b202f1aa62381cb528b}
+
+
+Definition at line 213 of file usb\+\_\+host\+\_\+charger.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+\hypertarget{usb__host__charger_8c_ac4c2839e36a97122a7ab14c9c00391b6}{}\index{usb\+\_\+host\+\_\+charger.\+c@{usb\+\_\+host\+\_\+charger.\+c}!U\+S\+B\+Host\+Charger\+Get\+Device\+Address@{U\+S\+B\+Host\+Charger\+Get\+Device\+Address}}
+\index{U\+S\+B\+Host\+Charger\+Get\+Device\+Address@{U\+S\+B\+Host\+Charger\+Get\+Device\+Address}!usb\+\_\+host\+\_\+charger.\+c@{usb\+\_\+host\+\_\+charger.\+c}}
+\subsubsection[{U\+S\+B\+Host\+Charger\+Get\+Device\+Address}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} U\+S\+B\+Host\+Charger\+Get\+Device\+Address (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+S\+B\+\_\+\+C\+H\+A\+R\+G\+I\+N\+G\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+D} $\ast$}]{p\+Dev\+I\+D}
+\end{DoxyParamCaption}
+)}\label{usb__host__charger_8c_ac4c2839e36a97122a7ab14c9c00391b6}
+
+
+Definition at line 327 of file usb\+\_\+host\+\_\+charger.\+c.
+
+\hypertarget{usb__host__charger_8c_a0efb2c1bc0f7ddb0c32149c401d8f506}{}\index{usb\+\_\+host\+\_\+charger.\+c@{usb\+\_\+host\+\_\+charger.\+c}!U\+S\+B\+Host\+Charger\+Initialize@{U\+S\+B\+Host\+Charger\+Initialize}}
+\index{U\+S\+B\+Host\+Charger\+Initialize@{U\+S\+B\+Host\+Charger\+Initialize}!usb\+\_\+host\+\_\+charger.\+c@{usb\+\_\+host\+\_\+charger.\+c}}
+\subsubsection[{U\+S\+B\+Host\+Charger\+Initialize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} U\+S\+B\+Host\+Charger\+Initialize (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{address, }
+\item[{{\bf D\+W\+O\+R\+D}}]{flags, }
+\item[{{\bf B\+Y\+T\+E}}]{client\+Driver\+I\+D}
+\end{DoxyParamCaption}
+)}\label{usb__host__charger_8c_a0efb2c1bc0f7ddb0c32149c401d8f506}
+
+
+Definition at line 128 of file usb\+\_\+host\+\_\+charger.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{usb__host__charger_8c_adfd67491fb91ebf54077f50ed8be2760}{}\index{usb\+\_\+host\+\_\+charger.\+c@{usb\+\_\+host\+\_\+charger.\+c}!current\+Charging\+Record@{current\+Charging\+Record}}
+\index{current\+Charging\+Record@{current\+Charging\+Record}!usb\+\_\+host\+\_\+charger.\+c@{usb\+\_\+host\+\_\+charger.\+c}}
+\subsubsection[{current\+Charging\+Record}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} current\+Charging\+Record}\label{usb__host__charger_8c_adfd67491fb91ebf54077f50ed8be2760}
+
+
+Definition at line 76 of file usb\+\_\+host\+\_\+charger.\+c.
+
+\hypertarget{usb__host__charger_8c_a170b167913de8dacd8b12b334043f3a6}{}\index{usb\+\_\+host\+\_\+charger.\+c@{usb\+\_\+host\+\_\+charger.\+c}!usb\+Charging\+Devices@{usb\+Charging\+Devices}}
+\index{usb\+Charging\+Devices@{usb\+Charging\+Devices}!usb\+\_\+host\+\_\+charger.\+c@{usb\+\_\+host\+\_\+charger.\+c}}
+\subsubsection[{usb\+Charging\+Devices}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+S\+B\+\_\+\+C\+H\+A\+R\+G\+I\+N\+G\+\_\+\+D\+E\+V\+I\+C\+E} usb\+Charging\+Devices\mbox{[}{\bf U\+S\+B\+\_\+\+M\+A\+X\+\_\+\+C\+H\+A\+R\+G\+I\+N\+G\+\_\+\+D\+E\+V\+I\+C\+E\+S}\mbox{]}}\label{usb__host__charger_8c_a170b167913de8dacd8b12b334043f3a6}
+
+
+Definition at line 77 of file usb\+\_\+host\+\_\+charger.\+c.
+

@@ -1,0 +1,28 @@
+var jidctint_8c =
+[
+    [ "BITS_IN_JSAMPLE", "jidctint_8c.html#a9fa8f69a0c7688843792648c12c655f7", null ],
+    [ "CONST_BITS", "jidctint_8c.html#a60551099e0e59afa6bcdb5f8afc32230", null ],
+    [ "DCTELEM", "jidctint_8c.html#a7240c16d369c637fe4cabc4c129b2d2b", null ],
+    [ "DCTSIZE", "jidctint_8c.html#a44825d9811bddd408cb8db623b83aacb", null ],
+    [ "DCTSIZE2", "jidctint_8c.html#af89dff4200396563157d4a1e59da3bdf", null ],
+    [ "DEQUANTIZE", "jidctint_8c.html#a37697e1838dc75e1e69368bff4c60cea", null ],
+    [ "DESCALE", "jidctint_8c.html#affd087378f3038026c7395cd02d2ac86", null ],
+    [ "FIX_0_298631336", "jidctint_8c.html#a92c934dbd3bacb5f20dee7bfae4a5bf6", null ],
+    [ "FIX_0_390180644", "jidctint_8c.html#a56a1c93bfc12024497bb0a582e3449a0", null ],
+    [ "FIX_0_541196100", "jidctint_8c.html#a69e116dc293f6d30c469d5f6b1cc7e25", null ],
+    [ "FIX_0_765366865", "jidctint_8c.html#a5a1b66fd74e098a471bbed4ef8dada29", null ],
+    [ "FIX_0_899976223", "jidctint_8c.html#abf3678750fca4008f6c26fbc4dc4cc95", null ],
+    [ "FIX_1_175875602", "jidctint_8c.html#a8e6a809ae2970a298bc917cbc3ac6447", null ],
+    [ "FIX_1_501321110", "jidctint_8c.html#a6e352b4e627b7804da9260329ebfc1aa", null ],
+    [ "FIX_1_847759065", "jidctint_8c.html#aae01f5a981ce1fb5a0bb0160932c24ea", null ],
+    [ "FIX_1_961570560", "jidctint_8c.html#aa1f12d278a0a64e5c603ac6eff53e383", null ],
+    [ "FIX_2_053119869", "jidctint_8c.html#a281d26d03f6272e278cc01f6aab70426", null ],
+    [ "FIX_2_562915447", "jidctint_8c.html#a6ce4d6e71f32b35291f42c7ba0f420bc", null ],
+    [ "FIX_3_072711026", "jidctint_8c.html#ad73a6abedd72dd5bfb212b4b96d6c2ba", null ],
+    [ "INT32", "jidctint_8c.html#aac92c5ec332dafe0abb24688dad1b795", null ],
+    [ "MULTIPLY", "jidctint_8c.html#aac4a9f02ec45ccb867b662d227b29de0", null ],
+    [ "NO_ZERO_ROW_TEST", "jidctint_8c.html#a18ee9371e9fc23cff4000ee5d9356520", null ],
+    [ "PASS1_BITS", "jidctint_8c.html#a531b3898a04cc04bf727fa41b69f0fd8", null ],
+    [ "range_limit", "jidctint_8c.html#aebb4a6c1803bea878c71c95ca0a61f83", null ],
+    [ "jpeg_idct_islow", "jidctint_8c.html#a5d3de90f4a3fab9fc67986e568a8a0e9", null ]
+];

@@ -1,0 +1,47 @@
+var _f_s_i_o_8h =
+[
+    [ "FILEFLAGS", "struct_f_i_l_e_f_l_a_g_s.html", "struct_f_i_l_e_f_l_a_g_s" ],
+    [ "FSFILE", "struct_f_s_f_i_l_e.html", "struct_f_s_f_i_l_e" ],
+    [ "FS_DISK_PROPERTIES", "struct_f_s___d_i_s_k___p_r_o_p_e_r_t_i_e_s.html", "struct_f_s___d_i_s_k___p_r_o_p_e_r_t_i_e_s" ],
+    [ "SearchRec", "struct_search_rec.html", "struct_search_rec" ],
+    [ "FALSE", "_f_s_i_o_8h.html#aa93f0eb578d23995850d61f7d61c55c1", null ],
+    [ "FILE_NAME_SIZE", "_f_s_i_o_8h.html#aa7a7fd4622267bc1b90eca7fbf99c7dd", null ],
+    [ "FILE_NAME_SIZE_8P3", "_f_s_i_o_8h.html#a8736a0b15f6c3942599baa3a0bae6b11", null ],
+    [ "FS_APPEND", "_f_s_i_o_8h.html#a769cf3391a06620a2f0965fb2831595f", null ],
+    [ "FS_APPENDPLUS", "_f_s_i_o_8h.html#abe41e3b76dc3b2e30e73bec24d84d99a", null ],
+    [ "FS_READ", "_f_s_i_o_8h.html#ad4076f58bb5ad9101461c47667521995", null ],
+    [ "FS_READPLUS", "_f_s_i_o_8h.html#afc9fc8e7955ee13b8d1ca6e750951d20", null ],
+    [ "FS_WRITE", "_f_s_i_o_8h.html#aef04baaf5affe32e8a65fc3f1c976b3b", null ],
+    [ "FS_WRITEPLUS", "_f_s_i_o_8h.html#adcbd2f550b3a0987ce1774e9374f047f", null ],
+    [ "MASK_MAX_FILE_ENTRY_LIMIT_BITS", "_f_s_i_o_8h.html#af4194c06062da7a184d1085714a446c6", null ],
+    [ "MAX_FILE_NAME_LENGTH_LFN", "_f_s_i_o_8h.html#a2a61b9e32a14d0f218f0f234150de0d0", null ],
+    [ "SEEK_CUR", "_f_s_i_o_8h.html#a4c8d0b76b470ba65a43ca46a88320f39", null ],
+    [ "SEEK_END", "_f_s_i_o_8h.html#ad2a2e6c114780c3071efd24f16c7f7d8", null ],
+    [ "SEEK_SET", "_f_s_i_o_8h.html#a0d112bae8fd35be772185b6ec6bcbe64", null ],
+    [ "TOTAL_FILE_SIZE", "_f_s_i_o_8h.html#a544506222d80a5e3f632cb0dcb3ebacf", null ],
+    [ "TOTAL_FILE_SIZE_8P3", "_f_s_i_o_8h.html#a684c76b9390522b07ad010dcdf58d8a5", null ],
+    [ "TRUE", "_f_s_i_o_8h.html#aa8cecfc5c5c054d2875c03e77b7be15d", null ],
+    [ "VALUE_BASED_ON_ENTRIES_PER_CLUSTER", "_f_s_i_o_8h.html#a6aaf010609740e8a0e4197201442f373", null ],
+    [ "VALUE_DOTDOT_CLUSTER_VALUE_FOR_ROOT", "_f_s_i_o_8h.html#acecb0527b7fc4827aaac594454dd15ed", null ],
+    [ "FS_DISK_ERRORS", "_f_s_i_o_8h.html#a6c1cdd843f40dafd6175a291d46083c1", [
+      [ "FS_GET_PROPERTIES_NO_ERRORS", "_f_s_i_o_8h.html#a6c1cdd843f40dafd6175a291d46083c1acece5c82372a4d5160a2fbebc345cd4e", null ],
+      [ "FS_GET_PROPERTIES_DISK_NOT_MOUNTED", "_f_s_i_o_8h.html#a6c1cdd843f40dafd6175a291d46083c1ab1f2ffeac8d68072b04f6aa6e5327698", null ],
+      [ "FS_GET_PROPERTIES_CLUSTER_FAILURE", "_f_s_i_o_8h.html#a6c1cdd843f40dafd6175a291d46083c1a851c36e797913c93a30332f27381a203", null ],
+      [ "FS_GET_PROPERTIES_STILL_WORKING", "_f_s_i_o_8h.html#a6c1cdd843f40dafd6175a291d46083c1a8ba0c568cece81feb211c8f1e07054a5", null ]
+    ] ],
+    [ "SEARCH_TYPE", "_f_s_i_o_8h.html#afe2e63c1d1f2c5472931d6347b9bb04b", [
+      [ "LOOK_FOR_EMPTY_ENTRY", "_f_s_i_o_8h.html#afe2e63c1d1f2c5472931d6347b9bb04ba99ec77bb0654fc1c24057df1d0eaa4bf", null ],
+      [ "LOOK_FOR_MATCHING_ENTRY", "_f_s_i_o_8h.html#afe2e63c1d1f2c5472931d6347b9bb04ba54a096da225d4e73e37c3566462ad1b3", null ]
+    ] ],
+    [ "FILEget_next_cluster", "_f_s_i_o_8h.html#a11c64fd4e3052b4db1ace3e6da53512b", null ],
+    [ "FSCreateMBR", "_f_s_i_o_8h.html#a286ae266e1bf38be0cbc665d7b973a28", null ],
+    [ "FSerror", "_f_s_i_o_8h.html#abbe2bcb5a3adb480d6fed81487d3e74e", null ],
+    [ "FSfclose", "_f_s_i_o_8h.html#a7af3ca3a0534ded81fcc5d0744a2428e", null ],
+    [ "FSfeof", "_f_s_i_o_8h.html#aec3a02f0851654b4c3e584a241f75e6f", null ],
+    [ "FSfopen", "_f_s_i_o_8h.html#a80780b69226fc956fb01be96e3dd4e66", null ],
+    [ "FSfread", "_f_s_i_o_8h.html#ae2416613659351f120d760526eb44d16", null ],
+    [ "FSfseek", "_f_s_i_o_8h.html#a919fabb3203e0eacf711b957bf803c10", null ],
+    [ "FSftell", "_f_s_i_o_8h.html#a9e906fe417369377d4cb15dcaec8b02a", null ],
+    [ "FSInit", "_f_s_i_o_8h.html#a77bf783068cdee8bbca1f73af66cb1c5", null ],
+    [ "FSrewind", "_f_s_i_o_8h.html#addb98c8f53936a7ea80ffca6c6d5cb54", null ]
+];

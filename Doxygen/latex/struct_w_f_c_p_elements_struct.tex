@@ -1,0 +1,153 @@
+\hypertarget{struct_w_f_c_p_elements_struct}{}\section{W\+F\+C\+P\+Elements\+Struct Struct Reference}
+\label{struct_w_f_c_p_elements_struct}\index{W\+F\+C\+P\+Elements\+Struct@{W\+F\+C\+P\+Elements\+Struct}}
+
+
+{\ttfamily \#include $<$W\+F\+Api.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{struct_w_f_c_p_elements_struct_ae4db714f99c265eab8eebaf9427da658}{ssid} \mbox{[}W\+F\+\_\+\+M\+A\+X\+\_\+\+S\+S\+I\+D\+\_\+\+L\+E\+N\+G\+T\+H\mbox{]}
+\item 
+\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{struct_w_f_c_p_elements_struct_a6ba08c6781f28198648162e150327c27}{bssid} \mbox{[}W\+F\+\_\+\+B\+S\+S\+I\+D\+\_\+\+L\+E\+N\+G\+T\+H\mbox{]}
+\item 
+\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{struct_w_f_c_p_elements_struct_af95e9e1e24ae609454cc1eb88012c04d}{ssid\+Length}
+\item 
+\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{struct_w_f_c_p_elements_struct_a63d08f748af835299345aa02efd9b4ab}{security\+Type}
+\item 
+\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{struct_w_f_c_p_elements_struct_a4ec2e9f3ea02fabf92dc6d36c4b671d0}{security\+Key} \mbox{[}W\+F\+\_\+\+M\+A\+X\+\_\+\+S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+N\+G\+T\+H\mbox{]}
+\item 
+\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{struct_w_f_c_p_elements_struct_a3cdbd482e43e3e9029a2ac82327949a3}{security\+Key\+Length}
+\item 
+\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{struct_w_f_c_p_elements_struct_a25978a81d129c6ae3785d0719042be93}{wep\+Default\+Key\+Id}
+\item 
+\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{struct_w_f_c_p_elements_struct_a8b78120308e3f3ba6aeaa25472e8e662}{network\+Type}
+\item 
+\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{struct_w_f_c_p_elements_struct_acd6f10e30c5995c8bfcd0501c695339b}{ad\+Hoc\+Behavior}
+\item 
+\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{struct_w_f_c_p_elements_struct_adb1accabdfe519fd23c21160bbb0f5eb}{hidden\+S\+S\+I\+D}
+\item 
+\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{struct_w_f_c_p_elements_struct_a3a4675b141c7c92543176ffa15ae6c60}{wep\+Key\+Type}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 489 of file W\+F\+Api.\+h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{struct_w_f_c_p_elements_struct_acd6f10e30c5995c8bfcd0501c695339b}{}\index{W\+F\+C\+P\+Elements\+Struct@{W\+F\+C\+P\+Elements\+Struct}!ad\+Hoc\+Behavior@{ad\+Hoc\+Behavior}}
+\index{ad\+Hoc\+Behavior@{ad\+Hoc\+Behavior}!W\+F\+C\+P\+Elements\+Struct@{W\+F\+C\+P\+Elements\+Struct}}
+\subsubsection[{ad\+Hoc\+Behavior}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} ad\+Hoc\+Behavior}\label{struct_w_f_c_p_elements_struct_acd6f10e30c5995c8bfcd0501c695339b}
+Only applicable if network\+Type is W\+F\+\_\+\+A\+D\+H\+O\+C. Configures Adhoc behavior. Choices are\+: \begin{TabularC}{0}
+\hline
+\end{TabularC}
+Attempt to connect to existing network. If that fails, then start a network. W\+F\+\_\+\+A\+D\+H\+O\+C\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+O\+N\+L\+Y Connect only to an existing network. Do not start a network. W\+F\+\_\+\+A\+D\+H\+O\+C\+\_\+\+S\+T\+A\+R\+T\+\_\+\+O\+N\+L\+Y Only start a network. 
+
+Default\+: W\+F\+\_\+\+A\+D\+H\+O\+C\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+H\+E\+N\+\_\+\+S\+T\+A\+R\+T 
+
+Definition at line 611 of file W\+F\+Api.\+h.
+
+\hypertarget{struct_w_f_c_p_elements_struct_a6ba08c6781f28198648162e150327c27}{}\index{W\+F\+C\+P\+Elements\+Struct@{W\+F\+C\+P\+Elements\+Struct}!bssid@{bssid}}
+\index{bssid@{bssid}!W\+F\+C\+P\+Elements\+Struct@{W\+F\+C\+P\+Elements\+Struct}}
+\subsubsection[{bssid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} bssid\mbox{[}W\+F\+\_\+\+B\+S\+S\+I\+D\+\_\+\+L\+E\+N\+G\+T\+H\mbox{]}}\label{struct_w_f_c_p_elements_struct_a6ba08c6781f28198648162e150327c27}
+Basic Service Set Identifier, always 6 bytes. This is the 48-\/bit M\+A\+C of the S\+S\+I\+D. It is an optional field that can be used to specify a specific S\+S\+I\+D if more than one A\+P exists with the same S\+S\+I\+D. This field can also be used in lieu of the S\+S\+I\+D.
+
+Set each byte to 0x\+F\+F if B\+S\+S\+I\+D is not going to be used. Default\+: B\+S\+S\+I\+D not used (all F\+F’s) 
+
+Definition at line 509 of file W\+F\+Api.\+h.
+
+\hypertarget{struct_w_f_c_p_elements_struct_adb1accabdfe519fd23c21160bbb0f5eb}{}\index{W\+F\+C\+P\+Elements\+Struct@{W\+F\+C\+P\+Elements\+Struct}!hidden\+S\+S\+I\+D@{hidden\+S\+S\+I\+D}}
+\index{hidden\+S\+S\+I\+D@{hidden\+S\+S\+I\+D}!W\+F\+C\+P\+Elements\+Struct@{W\+F\+C\+P\+Elements\+Struct}}
+\subsubsection[{hidden\+S\+S\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} hidden\+S\+S\+I\+D}\label{struct_w_f_c_p_elements_struct_adb1accabdfe519fd23c21160bbb0f5eb}
+1 -\/ enable hidden ssid in adhoc mode 
+
+Definition at line 615 of file W\+F\+Api.\+h.
+
+\hypertarget{struct_w_f_c_p_elements_struct_a8b78120308e3f3ba6aeaa25472e8e662}{}\index{W\+F\+C\+P\+Elements\+Struct@{W\+F\+C\+P\+Elements\+Struct}!network\+Type@{network\+Type}}
+\index{network\+Type@{network\+Type}!W\+F\+C\+P\+Elements\+Struct@{W\+F\+C\+P\+Elements\+Struct}}
+\subsubsection[{network\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} network\+Type}\label{struct_w_f_c_p_elements_struct_a8b78120308e3f3ba6aeaa25472e8e662}
+W\+F\+\_\+\+I\+N\+F\+R\+A\+S\+T\+R\+U\+C\+T\+U\+R\+E / W\+F\+\_\+\+A\+D\+H\+O\+C / W\+F\+\_\+\+P2\+P / W\+F\+\_\+\+S\+O\+F\+T\+\_\+\+A\+P
+
+Default\+: W\+F\+\_\+\+I\+N\+F\+R\+A\+S\+T\+R\+U\+C\+T\+U\+R\+E 
+
+Definition at line 599 of file W\+F\+Api.\+h.
+
+\hypertarget{struct_w_f_c_p_elements_struct_a4ec2e9f3ea02fabf92dc6d36c4b671d0}{}\index{W\+F\+C\+P\+Elements\+Struct@{W\+F\+C\+P\+Elements\+Struct}!security\+Key@{security\+Key}}
+\index{security\+Key@{security\+Key}!W\+F\+C\+P\+Elements\+Struct@{W\+F\+C\+P\+Elements\+Struct}}
+\subsubsection[{security\+Key}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} security\+Key\mbox{[}W\+F\+\_\+\+M\+A\+X\+\_\+\+S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+K\+E\+Y\+\_\+\+L\+E\+N\+G\+T\+H\mbox{]}}\label{struct_w_f_c_p_elements_struct_a4ec2e9f3ea02fabf92dc6d36c4b671d0}
+Set to N\+U\+L\+L if security\+Type is W\+F\+\_\+\+S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+O\+P\+E\+N. If security\+Key\+Length is 0 this field is ignored. \begin{TabularC}{0}
+\hline
+\end{TabularC}
+Keys If using W\+E\+P this field must contain 4 keys. Each key must be either 5 bytes in length (if security\+Type is W\+F\+\_\+\+S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+E\+P\+\_\+40) or 13 bytes in length (if security\+Type is W\+F\+\_\+\+S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+E\+P\+\_\+104). The keys must be contiguous within this field. For example, if using 5 bytes keys the first key starts at index 0, the second key at index 5, the third key at index 10, and the last key at index 15. Unused keys should be set to all 0’s. W\+P\+A/\+W\+P\+A2 Keys If using W\+P\+A or W\+P\+A2 you can provide the actual binary key or A\+S\+C\+I\+I passphrase used to generate a key. \mbox{[}64 byte array covers all cases of keys or passphrases\mbox{]}. If using this field for a security passphrase the M\+R\+F24\+W will need to calculate the binary key after the call to \hyperlink{_w_f_api_8h_a0b1411e1413a139812e8591c70e6f690}{W\+F\+\_\+\+C\+M\+Connect()} – this can add about 30 seconds to the connection time. 
+
+Default\+: No security key defined 
+
+Definition at line 569 of file W\+F\+Api.\+h.
+
+\hypertarget{struct_w_f_c_p_elements_struct_a3cdbd482e43e3e9029a2ac82327949a3}{}\index{W\+F\+C\+P\+Elements\+Struct@{W\+F\+C\+P\+Elements\+Struct}!security\+Key\+Length@{security\+Key\+Length}}
+\index{security\+Key\+Length@{security\+Key\+Length}!W\+F\+C\+P\+Elements\+Struct@{W\+F\+C\+P\+Elements\+Struct}}
+\subsubsection[{security\+Key\+Length}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} security\+Key\+Length}\label{struct_w_f_c_p_elements_struct_a3cdbd482e43e3e9029a2ac82327949a3}
+Number of bytes used in the security\+Key. Set to 0 if security\+Type is W\+F\+\_\+\+S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+O\+P\+E\+N. \begin{TabularC}{0}
+\hline
+\end{TabularC}
+Keys If security\+Type is W\+F\+\_\+\+S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+E\+P\+\_\+40 or W\+F\+\_\+\+S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+E\+P\+\_\+104 then this field is the length of the four W\+E\+P keys.
+
+Range is 20 if security\+Type is W\+F\+\_\+\+S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+E\+P\+\_\+40 (four 5-\/byte keys), 52 if security\+Type is W\+F\+\_\+\+S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+E\+P\+\_\+104 (four 13-\/byte keys) W\+P\+A/\+W\+P\+A2 Keys If security\+Type is one of the W\+P\+A or W\+P\+A2 choices then this field is the number of bytes in the binary key or the passphrase, whichever is being used.
+
+Default\+: 0 
+
+Definition at line 586 of file W\+F\+Api.\+h.
+
+\hypertarget{struct_w_f_c_p_elements_struct_a63d08f748af835299345aa02efd9b4ab}{}\index{W\+F\+C\+P\+Elements\+Struct@{W\+F\+C\+P\+Elements\+Struct}!security\+Type@{security\+Type}}
+\index{security\+Type@{security\+Type}!W\+F\+C\+P\+Elements\+Struct@{W\+F\+C\+P\+Elements\+Struct}}
+\subsubsection[{security\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} security\+Type}\label{struct_w_f_c_p_elements_struct_a63d08f748af835299345aa02efd9b4ab}
+Designates the desired security level for the connection. Choices are\+: \begin{TabularC}{0}
+\hline
+\end{TabularC}
+No security encryption used. W\+F\+\_\+\+S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+E\+P\+\_\+40 Use W\+E\+P security. W\+E\+P key, using four 5-\/byte keys will be provided in security\+Key. Note that only open authentication is supported for W\+E\+P. W\+F\+\_\+\+S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+E\+P\+\_\+104 Use W\+E\+P security. W\+E\+P key, using four 13-\/byte keys will be provided in security\+Key. Note that only open authentication is supported for W\+E\+P. W\+F\+\_\+\+S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A\+\_\+\+W\+I\+T\+H\+\_\+\+K\+E\+Y Use W\+P\+A security. Binary P\+S\+K (Pre-\/shared Key) key will be provided in security\+Key. W\+F\+\_\+\+S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A\+\_\+\+W\+I\+T\+H\+\_\+\+P\+A\+S\+S\+\_\+\+P\+H\+R\+A\+S\+E Use W\+P\+A security. A\+S\+C\+I\+I W\+P\+A passphrase will be provided in security\+Key and, after a call to \hyperlink{_w_f_api_8h_a0b1411e1413a139812e8591c70e6f690}{W\+F\+\_\+\+C\+M\+Connect()}, the M\+R\+F24\+W will calculate the P\+S\+K key (which can take up to 30 seconds). W\+F\+\_\+\+S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A2\+\_\+\+W\+I\+T\+H\+\_\+\+K\+E\+Y Use W\+P\+A-\/2 security. Binary W\+P\+A-\/2 key will be provided in security\+Key. W\+F\+\_\+\+S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A2\+\_\+\+W\+I\+T\+H\+\_\+\+P\+A\+S\+S\+P\+H\+R\+A\+S\+E Use W\+P\+A-\/2 security. A\+S\+C\+I\+I W\+P\+A-\/2 passphrase will be provided in security\+Key and, after a call to \hyperlink{_w_f_api_8h_a0b1411e1413a139812e8591c70e6f690}{W\+F\+\_\+\+C\+M\+Connect()}, the M\+R\+F24\+W will calculate the P\+S\+K key (which can take up to 30 seconds). W\+F\+\_\+\+S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A\+\_\+\+A\+U\+T\+O\+\_\+\+W\+I\+T\+H\+\_\+\+K\+E\+Y Same as W\+F\+\_\+\+S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A\+\_\+\+W\+I\+T\+H\+\_\+\+K\+E\+Y or W\+F\+\_\+\+S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A2\+\_\+\+W\+I\+T\+H\+\_\+\+K\+E\+Y except connection manager will connect to the A\+P using highest level security the A\+P supports (W\+P\+A or W\+P\+A2). W\+F\+\_\+\+S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A\+\_\+\+A\+U\+T\+O\+\_\+\+W\+I\+T\+H\+\_\+\+P\+A\+S\+S\+P\+H\+R\+A\+S\+E Same as W\+F\+\_\+\+S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A\+\_\+\+W\+I\+T\+H\+\_\+\+P\+A\+S\+S\+\_\+\+P\+H\+R\+A\+S\+E or W\+F\+\_\+\+S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+P\+A2\+\_\+\+W\+I\+T\+H\+\_\+\+P\+A\+S\+S\+\_\+\+P\+H\+R\+A\+S\+E except connection manager will connect to the A\+P using highest level security the A\+P supports (W\+P\+A or W\+P\+A2). 
+
+Default\+: W\+F\+\_\+\+S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+O\+P\+E\+N 
+
+Definition at line 548 of file W\+F\+Api.\+h.
+
+\hypertarget{struct_w_f_c_p_elements_struct_ae4db714f99c265eab8eebaf9427da658}{}\index{W\+F\+C\+P\+Elements\+Struct@{W\+F\+C\+P\+Elements\+Struct}!ssid@{ssid}}
+\index{ssid@{ssid}!W\+F\+C\+P\+Elements\+Struct@{W\+F\+C\+P\+Elements\+Struct}}
+\subsubsection[{ssid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} ssid\mbox{[}W\+F\+\_\+\+M\+A\+X\+\_\+\+S\+S\+I\+D\+\_\+\+L\+E\+N\+G\+T\+H\mbox{]}}\label{struct_w_f_c_p_elements_struct_ae4db714f99c265eab8eebaf9427da658}
+S\+S\+I\+D, which must be less than or equal to 32 characters. Set to all 0’s if not being used. If ssid\+Length is 0 this field is ignored. If S\+S\+I\+D is not defined then the M\+R\+F24\+W, when using this profile to connect, will scan all channels within its regional domain.
+
+Default\+: S\+S\+I\+D not used. 
+
+Definition at line 499 of file W\+F\+Api.\+h.
+
+\hypertarget{struct_w_f_c_p_elements_struct_af95e9e1e24ae609454cc1eb88012c04d}{}\index{W\+F\+C\+P\+Elements\+Struct@{W\+F\+C\+P\+Elements\+Struct}!ssid\+Length@{ssid\+Length}}
+\index{ssid\+Length@{ssid\+Length}!W\+F\+C\+P\+Elements\+Struct@{W\+F\+C\+P\+Elements\+Struct}}
+\subsubsection[{ssid\+Length}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} ssid\+Length}\label{struct_w_f_c_p_elements_struct_af95e9e1e24ae609454cc1eb88012c04d}
+Number of A\+S\+C\+I\+I bytes in ssid. Set to 0 is S\+S\+I\+D is not going to be used.
+
+Default\+: 0 
+
+Definition at line 515 of file W\+F\+Api.\+h.
+
+\hypertarget{struct_w_f_c_p_elements_struct_a25978a81d129c6ae3785d0719042be93}{}\index{W\+F\+C\+P\+Elements\+Struct@{W\+F\+C\+P\+Elements\+Struct}!wep\+Default\+Key\+Id@{wep\+Default\+Key\+Id}}
+\index{wep\+Default\+Key\+Id@{wep\+Default\+Key\+Id}!W\+F\+C\+P\+Elements\+Struct@{W\+F\+C\+P\+Elements\+Struct}}
+\subsubsection[{wep\+Default\+Key\+Id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} wep\+Default\+Key\+Id}\label{struct_w_f_c_p_elements_struct_a25978a81d129c6ae3785d0719042be93}
+This field is only used if security\+Type is W\+F\+\_\+\+S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+E\+P\+\_\+40 or W\+F\+\_\+\+S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+W\+E\+P\+\_\+104. This field designates which of the four W\+E\+P keys defined in security\+Key to use when connecting to a Wi\+Fi network. Only W\+E\+P key index (wep\+Default\+Key\+Id) 0 is used in R\+F module F\+W. 
+
+Definition at line 593 of file W\+F\+Api.\+h.
+
+\hypertarget{struct_w_f_c_p_elements_struct_a3a4675b141c7c92543176ffa15ae6c60}{}\index{W\+F\+C\+P\+Elements\+Struct@{W\+F\+C\+P\+Elements\+Struct}!wep\+Key\+Type@{wep\+Key\+Type}}
+\index{wep\+Key\+Type@{wep\+Key\+Type}!W\+F\+C\+P\+Elements\+Struct@{W\+F\+C\+P\+Elements\+Struct}}
+\subsubsection[{wep\+Key\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} wep\+Key\+Type}\label{struct_w_f_c_p_elements_struct_a3a4675b141c7c92543176ffa15ae6c60}
+0-\/ shared key, 1 -\/ open key 
+
+Definition at line 619 of file W\+F\+Api.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+T\+C\+P\+I\+P Stack/\hyperlink{_w_f_api_8h}{W\+F\+Api.\+h}\end{DoxyCompactItemize}

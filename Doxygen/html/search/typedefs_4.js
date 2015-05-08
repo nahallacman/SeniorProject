@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['data_5fapdu',['DATA_apdu',['../ieee__11073__phd__types_8h.html#a320f023ba441553900480ecb8aba177b',1,'ieee_11073_phd_types.h']]],
+  ['data_5finterface_5fdetails',['DATA_INTERFACE_DETAILS',['../usb__host__cdc_8h.html#a0b9bd66fd9a1433480b5d4d0bc1a28b8',1,'usb_host_cdc.h']]],
+  ['dataproto',['DataProto',['../ieee__11073__phd__types_8h.html#a53b4378eb73bafac24f4b68bf1ca1b7e',1,'ieee_11073_phd_types.h']]],
+  ['dataprotoid',['DataProtoId',['../ieee__11073__phd__types_8h.html#aa8693ba025de8f2a1a1acc6cd487e117',1,'ieee_11073_phd_types.h']]],
+  ['dataprotolist',['DataProtoList',['../ieee__11073__phd__types_8h.html#a5924abcfa2e2634dea5cff83260629b9',1,'ieee_11073_phd_types.h']]],
+  ['datareqid',['DataReqId',['../ieee__11073__phd__types_8h.html#ab2d118926c6a08395e5d075382450ae0',1,'ieee_11073_phd_types.h']]],
+  ['datareqmode',['DataReqMode',['../ieee__11073__phd__types_8h.html#a67ece8901b30cdaafaebedb31a5d7ea7',1,'ieee_11073_phd_types.h']]],
+  ['datareqmodecapab',['DataReqModeCapab',['../ieee__11073__phd__types_8h.html#a47c3341f719a1b0b8cd604c6faf8d84d',1,'ieee_11073_phd_types.h']]],
+  ['datareqmodeflags',['DataReqModeFlags',['../ieee__11073__phd__types_8h.html#ad7a4feb0f9f73e362ab9a2a927cda5bd',1,'ieee_11073_phd_types.h']]],
+  ['datareqresult',['DataReqResult',['../ieee__11073__phd__types_8h.html#a1704f8f986a254596d6bc8b8f64f708a',1,'ieee_11073_phd_types.h']]],
+  ['datarequest',['DataRequest',['../ieee__11073__phd__types_8h.html#a7d76af02fbb43bda919e479316df4b3d',1,'ieee_11073_phd_types.h']]],
+  ['dataresponse',['DataResponse',['../ieee__11073__phd__types_8h.html#ab9be665989a5ce446d7388fb89804cfe',1,'ieee_11073_phd_types.h']]],
+  ['debugcurrent',['DEBUGCURRENT',['../m_touch_debug_8h.html#ad02a897d1d9847b58a8ef112f078e8c6',1,'mTouchDebug.h']]],
+  ['debugdelay',['DEBUGDELAY',['../m_touch_debug_8h.html#a1ebbb4862a3c87782c11d74d86cab586',1,'mTouchDebug.h']]],
+  ['direntry',['DIRENTRY',['../_f_s_i_o_8c.html#a99a49bb2ca7cd3e259598bf9dd4ff5f7',1,'FSIO.c']]],
+  ['draw_5ffunc',['DRAW_FUNC',['../_g_o_l_8h.html#a65ec1f1db8f53555f8b1a7d8a40ea377',1,'GOL.h']]],
+  ['dword',['DWORD',['../_generic_type_defs_8h.html#ad342ac907eb044443153a22f964bf0af',1,'GenericTypeDefs.h']]]
+];

@@ -1,0 +1,138 @@
+\hypertarget{_w_f_mgmt_msg__24_g_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Wi\+Fi/\+W\+F\+Mgmt\+Msg\+\_\+24\+G.c File Reference}
+\label{_w_f_mgmt_msg__24_g_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Wi\+Fi/\+W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Wi\+Fi/\+W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_w_f_mgmt_msg__24_g_8c_a7a2761b3bd45a00435d7ea3ec7dec75d}{Send\+Mgmt\+Msg} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+header, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} header\+Length, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+data, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} data\+Length)
+\item 
+void \hyperlink{_w_f_mgmt_msg__24_g_8c_ac310f58772fd115b232a4afc845b8d76}{Signal\+Mgmt\+Confirm\+Received\+Event} (void)
+\item 
+void \hyperlink{_w_f_mgmt_msg__24_g_8c_a55e056cb81b89b6d74963951bcfdf5ae}{Wait\+For\+Mgmt\+Response} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} expected\+Subtype, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} free\+Action)
+\item 
+void \hyperlink{_w_f_mgmt_msg__24_g_8c_ae72046bc4f3b88d6c6357af96164fa3b}{Wait\+For\+Mgmt\+Response\+And\+Read\+Data} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} expected\+Subtype, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} num\+Data\+Bytes, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} start\+Index, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+data)
+\item 
+void \hyperlink{_w_f_mgmt_msg__24_g_8c_ae74e0d996d10bb28c2fec3bf8c8c89db}{W\+F\+Set\+Func\+State} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} func\+Mask, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} state)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_w_f_mgmt_msg__24_g_8c_a0ea6f0d49e012e09294e577832fa7dc3}{g\+\_\+\+Waiting\+For\+Mgmt\+Response} = \hyperlink{_generic_type_defs_8h_afbf708854fe02af8475a9ba02f3196cbaa1e095cc966dbecf6a0d8aad75348d1a}{F\+A\+L\+S\+E}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_w_f_mgmt_msg__24_g_8c_a7a2761b3bd45a00435d7ea3ec7dec75d}{}\index{W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c@{W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c}!Send\+Mgmt\+Msg@{Send\+Mgmt\+Msg}}
+\index{Send\+Mgmt\+Msg@{Send\+Mgmt\+Msg}!W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c@{W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c}}
+\subsubsection[{Send\+Mgmt\+Msg}]{\setlength{\rightskip}{0pt plus 5cm}void Send\+Mgmt\+Msg (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+header, }
+\item[{{\bf U\+I\+N\+T8}}]{header\+Length, }
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+data, }
+\item[{{\bf U\+I\+N\+T8}}]{data\+Length}
+\end{DoxyParamCaption}
+)}\label{_w_f_mgmt_msg__24_g_8c_a7a2761b3bd45a00435d7ea3ec7dec75d}
+
+
+Definition at line 113 of file W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 0
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+\hypertarget{_w_f_mgmt_msg__24_g_8c_ac310f58772fd115b232a4afc845b8d76}{}\index{W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c@{W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c}!Signal\+Mgmt\+Confirm\+Received\+Event@{Signal\+Mgmt\+Confirm\+Received\+Event}}
+\index{Signal\+Mgmt\+Confirm\+Received\+Event@{Signal\+Mgmt\+Confirm\+Received\+Event}!W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c@{W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c}}
+\subsubsection[{Signal\+Mgmt\+Confirm\+Received\+Event}]{\setlength{\rightskip}{0pt plus 5cm}void Signal\+Mgmt\+Confirm\+Received\+Event (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_mgmt_msg__24_g_8c_ac310f58772fd115b232a4afc845b8d76}
+
+
+Definition at line 176 of file W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c.
+
+\hypertarget{_w_f_mgmt_msg__24_g_8c_a55e056cb81b89b6d74963951bcfdf5ae}{}\index{W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c@{W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c}!Wait\+For\+Mgmt\+Response@{Wait\+For\+Mgmt\+Response}}
+\index{Wait\+For\+Mgmt\+Response@{Wait\+For\+Mgmt\+Response}!W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c@{W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c}}
+\subsubsection[{Wait\+For\+Mgmt\+Response}]{\setlength{\rightskip}{0pt plus 5cm}void Wait\+For\+Mgmt\+Response (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{expected\+Subtype, }
+\item[{{\bf U\+I\+N\+T8}}]{free\+Action}
+\end{DoxyParamCaption}
+)}\label{_w_f_mgmt_msg__24_g_8c_a55e056cb81b89b6d74963951bcfdf5ae}
+
+
+Definition at line 206 of file W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\hypertarget{_w_f_mgmt_msg__24_g_8c_ae72046bc4f3b88d6c6357af96164fa3b}{}\index{W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c@{W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c}!Wait\+For\+Mgmt\+Response\+And\+Read\+Data@{Wait\+For\+Mgmt\+Response\+And\+Read\+Data}}
+\index{Wait\+For\+Mgmt\+Response\+And\+Read\+Data@{Wait\+For\+Mgmt\+Response\+And\+Read\+Data}!W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c@{W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c}}
+\subsubsection[{Wait\+For\+Mgmt\+Response\+And\+Read\+Data}]{\setlength{\rightskip}{0pt plus 5cm}void Wait\+For\+Mgmt\+Response\+And\+Read\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{expected\+Subtype, }
+\item[{{\bf U\+I\+N\+T8}}]{num\+Data\+Bytes, }
+\item[{{\bf U\+I\+N\+T8}}]{start\+Index, }
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+data}
+\end{DoxyParamCaption}
+)}\label{_w_f_mgmt_msg__24_g_8c_ae72046bc4f3b88d6c6357af96164fa3b}
+
+
+Definition at line 330 of file W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 5
+
+
+\hypertarget{_w_f_mgmt_msg__24_g_8c_ae74e0d996d10bb28c2fec3bf8c8c89db}{}\index{W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c@{W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c}!W\+F\+Set\+Func\+State@{W\+F\+Set\+Func\+State}}
+\index{W\+F\+Set\+Func\+State@{W\+F\+Set\+Func\+State}!W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c@{W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c}}
+\subsubsection[{W\+F\+Set\+Func\+State}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+Set\+Func\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{func\+Mask, }
+\item[{{\bf U\+I\+N\+T8}}]{state}
+\end{DoxyParamCaption}
+)}\label{_w_f_mgmt_msg__24_g_8c_ae74e0d996d10bb28c2fec3bf8c8c89db}
+
+
+Definition at line 382 of file W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{_w_f_mgmt_msg__24_g_8c_a0ea6f0d49e012e09294e577832fa7dc3}{}\index{W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c@{W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c}!g\+\_\+\+Waiting\+For\+Mgmt\+Response@{g\+\_\+\+Waiting\+For\+Mgmt\+Response}}
+\index{g\+\_\+\+Waiting\+For\+Mgmt\+Response@{g\+\_\+\+Waiting\+For\+Mgmt\+Response}!W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c@{W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c}}
+\subsubsection[{g\+\_\+\+Waiting\+For\+Mgmt\+Response}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} g\+\_\+\+Waiting\+For\+Mgmt\+Response = {\bf F\+A\+L\+S\+E}}\label{_w_f_mgmt_msg__24_g_8c_a0ea6f0d49e012e09294e577832fa7dc3}
+
+
+Definition at line 81 of file W\+F\+Mgmt\+Msg\+\_\+24\+G.\+c.
+

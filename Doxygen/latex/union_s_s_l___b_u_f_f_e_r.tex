@@ -1,0 +1,78 @@
+\hypertarget{union_s_s_l___b_u_f_f_e_r}{}\section{S\+S\+L\+\_\+\+B\+U\+F\+F\+E\+R Union Reference}
+\label{union_s_s_l___b_u_f_f_e_r}\index{S\+S\+L\+\_\+\+B\+U\+F\+F\+E\+R@{S\+S\+L\+\_\+\+B\+U\+F\+F\+E\+R}}
+
+
+{\ttfamily \#include $<$S\+S\+L.\+h$>$}
+
+
+
+Collaboration diagram for S\+S\+L\+\_\+\+B\+U\+F\+F\+E\+R\+:
+% FIG 0
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\hyperlink{struct_h_a_s_h___s_u_m}{HASH\_SUM} \hyperlink{union_s_s_l___b_u_f_f_e_r_a731167501e52d6b72fc839512360317c}{hash}\\
+\>\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE} \hyperlink{union_s_s_l___b_u_f_f_e_r_a4d816c823a2beb8993b3ef56766bacce}{md5\_hash} \mbox{[}16\mbox{]}\\
+\>\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE} \hyperlink{union_s_s_l___b_u_f_f_e_r_a5d335aa13662b316b20dbc8b6f34b12b}{sha\_hash} \mbox{[}20\mbox{]}\\
+\>\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE} \hyperlink{union_s_s_l___b_u_f_f_e_r_a7b17c7a8a20473315a63c02148759677}{temp} \mbox{[}(\hyperlink{_s_s_l_client_size_8h_a1a30802efbae822f43c0fa208ceea87c}{SSL\_RSA\_CLIENT\_SIZE}/4)-\/sizeof(\hyperlink{struct_h_a_s_h___s_u_m}{HASH\_SUM})-\/16-\/20\mbox{]}\\
+\} \hyperlink{union_s_s_l___b_u_f_f_e_r_aefa66f9631daa4521f6a777625f23f5f}{hashRounds}\\
+
+\end{tabbing}\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{union_s_s_l___b_u_f_f_e_r_a4c25cd300ec889961a45436274fc1093}{full} \mbox{[}(\hyperlink{_s_s_l_client_size_8h_a1a30802efbae822f43c0fa208ceea87c}{S\+S\+L\+\_\+\+R\+S\+A\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+S\+I\+Z\+E}/4)\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 242 of file S\+S\+L.\+h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{union_s_s_l___b_u_f_f_e_r_a4c25cd300ec889961a45436274fc1093}{}\index{S\+S\+L\+\_\+\+B\+U\+F\+F\+E\+R@{S\+S\+L\+\_\+\+B\+U\+F\+F\+E\+R}!full@{full}}
+\index{full@{full}!S\+S\+L\+\_\+\+B\+U\+F\+F\+E\+R@{S\+S\+L\+\_\+\+B\+U\+F\+F\+E\+R}}
+\subsubsection[{full}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} full}\label{union_s_s_l___b_u_f_f_e_r_a4c25cd300ec889961a45436274fc1093}
+
+
+Definition at line 256 of file S\+S\+L.\+h.
+
+\hypertarget{union_s_s_l___b_u_f_f_e_r_a731167501e52d6b72fc839512360317c}{}\index{S\+S\+L\+\_\+\+B\+U\+F\+F\+E\+R@{S\+S\+L\+\_\+\+B\+U\+F\+F\+E\+R}!hash@{hash}}
+\index{hash@{hash}!S\+S\+L\+\_\+\+B\+U\+F\+F\+E\+R@{S\+S\+L\+\_\+\+B\+U\+F\+F\+E\+R}}
+\subsubsection[{hash}]{\setlength{\rightskip}{0pt plus 5cm}{\bf H\+A\+S\+H\+\_\+\+S\+U\+M} hash}\label{union_s_s_l___b_u_f_f_e_r_a731167501e52d6b72fc839512360317c}
+
+
+Definition at line 246 of file S\+S\+L.\+h.
+
+\hypertarget{union_s_s_l___b_u_f_f_e_r_aefa66f9631daa4521f6a777625f23f5f}{}\index{S\+S\+L\+\_\+\+B\+U\+F\+F\+E\+R@{S\+S\+L\+\_\+\+B\+U\+F\+F\+E\+R}!hash\+Rounds@{hash\+Rounds}}
+\index{hash\+Rounds@{hash\+Rounds}!S\+S\+L\+\_\+\+B\+U\+F\+F\+E\+R@{S\+S\+L\+\_\+\+B\+U\+F\+F\+E\+R}}
+\subsubsection[{hash\+Rounds}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   hash\+Rounds}\label{union_s_s_l___b_u_f_f_e_r_aefa66f9631daa4521f6a777625f23f5f}
+\hypertarget{union_s_s_l___b_u_f_f_e_r_a4d816c823a2beb8993b3ef56766bacce}{}\index{S\+S\+L\+\_\+\+B\+U\+F\+F\+E\+R@{S\+S\+L\+\_\+\+B\+U\+F\+F\+E\+R}!md5\+\_\+hash@{md5\+\_\+hash}}
+\index{md5\+\_\+hash@{md5\+\_\+hash}!S\+S\+L\+\_\+\+B\+U\+F\+F\+E\+R@{S\+S\+L\+\_\+\+B\+U\+F\+F\+E\+R}}
+\subsubsection[{md5\+\_\+hash}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} md5\+\_\+hash\mbox{[}16\mbox{]}}\label{union_s_s_l___b_u_f_f_e_r_a4d816c823a2beb8993b3ef56766bacce}
+
+
+Definition at line 247 of file S\+S\+L.\+h.
+
+\hypertarget{union_s_s_l___b_u_f_f_e_r_a5d335aa13662b316b20dbc8b6f34b12b}{}\index{S\+S\+L\+\_\+\+B\+U\+F\+F\+E\+R@{S\+S\+L\+\_\+\+B\+U\+F\+F\+E\+R}!sha\+\_\+hash@{sha\+\_\+hash}}
+\index{sha\+\_\+hash@{sha\+\_\+hash}!S\+S\+L\+\_\+\+B\+U\+F\+F\+E\+R@{S\+S\+L\+\_\+\+B\+U\+F\+F\+E\+R}}
+\subsubsection[{sha\+\_\+hash}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} sha\+\_\+hash\mbox{[}20\mbox{]}}\label{union_s_s_l___b_u_f_f_e_r_a5d335aa13662b316b20dbc8b6f34b12b}
+
+
+Definition at line 248 of file S\+S\+L.\+h.
+
+\hypertarget{union_s_s_l___b_u_f_f_e_r_a7b17c7a8a20473315a63c02148759677}{}\index{S\+S\+L\+\_\+\+B\+U\+F\+F\+E\+R@{S\+S\+L\+\_\+\+B\+U\+F\+F\+E\+R}!temp@{temp}}
+\index{temp@{temp}!S\+S\+L\+\_\+\+B\+U\+F\+F\+E\+R@{S\+S\+L\+\_\+\+B\+U\+F\+F\+E\+R}}
+\subsubsection[{temp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} temp\mbox{[}256-\/sizeof({\bf H\+A\+S\+H\+\_\+\+S\+U\+M})-\/16-\/20\mbox{]}}\label{union_s_s_l___b_u_f_f_e_r_a7b17c7a8a20473315a63c02148759677}
+
+
+Definition at line 250 of file S\+S\+L.\+h.
+
+
+
+The documentation for this union was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+T\+C\+P\+I\+P Stack/\hyperlink{_s_s_l_8h}{S\+S\+L.\+h}\end{DoxyCompactItemize}

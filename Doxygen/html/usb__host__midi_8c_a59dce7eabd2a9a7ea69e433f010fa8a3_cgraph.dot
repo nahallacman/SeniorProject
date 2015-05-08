@@ -1,0 +1,13 @@
+digraph "USBHostMIDIRead"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="USBHostMIDIRead",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="USBHostRead",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host_8h.html#abb1e7fbe92c771bdc0f8b3219538b3e6"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="_USB_FindEndpoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host_8c.html#ae449b4da12d04e5c006874382c84caab"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="_USB_InitRead",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host_8c.html#a980bc0a87a2b743b32edb6b6d38a4cb2"];
+}

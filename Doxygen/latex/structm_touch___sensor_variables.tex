@@ -1,0 +1,105 @@
+\hypertarget{structm_touch___sensor_variables}{}\section{m\+Touch\+\_\+\+Sensor\+Variables Struct Reference}
+\label{structm_touch___sensor_variables}\index{m\+Touch\+\_\+\+Sensor\+Variables@{m\+Touch\+\_\+\+Sensor\+Variables}}
+
+
+Contains all variables used in active mode which can/will be reinitialized after each mode switch.  
+
+
+
+
+{\ttfamily \#include $<$m\+Touch.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structm_touch___sensor_variables_aa0d135c47b4653b992ce9e2cd3ba7306}{M\+T\+O\+U\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+A\+S\+E\+L\+I\+N\+E\+\_\+\+C\+O\+U\+N\+T} ()
+\begin{DoxyCompactList}\small\item\em \textquotesingle{}baseline\+Count\textquotesingle{}\+: Counter to track the number of decodes between updating the baseline \end{DoxyCompactList}\item 
+\hyperlink{structm_touch___sensor_variables_af643b008386625cdd4d5e6a8d0ac09de}{M\+T\+O\+U\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+I\+M\+E\+R} ()
+\begin{DoxyCompactList}\small\item\em \textquotesingle{}timer\textquotesingle{}\+: Multipurpose timer used for press timeouts, inactivity timers, and initialization \end{DoxyCompactList}\item 
+\hyperlink{structm_touch___sensor_variables_addf99d6baedf93da7358215ab00888e6}{M\+T\+O\+U\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+\+D\+E\+B\+O\+U\+N\+C\+E} ()
+\begin{DoxyCompactList}\small\item\em \textquotesingle{}debounce\textquotesingle{}\+: Counter to implement debouncing on state transitions \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \hyperlink{structm_touch___sensor_variables_a2ae520db1099ff9c7da192764d4e4790}{state}\+:2
+\begin{DoxyCompactList}\small\item\em Tracks the current state of each sensor. \end{DoxyCompactList}\item 
+unsigned \hyperlink{structm_touch___sensor_variables_addc3f92f67ed014b0b847f9de3a50532}{baseline\+Correction}\+:1
+\item 
+unsigned \hyperlink{structm_touch___sensor_variables_a7bd15b1b4bbdd7329986c9c4af33d10d}{timeout}\+:1
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains all variables used in active mode which can/will be reinitialized after each mode switch. 
+
+Definition at line 130 of file m\+Touch.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structm_touch___sensor_variables_aa0d135c47b4653b992ce9e2cd3ba7306}{}\index{m\+Touch\+\_\+\+Sensor\+Variables@{m\+Touch\+\_\+\+Sensor\+Variables}!M\+T\+O\+U\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+A\+S\+E\+L\+I\+N\+E\+\_\+\+C\+O\+U\+N\+T@{M\+T\+O\+U\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+A\+S\+E\+L\+I\+N\+E\+\_\+\+C\+O\+U\+N\+T}}
+\index{M\+T\+O\+U\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+A\+S\+E\+L\+I\+N\+E\+\_\+\+C\+O\+U\+N\+T@{M\+T\+O\+U\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+A\+S\+E\+L\+I\+N\+E\+\_\+\+C\+O\+U\+N\+T}!m\+Touch\+\_\+\+Sensor\+Variables@{m\+Touch\+\_\+\+Sensor\+Variables}}
+\subsubsection[{M\+T\+O\+U\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+A\+S\+E\+L\+I\+N\+E\+\_\+\+C\+O\+U\+N\+T}]{\setlength{\rightskip}{0pt plus 5cm}M\+T\+O\+U\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+A\+S\+E\+L\+I\+N\+E\+\_\+\+C\+O\+U\+N\+T (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{structm_touch___sensor_variables_aa0d135c47b4653b992ce9e2cd3ba7306}
+
+
+\textquotesingle{}baseline\+Count\textquotesingle{}\+: Counter to track the number of decodes between updating the baseline 
+
+\hypertarget{structm_touch___sensor_variables_addf99d6baedf93da7358215ab00888e6}{}\index{m\+Touch\+\_\+\+Sensor\+Variables@{m\+Touch\+\_\+\+Sensor\+Variables}!M\+T\+O\+U\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+\+D\+E\+B\+O\+U\+N\+C\+E@{M\+T\+O\+U\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+\+D\+E\+B\+O\+U\+N\+C\+E}}
+\index{M\+T\+O\+U\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+\+D\+E\+B\+O\+U\+N\+C\+E@{M\+T\+O\+U\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+\+D\+E\+B\+O\+U\+N\+C\+E}!m\+Touch\+\_\+\+Sensor\+Variables@{m\+Touch\+\_\+\+Sensor\+Variables}}
+\subsubsection[{M\+T\+O\+U\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+\+D\+E\+B\+O\+U\+N\+C\+E}]{\setlength{\rightskip}{0pt plus 5cm}M\+T\+O\+U\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+\+D\+E\+B\+O\+U\+N\+C\+E (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{structm_touch___sensor_variables_addf99d6baedf93da7358215ab00888e6}
+
+
+\textquotesingle{}debounce\textquotesingle{}\+: Counter to implement debouncing on state transitions 
+
+\hypertarget{structm_touch___sensor_variables_af643b008386625cdd4d5e6a8d0ac09de}{}\index{m\+Touch\+\_\+\+Sensor\+Variables@{m\+Touch\+\_\+\+Sensor\+Variables}!M\+T\+O\+U\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+I\+M\+E\+R@{M\+T\+O\+U\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+I\+M\+E\+R}}
+\index{M\+T\+O\+U\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+I\+M\+E\+R@{M\+T\+O\+U\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+I\+M\+E\+R}!m\+Touch\+\_\+\+Sensor\+Variables@{m\+Touch\+\_\+\+Sensor\+Variables}}
+\subsubsection[{M\+T\+O\+U\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+I\+M\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}M\+T\+O\+U\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+I\+M\+E\+R (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{structm_touch___sensor_variables_af643b008386625cdd4d5e6a8d0ac09de}
+
+
+\textquotesingle{}timer\textquotesingle{}\+: Multipurpose timer used for press timeouts, inactivity timers, and initialization 
+
+
+
+\subsection{Field Documentation}
+\hypertarget{structm_touch___sensor_variables_addc3f92f67ed014b0b847f9de3a50532}{}\index{m\+Touch\+\_\+\+Sensor\+Variables@{m\+Touch\+\_\+\+Sensor\+Variables}!baseline\+Correction@{baseline\+Correction}}
+\index{baseline\+Correction@{baseline\+Correction}!m\+Touch\+\_\+\+Sensor\+Variables@{m\+Touch\+\_\+\+Sensor\+Variables}}
+\subsubsection[{baseline\+Correction}]{\setlength{\rightskip}{0pt plus 5cm}unsigned baseline\+Correction}\label{structm_touch___sensor_variables_addc3f92f67ed014b0b847f9de3a50532}
+
+
+Definition at line 133 of file m\+Touch.\+h.
+
+\hypertarget{structm_touch___sensor_variables_a2ae520db1099ff9c7da192764d4e4790}{}\index{m\+Touch\+\_\+\+Sensor\+Variables@{m\+Touch\+\_\+\+Sensor\+Variables}!state@{state}}
+\index{state@{state}!m\+Touch\+\_\+\+Sensor\+Variables@{m\+Touch\+\_\+\+Sensor\+Variables}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}unsigned state}\label{structm_touch___sensor_variables_a2ae520db1099ff9c7da192764d4e4790}
+
+
+Tracks the current state of each sensor. 
+
+
+
+Definition at line 132 of file m\+Touch.\+h.
+
+\hypertarget{structm_touch___sensor_variables_a7bd15b1b4bbdd7329986c9c4af33d10d}{}\index{m\+Touch\+\_\+\+Sensor\+Variables@{m\+Touch\+\_\+\+Sensor\+Variables}!timeout@{timeout}}
+\index{timeout@{timeout}!m\+Touch\+\_\+\+Sensor\+Variables@{m\+Touch\+\_\+\+Sensor\+Variables}}
+\subsubsection[{timeout}]{\setlength{\rightskip}{0pt plus 5cm}unsigned timeout}\label{structm_touch___sensor_variables_a7bd15b1b4bbdd7329986c9c4af33d10d}
+
+
+Definition at line 136 of file m\+Touch.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/\hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h}{m\+Touch.\+h}\end{DoxyCompactItemize}

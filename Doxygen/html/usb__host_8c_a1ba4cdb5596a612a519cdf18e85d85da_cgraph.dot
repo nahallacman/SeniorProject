@@ -1,0 +1,19 @@
+digraph "USBHostVbusEvent"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="USBHostVbusEvent",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="USBHostShutdown",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host_8c.html#aeedd722bcedf46d1db1879e817a73edf"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="USBOTGHnpIsActive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__otg_8h.html#acbb6931dba6050e954137dc7449559d4"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="_USB_NotifyClients",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host_8c.html#a6e1495db6534ff31c28dd6e2c47f52cc"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="USBHostInit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host_8c.html#aae432165130c2a0acc4ad926178f4f5d"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="_USB_FreeMemory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host_8c.html#a8c13e2fa7ede47dbb056434cb0454c46"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="_USB_FreeConfigMemory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host_8c.html#a3850a650ddf79c11a4d8c30da5e84117"];
+}

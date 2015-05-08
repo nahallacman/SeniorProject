@@ -1,0 +1,258 @@
+\hypertarget{uart2_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Common/uart2.c File Reference}
+\label{uart2_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Common/uart2.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Common/uart2.\+c}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{uart2_8c_abc5bab19848457b51c271949e98cbdb5}{U\+A\+R\+T2\+Get\+Baud\+Error} ()
+\item 
+char \hyperlink{uart2_8c_a1000dd1e86bfe97f7d8ea5568e5513be}{U\+A\+R\+T2\+Get\+Char} ()
+\item 
+void \hyperlink{uart2_8c_a7ed6d5d096fdabd1692a7f91466576d3}{U\+A\+R\+T2\+Init} ()
+\item 
+char \hyperlink{uart2_8c_a53d4f6cb282ca7040d75c94d855c053d}{U\+A\+R\+T2\+Is\+Pressed} ()
+\item 
+void \hyperlink{uart2_8c_a4f250e76dccb6dc8450c04efbc8e9a8f}{U\+A\+R\+T2\+Print\+String} (char $\ast$str)
+\item 
+void \hyperlink{uart2_8c_a23f0e312ef33167a4c51b6b353135e89}{U\+A\+R\+T2\+Put\+Char} (char ch)
+\item 
+void \hyperlink{uart2_8c_a58c86457543e83b150d2fb442f08c66d}{U\+A\+R\+T2\+Put\+Dec} (unsigned char dec)
+\item 
+void \hyperlink{uart2_8c_af13e4f872814dbf76917927d9237a44f}{U\+A\+R\+T2\+Put\+Hex} (int to\+Print)
+\item 
+void \hyperlink{uart2_8c_a9d7de3a2b3f91240f01c492f696d3ed1}{U\+A\+R\+T2\+Put\+Hex\+Word} (unsigned int to\+Print)
+\item 
+void \hyperlink{uart2_8c_aa8f43a02caee4705a7e36c216ee77504}{U\+A\+R\+T2\+Put\+Hex\+D\+Word} (unsigned long to\+Print)
+\item 
+char \hyperlink{uart2_8c_a90f84bbd18ceb75d349fdfe003a4ecb4}{U\+A\+R\+T2\+Char2\+Hex} (char ch)
+\item 
+char \hyperlink{uart2_8c_a3dab8f80693b343f7ddf25034857ae23}{U\+A\+R\+T2\+Hex2\+Char} (char hex)
+\item 
+void \hyperlink{uart2_8c_a539c5661f25a5d8b1d5f36a66ec3b640}{U\+A\+R\+T2\+Clr\+Error} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const unsigned char \hyperlink{uart2_8c_a2a9125a275d6d553bd584fef23d70fbf}{Character\+Array} \mbox{[}$\,$\mbox{]} =\{\textquotesingle{}0\textquotesingle{},\textquotesingle{}1\textquotesingle{},\textquotesingle{}2\textquotesingle{},\textquotesingle{}3\textquotesingle{},\textquotesingle{}4\textquotesingle{},\textquotesingle{}5\textquotesingle{},\textquotesingle{}6\textquotesingle{},\textquotesingle{}7\textquotesingle{},\textquotesingle{}8\textquotesingle{},\textquotesingle{}9\textquotesingle{},\textquotesingle{}A\textquotesingle{},\textquotesingle{}B\textquotesingle{},\textquotesingle{}\hyperlink{_w_f_console_msgs_8h_aaa53ca0b650dfd85c4f59fa156f7a2cc}{C}\textquotesingle{},\textquotesingle{}D\textquotesingle{},\textquotesingle{}\hyperlink{_r_s_a_8c_a767b0bccde3ecc2b93467a2896872249}{E}\textquotesingle{},\textquotesingle{}F\textquotesingle{}\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{uart2_8c_a90f84bbd18ceb75d349fdfe003a4ecb4}{}\index{uart2.\+c@{uart2.\+c}!U\+A\+R\+T2\+Char2\+Hex@{U\+A\+R\+T2\+Char2\+Hex}}
+\index{U\+A\+R\+T2\+Char2\+Hex@{U\+A\+R\+T2\+Char2\+Hex}!uart2.\+c@{uart2.\+c}}
+\subsubsection[{U\+A\+R\+T2\+Char2\+Hex}]{\setlength{\rightskip}{0pt plus 5cm}char U\+A\+R\+T2\+Char2\+Hex (
+\begin{DoxyParamCaption}
+\item[{char}]{ch}
+\end{DoxyParamCaption}
+)}\label{uart2_8c_a90f84bbd18ceb75d349fdfe003a4ecb4}
+
+
+Definition at line 397 of file uart2.\+c.
+
+\hypertarget{uart2_8c_a539c5661f25a5d8b1d5f36a66ec3b640}{}\index{uart2.\+c@{uart2.\+c}!U\+A\+R\+T2\+Clr\+Error@{U\+A\+R\+T2\+Clr\+Error}}
+\index{U\+A\+R\+T2\+Clr\+Error@{U\+A\+R\+T2\+Clr\+Error}!uart2.\+c@{uart2.\+c}}
+\subsubsection[{U\+A\+R\+T2\+Clr\+Error}]{\setlength{\rightskip}{0pt plus 5cm}void U\+A\+R\+T2\+Clr\+Error (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{uart2_8c_a539c5661f25a5d8b1d5f36a66ec3b640}
+
+
+Definition at line 468 of file uart2.\+c.
+
+\hypertarget{uart2_8c_abc5bab19848457b51c271949e98cbdb5}{}\index{uart2.\+c@{uart2.\+c}!U\+A\+R\+T2\+Get\+Baud\+Error@{U\+A\+R\+T2\+Get\+Baud\+Error}}
+\index{U\+A\+R\+T2\+Get\+Baud\+Error@{U\+A\+R\+T2\+Get\+Baud\+Error}!uart2.\+c@{uart2.\+c}}
+\subsubsection[{U\+A\+R\+T2\+Get\+Baud\+Error}]{\setlength{\rightskip}{0pt plus 5cm}char U\+A\+R\+T2\+Get\+Baud\+Error (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{uart2_8c_abc5bab19848457b51c271949e98cbdb5}
+
+
+Definition at line 110 of file uart2.\+c.
+
+\hypertarget{uart2_8c_a1000dd1e86bfe97f7d8ea5568e5513be}{}\index{uart2.\+c@{uart2.\+c}!U\+A\+R\+T2\+Get\+Char@{U\+A\+R\+T2\+Get\+Char}}
+\index{U\+A\+R\+T2\+Get\+Char@{U\+A\+R\+T2\+Get\+Char}!uart2.\+c@{uart2.\+c}}
+\subsubsection[{U\+A\+R\+T2\+Get\+Char}]{\setlength{\rightskip}{0pt plus 5cm}char U\+A\+R\+T2\+Get\+Char (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{uart2_8c_a1000dd1e86bfe97f7d8ea5568e5513be}
+
+
+Definition at line 133 of file uart2.\+c.
+
+\hypertarget{uart2_8c_a3dab8f80693b343f7ddf25034857ae23}{}\index{uart2.\+c@{uart2.\+c}!U\+A\+R\+T2\+Hex2\+Char@{U\+A\+R\+T2\+Hex2\+Char}}
+\index{U\+A\+R\+T2\+Hex2\+Char@{U\+A\+R\+T2\+Hex2\+Char}!uart2.\+c@{uart2.\+c}}
+\subsubsection[{U\+A\+R\+T2\+Hex2\+Char}]{\setlength{\rightskip}{0pt plus 5cm}char U\+A\+R\+T2\+Hex2\+Char (
+\begin{DoxyParamCaption}
+\item[{char}]{hex}
+\end{DoxyParamCaption}
+)}\label{uart2_8c_a3dab8f80693b343f7ddf25034857ae23}
+
+
+Definition at line 442 of file uart2.\+c.
+
+\hypertarget{uart2_8c_a7ed6d5d096fdabd1692a7f91466576d3}{}\index{uart2.\+c@{uart2.\+c}!U\+A\+R\+T2\+Init@{U\+A\+R\+T2\+Init}}
+\index{U\+A\+R\+T2\+Init@{U\+A\+R\+T2\+Init}!uart2.\+c@{uart2.\+c}}
+\subsubsection[{U\+A\+R\+T2\+Init}]{\setlength{\rightskip}{0pt plus 5cm}void U\+A\+R\+T2\+Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{uart2_8c_a7ed6d5d096fdabd1692a7f91466576d3}
+
+
+Definition at line 161 of file uart2.\+c.
+
+\hypertarget{uart2_8c_a53d4f6cb282ca7040d75c94d855c053d}{}\index{uart2.\+c@{uart2.\+c}!U\+A\+R\+T2\+Is\+Pressed@{U\+A\+R\+T2\+Is\+Pressed}}
+\index{U\+A\+R\+T2\+Is\+Pressed@{U\+A\+R\+T2\+Is\+Pressed}!uart2.\+c@{uart2.\+c}}
+\subsubsection[{U\+A\+R\+T2\+Is\+Pressed}]{\setlength{\rightskip}{0pt plus 5cm}char U\+A\+R\+T2\+Is\+Pressed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{uart2_8c_a53d4f6cb282ca7040d75c94d855c053d}
+
+
+Definition at line 192 of file uart2.\+c.
+
+\hypertarget{uart2_8c_a4f250e76dccb6dc8450c04efbc8e9a8f}{}\index{uart2.\+c@{uart2.\+c}!U\+A\+R\+T2\+Print\+String@{U\+A\+R\+T2\+Print\+String}}
+\index{U\+A\+R\+T2\+Print\+String@{U\+A\+R\+T2\+Print\+String}!uart2.\+c@{uart2.\+c}}
+\subsubsection[{U\+A\+R\+T2\+Print\+String}]{\setlength{\rightskip}{0pt plus 5cm}void U\+A\+R\+T2\+Print\+String (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\label{uart2_8c_a4f250e76dccb6dc8450c04efbc8e9a8f}
+
+
+Definition at line 213 of file uart2.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 0
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+\hypertarget{uart2_8c_a23f0e312ef33167a4c51b6b353135e89}{}\index{uart2.\+c@{uart2.\+c}!U\+A\+R\+T2\+Put\+Char@{U\+A\+R\+T2\+Put\+Char}}
+\index{U\+A\+R\+T2\+Put\+Char@{U\+A\+R\+T2\+Put\+Char}!uart2.\+c@{uart2.\+c}}
+\subsubsection[{U\+A\+R\+T2\+Put\+Char}]{\setlength{\rightskip}{0pt plus 5cm}void U\+A\+R\+T2\+Put\+Char (
+\begin{DoxyParamCaption}
+\item[{char}]{ch}
+\end{DoxyParamCaption}
+)}\label{uart2_8c_a23f0e312ef33167a4c51b6b353135e89}
+
+
+Definition at line 236 of file uart2.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\hypertarget{uart2_8c_a58c86457543e83b150d2fb442f08c66d}{}\index{uart2.\+c@{uart2.\+c}!U\+A\+R\+T2\+Put\+Dec@{U\+A\+R\+T2\+Put\+Dec}}
+\index{U\+A\+R\+T2\+Put\+Dec@{U\+A\+R\+T2\+Put\+Dec}!uart2.\+c@{uart2.\+c}}
+\subsubsection[{U\+A\+R\+T2\+Put\+Dec}]{\setlength{\rightskip}{0pt plus 5cm}void U\+A\+R\+T2\+Put\+Dec (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{dec}
+\end{DoxyParamCaption}
+)}\label{uart2_8c_a58c86457543e83b150d2fb442f08c66d}
+
+
+Definition at line 260 of file uart2.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+\hypertarget{uart2_8c_af13e4f872814dbf76917927d9237a44f}{}\index{uart2.\+c@{uart2.\+c}!U\+A\+R\+T2\+Put\+Hex@{U\+A\+R\+T2\+Put\+Hex}}
+\index{U\+A\+R\+T2\+Put\+Hex@{U\+A\+R\+T2\+Put\+Hex}!uart2.\+c@{uart2.\+c}}
+\subsubsection[{U\+A\+R\+T2\+Put\+Hex}]{\setlength{\rightskip}{0pt plus 5cm}void U\+A\+R\+T2\+Put\+Hex (
+\begin{DoxyParamCaption}
+\item[{int}]{to\+Print}
+\end{DoxyParamCaption}
+)}\label{uart2_8c_af13e4f872814dbf76917927d9237a44f}
+
+
+Definition at line 300 of file uart2.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 5
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\hypertarget{uart2_8c_aa8f43a02caee4705a7e36c216ee77504}{}\index{uart2.\+c@{uart2.\+c}!U\+A\+R\+T2\+Put\+Hex\+D\+Word@{U\+A\+R\+T2\+Put\+Hex\+D\+Word}}
+\index{U\+A\+R\+T2\+Put\+Hex\+D\+Word@{U\+A\+R\+T2\+Put\+Hex\+D\+Word}!uart2.\+c@{uart2.\+c}}
+\subsubsection[{U\+A\+R\+T2\+Put\+Hex\+D\+Word}]{\setlength{\rightskip}{0pt plus 5cm}void U\+A\+R\+T2\+Put\+Hex\+D\+Word (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{to\+Print}
+\end{DoxyParamCaption}
+)}\label{uart2_8c_aa8f43a02caee4705a7e36c216ee77504}
+
+
+Definition at line 348 of file uart2.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 7
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 8
+
+
+\hypertarget{uart2_8c_a9d7de3a2b3f91240f01c492f696d3ed1}{}\index{uart2.\+c@{uart2.\+c}!U\+A\+R\+T2\+Put\+Hex\+Word@{U\+A\+R\+T2\+Put\+Hex\+Word}}
+\index{U\+A\+R\+T2\+Put\+Hex\+Word@{U\+A\+R\+T2\+Put\+Hex\+Word}!uart2.\+c@{uart2.\+c}}
+\subsubsection[{U\+A\+R\+T2\+Put\+Hex\+Word}]{\setlength{\rightskip}{0pt plus 5cm}void U\+A\+R\+T2\+Put\+Hex\+Word (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{to\+Print}
+\end{DoxyParamCaption}
+)}\label{uart2_8c_a9d7de3a2b3f91240f01c492f696d3ed1}
+
+
+Definition at line 329 of file uart2.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 9
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 10
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{uart2_8c_a2a9125a275d6d553bd584fef23d70fbf}{}\index{uart2.\+c@{uart2.\+c}!Character\+Array@{Character\+Array}}
+\index{Character\+Array@{Character\+Array}!uart2.\+c@{uart2.\+c}}
+\subsubsection[{Character\+Array}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned char Character\+Array\mbox{[}$\,$\mbox{]} =\{\textquotesingle{}0\textquotesingle{},\textquotesingle{}1\textquotesingle{},\textquotesingle{}2\textquotesingle{},\textquotesingle{}3\textquotesingle{},\textquotesingle{}4\textquotesingle{},\textquotesingle{}5\textquotesingle{},\textquotesingle{}6\textquotesingle{},\textquotesingle{}7\textquotesingle{},\textquotesingle{}8\textquotesingle{},\textquotesingle{}9\textquotesingle{},\textquotesingle{}A\textquotesingle{},\textquotesingle{}B\textquotesingle{},\textquotesingle{}{\bf C}\textquotesingle{},\textquotesingle{}D\textquotesingle{},\textquotesingle{}{\bf E}\textquotesingle{},\textquotesingle{}F\textquotesingle{}\}}\label{uart2_8c_a2a9125a275d6d553bd584fef23d70fbf}
+
+
+Definition at line 298 of file uart2.\+c.
+

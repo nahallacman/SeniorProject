@@ -1,0 +1,176 @@
+\hypertarget{index_Intro}{}\section{Introduction}\label{index_Intro}
+Thank you for downloading the m\+Touch Framework v2.\+3, part of the m\+Touch Library v1.\+40.\+02 package in the M\+L\+A.
+
+The m\+Touch Framework is a software package enabling designers to easily integrate touch technologies to their application. It combines high sensitivity with conducted and radiated noise immunity.
+
+Simple configuration file allows for easy setup. \hyperlink{namespace_microchip}{Microchip} also offers full source code access for more advanced touch designers.
+
+~\newline
+\begin{center} \begin{TabularC}{3}
+\hline
+\hyperlink{GettingStarted}{Getting Started} \begin{DoxyItemize}
+\item \hyperlink{featBasic}{Basic m\+Touch Sensor Configuration} \item \hyperlink{_getting_started_GSGuides}{Quick Start Guides} \item New m\+Touch Project\+: \hyperlink{GettingStartedNewP8}{M\+P\+L\+A\+B 8} or \hyperlink{GettingStartedNewPX}{M\+P\+L\+A\+B X} \item \hyperlink{GettingStartedEval}{m\+Touch Evaluation Board Projects} \item \hyperlink{GettingStartedCustom}{Integrating with Custom Hardware} \end{DoxyItemize}
+&~~~~~~~~~~ &\hyperlink{FrameworkFeatures}{m\+Touch Framework Features} \begin{DoxyItemize}
+\item \hyperlink{featBasic}{Keys / Buttons} \item \hyperlink{featSliders}{Sliders and Wheels} \item \hyperlink{featProximity}{Proximity Sensors} \item \hyperlink{featMatrix}{Matrix Keypad Layouts} \item \hyperlink{featMostPressed}{Most-\/\+Pressed Algorithm} \item \hyperlink{featGuard}{Guard Rings / Shields} \item \hyperlink{featMutual}{Mutual Capacitance} \item \hyperlink{featMode}{Scanning Modes}  \end{DoxyItemize}
+\\\cline{1-3}
+\hyperlink{optimizing}{Optimizing Performance} \begin{DoxyItemize}
+\item \hyperlink{ts-Sensitivity}{Increasing Sensitivity} \item \hyperlink{ts-ResponseTime}{Faster Response Times} \item \hyperlink{ts-Waveform}{m\+Touch C\+V\+D Waveform Tuning} \end{DoxyItemize}
+&~~~~~~~~~~ &\hyperlink{ResourceRequirements}{Resource Requirements} \begin{DoxyItemize}
+\item \hyperlink{_resource_requirements_PICSupport}{Supported P\+I\+C\textregistered{} Microcontrollers} \item \hyperlink{_resource_requirements_rrModules}{Hardware Module Usage} \item \hyperlink{_resource_requirements_rrMemory}{R\+O\+M, R\+A\+M, and Processing Requirements} \item \hyperlink{RequiredIncludes}{Required Source Files}  \end{DoxyItemize}
+\\\cline{1-3}
+\hyperlink{troubleshoot}{Troubleshooting} \begin{DoxyItemize}
+\item \hyperlink{ts-Comms}{P\+C Communications} \item \hyperlink{BCPGUI}{Backwards-\/compatible U\+A\+R\+T for prev. Profilab G\+U\+I} \end{DoxyItemize}
+&~~~~~~~~~~ &Software\+License~\newline
+~\newline
+ \hyperlink{Changelog}{Version Change Log}  \\\cline{1-3}
+\end{TabularC}
+\end{center} 
+
+~\newline
+~\newline
+
+
+ 
+\begin{DoxyItemize}
+\item {\bfseries /\+Microchip}~\newline
+ Contains the library, read-\/only source files for the m\+Touch Framework. 
+\begin{DoxyItemize}
+\item {\bfseries /\+Help}~\newline
+ Contains documentation for all the \hyperlink{namespace_microchip}{Microchip} Application Libraries. 
+\begin{DoxyItemize}
+\item {\bfseries /m\+Touch C\+V\+D Help Content}~\newline
+ Contains the documentation for the m\+Touch Framework. 
+\end{DoxyItemize}
+\item {\bfseries /m\+Touch\+Cap} 
+\begin{DoxyItemize}
+\item {\bfseries /\+P\+I\+C12\+F P\+I\+C16\+F Library}~\newline
+ Contains the C source (.c) and C header (.h) files for the m\+Touch Framework.~\newline
+ {\bfseries I\+M\+P\+O\+R\+T\+A\+N\+T}\+: The files in this directory should never be directly editted. Copy to a local application folder. 
+\begin{DoxyItemize}
+\item m\+Touch Source Files 
+\begin{DoxyItemize}
+\item main.\+c contains an example application implementation. 
+\item \hyperlink{m_touch_8c}{m\+Touch.\+c} implements the basic initialization, filtering, and decoding functions for the framework. 
+\item \hyperlink{m_touch__acquisition_8c}{m\+Touch\+\_\+acquisition.\+c} implements a custom m\+Touch Acquisition method specific to the P\+I\+C and configuration. 
+\item \hyperlink{m_touch__slider_8c}{m\+Touch\+\_\+slider.\+c} implements the slider and wheel decoding, if enabled. 
+\item \hyperlink{m_touch__proximity_8c}{m\+Touch\+\_\+proximity.\+c} implements the proximity sensor decoding and state machine, if enabled. 
+\item \hyperlink{m_touch__eeprom_8c}{m\+Touch\+\_\+eeprom.\+c} implements the m\+Touch E\+E\+P\+R\+O\+M mapping and read/write functions, if enabled. 
+\end{DoxyItemize}
+\item m\+Touch Configuration Files~\newline
+ These are the files that should be tweaked for every application. 
+\begin{DoxyItemize}
+\item \hyperlink{m_touch__config_8h}{m\+Touch\+\_\+config.\+h} stores the configuration options for the framework. 
+\item \hyperlink{m_touch__config__modes_8h}{m\+Touch\+\_\+config\+\_\+modes.\+h} stores the configuration options for scanning modes. 
+\item \hyperlink{m_touch__config__slider_8h}{m\+Touch\+\_\+config\+\_\+slider.\+h} stores the configuration options for sliders and wheels. 
+\item \hyperlink{m_touch__config__cvd_advanced_8h}{m\+Touch\+\_\+config\+\_\+cvd\+Advanced.\+h} stores the advanced C\+V\+D acquisition options. 
+\end{DoxyItemize}
+\item m\+Touch Header Files~\newline
+ 
+\begin{DoxyItemize}
+\item m\+Touch.\+h {\bfseries is the only m\+Touch file you need to \#include to use the A\+P\+I in your project.} This is the master header file for the m\+Touch Framework that defines global variables and includes other files based on the current configuration. 
+\item \hyperlink{m_touch__slider_8h}{m\+Touch\+\_\+slider.\+h} is the internal m\+Touch header file for generating the m\+Touch Framework\textquotesingle{}s slider and wheel logic 
+\item \hyperlink{m_touch__proximity_8h}{m\+Touch\+\_\+proximity.\+h} is the internal m\+Touch header file for generating the m\+Touch Framework\textquotesingle{}s proximity sensor logic 
+\item \hyperlink{m_touch__eeprom_8h}{m\+Touch\+\_\+eeprom.\+h} is the internal m\+Touch header file for generating the m\+Touch Framework\textquotesingle{}s E\+E\+P\+R\+O\+M logic 
+\item \hyperlink{m_touch__modes_8h}{m\+Touch\+\_\+modes.\+h} is the internal m\+Touch header file for generating the m\+Touch Framework\textquotesingle{}s scanning mode logic 
+\item \hyperlink{m_touch__options_for_config_8h}{m\+Touch\+\_\+options\+For\+Config.\+h} contains pre-\/defined labels for easier user configuration. Do not edit. 
+\item \hyperlink{m_touch__macro_library__common_8h}{m\+Touch\+\_\+macro\+Library\+\_\+common.\+h} contains many of the core-\/non-\/specific macros for the m\+Touch Framework. 
+\item \hyperlink{m_touch__process_configuration_8h}{m\+Touch\+\_\+process\+Configuration.\+h} performs much of the pre-\/compiling work to confirm a valid configuration and then set up the flags and variables to aid the compiler in generating a custom m\+Touch application. 
+\item \hyperlink{m_touch_c_v_d__macro_library___p_i_c16_f_8h}{m\+Touch\+C\+V\+D\+\_\+macro\+Library\+\_\+\+P\+I\+C16\+F.\+h} is one of several P\+I\+C-\/core-\/specific header files that contains macros for generating the acquisition module of the m\+Touch Framework. 
+\item \hyperlink{m_touch_c_v_d__macro_library___p_i_c16_f1_8h}{m\+Touch\+C\+V\+D\+\_\+macro\+Library\+\_\+\+P\+I\+C16\+F1.\+h} is one of several P\+I\+C-\/core-\/specific header files that contains macros for generating the acquisition module of the m\+Touch Framework. 
+\item \hyperlink{m_touch_c_v_d__macro_library___p_i_c18_f_8h}{m\+Touch\+C\+V\+D\+\_\+macro\+Library\+\_\+\+P\+I\+C18\+F.\+h} is one of several P\+I\+C-\/core-\/specific header files that contains macros for generating the acquisition module of the m\+Touch Framework. 
+\item \hyperlink{generic__processor_config_bits_8h}{generic\+\_\+processor\+Config\+Bits.\+h} contains predefined config fuse statements for faster development. 
+\end{DoxyItemize}~\newline
+ 
+\item m\+Comm Source Files~\newline
+ These files implement the m\+Touch communications module called \textquotesingle{}m\+Comm\textquotesingle{}. 
+\begin{DoxyItemize}
+\item \hyperlink{m_comm_8c}{m\+Comm.\+c} contains the basic logic for all supported communication types 
+\item \hyperlink{m_comm__opcodes_8c}{m\+Comm\+\_\+opcodes.\+c} implements the read/write actions for each opcode 
+\item \hyperlink{m_comm__custom_8c}{m\+Comm\+\_\+custom.\+c} implements a custom opcode and should be referenced when creating your own custom behavior. 
+\end{DoxyItemize}
+\item m\+Comm Header Files~\newline
+ 
+\begin{DoxyItemize}
+\item \hyperlink{m_comm_8h}{m\+Comm.\+h} is the main header file for the module. Automatically included by m\+Touch.\+h. 
+\item \hyperlink{m_comm__config_8h}{m\+Comm\+\_\+config.\+h} stores all the configuration options for the m\+Comm module. 
+\item \hyperlink{m_comm__options_for_config_8h}{m\+Comm\+\_\+options\+For\+Config.\+h} contains pre-\/defined labels for easier user configuration. Do not edit. 
+\item \hyperlink{m_comm__process_configuration_8h}{m\+Comm\+\_\+process\+Configuration.\+h} performs much of the pre-\/compiling work to confirm a valid configuration and then set up the flags and variables to aid the compiler in generating a custom m\+Comm application. 
+\end{DoxyItemize}
+\item {\bfseries Alternative Configurations/} 
+\begin{DoxyItemize}
+\item \hyperlink{m_touch__hardware_profile__12_f61x_8h}{m\+Touch\+\_\+\+Hardware\+Profile\+\_\+12\+F61x.\+h} is one of many P\+I\+C-\/family-\/specific header files that contains information such available hardware modules, analog channel-\/to-\/port mapping, and default register configurations. 
+\item See {\ttfamily Your M\+L\+A Directory/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F C\+V\+D Library/\+Alternative Configurations/} for all available processor configuration files. 
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}
+\item {\bfseries /m\+Touch\+Cap\+Demos} 
+\begin{DoxyItemize}
+\item {\bfseries /\+P\+I\+C16\+F\+\_\+\+C\+V\+D\+\_\+\+Demos}~\newline
+ Provides some example, pre-\/configured projects for various P\+I\+C microcontrollers and setups. 
+\begin{DoxyItemize}
+\item {\bfseries /02-\/02091-\/\+R2 C\+S\+M-\/\+C\+V\+D Eval Board}~\newline
+ Example project implementing C\+V\+D on the m\+Touch C\+S\+M-\/\+C\+V\+D evaluation board. 
+\begin{DoxyItemize}
+\item {\bfseries /2-\/\+Ch Slider}~\newline
+ Implements a 2-\/channel slider connected to daughter board pin 0 and 1 
+\item {\bfseries /4-\/\+Ch Slider}~\newline
+ Implements a 4-\/channel slider connected to daughter board pin 0-\/3 
+\item {\bfseries /8 Buttons}~\newline
+ Implements an 8-\/button daughter board connected to pins 0-\/7 
+\item {\bfseries /12-\/\+Key Matrix}~\newline
+ Implements a 12-\/key 3x4 matrix daughter board on pins 0-\/6 
+\item {\bfseries /\+Metal-\/over-\/\+Capacitive Daughter Board (A\+C183026)}~\newline
+ Implements the 4-\/sensor Mo\+C daught board connected to pins 2-\/5 
+\end{DoxyItemize}
+\item {\bfseries /02-\/02091-\/\+R3 C\+V\+D Eval Board}~\newline
+ Example project implementing C\+V\+D on the m\+Touch C\+V\+D evaluation board. 
+\begin{DoxyItemize}
+\item {\bfseries /2-\/\+Ch Slider}~\newline
+ Implements a 2-\/channel slider connected to daughter board pin 0 and 1 
+\item {\bfseries /4-\/\+Ch Slider}~\newline
+ Implements a 4-\/channel slider connected to daughter board pin 0-\/3 
+\item {\bfseries /8 Buttons}~\newline
+ Implements an 8-\/button daughter board connected to pins 0-\/7 
+\item {\bfseries /12-\/\+Key Matrix}~\newline
+ Implements a 12-\/key 3x4 matrix daughter board on pins 0-\/6 
+\item {\bfseries /\+Metal-\/over-\/\+Capacitive Daughter Board (A\+C183026)}~\newline
+ Implements the 4-\/sensor Mo\+C daught board connected to pins 2-\/5 
+\end{DoxyItemize}
+\item {\bfseries /02-\/02091-\/\+R\+A C\+S\+M Eval Board}~\newline
+ Example project implementing C\+V\+D on the m\+Touch C\+S\+M evaluation board. 
+\begin{DoxyItemize}
+\item {\bfseries /2-\/\+Ch Slider}~\newline
+ Implements a 2-\/channel slider connected to daughter board pin 0 and 1 
+\item {\bfseries /4-\/\+Ch Slider}~\newline
+ Implements a 4-\/channel slider connected to daughter board pin 0-\/3 
+\item {\bfseries /8 Buttons}~\newline
+ Implements an 8-\/button daughter board connected to pins 0-\/7 
+\item {\bfseries /12-\/\+Key Matrix}~\newline
+ Implements a 12-\/key 3x4 matrix daughter board on pins 0-\/6 
+\item {\bfseries /\+Metal-\/over-\/\+Capacitive Daughter Board (A\+C183026)}~\newline
+ Implements the 4-\/sensor Mo\+C daught board connected to pins 2-\/5 
+\end{DoxyItemize}
+\item {\bfseries /233-\/04-\/1008 Rev F C\+S\+M Eval Board}~\newline
+ Example project implementing C\+V\+D on the m\+Touch C\+S\+M evaluation board. 
+\begin{DoxyItemize}
+\item {\bfseries /2-\/\+Ch Slider}~\newline
+ Implements a 2-\/channel slider connected to daughter board pin 0 and 1 
+\item {\bfseries /4-\/\+Ch Slider}~\newline
+ Implements a 4-\/channel slider connected to daughter board pin 0-\/3 
+\item {\bfseries /8 Buttons}~\newline
+ Implements an 8-\/button daughter board connected to pins 0-\/7 
+\item {\bfseries /12-\/\+Key Matrix}~\newline
+ Implements a 12-\/key 3x4 matrix daughter board on pins 0-\/6 
+\item {\bfseries /\+Metal-\/over-\/\+Capacitive Daughter Board (A\+C183026)}~\newline
+ Implements the 4-\/sensor Mo\+C daught board connected to pins 2-\/5 
+\end{DoxyItemize}
+\item {\bfseries /\+P\+I\+C16\+F615 -\/ 1 sensor with U\+A\+R\+T}~\newline
+ Example project implementing oen C\+V\+D sensor on P\+I\+C12\+F615 with one-\/way U\+A\+R\+T communications out 
+\item {\bfseries /\+P\+I\+C16\+F615 -\/ 2 sensors}~\newline
+ Example project implementing two C\+V\+D sensors on P\+I\+C12\+F615 
+\item {\bfseries /\+P\+I\+C16\+F1527 -\/ 30 sensors}~\newline
+ Example project implementing the maximum number of supported sensors (30) on the P\+I\+C16\+F1527 
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}

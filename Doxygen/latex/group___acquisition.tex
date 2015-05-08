@@ -1,0 +1,135 @@
+\hypertarget{group___acquisition}{}\section{Acquisition}
+\label{group___acquisition}\index{Acquisition@{Acquisition}}
+
+
+Generates and executes a configured version of the C\+V\+D acquisition routine.  
+
+
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{unionm_touch___acquisition_data}{m\+Touch\+\_\+\+Acquisition\+Data}
+\begin{DoxyCompactList}\small\item\em Structure used to implement both a 12-\/bit and a 20-\/bit variable inside a single 32-\/bit array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void interrupt \hyperlink{group___acquisition_gaeeee5d5e14eaff7df78e9ad5d7ac9769}{m\+Touch\+\_\+\+Scan} (void)
+\begin{DoxyCompactList}\small\item\em Implements the framework\textquotesingle{}s active-\/mode acquisition routine. Sometimes implemented as an I\+S\+R, sometimes as a normal function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{m\+Touch Acquisition I\+S\+R Variables}
+\label{_amgrpd8ec0cfe8287733f0d3c2a715e39ed21}%
+These variables are used by the I\+S\+R of the m\+Touch Framework and should not be directly accessed by the main loop application. \begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \hyperlink{group___acquisition_ga6890b3a94dbdd045d66ec2b025cddda6}{m\+Touch\+\_\+last\+Result}
+\begin{DoxyCompactList}\small\item\em Stores the last active-\/mode A\+D\+C result for differential calculation. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group___acquisition_gaf6d2f71af7a6dfd8571cbd141c40053e}{m\+Touch\+\_\+delay\+Count}
+\begin{DoxyCompactList}\small\item\em Delay counter variable used in C\+V\+D scan sequence. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group___acquisition_ga800eae7ce7292a55c5d60975179ea26a}{m\+Touch\+\_\+jitter} = 0x55
+\begin{DoxyCompactList}\small\item\em Stores the current random seed value for jittering. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{m\+Touch Acquisition I\+S\+R Variables}
+\label{_amgrpd8ec0cfe8287733f0d3c2a715e39ed21}%
+These variables are used by the I\+S\+R of the m\+Touch Framework and should not be directly accessed by the main loop application. \begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \hyperlink{group___acquisition_ga6890b3a94dbdd045d66ec2b025cddda6}{m\+Touch\+\_\+last\+Result}
+\begin{DoxyCompactList}\small\item\em Stores the last active-\/mode A\+D\+C result for differential calculation. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group___acquisition_gaf6d2f71af7a6dfd8571cbd141c40053e}{m\+Touch\+\_\+delay\+Count}
+\begin{DoxyCompactList}\small\item\em Delay counter variable used in C\+V\+D scan sequence. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group___acquisition_ga800eae7ce7292a55c5d60975179ea26a}{m\+Touch\+\_\+jitter} = 0x55
+\begin{DoxyCompactList}\small\item\em Stores the current random seed value for jittering. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generates and executes a configured version of the C\+V\+D acquisition routine. 
+
+The m\+Touch Acquisition module generates an assembly implementation of the interrupt service routine that is designed to maximize noise immunity and minimize execution time. It will automatically add and remove macros as the number of sensors in the application changes. By default, it will use the previously scanned sensor as the reference for the current scan. If the application only has a single sensor, a special acquisition method which does not require a reference sensor is used. This specialized method should not be used in systems with more than one sensor due to crosstalk concerns. 
+
+\subsection{Function Documentation}
+\hypertarget{group___acquisition_gaeeee5d5e14eaff7df78e9ad5d7ac9769}{}\index{Acquisition@{Acquisition}!m\+Touch\+\_\+\+Scan@{m\+Touch\+\_\+\+Scan}}
+\index{m\+Touch\+\_\+\+Scan@{m\+Touch\+\_\+\+Scan}!Acquisition@{Acquisition}}
+\subsubsection[{m\+Touch\+\_\+\+Scan}]{\setlength{\rightskip}{0pt plus 5cm}void interrupt m\+Touch\+\_\+\+Scan (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{group___acquisition_gaeeee5d5e14eaff7df78e9ad5d7ac9769}
+
+
+Implements the framework\textquotesingle{}s active-\/mode acquisition routine. Sometimes implemented as an I\+S\+R, sometimes as a normal function. 
+
+Implements the acquisition process for the m\+Touch Framework. Please do not modify. 
+
+Definition at line 182 of file m\+Touch\+\_\+acquisition.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 0
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{group___acquisition_gaf6d2f71af7a6dfd8571cbd141c40053e}{}\index{Acquisition@{Acquisition}!m\+Touch\+\_\+delay\+Count@{m\+Touch\+\_\+delay\+Count}}
+\index{m\+Touch\+\_\+delay\+Count@{m\+Touch\+\_\+delay\+Count}!Acquisition@{Acquisition}}
+\subsubsection[{m\+Touch\+\_\+delay\+Count}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t m\+Touch\+\_\+delay\+Count}\label{group___acquisition_gaf6d2f71af7a6dfd8571cbd141c40053e}
+
+
+Delay counter variable used in C\+V\+D scan sequence. 
+
+
+
+Definition at line 92 of file m\+Touch\+\_\+acquisition.\+c.
+
+\hypertarget{group___acquisition_gaf6d2f71af7a6dfd8571cbd141c40053e}{}\index{Acquisition@{Acquisition}!m\+Touch\+\_\+delay\+Count@{m\+Touch\+\_\+delay\+Count}}
+\index{m\+Touch\+\_\+delay\+Count@{m\+Touch\+\_\+delay\+Count}!Acquisition@{Acquisition}}
+\subsubsection[{m\+Touch\+\_\+delay\+Count}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t m\+Touch\+\_\+delay\+Count}\label{group___acquisition_gaf6d2f71af7a6dfd8571cbd141c40053e}
+
+
+Delay counter variable used in C\+V\+D scan sequence. 
+
+
+
+Definition at line 95 of file m\+Touch\+\_\+acquisition\+\_\+\+H\+C\+V\+D.\+c.
+
+\hypertarget{group___acquisition_ga800eae7ce7292a55c5d60975179ea26a}{}\index{Acquisition@{Acquisition}!m\+Touch\+\_\+jitter@{m\+Touch\+\_\+jitter}}
+\index{m\+Touch\+\_\+jitter@{m\+Touch\+\_\+jitter}!Acquisition@{Acquisition}}
+\subsubsection[{m\+Touch\+\_\+jitter}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t m\+Touch\+\_\+jitter = 0x55}\label{group___acquisition_ga800eae7ce7292a55c5d60975179ea26a}
+
+
+Stores the current random seed value for jittering. 
+
+
+
+Definition at line 108 of file m\+Touch\+\_\+acquisition.\+c.
+
+\hypertarget{group___acquisition_ga800eae7ce7292a55c5d60975179ea26a}{}\index{Acquisition@{Acquisition}!m\+Touch\+\_\+jitter@{m\+Touch\+\_\+jitter}}
+\index{m\+Touch\+\_\+jitter@{m\+Touch\+\_\+jitter}!Acquisition@{Acquisition}}
+\subsubsection[{m\+Touch\+\_\+jitter}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t m\+Touch\+\_\+jitter = 0x55}\label{group___acquisition_ga800eae7ce7292a55c5d60975179ea26a}
+
+
+Stores the current random seed value for jittering. 
+
+
+
+Definition at line 111 of file m\+Touch\+\_\+acquisition\+\_\+\+H\+C\+V\+D.\+c.
+
+\hypertarget{group___acquisition_ga6890b3a94dbdd045d66ec2b025cddda6}{}\index{Acquisition@{Acquisition}!m\+Touch\+\_\+last\+Result@{m\+Touch\+\_\+last\+Result}}
+\index{m\+Touch\+\_\+last\+Result@{m\+Touch\+\_\+last\+Result}!Acquisition@{Acquisition}}
+\subsubsection[{m\+Touch\+\_\+last\+Result}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t m\+Touch\+\_\+last\+Result}\label{group___acquisition_ga6890b3a94dbdd045d66ec2b025cddda6}
+
+
+Stores the last active-\/mode A\+D\+C result for differential calculation. 
+
+
+
+Definition at line 91 of file m\+Touch\+\_\+acquisition.\+c.
+
+\hypertarget{group___acquisition_ga6890b3a94dbdd045d66ec2b025cddda6}{}\index{Acquisition@{Acquisition}!m\+Touch\+\_\+last\+Result@{m\+Touch\+\_\+last\+Result}}
+\index{m\+Touch\+\_\+last\+Result@{m\+Touch\+\_\+last\+Result}!Acquisition@{Acquisition}}
+\subsubsection[{m\+Touch\+\_\+last\+Result}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t m\+Touch\+\_\+last\+Result}\label{group___acquisition_ga6890b3a94dbdd045d66ec2b025cddda6}
+
+
+Stores the last active-\/mode A\+D\+C result for differential calculation. 
+
+
+
+Definition at line 94 of file m\+Touch\+\_\+acquisition\+\_\+\+H\+C\+V\+D.\+c.
+

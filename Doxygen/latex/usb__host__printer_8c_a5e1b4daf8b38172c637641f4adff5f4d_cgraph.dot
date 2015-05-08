@@ -1,0 +1,34 @@
+digraph "USBHostPrinterEventHandler"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="USBHostPrinterEventHandler",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="_USBHostPrinter_FindDevice",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__printer_8c.html#acdca20ebfd78d5539c5aad1914065f39"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="USBHostPrinterCommand",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__printer_8c.html#a69eb4a7d81cbfc11f10262ddbc5c6c4e"];
+  Node3 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="UART2PrintString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uart2_8c.html#a4f250e76dccb6dc8450c04efbc8e9a8f"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="UART2PutChar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uart2_8c.html#a23f0e312ef33167a4c51b6b353135e89"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="UART2PutDec",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uart2_8c.html#a58c86457543e83b150d2fb442f08c66d"];
+  Node6 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="_USBHostPrinter_ReadFrom\lQueue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__printer_8c.html#a217c298721781e2e287baf1b2b14f9c2"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="USBHostRead",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host_8h.html#abb1e7fbe92c771bdc0f8b3219538b3e6"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="_USB_FindEndpoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host_8c.html#ae449b4da12d04e5c006874382c84caab"];
+  Node8 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="_USB_InitRead",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host_8c.html#a980bc0a87a2b743b32edb6b6d38a4cb2"];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="_USBHostPrinter_WriteFrom\lQueue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__printer_8c.html#a28c61a0f843c82f59895bdb1d0740bd1"];
+  Node11 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="USBHostWrite",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host_8h.html#aab4a83f31884a531ad00ce9255c2a2c0"];
+  Node12 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="_USB_InitWrite",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host_8c.html#a2c2d163e2fd091e8ebcbdd0c27408516"];
+}

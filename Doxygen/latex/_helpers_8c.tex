@@ -1,0 +1,340 @@
+\hypertarget{_helpers_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Helpers.c File Reference}
+\label{_helpers_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Helpers.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Helpers.\+c}}
+{\ttfamily \#include $<$stdarg.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}T\+C\+P\+I\+P Stack/\+T\+C\+P\+I\+P.\+h\char`\"{}}\\*
+Include dependency graph for Helpers.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_helpers_8c_a5f33a4c7551de3f63a14129ec2676627}{\+\_\+\+\_\+\+H\+E\+L\+P\+E\+R\+S\+\_\+\+C}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} \hyperlink{_helpers_8c_a4cbb98a43546f70ea01fbf5408e72540}{L\+F\+S\+R\+Seed\+Rand} (\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} dw\+Seed)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_helpers_8c_aa96b3af9ccf2d7d2a4558708b90981cd}{L\+F\+S\+R\+Rand} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} \hyperlink{_helpers_8c_ab9a87e9fa459e39748e35e7b700077ed}{Generate\+Random\+D\+W\+O\+R\+D} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_helpers_8c_a63d18fd1e058bbb10a115a407393b619}{String\+To\+I\+P\+Address} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$str, I\+P\+\_\+\+A\+D\+D\+R $\ast$I\+P\+Address)
+\item 
+void \hyperlink{_helpers_8c_a5d4b74bdb9f65383826e4de1e829d19c}{uitoa} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} Value, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$Buffer)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_helpers_8c_aa0626d801822bbdeaeeec3b3a0ef7425}{hexatob} (\hyperlink{union_w_o_r_d___v_a_l}{W\+O\+R\+D\+\_\+\+V\+A\+L} Ascii\+Chars)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_helpers_8c_aa129c53253a620e130b6c1a9db2968a9}{btohexa\+\_\+high} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} b)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_helpers_8c_a40aa9c3fb0cea01f45f62caf72c6101b}{btohexa\+\_\+low} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} b)
+\item 
+signed char \hyperlink{_helpers_8c_a226a3e9b8a688e9db401541e568e2a5c}{stricmppgm2ram} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$a, R\+O\+M \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$b)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_helpers_8c_add09104747ab0b189bcd8137ab2458ea}{swaps} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_s_p_i_flash_8c_a51a3fc6fe361f8f5a7a91799fecd2c9a}{v})
+\item 
+\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} \hyperlink{_helpers_8c_a8f07ee728c4a31e32ebf3ed585086b6a}{swapl} (\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} \hyperlink{_s_p_i_flash_8c_a51a3fc6fe361f8f5a7a91799fecd2c9a}{v})
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_helpers_8c_a7e58157b6f801e29d95e908b924f256e}{Calc\+I\+P\+Checksum} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$buffer, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} count)
+\item 
+char $\ast$ \hyperlink{_helpers_8c_a30da742ecd74e7787464853cb67205f7}{strupr} (char $\ast$s)
+\item 
+void \hyperlink{_helpers_8c_af90c98e3144b95b026bc2ec23ffda41e}{Format\+Net\+B\+I\+O\+S\+Name} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} Name\mbox{[}$\,$\mbox{]})
+\item 
+char $\ast$ \hyperlink{_helpers_8c_a04f57d57220ba424cfef8caca49a31ef}{strnchr} (const char $\ast$search\+String, size\+\_\+t count, char c)
+\item 
+size\+\_\+t \hyperlink{_helpers_8c_a323b7f23235530156f5d2e8e735351a7}{strncpy\+\_\+m} (char $\ast$dest\+Str, size\+\_\+t dest\+Size, int n\+Strings,...)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_helpers_8c_a5f33a4c7551de3f63a14129ec2676627}{}\index{Helpers.\+c@{Helpers.\+c}!\+\_\+\+\_\+\+H\+E\+L\+P\+E\+R\+S\+\_\+\+C@{\+\_\+\+\_\+\+H\+E\+L\+P\+E\+R\+S\+\_\+\+C}}
+\index{\+\_\+\+\_\+\+H\+E\+L\+P\+E\+R\+S\+\_\+\+C@{\+\_\+\+\_\+\+H\+E\+L\+P\+E\+R\+S\+\_\+\+C}!Helpers.\+c@{Helpers.\+c}}
+\subsubsection[{\+\_\+\+\_\+\+H\+E\+L\+P\+E\+R\+S\+\_\+\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+\_\+\+H\+E\+L\+P\+E\+R\+S\+\_\+\+C}\label{_helpers_8c_a5f33a4c7551de3f63a14129ec2676627}
+
+
+Definition at line 56 of file Helpers.\+c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_helpers_8c_aa129c53253a620e130b6c1a9db2968a9}{}\index{Helpers.\+c@{Helpers.\+c}!btohexa\+\_\+high@{btohexa\+\_\+high}}
+\index{btohexa\+\_\+high@{btohexa\+\_\+high}!Helpers.\+c@{Helpers.\+c}}
+\subsubsection[{btohexa\+\_\+high}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} btohexa\+\_\+high (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{b}
+\end{DoxyParamCaption}
+)}\label{_helpers_8c_aa129c53253a620e130b6c1a9db2968a9}
+
+
+Definition at line 975 of file Helpers.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+\hypertarget{_helpers_8c_a40aa9c3fb0cea01f45f62caf72c6101b}{}\index{Helpers.\+c@{Helpers.\+c}!btohexa\+\_\+low@{btohexa\+\_\+low}}
+\index{btohexa\+\_\+low@{btohexa\+\_\+low}!Helpers.\+c@{Helpers.\+c}}
+\subsubsection[{btohexa\+\_\+low}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} btohexa\+\_\+low (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{b}
+\end{DoxyParamCaption}
+)}\label{_helpers_8c_a40aa9c3fb0cea01f45f62caf72c6101b}
+
+
+Definition at line 1001 of file Helpers.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\hypertarget{_helpers_8c_a7e58157b6f801e29d95e908b924f256e}{}\index{Helpers.\+c@{Helpers.\+c}!Calc\+I\+P\+Checksum@{Calc\+I\+P\+Checksum}}
+\index{Calc\+I\+P\+Checksum@{Calc\+I\+P\+Checksum}!Helpers.\+c@{Helpers.\+c}}
+\subsubsection[{Calc\+I\+P\+Checksum}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Calc\+I\+P\+Checksum (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{buffer, }
+\item[{{\bf W\+O\+R\+D}}]{count}
+\end{DoxyParamCaption}
+)}\label{_helpers_8c_a7e58157b6f801e29d95e908b924f256e}
+
+
+Definition at line 1162 of file Helpers.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\hypertarget{_helpers_8c_af90c98e3144b95b026bc2ec23ffda41e}{}\index{Helpers.\+c@{Helpers.\+c}!Format\+Net\+B\+I\+O\+S\+Name@{Format\+Net\+B\+I\+O\+S\+Name}}
+\index{Format\+Net\+B\+I\+O\+S\+Name@{Format\+Net\+B\+I\+O\+S\+Name}!Helpers.\+c@{Helpers.\+c}}
+\subsubsection[{Format\+Net\+B\+I\+O\+S\+Name}]{\setlength{\rightskip}{0pt plus 5cm}void Format\+Net\+B\+I\+O\+S\+Name (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{Name\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{_helpers_8c_af90c98e3144b95b026bc2ec23ffda41e}
+
+
+Definition at line 1343 of file Helpers.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+\hypertarget{_helpers_8c_ab9a87e9fa459e39748e35e7b700077ed}{}\index{Helpers.\+c@{Helpers.\+c}!Generate\+Random\+D\+W\+O\+R\+D@{Generate\+Random\+D\+W\+O\+R\+D}}
+\index{Generate\+Random\+D\+W\+O\+R\+D@{Generate\+Random\+D\+W\+O\+R\+D}!Helpers.\+c@{Helpers.\+c}}
+\subsubsection[{Generate\+Random\+D\+W\+O\+R\+D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} Generate\+Random\+D\+W\+O\+R\+D (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_helpers_8c_ab9a87e9fa459e39748e35e7b700077ed}
+
+
+Definition at line 212 of file Helpers.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 5
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\hypertarget{_helpers_8c_aa0626d801822bbdeaeeec3b3a0ef7425}{}\index{Helpers.\+c@{Helpers.\+c}!hexatob@{hexatob}}
+\index{hexatob@{hexatob}!Helpers.\+c@{Helpers.\+c}}
+\subsubsection[{hexatob}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} hexatob (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D\+\_\+\+V\+A\+L}}]{Ascii\+Chars}
+\end{DoxyParamCaption}
+)}\label{_helpers_8c_aa0626d801822bbdeaeeec3b3a0ef7425}
+
+
+Definition at line 932 of file Helpers.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 7
+
+
+\hypertarget{_helpers_8c_aa96b3af9ccf2d7d2a4558708b90981cd}{}\index{Helpers.\+c@{Helpers.\+c}!L\+F\+S\+R\+Rand@{L\+F\+S\+R\+Rand}}
+\index{L\+F\+S\+R\+Rand@{L\+F\+S\+R\+Rand}!Helpers.\+c@{Helpers.\+c}}
+\subsubsection[{L\+F\+S\+R\+Rand}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} L\+F\+S\+R\+Rand (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_helpers_8c_aa96b3af9ccf2d7d2a4558708b90981cd}
+
+
+Definition at line 158 of file Helpers.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 8
+
+
+\hypertarget{_helpers_8c_a4cbb98a43546f70ea01fbf5408e72540}{}\index{Helpers.\+c@{Helpers.\+c}!L\+F\+S\+R\+Seed\+Rand@{L\+F\+S\+R\+Seed\+Rand}}
+\index{L\+F\+S\+R\+Seed\+Rand@{L\+F\+S\+R\+Seed\+Rand}!Helpers.\+c@{Helpers.\+c}}
+\subsubsection[{L\+F\+S\+R\+Seed\+Rand}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} L\+F\+S\+R\+Seed\+Rand (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+W\+O\+R\+D}}]{dw\+Seed}
+\end{DoxyParamCaption}
+)}\label{_helpers_8c_a4cbb98a43546f70ea01fbf5408e72540}
+
+
+Definition at line 100 of file Helpers.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 9
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 10
+
+
+\hypertarget{_helpers_8c_a226a3e9b8a688e9db401541e568e2a5c}{}\index{Helpers.\+c@{Helpers.\+c}!stricmppgm2ram@{stricmppgm2ram}}
+\index{stricmppgm2ram@{stricmppgm2ram}!Helpers.\+c@{Helpers.\+c}}
+\subsubsection[{stricmppgm2ram}]{\setlength{\rightskip}{0pt plus 5cm}signed char stricmppgm2ram (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{a, }
+\item[{R\+O\+M {\bf B\+Y\+T\+E} $\ast$}]{b}
+\end{DoxyParamCaption}
+)}\label{_helpers_8c_a226a3e9b8a688e9db401541e568e2a5c}
+
+
+Definition at line 1031 of file Helpers.\+c.
+
+\hypertarget{_helpers_8c_a63d18fd1e058bbb10a115a407393b619}{}\index{Helpers.\+c@{Helpers.\+c}!String\+To\+I\+P\+Address@{String\+To\+I\+P\+Address}}
+\index{String\+To\+I\+P\+Address@{String\+To\+I\+P\+Address}!Helpers.\+c@{Helpers.\+c}}
+\subsubsection[{String\+To\+I\+P\+Address}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} String\+To\+I\+P\+Address (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{str, }
+\item[{I\+P\+\_\+\+A\+D\+D\+R $\ast$}]{I\+P\+Address}
+\end{DoxyParamCaption}
+)}\label{_helpers_8c_a63d18fd1e058bbb10a115a407393b619}
+
+
+Definition at line 444 of file Helpers.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 11
+
+
+\hypertarget{_helpers_8c_a04f57d57220ba424cfef8caca49a31ef}{}\index{Helpers.\+c@{Helpers.\+c}!strnchr@{strnchr}}
+\index{strnchr@{strnchr}!Helpers.\+c@{Helpers.\+c}}
+\subsubsection[{strnchr}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ strnchr (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{search\+String, }
+\item[{size\+\_\+t}]{count, }
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)}\label{_helpers_8c_a04f57d57220ba424cfef8caca49a31ef}
+
+
+Definition at line 1393 of file Helpers.\+c.
+
+\hypertarget{_helpers_8c_a323b7f23235530156f5d2e8e735351a7}{}\index{Helpers.\+c@{Helpers.\+c}!strncpy\+\_\+m@{strncpy\+\_\+m}}
+\index{strncpy\+\_\+m@{strncpy\+\_\+m}!Helpers.\+c@{Helpers.\+c}}
+\subsubsection[{strncpy\+\_\+m}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t strncpy\+\_\+m (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dest\+Str, }
+\item[{size\+\_\+t}]{dest\+Size, }
+\item[{int}]{n\+Strings, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\label{_helpers_8c_a323b7f23235530156f5d2e8e735351a7}
+
+
+Definition at line 1440 of file Helpers.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 12
+
+
+\hypertarget{_helpers_8c_a30da742ecd74e7787464853cb67205f7}{}\index{Helpers.\+c@{Helpers.\+c}!strupr@{strupr}}
+\index{strupr@{strupr}!Helpers.\+c@{Helpers.\+c}}
+\subsubsection[{strupr}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ strupr (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\label{_helpers_8c_a30da742ecd74e7787464853cb67205f7}
+
+
+Definition at line 1218 of file Helpers.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 13
+
+
+\hypertarget{_helpers_8c_a8f07ee728c4a31e32ebf3ed585086b6a}{}\index{Helpers.\+c@{Helpers.\+c}!swapl@{swapl}}
+\index{swapl@{swapl}!Helpers.\+c@{Helpers.\+c}}
+\subsubsection[{swapl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} swapl (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+W\+O\+R\+D}}]{v}
+\end{DoxyParamCaption}
+)}\label{_helpers_8c_a8f07ee728c4a31e32ebf3ed585086b6a}
+
+
+Definition at line 1119 of file Helpers.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 14
+
+
+\hypertarget{_helpers_8c_add09104747ab0b189bcd8137ab2458ea}{}\index{Helpers.\+c@{Helpers.\+c}!swaps@{swaps}}
+\index{swaps@{swaps}!Helpers.\+c@{Helpers.\+c}}
+\subsubsection[{swaps}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} swaps (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{v}
+\end{DoxyParamCaption}
+)}\label{_helpers_8c_add09104747ab0b189bcd8137ab2458ea}
+
+
+Definition at line 1087 of file Helpers.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 15
+
+
+\hypertarget{_helpers_8c_a5d4b74bdb9f65383826e4de1e829d19c}{}\index{Helpers.\+c@{Helpers.\+c}!uitoa@{uitoa}}
+\index{uitoa@{uitoa}!Helpers.\+c@{Helpers.\+c}}
+\subsubsection[{uitoa}]{\setlength{\rightskip}{0pt plus 5cm}void uitoa (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{Value, }
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{Buffer}
+\end{DoxyParamCaption}
+)}\label{_helpers_8c_a5d4b74bdb9f65383826e4de1e829d19c}
+
+
+Definition at line 828 of file Helpers.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 16
+
+

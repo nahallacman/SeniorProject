@@ -1,0 +1,298 @@
+\hypertarget{usb__host__msd__scsi_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+U\+S\+B/\+M\+S\+D Host Driver/usb\+\_\+host\+\_\+msd\+\_\+scsi.c File Reference}
+\label{usb__host__msd__scsi_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+U\+S\+B/\+M\+S\+D Host Driver/usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+U\+S\+B/\+M\+S\+D Host Driver/usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Compiler.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Generic\+Type\+Defs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Hardware\+Profile.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}F\+Sconfig.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}M\+D\+D File System/\+F\+S\+Defs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}M\+D\+D File System/\+F\+S\+I\+O.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}U\+S\+B/usb.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}U\+S\+B/usb\+\_\+host\+\_\+msd.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}U\+S\+B/usb\+\_\+host\+\_\+msd\+\_\+scsi.\+h\char`\"{}}\\*
+Include dependency graph for usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{usb__host__msd__scsi_8c_a624f56ef7fcb31077ddd670183810fc1}{P\+E\+R\+F\+O\+R\+M\+\_\+\+T\+E\+S\+T\+\_\+\+U\+N\+I\+T\+\_\+\+R\+E\+A\+D\+Y}
+\item 
+\#define \hyperlink{usb__host__msd__scsi_8c_a0e766d4af4fd62fa21e8428a346c6fbb}{F\+A\+T\+\_\+\+G\+O\+O\+D\+\_\+\+S\+I\+G\+N\+\_\+0}~0x55
+\item 
+\#define \hyperlink{usb__host__msd__scsi_8c_a93a853f438395222073d848d43782050}{F\+A\+T\+\_\+\+G\+O\+O\+D\+\_\+\+S\+I\+G\+N\+\_\+1}~0x\+A\+A
+\item 
+\#define \hyperlink{usb__host__msd__scsi_8c_abfeb8fcd27cd6a2e5a60a6d490e09996}{F\+O\+\_\+\+M\+B\+R}~0\+L
+\item 
+\#define \hyperlink{usb__host__msd__scsi_8c_a08929cb33b1d4a98daf4e20e601d7c85}{F\+U\+A\+\_\+\+A\+L\+L\+O\+W\+\_\+\+C\+A\+C\+H\+E}~0x00
+\item 
+\#define \hyperlink{usb__host__msd__scsi_8c_ae54a1e22592e4111be450cb5c44e5080}{I\+N\+I\+T\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+T\+T\+E\+M\+P\+T\+S}~100
+\item 
+\#define \hyperlink{usb__host__msd__scsi_8c_aeb2f2fe48804c0f1c736eaf9bd4ff5dd}{R\+D\+P\+R\+O\+T\+E\+C\+T\+\_\+\+N\+O\+R\+M\+A\+L}~0x00
+\item 
+\#define \hyperlink{usb__host__msd__scsi_8c_aa98cf50751b83e034a1d4079ae6df81c}{W\+R\+P\+R\+O\+T\+E\+C\+T\+\_\+\+N\+O\+R\+M\+A\+L}~0x00
+\item 
+\#define \hyperlink{usb__host__msd__scsi_8c_a2b502e85e4037b18f51ed8a1364c483d}{U\+S\+B\+Tasks}()
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__msd__scsi_8c_a1b63183d5e6748616592844f2bdece15}{\+\_\+\+U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+\_\+\+Test\+Unit\+Ready} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__msd__scsi_8c_a024a5b337f32ca13ae6495e26116efd8}{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Initialize} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} address, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} flags, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} client\+Driver\+I\+D)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__msd__scsi_8c_af5e1dffb6efb1a7a72ce3e2db06f9218}{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Event\+Handler} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} address, \hyperlink{usb__common_8h_a58f011a3d1f4cad0e69a9bf036fb847c}{U\+S\+B\+\_\+\+E\+V\+E\+N\+T} event, void $\ast$data, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} size)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{usb__host__msd__scsi_8c_aba0e5e79257f234b0cde87be05d25d28}{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Media\+Detect} (void)
+\item 
+\hyperlink{struct_m_e_d_i_a___i_n_f_o_r_m_a_t_i_o_n}{M\+E\+D\+I\+A\+\_\+\+I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N} $\ast$ \hyperlink{usb__host__msd__scsi_8c_aac13cd808cbcb04924726ee15fa04e06}{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Media\+Initialize} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{usb__host__msd__scsi_8c_accbed29f0f0ddcc1fc0a8af39f8c1fc3}{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Media\+Reset} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{usb__host__msd__scsi_8c_a92e2c21c51d1130da948cde172bd4f01}{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Sector\+Read} (\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} sector\+Address, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$data\+Buffer)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{usb__host__msd__scsi_8c_afaa3df8cd0d59961feefbb4a627c1338}{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Sector\+Write} (\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} sector\+Address, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$data\+Buffer, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} allow\+Write\+To\+Zero)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{usb__host__msd__scsi_8c_ac0f7fe266cf5e87e52f0f9994b3469c1}{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Write\+Protect\+State} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{usb__host__msd__scsi_8c_a0e766d4af4fd62fa21e8428a346c6fbb}{}\index{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}!F\+A\+T\+\_\+\+G\+O\+O\+D\+\_\+\+S\+I\+G\+N\+\_\+0@{F\+A\+T\+\_\+\+G\+O\+O\+D\+\_\+\+S\+I\+G\+N\+\_\+0}}
+\index{F\+A\+T\+\_\+\+G\+O\+O\+D\+\_\+\+S\+I\+G\+N\+\_\+0@{F\+A\+T\+\_\+\+G\+O\+O\+D\+\_\+\+S\+I\+G\+N\+\_\+0}!usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}}
+\subsubsection[{F\+A\+T\+\_\+\+G\+O\+O\+D\+\_\+\+S\+I\+G\+N\+\_\+0}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+A\+T\+\_\+\+G\+O\+O\+D\+\_\+\+S\+I\+G\+N\+\_\+0~0x55}\label{usb__host__msd__scsi_8c_a0e766d4af4fd62fa21e8428a346c6fbb}
+
+
+Definition at line 81 of file usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c.
+
+\hypertarget{usb__host__msd__scsi_8c_a93a853f438395222073d848d43782050}{}\index{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}!F\+A\+T\+\_\+\+G\+O\+O\+D\+\_\+\+S\+I\+G\+N\+\_\+1@{F\+A\+T\+\_\+\+G\+O\+O\+D\+\_\+\+S\+I\+G\+N\+\_\+1}}
+\index{F\+A\+T\+\_\+\+G\+O\+O\+D\+\_\+\+S\+I\+G\+N\+\_\+1@{F\+A\+T\+\_\+\+G\+O\+O\+D\+\_\+\+S\+I\+G\+N\+\_\+1}!usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}}
+\subsubsection[{F\+A\+T\+\_\+\+G\+O\+O\+D\+\_\+\+S\+I\+G\+N\+\_\+1}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+A\+T\+\_\+\+G\+O\+O\+D\+\_\+\+S\+I\+G\+N\+\_\+1~0x\+A\+A}\label{usb__host__msd__scsi_8c_a93a853f438395222073d848d43782050}
+
+
+Definition at line 82 of file usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c.
+
+\hypertarget{usb__host__msd__scsi_8c_abfeb8fcd27cd6a2e5a60a6d490e09996}{}\index{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}!F\+O\+\_\+\+M\+B\+R@{F\+O\+\_\+\+M\+B\+R}}
+\index{F\+O\+\_\+\+M\+B\+R@{F\+O\+\_\+\+M\+B\+R}!usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}}
+\subsubsection[{F\+O\+\_\+\+M\+B\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+O\+\_\+\+M\+B\+R~0\+L}\label{usb__host__msd__scsi_8c_abfeb8fcd27cd6a2e5a60a6d490e09996}
+
+
+Definition at line 83 of file usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c.
+
+\hypertarget{usb__host__msd__scsi_8c_a08929cb33b1d4a98daf4e20e601d7c85}{}\index{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}!F\+U\+A\+\_\+\+A\+L\+L\+O\+W\+\_\+\+C\+A\+C\+H\+E@{F\+U\+A\+\_\+\+A\+L\+L\+O\+W\+\_\+\+C\+A\+C\+H\+E}}
+\index{F\+U\+A\+\_\+\+A\+L\+L\+O\+W\+\_\+\+C\+A\+C\+H\+E@{F\+U\+A\+\_\+\+A\+L\+L\+O\+W\+\_\+\+C\+A\+C\+H\+E}!usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}}
+\subsubsection[{F\+U\+A\+\_\+\+A\+L\+L\+O\+W\+\_\+\+C\+A\+C\+H\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+U\+A\+\_\+\+A\+L\+L\+O\+W\+\_\+\+C\+A\+C\+H\+E~0x00}\label{usb__host__msd__scsi_8c_a08929cb33b1d4a98daf4e20e601d7c85}
+
+
+Definition at line 84 of file usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c.
+
+\hypertarget{usb__host__msd__scsi_8c_ae54a1e22592e4111be450cb5c44e5080}{}\index{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}!I\+N\+I\+T\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+T\+T\+E\+M\+P\+T\+S@{I\+N\+I\+T\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+T\+T\+E\+M\+P\+T\+S}}
+\index{I\+N\+I\+T\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+T\+T\+E\+M\+P\+T\+S@{I\+N\+I\+T\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+T\+T\+E\+M\+P\+T\+S}!usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}}
+\subsubsection[{I\+N\+I\+T\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+T\+T\+E\+M\+P\+T\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+I\+T\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+T\+T\+E\+M\+P\+T\+S~100}\label{usb__host__msd__scsi_8c_ae54a1e22592e4111be450cb5c44e5080}
+
+
+Definition at line 85 of file usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c.
+
+\hypertarget{usb__host__msd__scsi_8c_a624f56ef7fcb31077ddd670183810fc1}{}\index{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}!P\+E\+R\+F\+O\+R\+M\+\_\+\+T\+E\+S\+T\+\_\+\+U\+N\+I\+T\+\_\+\+R\+E\+A\+D\+Y@{P\+E\+R\+F\+O\+R\+M\+\_\+\+T\+E\+S\+T\+\_\+\+U\+N\+I\+T\+\_\+\+R\+E\+A\+D\+Y}}
+\index{P\+E\+R\+F\+O\+R\+M\+\_\+\+T\+E\+S\+T\+\_\+\+U\+N\+I\+T\+\_\+\+R\+E\+A\+D\+Y@{P\+E\+R\+F\+O\+R\+M\+\_\+\+T\+E\+S\+T\+\_\+\+U\+N\+I\+T\+\_\+\+R\+E\+A\+D\+Y}!usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}}
+\subsubsection[{P\+E\+R\+F\+O\+R\+M\+\_\+\+T\+E\+S\+T\+\_\+\+U\+N\+I\+T\+\_\+\+R\+E\+A\+D\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+E\+R\+F\+O\+R\+M\+\_\+\+T\+E\+S\+T\+\_\+\+U\+N\+I\+T\+\_\+\+R\+E\+A\+D\+Y}\label{usb__host__msd__scsi_8c_a624f56ef7fcb31077ddd670183810fc1}
+
+
+Definition at line 73 of file usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c.
+
+\hypertarget{usb__host__msd__scsi_8c_aeb2f2fe48804c0f1c736eaf9bd4ff5dd}{}\index{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}!R\+D\+P\+R\+O\+T\+E\+C\+T\+\_\+\+N\+O\+R\+M\+A\+L@{R\+D\+P\+R\+O\+T\+E\+C\+T\+\_\+\+N\+O\+R\+M\+A\+L}}
+\index{R\+D\+P\+R\+O\+T\+E\+C\+T\+\_\+\+N\+O\+R\+M\+A\+L@{R\+D\+P\+R\+O\+T\+E\+C\+T\+\_\+\+N\+O\+R\+M\+A\+L}!usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}}
+\subsubsection[{R\+D\+P\+R\+O\+T\+E\+C\+T\+\_\+\+N\+O\+R\+M\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+D\+P\+R\+O\+T\+E\+C\+T\+\_\+\+N\+O\+R\+M\+A\+L~0x00}\label{usb__host__msd__scsi_8c_aeb2f2fe48804c0f1c736eaf9bd4ff5dd}
+
+
+Definition at line 86 of file usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c.
+
+\hypertarget{usb__host__msd__scsi_8c_a2b502e85e4037b18f51ed8a1364c483d}{}\index{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}!U\+S\+B\+Tasks@{U\+S\+B\+Tasks}}
+\index{U\+S\+B\+Tasks@{U\+S\+B\+Tasks}!usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}}
+\subsubsection[{U\+S\+B\+Tasks}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+Tasks(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{usb__host__msd__scsi_8c_a2b502e85e4037b18f51ed8a1364c483d}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                               \hyperlink{usb__host_8h_acc6184ed42d388b3d1a3fbc889c7cd68}{\(\backslash\)}
+\hyperlink{usb__host_8h_acc6184ed42d388b3d1a3fbc889c7cd68}{            USBHostTasks}();             \hyperlink{usb__host__msd_8h_aa41223ae18108ca0d663875f47a3ae37}{\(\backslash\)}
+\hyperlink{usb__host__msd_8h_aa41223ae18108ca0d663875f47a3ae37}{            USBHostMSDTasks}();          \(\backslash\)
+        \}
+\end{DoxyCode}
+
+
+Definition at line 97 of file usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c.
+
+\hypertarget{usb__host__msd__scsi_8c_aa98cf50751b83e034a1d4079ae6df81c}{}\index{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}!W\+R\+P\+R\+O\+T\+E\+C\+T\+\_\+\+N\+O\+R\+M\+A\+L@{W\+R\+P\+R\+O\+T\+E\+C\+T\+\_\+\+N\+O\+R\+M\+A\+L}}
+\index{W\+R\+P\+R\+O\+T\+E\+C\+T\+\_\+\+N\+O\+R\+M\+A\+L@{W\+R\+P\+R\+O\+T\+E\+C\+T\+\_\+\+N\+O\+R\+M\+A\+L}!usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}}
+\subsubsection[{W\+R\+P\+R\+O\+T\+E\+C\+T\+\_\+\+N\+O\+R\+M\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\+R\+P\+R\+O\+T\+E\+C\+T\+\_\+\+N\+O\+R\+M\+A\+L~0x00}\label{usb__host__msd__scsi_8c_aa98cf50751b83e034a1d4079ae6df81c}
+
+
+Definition at line 87 of file usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{usb__host__msd__scsi_8c_a1b63183d5e6748616592844f2bdece15}{}\index{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}!\+\_\+\+U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+\_\+\+Test\+Unit\+Ready@{\+\_\+\+U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+\_\+\+Test\+Unit\+Ready}}
+\index{\+\_\+\+U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+\_\+\+Test\+Unit\+Ready@{\+\_\+\+U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+\_\+\+Test\+Unit\+Ready}!usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}}
+\subsubsection[{\+\_\+\+U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+\_\+\+Test\+Unit\+Ready}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} \+\_\+\+U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+\_\+\+Test\+Unit\+Ready (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{usb__host__msd__scsi_8c_a1b63183d5e6748616592844f2bdece15}
+
+
+Definition at line 939 of file usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\hypertarget{usb__host__msd__scsi_8c_af5e1dffb6efb1a7a72ce3e2db06f9218}{}\index{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}!U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Event\+Handler@{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Event\+Handler}}
+\index{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Event\+Handler@{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Event\+Handler}!usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}}
+\subsubsection[{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Event\+Handler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Event\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{address, }
+\item[{{\bf U\+S\+B\+\_\+\+E\+V\+E\+N\+T}}]{event, }
+\item[{void $\ast$}]{data, }
+\item[{{\bf D\+W\+O\+R\+D}}]{size}
+\end{DoxyParamCaption}
+)}\label{usb__host__msd__scsi_8c_af5e1dffb6efb1a7a72ce3e2db06f9218}
+
+
+Definition at line 198 of file usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+\hypertarget{usb__host__msd__scsi_8c_a024a5b337f32ca13ae6495e26116efd8}{}\index{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}!U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Initialize@{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Initialize}}
+\index{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Initialize@{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Initialize}!usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}}
+\subsubsection[{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Initialize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Initialize (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{address, }
+\item[{{\bf D\+W\+O\+R\+D}}]{flags, }
+\item[{{\bf B\+Y\+T\+E}}]{client\+Driver\+I\+D}
+\end{DoxyParamCaption}
+)}\label{usb__host__msd__scsi_8c_a024a5b337f32ca13ae6495e26116efd8}
+
+
+Definition at line 152 of file usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+\hypertarget{usb__host__msd__scsi_8c_aba0e5e79257f234b0cde87be05d25d28}{}\index{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}!U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Media\+Detect@{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Media\+Detect}}
+\index{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Media\+Detect@{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Media\+Detect}!usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}}
+\subsubsection[{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Media\+Detect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Media\+Detect (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{usb__host__msd__scsi_8c_aba0e5e79257f234b0cde87be05d25d28}
+
+
+Definition at line 272 of file usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 5
+
+
+\hypertarget{usb__host__msd__scsi_8c_aac13cd808cbcb04924726ee15fa04e06}{}\index{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}!U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Media\+Initialize@{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Media\+Initialize}}
+\index{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Media\+Initialize@{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Media\+Initialize}!usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}}
+\subsubsection[{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Media\+Initialize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+E\+D\+I\+A\+\_\+\+I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N}$\ast$ U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Media\+Initialize (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{usb__host__msd__scsi_8c_aac13cd808cbcb04924726ee15fa04e06}
+
+
+Definition at line 339 of file usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 6
+
+
+\hypertarget{usb__host__msd__scsi_8c_accbed29f0f0ddcc1fc0a8af39f8c1fc3}{}\index{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}!U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Media\+Reset@{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Media\+Reset}}
+\index{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Media\+Reset@{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Media\+Reset}!usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}}
+\subsubsection[{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Media\+Reset}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Media\+Reset (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{usb__host__msd__scsi_8c_accbed29f0f0ddcc1fc0a8af39f8c1fc3}
+
+
+Definition at line 621 of file usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 7
+
+
+\hypertarget{usb__host__msd__scsi_8c_a92e2c21c51d1130da948cde172bd4f01}{}\index{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}!U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Sector\+Read@{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Sector\+Read}}
+\index{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Sector\+Read@{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Sector\+Read}!usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}}
+\subsubsection[{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Sector\+Read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Sector\+Read (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+W\+O\+R\+D}}]{sector\+Address, }
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{data\+Buffer}
+\end{DoxyParamCaption}
+)}\label{usb__host__msd__scsi_8c_a92e2c21c51d1130da948cde172bd4f01}
+
+
+Definition at line 689 of file usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 8
+
+
+\hypertarget{usb__host__msd__scsi_8c_afaa3df8cd0d59961feefbb4a627c1338}{}\index{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}!U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Sector\+Write@{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Sector\+Write}}
+\index{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Sector\+Write@{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Sector\+Write}!usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}}
+\subsubsection[{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Sector\+Write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Sector\+Write (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+W\+O\+R\+D}}]{sector\+Address, }
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{data\+Buffer, }
+\item[{{\bf B\+Y\+T\+E}}]{allow\+Write\+To\+Zero}
+\end{DoxyParamCaption}
+)}\label{usb__host__msd__scsi_8c_afaa3df8cd0d59961feefbb4a627c1338}
+
+
+Definition at line 800 of file usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 9
+
+
+\hypertarget{usb__host__msd__scsi_8c_ac0f7fe266cf5e87e52f0f9994b3469c1}{}\index{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}!U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Write\+Protect\+State@{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Write\+Protect\+State}}
+\index{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Write\+Protect\+State@{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Write\+Protect\+State}!usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c@{usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c}}
+\subsubsection[{U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Write\+Protect\+State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} U\+S\+B\+Host\+M\+S\+D\+S\+C\+S\+I\+Write\+Protect\+State (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{usb__host__msd__scsi_8c_ac0f7fe266cf5e87e52f0f9994b3469c1}
+
+
+Definition at line 894 of file usb\+\_\+host\+\_\+msd\+\_\+scsi.\+c.
+

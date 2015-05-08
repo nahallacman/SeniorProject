@@ -1,0 +1,19 @@
+digraph "SetPalette"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="SetPalette",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="__attribute__",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mchp_gfx_drv_8c.html#afe092795b3220f38b62c7e90763e2f30"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="StartVBlankInterrupt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_palette_8c.html#aafc99fb00545763188038ccb970465b8"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="RequestDisplayUpdate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_display_driver_8h.html#ad9446e11a4c1005c96973cd73911ca17"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="GOLDraw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_g_o_l_8h.html#aaff93fae1051821fec4c1a81513628ca"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_graphics_2_g_d_d_2_default___template_2_main_8c.html#a840291bc02cba5474a4cb46a9b9566fe"];
+  Node3 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="RequestPaletteChange",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_palette_8h.html#a25ee30a5cd482faeee888f5d4da1e31e"];
+}

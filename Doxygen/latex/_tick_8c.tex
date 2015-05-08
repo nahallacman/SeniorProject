@@ -1,0 +1,142 @@
+\hypertarget{_tick_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Tick.c File Reference}
+\label{_tick_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Tick.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Tick.\+c}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_tick_8c_a85de8acefef2c29ca44aa9728de87f92}{Tick\+Init} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} \hyperlink{_tick_8c_a035d1d3f8afdca7abedf588ee1b20af0}{Tick\+Get} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} \hyperlink{_tick_8c_a8f71f847e48f802c831fb86c7fb8326a}{Tick\+Get\+Div256} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} \hyperlink{_tick_8c_a4240cc82a4abba61bd8567403d41d0bb}{Tick\+Get\+Div64\+K} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} \hyperlink{_tick_8c_a5389f2aec4db4283b4dd8eaee509c270}{Tick\+Convert\+To\+Milliseconds} (\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} dw\+Tick\+Value)
+\item 
+void \hyperlink{_tick_8c_a6dd5a0dd450d0175bb3b47cfb103c6b2}{Tick\+Update} (void)
+\item 
+void \hyperlink{_tick_8c_a67c6fb10ef59c4c50e45b9beabce6f1a}{\+\_\+\+\_\+attribute} ((interrupt(ipl2), vector(\+\_\+\+T\+I\+M\+E\+R\+\_\+1\+\_\+\+V\+E\+C\+T\+O\+R), nomips16))
+\item 
+void \+\_\+\+I\+S\+R \hyperlink{_tick_8c_a51d21fd913c3f197ca3ee2819699d722}{\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((\+\_\+\+\_\+no\+\_\+auto\+\_\+psv\+\_\+\+\_\+))
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_tick_8c_a67c6fb10ef59c4c50e45b9beabce6f1a}{}\index{Tick.\+c@{Tick.\+c}!\+\_\+\+\_\+attribute@{\+\_\+\+\_\+attribute}}
+\index{\+\_\+\+\_\+attribute@{\+\_\+\+\_\+attribute}!Tick.\+c@{Tick.\+c}}
+\subsubsection[{\+\_\+\+\_\+attribute}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+\+\_\+attribute (
+\begin{DoxyParamCaption}
+\item[{(interrupt(ipl2), vector(\+\_\+\+T\+I\+M\+E\+R\+\_\+1\+\_\+\+V\+E\+C\+T\+O\+R), nomips16)}]{}
+\end{DoxyParamCaption}
+)}\label{_tick_8c_a67c6fb10ef59c4c50e45b9beabce6f1a}
+
+
+Definition at line 436 of file Tick.\+c.
+
+\hypertarget{_tick_8c_a51d21fd913c3f197ca3ee2819699d722}{}\index{Tick.\+c@{Tick.\+c}!\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}!Tick.\+c@{Tick.\+c}}
+\subsubsection[{\+\_\+\+\_\+attribute\+\_\+\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+\+I\+S\+R \+\_\+\+\_\+attribute\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{(\+\_\+\+\_\+no\+\_\+auto\+\_\+psv\+\_\+\+\_\+)}]{}
+\end{DoxyParamCaption}
+)}\label{_tick_8c_a51d21fd913c3f197ca3ee2819699d722}
+
+
+Definition at line 446 of file Tick.\+c.
+
+\hypertarget{_tick_8c_a5389f2aec4db4283b4dd8eaee509c270}{}\index{Tick.\+c@{Tick.\+c}!Tick\+Convert\+To\+Milliseconds@{Tick\+Convert\+To\+Milliseconds}}
+\index{Tick\+Convert\+To\+Milliseconds@{Tick\+Convert\+To\+Milliseconds}!Tick.\+c@{Tick.\+c}}
+\subsubsection[{Tick\+Convert\+To\+Milliseconds}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} Tick\+Convert\+To\+Milliseconds (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+W\+O\+R\+D}}]{dw\+Tick\+Value}
+\end{DoxyParamCaption}
+)}\label{_tick_8c_a5389f2aec4db4283b4dd8eaee509c270}
+
+
+Definition at line 384 of file Tick.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+\hypertarget{_tick_8c_a035d1d3f8afdca7abedf588ee1b20af0}{}\index{Tick.\+c@{Tick.\+c}!Tick\+Get@{Tick\+Get}}
+\index{Tick\+Get@{Tick\+Get}!Tick.\+c@{Tick.\+c}}
+\subsubsection[{Tick\+Get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} Tick\+Get (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_tick_8c_a035d1d3f8afdca7abedf588ee1b20af0}
+
+
+Definition at line 270 of file Tick.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+\hypertarget{_tick_8c_a8f71f847e48f802c831fb86c7fb8326a}{}\index{Tick.\+c@{Tick.\+c}!Tick\+Get\+Div256@{Tick\+Get\+Div256}}
+\index{Tick\+Get\+Div256@{Tick\+Get\+Div256}!Tick.\+c@{Tick.\+c}}
+\subsubsection[{Tick\+Get\+Div256}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} Tick\+Get\+Div256 (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_tick_8c_a8f71f847e48f802c831fb86c7fb8326a}
+
+
+Definition at line 306 of file Tick.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\hypertarget{_tick_8c_a4240cc82a4abba61bd8567403d41d0bb}{}\index{Tick.\+c@{Tick.\+c}!Tick\+Get\+Div64\+K@{Tick\+Get\+Div64\+K}}
+\index{Tick\+Get\+Div64\+K@{Tick\+Get\+Div64\+K}!Tick.\+c@{Tick.\+c}}
+\subsubsection[{Tick\+Get\+Div64\+K}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} Tick\+Get\+Div64\+K (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_tick_8c_a4240cc82a4abba61bd8567403d41d0bb}
+
+
+Definition at line 343 of file Tick.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\hypertarget{_tick_8c_a85de8acefef2c29ca44aa9728de87f92}{}\index{Tick.\+c@{Tick.\+c}!Tick\+Init@{Tick\+Init}}
+\index{Tick\+Init@{Tick\+Init}!Tick.\+c@{Tick.\+c}}
+\subsubsection[{Tick\+Init}]{\setlength{\rightskip}{0pt plus 5cm}void Tick\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_tick_8c_a85de8acefef2c29ca44aa9728de87f92}
+
+
+Definition at line 95 of file Tick.\+c.
+
+\hypertarget{_tick_8c_a6dd5a0dd450d0175bb3b47cfb103c6b2}{}\index{Tick.\+c@{Tick.\+c}!Tick\+Update@{Tick\+Update}}
+\index{Tick\+Update@{Tick\+Update}!Tick.\+c@{Tick.\+c}}
+\subsubsection[{Tick\+Update}]{\setlength{\rightskip}{0pt plus 5cm}void Tick\+Update (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_tick_8c_a6dd5a0dd450d0175bb3b47cfb103c6b2}
+
+
+Definition at line 407 of file Tick.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+

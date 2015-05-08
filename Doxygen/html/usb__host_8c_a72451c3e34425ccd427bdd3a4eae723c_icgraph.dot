@@ -1,0 +1,30 @@
+digraph "USBHostDeviceStatus"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="USBHostDeviceStatus",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="USBHostCDCDeviceStatus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__cdc_8c.html#a20ae0f13f018747bac139a456ea5f6d5"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="USBHostCDC_ApiDeviceDetect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__cdc__interface_8c.html#aebb742aa385542e9b8163cea4f7604fc"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="USBHostCDCTasks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__cdc_8c.html#a6e595b04dc00545e596306e7f4b3fa3d"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="USBHostHIDDeviceStatus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__hid_8c.html#ac92f0571066031a0051679a48cf24fa1"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="USBHostHIDDeviceDetect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__hid_8c.html#a3c124ace54c641c334d833e36f09c0bc"];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="USBHostHIDResetDeviceWithWait",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__hid_8c.html#ac827bf0d6269b54506ea3b6ca994d7c4"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="USBHostHIDTasks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__hid_8c.html#a7339c9ce88c387efd28375603415b491"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="USBHostMSDDeviceStatus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__msd_8c.html#ac3a23c6f0f08fb14b5bcacf936a9dfcd"];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="USBHostMSDSCSIMediaDetect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__msd__scsi_8c.html#aba0e5e79257f234b0cde87be05d25d28"];
+  Node9 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="USBHostMSDSCSIMediaReset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__msd__scsi_8c.html#accbed29f0f0ddcc1fc0a8af39f8c1fc3"];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="USBHostMSDTasks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__msd_8c.html#aa41223ae18108ca0d663875f47a3ae37"];
+}

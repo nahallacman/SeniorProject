@@ -1,0 +1,381 @@
+\hypertarget{_getting_started_Expect}{}\section{What to Expect from the m\+Touch Framework}\label{_getting_started_Expect}
+When designing with the m\+Touch Framework, it\textquotesingle{}s important to understand the system\textquotesingle{}s overall behavior. Borrowing from the \href{http://en.wikipedia.org/wiki/Software_framework}{\tt Wikipedia article} on software frameworks, here are the distinguishing features of a framework over a library or normal application\+:~\newline
+ \begin{DoxyItemize}
+\item {\bfseries Inversion of Control}~\newline
+{\itshape In a framework, unlike in libraries or normal user applications, the overall program\textquotesingle{}s flow of control is not dictated by the caller, but by the framework.}~\newline
+ The m\+Touch Framework requires the T\+M\+R0 interrupt, A\+D\+C, and a significant portion of the overall processing time. Developers do, however, have full control over the main loop of their application.~\newline
+ ({\bfseries See also\+:} \hyperlink{ResourceRequirements}{Resource Requirements})~\newline
+~\newline
+ \item {\bfseries Default Behavior}~\newline
+{\itshape A framework has default behavior. This default behavior must actually be some useful behavior and not a series of no-\/ops.}~\newline
+ The m\+Touch Framework\textquotesingle{}s default behavior is to perform a differential C\+V\+D scan on the sensors, perform digital filtering on the acquired signal, and decode the signal\textquotesingle{}s behavior into a Yes/\+No press state.~\newline
+~\newline
+ \item {\bfseries Extensibility}~\newline
+{\itshape A framework can be extended by the user usually by selective overriding or specialized by user code providing specific functionality.}~\newline
+ The m\+Touch Framework comes with a predefined m\+Touch\+\_\+\+Service() function which will perform all of the decoding necessary for normal m\+Touch capacitive buttons. For enhanced capabilities such as sliders, wheels, proximity sensors, level sensors, and other capacitive touch uses a custom service function may be required. This simple process is explained in detail in the quick start guide.~\newline
+~\newline
+ \item {\bfseries Non-\/\+Modifiable Framework Code}~\newline
+{\itshape The framework code, in general, is not allowed to be modified. Users can extend the framework, but not modify its code.}~\newline
+ The m\+Touch Framework is provided as an open source solution, so it is possible to edit the core acquisition code of the framework. Doing this, however, is {\bfseries highly discouraged} and could easily impact the noise immunity of your final solution. For this reason, we consider the m\+Touch I\+S\+R and all {\ttfamily include/} files as essentially non-\/modifiable.~\newline
+\end{DoxyItemize}
+\hypertarget{_getting_started_GSGuides}{}\section{Developer Resource Guides}\label{_getting_started_GSGuides}
+{\bfseries Quick Start Guides}
+
+Use these quick start guides to get you up and running with the m\+Touch Framework. \begin{DoxyItemize}
+\item \hyperlink{GettingStartedEval}{m\+Touch C\+V\+D Evaluation Board} \item \hyperlink{GettingStartedCustom}{Custom Hardware} \item \hyperlink{GettingStartedNewP8}{Creating a New M\+P\+L\+A\+B 8 Framework Project} \item \hyperlink{GettingStartedNewPX}{Creating a New M\+P\+L\+A\+B X Framework Project} \item \hyperlink{PKSARS232}{Loading new firmware on the P\+I\+C\+Kit Serial Analyzer} \end{DoxyItemize}
+\hypertarget{GettingStartedEval}{}\section{m\+Touch C\+V\+D Evaluation Kit Quick Start Guide}\label{GettingStartedEval}
+\begin{DoxyNote}{Note}
+This guide assumes you are using the m\+Touch Evaluation kit as your hardware. For details on where to begin when implementing the m\+Touch framework on a custom hardware design, use \hyperlink{GettingStartedCustom}{this guide}.
+\end{DoxyNote}
+Congratulations for the purchase of your new m\+Touch C\+V\+D Evaluation Kit.
+
+Although the kit will run right out of the box, this document will walk you through the setup process to quickly configure the kit. Should you need any custom configuration, this will get you up and running.
+
+The kit comes pre-\/programmed and set to operate in the configuration listed below. If you need to alter any of the parameters, then a new hex file will need to be generated and the main board will need to be reprogrammed with the new firmware. M\+P\+L\+A\+B I\+D\+E will then be required as well as a compatible C compiler.\hypertarget{_getting_started_eval_GSE_LAYOUTS}{}\subsection{Hardware Layouts / Configurations\+:}\label{_getting_started_eval_GSE_LAYOUTS}
+Each of the board versions listed below has a matching demo project provided in\+: {\bfseries {\ttfamily Your M\+L\+A Directory/m\+Touch\+Cap\+Demos/\+P\+I\+C16\+F\+\_\+\+C\+V\+D\+\_\+\+Demos}}
+
+\begin{DoxyItemize}
+\item \hyperlink{GSE_R3}{02-\/02091-\/\+R3} \+:\+: C\+V\+D Eval Board \item \hyperlink{GSE_R3}{233-\/04-\/2028 Rev A} \+:\+: C\+V\+D Eval Board (Use 02-\/02091-\/\+R3 project) \item \hyperlink{GSE_R2}{02-\/02091-\/\+R2} \+:\+: C\+S\+M-\/\+C\+V\+D Eval Board \item \hyperlink{GSE_R2}{02-\/02091-\/\+R1} \+:\+: C\+S\+M-\/\+C\+V\+D Eval Board (Use 02-\/02091-\/\+R2 project) \item \hyperlink{GSE_RF}{233-\/04-\/1008 Rev F} \+:\+: C\+S\+M Eval Board \item \hyperlink{GSE_RA}{02-\/02091-\/\+R\+A} \+:\+: C\+S\+M Eval Board\end{DoxyItemize}
+\hypertarget{_getting_started_eval_GSE_GUI}{}\subsection{Communicating with the m\+Touch G\+U\+I\+:}\label{_getting_started_eval_GSE_GUI}
+The demo hex files and projects for the evaluation boards are preconfigured to work with the m\+Touch Two-\/\+Way G\+U\+I out-\/of-\/the box. The default P\+I\+C\+Kit Serial Analyzer firmware will need to be updated to the latest version. The P\+I\+C\+Kit Serial Loader utility has been provided to make this easy. You can find it here\+: {\ttfamily Your M\+L\+A Directory/m\+Touch\+Cap\+Demos/\+Utilities/\+P\+I\+C12\+F P\+I\+C16\+F Utilities/\+P\+I\+C\+Kit Serial Loader}
+
+You must load the {\bfseries P\+K\+S-\/0307-\/\+W\+I\+T\+H\+B\+O\+O\+T-\/0103.\+H\+E\+X} when requested by the loader utility. See \hyperlink{PKSARS232}{this guide}.
+
+Once this is done, power the m\+Touch evaluation board externally (through any source other than the P\+K\+S\+A header), connect the P\+K\+S\+A to the board, and start the m\+Touch G\+U\+I.\hypertarget{_getting_started_eval_GSE_CNS}{}\subsection{Changing the Number of Sensors\+:}\label{_getting_started_eval_GSE_CNS}
+If you need the stack to manage more or less than the default number, all you need to do is update the constant \#\+M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S to any other value from 1 to 15. This constant can be found in the \hyperlink{m_touch__config_8h}{m\+Touch\+\_\+config.\+h} file.\hypertarget{_getting_started_eval_GSE_ASI}{}\subsection{Assigning Sensor Indexes to the Correct A/\+D Channels}\label{_getting_started_eval_GSE_ASI}
+Depending on how the daughter board is connected to the main board, the sensors may be connected to different A/\+D inputs on the P\+I\+C microcontroller. In the m\+Touch framework, sensors can be mapped to a specific index in the application. Go to \hyperlink{m_touch__config_8h}{m\+Touch\+\_\+config.\+h} and look for the section with the definitions shown below, and map the sensor indexes on the left side to the correct A/\+D channels for your setup. 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR0             AN0  }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR1             AN1    }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR2             AN2     }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR3             AN3     }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR4             AN4     }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR5             AN5     }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR6             AN6     }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR7             AN7     }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR8             AN8     }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR9             AN9     }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR10            AN10    }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR11            AN11    }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR12            AN12    }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR13            AN13}
+\end{DoxyCode}
+\hypertarget{_getting_started_eval_GSE_CAC}{}\subsection{Changing the Number of Samples per Scan}\label{_getting_started_eval_GSE_CAC}
+The number of samples taken in an application will be based on a trade-\/off between sensitivity and response time. The more samples taken, the better the signal-\/to-\/noise ratio of the system, but the slower its response to a finger. Typical response times are less than 100ms to eliminate delay that is visible to the human eye. If a specific response time is required, example equations are provided in the configuration file to show how to calculate the rate that will be chosen based on this value.\hypertarget{_getting_started_eval_GSE_AST}{}\subsection{Adjusting the Sensor Threshold Values}\label{_getting_started_eval_GSE_AST}
+Your m\+Touch evaluation kit comes already preconfigured with the sensor threshold values for the 8-\/button daughter board. If different sensitivities are needed, go to the \hyperlink{m_touch__config_8h}{m\+Touch\+\_\+config.\+h} file, locate the section with the definitions shown below, and set the new values. A general rule of thumb to finding and setting correct values is to determine the range of shift for the sensor (min and max shift) and set the threshold to about 75\% of the range. The following formula can be used\+: \[ Threshold_{Press} = min + 0.75 (max - min) \] 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define THRESHOLD\_PRESS\_SENSOR0         65         }
+\textcolor{preprocessor}{#define THRESHOLD\_PRESS\_SENSOR1         65}
+\textcolor{preprocessor}{#define THRESHOLD\_PRESS\_SENSOR2         65}
+\textcolor{preprocessor}{#define THRESHOLD\_PRESS\_SENSOR3         65}
+\textcolor{preprocessor}{#define THRESHOLD\_PRESS\_SENSOR4         65}
+\textcolor{preprocessor}{#define THRESHOLD\_PRESS\_SENSOR5         65}
+\textcolor{preprocessor}{#define THRESHOLD\_PRESS\_SENSOR6         65}
+\end{DoxyCode}
+\hypertarget{_getting_started_eval_Framework}{}\subsection{Configuration and Application A\+P\+I Hooks}\label{_getting_started_eval_Framework}
+See the \hyperlink{featBasic}{basic sensor configuration} guide and the \hyperlink{FrameworkFeatures}{feature-\/specific help} section. \hypertarget{GSE_R3}{}\subsection{Quick Start Guide \+:\+: C\+V\+D Eval Board}\label{GSE_R3}
+\begin{DoxyItemize}
+\item 02-\/02091-\/\+R3 \item 233-\/04-\/2028 Rev A\end{DoxyItemize}
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR0              AN0         }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR1              AN1         }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR2              AN2    }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR3              AN3   }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR4              AN4}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR5              AN5}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR6              AN6}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR7              AN7}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR8              AN8 }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR9              AN9}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR10             AN10    }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR11             AN11    }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR12             AN12    }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR13             AN13  }
+
+\textcolor{preprocessor}{#define LED0  LATC2}
+\textcolor{preprocessor}{#define LED1  LATC1}
+\textcolor{preprocessor}{#define LED2  LATC0}
+\textcolor{preprocessor}{#define LED3  LATA7}
+\textcolor{preprocessor}{#define LED4  LATA6}
+\textcolor{preprocessor}{#define LED5  LATA4}
+\textcolor{preprocessor}{#define LED6  LATD7}
+\textcolor{preprocessor}{#define LED7  LATD6}
+\textcolor{preprocessor}{#define LED8  LATD5}
+\textcolor{preprocessor}{#define LED9  LATD4}
+\textcolor{preprocessor}{#define LED10 LATD3}
+\textcolor{preprocessor}{#define LED11 LATD2}
+\textcolor{preprocessor}{#define LED12 LATD1}
+\textcolor{preprocessor}{#define LED13 LATD0}
+
+ANSELA  = 0b00000000;
+ANSELB  = 0b00000000;
+ANSELD  = 0b00000000;
+ANSELE  = 0b00000000;
+LATA    = 0b11010000;
+LATB    = 0b00000000;
+LATC    = 0b00000111;
+LATD    = 0b11111111;
+LATE    = 0b00000000;
+TRISA   = 0b00000000;
+TRISB   = 0b00000000;
+TRISC   = 0b00000000;
+TRISD   = 0b00000000;
+TRISE   = 0b00000000;
+\end{DoxyCode}
+ \hypertarget{GSE_R2}{}\subsection{Quick Start Guide \+:\+: C\+S\+M-\/\+C\+V\+D Eval Board}\label{GSE_R2}
+\begin{DoxyItemize}
+\item 02-\/02091-\/\+R1 \item 02-\/02091-\/\+R2\end{DoxyItemize}
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR0              AN12    }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR1              AN10         }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR2              AN8    }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR3              AN9  }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR4              AN11}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR5              AN13}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR6              AN4     // Labeled '7' on the board}
+
+\textcolor{preprocessor}{#define LED0  LATC0}
+\textcolor{preprocessor}{#define LED1  LATA6}
+\textcolor{preprocessor}{#define LED2  LATA7}
+\textcolor{preprocessor}{#define LED3  LATE2}
+\textcolor{preprocessor}{#define LED4  LATE1}
+\textcolor{preprocessor}{#define LED5  LATE0}
+\textcolor{preprocessor}{#define LED6  LATA3}
+\textcolor{preprocessor}{#define LED7  LATA2}
+\textcolor{preprocessor}{#define LED8  LATA1}
+\textcolor{preprocessor}{#define LED9  LATB7     // ICSPDAT}
+\textcolor{preprocessor}{#define LED10 LATB6     // ICSPCLK}
+\textcolor{preprocessor}{#define LED11 LATC7     // RX}
+\textcolor{preprocessor}{#define LED12 LATC6     // TX}
+\textcolor{preprocessor}{#define LED13 LATC5}
+\textcolor{preprocessor}{#define LED14 LATC2}
+\textcolor{preprocessor}{#define LED15 LATC1}
+
+ANSELA  = 0b00000000;
+ANSELB  = 0b00000000;
+ANSELD  = 0b00000000;
+ANSELE  = 0b00000000;
+LATA    = 0b11001110;
+LATB    = 0b11000000;
+LATC    = 0b11100111;
+LATD    = 0b00000000;
+LATE    = 0b00000111;
+TRISA   = 0b00000000;
+TRISB   = 0b00000000;
+TRISC   = 0b00000000;
+TRISD   = 0b00000000;
+TRISE   = 0b00000000;
+\end{DoxyCode}
+ \hypertarget{GSE_RF}{}\subsection{Quick Start Guide \+:\+: C\+S\+M Eval Board}\label{GSE_RF}
+\begin{DoxyItemize}
+\item 233-\/04-\/1008 Rev F\end{DoxyItemize}
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR0              AN12         }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR1              AN10         }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR2              AN8    }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR3              AN9  }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR4              AN11}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR5              AN13}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR6              AN4     // Labeled '7' on the board}
+
+\textcolor{preprocessor}{#define LED0  LATC0}
+\textcolor{preprocessor}{#define LED1  LATA6}
+\textcolor{preprocessor}{#define LED2  LATA7}
+\textcolor{preprocessor}{#define LED3  LATE2}
+\textcolor{preprocessor}{#define LED4  LATE1}
+\textcolor{preprocessor}{#define LED5  LATE0}
+\textcolor{preprocessor}{#define LED6  LATA3}
+\textcolor{preprocessor}{#define LED7  LATA2}
+\textcolor{preprocessor}{#define LED8  LATA1}
+\textcolor{preprocessor}{#define LED9  LATB7     // ICSPDAT}
+\textcolor{preprocessor}{#define LED10 LATB6     // ICSPCLK}
+\textcolor{preprocessor}{#define LED11 LATC7     // RX}
+\textcolor{preprocessor}{#define LED12 LATC6     // TX}
+\textcolor{preprocessor}{#define LED13 LATC5}
+\textcolor{preprocessor}{#define LED14 LATC2}
+\textcolor{preprocessor}{#define LED15 LATC1}
+
+ANSELA  = 0b00000000;
+ANSELB  = 0b00000000;
+ANSELD  = 0b00000000;
+ANSELE  = 0b00000000;
+LATA    = 0b11001110;
+LATB    = 0b11000000;
+LATC    = 0b11100111;
+LATD    = 0b00000000;
+LATE    = 0b00000111;
+TRISA   = 0b00000000;
+TRISB   = 0b00000000;
+TRISC   = 0b00000000;
+TRISD   = 0b00000000;
+TRISE   = 0b00000000;
+\end{DoxyCode}
+ \hypertarget{GSE_RA}{}\subsection{Quick Start Guide \+:\+: C\+S\+M Eval Board}\label{GSE_RA}
+\begin{DoxyItemize}
+\item 02-\/02091-\/\+R\+A\end{DoxyItemize}
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR0              AN12         }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR1              AN10         }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR2              AN8    }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR3              AN9  }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR4              AN11}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR5              AN13}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR6              AN4     // Labeled '7' on the board}
+
+\textcolor{preprocessor}{#define LED0  LATC0}
+\textcolor{preprocessor}{#define LED1  LATA6}
+\textcolor{preprocessor}{#define LED2  LATA7}
+\textcolor{preprocessor}{#define LED3  LATE2}
+\textcolor{preprocessor}{#define LED4  LATE1}
+\textcolor{preprocessor}{#define LED5  LATE0}
+\textcolor{preprocessor}{#define LED6  LATA3}
+\textcolor{preprocessor}{#define LED7  LATA2}
+\textcolor{preprocessor}{#define LED8  LATA1}
+\textcolor{preprocessor}{#define LED9  LATB7     // ICSPDAT}
+\textcolor{preprocessor}{#define LED10 LATB6     // ICSPCLK}
+\textcolor{preprocessor}{#define LED11 LATC7     // RX not connected to PKSA header}
+\textcolor{preprocessor}{#define LED12 LATC6     // TX not connected to PKSA header}
+\textcolor{preprocessor}{#define LED13 LATC5}
+\textcolor{preprocessor}{#define LED14 LATC2}
+\textcolor{preprocessor}{#define LED15 LATC1}
+
+ANSELA  = 0b00000000;
+ANSELB  = 0b00000000;
+ANSELD  = 0b00000000;
+ANSELE  = 0b00000000;
+LATA    = 0b11001110;
+LATB    = 0b11000000;
+LATC    = 0b11100111;
+LATD    = 0b00000000;
+LATE    = 0b00000111;
+TRISA   = 0b00000000;
+TRISB   = 0b00000000;
+TRISC   = 0b00000000;
+TRISD   = 0b00000000;
+TRISE   = 0b00000000;
+\end{DoxyCode}
+ \hypertarget{GettingStartedCustom}{}\section{Custom Hardware Quick Start Guide}\label{GettingStartedCustom}
+\begin{DoxyNote}{Note}
+This guide assumes you are using custom hardware. For details on where to begin when implementing the m\+Touch framework on the m\+Touch C\+V\+D Evaluation Kit, use \hyperlink{GettingStartedEval}{this guide}.
+\end{DoxyNote}
+\hypertarget{_getting_started_custom_GS_C_NewProject}{}\subsection{Create a new M\+P\+L\+A\+B Project}\label{_getting_started_custom_GS_C_NewProject}
+First, create a new \hyperlink{GettingStartedNewP8}{M\+P\+L\+A\+B 8} or \hyperlink{GettingStartedNewPX}{M\+P\+L\+A\+B X} project for your new application.\hypertarget{_getting_started_custom_GS_SysConfig}{}\subsection{System Configuration}\label{_getting_started_custom_GS_SysConfig}
+The \hyperlink{m_touch_8c_ab73968cbb19d4ae25a65698c15906b65}{m\+Touch\+\_\+\+Init()} function will automatically configure the A\+D\+C, communications module (if enabled), and all required interrupts. There are only a few things the user is required to define on power-\/up\+: 
+\begin{DoxyEnumerate}
+\item Configure the oscillator to provide a fast clock speed. 
+\begin{DoxyCode}
+OSCCON = 0b01110000;       \textcolor{comment}{// 32 MHz Fosc w/ PLLEN\_ON config word on PIC16F1937}
+\end{DoxyCode}
+ ~\newline
+ 
+\item Set the prescaler for the timer you are using for the m\+Touch scan interrupt. (Weak pull-\/up resistors should be disabled.)~\newline
+ For more information about the implications of this setting, see \hyperlink{_resource_requirements_rrMemory}{Processing Requirements}. 
+\begin{DoxyCode}
+OPTION\_REG = 0b10000000;   \textcolor{comment}{// TMR0 Prescaler = 1:2 (~40% processor usage)}
+\end{DoxyCode}
+ ~\newline
+ 
+\item Sensor pins should be initialized as digital output low. 
+\begin{DoxyCode}
+ANSELA = 0b00000000;       \textcolor{comment}{// Digital}
+TRISA  = 0b00000000;       \textcolor{comment}{// Output}
+PORTA  = 0b00000000;       \textcolor{comment}{// Low   }
+\end{DoxyCode}
+ 
+\end{DoxyEnumerate}~\newline
+ \hypertarget{_getting_started_custom_GS_InitConfig}{}\subsection{Framework Configuration and Application A\+P\+I Hooks}\label{_getting_started_custom_GS_InitConfig}
+See the \hyperlink{featBasic}{basic sensor configuration} guide and the \hyperlink{FrameworkFeatures}{feature-\/specific help} section. \hypertarget{GettingStartedNewP8}{}\section{Creating a new M\+P\+L\+A\+B 8 m\+Touch Framework Project}\label{GettingStartedNewP8}
+{\bfseries The easiest way} to start a new project is to copy a fresh version of the source directory to your project folder. The source directory contains an M\+P\+L\+A\+B 8 project which can then be used to start your application. \begin{DoxyItemize}
+\item {\ttfamily \mbox{[}Your M\+L\+A Directory\mbox{]}/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F C\+V\+D Library/}\end{DoxyItemize}
+{\bfseries If you already have an application project} and wish to integrate the m\+Touch Framework with it\+: 
+\begin{DoxyEnumerate}
+\item Copy the files in {\ttfamily Your M\+L\+A Directory/\+Microchip/m\+Touch\+Cap/m\+Touch Framework/} to your local project directory. 
+\begin{DoxyItemize}
+\item Including the {\ttfamily Alternative Configurations/} directory! 
+\end{DoxyItemize}
+
+
+\item Add all {\ttfamily .c} files to your M\+P\+L\+A\+B 8 project.
+
+
+\item Use the following line of code to include the m\+Touch framework in your project\+:~\newline
+ 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "mTouch.h"}
+\end{DoxyCode}
+ 
+\end{DoxyEnumerate}
+
+Now check out the main.\+c file located in the framework\textquotesingle{}s folder or one of the main.\+c files in the m\+Touch\+Cap\+Demos folder for suggestions on using the m\+Touch Framework\textquotesingle{}s A\+P\+I. \hypertarget{GettingStartedNewPX}{}\section{Creating a new M\+P\+L\+A\+B X m\+Touch Framework Project}\label{GettingStartedNewPX}
+{\bfseries The easiest way to start a new project} is to copy a fresh version of the source directory to your project folder. The source directory contains an M\+P\+L\+A\+B X project which can then be used to start your application. \begin{DoxyItemize}
+\item {\ttfamily \mbox{[}Your M\+L\+A Directory\mbox{]}/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F C\+V\+D Library/}\end{DoxyItemize}
+{\bfseries If you already have an application project} and wish to integrate the m\+Touch Framework with it\+: 
+\begin{DoxyEnumerate}
+\item Copy the files in {\ttfamily Your M\+L\+A Directory/\+Microchip/m\+Touch\+Cap/m\+Touch Framework/} to your local project directory. 
+\begin{DoxyItemize}
+\item Including the {\ttfamily Alternative Configurations/} directory! 
+\end{DoxyItemize}
+
+
+\item Add all {\ttfamily .c} files to your M\+P\+L\+A\+B X project.
+
+
+\item Use the following line of code to include the m\+Touch framework in your project\+:~\newline
+ 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "mTouch.h"}
+\end{DoxyCode}
+ 
+\end{DoxyEnumerate}
+
+Now check out the main.\+c file located in the framework\textquotesingle{}s folder or one of the main.\+c files in the m\+Touch\+Cap\+Demos folder for suggestions on using the m\+Touch Framework\textquotesingle{}s A\+P\+I. \hypertarget{PKSARS232}{}\section{Loading new firmware on the P\+I\+C\+Kit Serial Analyzer}\label{PKSARS232}
+\hypertarget{index_Intro}{}\subsection{Introduction}\label{index_Intro}
+The P\+I\+C\+Kit Serial Analyzer (P\+K\+S\+A) is an easy way to connect the U\+A\+R\+T of your P\+I\+C\textregistered{} microcontroller to your P\+C. All of the required steps are handled by the P\+I\+C\+Kit Serial Loader Utility provided with the framework in the \textquotesingle{}Utilities\textquotesingle{} folder of the demos.
+
+{\ttfamily Your M\+L\+A Directory/m\+Touch\+Cap\+Demos/\+Utilities/\+P\+I\+C12\+F P\+I\+C16\+F Utilities/\+P\+I\+C\+Kit Serial Loader}
+
+There are two different ways the P\+K\+S\+A can be used\+: \begin{DoxyItemize}
+\item {\bfseries U\+A\+R\+T-\/to-\/\+U\+S\+B converter} \+:\+: U\+A\+R\+T\+\_\+\+U\+S\+B\+\_\+\+P\+I\+C\+Kit\+Serial\+\_\+\+V1.\+40.\+hex \+:\+: P\+K\+S\+A behaves as a C\+O\+M port when connected to the P\+C. \item {\bfseries Default P\+K\+S\+A Behavior} \+:\+: P\+K\+S-\/0307-\/\+W\+I\+T\+H\+B\+O\+O\+T-\/0103.\+H\+E\+X \+:\+: P\+K\+S\+A behaves as an H\+I\+D device that is manipulated through a D\+L\+L.\end{DoxyItemize}
+An update to the default P\+K\+S\+A hex file is provided to add support for the R\+S-\/232 \textquotesingle{}break\textquotesingle{} character. This is required for communicating with the m\+Touch two-\/way G\+U\+I.\hypertarget{_p_k_s_a_r_s232_Convert}{}\subsection{Changing the P\+I\+C\+Kit Serial Analyzer\textquotesingle{}s Hex File}\label{_p_k_s_a_r_s232_Convert}
+
+\begin{DoxyEnumerate}
+\item Press the button on the P\+I\+C\+Kit Serial Analyzer when connecting to P\+C\textquotesingle{}s U\+S\+B to enter {\ttfamily Bootloader Mode}.~\newline
+ (The \textquotesingle{}Target\textquotesingle{} and \textquotesingle{}Busy\textquotesingle{} L\+E\+Ds should be flashing quickly.) 
+\item Open the P\+I\+C\+Kit Serial Loader Utility provided by the framework in the Utilities folder of the demos. 
+\item Follow the on-\/screen instructions to load the new hex file. Hex files and drivers are provided in the same folder as the loader utility. Make sure to select correct hex file depending on the desired behavior (U\+A\+R\+T-\/to-\/\+U\+S\+B C\+O\+M port / Updated Default P\+K\+S\+A). 
+\end{DoxyEnumerate}\hypertarget{_p_k_s_a_r_s232_Use}{}\subsection{Using your P\+I\+C\+Kit Serial as a U\+A\+R\+T-\/to-\/\+U\+S\+B Converter}\label{_p_k_s_a_r_s232_Use}
+
+\begin{DoxyEnumerate}
+\item Unplug and replug the P\+K\+S\+A. Press and hold the black P\+K\+S\+A button to toggle the on-\/board 5\+V power supply. 
+\begin{DoxyItemize}
+\item Warning\+: There is no protection provided on this power supply. Maximum current is 20m\+A. 
+\end{DoxyItemize}
+\item L\+E\+D Status Legend\+: 
+\begin{DoxyItemize}
+\item Target L\+E\+D On\+: Transmission in progress 
+\item Busy L\+E\+D On\+: Reception was successful 
+\end{DoxyItemize}
+\end{DoxyEnumerate}\hypertarget{_p_k_s_a_r_s232_UseNormal}{}\subsection{Using your P\+I\+C\+Kit Serial with the default P\+K\+S\+A firmware}\label{_p_k_s_a_r_s232_UseNormal}
+
+\begin{DoxyEnumerate}
+\item Power your m\+Touch board and connect the P\+K\+S\+A. 
+\item Open the m\+Touch Two-\/\+Way G\+U\+I. The program will begin communicating or will provide error messages with suggestions for resolve any issues. 
+\end{DoxyEnumerate}
+
+ {\bfseries Maximum Speed}\+: 115.\+2 kbps~\newline
+ {\bfseries Voltage Level}\+: Depends on the voltage applied to pin \#2. Valid range is from 3-\/5\+V.~\newline
+ Optional 5\+V ($<$20m\+A) power supply from the P\+I\+C\+Kit Serial Analyzer.~\newline
+\hypertarget{_p_k_s_a_r_s232_Pinout}{}\subsection{P\+I\+C\+Kit Serial Analyzer Pin Configuration}\label{_p_k_s_a_r_s232_Pinout}
+
+\begin{DoxyEnumerate}
+\item The P\+C\textquotesingle{}s T\+X line. The P\+I\+C\textquotesingle{}s R\+X line. (Marked with an arrow) 
+\item V\textsubscript{D\+D} \+: 3-\/5\+V 
+\item V\textsubscript{S\+S} 
+\item Aux1 \+: not used in R\+S232 configuration 
+\item Aux2 \+: not used in R\+S232 configuration 
+\item The P\+C\textquotesingle{}s R\+X line. The P\+I\+C\textquotesingle{}s T\+X line. 
+\end{DoxyEnumerate} 

@@ -1,0 +1,26 @@
+digraph "HTTPPrint_config_gw"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="HTTPPrint_config_gw",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="HTTPPrintIP",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_custom_h_t_t_p_app_8c.html#afc77e41a5276a26c613d967d9eb27a90"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TCPPut",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_t_c_p_8h.html#a154886bc2d25d87f4ea5446ffd54d858"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TCPIsPutReady",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_t_c_p_8c.html#a10e1123d9bd8d1d94a6b9e10c2e8176c"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="TCPFlush",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_t_c_p_8c.html#a01c3ec541c50e1d0422f8b6e26e8a25b"];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="TickGetDiv256",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_tick_8h.html#a8f71f847e48f802c831fb86c7fb8326a"];
+  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="uitoa",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_helpers_8h.html#a5d4b74bdb9f65383826e4de1e829d19c"];
+  Node2 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="TCPPutString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_t_c_p_8h.html#a5d7346fc0457f4ccec99236c8e49e91d"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="TCPPutArray",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_t_c_p_8c.html#af1873020d1122b2f2c79e8c2f590fe19"];
+  Node9 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

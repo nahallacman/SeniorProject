@@ -1,0 +1,14 @@
+digraph "sec_key"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="sec_key",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" wps" ,fontname="Helvetica"];
+  Node2 [label="sec_wps",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsec__wps.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" wep104" ,fontname="Helvetica"];
+  Node3 [label="sec_wep104",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsec__wep104.html"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" wep40" ,fontname="Helvetica"];
+  Node4 [label="sec_wep40",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsec__wep40.html"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" wpa_psk" ,fontname="Helvetica"];
+  Node5 [label="sec_wpa_psk",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsec__wpa__psk.html"];
+}

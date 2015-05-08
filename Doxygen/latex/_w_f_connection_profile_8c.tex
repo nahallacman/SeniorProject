@@ -1,0 +1,450 @@
+\hypertarget{_w_f_connection_profile_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Wi\+Fi/\+W\+F\+Connection\+Profile.c File Reference}
+\label{_w_f_connection_profile_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Wi\+Fi/\+W\+F\+Connection\+Profile.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Wi\+Fi/\+W\+F\+Connection\+Profile.\+c}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structcp_element_response_struct}{cp\+Element\+Response\+Struct}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structcp_element_response_struct}{cp\+Element\+Response\+Struct} \hyperlink{_w_f_connection_profile_8c_abfe64115a60efc03734bb5abbdfb198f}{t\+C\+P\+Element\+Response\+Hdr}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_w_f_connection_profile_8c_a409118c5f7f4752e3cc90fed834f85d7}{W\+F\+\_\+\+C\+P\+Create} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+\+Cp\+Id)
+\item 
+void \hyperlink{_w_f_connection_profile_8c_ac1e2f8b7109b4585a62802b4df34ff1f}{W\+F\+\_\+\+C\+P\+Delete} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} Cp\+Id)
+\item 
+void \hyperlink{_w_f_connection_profile_8c_a0e54e93a1610caba3130524caff3287e}{W\+F\+\_\+\+C\+P\+Get\+Ids} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+cp\+Id\+List)
+\item 
+void \hyperlink{_w_f_connection_profile_8c_a167bec07eb2f7e96c2bf18438fa5929b}{W\+F\+\_\+\+C\+P\+Set\+Elements} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} Cp\+Id, \hyperlink{_w_f_api_8h_ad9f4b71820be5204bf360d5e0a1b14f7}{t\+W\+F\+C\+P\+Elements} $\ast$p\+\_\+elements)
+\item 
+void \hyperlink{_w_f_connection_profile_8c_a08277c06d453ff63e2f02a0bb2301354}{W\+F\+\_\+\+C\+P\+Get\+Elements} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} Cp\+Id, \hyperlink{_w_f_api_8h_ad9f4b71820be5204bf360d5e0a1b14f7}{t\+W\+F\+C\+P\+Elements} $\ast$p\+\_\+elements)
+\item 
+void \hyperlink{_w_f_connection_profile_8c_a7fb70c501b5b8ca3d6cb475ebb4dd7e3}{W\+F\+\_\+\+C\+P\+Set\+Ssid\+Type} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} Cp\+Id, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} hidden)
+\item 
+void \hyperlink{_w_f_connection_profile_8c_ab7a668fa894526d0e3bd02cbf3d5d1d7}{W\+F\+\_\+\+C\+P\+Get\+Ssid\+Type} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} Cp\+Id, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$hidden)
+\item 
+void \hyperlink{_w_f_connection_profile_8c_a48711596257a3deafd8c38c897ddea32}{W\+F\+\_\+\+C\+P\+Set\+Ssid} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} Cp\+Id, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+ssid, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} ssid\+Length)
+\item 
+void \hyperlink{_w_f_connection_profile_8c_a1cfd9fa1da5d9a643a5e83f2efad7ccb}{W\+F\+\_\+\+C\+P\+Get\+Ssid} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} Cp\+Id, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+ssid, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+ssid\+Length)
+\item 
+void \hyperlink{_w_f_connection_profile_8c_a466b7d2ef31dee0eed0d4ba98db6ebeb}{W\+F\+\_\+\+C\+P\+Set\+Bssid} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} Cp\+Id, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+bssid)
+\item 
+void \hyperlink{_w_f_connection_profile_8c_a0f33766bc7ec555bc755b2989458f313}{W\+F\+\_\+\+C\+P\+Get\+Bssid} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} Cp\+Id, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+bssid)
+\item 
+void \hyperlink{_w_f_connection_profile_8c_a374bec24cd64bcaf058ab46fbfca492b}{W\+F\+\_\+\+C\+P\+Set\+Network\+Type} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} Cp\+Id, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} network\+Type)
+\item 
+void \hyperlink{_w_f_connection_profile_8c_a73a64a25ff6d27d0039f0f0dc8e6b141}{W\+F\+\_\+\+C\+P\+Get\+Network\+Type} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} Cp\+Id, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+network\+Type)
+\item 
+void \hyperlink{_w_f_connection_profile_8c_a1de244b2f36cdbb09e00098a87e5772f}{W\+F\+\_\+\+C\+P\+Set\+Wep\+Key\+Type} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} Cp\+Id, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} wep\+Key\+Type)
+\item 
+void \hyperlink{_w_f_connection_profile_8c_ac3cdca0bf9d21b8c473a4224eea86d82}{W\+F\+\_\+\+C\+P\+Get\+Wep\+Key\+Type} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} Cp\+Id, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+wep\+Key\+Type)
+\item 
+void \hyperlink{_w_f_connection_profile_8c_a6fce49e7464b2b7c4fd5c3fca45a6156}{W\+F\+\_\+\+C\+P\+Get\+W\+P\+S\+Credentials} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} Cp\+Id, \hyperlink{structt_w_f_wps_cred}{t\+W\+F\+Wps\+Cred} $\ast$p\+\_\+cred)
+\item 
+void \hyperlink{_w_f_connection_profile_8c_afa3abda43df136af3eb2bbf6cc2226ae}{W\+F\+\_\+\+C\+P\+Update\+P\+M\+K} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} Cp\+Id, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$pmk)
+\item 
+void \hyperlink{_w_f_connection_profile_8c_aaf4a0ba2196c6f796b60156a8b2bfcdf}{W\+F\+\_\+\+C\+P\+Set\+Security} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} Cp\+Id, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{_w_f_console_iwpriv_8c_a63d08f748af835299345aa02efd9b4ab}{security\+Type}, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} wep\+Key\+Index, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+security\+Key, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{_w_f_console_iwpriv_8c_a3cdbd482e43e3e9029a2ac82327949a3}{security\+Key\+Length})
+\item 
+void \hyperlink{_w_f_connection_profile_8c_a44942b1dd837e1152987a37728bb50cb}{W\+F\+\_\+\+C\+P\+Get\+Security} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} Cp\+Id, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+security\+Type, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+wep\+Key\+Index, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+security\+Key, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+security\+Key\+Length)
+\item 
+void \hyperlink{_w_f_connection_profile_8c_a9243379253355b52a08d7047e4661228}{W\+F\+\_\+\+C\+P\+Set\+Default\+Wep\+Key\+Index} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} Cp\+Id, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} default\+Wep\+Key\+Index)
+\item 
+void \hyperlink{_w_f_connection_profile_8c_a4c97bfc110359fb811e0160de0784b43}{W\+F\+\_\+\+C\+P\+Get\+Default\+Wep\+Key\+Index} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} Cp\+Id, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+default\+Wep\+Key\+Index)
+\item 
+void \hyperlink{_w_f_connection_profile_8c_a94a4b6ff57d6fc18db247036b74c08c8}{W\+F\+\_\+\+C\+P\+Set\+Ad\+Hoc\+Behavior} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} Cp\+Id, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} ad\+Hoc\+Behavior)
+\item 
+void \hyperlink{_w_f_connection_profile_8c_a354a009d7b0cef5a35fcdae6e01426aa}{W\+F\+\_\+\+C\+P\+Get\+Ad\+Hoc\+Behavior} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} Cp\+Id, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+ad\+Hoc\+Behavior)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_w_f_connection_profile_8c_a047ec09a70d73fd84f8bb9457de626ba}{g\+R\+F\+Module\+Ver1209or\+Later}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_w_f_connection_profile_8c_abfe64115a60efc03734bb5abbdfb198f}{}\index{W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}!t\+C\+P\+Element\+Response\+Hdr@{t\+C\+P\+Element\+Response\+Hdr}}
+\index{t\+C\+P\+Element\+Response\+Hdr@{t\+C\+P\+Element\+Response\+Hdr}!W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}}
+\subsubsection[{t\+C\+P\+Element\+Response\+Hdr}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf cp\+Element\+Response\+Struct}  {\bf t\+C\+P\+Element\+Response\+Hdr}}\label{_w_f_connection_profile_8c_abfe64115a60efc03734bb5abbdfb198f}
+
+
+\subsection{Function Documentation}
+\hypertarget{_w_f_connection_profile_8c_a409118c5f7f4752e3cc90fed834f85d7}{}\index{W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}!W\+F\+\_\+\+C\+P\+Create@{W\+F\+\_\+\+C\+P\+Create}}
+\index{W\+F\+\_\+\+C\+P\+Create@{W\+F\+\_\+\+C\+P\+Create}!W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+P\+Create}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+P\+Create (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+\+Cp\+Id}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_profile_8c_a409118c5f7f4752e3cc90fed834f85d7}
+
+
+Definition at line 132 of file W\+F\+Connection\+Profile.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 0
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+\hypertarget{_w_f_connection_profile_8c_ac1e2f8b7109b4585a62802b4df34ff1f}{}\index{W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}!W\+F\+\_\+\+C\+P\+Delete@{W\+F\+\_\+\+C\+P\+Delete}}
+\index{W\+F\+\_\+\+C\+P\+Delete@{W\+F\+\_\+\+C\+P\+Delete}!W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+P\+Delete}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+P\+Delete (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{Cp\+Id}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_profile_8c_ac1e2f8b7109b4585a62802b4df34ff1f}
+
+
+Definition at line 176 of file W\+F\+Connection\+Profile.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\hypertarget{_w_f_connection_profile_8c_a354a009d7b0cef5a35fcdae6e01426aa}{}\index{W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}!W\+F\+\_\+\+C\+P\+Get\+Ad\+Hoc\+Behavior@{W\+F\+\_\+\+C\+P\+Get\+Ad\+Hoc\+Behavior}}
+\index{W\+F\+\_\+\+C\+P\+Get\+Ad\+Hoc\+Behavior@{W\+F\+\_\+\+C\+P\+Get\+Ad\+Hoc\+Behavior}!W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+P\+Get\+Ad\+Hoc\+Behavior}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+P\+Get\+Ad\+Hoc\+Behavior (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{Cp\+Id, }
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+ad\+Hoc\+Behavior}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_profile_8c_a354a009d7b0cef5a35fcdae6e01426aa}
+
+
+Definition at line 1087 of file W\+F\+Connection\+Profile.\+c.
+
+\hypertarget{_w_f_connection_profile_8c_a0f33766bc7ec555bc755b2989458f313}{}\index{W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}!W\+F\+\_\+\+C\+P\+Get\+Bssid@{W\+F\+\_\+\+C\+P\+Get\+Bssid}}
+\index{W\+F\+\_\+\+C\+P\+Get\+Bssid@{W\+F\+\_\+\+C\+P\+Get\+Bssid}!W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+P\+Get\+Bssid}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+P\+Get\+Bssid (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{Cp\+Id, }
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+bssid}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_profile_8c_a0f33766bc7ec555bc755b2989458f313}
+
+
+Definition at line 536 of file W\+F\+Connection\+Profile.\+c.
+
+\hypertarget{_w_f_connection_profile_8c_a4c97bfc110359fb811e0160de0784b43}{}\index{W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}!W\+F\+\_\+\+C\+P\+Get\+Default\+Wep\+Key\+Index@{W\+F\+\_\+\+C\+P\+Get\+Default\+Wep\+Key\+Index}}
+\index{W\+F\+\_\+\+C\+P\+Get\+Default\+Wep\+Key\+Index@{W\+F\+\_\+\+C\+P\+Get\+Default\+Wep\+Key\+Index}!W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+P\+Get\+Default\+Wep\+Key\+Index}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+P\+Get\+Default\+Wep\+Key\+Index (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{Cp\+Id, }
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+default\+Wep\+Key\+Index}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_profile_8c_a4c97bfc110359fb811e0160de0784b43}
+
+
+Definition at line 1017 of file W\+F\+Connection\+Profile.\+c.
+
+\hypertarget{_w_f_connection_profile_8c_a08277c06d453ff63e2f02a0bb2301354}{}\index{W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}!W\+F\+\_\+\+C\+P\+Get\+Elements@{W\+F\+\_\+\+C\+P\+Get\+Elements}}
+\index{W\+F\+\_\+\+C\+P\+Get\+Elements@{W\+F\+\_\+\+C\+P\+Get\+Elements}!W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+P\+Get\+Elements}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+P\+Get\+Elements (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{Cp\+Id, }
+\item[{{\bf t\+W\+F\+C\+P\+Elements} $\ast$}]{p\+\_\+elements}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_profile_8c_a08277c06d453ff63e2f02a0bb2301354}
+
+
+Definition at line 317 of file W\+F\+Connection\+Profile.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+\hypertarget{_w_f_connection_profile_8c_a0e54e93a1610caba3130524caff3287e}{}\index{W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}!W\+F\+\_\+\+C\+P\+Get\+Ids@{W\+F\+\_\+\+C\+P\+Get\+Ids}}
+\index{W\+F\+\_\+\+C\+P\+Get\+Ids@{W\+F\+\_\+\+C\+P\+Get\+Ids}!W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+P\+Get\+Ids}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+P\+Get\+Ids (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+cp\+Id\+List}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_profile_8c_a0e54e93a1610caba3130524caff3287e}
+
+
+Definition at line 225 of file W\+F\+Connection\+Profile.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 5
+
+
+\hypertarget{_w_f_connection_profile_8c_a73a64a25ff6d27d0039f0f0dc8e6b141}{}\index{W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}!W\+F\+\_\+\+C\+P\+Get\+Network\+Type@{W\+F\+\_\+\+C\+P\+Get\+Network\+Type}}
+\index{W\+F\+\_\+\+C\+P\+Get\+Network\+Type@{W\+F\+\_\+\+C\+P\+Get\+Network\+Type}!W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+P\+Get\+Network\+Type}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+P\+Get\+Network\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{Cp\+Id, }
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+network\+Type}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_profile_8c_a73a64a25ff6d27d0039f0f0dc8e6b141}
+
+
+Definition at line 607 of file W\+F\+Connection\+Profile.\+c.
+
+\hypertarget{_w_f_connection_profile_8c_a44942b1dd837e1152987a37728bb50cb}{}\index{W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}!W\+F\+\_\+\+C\+P\+Get\+Security@{W\+F\+\_\+\+C\+P\+Get\+Security}}
+\index{W\+F\+\_\+\+C\+P\+Get\+Security@{W\+F\+\_\+\+C\+P\+Get\+Security}!W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+P\+Get\+Security}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+P\+Get\+Security (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{Cp\+Id, }
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+security\+Type, }
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+wep\+Key\+Index, }
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+security\+Key, }
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+security\+Key\+Length}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_profile_8c_a44942b1dd837e1152987a37728bb50cb}
+
+
+Definition at line 898 of file W\+F\+Connection\+Profile.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 6
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 7
+
+
+\hypertarget{_w_f_connection_profile_8c_a1cfd9fa1da5d9a643a5e83f2efad7ccb}{}\index{W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}!W\+F\+\_\+\+C\+P\+Get\+Ssid@{W\+F\+\_\+\+C\+P\+Get\+Ssid}}
+\index{W\+F\+\_\+\+C\+P\+Get\+Ssid@{W\+F\+\_\+\+C\+P\+Get\+Ssid}!W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+P\+Get\+Ssid}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+P\+Get\+Ssid (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{Cp\+Id, }
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+ssid, }
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+ssid\+Length}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_profile_8c_a1cfd9fa1da5d9a643a5e83f2efad7ccb}
+
+
+Definition at line 454 of file W\+F\+Connection\+Profile.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 8
+
+
+\hypertarget{_w_f_connection_profile_8c_ab7a668fa894526d0e3bd02cbf3d5d1d7}{}\index{W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}!W\+F\+\_\+\+C\+P\+Get\+Ssid\+Type@{W\+F\+\_\+\+C\+P\+Get\+Ssid\+Type}}
+\index{W\+F\+\_\+\+C\+P\+Get\+Ssid\+Type@{W\+F\+\_\+\+C\+P\+Get\+Ssid\+Type}!W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+P\+Get\+Ssid\+Type}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+P\+Get\+Ssid\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{Cp\+Id, }
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{hidden}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_profile_8c_ab7a668fa894526d0e3bd02cbf3d5d1d7}
+
+
+Definition at line 384 of file W\+F\+Connection\+Profile.\+c.
+
+\hypertarget{_w_f_connection_profile_8c_ac3cdca0bf9d21b8c473a4224eea86d82}{}\index{W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}!W\+F\+\_\+\+C\+P\+Get\+Wep\+Key\+Type@{W\+F\+\_\+\+C\+P\+Get\+Wep\+Key\+Type}}
+\index{W\+F\+\_\+\+C\+P\+Get\+Wep\+Key\+Type@{W\+F\+\_\+\+C\+P\+Get\+Wep\+Key\+Type}!W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+P\+Get\+Wep\+Key\+Type}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+P\+Get\+Wep\+Key\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{Cp\+Id, }
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+wep\+Key\+Type}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_profile_8c_ac3cdca0bf9d21b8c473a4224eea86d82}
+
+
+Definition at line 675 of file W\+F\+Connection\+Profile.\+c.
+
+\hypertarget{_w_f_connection_profile_8c_a6fce49e7464b2b7c4fd5c3fca45a6156}{}\index{W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}!W\+F\+\_\+\+C\+P\+Get\+W\+P\+S\+Credentials@{W\+F\+\_\+\+C\+P\+Get\+W\+P\+S\+Credentials}}
+\index{W\+F\+\_\+\+C\+P\+Get\+W\+P\+S\+Credentials@{W\+F\+\_\+\+C\+P\+Get\+W\+P\+S\+Credentials}!W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+P\+Get\+W\+P\+S\+Credentials}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+P\+Get\+W\+P\+S\+Credentials (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{Cp\+Id, }
+\item[{{\bf t\+W\+F\+Wps\+Cred} $\ast$}]{p\+\_\+cred}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_profile_8c_a6fce49e7464b2b7c4fd5c3fca45a6156}
+
+
+Definition at line 708 of file W\+F\+Connection\+Profile.\+c.
+
+\hypertarget{_w_f_connection_profile_8c_a94a4b6ff57d6fc18db247036b74c08c8}{}\index{W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}!W\+F\+\_\+\+C\+P\+Set\+Ad\+Hoc\+Behavior@{W\+F\+\_\+\+C\+P\+Set\+Ad\+Hoc\+Behavior}}
+\index{W\+F\+\_\+\+C\+P\+Set\+Ad\+Hoc\+Behavior@{W\+F\+\_\+\+C\+P\+Set\+Ad\+Hoc\+Behavior}!W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+P\+Set\+Ad\+Hoc\+Behavior}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+P\+Set\+Ad\+Hoc\+Behavior (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{Cp\+Id, }
+\item[{{\bf U\+I\+N\+T8}}]{ad\+Hoc\+Behavior}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_profile_8c_a94a4b6ff57d6fc18db247036b74c08c8}
+
+
+Definition at line 1052 of file W\+F\+Connection\+Profile.\+c.
+
+\hypertarget{_w_f_connection_profile_8c_a466b7d2ef31dee0eed0d4ba98db6ebeb}{}\index{W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}!W\+F\+\_\+\+C\+P\+Set\+Bssid@{W\+F\+\_\+\+C\+P\+Set\+Bssid}}
+\index{W\+F\+\_\+\+C\+P\+Set\+Bssid@{W\+F\+\_\+\+C\+P\+Set\+Bssid}!W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+P\+Set\+Bssid}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+P\+Set\+Bssid (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{Cp\+Id, }
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+bssid}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_profile_8c_a466b7d2ef31dee0eed0d4ba98db6ebeb}
+
+
+Definition at line 505 of file W\+F\+Connection\+Profile.\+c.
+
+\hypertarget{_w_f_connection_profile_8c_a9243379253355b52a08d7047e4661228}{}\index{W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}!W\+F\+\_\+\+C\+P\+Set\+Default\+Wep\+Key\+Index@{W\+F\+\_\+\+C\+P\+Set\+Default\+Wep\+Key\+Index}}
+\index{W\+F\+\_\+\+C\+P\+Set\+Default\+Wep\+Key\+Index@{W\+F\+\_\+\+C\+P\+Set\+Default\+Wep\+Key\+Index}!W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+P\+Set\+Default\+Wep\+Key\+Index}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+P\+Set\+Default\+Wep\+Key\+Index (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{Cp\+Id, }
+\item[{{\bf U\+I\+N\+T8}}]{default\+Wep\+Key\+Index}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_profile_8c_a9243379253355b52a08d7047e4661228}
+
+
+Definition at line 982 of file W\+F\+Connection\+Profile.\+c.
+
+\hypertarget{_w_f_connection_profile_8c_a167bec07eb2f7e96c2bf18438fa5929b}{}\index{W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}!W\+F\+\_\+\+C\+P\+Set\+Elements@{W\+F\+\_\+\+C\+P\+Set\+Elements}}
+\index{W\+F\+\_\+\+C\+P\+Set\+Elements@{W\+F\+\_\+\+C\+P\+Set\+Elements}!W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+P\+Set\+Elements}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+P\+Set\+Elements (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{Cp\+Id, }
+\item[{{\bf t\+W\+F\+C\+P\+Elements} $\ast$}]{p\+\_\+elements}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_profile_8c_a167bec07eb2f7e96c2bf18438fa5929b}
+
+
+Definition at line 273 of file W\+F\+Connection\+Profile.\+c.
+
+\hypertarget{_w_f_connection_profile_8c_a374bec24cd64bcaf058ab46fbfca492b}{}\index{W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}!W\+F\+\_\+\+C\+P\+Set\+Network\+Type@{W\+F\+\_\+\+C\+P\+Set\+Network\+Type}}
+\index{W\+F\+\_\+\+C\+P\+Set\+Network\+Type@{W\+F\+\_\+\+C\+P\+Set\+Network\+Type}!W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+P\+Set\+Network\+Type}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+P\+Set\+Network\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{Cp\+Id, }
+\item[{{\bf U\+I\+N\+T8}}]{network\+Type}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_profile_8c_a374bec24cd64bcaf058ab46fbfca492b}
+
+
+Definition at line 572 of file W\+F\+Connection\+Profile.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 9
+
+
+\hypertarget{_w_f_connection_profile_8c_aaf4a0ba2196c6f796b60156a8b2bfcdf}{}\index{W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}!W\+F\+\_\+\+C\+P\+Set\+Security@{W\+F\+\_\+\+C\+P\+Set\+Security}}
+\index{W\+F\+\_\+\+C\+P\+Set\+Security@{W\+F\+\_\+\+C\+P\+Set\+Security}!W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+P\+Set\+Security}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+P\+Set\+Security (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{Cp\+Id, }
+\item[{{\bf U\+I\+N\+T8}}]{security\+Type, }
+\item[{{\bf U\+I\+N\+T8}}]{wep\+Key\+Index, }
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+security\+Key, }
+\item[{{\bf U\+I\+N\+T8}}]{security\+Key\+Length}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_profile_8c_aaf4a0ba2196c6f796b60156a8b2bfcdf}
+
+
+Definition at line 802 of file W\+F\+Connection\+Profile.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 10
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 11
+
+
+\hypertarget{_w_f_connection_profile_8c_a48711596257a3deafd8c38c897ddea32}{}\index{W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}!W\+F\+\_\+\+C\+P\+Set\+Ssid@{W\+F\+\_\+\+C\+P\+Set\+Ssid}}
+\index{W\+F\+\_\+\+C\+P\+Set\+Ssid@{W\+F\+\_\+\+C\+P\+Set\+Ssid}!W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+P\+Set\+Ssid}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+P\+Set\+Ssid (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{Cp\+Id, }
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+ssid, }
+\item[{{\bf U\+I\+N\+T8}}]{ssid\+Length}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_profile_8c_a48711596257a3deafd8c38c897ddea32}
+
+
+Definition at line 420 of file W\+F\+Connection\+Profile.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 12
+
+
+\hypertarget{_w_f_connection_profile_8c_a7fb70c501b5b8ca3d6cb475ebb4dd7e3}{}\index{W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}!W\+F\+\_\+\+C\+P\+Set\+Ssid\+Type@{W\+F\+\_\+\+C\+P\+Set\+Ssid\+Type}}
+\index{W\+F\+\_\+\+C\+P\+Set\+Ssid\+Type@{W\+F\+\_\+\+C\+P\+Set\+Ssid\+Type}!W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+P\+Set\+Ssid\+Type}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+P\+Set\+Ssid\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{Cp\+Id, }
+\item[{{\bf U\+I\+N\+T8}}]{hidden}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_profile_8c_a7fb70c501b5b8ca3d6cb475ebb4dd7e3}
+
+
+Definition at line 352 of file W\+F\+Connection\+Profile.\+c.
+
+\hypertarget{_w_f_connection_profile_8c_a1de244b2f36cdbb09e00098a87e5772f}{}\index{W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}!W\+F\+\_\+\+C\+P\+Set\+Wep\+Key\+Type@{W\+F\+\_\+\+C\+P\+Set\+Wep\+Key\+Type}}
+\index{W\+F\+\_\+\+C\+P\+Set\+Wep\+Key\+Type@{W\+F\+\_\+\+C\+P\+Set\+Wep\+Key\+Type}!W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+P\+Set\+Wep\+Key\+Type}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+P\+Set\+Wep\+Key\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{Cp\+Id, }
+\item[{{\bf U\+I\+N\+T8}}]{wep\+Key\+Type}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_profile_8c_a1de244b2f36cdbb09e00098a87e5772f}
+
+
+Definition at line 641 of file W\+F\+Connection\+Profile.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 13
+
+
+\hypertarget{_w_f_connection_profile_8c_afa3abda43df136af3eb2bbf6cc2226ae}{}\index{W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}!W\+F\+\_\+\+C\+P\+Update\+P\+M\+K@{W\+F\+\_\+\+C\+P\+Update\+P\+M\+K}}
+\index{W\+F\+\_\+\+C\+P\+Update\+P\+M\+K@{W\+F\+\_\+\+C\+P\+Update\+P\+M\+K}!W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}}
+\subsubsection[{W\+F\+\_\+\+C\+P\+Update\+P\+M\+K}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+C\+P\+Update\+P\+M\+K (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{Cp\+Id, }
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{pmk}
+\end{DoxyParamCaption}
+)}\label{_w_f_connection_profile_8c_afa3abda43df136af3eb2bbf6cc2226ae}
+
+
+Definition at line 742 of file W\+F\+Connection\+Profile.\+c.
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{_w_f_connection_profile_8c_a047ec09a70d73fd84f8bb9457de626ba}{}\index{W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}!g\+R\+F\+Module\+Ver1209or\+Later@{g\+R\+F\+Module\+Ver1209or\+Later}}
+\index{g\+R\+F\+Module\+Ver1209or\+Later@{g\+R\+F\+Module\+Ver1209or\+Later}!W\+F\+Connection\+Profile.\+c@{W\+F\+Connection\+Profile.\+c}}
+\subsubsection[{g\+R\+F\+Module\+Ver1209or\+Later}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} g\+R\+F\+Module\+Ver1209or\+Later}\label{_w_f_connection_profile_8c_a047ec09a70d73fd84f8bb9457de626ba}
+
+
+Definition at line 62 of file W\+F\+Init.\+c.
+

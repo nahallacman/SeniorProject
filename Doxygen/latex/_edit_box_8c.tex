@@ -1,0 +1,166 @@
+\hypertarget{_edit_box_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Graphics/\+Edit\+Box.c File Reference}
+\label{_edit_box_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Graphics/\+Edit\+Box.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Graphics/\+Edit\+Box.\+c}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_e_d_i_t_b_o_x}{E\+D\+I\+T\+B\+O\+X} $\ast$ \hyperlink{_edit_box_8c_a3f6da3c8eb9028edaaae00dc7dbe38a5}{Eb\+Create} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} I\+D, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} left, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} top, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} right, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} bottom, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} state, X\+C\+H\+A\+R $\ast$p\+Text, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} char\+Max, \hyperlink{struct_g_o_l___s_c_h_e_m_e}{G\+O\+L\+\_\+\+S\+C\+H\+E\+M\+E} $\ast$p\+Scheme)
+\item 
+void \hyperlink{_edit_box_8c_a5cedaa09a4d808b472d07d2f3c9bd00c}{Eb\+Set\+Text} (\hyperlink{struct_e_d_i_t_b_o_x}{E\+D\+I\+T\+B\+O\+X} $\ast$p\+Eb, X\+C\+H\+A\+R $\ast$p\+Text)
+\item 
+void \hyperlink{_edit_box_8c_a9b4b87d0575f483200807ead683c7ba2}{Eb\+Add\+Char} (\hyperlink{struct_e_d_i_t_b_o_x}{E\+D\+I\+T\+B\+O\+X} $\ast$p\+Eb, X\+C\+H\+A\+R ch)
+\item 
+void \hyperlink{_edit_box_8c_ab62b9439426e11861afcd2fb63c91de1}{Eb\+Delete\+Char} (\hyperlink{struct_e_d_i_t_b_o_x}{E\+D\+I\+T\+B\+O\+X} $\ast$p\+Eb)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_edit_box_8c_a8ec399c884359b690e20015d798f406d}{Eb\+Translate\+Msg} (void $\ast$p\+Obj, \hyperlink{struct_g_o_l___m_s_g}{G\+O\+L\+\_\+\+M\+S\+G} $\ast$p\+Msg)
+\item 
+void \hyperlink{_edit_box_8c_a1ad01ddce1430f7ce55243637195fc34}{Eb\+Msg\+Default} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} translated\+Msg, void $\ast$p\+Obj, \hyperlink{struct_g_o_l___m_s_g}{G\+O\+L\+\_\+\+M\+S\+G} $\ast$p\+Msg)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_edit_box_8c_aa62476b8c9ee6fd4acade2e21c4b2adb}{Eb\+Draw} (void $\ast$p\+Obj)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_edit_box_8c_a9b4b87d0575f483200807ead683c7ba2}{}\index{Edit\+Box.\+c@{Edit\+Box.\+c}!Eb\+Add\+Char@{Eb\+Add\+Char}}
+\index{Eb\+Add\+Char@{Eb\+Add\+Char}!Edit\+Box.\+c@{Edit\+Box.\+c}}
+\subsubsection[{Eb\+Add\+Char}]{\setlength{\rightskip}{0pt plus 5cm}void Eb\+Add\+Char (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+D\+I\+T\+B\+O\+X} $\ast$}]{p\+Eb, }
+\item[{X\+C\+H\+A\+R}]{ch}
+\end{DoxyParamCaption}
+)}\label{_edit_box_8c_a9b4b87d0575f483200807ead683c7ba2}
+
+
+Definition at line 148 of file Edit\+Box.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+\hypertarget{_edit_box_8c_a3f6da3c8eb9028edaaae00dc7dbe38a5}{}\index{Edit\+Box.\+c@{Edit\+Box.\+c}!Eb\+Create@{Eb\+Create}}
+\index{Eb\+Create@{Eb\+Create}!Edit\+Box.\+c@{Edit\+Box.\+c}}
+\subsubsection[{Eb\+Create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+D\+I\+T\+B\+O\+X}$\ast$ Eb\+Create (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{I\+D, }
+\item[{{\bf S\+H\+O\+R\+T}}]{left, }
+\item[{{\bf S\+H\+O\+R\+T}}]{top, }
+\item[{{\bf S\+H\+O\+R\+T}}]{right, }
+\item[{{\bf S\+H\+O\+R\+T}}]{bottom, }
+\item[{{\bf W\+O\+R\+D}}]{state, }
+\item[{X\+C\+H\+A\+R $\ast$}]{p\+Text, }
+\item[{{\bf W\+O\+R\+D}}]{char\+Max, }
+\item[{{\bf G\+O\+L\+\_\+\+S\+C\+H\+E\+M\+E} $\ast$}]{p\+Scheme}
+\end{DoxyParamCaption}
+)}\label{_edit_box_8c_a3f6da3c8eb9028edaaae00dc7dbe38a5}
+
+
+Definition at line 66 of file Edit\+Box.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+\hypertarget{_edit_box_8c_ab62b9439426e11861afcd2fb63c91de1}{}\index{Edit\+Box.\+c@{Edit\+Box.\+c}!Eb\+Delete\+Char@{Eb\+Delete\+Char}}
+\index{Eb\+Delete\+Char@{Eb\+Delete\+Char}!Edit\+Box.\+c@{Edit\+Box.\+c}}
+\subsubsection[{Eb\+Delete\+Char}]{\setlength{\rightskip}{0pt plus 5cm}void Eb\+Delete\+Char (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+D\+I\+T\+B\+O\+X} $\ast$}]{p\+Eb}
+\end{DoxyParamCaption}
+)}\label{_edit_box_8c_ab62b9439426e11861afcd2fb63c91de1}
+
+
+Definition at line 165 of file Edit\+Box.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\hypertarget{_edit_box_8c_aa62476b8c9ee6fd4acade2e21c4b2adb}{}\index{Edit\+Box.\+c@{Edit\+Box.\+c}!Eb\+Draw@{Eb\+Draw}}
+\index{Eb\+Draw@{Eb\+Draw}!Edit\+Box.\+c@{Edit\+Box.\+c}}
+\subsubsection[{Eb\+Draw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Eb\+Draw (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{p\+Obj}
+\end{DoxyParamCaption}
+)}\label{_edit_box_8c_aa62476b8c9ee6fd4acade2e21c4b2adb}
+
+
+Definition at line 267 of file Edit\+Box.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+\hypertarget{_edit_box_8c_a1ad01ddce1430f7ce55243637195fc34}{}\index{Edit\+Box.\+c@{Edit\+Box.\+c}!Eb\+Msg\+Default@{Eb\+Msg\+Default}}
+\index{Eb\+Msg\+Default@{Eb\+Msg\+Default}!Edit\+Box.\+c@{Edit\+Box.\+c}}
+\subsubsection[{Eb\+Msg\+Default}]{\setlength{\rightskip}{0pt plus 5cm}void Eb\+Msg\+Default (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{translated\+Msg, }
+\item[{void $\ast$}]{p\+Obj, }
+\item[{{\bf G\+O\+L\+\_\+\+M\+S\+G} $\ast$}]{p\+Msg}
+\end{DoxyParamCaption}
+)}\label{_edit_box_8c_a1ad01ddce1430f7ce55243637195fc34}
+
+
+Definition at line 230 of file Edit\+Box.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 5
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\hypertarget{_edit_box_8c_a5cedaa09a4d808b472d07d2f3c9bd00c}{}\index{Edit\+Box.\+c@{Edit\+Box.\+c}!Eb\+Set\+Text@{Eb\+Set\+Text}}
+\index{Eb\+Set\+Text@{Eb\+Set\+Text}!Edit\+Box.\+c@{Edit\+Box.\+c}}
+\subsubsection[{Eb\+Set\+Text}]{\setlength{\rightskip}{0pt plus 5cm}void Eb\+Set\+Text (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+D\+I\+T\+B\+O\+X} $\ast$}]{p\+Eb, }
+\item[{X\+C\+H\+A\+R $\ast$}]{p\+Text}
+\end{DoxyParamCaption}
+)}\label{_edit_box_8c_a5cedaa09a4d808b472d07d2f3c9bd00c}
+
+
+Definition at line 114 of file Edit\+Box.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 7
+
+
+\hypertarget{_edit_box_8c_a8ec399c884359b690e20015d798f406d}{}\index{Edit\+Box.\+c@{Edit\+Box.\+c}!Eb\+Translate\+Msg@{Eb\+Translate\+Msg}}
+\index{Eb\+Translate\+Msg@{Eb\+Translate\+Msg}!Edit\+Box.\+c@{Edit\+Box.\+c}}
+\subsubsection[{Eb\+Translate\+Msg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Eb\+Translate\+Msg (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{p\+Obj, }
+\item[{{\bf G\+O\+L\+\_\+\+M\+S\+G} $\ast$}]{p\+Msg}
+\end{DoxyParamCaption}
+)}\label{_edit_box_8c_a8ec399c884359b690e20015d798f406d}
+
+
+Definition at line 182 of file Edit\+Box.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 8
+
+

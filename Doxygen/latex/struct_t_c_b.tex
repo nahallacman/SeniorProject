@@ -1,0 +1,227 @@
+\hypertarget{struct_t_c_b}{}\section{T\+C\+B Struct Reference}
+\label{struct_t_c_b}\index{T\+C\+B@{T\+C\+B}}
+
+
+{\ttfamily \#include $<$T\+C\+P.\+h$>$}
+
+
+
+Collaboration diagram for T\+C\+B\+:
+% FIG 0
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} \hyperlink{struct_t_c_b_a807f78c2939992452223356ae72340cf}{retry\+Interval}
+\item 
+\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} \hyperlink{struct_t_c_b_ab1e41ee8fe38bfb894ab8035087a3aeb}{My\+S\+E\+Q}
+\item 
+\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} \hyperlink{struct_t_c_b_ad819775df364f9ddf85d4568ffe1ed18}{Remote\+S\+E\+Q}
+\item 
+P\+T\+R\+\_\+\+B\+A\+S\+E \hyperlink{struct_t_c_b_a6a6329eb22236074b0f6b501ef3fdedf}{tx\+Unacked\+Tail}
+\item 
+\hyperlink{union_w_o_r_d___v_a_l}{W\+O\+R\+D\+\_\+\+V\+A\+L} \hyperlink{struct_t_c_b_aa316e3d5bcdbc999280ce3bb80ef116e}{remote\+Port}
+\item 
+\hyperlink{union_w_o_r_d___v_a_l}{W\+O\+R\+D\+\_\+\+V\+A\+L} \hyperlink{struct_t_c_b_aa71085d8339f25c6ebce50737f9e58fb}{local\+Port}
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{struct_t_c_b_a856e07e4c4285f8a0f28518aed9fc2bd}{remote\+Window}
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{struct_t_c_b_a48cb8cf682effdf9221fef77ae582298}{w\+Future\+Data\+Size}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\hyperlink{_stack_tsk_8h_ac28a7d4076195ab8e3376f06055f8ee4}{NODE\_INFO} \hyperlink{struct_t_c_b_a1bf5ec3f0c3c0241d01cc1b5e7f094cd}{niRemoteMACIP}\\
+\>\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{DWORD} \hyperlink{struct_t_c_b_a3f09cd8c9167b802029195c759770966}{dwRemoteHost}\\
+\} \hyperlink{struct_t_c_b_afadd907b992146d3bcfb2f95cc670731}{remote}\\
+
+\end{tabbing}\item 
+\hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} \hyperlink{struct_t_c_b_a343884e48d9a59f81266a9e5cd1cb0b2}{s\+Hole\+Size}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>unsigned char \hyperlink{struct_t_c_b_ae7e84a3fa64de6e94ad093b762400e10}{bFINSent}: 1\\
+\>unsigned char \hyperlink{struct_t_c_b_a5d60ed0da9975f201bdb5832564f24a2}{bSYNSent}: 1\\
+\>unsigned char \hyperlink{struct_t_c_b_a85e50d5129c9eaec6e4729cb5aacf312}{bRemoteHostIsROM}: 1\\
+\>unsigned char \hyperlink{struct_t_c_b_acd4766b3fc8c443d8aceb1920fc58677}{bRXNoneACKed1}: 1\\
+\>unsigned char \hyperlink{struct_t_c_b_a22ffb6306d775b5180f9d9691240df08}{bRXNoneACKed2}: 1\\
+\>unsigned char \hyperlink{struct_t_c_b_a3cc9af5814583d98e4724f5dfb86c5b8}{filler}: 3\\
+\} \hyperlink{struct_t_c_b_adc44e41369b7d7bebc66a88b5a289e72}{flags}\\
+
+\end{tabbing}\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{struct_t_c_b_a3a4e74a03e65f7f665046aaac3127228}{w\+Remote\+M\+S\+S}
+\item 
+\hyperlink{union_w_o_r_d___v_a_l}{W\+O\+R\+D\+\_\+\+V\+A\+L} \hyperlink{struct_t_c_b_a3bf31b0f800d38012b3d40e51af0ed80}{local\+S\+S\+L\+Port}
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{struct_t_c_b_a122f749211c26b45afbac25b4a278b56}{retry\+Count}
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{struct_t_c_b_a2c590b42dac0ddfc5ec2e193261815c5}{v\+Socket\+Purpose}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 159 of file T\+C\+P.\+h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{struct_t_c_b_ae7e84a3fa64de6e94ad093b762400e10}{}\index{T\+C\+B@{T\+C\+B}!b\+F\+I\+N\+Sent@{b\+F\+I\+N\+Sent}}
+\index{b\+F\+I\+N\+Sent@{b\+F\+I\+N\+Sent}!T\+C\+B@{T\+C\+B}}
+\subsubsection[{b\+F\+I\+N\+Sent}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char b\+F\+I\+N\+Sent}\label{struct_t_c_b_ae7e84a3fa64de6e94ad093b762400e10}
+
+
+Definition at line 177 of file T\+C\+P.\+h.
+
+\hypertarget{struct_t_c_b_a85e50d5129c9eaec6e4729cb5aacf312}{}\index{T\+C\+B@{T\+C\+B}!b\+Remote\+Host\+Is\+R\+O\+M@{b\+Remote\+Host\+Is\+R\+O\+M}}
+\index{b\+Remote\+Host\+Is\+R\+O\+M@{b\+Remote\+Host\+Is\+R\+O\+M}!T\+C\+B@{T\+C\+B}}
+\subsubsection[{b\+Remote\+Host\+Is\+R\+O\+M}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char b\+Remote\+Host\+Is\+R\+O\+M}\label{struct_t_c_b_a85e50d5129c9eaec6e4729cb5aacf312}
+
+
+Definition at line 179 of file T\+C\+P.\+h.
+
+\hypertarget{struct_t_c_b_acd4766b3fc8c443d8aceb1920fc58677}{}\index{T\+C\+B@{T\+C\+B}!b\+R\+X\+None\+A\+C\+Ked1@{b\+R\+X\+None\+A\+C\+Ked1}}
+\index{b\+R\+X\+None\+A\+C\+Ked1@{b\+R\+X\+None\+A\+C\+Ked1}!T\+C\+B@{T\+C\+B}}
+\subsubsection[{b\+R\+X\+None\+A\+C\+Ked1}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char b\+R\+X\+None\+A\+C\+Ked1}\label{struct_t_c_b_acd4766b3fc8c443d8aceb1920fc58677}
+
+
+Definition at line 180 of file T\+C\+P.\+h.
+
+\hypertarget{struct_t_c_b_a22ffb6306d775b5180f9d9691240df08}{}\index{T\+C\+B@{T\+C\+B}!b\+R\+X\+None\+A\+C\+Ked2@{b\+R\+X\+None\+A\+C\+Ked2}}
+\index{b\+R\+X\+None\+A\+C\+Ked2@{b\+R\+X\+None\+A\+C\+Ked2}!T\+C\+B@{T\+C\+B}}
+\subsubsection[{b\+R\+X\+None\+A\+C\+Ked2}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char b\+R\+X\+None\+A\+C\+Ked2}\label{struct_t_c_b_a22ffb6306d775b5180f9d9691240df08}
+
+
+Definition at line 181 of file T\+C\+P.\+h.
+
+\hypertarget{struct_t_c_b_a5d60ed0da9975f201bdb5832564f24a2}{}\index{T\+C\+B@{T\+C\+B}!b\+S\+Y\+N\+Sent@{b\+S\+Y\+N\+Sent}}
+\index{b\+S\+Y\+N\+Sent@{b\+S\+Y\+N\+Sent}!T\+C\+B@{T\+C\+B}}
+\subsubsection[{b\+S\+Y\+N\+Sent}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char b\+S\+Y\+N\+Sent}\label{struct_t_c_b_a5d60ed0da9975f201bdb5832564f24a2}
+
+
+Definition at line 178 of file T\+C\+P.\+h.
+
+\hypertarget{struct_t_c_b_a3f09cd8c9167b802029195c759770966}{}\index{T\+C\+B@{T\+C\+B}!dw\+Remote\+Host@{dw\+Remote\+Host}}
+\index{dw\+Remote\+Host@{dw\+Remote\+Host}!T\+C\+B@{T\+C\+B}}
+\subsubsection[{dw\+Remote\+Host}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} dw\+Remote\+Host}\label{struct_t_c_b_a3f09cd8c9167b802029195c759770966}
+
+
+Definition at line 172 of file T\+C\+P.\+h.
+
+\hypertarget{struct_t_c_b_a3cc9af5814583d98e4724f5dfb86c5b8}{}\index{T\+C\+B@{T\+C\+B}!filler@{filler}}
+\index{filler@{filler}!T\+C\+B@{T\+C\+B}}
+\subsubsection[{filler}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char filler}\label{struct_t_c_b_a3cc9af5814583d98e4724f5dfb86c5b8}
+
+
+Definition at line 182 of file T\+C\+P.\+h.
+
+\hypertarget{struct_t_c_b_adc44e41369b7d7bebc66a88b5a289e72}{}\index{T\+C\+B@{T\+C\+B}!flags@{flags}}
+\index{flags@{flags}!T\+C\+B@{T\+C\+B}}
+\subsubsection[{flags}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   flags}\label{struct_t_c_b_adc44e41369b7d7bebc66a88b5a289e72}
+\hypertarget{struct_t_c_b_aa71085d8339f25c6ebce50737f9e58fb}{}\index{T\+C\+B@{T\+C\+B}!local\+Port@{local\+Port}}
+\index{local\+Port@{local\+Port}!T\+C\+B@{T\+C\+B}}
+\subsubsection[{local\+Port}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D\+\_\+\+V\+A\+L} local\+Port}\label{struct_t_c_b_aa71085d8339f25c6ebce50737f9e58fb}
+
+
+Definition at line 166 of file T\+C\+P.\+h.
+
+\hypertarget{struct_t_c_b_a3bf31b0f800d38012b3d40e51af0ed80}{}\index{T\+C\+B@{T\+C\+B}!local\+S\+S\+L\+Port@{local\+S\+S\+L\+Port}}
+\index{local\+S\+S\+L\+Port@{local\+S\+S\+L\+Port}!T\+C\+B@{T\+C\+B}}
+\subsubsection[{local\+S\+S\+L\+Port}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D\+\_\+\+V\+A\+L} local\+S\+S\+L\+Port}\label{struct_t_c_b_a3bf31b0f800d38012b3d40e51af0ed80}
+
+
+Definition at line 186 of file T\+C\+P.\+h.
+
+\hypertarget{struct_t_c_b_ab1e41ee8fe38bfb894ab8035087a3aeb}{}\index{T\+C\+B@{T\+C\+B}!My\+S\+E\+Q@{My\+S\+E\+Q}}
+\index{My\+S\+E\+Q@{My\+S\+E\+Q}!T\+C\+B@{T\+C\+B}}
+\subsubsection[{My\+S\+E\+Q}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} My\+S\+E\+Q}\label{struct_t_c_b_ab1e41ee8fe38bfb894ab8035087a3aeb}
+
+
+Definition at line 162 of file T\+C\+P.\+h.
+
+\hypertarget{struct_t_c_b_a1bf5ec3f0c3c0241d01cc1b5e7f094cd}{}\index{T\+C\+B@{T\+C\+B}!ni\+Remote\+M\+A\+C\+I\+P@{ni\+Remote\+M\+A\+C\+I\+P}}
+\index{ni\+Remote\+M\+A\+C\+I\+P@{ni\+Remote\+M\+A\+C\+I\+P}!T\+C\+B@{T\+C\+B}}
+\subsubsection[{ni\+Remote\+M\+A\+C\+I\+P}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\+O\+D\+E\+\_\+\+I\+N\+F\+O} ni\+Remote\+M\+A\+C\+I\+P}\label{struct_t_c_b_a1bf5ec3f0c3c0241d01cc1b5e7f094cd}
+
+
+Definition at line 171 of file T\+C\+P.\+h.
+
+\hypertarget{struct_t_c_b_afadd907b992146d3bcfb2f95cc670731}{}\index{T\+C\+B@{T\+C\+B}!remote@{remote}}
+\index{remote@{remote}!T\+C\+B@{T\+C\+B}}
+\subsubsection[{remote}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \}   remote}\label{struct_t_c_b_afadd907b992146d3bcfb2f95cc670731}
+\hypertarget{struct_t_c_b_aa316e3d5bcdbc999280ce3bb80ef116e}{}\index{T\+C\+B@{T\+C\+B}!remote\+Port@{remote\+Port}}
+\index{remote\+Port@{remote\+Port}!T\+C\+B@{T\+C\+B}}
+\subsubsection[{remote\+Port}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D\+\_\+\+V\+A\+L} remote\+Port}\label{struct_t_c_b_aa316e3d5bcdbc999280ce3bb80ef116e}
+
+
+Definition at line 165 of file T\+C\+P.\+h.
+
+\hypertarget{struct_t_c_b_ad819775df364f9ddf85d4568ffe1ed18}{}\index{T\+C\+B@{T\+C\+B}!Remote\+S\+E\+Q@{Remote\+S\+E\+Q}}
+\index{Remote\+S\+E\+Q@{Remote\+S\+E\+Q}!T\+C\+B@{T\+C\+B}}
+\subsubsection[{Remote\+S\+E\+Q}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} Remote\+S\+E\+Q}\label{struct_t_c_b_ad819775df364f9ddf85d4568ffe1ed18}
+
+
+Definition at line 163 of file T\+C\+P.\+h.
+
+\hypertarget{struct_t_c_b_a856e07e4c4285f8a0f28518aed9fc2bd}{}\index{T\+C\+B@{T\+C\+B}!remote\+Window@{remote\+Window}}
+\index{remote\+Window@{remote\+Window}!T\+C\+B@{T\+C\+B}}
+\subsubsection[{remote\+Window}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} remote\+Window}\label{struct_t_c_b_a856e07e4c4285f8a0f28518aed9fc2bd}
+
+
+Definition at line 167 of file T\+C\+P.\+h.
+
+\hypertarget{struct_t_c_b_a122f749211c26b45afbac25b4a278b56}{}\index{T\+C\+B@{T\+C\+B}!retry\+Count@{retry\+Count}}
+\index{retry\+Count@{retry\+Count}!T\+C\+B@{T\+C\+B}}
+\subsubsection[{retry\+Count}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} retry\+Count}\label{struct_t_c_b_a122f749211c26b45afbac25b4a278b56}
+
+
+Definition at line 188 of file T\+C\+P.\+h.
+
+\hypertarget{struct_t_c_b_a807f78c2939992452223356ae72340cf}{}\index{T\+C\+B@{T\+C\+B}!retry\+Interval@{retry\+Interval}}
+\index{retry\+Interval@{retry\+Interval}!T\+C\+B@{T\+C\+B}}
+\subsubsection[{retry\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} retry\+Interval}\label{struct_t_c_b_a807f78c2939992452223356ae72340cf}
+
+
+Definition at line 161 of file T\+C\+P.\+h.
+
+\hypertarget{struct_t_c_b_a343884e48d9a59f81266a9e5cd1cb0b2}{}\index{T\+C\+B@{T\+C\+B}!s\+Hole\+Size@{s\+Hole\+Size}}
+\index{s\+Hole\+Size@{s\+Hole\+Size}!T\+C\+B@{T\+C\+B}}
+\subsubsection[{s\+Hole\+Size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+H\+O\+R\+T} s\+Hole\+Size}\label{struct_t_c_b_a343884e48d9a59f81266a9e5cd1cb0b2}
+
+
+Definition at line 174 of file T\+C\+P.\+h.
+
+\hypertarget{struct_t_c_b_a6a6329eb22236074b0f6b501ef3fdedf}{}\index{T\+C\+B@{T\+C\+B}!tx\+Unacked\+Tail@{tx\+Unacked\+Tail}}
+\index{tx\+Unacked\+Tail@{tx\+Unacked\+Tail}!T\+C\+B@{T\+C\+B}}
+\subsubsection[{tx\+Unacked\+Tail}]{\setlength{\rightskip}{0pt plus 5cm}P\+T\+R\+\_\+\+B\+A\+S\+E tx\+Unacked\+Tail}\label{struct_t_c_b_a6a6329eb22236074b0f6b501ef3fdedf}
+
+
+Definition at line 164 of file T\+C\+P.\+h.
+
+\hypertarget{struct_t_c_b_a2c590b42dac0ddfc5ec2e193261815c5}{}\index{T\+C\+B@{T\+C\+B}!v\+Socket\+Purpose@{v\+Socket\+Purpose}}
+\index{v\+Socket\+Purpose@{v\+Socket\+Purpose}!T\+C\+B@{T\+C\+B}}
+\subsubsection[{v\+Socket\+Purpose}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} v\+Socket\+Purpose}\label{struct_t_c_b_a2c590b42dac0ddfc5ec2e193261815c5}
+
+
+Definition at line 189 of file T\+C\+P.\+h.
+
+\hypertarget{struct_t_c_b_a48cb8cf682effdf9221fef77ae582298}{}\index{T\+C\+B@{T\+C\+B}!w\+Future\+Data\+Size@{w\+Future\+Data\+Size}}
+\index{w\+Future\+Data\+Size@{w\+Future\+Data\+Size}!T\+C\+B@{T\+C\+B}}
+\subsubsection[{w\+Future\+Data\+Size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} w\+Future\+Data\+Size}\label{struct_t_c_b_a48cb8cf682effdf9221fef77ae582298}
+
+
+Definition at line 168 of file T\+C\+P.\+h.
+
+\hypertarget{struct_t_c_b_a3a4e74a03e65f7f665046aaac3127228}{}\index{T\+C\+B@{T\+C\+B}!w\+Remote\+M\+S\+S@{w\+Remote\+M\+S\+S}}
+\index{w\+Remote\+M\+S\+S@{w\+Remote\+M\+S\+S}!T\+C\+B@{T\+C\+B}}
+\subsubsection[{w\+Remote\+M\+S\+S}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} w\+Remote\+M\+S\+S}\label{struct_t_c_b_a3a4e74a03e65f7f665046aaac3127228}
+
+
+Definition at line 184 of file T\+C\+P.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+T\+C\+P\+I\+P Stack/\hyperlink{_t_c_p_8h}{T\+C\+P.\+h}\end{DoxyCompactItemize}

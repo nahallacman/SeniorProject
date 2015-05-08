@@ -1,0 +1,647 @@
+\hypertarget{usb__host__android_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+U\+S\+B/\+Android Host Driver/usb\+\_\+host\+\_\+android.c File Reference}
+\label{usb__host__android_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+U\+S\+B/\+Android Host Driver/usb\+\_\+host\+\_\+android.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+U\+S\+B/\+Android Host Driver/usb\+\_\+host\+\_\+android.\+c}}
+{\ttfamily \#include \char`\"{}Compiler.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Generic\+Type\+Defs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}U\+S\+B/usb.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}U\+S\+B/usb\+\_\+host\+\_\+android.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\+\_\+host\+\_\+android\+\_\+local.\+h\char`\"{}}\\*
+Include dependency graph for usb\+\_\+host\+\_\+android.\+c\+:
+% FIG 0
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_a_n_d_r_o_i_d___d_e_v_i_c_e___d_a_t_a}{A\+N\+D\+R\+O\+I\+D\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+D\+A\+T\+A}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{usb__host__android_8c_a792873ab05e4250fc15e548352dbf0e4}{U\+S\+B\+\_\+\+D\+E\+V\+\_\+\+D\+E\+S\+C\+\_\+\+V\+I\+D\+\_\+\+O\+F\+F\+S\+E\+T}~8
+\item 
+\#define \hyperlink{usb__host__android_8c_ad4ea7a05f787178fe56253e6f4b48cac}{U\+S\+B\+\_\+\+D\+E\+V\+\_\+\+D\+E\+S\+C\+\_\+\+P\+I\+D\+\_\+\+O\+F\+F\+S\+E\+T}~10
+\item 
+\#define \hyperlink{usb__host__android_8c_a5696646099fa437ebae6fb48ba6bbba5}{U\+S\+B\+\_\+\+D\+E\+S\+C\+\_\+\+B\+L\+E\+N\+G\+T\+H\+\_\+\+O\+F\+F\+S\+E\+T}~0
+\item 
+\#define \hyperlink{usb__host__android_8c_adbd16e5175cd0f0bed25bacd8d306c2a}{U\+S\+B\+\_\+\+D\+E\+S\+C\+\_\+\+B\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+T\+Y\+P\+E\+\_\+\+O\+F\+F\+S\+E\+T}~1
+\item 
+\#define \hyperlink{usb__host__android_8c_a4e585327d762068b9ba2788d51f2ebe9}{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+F\+A\+C\+E\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T}~2
+\item 
+\#define \hyperlink{usb__host__android_8c_a07d8ce5b0b949a7842c02f56e9b5178b}{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+A\+L\+T\+E\+R\+N\+A\+T\+E\+S\+E\+T\+T\+I\+N\+G\+\_\+\+O\+F\+F\+S\+E\+T}~3
+\item 
+\#define \hyperlink{usb__host__android_8c_a639a3e60629b88d8fc4260942b67b6a8}{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+F\+A\+C\+E\+C\+L\+A\+S\+S\+\_\+\+O\+F\+F\+S\+E\+T}~5
+\item 
+\#define \hyperlink{usb__host__android_8c_a96e15fdb3663e04c14b634645bf9fdbb}{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+O\+F\+F\+S\+E\+T}~6
+\item 
+\#define \hyperlink{usb__host__android_8c_ad2e168ab4bb7445320287b486dfea83e}{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+F\+A\+C\+E\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+O\+F\+F\+S\+E\+T}~7
+\item 
+\#define \hyperlink{usb__host__android_8c_ab7bbb1d5c8183bba9ecf58d3597733b5}{U\+S\+B\+\_\+\+C\+D\+C\+\_\+\+D\+E\+S\+C\+\_\+\+B\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+S\+U\+B\+T\+Y\+P\+E\+\_\+\+O\+F\+F\+S\+E\+T}~2
+\item 
+\#define \hyperlink{usb__host__android_8c_a416dec6406c205ef5c38d29bdf2625d6}{U\+S\+B\+\_\+\+C\+D\+C\+\_\+\+D\+E\+S\+C\+\_\+\+U\+N\+I\+O\+N\+\_\+\+B\+M\+A\+S\+T\+E\+R\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+O\+F\+F\+S\+E\+T}~3
+\item 
+\#define \hyperlink{usb__host__android_8c_ab15b1a4f0d20ccd654d539f3e0ad8d70}{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+B\+E\+N\+D\+P\+O\+I\+N\+T\+A\+D\+D\+R\+E\+S\+S\+\_\+\+O\+F\+F\+S\+E\+T}~2
+\item 
+\#define \hyperlink{usb__host__android_8c_aa3b2413053222a3ce9882535bfbc02c9}{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+B\+M\+A\+T\+T\+R\+I\+B\+U\+T\+E\+S\+\_\+\+O\+F\+F\+S\+E\+T}~3
+\item 
+\#define \hyperlink{usb__host__android_8c_a19c2600f1ba6ad49f1bfffd78bc03554}{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+W\+M\+A\+X\+P\+A\+C\+K\+E\+T\+S\+I\+Z\+E\+\_\+\+O\+F\+F\+S\+E\+T}~4
+\item 
+\#define \hyperlink{usb__host__android_8c_a5eae89f058b5a6899e43ae7b6ebb2ac6}{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+O\+F\+F\+S\+E\+T}~5
+\item 
+\#define \hyperlink{usb__host__android_8c_ab95f1b6c2af05b72ac508521793ee5bc}{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+G\+E\+T\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L}~51
+\item 
+\#define \hyperlink{usb__host__android_8c_ac44f96c21635a2d1dc652cc25a4d0949}{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+E\+N\+D\+\_\+\+S\+T\+R\+I\+N\+G}~52
+\item 
+\#define \hyperlink{usb__host__android_8c_a39b422d590ce326c2b14f9b9e22cb0a6}{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+A\+R\+T}~53
+\item 
+\#define \hyperlink{usb__host__android_8c_acbf0d9aee5777322b9010cd8551b7559}{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+H\+I\+D}~54
+\item 
+\#define \hyperlink{usb__host__android_8c_ac747f51c47f83c3810625c93f20f4f55}{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+U\+N\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+H\+I\+D}~55
+\item 
+\#define \hyperlink{usb__host__android_8c_a47e9a8deb33652ec599f25d3be6e399c}{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+E\+T\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+D\+E\+S\+C}~56
+\item 
+\#define \hyperlink{usb__host__android_8c_a96a624c89ef95a127134106653858873}{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+E\+N\+D\+\_\+\+H\+I\+D\+\_\+\+E\+V\+E\+N\+T}~57
+\item 
+\#define \hyperlink{usb__host__android_8c_a1ff619d6aef9be5628f3d62d60c7eda5}{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+E\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+M\+O\+D\+E}~58
+\item 
+\#define \hyperlink{usb__host__android_8c_ade632496f76a02da1ba274139b2d494f}{Read\+W\+O\+R\+D}(dest,  source)~\{memcpy(dest,source,2);\}
+\item 
+\#define \hyperlink{usb__host__android_8c_a66b21076c3679db3171a77a86879537a}{Read\+D\+W\+O\+R\+D}(dest,  source)~\{memcpy(dest,source,4);\}
+\item 
+\#define \hyperlink{usb__host__android_8c_a25ffca807585fcdf6dcc14c9c23e1197}{A\+N\+D\+R\+O\+I\+D\+\_\+\+Get\+O\+U\+T\+Endpoint\+Size}(handle)~handle-\/$>$O\+U\+T\+Endpoint\+Size
+\item 
+\#define \hyperlink{usb__host__android_8c_aa3e393907e4eeefd9e72ab4a761dde28}{A\+N\+D\+R\+O\+I\+D\+\_\+\+Get\+I\+N\+Endpoint\+Size}(handle)~handle-\/$>$I\+N\+Endpoint\+Size
+\item 
+\#define \hyperlink{usb__host__android_8c_a6ed13e3df600679ca707cb23590533a7}{A\+N\+D\+R\+O\+I\+D\+\_\+\+Get\+O\+U\+T\+Endpoint\+Num}(handle)~handle-\/$>$O\+U\+T\+Endpoint\+Num
+\item 
+\#define \hyperlink{usb__host__android_8c_a12a6ab6b5b08cc979cb85ecf9f51e858}{A\+N\+D\+R\+O\+I\+D\+\_\+\+Get\+I\+N\+Endpoint\+Num}(handle)~handle-\/$>$I\+N\+Endpoint\+Num
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{usb__host__android_8c_a39170ef5d95de63b3af62a66d9023fe5}{\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+S} \hyperlink{usb__host__android_8c_ae440fb3a6eca0e241aabd55f491ef9c6}{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+S}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{usb__host__android_8c_a39170ef5d95de63b3af62a66d9023fe5}{\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+S} \{ \\*
+\hyperlink{usb__host__android_8c_a39170ef5d95de63b3af62a66d9023fe5ab0cc4f3cbff21acd33e932aa8c0d81b2}{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+R\+E\+R} = 0, 
+\hyperlink{usb__host__android_8c_a39170ef5d95de63b3af62a66d9023fe5a3395d9d859d87ae2221b9c2e2752039d}{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+M\+O\+D\+E\+L} = 1, 
+\hyperlink{usb__host__android_8c_a39170ef5d95de63b3af62a66d9023fe5a0aa44a47ea3b11d8945cf51a41fbab32}{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+O\+N} = 2, 
+\hyperlink{usb__host__android_8c_a39170ef5d95de63b3af62a66d9023fe5ac59664b5832561a63eeae3963ef552d9}{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+V\+E\+R\+S\+I\+O\+N} = 3, 
+\\*
+\hyperlink{usb__host__android_8c_a39170ef5d95de63b3af62a66d9023fe5ae002bb39c8437f780175785909e34433}{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+U\+R\+I} = 4, 
+\hyperlink{usb__host__android_8c_a39170ef5d95de63b3af62a66d9023fe5a954754d0510a6c4fa5011a43626c0085}{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+E\+R\+I\+A\+L} = 5
+ \}
+\item 
+enum \hyperlink{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8}{A\+N\+D\+R\+O\+I\+D\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+S\+T\+A\+T\+U\+S} \{ \\*
+\hyperlink{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8af21d3b83bd272af0b4e48715f5111ef5}{N\+O\+\_\+\+D\+E\+V\+I\+C\+E} = 0, 
+\hyperlink{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a4f9e437d34ba083c7cf234f54c2df011}{D\+E\+V\+I\+C\+E\+\_\+\+A\+T\+T\+A\+C\+H\+E\+D}, 
+\hyperlink{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a40206877f92b651f01d8e60ece68e32b}{S\+E\+N\+D\+\_\+\+G\+E\+T\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L}, 
+\hyperlink{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a246e2dd9991e02f60f51bfec91495d5a}{W\+A\+I\+T\+\_\+\+F\+O\+R\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L}, 
+\\*
+\hyperlink{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a80a663fb7fad2248e5802d4bd9db60c3}{S\+E\+N\+D\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+E\+R\+\_\+\+S\+T\+R\+I\+N\+G}, 
+\hyperlink{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a67d341758ac5d604b599b0f252e060d2}{S\+E\+N\+D\+\_\+\+M\+O\+D\+E\+L\+\_\+\+S\+T\+R\+I\+N\+G}, 
+\hyperlink{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8ac074bbfaee86ac99b117978b9f4ce6e6}{S\+E\+N\+D\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+O\+N\+\_\+\+S\+T\+R\+I\+N\+G}, 
+\hyperlink{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8ab98e0f34230a4621a6d3048d0e30fce8}{S\+E\+N\+D\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+T\+R\+I\+N\+G}, 
+\\*
+\hyperlink{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8acdc47fb1657d29274443edb81863f913}{S\+E\+N\+D\+\_\+\+U\+R\+I\+\_\+\+S\+T\+R\+I\+N\+G}, 
+\hyperlink{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a4598fe231abf28b9a5d944b00e8ddae5}{S\+E\+N\+D\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+R\+I\+N\+G}, 
+\hyperlink{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a16a249ac09a6ed3b72d33c4c9f65ad37}{S\+E\+N\+D\+\_\+\+A\+U\+D\+I\+O\+\_\+\+M\+O\+D\+E}, 
+\hyperlink{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a3b13d079768f29946ea18fb22fbe34bc}{S\+T\+A\+R\+T\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y}, 
+\\*
+\hyperlink{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a96aff7cbd756c66464ee2aa1e5eda93c}{A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+A\+R\+T\+I\+N\+G}, 
+\hyperlink{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a9921ffe028f2460f093825bac874e4ca}{W\+A\+I\+T\+I\+N\+G\+\_\+\+F\+O\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+R\+E\+T\+U\+R\+N}, 
+\hyperlink{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a01bc753a1d573052a81cb47175234f95}{R\+E\+T\+U\+R\+N\+\_\+\+O\+F\+\_\+\+T\+H\+E\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y}, 
+\hyperlink{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a6564f2f3e15be06b670547bbcaaf0798}{R\+E\+A\+D\+Y}, 
+\\*
+\hyperlink{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a36f229a9d16ebd93b8a638a8200a109b}{R\+E\+G\+I\+S\+T\+E\+R\+I\+N\+G\+\_\+\+H\+I\+D}, 
+\hyperlink{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a270ecf89bda4bd3015410c94e3b960c9}{S\+E\+N\+D\+I\+N\+G\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R}, 
+\hyperlink{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a32c70064f7d0149e2690ba854c7acfc7}{H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+S\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{usb__host__android_8c_a8a7b592d0e14bcc69f7c493b99ca76a1}{Android\+App\+Start} (\hyperlink{struct_a_n_d_r_o_i_d___a_c_c_e_s_s_o_r_y___i_n_f_o_r_m_a_t_i_o_n}{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N} $\ast$info)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{usb__host__android_8c_ad595e7c4d8ef1a2807a3998b7e43cc9c}{Android\+App\+Write} (void $\ast$handle, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$data, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} size)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__android_8c_a13a0d2e1011374dcdf39d8b670354816}{Android\+App\+Is\+Write\+Complete} (void $\ast$handle, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$error\+Code, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} $\ast$size)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{usb__host__android_8c_a637df9bf6dc8f7adfe8e0b900278c88c}{Android\+App\+Read} (void $\ast$handle, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$data, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} size)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__android_8c_a554f249b3e321009c4c9eebfa7086c05}{Android\+App\+Is\+Read\+Complete} (void $\ast$handle, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$error\+Code, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} $\ast$size)
+\item 
+void \hyperlink{usb__host__android_8c_a2d80b393c4aa6875eb0e509b2934f5d7}{Android\+Tasks} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__android_8c_a94ac132cb3528c96eaad1bcab26186c0}{Android\+App\+Initialize} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} address, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} flags, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} client\+Driver\+I\+D)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__android_8c_a5a91d7fd3afea7a6d5a6426e9538f7c6}{Android\+App\+Data\+Event\+Handler} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} address, \hyperlink{usb__common_8h_a58f011a3d1f4cad0e69a9bf036fb847c}{U\+S\+B\+\_\+\+E\+V\+E\+N\+T} event, void $\ast$data, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} size)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__android_8c_a25b2cb9071b8ae5594ca15b2046d304e}{Android\+App\+Event\+Handler} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} address, \hyperlink{usb__common_8h_a58f011a3d1f4cad0e69a9bf036fb847c}{U\+S\+B\+\_\+\+E\+V\+E\+N\+T} event, void $\ast$data, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} size)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{usb__host__android_8c_a99167dfb275365e311c0864eee47ac4c}{Android\+App\+H\+I\+D\+Send\+Event} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} address, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} id, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$\hyperlink{usb__function__hid_8h_a45e2f6faa2ef8e018e6388452dc2ccb5}{report}, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} length)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__android_8c_a1ebcc579efc2b4f98983b4e90b12dd81}{Android\+App\+H\+I\+D\+Register} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} address, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} id, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$descriptor, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} length)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{usb__host__android_8c_ab95f1b6c2af05b72ac508521793ee5bc}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+G\+E\+T\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+G\+E\+T\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L}}
+\index{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+G\+E\+T\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+G\+E\+T\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+G\+E\+T\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+G\+E\+T\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L~51}\label{usb__host__android_8c_ab95f1b6c2af05b72ac508521793ee5bc}
+
+
+Definition at line 95 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_acbf0d9aee5777322b9010cd8551b7559}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+H\+I\+D@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+H\+I\+D}}
+\index{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+H\+I\+D@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+H\+I\+D}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+H\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+H\+I\+D~54}\label{usb__host__android_8c_acbf0d9aee5777322b9010cd8551b7559}
+
+
+Definition at line 98 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_a96a624c89ef95a127134106653858873}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+E\+N\+D\+\_\+\+H\+I\+D\+\_\+\+E\+V\+E\+N\+T@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+E\+N\+D\+\_\+\+H\+I\+D\+\_\+\+E\+V\+E\+N\+T}}
+\index{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+E\+N\+D\+\_\+\+H\+I\+D\+\_\+\+E\+V\+E\+N\+T@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+E\+N\+D\+\_\+\+H\+I\+D\+\_\+\+E\+V\+E\+N\+T}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+E\+N\+D\+\_\+\+H\+I\+D\+\_\+\+E\+V\+E\+N\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+E\+N\+D\+\_\+\+H\+I\+D\+\_\+\+E\+V\+E\+N\+T~57}\label{usb__host__android_8c_a96a624c89ef95a127134106653858873}
+
+
+Definition at line 101 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_ac44f96c21635a2d1dc652cc25a4d0949}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+E\+N\+D\+\_\+\+S\+T\+R\+I\+N\+G@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+E\+N\+D\+\_\+\+S\+T\+R\+I\+N\+G}}
+\index{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+E\+N\+D\+\_\+\+S\+T\+R\+I\+N\+G@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+E\+N\+D\+\_\+\+S\+T\+R\+I\+N\+G}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+E\+N\+D\+\_\+\+S\+T\+R\+I\+N\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+E\+N\+D\+\_\+\+S\+T\+R\+I\+N\+G~52}\label{usb__host__android_8c_ac44f96c21635a2d1dc652cc25a4d0949}
+
+
+Definition at line 96 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_a1ff619d6aef9be5628f3d62d60c7eda5}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+E\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+M\+O\+D\+E@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+E\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+M\+O\+D\+E}}
+\index{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+E\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+M\+O\+D\+E@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+E\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+M\+O\+D\+E}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+E\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+M\+O\+D\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+E\+T\+\_\+\+A\+U\+D\+I\+O\+\_\+\+M\+O\+D\+E~58}\label{usb__host__android_8c_a1ff619d6aef9be5628f3d62d60c7eda5}
+
+
+Definition at line 102 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_a47e9a8deb33652ec599f25d3be6e399c}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+E\+T\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+D\+E\+S\+C@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+E\+T\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+D\+E\+S\+C}}
+\index{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+E\+T\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+D\+E\+S\+C@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+E\+T\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+D\+E\+S\+C}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+E\+T\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+D\+E\+S\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+E\+T\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+D\+E\+S\+C~56}\label{usb__host__android_8c_a47e9a8deb33652ec599f25d3be6e399c}
+
+
+Definition at line 100 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_a39b422d590ce326c2b14f9b9e22cb0a6}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+A\+R\+T@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+A\+R\+T}}
+\index{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+A\+R\+T@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+A\+R\+T}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+A\+R\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+A\+R\+T~53}\label{usb__host__android_8c_a39b422d590ce326c2b14f9b9e22cb0a6}
+
+
+Definition at line 97 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_ac747f51c47f83c3810625c93f20f4f55}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+U\+N\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+H\+I\+D@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+U\+N\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+H\+I\+D}}
+\index{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+U\+N\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+H\+I\+D@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+U\+N\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+H\+I\+D}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+U\+N\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+H\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+U\+N\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+H\+I\+D~55}\label{usb__host__android_8c_ac747f51c47f83c3810625c93f20f4f55}
+
+
+Definition at line 99 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_a12a6ab6b5b08cc979cb85ecf9f51e858}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!A\+N\+D\+R\+O\+I\+D\+\_\+\+Get\+I\+N\+Endpoint\+Num@{A\+N\+D\+R\+O\+I\+D\+\_\+\+Get\+I\+N\+Endpoint\+Num}}
+\index{A\+N\+D\+R\+O\+I\+D\+\_\+\+Get\+I\+N\+Endpoint\+Num@{A\+N\+D\+R\+O\+I\+D\+\_\+\+Get\+I\+N\+Endpoint\+Num}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{A\+N\+D\+R\+O\+I\+D\+\_\+\+Get\+I\+N\+Endpoint\+Num}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+N\+D\+R\+O\+I\+D\+\_\+\+Get\+I\+N\+Endpoint\+Num(
+\begin{DoxyParamCaption}
+\item[{}]{handle}
+\end{DoxyParamCaption}
+)~handle-\/$>$I\+N\+Endpoint\+Num}\label{usb__host__android_8c_a12a6ab6b5b08cc979cb85ecf9f51e858}
+
+
+Definition at line 186 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_aa3e393907e4eeefd9e72ab4a761dde28}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!A\+N\+D\+R\+O\+I\+D\+\_\+\+Get\+I\+N\+Endpoint\+Size@{A\+N\+D\+R\+O\+I\+D\+\_\+\+Get\+I\+N\+Endpoint\+Size}}
+\index{A\+N\+D\+R\+O\+I\+D\+\_\+\+Get\+I\+N\+Endpoint\+Size@{A\+N\+D\+R\+O\+I\+D\+\_\+\+Get\+I\+N\+Endpoint\+Size}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{A\+N\+D\+R\+O\+I\+D\+\_\+\+Get\+I\+N\+Endpoint\+Size}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+N\+D\+R\+O\+I\+D\+\_\+\+Get\+I\+N\+Endpoint\+Size(
+\begin{DoxyParamCaption}
+\item[{}]{handle}
+\end{DoxyParamCaption}
+)~handle-\/$>$I\+N\+Endpoint\+Size}\label{usb__host__android_8c_aa3e393907e4eeefd9e72ab4a761dde28}
+
+
+Definition at line 184 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_a6ed13e3df600679ca707cb23590533a7}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!A\+N\+D\+R\+O\+I\+D\+\_\+\+Get\+O\+U\+T\+Endpoint\+Num@{A\+N\+D\+R\+O\+I\+D\+\_\+\+Get\+O\+U\+T\+Endpoint\+Num}}
+\index{A\+N\+D\+R\+O\+I\+D\+\_\+\+Get\+O\+U\+T\+Endpoint\+Num@{A\+N\+D\+R\+O\+I\+D\+\_\+\+Get\+O\+U\+T\+Endpoint\+Num}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{A\+N\+D\+R\+O\+I\+D\+\_\+\+Get\+O\+U\+T\+Endpoint\+Num}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+N\+D\+R\+O\+I\+D\+\_\+\+Get\+O\+U\+T\+Endpoint\+Num(
+\begin{DoxyParamCaption}
+\item[{}]{handle}
+\end{DoxyParamCaption}
+)~handle-\/$>$O\+U\+T\+Endpoint\+Num}\label{usb__host__android_8c_a6ed13e3df600679ca707cb23590533a7}
+
+
+Definition at line 185 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_a25ffca807585fcdf6dcc14c9c23e1197}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!A\+N\+D\+R\+O\+I\+D\+\_\+\+Get\+O\+U\+T\+Endpoint\+Size@{A\+N\+D\+R\+O\+I\+D\+\_\+\+Get\+O\+U\+T\+Endpoint\+Size}}
+\index{A\+N\+D\+R\+O\+I\+D\+\_\+\+Get\+O\+U\+T\+Endpoint\+Size@{A\+N\+D\+R\+O\+I\+D\+\_\+\+Get\+O\+U\+T\+Endpoint\+Size}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{A\+N\+D\+R\+O\+I\+D\+\_\+\+Get\+O\+U\+T\+Endpoint\+Size}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+N\+D\+R\+O\+I\+D\+\_\+\+Get\+O\+U\+T\+Endpoint\+Size(
+\begin{DoxyParamCaption}
+\item[{}]{handle}
+\end{DoxyParamCaption}
+)~handle-\/$>$O\+U\+T\+Endpoint\+Size}\label{usb__host__android_8c_a25ffca807585fcdf6dcc14c9c23e1197}
+
+
+Definition at line 183 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_a66b21076c3679db3171a77a86879537a}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!Read\+D\+W\+O\+R\+D@{Read\+D\+W\+O\+R\+D}}
+\index{Read\+D\+W\+O\+R\+D@{Read\+D\+W\+O\+R\+D}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{Read\+D\+W\+O\+R\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define Read\+D\+W\+O\+R\+D(
+\begin{DoxyParamCaption}
+\item[{}]{dest, }
+\item[{}]{source}
+\end{DoxyParamCaption}
+)~\{memcpy(dest,source,4);\}}\label{usb__host__android_8c_a66b21076c3679db3171a77a86879537a}
+
+
+Definition at line 181 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_ade632496f76a02da1ba274139b2d494f}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!Read\+W\+O\+R\+D@{Read\+W\+O\+R\+D}}
+\index{Read\+W\+O\+R\+D@{Read\+W\+O\+R\+D}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{Read\+W\+O\+R\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define Read\+W\+O\+R\+D(
+\begin{DoxyParamCaption}
+\item[{}]{dest, }
+\item[{}]{source}
+\end{DoxyParamCaption}
+)~\{memcpy(dest,source,2);\}}\label{usb__host__android_8c_ade632496f76a02da1ba274139b2d494f}
+
+
+Definition at line 180 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_ab7bbb1d5c8183bba9ecf58d3597733b5}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!U\+S\+B\+\_\+\+C\+D\+C\+\_\+\+D\+E\+S\+C\+\_\+\+B\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+S\+U\+B\+T\+Y\+P\+E\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+C\+D\+C\+\_\+\+D\+E\+S\+C\+\_\+\+B\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+S\+U\+B\+T\+Y\+P\+E\+\_\+\+O\+F\+F\+S\+E\+T}}
+\index{U\+S\+B\+\_\+\+C\+D\+C\+\_\+\+D\+E\+S\+C\+\_\+\+B\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+S\+U\+B\+T\+Y\+P\+E\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+C\+D\+C\+\_\+\+D\+E\+S\+C\+\_\+\+B\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+S\+U\+B\+T\+Y\+P\+E\+\_\+\+O\+F\+F\+S\+E\+T}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+C\+D\+C\+\_\+\+D\+E\+S\+C\+\_\+\+B\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+S\+U\+B\+T\+Y\+P\+E\+\_\+\+O\+F\+F\+S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+C\+D\+C\+\_\+\+D\+E\+S\+C\+\_\+\+B\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+S\+U\+B\+T\+Y\+P\+E\+\_\+\+O\+F\+F\+S\+E\+T~2}\label{usb__host__android_8c_ab7bbb1d5c8183bba9ecf58d3597733b5}
+
+
+Definition at line 87 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_a416dec6406c205ef5c38d29bdf2625d6}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!U\+S\+B\+\_\+\+C\+D\+C\+\_\+\+D\+E\+S\+C\+\_\+\+U\+N\+I\+O\+N\+\_\+\+B\+M\+A\+S\+T\+E\+R\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+C\+D\+C\+\_\+\+D\+E\+S\+C\+\_\+\+U\+N\+I\+O\+N\+\_\+\+B\+M\+A\+S\+T\+E\+R\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+O\+F\+F\+S\+E\+T}}
+\index{U\+S\+B\+\_\+\+C\+D\+C\+\_\+\+D\+E\+S\+C\+\_\+\+U\+N\+I\+O\+N\+\_\+\+B\+M\+A\+S\+T\+E\+R\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+C\+D\+C\+\_\+\+D\+E\+S\+C\+\_\+\+U\+N\+I\+O\+N\+\_\+\+B\+M\+A\+S\+T\+E\+R\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+O\+F\+F\+S\+E\+T}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+C\+D\+C\+\_\+\+D\+E\+S\+C\+\_\+\+U\+N\+I\+O\+N\+\_\+\+B\+M\+A\+S\+T\+E\+R\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+O\+F\+F\+S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+C\+D\+C\+\_\+\+D\+E\+S\+C\+\_\+\+U\+N\+I\+O\+N\+\_\+\+B\+M\+A\+S\+T\+E\+R\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+O\+F\+F\+S\+E\+T~3}\label{usb__host__android_8c_a416dec6406c205ef5c38d29bdf2625d6}
+
+
+Definition at line 88 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_adbd16e5175cd0f0bed25bacd8d306c2a}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!U\+S\+B\+\_\+\+D\+E\+S\+C\+\_\+\+B\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+T\+Y\+P\+E\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+D\+E\+S\+C\+\_\+\+B\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+T\+Y\+P\+E\+\_\+\+O\+F\+F\+S\+E\+T}}
+\index{U\+S\+B\+\_\+\+D\+E\+S\+C\+\_\+\+B\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+T\+Y\+P\+E\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+D\+E\+S\+C\+\_\+\+B\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+T\+Y\+P\+E\+\_\+\+O\+F\+F\+S\+E\+T}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+D\+E\+S\+C\+\_\+\+B\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+T\+Y\+P\+E\+\_\+\+O\+F\+F\+S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+E\+S\+C\+\_\+\+B\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+T\+Y\+P\+E\+\_\+\+O\+F\+F\+S\+E\+T~1}\label{usb__host__android_8c_adbd16e5175cd0f0bed25bacd8d306c2a}
+
+
+Definition at line 79 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_a5696646099fa437ebae6fb48ba6bbba5}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!U\+S\+B\+\_\+\+D\+E\+S\+C\+\_\+\+B\+L\+E\+N\+G\+T\+H\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+D\+E\+S\+C\+\_\+\+B\+L\+E\+N\+G\+T\+H\+\_\+\+O\+F\+F\+S\+E\+T}}
+\index{U\+S\+B\+\_\+\+D\+E\+S\+C\+\_\+\+B\+L\+E\+N\+G\+T\+H\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+D\+E\+S\+C\+\_\+\+B\+L\+E\+N\+G\+T\+H\+\_\+\+O\+F\+F\+S\+E\+T}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+D\+E\+S\+C\+\_\+\+B\+L\+E\+N\+G\+T\+H\+\_\+\+O\+F\+F\+S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+E\+S\+C\+\_\+\+B\+L\+E\+N\+G\+T\+H\+\_\+\+O\+F\+F\+S\+E\+T~0}\label{usb__host__android_8c_a5696646099fa437ebae6fb48ba6bbba5}
+
+
+Definition at line 78 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_ad4ea7a05f787178fe56253e6f4b48cac}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!U\+S\+B\+\_\+\+D\+E\+V\+\_\+\+D\+E\+S\+C\+\_\+\+P\+I\+D\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+D\+E\+V\+\_\+\+D\+E\+S\+C\+\_\+\+P\+I\+D\+\_\+\+O\+F\+F\+S\+E\+T}}
+\index{U\+S\+B\+\_\+\+D\+E\+V\+\_\+\+D\+E\+S\+C\+\_\+\+P\+I\+D\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+D\+E\+V\+\_\+\+D\+E\+S\+C\+\_\+\+P\+I\+D\+\_\+\+O\+F\+F\+S\+E\+T}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+D\+E\+V\+\_\+\+D\+E\+S\+C\+\_\+\+P\+I\+D\+\_\+\+O\+F\+F\+S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+E\+V\+\_\+\+D\+E\+S\+C\+\_\+\+P\+I\+D\+\_\+\+O\+F\+F\+S\+E\+T~10}\label{usb__host__android_8c_ad4ea7a05f787178fe56253e6f4b48cac}
+
+
+Definition at line 76 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_a792873ab05e4250fc15e548352dbf0e4}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!U\+S\+B\+\_\+\+D\+E\+V\+\_\+\+D\+E\+S\+C\+\_\+\+V\+I\+D\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+D\+E\+V\+\_\+\+D\+E\+S\+C\+\_\+\+V\+I\+D\+\_\+\+O\+F\+F\+S\+E\+T}}
+\index{U\+S\+B\+\_\+\+D\+E\+V\+\_\+\+D\+E\+S\+C\+\_\+\+V\+I\+D\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+D\+E\+V\+\_\+\+D\+E\+S\+C\+\_\+\+V\+I\+D\+\_\+\+O\+F\+F\+S\+E\+T}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+D\+E\+V\+\_\+\+D\+E\+S\+C\+\_\+\+V\+I\+D\+\_\+\+O\+F\+F\+S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+E\+V\+\_\+\+D\+E\+S\+C\+\_\+\+V\+I\+D\+\_\+\+O\+F\+F\+S\+E\+T~8}\label{usb__host__android_8c_a792873ab05e4250fc15e548352dbf0e4}
+
+
+Definition at line 75 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_ab15b1a4f0d20ccd654d539f3e0ad8d70}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+B\+E\+N\+D\+P\+O\+I\+N\+T\+A\+D\+D\+R\+E\+S\+S\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+B\+E\+N\+D\+P\+O\+I\+N\+T\+A\+D\+D\+R\+E\+S\+S\+\_\+\+O\+F\+F\+S\+E\+T}}
+\index{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+B\+E\+N\+D\+P\+O\+I\+N\+T\+A\+D\+D\+R\+E\+S\+S\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+B\+E\+N\+D\+P\+O\+I\+N\+T\+A\+D\+D\+R\+E\+S\+S\+\_\+\+O\+F\+F\+S\+E\+T}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+B\+E\+N\+D\+P\+O\+I\+N\+T\+A\+D\+D\+R\+E\+S\+S\+\_\+\+O\+F\+F\+S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+B\+E\+N\+D\+P\+O\+I\+N\+T\+A\+D\+D\+R\+E\+S\+S\+\_\+\+O\+F\+F\+S\+E\+T~2}\label{usb__host__android_8c_ab15b1a4f0d20ccd654d539f3e0ad8d70}
+
+
+Definition at line 90 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_a5eae89f058b5a6899e43ae7b6ebb2ac6}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+O\+F\+F\+S\+E\+T}}
+\index{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+O\+F\+F\+S\+E\+T}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+O\+F\+F\+S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+O\+F\+F\+S\+E\+T~5}\label{usb__host__android_8c_a5eae89f058b5a6899e43ae7b6ebb2ac6}
+
+
+Definition at line 93 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_aa3b2413053222a3ce9882535bfbc02c9}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+B\+M\+A\+T\+T\+R\+I\+B\+U\+T\+E\+S\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+B\+M\+A\+T\+T\+R\+I\+B\+U\+T\+E\+S\+\_\+\+O\+F\+F\+S\+E\+T}}
+\index{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+B\+M\+A\+T\+T\+R\+I\+B\+U\+T\+E\+S\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+B\+M\+A\+T\+T\+R\+I\+B\+U\+T\+E\+S\+\_\+\+O\+F\+F\+S\+E\+T}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+B\+M\+A\+T\+T\+R\+I\+B\+U\+T\+E\+S\+\_\+\+O\+F\+F\+S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+B\+M\+A\+T\+T\+R\+I\+B\+U\+T\+E\+S\+\_\+\+O\+F\+F\+S\+E\+T~3}\label{usb__host__android_8c_aa3b2413053222a3ce9882535bfbc02c9}
+
+
+Definition at line 91 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_a19c2600f1ba6ad49f1bfffd78bc03554}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+W\+M\+A\+X\+P\+A\+C\+K\+E\+T\+S\+I\+Z\+E\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+W\+M\+A\+X\+P\+A\+C\+K\+E\+T\+S\+I\+Z\+E\+\_\+\+O\+F\+F\+S\+E\+T}}
+\index{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+W\+M\+A\+X\+P\+A\+C\+K\+E\+T\+S\+I\+Z\+E\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+W\+M\+A\+X\+P\+A\+C\+K\+E\+T\+S\+I\+Z\+E\+\_\+\+O\+F\+F\+S\+E\+T}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+W\+M\+A\+X\+P\+A\+C\+K\+E\+T\+S\+I\+Z\+E\+\_\+\+O\+F\+F\+S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T\+\_\+\+D\+E\+S\+C\+\_\+\+W\+M\+A\+X\+P\+A\+C\+K\+E\+T\+S\+I\+Z\+E\+\_\+\+O\+F\+F\+S\+E\+T~4}\label{usb__host__android_8c_a19c2600f1ba6ad49f1bfffd78bc03554}
+
+
+Definition at line 92 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_a07d8ce5b0b949a7842c02f56e9b5178b}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+A\+L\+T\+E\+R\+N\+A\+T\+E\+S\+E\+T\+T\+I\+N\+G\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+A\+L\+T\+E\+R\+N\+A\+T\+E\+S\+E\+T\+T\+I\+N\+G\+\_\+\+O\+F\+F\+S\+E\+T}}
+\index{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+A\+L\+T\+E\+R\+N\+A\+T\+E\+S\+E\+T\+T\+I\+N\+G\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+A\+L\+T\+E\+R\+N\+A\+T\+E\+S\+E\+T\+T\+I\+N\+G\+\_\+\+O\+F\+F\+S\+E\+T}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+A\+L\+T\+E\+R\+N\+A\+T\+E\+S\+E\+T\+T\+I\+N\+G\+\_\+\+O\+F\+F\+S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+A\+L\+T\+E\+R\+N\+A\+T\+E\+S\+E\+T\+T\+I\+N\+G\+\_\+\+O\+F\+F\+S\+E\+T~3}\label{usb__host__android_8c_a07d8ce5b0b949a7842c02f56e9b5178b}
+
+
+Definition at line 82 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_a639a3e60629b88d8fc4260942b67b6a8}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+F\+A\+C\+E\+C\+L\+A\+S\+S\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+F\+A\+C\+E\+C\+L\+A\+S\+S\+\_\+\+O\+F\+F\+S\+E\+T}}
+\index{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+F\+A\+C\+E\+C\+L\+A\+S\+S\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+F\+A\+C\+E\+C\+L\+A\+S\+S\+\_\+\+O\+F\+F\+S\+E\+T}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+F\+A\+C\+E\+C\+L\+A\+S\+S\+\_\+\+O\+F\+F\+S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+F\+A\+C\+E\+C\+L\+A\+S\+S\+\_\+\+O\+F\+F\+S\+E\+T~5}\label{usb__host__android_8c_a639a3e60629b88d8fc4260942b67b6a8}
+
+
+Definition at line 83 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_a4e585327d762068b9ba2788d51f2ebe9}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+F\+A\+C\+E\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+F\+A\+C\+E\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T}}
+\index{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+F\+A\+C\+E\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+F\+A\+C\+E\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+F\+A\+C\+E\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+F\+A\+C\+E\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T~2}\label{usb__host__android_8c_a4e585327d762068b9ba2788d51f2ebe9}
+
+
+Definition at line 81 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_ad2e168ab4bb7445320287b486dfea83e}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+F\+A\+C\+E\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+F\+A\+C\+E\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+O\+F\+F\+S\+E\+T}}
+\index{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+F\+A\+C\+E\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+F\+A\+C\+E\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+O\+F\+F\+S\+E\+T}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+F\+A\+C\+E\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+O\+F\+F\+S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+F\+A\+C\+E\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+O\+F\+F\+S\+E\+T~7}\label{usb__host__android_8c_ad2e168ab4bb7445320287b486dfea83e}
+
+
+Definition at line 85 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_a96e15fdb3663e04c14b634645bf9fdbb}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+O\+F\+F\+S\+E\+T}}
+\index{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+O\+F\+F\+S\+E\+T@{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+O\+F\+F\+S\+E\+T}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+O\+F\+F\+S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+D\+E\+S\+C\+\_\+\+B\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+O\+F\+F\+S\+E\+T~6}\label{usb__host__android_8c_a96e15fdb3663e04c14b634645bf9fdbb}
+
+
+Definition at line 84 of file usb\+\_\+host\+\_\+android.\+c.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{usb__host__android_8c_ae440fb3a6eca0e241aabd55f491ef9c6}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+S@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+S}}
+\index{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+S@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+S}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+S}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+S}  {\bf A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+S}}\label{usb__host__android_8c_ae440fb3a6eca0e241aabd55f491ef9c6}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{usb__host__android_8c_a39170ef5d95de63b3af62a66d9023fe5}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+S@{\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+S}}
+\index{\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+S@{\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+S}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{\+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+S}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \+\_\+\+A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+S}}\label{usb__host__android_8c_a39170ef5d95de63b3af62a66d9023fe5}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+R\+E\+R@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+R\+E\+R}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+R\+E\+R@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+R\+E\+R}}\item[{\em 
+\hypertarget{usb__host__android_8c_a39170ef5d95de63b3af62a66d9023fe5ab0cc4f3cbff21acd33e932aa8c0d81b2}{}A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+R\+E\+R\label{usb__host__android_8c_a39170ef5d95de63b3af62a66d9023fe5ab0cc4f3cbff21acd33e932aa8c0d81b2}
+}]\index{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+M\+O\+D\+E\+L@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+M\+O\+D\+E\+L}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+M\+O\+D\+E\+L@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+M\+O\+D\+E\+L}}\item[{\em 
+\hypertarget{usb__host__android_8c_a39170ef5d95de63b3af62a66d9023fe5a3395d9d859d87ae2221b9c2e2752039d}{}A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+M\+O\+D\+E\+L\label{usb__host__android_8c_a39170ef5d95de63b3af62a66d9023fe5a3395d9d859d87ae2221b9c2e2752039d}
+}]\index{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+O\+N@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+O\+N}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+O\+N@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+O\+N}}\item[{\em 
+\hypertarget{usb__host__android_8c_a39170ef5d95de63b3af62a66d9023fe5a0aa44a47ea3b11d8945cf51a41fbab32}{}A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+O\+N\label{usb__host__android_8c_a39170ef5d95de63b3af62a66d9023fe5a0aa44a47ea3b11d8945cf51a41fbab32}
+}]\index{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+V\+E\+R\+S\+I\+O\+N@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+V\+E\+R\+S\+I\+O\+N}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+V\+E\+R\+S\+I\+O\+N@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+V\+E\+R\+S\+I\+O\+N}}\item[{\em 
+\hypertarget{usb__host__android_8c_a39170ef5d95de63b3af62a66d9023fe5ac59664b5832561a63eeae3963ef552d9}{}A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+V\+E\+R\+S\+I\+O\+N\label{usb__host__android_8c_a39170ef5d95de63b3af62a66d9023fe5ac59664b5832561a63eeae3963ef552d9}
+}]\index{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+U\+R\+I@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+U\+R\+I}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+U\+R\+I@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+U\+R\+I}}\item[{\em 
+\hypertarget{usb__host__android_8c_a39170ef5d95de63b3af62a66d9023fe5ae002bb39c8437f780175785909e34433}{}A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+U\+R\+I\label{usb__host__android_8c_a39170ef5d95de63b3af62a66d9023fe5ae002bb39c8437f780175785909e34433}
+}]\index{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+E\+R\+I\+A\+L@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+E\+R\+I\+A\+L}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+E\+R\+I\+A\+L@{A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+E\+R\+I\+A\+L}}\item[{\em 
+\hypertarget{usb__host__android_8c_a39170ef5d95de63b3af62a66d9023fe5a954754d0510a6c4fa5011a43626c0085}{}A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+E\+R\+I\+A\+L\label{usb__host__android_8c_a39170ef5d95de63b3af62a66d9023fe5a954754d0510a6c4fa5011a43626c0085}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 65 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!A\+N\+D\+R\+O\+I\+D\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+S\+T\+A\+T\+U\+S@{A\+N\+D\+R\+O\+I\+D\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+S\+T\+A\+T\+U\+S}}
+\index{A\+N\+D\+R\+O\+I\+D\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+S\+T\+A\+T\+U\+S@{A\+N\+D\+R\+O\+I\+D\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+S\+T\+A\+T\+U\+S}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{A\+N\+D\+R\+O\+I\+D\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+S\+T\+A\+T\+U\+S}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf A\+N\+D\+R\+O\+I\+D\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+S\+T\+A\+T\+U\+S}}\label{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{N\+O\+\_\+\+D\+E\+V\+I\+C\+E@{N\+O\+\_\+\+D\+E\+V\+I\+C\+E}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!N\+O\+\_\+\+D\+E\+V\+I\+C\+E@{N\+O\+\_\+\+D\+E\+V\+I\+C\+E}}\item[{\em 
+\hypertarget{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8af21d3b83bd272af0b4e48715f5111ef5}{}N\+O\+\_\+\+D\+E\+V\+I\+C\+E\label{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8af21d3b83bd272af0b4e48715f5111ef5}
+}]\index{D\+E\+V\+I\+C\+E\+\_\+\+A\+T\+T\+A\+C\+H\+E\+D@{D\+E\+V\+I\+C\+E\+\_\+\+A\+T\+T\+A\+C\+H\+E\+D}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!D\+E\+V\+I\+C\+E\+\_\+\+A\+T\+T\+A\+C\+H\+E\+D@{D\+E\+V\+I\+C\+E\+\_\+\+A\+T\+T\+A\+C\+H\+E\+D}}\item[{\em 
+\hypertarget{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a4f9e437d34ba083c7cf234f54c2df011}{}D\+E\+V\+I\+C\+E\+\_\+\+A\+T\+T\+A\+C\+H\+E\+D\label{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a4f9e437d34ba083c7cf234f54c2df011}
+}]\index{S\+E\+N\+D\+\_\+\+G\+E\+T\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L@{S\+E\+N\+D\+\_\+\+G\+E\+T\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!S\+E\+N\+D\+\_\+\+G\+E\+T\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L@{S\+E\+N\+D\+\_\+\+G\+E\+T\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L}}\item[{\em 
+\hypertarget{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a40206877f92b651f01d8e60ece68e32b}{}S\+E\+N\+D\+\_\+\+G\+E\+T\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\label{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a40206877f92b651f01d8e60ece68e32b}
+}]\index{W\+A\+I\+T\+\_\+\+F\+O\+R\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L@{W\+A\+I\+T\+\_\+\+F\+O\+R\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!W\+A\+I\+T\+\_\+\+F\+O\+R\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L@{W\+A\+I\+T\+\_\+\+F\+O\+R\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L}}\item[{\em 
+\hypertarget{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a246e2dd9991e02f60f51bfec91495d5a}{}W\+A\+I\+T\+\_\+\+F\+O\+R\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\label{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a246e2dd9991e02f60f51bfec91495d5a}
+}]\index{S\+E\+N\+D\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+E\+R\+\_\+\+S\+T\+R\+I\+N\+G@{S\+E\+N\+D\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+E\+R\+\_\+\+S\+T\+R\+I\+N\+G}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!S\+E\+N\+D\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+E\+R\+\_\+\+S\+T\+R\+I\+N\+G@{S\+E\+N\+D\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+E\+R\+\_\+\+S\+T\+R\+I\+N\+G}}\item[{\em 
+\hypertarget{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a80a663fb7fad2248e5802d4bd9db60c3}{}S\+E\+N\+D\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+E\+R\+\_\+\+S\+T\+R\+I\+N\+G\label{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a80a663fb7fad2248e5802d4bd9db60c3}
+}]\index{S\+E\+N\+D\+\_\+\+M\+O\+D\+E\+L\+\_\+\+S\+T\+R\+I\+N\+G@{S\+E\+N\+D\+\_\+\+M\+O\+D\+E\+L\+\_\+\+S\+T\+R\+I\+N\+G}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!S\+E\+N\+D\+\_\+\+M\+O\+D\+E\+L\+\_\+\+S\+T\+R\+I\+N\+G@{S\+E\+N\+D\+\_\+\+M\+O\+D\+E\+L\+\_\+\+S\+T\+R\+I\+N\+G}}\item[{\em 
+\hypertarget{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a67d341758ac5d604b599b0f252e060d2}{}S\+E\+N\+D\+\_\+\+M\+O\+D\+E\+L\+\_\+\+S\+T\+R\+I\+N\+G\label{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a67d341758ac5d604b599b0f252e060d2}
+}]\index{S\+E\+N\+D\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+O\+N\+\_\+\+S\+T\+R\+I\+N\+G@{S\+E\+N\+D\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+O\+N\+\_\+\+S\+T\+R\+I\+N\+G}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!S\+E\+N\+D\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+O\+N\+\_\+\+S\+T\+R\+I\+N\+G@{S\+E\+N\+D\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+O\+N\+\_\+\+S\+T\+R\+I\+N\+G}}\item[{\em 
+\hypertarget{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8ac074bbfaee86ac99b117978b9f4ce6e6}{}S\+E\+N\+D\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+O\+N\+\_\+\+S\+T\+R\+I\+N\+G\label{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8ac074bbfaee86ac99b117978b9f4ce6e6}
+}]\index{S\+E\+N\+D\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+T\+R\+I\+N\+G@{S\+E\+N\+D\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+T\+R\+I\+N\+G}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!S\+E\+N\+D\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+T\+R\+I\+N\+G@{S\+E\+N\+D\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+T\+R\+I\+N\+G}}\item[{\em 
+\hypertarget{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8ab98e0f34230a4621a6d3048d0e30fce8}{}S\+E\+N\+D\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+T\+R\+I\+N\+G\label{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8ab98e0f34230a4621a6d3048d0e30fce8}
+}]\index{S\+E\+N\+D\+\_\+\+U\+R\+I\+\_\+\+S\+T\+R\+I\+N\+G@{S\+E\+N\+D\+\_\+\+U\+R\+I\+\_\+\+S\+T\+R\+I\+N\+G}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!S\+E\+N\+D\+\_\+\+U\+R\+I\+\_\+\+S\+T\+R\+I\+N\+G@{S\+E\+N\+D\+\_\+\+U\+R\+I\+\_\+\+S\+T\+R\+I\+N\+G}}\item[{\em 
+\hypertarget{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8acdc47fb1657d29274443edb81863f913}{}S\+E\+N\+D\+\_\+\+U\+R\+I\+\_\+\+S\+T\+R\+I\+N\+G\label{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8acdc47fb1657d29274443edb81863f913}
+}]\index{S\+E\+N\+D\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+R\+I\+N\+G@{S\+E\+N\+D\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+R\+I\+N\+G}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!S\+E\+N\+D\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+R\+I\+N\+G@{S\+E\+N\+D\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+R\+I\+N\+G}}\item[{\em 
+\hypertarget{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a4598fe231abf28b9a5d944b00e8ddae5}{}S\+E\+N\+D\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+S\+T\+R\+I\+N\+G\label{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a4598fe231abf28b9a5d944b00e8ddae5}
+}]\index{S\+E\+N\+D\+\_\+\+A\+U\+D\+I\+O\+\_\+\+M\+O\+D\+E@{S\+E\+N\+D\+\_\+\+A\+U\+D\+I\+O\+\_\+\+M\+O\+D\+E}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!S\+E\+N\+D\+\_\+\+A\+U\+D\+I\+O\+\_\+\+M\+O\+D\+E@{S\+E\+N\+D\+\_\+\+A\+U\+D\+I\+O\+\_\+\+M\+O\+D\+E}}\item[{\em 
+\hypertarget{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a16a249ac09a6ed3b72d33c4c9f65ad37}{}S\+E\+N\+D\+\_\+\+A\+U\+D\+I\+O\+\_\+\+M\+O\+D\+E\label{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a16a249ac09a6ed3b72d33c4c9f65ad37}
+}]\index{S\+T\+A\+R\+T\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y@{S\+T\+A\+R\+T\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!S\+T\+A\+R\+T\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y@{S\+T\+A\+R\+T\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y}}\item[{\em 
+\hypertarget{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a3b13d079768f29946ea18fb22fbe34bc}{}S\+T\+A\+R\+T\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\label{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a3b13d079768f29946ea18fb22fbe34bc}
+}]\index{A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+A\+R\+T\+I\+N\+G@{A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+A\+R\+T\+I\+N\+G}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+A\+R\+T\+I\+N\+G@{A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+A\+R\+T\+I\+N\+G}}\item[{\em 
+\hypertarget{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a96aff7cbd756c66464ee2aa1e5eda93c}{}A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+S\+T\+A\+R\+T\+I\+N\+G\label{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a96aff7cbd756c66464ee2aa1e5eda93c}
+}]\index{W\+A\+I\+T\+I\+N\+G\+\_\+\+F\+O\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+R\+E\+T\+U\+R\+N@{W\+A\+I\+T\+I\+N\+G\+\_\+\+F\+O\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+R\+E\+T\+U\+R\+N}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!W\+A\+I\+T\+I\+N\+G\+\_\+\+F\+O\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+R\+E\+T\+U\+R\+N@{W\+A\+I\+T\+I\+N\+G\+\_\+\+F\+O\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+R\+E\+T\+U\+R\+N}}\item[{\em 
+\hypertarget{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a9921ffe028f2460f093825bac874e4ca}{}W\+A\+I\+T\+I\+N\+G\+\_\+\+F\+O\+R\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+R\+E\+T\+U\+R\+N\label{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a9921ffe028f2460f093825bac874e4ca}
+}]\index{R\+E\+T\+U\+R\+N\+\_\+\+O\+F\+\_\+\+T\+H\+E\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y@{R\+E\+T\+U\+R\+N\+\_\+\+O\+F\+\_\+\+T\+H\+E\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!R\+E\+T\+U\+R\+N\+\_\+\+O\+F\+\_\+\+T\+H\+E\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y@{R\+E\+T\+U\+R\+N\+\_\+\+O\+F\+\_\+\+T\+H\+E\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y}}\item[{\em 
+\hypertarget{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a01bc753a1d573052a81cb47175234f95}{}R\+E\+T\+U\+R\+N\+\_\+\+O\+F\+\_\+\+T\+H\+E\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\label{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a01bc753a1d573052a81cb47175234f95}
+}]\index{R\+E\+A\+D\+Y@{R\+E\+A\+D\+Y}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!R\+E\+A\+D\+Y@{R\+E\+A\+D\+Y}}\item[{\em 
+\hypertarget{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a6564f2f3e15be06b670547bbcaaf0798}{}R\+E\+A\+D\+Y\label{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a6564f2f3e15be06b670547bbcaaf0798}
+}]\index{R\+E\+G\+I\+S\+T\+E\+R\+I\+N\+G\+\_\+\+H\+I\+D@{R\+E\+G\+I\+S\+T\+E\+R\+I\+N\+G\+\_\+\+H\+I\+D}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!R\+E\+G\+I\+S\+T\+E\+R\+I\+N\+G\+\_\+\+H\+I\+D@{R\+E\+G\+I\+S\+T\+E\+R\+I\+N\+G\+\_\+\+H\+I\+D}}\item[{\em 
+\hypertarget{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a36f229a9d16ebd93b8a638a8200a109b}{}R\+E\+G\+I\+S\+T\+E\+R\+I\+N\+G\+\_\+\+H\+I\+D\label{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a36f229a9d16ebd93b8a638a8200a109b}
+}]\index{S\+E\+N\+D\+I\+N\+G\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R@{S\+E\+N\+D\+I\+N\+G\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!S\+E\+N\+D\+I\+N\+G\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R@{S\+E\+N\+D\+I\+N\+G\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R}}\item[{\em 
+\hypertarget{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a270ecf89bda4bd3015410c94e3b960c9}{}S\+E\+N\+D\+I\+N\+G\+\_\+\+H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\label{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a270ecf89bda4bd3015410c94e3b960c9}
+}]\index{H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+S\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E@{H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+S\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+S\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E@{H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+S\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E}}\item[{\em 
+\hypertarget{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a32c70064f7d0149e2690ba854c7acfc7}{}H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+S\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\label{usb__host__android_8c_a09a2851a80ce2bb603d4569e8d9ad3e8a32c70064f7d0149e2690ba854c7acfc7}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 104 of file usb\+\_\+host\+\_\+android.\+c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{usb__host__android_8c_a5a91d7fd3afea7a6d5a6426e9538f7c6}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!Android\+App\+Data\+Event\+Handler@{Android\+App\+Data\+Event\+Handler}}
+\index{Android\+App\+Data\+Event\+Handler@{Android\+App\+Data\+Event\+Handler}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{Android\+App\+Data\+Event\+Handler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} Android\+App\+Data\+Event\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{address, }
+\item[{{\bf U\+S\+B\+\_\+\+E\+V\+E\+N\+T}}]{event, }
+\item[{void $\ast$}]{data, }
+\item[{{\bf D\+W\+O\+R\+D}}]{size}
+\end{DoxyParamCaption}
+)}\label{usb__host__android_8c_a5a91d7fd3afea7a6d5a6426e9538f7c6}
+
+
+Definition at line 1066 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_a25b2cb9071b8ae5594ca15b2046d304e}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!Android\+App\+Event\+Handler@{Android\+App\+Event\+Handler}}
+\index{Android\+App\+Event\+Handler@{Android\+App\+Event\+Handler}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{Android\+App\+Event\+Handler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} Android\+App\+Event\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{address, }
+\item[{{\bf U\+S\+B\+\_\+\+E\+V\+E\+N\+T}}]{event, }
+\item[{void $\ast$}]{data, }
+\item[{{\bf D\+W\+O\+R\+D}}]{size}
+\end{DoxyParamCaption}
+)}\label{usb__host__android_8c_a25b2cb9071b8ae5594ca15b2046d304e}
+
+
+Definition at line 1133 of file usb\+\_\+host\+\_\+android.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+\hypertarget{usb__host__android_8c_a1ebcc579efc2b4f98983b4e90b12dd81}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!Android\+App\+H\+I\+D\+Register@{Android\+App\+H\+I\+D\+Register}}
+\index{Android\+App\+H\+I\+D\+Register@{Android\+App\+H\+I\+D\+Register}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{Android\+App\+H\+I\+D\+Register}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} Android\+App\+H\+I\+D\+Register (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{address, }
+\item[{{\bf B\+Y\+T\+E}}]{id, }
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{descriptor, }
+\item[{{\bf B\+Y\+T\+E}}]{length}
+\end{DoxyParamCaption}
+)}\label{usb__host__android_8c_a1ebcc579efc2b4f98983b4e90b12dd81}
+
+
+Definition at line 1281 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_a99167dfb275365e311c0864eee47ac4c}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!Android\+App\+H\+I\+D\+Send\+Event@{Android\+App\+H\+I\+D\+Send\+Event}}
+\index{Android\+App\+H\+I\+D\+Send\+Event@{Android\+App\+H\+I\+D\+Send\+Event}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{Android\+App\+H\+I\+D\+Send\+Event}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} Android\+App\+H\+I\+D\+Send\+Event (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{address, }
+\item[{{\bf B\+Y\+T\+E}}]{id, }
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{report, }
+\item[{{\bf B\+Y\+T\+E}}]{length}
+\end{DoxyParamCaption}
+)}\label{usb__host__android_8c_a99167dfb275365e311c0864eee47ac4c}
+
+
+Definition at line 1226 of file usb\+\_\+host\+\_\+android.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+\hypertarget{usb__host__android_8c_a94ac132cb3528c96eaad1bcab26186c0}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!Android\+App\+Initialize@{Android\+App\+Initialize}}
+\index{Android\+App\+Initialize@{Android\+App\+Initialize}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{Android\+App\+Initialize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} Android\+App\+Initialize (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{address, }
+\item[{{\bf D\+W\+O\+R\+D}}]{flags, }
+\item[{{\bf B\+Y\+T\+E}}]{client\+Driver\+I\+D}
+\end{DoxyParamCaption}
+)}\label{usb__host__android_8c_a94ac132cb3528c96eaad1bcab26186c0}
+
+
+Definition at line 908 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_a554f249b3e321009c4c9eebfa7086c05}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!Android\+App\+Is\+Read\+Complete@{Android\+App\+Is\+Read\+Complete}}
+\index{Android\+App\+Is\+Read\+Complete@{Android\+App\+Is\+Read\+Complete}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{Android\+App\+Is\+Read\+Complete}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} Android\+App\+Is\+Read\+Complete (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{handle, }
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{error\+Code, }
+\item[{{\bf D\+W\+O\+R\+D} $\ast$}]{size}
+\end{DoxyParamCaption}
+)}\label{usb__host__android_8c_a554f249b3e321009c4c9eebfa7086c05}
+
+
+Definition at line 505 of file usb\+\_\+host\+\_\+android.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+\hypertarget{usb__host__android_8c_a13a0d2e1011374dcdf39d8b670354816}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!Android\+App\+Is\+Write\+Complete@{Android\+App\+Is\+Write\+Complete}}
+\index{Android\+App\+Is\+Write\+Complete@{Android\+App\+Is\+Write\+Complete}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{Android\+App\+Is\+Write\+Complete}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} Android\+App\+Is\+Write\+Complete (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{handle, }
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{error\+Code, }
+\item[{{\bf D\+W\+O\+R\+D} $\ast$}]{size}
+\end{DoxyParamCaption}
+)}\label{usb__host__android_8c_a13a0d2e1011374dcdf39d8b670354816}
+
+
+Definition at line 344 of file usb\+\_\+host\+\_\+android.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+\hypertarget{usb__host__android_8c_a637df9bf6dc8f7adfe8e0b900278c88c}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!Android\+App\+Read@{Android\+App\+Read}}
+\index{Android\+App\+Read@{Android\+App\+Read}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{Android\+App\+Read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} Android\+App\+Read (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{handle, }
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{data, }
+\item[{{\bf D\+W\+O\+R\+D}}]{size}
+\end{DoxyParamCaption}
+)}\label{usb__host__android_8c_a637df9bf6dc8f7adfe8e0b900278c88c}
+
+
+Definition at line 417 of file usb\+\_\+host\+\_\+android.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 5
+
+
+\hypertarget{usb__host__android_8c_a8a7b592d0e14bcc69f7c493b99ca76a1}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!Android\+App\+Start@{Android\+App\+Start}}
+\index{Android\+App\+Start@{Android\+App\+Start}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{Android\+App\+Start}]{\setlength{\rightskip}{0pt plus 5cm}void Android\+App\+Start (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+N\+D\+R\+O\+I\+D\+\_\+\+A\+C\+C\+E\+S\+S\+O\+R\+Y\+\_\+\+I\+N\+F\+O\+R\+M\+A\+T\+I\+O\+N} $\ast$}]{info}
+\end{DoxyParamCaption}
+)}\label{usb__host__android_8c_a8a7b592d0e14bcc69f7c493b99ca76a1}
+Interface Functions 
+
+Definition at line 221 of file usb\+\_\+host\+\_\+android.\+c.
+
+\hypertarget{usb__host__android_8c_ad595e7c4d8ef1a2807a3998b7e43cc9c}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!Android\+App\+Write@{Android\+App\+Write}}
+\index{Android\+App\+Write@{Android\+App\+Write}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{Android\+App\+Write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} Android\+App\+Write (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{handle, }
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{data, }
+\item[{{\bf D\+W\+O\+R\+D}}]{size}
+\end{DoxyParamCaption}
+)}\label{usb__host__android_8c_ad595e7c4d8ef1a2807a3998b7e43cc9c}
+
+
+Definition at line 263 of file usb\+\_\+host\+\_\+android.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 6
+
+
+\hypertarget{usb__host__android_8c_a2d80b393c4aa6875eb0e509b2934f5d7}{}\index{usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}!Android\+Tasks@{Android\+Tasks}}
+\index{Android\+Tasks@{Android\+Tasks}!usb\+\_\+host\+\_\+android.\+c@{usb\+\_\+host\+\_\+android.\+c}}
+\subsubsection[{Android\+Tasks}]{\setlength{\rightskip}{0pt plus 5cm}void Android\+Tasks (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{usb__host__android_8c_a2d80b393c4aa6875eb0e509b2934f5d7}
+
+
+Definition at line 565 of file usb\+\_\+host\+\_\+android.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 7
+
+

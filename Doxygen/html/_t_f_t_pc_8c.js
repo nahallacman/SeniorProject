@@ -1,0 +1,48 @@
+var _t_f_t_pc_8c =
+[
+    [ "TFTP_OPCODE", "_t_f_t_pc_8c.html#a6753d3da8fad37b77effab600a6aea44", [
+      [ "TFTP_OPCODE_RRQ", "_t_f_t_pc_8c.html#a6753d3da8fad37b77effab600a6aea44a384b091233466a21aed4b36a93bf1d50", null ],
+      [ "TFTP_OPCODE_WRQ", "_t_f_t_pc_8c.html#a6753d3da8fad37b77effab600a6aea44a615e060a29a1a318043e718cb3f65564", null ],
+      [ "TFTP_OPCODE_DATA", "_t_f_t_pc_8c.html#a6753d3da8fad37b77effab600a6aea44acc8676e38f10ee4663ec5068328784c1", null ],
+      [ "TFTP_OPCODE_ACK", "_t_f_t_pc_8c.html#a6753d3da8fad37b77effab600a6aea44aa0ce42ae7c3db3296276f484a9ea084a", null ],
+      [ "TFTP_OPCODE_ERROR", "_t_f_t_pc_8c.html#a6753d3da8fad37b77effab600a6aea44ad285a1bbae4f74fafc9e2595dc291d45", null ]
+    ] ],
+    [ "TFTP_STATE", "_t_f_t_pc_8c.html#ad4aa2424de22961052a5d1f743d4851d", [
+      [ "SM_TFTP_WAIT", "_t_f_t_pc_8c.html#ad4aa2424de22961052a5d1f743d4851dae66c1d65b7199860f2a01805c4045940", null ],
+      [ "SM_TFTP_READY", "_t_f_t_pc_8c.html#ad4aa2424de22961052a5d1f743d4851da3aa859adcd0f0b455e11437ddd54aa89", null ],
+      [ "SM_TFTP_WAIT_FOR_DATA", "_t_f_t_pc_8c.html#ad4aa2424de22961052a5d1f743d4851da018af09b859265148c5495a7dbd021d5", null ],
+      [ "SM_TFTP_WAIT_FOR_ACK", "_t_f_t_pc_8c.html#ad4aa2424de22961052a5d1f743d4851daebdf7fb5dfb3e3ba82c47e2206702d4a", null ],
+      [ "SM_TFTP_DUPLICATE_ACK", "_t_f_t_pc_8c.html#ad4aa2424de22961052a5d1f743d4851da8714deccba25655d40fa3c8ea39baa44", null ],
+      [ "SM_TFTP_SEND_ACK", "_t_f_t_pc_8c.html#ad4aa2424de22961052a5d1f743d4851da7c44f5b5eb78d1d1cfd3eec63f63fd6d", null ],
+      [ "SM_TFTP_SEND_LAST_ACK", "_t_f_t_pc_8c.html#ad4aa2424de22961052a5d1f743d4851da894b60563cdc9148f3d20c8fe754d945", null ]
+    ] ],
+    [ "TFTPCloseFile", "_t_f_t_pc_8c.html#a688442992af6a64cd7320edd2bd4c8e9", null ],
+    [ "TFTPGet", "_t_f_t_pc_8c.html#aba7ffaccd6a2269217c120b50d7ec52b", null ],
+    [ "TFTPGetUploadStatus", "_t_f_t_pc_8c.html#a6567634f020a25f34f32677fbc9813bc", null ],
+    [ "TFTPIsFileClosed", "_t_f_t_pc_8c.html#a2781afd6109db64b79b482e8f799b8bb", null ],
+    [ "TFTPIsFileOpened", "_t_f_t_pc_8c.html#af5d2e34f34fcc2be701389f66c1828d5", null ],
+    [ "TFTPIsGetReady", "_t_f_t_pc_8c.html#a45170eecdcaf685183864e44784f0795", null ],
+    [ "TFTPIsOpened", "_t_f_t_pc_8c.html#a4b15e6d489b3c1cf2ec6528d04c203e5", null ],
+    [ "TFTPIsPutReady", "_t_f_t_pc_8c.html#accc76acb6992b4423848b027555003b5", null ],
+    [ "TFTPOpen", "_t_f_t_pc_8c.html#a14386ce932a1aa60682058ceda9edd60", null ],
+    [ "TFTPOpenFile", "_t_f_t_pc_8c.html#a1569c08b3af883a5ab83b14f3e97bb38", null ],
+    [ "TFTPOpenROMFile", "_t_f_t_pc_8c.html#a1cbfb670b4e0f79f80eb6a84b7ddff65", null ],
+    [ "TFTPPut", "_t_f_t_pc_8c.html#ac58e8efa1c2d066ed082ecb1b4be4c2e", null ],
+    [ "TFTPUploadFragmentedRAMFileToHost", "_t_f_t_pc_8c.html#a018f514f39fa4e7b3c00d0206ad0b3f8", null ],
+    [ "TFTPUploadRAMFileToHost", "_t_f_t_pc_8c.html#a2d2b2ffd158b7543c66296afebcace15", null ],
+    [ "_hostInfo", "_t_f_t_pc_8c.html#a291da88c9225a25257b6a2282a974e40", null ],
+    [ "_tftpBlockLength", "_t_f_t_pc_8c.html#aaa36494b25cec54083805b9af8d8b842", null ],
+    [ "_tftpBlockNumber", "_t_f_t_pc_8c.html#ab3f660fa9bcb28ddca6751fd4d4f09ad", null ],
+    [ "_tftpDuplicateBlock", "_t_f_t_pc_8c.html#a7755d6faee661b3fe7a0f3e0bee6e3f9", null ],
+    [ "_tftpError", "_t_f_t_pc_8c.html#ac62ec8b580512bce9a8d17acbd822f0b", null ],
+    [ "_tftpSocket", "_t_f_t_pc_8c.html#af8eca2a78b8b404f30d6dd0d99acdddb", null ],
+    [ "bIsAcked", "_t_f_t_pc_8c.html#a6a52f51d2d45c1c4178f3c357f7300e1", null ],
+    [ "bIsClosed", "_t_f_t_pc_8c.html#a2d6e93e933506b8abb3f72d2736195bc", null ],
+    [ "bIsClosing", "_t_f_t_pc_8c.html#a21233a5e0de333ca2d2e66e52ea7592a", null ],
+    [ "bIsFlushed", "_t_f_t_pc_8c.html#ab488b205dfda650455cad04b3329e0fb", null ],
+    [ "bIsReading", "_t_f_t_pc_8c.html#a0d480b57103afdf875693b919c3678c5", null ],
+    [ "bits", "_t_f_t_pc_8c.html#abdebeadce3996cfa58b12db58eb8a3fa", null ],
+    [ "group1", "_t_f_t_pc_8c.html#a9e27a774136a3ae6e218242c23c5230b", null ],
+    [ "group2", "_t_f_t_pc_8c.html#a2dfe46ecd59f3e7d5b853f77f350afae", null ],
+    [ "Val", "_t_f_t_pc_8c.html#a5ab8c2bf45b20b5f7aa3a4f083896cec", null ]
+];

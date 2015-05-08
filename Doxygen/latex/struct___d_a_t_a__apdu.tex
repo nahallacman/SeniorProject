@@ -1,0 +1,171 @@
+\hypertarget{struct___d_a_t_a__apdu}{}\section{\+\_\+\+D\+A\+T\+A\+\_\+apdu Struct Reference}
+\label{struct___d_a_t_a__apdu}\index{\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}}
+
+
+{\ttfamily \#include $<$ieee\+\_\+11073\+\_\+phd\+\_\+types.\+h$>$}
+
+
+
+Collaboration diagram for \+\_\+\+D\+A\+T\+A\+\_\+apdu\+:
+% FIG 0
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ieee__11073__phd__types_8h_ade454fc67c6dfd79940cb98ec80935ee}{Invoke\+I\+D\+Type} \hyperlink{struct___d_a_t_a__apdu_a204a1befd9f114ab6f2192071d0c367d}{invoke\+\_\+id}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\hyperlink{ieee__11073__phd__types_8h_a3561595d2aa7416532e1c9910abd076d}{intu16} \hyperlink{struct___d_a_t_a__apdu_a034761fd73babd925f56cbb254ce4fb2}{choice}\\
+\>\hyperlink{ieee__11073__phd__types_8h_a3561595d2aa7416532e1c9910abd076d}{intu16} \hyperlink{struct___d_a_t_a__apdu_a3743679e4ff85e3e1b3fc2e59973fbb3}{length}\\
+\>union \{\\
+\>\>\hyperlink{ieee__11073__phd__types_8h_afdb1fb6ea2c3f1d103379d4340e3f967}{EventReportArgumentSimple} \hyperlink{struct___d_a_t_a__apdu_a9ffa1370a282f1471a2be8db6cd1fb67}{roiv\_cmipEventReport}\\
+\>\>\hyperlink{ieee__11073__phd__types_8h_afdb1fb6ea2c3f1d103379d4340e3f967}{EventReportArgumentSimple} \hyperlink{struct___d_a_t_a__apdu_a3c35fcfb5e84ebd7372af2c70f692fa8}{roiv\_cmipConfirmedEventReport}\\
+\>\>\hyperlink{ieee__11073__phd__types_8h_a53dff656d196d7dd00eb60e97b4d4d2f}{GetArgumentSimple} \hyperlink{struct___d_a_t_a__apdu_a88b911702e92809aea7fb10d97759677}{roiv\_cmipGet}\\
+\>\>\hyperlink{ieee__11073__phd__types_8h_a43ff8ecfd35a12bcb7eb4bc974f1ffb2}{SetArgumentSimple} \hyperlink{struct___d_a_t_a__apdu_afe09edc4f13e8f7868ce9462124a7b4b}{roiv\_cmipSet}\\
+\>\>\hyperlink{ieee__11073__phd__types_8h_a43ff8ecfd35a12bcb7eb4bc974f1ffb2}{SetArgumentSimple} \hyperlink{struct___d_a_t_a__apdu_a20cb369d39461e9edd129a2020c5b730}{roiv\_cmipConfirmedSet}\\
+\>\>\hyperlink{ieee__11073__phd__types_8h_a4a440fc5b632456725feaa27583ee5c6}{ActionArgumentSimple} \hyperlink{struct___d_a_t_a__apdu_abad510647acd238e619612830f561188}{roiv\_cmipAction}\\
+\>\>\hyperlink{ieee__11073__phd__types_8h_a4a440fc5b632456725feaa27583ee5c6}{ActionArgumentSimple} \hyperlink{struct___d_a_t_a__apdu_ab78ef96e3a5c04a9409f379f90fb0acb}{roiv\_cmipConfirmedAction}\\
+\>\>\hyperlink{ieee__11073__phd__types_8h_aea1027cc2ee7615b0369ba7eb9c4cbba}{EventReportResultSimple} \hyperlink{struct___d_a_t_a__apdu_a2ff6d37a0da3b286cfc42e9ddd88eb94}{rors\_cmipConfirmedEventReport}\\
+\>\>\hyperlink{ieee__11073__phd__types_8h_a443adc4af38ff1346c6027f9db71b74e}{GetResultSimple} \hyperlink{struct___d_a_t_a__apdu_a97e81a762d3f8e8dfcee6b20c3061e19}{rors\_cmipGet}\\
+\>\>\hyperlink{ieee__11073__phd__types_8h_ace9edc9196886f6a75e892e58d043c9e}{SetResultSimple} \hyperlink{struct___d_a_t_a__apdu_a86e45f8285bcb8daa49ffd57fe286a4b}{rors\_cmipConfirmedSet}\\
+\>\>\hyperlink{ieee__11073__phd__types_8h_ac72b7bc301b6c4e7ae500ffa6ac0fb9e}{ActionResultSimple} \hyperlink{struct___d_a_t_a__apdu_a7fa1e37066d8853ad3bdc58fdcc30058}{rors\_cmipConfirmedAction}\\
+\>\>\hyperlink{ieee__11073__phd__types_8h_af01b35027bb3cc93efb2765f4c620017}{ErrorResult} \hyperlink{struct___d_a_t_a__apdu_a768fc350526f93d1e5d02875f6050c05}{roer}\\
+\>\>\hyperlink{ieee__11073__phd__types_8h_a9392e22f73de1af564915253afed45c3}{RejectResult} \hyperlink{struct___d_a_t_a__apdu_acda4a4bd23c9a1f3738b5becff330964}{rorj}\\
+\>\} \hyperlink{struct___d_a_t_a__apdu_ac0b0785c6a2a08fbae3111d42ffa45e8}{u}\\
+\} \hyperlink{struct___d_a_t_a__apdu_a8334e01b255f1a5eec983b216ae9fad6}{choice}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 692 of file ieee\+\_\+11073\+\_\+phd\+\_\+types.\+h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{struct___d_a_t_a__apdu_a034761fd73babd925f56cbb254ce4fb2}{}\index{\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}!choice@{choice}}
+\index{choice@{choice}!\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}}
+\subsubsection[{choice}]{\setlength{\rightskip}{0pt plus 5cm}{\bf intu16} choice}\label{struct___d_a_t_a__apdu_a034761fd73babd925f56cbb254ce4fb2}
+
+
+Definition at line 697 of file ieee\+\_\+11073\+\_\+phd\+\_\+types.\+h.
+
+\hypertarget{struct___d_a_t_a__apdu_a8334e01b255f1a5eec983b216ae9fad6}{}\index{\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}!choice@{choice}}
+\index{choice@{choice}!\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}}
+\subsubsection[{choice}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   choice}\label{struct___d_a_t_a__apdu_a8334e01b255f1a5eec983b216ae9fad6}
+\hypertarget{struct___d_a_t_a__apdu_a204a1befd9f114ab6f2192071d0c367d}{}\index{\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}!invoke\+\_\+id@{invoke\+\_\+id}}
+\index{invoke\+\_\+id@{invoke\+\_\+id}!\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}}
+\subsubsection[{invoke\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Invoke\+I\+D\+Type} invoke\+\_\+id}\label{struct___d_a_t_a__apdu_a204a1befd9f114ab6f2192071d0c367d}
+
+
+Definition at line 694 of file ieee\+\_\+11073\+\_\+phd\+\_\+types.\+h.
+
+\hypertarget{struct___d_a_t_a__apdu_a3743679e4ff85e3e1b3fc2e59973fbb3}{}\index{\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}!length@{length}}
+\index{length@{length}!\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}}
+\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}{\bf intu16} length}\label{struct___d_a_t_a__apdu_a3743679e4ff85e3e1b3fc2e59973fbb3}
+
+
+Definition at line 698 of file ieee\+\_\+11073\+\_\+phd\+\_\+types.\+h.
+
+\hypertarget{struct___d_a_t_a__apdu_a768fc350526f93d1e5d02875f6050c05}{}\index{\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}!roer@{roer}}
+\index{roer@{roer}!\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}}
+\subsubsection[{roer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\+Result} roer}\label{struct___d_a_t_a__apdu_a768fc350526f93d1e5d02875f6050c05}
+
+
+Definition at line 726 of file ieee\+\_\+11073\+\_\+phd\+\_\+types.\+h.
+
+\hypertarget{struct___d_a_t_a__apdu_abad510647acd238e619612830f561188}{}\index{\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}!roiv\+\_\+cmip\+Action@{roiv\+\_\+cmip\+Action}}
+\index{roiv\+\_\+cmip\+Action@{roiv\+\_\+cmip\+Action}!\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}}
+\subsubsection[{roiv\+\_\+cmip\+Action}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Action\+Argument\+Simple} roiv\+\_\+cmip\+Action}\label{struct___d_a_t_a__apdu_abad510647acd238e619612830f561188}
+
+
+Definition at line 720 of file ieee\+\_\+11073\+\_\+phd\+\_\+types.\+h.
+
+\hypertarget{struct___d_a_t_a__apdu_ab78ef96e3a5c04a9409f379f90fb0acb}{}\index{\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}!roiv\+\_\+cmip\+Confirmed\+Action@{roiv\+\_\+cmip\+Confirmed\+Action}}
+\index{roiv\+\_\+cmip\+Confirmed\+Action@{roiv\+\_\+cmip\+Confirmed\+Action}!\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}}
+\subsubsection[{roiv\+\_\+cmip\+Confirmed\+Action}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Action\+Argument\+Simple} roiv\+\_\+cmip\+Confirmed\+Action}\label{struct___d_a_t_a__apdu_ab78ef96e3a5c04a9409f379f90fb0acb}
+
+
+Definition at line 721 of file ieee\+\_\+11073\+\_\+phd\+\_\+types.\+h.
+
+\hypertarget{struct___d_a_t_a__apdu_a3c35fcfb5e84ebd7372af2c70f692fa8}{}\index{\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}!roiv\+\_\+cmip\+Confirmed\+Event\+Report@{roiv\+\_\+cmip\+Confirmed\+Event\+Report}}
+\index{roiv\+\_\+cmip\+Confirmed\+Event\+Report@{roiv\+\_\+cmip\+Confirmed\+Event\+Report}!\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}}
+\subsubsection[{roiv\+\_\+cmip\+Confirmed\+Event\+Report}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Event\+Report\+Argument\+Simple} roiv\+\_\+cmip\+Confirmed\+Event\+Report}\label{struct___d_a_t_a__apdu_a3c35fcfb5e84ebd7372af2c70f692fa8}
+
+
+Definition at line 716 of file ieee\+\_\+11073\+\_\+phd\+\_\+types.\+h.
+
+\hypertarget{struct___d_a_t_a__apdu_a20cb369d39461e9edd129a2020c5b730}{}\index{\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}!roiv\+\_\+cmip\+Confirmed\+Set@{roiv\+\_\+cmip\+Confirmed\+Set}}
+\index{roiv\+\_\+cmip\+Confirmed\+Set@{roiv\+\_\+cmip\+Confirmed\+Set}!\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}}
+\subsubsection[{roiv\+\_\+cmip\+Confirmed\+Set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Set\+Argument\+Simple} roiv\+\_\+cmip\+Confirmed\+Set}\label{struct___d_a_t_a__apdu_a20cb369d39461e9edd129a2020c5b730}
+
+
+Definition at line 719 of file ieee\+\_\+11073\+\_\+phd\+\_\+types.\+h.
+
+\hypertarget{struct___d_a_t_a__apdu_a9ffa1370a282f1471a2be8db6cd1fb67}{}\index{\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}!roiv\+\_\+cmip\+Event\+Report@{roiv\+\_\+cmip\+Event\+Report}}
+\index{roiv\+\_\+cmip\+Event\+Report@{roiv\+\_\+cmip\+Event\+Report}!\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}}
+\subsubsection[{roiv\+\_\+cmip\+Event\+Report}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Event\+Report\+Argument\+Simple} roiv\+\_\+cmip\+Event\+Report}\label{struct___d_a_t_a__apdu_a9ffa1370a282f1471a2be8db6cd1fb67}
+
+
+Definition at line 715 of file ieee\+\_\+11073\+\_\+phd\+\_\+types.\+h.
+
+\hypertarget{struct___d_a_t_a__apdu_a88b911702e92809aea7fb10d97759677}{}\index{\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}!roiv\+\_\+cmip\+Get@{roiv\+\_\+cmip\+Get}}
+\index{roiv\+\_\+cmip\+Get@{roiv\+\_\+cmip\+Get}!\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}}
+\subsubsection[{roiv\+\_\+cmip\+Get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Get\+Argument\+Simple} roiv\+\_\+cmip\+Get}\label{struct___d_a_t_a__apdu_a88b911702e92809aea7fb10d97759677}
+
+
+Definition at line 717 of file ieee\+\_\+11073\+\_\+phd\+\_\+types.\+h.
+
+\hypertarget{struct___d_a_t_a__apdu_afe09edc4f13e8f7868ce9462124a7b4b}{}\index{\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}!roiv\+\_\+cmip\+Set@{roiv\+\_\+cmip\+Set}}
+\index{roiv\+\_\+cmip\+Set@{roiv\+\_\+cmip\+Set}!\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}}
+\subsubsection[{roiv\+\_\+cmip\+Set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Set\+Argument\+Simple} roiv\+\_\+cmip\+Set}\label{struct___d_a_t_a__apdu_afe09edc4f13e8f7868ce9462124a7b4b}
+
+
+Definition at line 718 of file ieee\+\_\+11073\+\_\+phd\+\_\+types.\+h.
+
+\hypertarget{struct___d_a_t_a__apdu_acda4a4bd23c9a1f3738b5becff330964}{}\index{\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}!rorj@{rorj}}
+\index{rorj@{rorj}!\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}}
+\subsubsection[{rorj}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Reject\+Result} rorj}\label{struct___d_a_t_a__apdu_acda4a4bd23c9a1f3738b5becff330964}
+
+
+Definition at line 727 of file ieee\+\_\+11073\+\_\+phd\+\_\+types.\+h.
+
+\hypertarget{struct___d_a_t_a__apdu_a7fa1e37066d8853ad3bdc58fdcc30058}{}\index{\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}!rors\+\_\+cmip\+Confirmed\+Action@{rors\+\_\+cmip\+Confirmed\+Action}}
+\index{rors\+\_\+cmip\+Confirmed\+Action@{rors\+\_\+cmip\+Confirmed\+Action}!\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}}
+\subsubsection[{rors\+\_\+cmip\+Confirmed\+Action}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Action\+Result\+Simple} rors\+\_\+cmip\+Confirmed\+Action}\label{struct___d_a_t_a__apdu_a7fa1e37066d8853ad3bdc58fdcc30058}
+
+
+Definition at line 725 of file ieee\+\_\+11073\+\_\+phd\+\_\+types.\+h.
+
+\hypertarget{struct___d_a_t_a__apdu_a2ff6d37a0da3b286cfc42e9ddd88eb94}{}\index{\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}!rors\+\_\+cmip\+Confirmed\+Event\+Report@{rors\+\_\+cmip\+Confirmed\+Event\+Report}}
+\index{rors\+\_\+cmip\+Confirmed\+Event\+Report@{rors\+\_\+cmip\+Confirmed\+Event\+Report}!\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}}
+\subsubsection[{rors\+\_\+cmip\+Confirmed\+Event\+Report}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Event\+Report\+Result\+Simple} rors\+\_\+cmip\+Confirmed\+Event\+Report}\label{struct___d_a_t_a__apdu_a2ff6d37a0da3b286cfc42e9ddd88eb94}
+
+
+Definition at line 722 of file ieee\+\_\+11073\+\_\+phd\+\_\+types.\+h.
+
+\hypertarget{struct___d_a_t_a__apdu_a86e45f8285bcb8daa49ffd57fe286a4b}{}\index{\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}!rors\+\_\+cmip\+Confirmed\+Set@{rors\+\_\+cmip\+Confirmed\+Set}}
+\index{rors\+\_\+cmip\+Confirmed\+Set@{rors\+\_\+cmip\+Confirmed\+Set}!\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}}
+\subsubsection[{rors\+\_\+cmip\+Confirmed\+Set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Set\+Result\+Simple} rors\+\_\+cmip\+Confirmed\+Set}\label{struct___d_a_t_a__apdu_a86e45f8285bcb8daa49ffd57fe286a4b}
+
+
+Definition at line 724 of file ieee\+\_\+11073\+\_\+phd\+\_\+types.\+h.
+
+\hypertarget{struct___d_a_t_a__apdu_a97e81a762d3f8e8dfcee6b20c3061e19}{}\index{\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}!rors\+\_\+cmip\+Get@{rors\+\_\+cmip\+Get}}
+\index{rors\+\_\+cmip\+Get@{rors\+\_\+cmip\+Get}!\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}}
+\subsubsection[{rors\+\_\+cmip\+Get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Get\+Result\+Simple} rors\+\_\+cmip\+Get}\label{struct___d_a_t_a__apdu_a97e81a762d3f8e8dfcee6b20c3061e19}
+
+
+Definition at line 723 of file ieee\+\_\+11073\+\_\+phd\+\_\+types.\+h.
+
+\hypertarget{struct___d_a_t_a__apdu_ac0b0785c6a2a08fbae3111d42ffa45e8}{}\index{\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}!u@{u}}
+\index{u@{u}!\+\_\+\+D\+A\+T\+A\+\_\+apdu@{\+\_\+\+D\+A\+T\+A\+\_\+apdu}}
+\subsubsection[{u}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \}   u}\label{struct___d_a_t_a__apdu_ac0b0785c6a2a08fbae3111d42ffa45e8}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+I\+E\+E\+E/\hyperlink{ieee__11073__phd__types_8h}{ieee\+\_\+11073\+\_\+phd\+\_\+types.\+h}\end{DoxyCompactItemize}

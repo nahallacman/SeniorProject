@@ -1,0 +1,85 @@
+\hypertarget{aes__pic24f_8h}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+T\+C\+P\+I\+P Stack/aes\+\_\+pic24f.h File Reference}
+\label{aes__pic24f_8h}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+T\+C\+P\+I\+P Stack/aes\+\_\+pic24f.\+h@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+T\+C\+P\+I\+P Stack/aes\+\_\+pic24f.\+h}}
+{\ttfamily \#include \char`\"{}A\+E\+S\+Config.\+h\char`\"{}}\\*
+Include dependency graph for aes\+\_\+pic24f.\+h\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{aes__pic24f_8h_a065a847cb303a278b3152948fa4653a4}{A\+E\+S\+Create\+Session\+Key}(k,  s,  ks)
+\item 
+\#define \hyperlink{aes__pic24f_8h_a9217ed82b4d23211245cba1e796ea148}{A\+E\+S\+E\+C\+B\+Encrypt\+Block}(p,  s,  c,  ks)
+\item 
+\#define \hyperlink{aes__pic24f_8h_ade3280821adbe16fcc03477fae954a42}{A\+E\+S\+E\+C\+B\+Decrypt\+Block}(c,  s,  p,  ks)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{aes__pic24f_8h_a065a847cb303a278b3152948fa4653a4}{}\index{aes\+\_\+pic24f.\+h@{aes\+\_\+pic24f.\+h}!A\+E\+S\+Create\+Session\+Key@{A\+E\+S\+Create\+Session\+Key}}
+\index{A\+E\+S\+Create\+Session\+Key@{A\+E\+S\+Create\+Session\+Key}!aes\+\_\+pic24f.\+h@{aes\+\_\+pic24f.\+h}}
+\subsubsection[{A\+E\+S\+Create\+Session\+Key}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+E\+S\+Create\+Session\+Key(
+\begin{DoxyParamCaption}
+\item[{}]{k, }
+\item[{}]{s, }
+\item[{}]{ks}
+\end{DoxyParamCaption}
+)}\label{aes__pic24f_8h_a065a847cb303a278b3152948fa4653a4}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{switch}(ks)\{                                                         \(\backslash\)
+                case \hyperlink{_a_e_s___e_c_b___p_i_c32_8h_abc14413205edecd0cdb1c246532a01e8a6d7702134d26bb3c1e2a72c352882260}{AES\_KEY\_TYPE\_128\_BIT}:AES128CreateSessionKey(k,s);\textcolor{keywordflow}{break};    \(\backslash\)
+                case \hyperlink{_a_e_s___e_c_b___p_i_c32_8h_abc14413205edecd0cdb1c246532a01e8a4ca013d0ba0c8e2f73edef4c21ea6a8d}{AES\_KEY\_TYPE\_192\_BIT}:AES192CreateSessionKey(k,s);\textcolor{keywordflow}{break};    \(\backslash\)
+                case \hyperlink{_a_e_s___e_c_b___p_i_c32_8h_abc14413205edecd0cdb1c246532a01e8a83a2c8c206ab7bc39cf1349d1d8f8974}{AES\_KEY\_TYPE\_256\_BIT}:AES256CreateSessionKey(k,s);\textcolor{keywordflow}{break};    \(\backslash\)
+                default:\textcolor{keywordflow}{break};                                                  \(\backslash\)
+            \}
+\end{DoxyCode}
+
+
+Definition at line 20 of file aes\+\_\+pic24f.\+h.
+
+\hypertarget{aes__pic24f_8h_ade3280821adbe16fcc03477fae954a42}{}\index{aes\+\_\+pic24f.\+h@{aes\+\_\+pic24f.\+h}!A\+E\+S\+E\+C\+B\+Decrypt\+Block@{A\+E\+S\+E\+C\+B\+Decrypt\+Block}}
+\index{A\+E\+S\+E\+C\+B\+Decrypt\+Block@{A\+E\+S\+E\+C\+B\+Decrypt\+Block}!aes\+\_\+pic24f.\+h@{aes\+\_\+pic24f.\+h}}
+\subsubsection[{A\+E\+S\+E\+C\+B\+Decrypt\+Block}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+E\+S\+E\+C\+B\+Decrypt\+Block(
+\begin{DoxyParamCaption}
+\item[{}]{c, }
+\item[{}]{s, }
+\item[{}]{p, }
+\item[{}]{ks}
+\end{DoxyParamCaption}
+)}\label{aes__pic24f_8h_ade3280821adbe16fcc03477fae954a42}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{switch}(ks)\{                                                         \(\backslash\)
+                case \hyperlink{_a_e_s___e_c_b___p_i_c32_8h_abc14413205edecd0cdb1c246532a01e8a6d7702134d26bb3c1e2a72c352882260}{AES\_KEY\_TYPE\_128\_BIT}:AES128DecryptBlock(c,s,p);\textcolor{keywordflow}{break};      \(\backslash\)
+                case \hyperlink{_a_e_s___e_c_b___p_i_c32_8h_abc14413205edecd0cdb1c246532a01e8a4ca013d0ba0c8e2f73edef4c21ea6a8d}{AES\_KEY\_TYPE\_192\_BIT}:AES192DecryptBlock(c,s,p);\textcolor{keywordflow}{break};      \(\backslash\)
+                case \hyperlink{_a_e_s___e_c_b___p_i_c32_8h_abc14413205edecd0cdb1c246532a01e8a83a2c8c206ab7bc39cf1349d1d8f8974}{AES\_KEY\_TYPE\_256\_BIT}:AES256DecryptBlock(c,s,p);\textcolor{keywordflow}{break};      \(\backslash\)
+                default:\textcolor{keywordflow}{break};                                                  \(\backslash\)
+            \}
+\end{DoxyCode}
+
+
+Definition at line 35 of file aes\+\_\+pic24f.\+h.
+
+\hypertarget{aes__pic24f_8h_a9217ed82b4d23211245cba1e796ea148}{}\index{aes\+\_\+pic24f.\+h@{aes\+\_\+pic24f.\+h}!A\+E\+S\+E\+C\+B\+Encrypt\+Block@{A\+E\+S\+E\+C\+B\+Encrypt\+Block}}
+\index{A\+E\+S\+E\+C\+B\+Encrypt\+Block@{A\+E\+S\+E\+C\+B\+Encrypt\+Block}!aes\+\_\+pic24f.\+h@{aes\+\_\+pic24f.\+h}}
+\subsubsection[{A\+E\+S\+E\+C\+B\+Encrypt\+Block}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+E\+S\+E\+C\+B\+Encrypt\+Block(
+\begin{DoxyParamCaption}
+\item[{}]{p, }
+\item[{}]{s, }
+\item[{}]{c, }
+\item[{}]{ks}
+\end{DoxyParamCaption}
+)}\label{aes__pic24f_8h_a9217ed82b4d23211245cba1e796ea148}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{switch}(ks)\{                                                         \(\backslash\)
+                case \hyperlink{_a_e_s___e_c_b___p_i_c32_8h_abc14413205edecd0cdb1c246532a01e8a6d7702134d26bb3c1e2a72c352882260}{AES\_KEY\_TYPE\_128\_BIT}:AES128EncryptBlock(p,s,c);\textcolor{keywordflow}{break};      \(\backslash\)
+                case \hyperlink{_a_e_s___e_c_b___p_i_c32_8h_abc14413205edecd0cdb1c246532a01e8a4ca013d0ba0c8e2f73edef4c21ea6a8d}{AES\_KEY\_TYPE\_192\_BIT}:AES192EncryptBlock(p,s,c);\textcolor{keywordflow}{break};      \(\backslash\)
+                case \hyperlink{_a_e_s___e_c_b___p_i_c32_8h_abc14413205edecd0cdb1c246532a01e8a83a2c8c206ab7bc39cf1349d1d8f8974}{AES\_KEY\_TYPE\_256\_BIT}:AES256EncryptBlock(p,s,c);\textcolor{keywordflow}{break};      \(\backslash\)
+                default:\textcolor{keywordflow}{break};                                                  \(\backslash\)
+            \}
+\end{DoxyCode}
+
+
+Definition at line 28 of file aes\+\_\+pic24f.\+h.
+

@@ -1,0 +1,37 @@
+digraph "_USB_InitWrite"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="_USB_InitWrite",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="USBHostWrite",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host_8c.html#aab4a83f31884a531ad00ce9255c2a2c0"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="AndroidAppWrite",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__android_8c.html#ad595e7c4d8ef1a2807a3998b7e43cc9c"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="USBHostCDCTasks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__cdc_8c.html#a6e595b04dc00545e596306e7f4b3fa3d"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="USBHostCDC_ApiDeviceDetect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__cdc__interface_8c.html#aebb742aa385542e9b8163cea4f7604fc"];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="USBHostCDCTransfer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__cdc_8c.html#afaeafef25dcd0f4c8e3584fa8e89cd43"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="USBHostCDC_Api_ACM\l_Request",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__cdc__interface_8c.html#aa8e1f0f1a5f435e164ce2ee047c2adb5"];
+  Node2 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="USBHostGenericWrite",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__generic_8c.html#a17abe6d67643d55ff690e1204c04dad2"];
+  Node2 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="USBHostHIDTransfer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__hid_8c.html#acd97326f3ecd30569ac7c6c1de95c691"];
+  Node2 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="USBHostMIDIWrite",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__midi_8c.html#af4c19be422440715dcfc4f1523d1910f"];
+  Node2 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="USBHostMSDTasks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__msd_8c.html#aa41223ae18108ca0d663875f47a3ae37"];
+  Node2 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="USBHostMSDTransfer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__msd_8c.html#a609b0f6a6da6ce032bdb5131e45cc304"];
+  Node2 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="USBHostMSDEventHandler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__msd_8c.html#a694dc670eeeba6b473c1bf3ab5ec1fd8"];
+  Node2 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="_USBHostPrinter_WriteFrom\lQueue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__printer_8c.html#a28c61a0f843c82f59895bdb1d0740bd1"];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="USBHostPrinterEventHandler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__printer_8c.html#a5e1b4daf8b38172c637641f4adff5f4d"];
+  Node14 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="USBHostPrinterWrite",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__printer_8c.html#af60f70dd5035278bd3a4d9d6d54032eb"];
+}

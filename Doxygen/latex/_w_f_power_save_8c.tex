@@ -1,0 +1,352 @@
+\hypertarget{_w_f_power_save_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Wi\+Fi/\+W\+F\+Power\+Save.c File Reference}
+\label{_w_f_power_save_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Wi\+Fi/\+W\+F\+Power\+Save.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Wi\+Fi/\+W\+F\+Power\+Save.\+c}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structpwr_mode_request_struct}{pwr\+Mode\+Request\+Struct}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structpwr_mode_request_struct}{pwr\+Mode\+Request\+Struct} \hyperlink{_w_f_power_save_8c_aaaaf3fe3753f9076e2ed36a4c76d18f0}{t\+W\+F\+Pwr\+Mode\+Req}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_w_f_power_save_8c_a92e6ac0d8c32302fe5f773a78a3f3ac3}{t\+W\+F\+Ps\+Pwr\+Mode} \{ \hyperlink{_w_f_power_save_8c_a92e6ac0d8c32302fe5f773a78a3f3ac3a2654d203ce5fe9fd4074c8b714ea2b53}{P\+S\+\_\+\+P\+O\+L\+L\+\_\+\+E\+N\+A\+B\+L\+E\+D} = 0, 
+\hyperlink{_w_f_power_save_8c_a92e6ac0d8c32302fe5f773a78a3f3ac3a8cfeb60849a86dc6d52c366d2c19ea70}{P\+S\+\_\+\+P\+O\+L\+L\+\_\+\+D\+I\+S\+A\+B\+L\+E\+D}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_w_f_power_save_8c_ae8dbddf91968d096bee605e662cfed1e}{Set\+Power\+Save\+State} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} power\+Save\+State)
+\item 
+void \hyperlink{_w_f_power_save_8c_a7e8fdb1da5c02d1c1c3cba8e0d20554e}{Set\+App\+Power\+Save\+Mode} (\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} state)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_w_f_power_save_8c_a054d4dec81ff462ccc55036a15a150dd}{Get\+App\+Power\+Save\+Mode} (void)
+\item 
+void \hyperlink{_w_f_power_save_8c_a02f5132f54243c47d24fc6aa0874cfd2}{W\+F\+Configure\+Low\+Power\+Mode} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} action)
+\item 
+void \hyperlink{_w_f_power_save_8c_a164b25f172abce3199cfac4a7e376b0f}{W\+F\+\_\+\+Ps\+Poll\+Enable} (\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} rx\+Dtim)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_w_f_power_save_8c_a4b4e139472e4db5477bcd9ea7ac0d2b2}{is\+Sleep\+Needed} (void)
+\item 
+void \hyperlink{_w_f_power_save_8c_a0a06419d06b74c1c91f1acb010066ce0}{Clear\+Sleep\+Needed} (void)
+\item 
+void \hyperlink{_w_f_power_save_8c_ae274787ad2e6795d64fbf7155c9f6dcf}{Set\+Sleep\+Needed} (void)
+\item 
+void \hyperlink{_w_f_power_save_8c_af47d74aa68860b28e6b6fc85b0dc90ea}{W\+F\+\_\+\+Ps\+Poll\+Disable} (void)
+\item 
+void \hyperlink{_w_f_power_save_8c_a5c5b158b586d1db3a4fcea8e3584c8a1}{W\+F\+\_\+\+Get\+Power\+Save\+State} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+power\+Save\+State)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_w_f_power_save_8c_ae45f9d18b9b9ff24f2ae8453bf2774ad}{W\+Fis\+Ps\+Poll\+Enabled} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_w_f_power_save_8c_a745042c666b24d654effc321a1cc9c46}{W\+F\+Is\+Ps\+Poll\+Active} (void)
+\item 
+void \hyperlink{_w_f_power_save_8c_af3cc6e34f74ac74fbd2424a49d521be2}{Ensure\+W\+Fis\+Awake} ()
+\item 
+void \hyperlink{_w_f_power_save_8c_a1943c2756df3f5ff21d20a27f02a0451}{W\+F\+\_\+\+Hibernate\+Enable} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_w_f_power_save_8c_a6e01ddc6f549f9eb7655eae1e62767d0}{g\+\_\+rx\+Dtim}
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_w_f_power_save_8c_a047ec09a70d73fd84f8bb9457de626ba}{g\+R\+F\+Module\+Ver1209or\+Later}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_w_f_power_save_8c_aaaaf3fe3753f9076e2ed36a4c76d18f0}{}\index{W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}!t\+W\+F\+Pwr\+Mode\+Req@{t\+W\+F\+Pwr\+Mode\+Req}}
+\index{t\+W\+F\+Pwr\+Mode\+Req@{t\+W\+F\+Pwr\+Mode\+Req}!W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}}
+\subsubsection[{t\+W\+F\+Pwr\+Mode\+Req}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf pwr\+Mode\+Request\+Struct}  {\bf t\+W\+F\+Pwr\+Mode\+Req}}\label{_w_f_power_save_8c_aaaaf3fe3753f9076e2ed36a4c76d18f0}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_w_f_power_save_8c_a92e6ac0d8c32302fe5f773a78a3f3ac3}{}\index{W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}!t\+W\+F\+Ps\+Pwr\+Mode@{t\+W\+F\+Ps\+Pwr\+Mode}}
+\index{t\+W\+F\+Ps\+Pwr\+Mode@{t\+W\+F\+Ps\+Pwr\+Mode}!W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}}
+\subsubsection[{t\+W\+F\+Ps\+Pwr\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf t\+W\+F\+Ps\+Pwr\+Mode}}\label{_w_f_power_save_8c_a92e6ac0d8c32302fe5f773a78a3f3ac3}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{P\+S\+\_\+\+P\+O\+L\+L\+\_\+\+E\+N\+A\+B\+L\+E\+D@{P\+S\+\_\+\+P\+O\+L\+L\+\_\+\+E\+N\+A\+B\+L\+E\+D}!W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}}\index{W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}!P\+S\+\_\+\+P\+O\+L\+L\+\_\+\+E\+N\+A\+B\+L\+E\+D@{P\+S\+\_\+\+P\+O\+L\+L\+\_\+\+E\+N\+A\+B\+L\+E\+D}}\item[{\em 
+\hypertarget{_w_f_power_save_8c_a92e6ac0d8c32302fe5f773a78a3f3ac3a2654d203ce5fe9fd4074c8b714ea2b53}{}P\+S\+\_\+\+P\+O\+L\+L\+\_\+\+E\+N\+A\+B\+L\+E\+D\label{_w_f_power_save_8c_a92e6ac0d8c32302fe5f773a78a3f3ac3a2654d203ce5fe9fd4074c8b714ea2b53}
+}]\index{P\+S\+\_\+\+P\+O\+L\+L\+\_\+\+D\+I\+S\+A\+B\+L\+E\+D@{P\+S\+\_\+\+P\+O\+L\+L\+\_\+\+D\+I\+S\+A\+B\+L\+E\+D}!W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}}\index{W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}!P\+S\+\_\+\+P\+O\+L\+L\+\_\+\+D\+I\+S\+A\+B\+L\+E\+D@{P\+S\+\_\+\+P\+O\+L\+L\+\_\+\+D\+I\+S\+A\+B\+L\+E\+D}}\item[{\em 
+\hypertarget{_w_f_power_save_8c_a92e6ac0d8c32302fe5f773a78a3f3ac3a8cfeb60849a86dc6d52c366d2c19ea70}{}P\+S\+\_\+\+P\+O\+L\+L\+\_\+\+D\+I\+S\+A\+B\+L\+E\+D\label{_w_f_power_save_8c_a92e6ac0d8c32302fe5f773a78a3f3ac3a8cfeb60849a86dc6d52c366d2c19ea70}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 82 of file W\+F\+Power\+Save.\+c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_w_f_power_save_8c_a0a06419d06b74c1c91f1acb010066ce0}{}\index{W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}!Clear\+Sleep\+Needed@{Clear\+Sleep\+Needed}}
+\index{Clear\+Sleep\+Needed@{Clear\+Sleep\+Needed}!W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}}
+\subsubsection[{Clear\+Sleep\+Needed}]{\setlength{\rightskip}{0pt plus 5cm}void Clear\+Sleep\+Needed (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_power_save_8c_a0a06419d06b74c1c91f1acb010066ce0}
+
+
+Definition at line 287 of file W\+F\+Power\+Save.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+\hypertarget{_w_f_power_save_8c_af3cc6e34f74ac74fbd2424a49d521be2}{}\index{W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}!Ensure\+W\+Fis\+Awake@{Ensure\+W\+Fis\+Awake}}
+\index{Ensure\+W\+Fis\+Awake@{Ensure\+W\+Fis\+Awake}!W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}}
+\subsubsection[{Ensure\+W\+Fis\+Awake}]{\setlength{\rightskip}{0pt plus 5cm}void Ensure\+W\+Fis\+Awake (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_power_save_8c_af3cc6e34f74ac74fbd2424a49d521be2}
+
+
+Definition at line 505 of file W\+F\+Power\+Save.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\hypertarget{_w_f_power_save_8c_a054d4dec81ff462ccc55036a15a150dd}{}\index{W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}!Get\+App\+Power\+Save\+Mode@{Get\+App\+Power\+Save\+Mode}}
+\index{Get\+App\+Power\+Save\+Mode@{Get\+App\+Power\+Save\+Mode}!W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}}
+\subsubsection[{Get\+App\+Power\+Save\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} Get\+App\+Power\+Save\+Mode (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_power_save_8c_a054d4dec81ff462ccc55036a15a150dd}
+
+
+Definition at line 340 of file W\+F\+Power\+Save.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\hypertarget{_w_f_power_save_8c_a4b4e139472e4db5477bcd9ea7ac0d2b2}{}\index{W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}!is\+Sleep\+Needed@{is\+Sleep\+Needed}}
+\index{is\+Sleep\+Needed@{is\+Sleep\+Needed}!W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}}
+\subsubsection[{is\+Sleep\+Needed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} is\+Sleep\+Needed (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_power_save_8c_a4b4e139472e4db5477bcd9ea7ac0d2b2}
+
+
+Definition at line 282 of file W\+F\+Power\+Save.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+\hypertarget{_w_f_power_save_8c_a7e8fdb1da5c02d1c1c3cba8e0d20554e}{}\index{W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}!Set\+App\+Power\+Save\+Mode@{Set\+App\+Power\+Save\+Mode}}
+\index{Set\+App\+Power\+Save\+Mode@{Set\+App\+Power\+Save\+Mode}!W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}}
+\subsubsection[{Set\+App\+Power\+Save\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}void Set\+App\+Power\+Save\+Mode (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+O\+O\+L}}]{state}
+\end{DoxyParamCaption}
+)}\label{_w_f_power_save_8c_a7e8fdb1da5c02d1c1c3cba8e0d20554e}
+
+
+Definition at line 316 of file W\+F\+Power\+Save.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 5
+
+
+\hypertarget{_w_f_power_save_8c_ae8dbddf91968d096bee605e662cfed1e}{}\index{W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}!Set\+Power\+Save\+State@{Set\+Power\+Save\+State}}
+\index{Set\+Power\+Save\+State@{Set\+Power\+Save\+State}!W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}}
+\subsubsection[{Set\+Power\+Save\+State}]{\setlength{\rightskip}{0pt plus 5cm}void Set\+Power\+Save\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{power\+Save\+State}
+\end{DoxyParamCaption}
+)}\label{_w_f_power_save_8c_ae8dbddf91968d096bee605e662cfed1e}
+
+
+Definition at line 640 of file W\+F\+Power\+Save.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\hypertarget{_w_f_power_save_8c_ae274787ad2e6795d64fbf7155c9f6dcf}{}\index{W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}!Set\+Sleep\+Needed@{Set\+Sleep\+Needed}}
+\index{Set\+Sleep\+Needed@{Set\+Sleep\+Needed}!W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}}
+\subsubsection[{Set\+Sleep\+Needed}]{\setlength{\rightskip}{0pt plus 5cm}void Set\+Sleep\+Needed (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_power_save_8c_ae274787ad2e6795d64fbf7155c9f6dcf}
+
+
+Definition at line 292 of file W\+F\+Power\+Save.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 7
+
+
+\hypertarget{_w_f_power_save_8c_a5c5b158b586d1db3a4fcea8e3584c8a1}{}\index{W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}!W\+F\+\_\+\+Get\+Power\+Save\+State@{W\+F\+\_\+\+Get\+Power\+Save\+State}}
+\index{W\+F\+\_\+\+Get\+Power\+Save\+State@{W\+F\+\_\+\+Get\+Power\+Save\+State}!W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}}
+\subsubsection[{W\+F\+\_\+\+Get\+Power\+Save\+State}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+Get\+Power\+Save\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+power\+Save\+State}
+\end{DoxyParamCaption}
+)}\label{_w_f_power_save_8c_a5c5b158b586d1db3a4fcea8e3584c8a1}
+
+
+Definition at line 413 of file W\+F\+Power\+Save.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 8
+
+
+\hypertarget{_w_f_power_save_8c_a1943c2756df3f5ff21d20a27f02a0451}{}\index{W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}!W\+F\+\_\+\+Hibernate\+Enable@{W\+F\+\_\+\+Hibernate\+Enable}}
+\index{W\+F\+\_\+\+Hibernate\+Enable@{W\+F\+\_\+\+Hibernate\+Enable}!W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}}
+\subsubsection[{W\+F\+\_\+\+Hibernate\+Enable}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+Hibernate\+Enable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_power_save_8c_a1943c2756df3f5ff21d20a27f02a0451}
+
+
+Definition at line 561 of file W\+F\+Power\+Save.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 9
+
+
+\hypertarget{_w_f_power_save_8c_af47d74aa68860b28e6b6fc85b0dc90ea}{}\index{W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}!W\+F\+\_\+\+Ps\+Poll\+Disable@{W\+F\+\_\+\+Ps\+Poll\+Disable}}
+\index{W\+F\+\_\+\+Ps\+Poll\+Disable@{W\+F\+\_\+\+Ps\+Poll\+Disable}!W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}}
+\subsubsection[{W\+F\+\_\+\+Ps\+Poll\+Disable}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+Ps\+Poll\+Disable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_power_save_8c_af47d74aa68860b28e6b6fc85b0dc90ea}
+
+
+Definition at line 368 of file W\+F\+Power\+Save.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 10
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 11
+
+
+\hypertarget{_w_f_power_save_8c_a164b25f172abce3199cfac4a7e376b0f}{}\index{W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}!W\+F\+\_\+\+Ps\+Poll\+Enable@{W\+F\+\_\+\+Ps\+Poll\+Enable}}
+\index{W\+F\+\_\+\+Ps\+Poll\+Enable@{W\+F\+\_\+\+Ps\+Poll\+Enable}!W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}}
+\subsubsection[{W\+F\+\_\+\+Ps\+Poll\+Enable}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+\_\+\+Ps\+Poll\+Enable (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+O\+O\+L}}]{rx\+Dtim}
+\end{DoxyParamCaption}
+)}\label{_w_f_power_save_8c_a164b25f172abce3199cfac4a7e376b0f}
+
+
+Definition at line 240 of file W\+F\+Power\+Save.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 12
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 13
+
+
+\hypertarget{_w_f_power_save_8c_a02f5132f54243c47d24fc6aa0874cfd2}{}\index{W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}!W\+F\+Configure\+Low\+Power\+Mode@{W\+F\+Configure\+Low\+Power\+Mode}}
+\index{W\+F\+Configure\+Low\+Power\+Mode@{W\+F\+Configure\+Low\+Power\+Mode}!W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}}
+\subsubsection[{W\+F\+Configure\+Low\+Power\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+Configure\+Low\+Power\+Mode (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{action}
+\end{DoxyParamCaption}
+)}\label{_w_f_power_save_8c_a02f5132f54243c47d24fc6aa0874cfd2}
+
+
+Definition at line 165 of file W\+F\+Power\+Save.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 14
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 15
+
+
+\hypertarget{_w_f_power_save_8c_a745042c666b24d654effc321a1cc9c46}{}\index{W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}!W\+F\+Is\+Ps\+Poll\+Active@{W\+F\+Is\+Ps\+Poll\+Active}}
+\index{W\+F\+Is\+Ps\+Poll\+Active@{W\+F\+Is\+Ps\+Poll\+Active}!W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}}
+\subsubsection[{W\+F\+Is\+Ps\+Poll\+Active}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} W\+F\+Is\+Ps\+Poll\+Active (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_power_save_8c_a745042c666b24d654effc321a1cc9c46}
+
+
+Definition at line 475 of file W\+F\+Power\+Save.\+c.
+
+\hypertarget{_w_f_power_save_8c_ae45f9d18b9b9ff24f2ae8453bf2774ad}{}\index{W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}!W\+Fis\+Ps\+Poll\+Enabled@{W\+Fis\+Ps\+Poll\+Enabled}}
+\index{W\+Fis\+Ps\+Poll\+Enabled@{W\+Fis\+Ps\+Poll\+Enabled}!W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}}
+\subsubsection[{W\+Fis\+Ps\+Poll\+Enabled}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} W\+Fis\+Ps\+Poll\+Enabled (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_power_save_8c_ae45f9d18b9b9ff24f2ae8453bf2774ad}
+
+
+Definition at line 439 of file W\+F\+Power\+Save.\+c.
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{_w_f_power_save_8c_a6e01ddc6f549f9eb7655eae1e62767d0}{}\index{W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}!g\+\_\+rx\+Dtim@{g\+\_\+rx\+Dtim}}
+\index{g\+\_\+rx\+Dtim@{g\+\_\+rx\+Dtim}!W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}}
+\subsubsection[{g\+\_\+rx\+Dtim}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} g\+\_\+rx\+Dtim}\label{_w_f_power_save_8c_a6e01ddc6f549f9eb7655eae1e62767d0}
+
+
+Definition at line 118 of file W\+F\+Power\+Save.\+c.
+
+\hypertarget{_w_f_power_save_8c_a047ec09a70d73fd84f8bb9457de626ba}{}\index{W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}!g\+R\+F\+Module\+Ver1209or\+Later@{g\+R\+F\+Module\+Ver1209or\+Later}}
+\index{g\+R\+F\+Module\+Ver1209or\+Later@{g\+R\+F\+Module\+Ver1209or\+Later}!W\+F\+Power\+Save.\+c@{W\+F\+Power\+Save.\+c}}
+\subsubsection[{g\+R\+F\+Module\+Ver1209or\+Later}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} g\+R\+F\+Module\+Ver1209or\+Later}\label{_w_f_power_save_8c_a047ec09a70d73fd84f8bb9457de626ba}
+
+
+Definition at line 62 of file W\+F\+Init.\+c.
+

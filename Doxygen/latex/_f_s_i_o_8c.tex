@@ -1,0 +1,883 @@
+\hypertarget{_f_s_i_o_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+M\+D\+D File System/\+F\+S\+I\+O.c File Reference}
+\label{_f_s_i_o_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+M\+D\+D File System/\+F\+S\+I\+O.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+M\+D\+D File System/\+F\+S\+I\+O.\+c}}
+{\ttfamily \#include \char`\"{}Compiler.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}M\+D\+D File System/\+F\+S\+I\+O.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Generic\+Type\+Defs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}string.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stdlib.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ctype.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}M\+D\+D File System/\+F\+S\+Defs.\+h\char`\"{}}\\*
+Include dependency graph for F\+S\+I\+O.\+c\+:
+% FIG 0
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct___d_i_r_e_n_t_r_y}{\+\_\+\+D\+I\+R\+E\+N\+T\+R\+Y}
+\item 
+struct \hyperlink{struct_l_f_n___e_n_t_r_y}{L\+F\+N\+\_\+\+E\+N\+T\+R\+Y}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_f_s_i_o_8c_ab1ff242c1144a00005c5ad1ff6837b24}{D\+I\+R\+E\+C\+T\+O\+R\+Y}~0x12
+\item 
+\#define \hyperlink{_f_s_i_o_8c_a44a4d3f837c8f3deea8c32ae627be146}{D\+I\+R\+E\+N\+T\+R\+I\+E\+S\+\_\+\+P\+E\+R\+\_\+\+S\+E\+C\+T\+O\+R}~(M\+E\+D\+I\+A\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+S\+I\+Z\+E / 32)
+\item 
+\#define \hyperlink{_f_s_i_o_8c_a0e0810597a4b7216de6711f141eb2515}{M\+A\+X\+\_\+\+U\+T\+F16\+\_\+\+C\+H\+A\+R\+S\+\_\+\+I\+N\+\_\+\+L\+F\+N\+\_\+\+E\+N\+T\+R\+Y}~(\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E})13
+\item 
+\#define \hyperlink{_f_s_i_o_8c_a733aa3f026bc9611eed455713a861f0b}{C\+E\+\_\+\+F\+A\+T\+\_\+\+E\+O\+F}~60
+\item 
+\#define \hyperlink{_f_s_i_o_8c_accc3ae9eab75f429c0b915e94afffa8d}{C\+E\+\_\+\+E\+O\+F}~61
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{struct___d_i_r_e_n_t_r_y}{\+\_\+\+D\+I\+R\+E\+N\+T\+R\+Y} $\ast$ \hyperlink{_f_s_i_o_8c_a99a49bb2ca7cd3e259598bf9dd4ff5f7}{D\+I\+R\+E\+N\+T\+R\+Y}
+\item 
+typedef \hyperlink{struct_f_s_f_i_l_e}{F\+S\+F\+I\+L\+E} $\ast$ \hyperlink{_f_s_i_o_8c_a1c55c7244a2d5b4f38b31cfec611dc27}{F\+I\+L\+E\+O\+B\+J}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_f_s_i_o_8c_a00c4ddb483cba42b80631a563d949008}{F\+I\+L\+E\+\_\+\+D\+I\+R\+\_\+\+N\+A\+M\+E\+\_\+\+T\+Y\+P\+E} \{ \\*
+\hyperlink{_f_s_i_o_8c_a00c4ddb483cba42b80631a563d949008a9f41b55a4a919860f49615cba90d85ee}{N\+A\+M\+E\+\_\+8\+P3\+\_\+\+A\+S\+C\+I\+I\+\_\+\+C\+A\+P\+S\+\_\+\+T\+Y\+P\+E}, 
+\hyperlink{_f_s_i_o_8c_a00c4ddb483cba42b80631a563d949008a190d2cf1373177be2a93a8ab03d18952}{N\+A\+M\+E\+\_\+8\+P3\+\_\+\+A\+S\+C\+I\+I\+\_\+\+M\+I\+X\+E\+D\+\_\+\+T\+Y\+P\+E}, 
+\hyperlink{_f_s_i_o_8c_a00c4ddb483cba42b80631a563d949008a996ca3c079cd40f36460ddf69589b8eb}{N\+A\+M\+E\+\_\+8\+P3\+\_\+\+U\+T\+F16\+\_\+\+T\+Y\+P\+E}, 
+\hyperlink{_f_s_i_o_8c_a00c4ddb483cba42b80631a563d949008a00b05193a71ae91af8633c8538f3be0d}{N\+A\+M\+E\+\_\+8\+P3\+\_\+\+U\+T\+F16\+\_\+\+A\+S\+C\+I\+I\+\_\+\+C\+A\+P\+S\+\_\+\+T\+Y\+P\+E}, 
+\\*
+\hyperlink{_f_s_i_o_8c_a00c4ddb483cba42b80631a563d949008a9497d7fef35966c5ffc900718e6618de}{N\+A\+M\+E\+\_\+8\+P3\+\_\+\+U\+T\+F16\+\_\+\+A\+S\+C\+I\+I\+\_\+\+M\+I\+X\+E\+D\+\_\+\+T\+Y\+P\+E}, 
+\hyperlink{_f_s_i_o_8c_a00c4ddb483cba42b80631a563d949008a4c2a5841efe58a87208717d8ae8688fd}{N\+A\+M\+E\+\_\+8\+P3\+\_\+\+U\+T\+F16\+\_\+\+N\+O\+N\+A\+S\+C\+I\+I\+\_\+\+T\+Y\+P\+E}, 
+\hyperlink{_f_s_i_o_8c_a00c4ddb483cba42b80631a563d949008a0e25a9d7666ac53c06e0f150bdc25849}{N\+A\+M\+E\+\_\+\+L\+F\+N\+\_\+\+T\+Y\+P\+E}, 
+\hyperlink{_f_s_i_o_8c_a00c4ddb483cba42b80631a563d949008a28f3d49101d0d9e766d6b5ae7f944f36}{N\+A\+M\+E\+\_\+\+E\+R\+R\+O\+R}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} \hyperlink{_f_s_i_o_8c_a4d7dfa3bb2dff15bed1982fa8e4595e0}{Read\+F\+A\+T} (\hyperlink{struct_d_i_s_k}{D\+I\+S\+K} $\ast$dsk, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} ccls)
+\item 
+\hyperlink{_f_s_i_o_8c_a99a49bb2ca7cd3e259598bf9dd4ff5f7}{D\+I\+R\+E\+N\+T\+R\+Y} \hyperlink{_f_s_i_o_8c_a2c0446aec539db935e45da19e55fa3f1}{Cache\+\_\+\+File\+\_\+\+Entry} (\hyperlink{_f_s_i_o_8c_a1c55c7244a2d5b4f38b31cfec611dc27}{F\+I\+L\+E\+O\+B\+J} fo, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} $\ast$cur\+Entry, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} Force\+Read)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_f_s_i_o_8c_aa92838a16615c1bb64460c551b9efc23}{Fill\+\_\+\+File\+\_\+\+Object} (\hyperlink{_f_s_i_o_8c_a1c55c7244a2d5b4f38b31cfec611dc27}{F\+I\+L\+E\+O\+B\+J} fo, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} $\ast$f\+Handle)
+\item 
+\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} \hyperlink{_f_s_i_o_8c_a770482c21b6c1913ef159307ddb56b7e}{Cluster2\+Sector} (\hyperlink{struct_d_i_s_k}{D\+I\+S\+K} $\ast$disk, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} cluster)
+\item 
+\hyperlink{_f_s_i_o_8c_a99a49bb2ca7cd3e259598bf9dd4ff5f7}{D\+I\+R\+E\+N\+T\+R\+Y} \hyperlink{_f_s_i_o_8c_a85280edaf801e1a3f13e62344c2d6ce4}{Load\+Dir\+Attrib} (\hyperlink{_f_s_i_o_8c_a1c55c7244a2d5b4f38b31cfec611dc27}{F\+I\+L\+E\+O\+B\+J} fo, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} $\ast$f\+Handle)
+\item 
+void \hyperlink{_f_s_i_o_8c_a75a26039a04177772a323b069b0bdcf2}{File\+Object\+Copy} (\hyperlink{_f_s_i_o_8c_a1c55c7244a2d5b4f38b31cfec611dc27}{F\+I\+L\+E\+O\+B\+J} fo\+Dest, \hyperlink{_f_s_i_o_8c_a1c55c7244a2d5b4f38b31cfec611dc27}{F\+I\+L\+E\+O\+B\+J} fo\+Source)
+\item 
+\hyperlink{_f_s_i_o_8c_a00c4ddb483cba42b80631a563d949008}{F\+I\+L\+E\+\_\+\+D\+I\+R\+\_\+\+N\+A\+M\+E\+\_\+\+T\+Y\+P\+E} \hyperlink{_f_s_i_o_8c_a16024f44ce3d91334d0ae223edd5fb32}{Validate\+Chars} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} mode)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_f_s_i_o_8c_a34a71e8c40389a7bd57551c35c1f6d0c}{Format\+File\+Name} (const char $\ast$file\+Name, \hyperlink{_f_s_i_o_8c_a1c55c7244a2d5b4f38b31cfec611dc27}{F\+I\+L\+E\+O\+B\+J} fptr, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} mode)
+\item 
+\hyperlink{_f_s_defs_8h_a54c0408490a3645ae3ee017d8db3b39e}{C\+E\+T\+Y\+P\+E} \hyperlink{_f_s_i_o_8c_aa0953ab0c059963e7b5c2076fdb01f9b}{F\+I\+L\+Efind} (\hyperlink{_f_s_i_o_8c_a1c55c7244a2d5b4f38b31cfec611dc27}{F\+I\+L\+E\+O\+B\+J} fo\+Dest, \hyperlink{_f_s_i_o_8c_a1c55c7244a2d5b4f38b31cfec611dc27}{F\+I\+L\+E\+O\+B\+J} fo\+Compare\+To, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} cmd, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} mode)
+\item 
+\hyperlink{_f_s_defs_8h_a54c0408490a3645ae3ee017d8db3b39e}{C\+E\+T\+Y\+P\+E} \hyperlink{_f_s_i_o_8c_aefbcc2c762e5983bc83d6baf60d962f1}{F\+I\+L\+Eopen} (\hyperlink{_f_s_i_o_8c_a1c55c7244a2d5b4f38b31cfec611dc27}{F\+I\+L\+E\+O\+B\+J} fo, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} $\ast$f\+Handle, char type)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_f_s_i_o_8c_a477331baab18d704e6a8f36a5f7b27cc}{D\+I\+S\+Kmount} (\hyperlink{struct_d_i_s_k}{D\+I\+S\+K} $\ast$dsk)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_f_s_i_o_8c_a7db7c692f57ae591bcbcda26833552a6}{Load\+M\+B\+R} (\hyperlink{struct_d_i_s_k}{D\+I\+S\+K} $\ast$dsk)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_f_s_i_o_8c_ad2f0426848c078bb63c0dc4aa5092f65}{Load\+Boot\+Sector} (\hyperlink{struct_d_i_s_k}{D\+I\+S\+K} $\ast$dsk)
+\item 
+\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} \hyperlink{_f_s_i_o_8c_acb6be567ae4ba9d84a2edcb4fa1c2319}{Get\+Full\+Cluster\+Number} (\hyperlink{_f_s_i_o_8c_a99a49bb2ca7cd3e259598bf9dd4ff5f7}{D\+I\+R\+E\+N\+T\+R\+Y} entry)
+\item 
+int \hyperlink{_f_s_i_o_8c_a77bf783068cdee8bbca1f73af66cb1c5}{F\+S\+Init} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_f_s_i_o_8c_a11c64fd4e3052b4db1ace3e6da53512b}{F\+I\+L\+Eget\+\_\+next\+\_\+cluster} (\hyperlink{struct_f_s_f_i_l_e}{F\+S\+F\+I\+L\+E} $\ast$fo, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} n)
+\item 
+int \hyperlink{_f_s_i_o_8c_a7af3ca3a0534ded81fcc5d0744a2428e}{F\+Sfclose} (\hyperlink{struct_f_s_f_i_l_e}{F\+S\+F\+I\+L\+E} $\ast$fo)
+\item 
+\hyperlink{struct_f_s_f_i_l_e}{F\+S\+F\+I\+L\+E} $\ast$ \hyperlink{_f_s_i_o_8c_a80780b69226fc956fb01be96e3dd4e66}{F\+Sfopen} (const char $\ast$file\+Name, const char $\ast$mode)
+\item 
+long \hyperlink{_f_s_i_o_8c_a9e906fe417369377d4cb15dcaec8b02a}{F\+Sftell} (\hyperlink{struct_f_s_f_i_l_e}{F\+S\+F\+I\+L\+E} $\ast$fo)
+\item 
+void \hyperlink{_f_s_i_o_8c_addb98c8f53936a7ea80ffca6c6d5cb54}{F\+Srewind} (\hyperlink{struct_f_s_f_i_l_e}{F\+S\+F\+I\+L\+E} $\ast$fo)
+\item 
+int \hyperlink{_f_s_i_o_8c_abbe2bcb5a3adb480d6fed81487d3e74e}{F\+Serror} (void)
+\item 
+int \hyperlink{_f_s_i_o_8c_aec3a02f0851654b4c3e584a241f75e6f}{F\+Sfeof} (\hyperlink{struct_f_s_f_i_l_e}{F\+S\+F\+I\+L\+E} $\ast$stream)
+\item 
+size\+\_\+t \hyperlink{_f_s_i_o_8c_ae2416613659351f120d760526eb44d16}{F\+Sfread} (void $\ast$ptr, size\+\_\+t size, size\+\_\+t n, \hyperlink{struct_f_s_f_i_l_e}{F\+S\+F\+I\+L\+E} $\ast$stream)
+\item 
+int \hyperlink{_f_s_i_o_8c_a919fabb3203e0eacf711b957bf803c10}{F\+Sfseek} (\hyperlink{struct_f_s_f_i_l_e}{F\+S\+F\+I\+L\+E} $\ast$stream, long offset, int whence)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_f_s_f_i_l_e}{F\+S\+F\+I\+L\+E} \hyperlink{_f_s_i_o_8c_a4a9da356cbd25e6ff449b811093d72e0}{g\+File\+Array} \mbox{[}F\+S\+\_\+\+M\+A\+X\+\_\+\+F\+I\+L\+E\+S\+\_\+\+O\+P\+E\+N\mbox{]}
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_f_s_i_o_8c_ae261a56db4fb4d1ae4c3558903d280ce}{g\+File\+Slot\+Open} \mbox{[}F\+S\+\_\+\+M\+A\+X\+\_\+\+F\+I\+L\+E\+S\+\_\+\+O\+P\+E\+N\mbox{]}
+\item 
+\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} \hyperlink{_f_s_i_o_8c_a53c696081a3e1e027a624197ecf49eb2}{g\+Last\+F\+A\+T\+Sector\+Read} = 0x\+F\+F\+F\+F\+F\+F\+F\+F
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_f_s_i_o_8c_a3e384367efefa94463a80970e64784d6}{g\+Need\+F\+A\+T\+Write} = \hyperlink{_generic_type_defs_8h_afbf708854fe02af8475a9ba02f3196cbaa1e095cc966dbecf6a0d8aad75348d1a}{F\+A\+L\+S\+E}
+\item 
+\hyperlink{struct_f_s_f_i_l_e}{F\+S\+F\+I\+L\+E} $\ast$ \hyperlink{_f_s_i_o_8c_a1b1f91478a77696942e61b80d2e7e759}{g\+Buffer\+Owner} = N\+U\+L\+L
+\item 
+\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} \hyperlink{_f_s_i_o_8c_a671d3cee3f9354612937e77679b9f01e}{g\+Last\+Data\+Sector\+Read} = 0x\+F\+F\+F\+F\+F\+F\+F\+F
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_f_s_i_o_8c_a5b98c2cd40829f35610cf226a7f399b8}{g\+Need\+Data\+Write} = \hyperlink{_generic_type_defs_8h_afbf708854fe02af8475a9ba02f3196cbaa1e095cc966dbecf6a0d8aad75348d1a}{F\+A\+L\+S\+E}
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_f_s_i_o_8c_a4f8ac1b932c44cd14f73130bcd6edf43}{next\+Cluster\+Is\+Last} = \hyperlink{_generic_type_defs_8h_afbf708854fe02af8475a9ba02f3196cbaa1e095cc966dbecf6a0d8aad75348d1a}{F\+A\+L\+S\+E}
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_f_s_i_o_8c_a37bc8a1459bbc3a62cde9b63f36b3b67}{g\+Buffer\+Zeroed} = \hyperlink{_generic_type_defs_8h_afbf708854fe02af8475a9ba02f3196cbaa1e095cc966dbecf6a0d8aad75348d1a}{F\+A\+L\+S\+E}
+\item 
+\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} \hyperlink{_f_s_i_o_8c_a3158be699a79b4006fef0841eed663bf}{Fat\+Root\+Dir\+Cluster\+Value}
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_f_s_i_o_8c_a59d0e63a170e466cb809c05ecced3115}{F\+Serrno}
+\item 
+\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} \hyperlink{_f_s_i_o_8c_a1a231362f3589da41ece3bc1d092d436}{Temp\+Cluster\+Calc}
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_f_s_i_o_8c_ab997f25030bc81a4a0679f61ab4a918a}{dir\+Cleared}
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_f_s_i_o_8c_a59c485086b6d45cd5d37bb216ea70ec4}{recache} = \hyperlink{_generic_type_defs_8h_afbf708854fe02af8475a9ba02f3196cbaa1e095cc966dbecf6a0d8aad75348d1a}{F\+A\+L\+S\+E}
+\item 
+\hyperlink{struct_f_s_f_i_l_e}{F\+S\+F\+I\+L\+E} \hyperlink{_f_s_i_o_8c_ad44d5a57ea5c7c71297cdc08c6d34229}{temp\+C\+W\+Dobj}
+\item 
+\hyperlink{struct_f_s_f_i_l_e}{F\+S\+F\+I\+L\+E} \hyperlink{_f_s_i_o_8c_a0c3742f0b089d5e190cb61b310ce4450}{g\+File\+Temp}
+\item 
+\hyperlink{struct_f_s_f_i_l_e}{F\+S\+F\+I\+L\+E} \hyperlink{_f_s_i_o_8c_ab336cd87e59961d2014431b241ff0278}{cwd}
+\item 
+\hyperlink{struct_f_s_f_i_l_e}{F\+S\+F\+I\+L\+E} $\ast$ \hyperlink{_f_s_i_o_8c_a5af4a65a59daa27cc78efefae5faadea}{cwdptr} = \&\hyperlink{_f_s_i_o_8c_ab336cd87e59961d2014431b241ff0278}{cwd}
+\item 
+\hyperlink{struct_d_i_s_k}{D\+I\+S\+K} \hyperlink{_f_s_i_o_8c_a65c2e8932d3fc7aa29eb3efca57fe1c0}{g\+Disk\+Data}
+\item 
+char $\ast$ \hyperlink{_f_s_i_o_8c_ab9dd6ffd46655ec943ce3913ea9d2034}{ascii\+Filename}
+\item 
+unsigned short int \hyperlink{_f_s_i_o_8c_af7ceb221ecea7563c772d44b8093efef}{file\+Name\+Length}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_f_s_i_o_8c_accc3ae9eab75f429c0b915e94afffa8d}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!C\+E\+\_\+\+E\+O\+F@{C\+E\+\_\+\+E\+O\+F}}
+\index{C\+E\+\_\+\+E\+O\+F@{C\+E\+\_\+\+E\+O\+F}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{C\+E\+\_\+\+E\+O\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+E\+\_\+\+E\+O\+F~61}\label{_f_s_i_o_8c_accc3ae9eab75f429c0b915e94afffa8d}
+
+
+Definition at line 280 of file F\+S\+I\+O.\+c.
+
+\hypertarget{_f_s_i_o_8c_a733aa3f026bc9611eed455713a861f0b}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!C\+E\+\_\+\+F\+A\+T\+\_\+\+E\+O\+F@{C\+E\+\_\+\+F\+A\+T\+\_\+\+E\+O\+F}}
+\index{C\+E\+\_\+\+F\+A\+T\+\_\+\+E\+O\+F@{C\+E\+\_\+\+F\+A\+T\+\_\+\+E\+O\+F}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{C\+E\+\_\+\+F\+A\+T\+\_\+\+E\+O\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+E\+\_\+\+F\+A\+T\+\_\+\+E\+O\+F~60}\label{_f_s_i_o_8c_a733aa3f026bc9611eed455713a861f0b}
+
+
+Definition at line 279 of file F\+S\+I\+O.\+c.
+
+\hypertarget{_f_s_i_o_8c_ab1ff242c1144a00005c5ad1ff6837b24}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!D\+I\+R\+E\+C\+T\+O\+R\+Y@{D\+I\+R\+E\+C\+T\+O\+R\+Y}}
+\index{D\+I\+R\+E\+C\+T\+O\+R\+Y@{D\+I\+R\+E\+C\+T\+O\+R\+Y}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{D\+I\+R\+E\+C\+T\+O\+R\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+I\+R\+E\+C\+T\+O\+R\+Y~0x12}\label{_f_s_i_o_8c_ab1ff242c1144a00005c5ad1ff6837b24}
+
+
+Definition at line 243 of file F\+S\+I\+O.\+c.
+
+\hypertarget{_f_s_i_o_8c_a44a4d3f837c8f3deea8c32ae627be146}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!D\+I\+R\+E\+N\+T\+R\+I\+E\+S\+\_\+\+P\+E\+R\+\_\+\+S\+E\+C\+T\+O\+R@{D\+I\+R\+E\+N\+T\+R\+I\+E\+S\+\_\+\+P\+E\+R\+\_\+\+S\+E\+C\+T\+O\+R}}
+\index{D\+I\+R\+E\+N\+T\+R\+I\+E\+S\+\_\+\+P\+E\+R\+\_\+\+S\+E\+C\+T\+O\+R@{D\+I\+R\+E\+N\+T\+R\+I\+E\+S\+\_\+\+P\+E\+R\+\_\+\+S\+E\+C\+T\+O\+R}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{D\+I\+R\+E\+N\+T\+R\+I\+E\+S\+\_\+\+P\+E\+R\+\_\+\+S\+E\+C\+T\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+I\+R\+E\+N\+T\+R\+I\+E\+S\+\_\+\+P\+E\+R\+\_\+\+S\+E\+C\+T\+O\+R~(M\+E\+D\+I\+A\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+S\+I\+Z\+E / 32)}\label{_f_s_i_o_8c_a44a4d3f837c8f3deea8c32ae627be146}
+
+
+Definition at line 245 of file F\+S\+I\+O.\+c.
+
+\hypertarget{_f_s_i_o_8c_a0e0810597a4b7216de6711f141eb2515}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!M\+A\+X\+\_\+\+U\+T\+F16\+\_\+\+C\+H\+A\+R\+S\+\_\+\+I\+N\+\_\+\+L\+F\+N\+\_\+\+E\+N\+T\+R\+Y@{M\+A\+X\+\_\+\+U\+T\+F16\+\_\+\+C\+H\+A\+R\+S\+\_\+\+I\+N\+\_\+\+L\+F\+N\+\_\+\+E\+N\+T\+R\+Y}}
+\index{M\+A\+X\+\_\+\+U\+T\+F16\+\_\+\+C\+H\+A\+R\+S\+\_\+\+I\+N\+\_\+\+L\+F\+N\+\_\+\+E\+N\+T\+R\+Y@{M\+A\+X\+\_\+\+U\+T\+F16\+\_\+\+C\+H\+A\+R\+S\+\_\+\+I\+N\+\_\+\+L\+F\+N\+\_\+\+E\+N\+T\+R\+Y}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{M\+A\+X\+\_\+\+U\+T\+F16\+\_\+\+C\+H\+A\+R\+S\+\_\+\+I\+N\+\_\+\+L\+F\+N\+\_\+\+E\+N\+T\+R\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+U\+T\+F16\+\_\+\+C\+H\+A\+R\+S\+\_\+\+I\+N\+\_\+\+L\+F\+N\+\_\+\+E\+N\+T\+R\+Y~({\bf B\+Y\+T\+E})13}\label{_f_s_i_o_8c_a0e0810597a4b7216de6711f141eb2515}
+
+
+Definition at line 248 of file F\+S\+I\+O.\+c.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_f_s_i_o_8c_a99a49bb2ca7cd3e259598bf9dd4ff5f7}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!D\+I\+R\+E\+N\+T\+R\+Y@{D\+I\+R\+E\+N\+T\+R\+Y}}
+\index{D\+I\+R\+E\+N\+T\+R\+Y@{D\+I\+R\+E\+N\+T\+R\+Y}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{D\+I\+R\+E\+N\+T\+R\+Y}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf \+\_\+\+D\+I\+R\+E\+N\+T\+R\+Y}$\ast$ {\bf D\+I\+R\+E\+N\+T\+R\+Y}}\label{_f_s_i_o_8c_a99a49bb2ca7cd3e259598bf9dd4ff5f7}
+
+
+Definition at line 241 of file F\+S\+I\+O.\+c.
+
+\hypertarget{_f_s_i_o_8c_a1c55c7244a2d5b4f38b31cfec611dc27}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!F\+I\+L\+E\+O\+B\+J@{F\+I\+L\+E\+O\+B\+J}}
+\index{F\+I\+L\+E\+O\+B\+J@{F\+I\+L\+E\+O\+B\+J}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{F\+I\+L\+E\+O\+B\+J}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf F\+S\+F\+I\+L\+E}$\ast$ {\bf F\+I\+L\+E\+O\+B\+J}}\label{_f_s_i_o_8c_a1c55c7244a2d5b4f38b31cfec611dc27}
+
+
+Definition at line 282 of file F\+S\+I\+O.\+c.
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_f_s_i_o_8c_a00c4ddb483cba42b80631a563d949008}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!F\+I\+L\+E\+\_\+\+D\+I\+R\+\_\+\+N\+A\+M\+E\+\_\+\+T\+Y\+P\+E@{F\+I\+L\+E\+\_\+\+D\+I\+R\+\_\+\+N\+A\+M\+E\+\_\+\+T\+Y\+P\+E}}
+\index{F\+I\+L\+E\+\_\+\+D\+I\+R\+\_\+\+N\+A\+M\+E\+\_\+\+T\+Y\+P\+E@{F\+I\+L\+E\+\_\+\+D\+I\+R\+\_\+\+N\+A\+M\+E\+\_\+\+T\+Y\+P\+E}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{F\+I\+L\+E\+\_\+\+D\+I\+R\+\_\+\+N\+A\+M\+E\+\_\+\+T\+Y\+P\+E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf F\+I\+L\+E\+\_\+\+D\+I\+R\+\_\+\+N\+A\+M\+E\+\_\+\+T\+Y\+P\+E}}\label{_f_s_i_o_8c_a00c4ddb483cba42b80631a563d949008}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{N\+A\+M\+E\+\_\+8\+P3\+\_\+\+A\+S\+C\+I\+I\+\_\+\+C\+A\+P\+S\+\_\+\+T\+Y\+P\+E@{N\+A\+M\+E\+\_\+8\+P3\+\_\+\+A\+S\+C\+I\+I\+\_\+\+C\+A\+P\+S\+\_\+\+T\+Y\+P\+E}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!N\+A\+M\+E\+\_\+8\+P3\+\_\+\+A\+S\+C\+I\+I\+\_\+\+C\+A\+P\+S\+\_\+\+T\+Y\+P\+E@{N\+A\+M\+E\+\_\+8\+P3\+\_\+\+A\+S\+C\+I\+I\+\_\+\+C\+A\+P\+S\+\_\+\+T\+Y\+P\+E}}\item[{\em 
+\hypertarget{_f_s_i_o_8c_a00c4ddb483cba42b80631a563d949008a9f41b55a4a919860f49615cba90d85ee}{}N\+A\+M\+E\+\_\+8\+P3\+\_\+\+A\+S\+C\+I\+I\+\_\+\+C\+A\+P\+S\+\_\+\+T\+Y\+P\+E\label{_f_s_i_o_8c_a00c4ddb483cba42b80631a563d949008a9f41b55a4a919860f49615cba90d85ee}
+}]\index{N\+A\+M\+E\+\_\+8\+P3\+\_\+\+A\+S\+C\+I\+I\+\_\+\+M\+I\+X\+E\+D\+\_\+\+T\+Y\+P\+E@{N\+A\+M\+E\+\_\+8\+P3\+\_\+\+A\+S\+C\+I\+I\+\_\+\+M\+I\+X\+E\+D\+\_\+\+T\+Y\+P\+E}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!N\+A\+M\+E\+\_\+8\+P3\+\_\+\+A\+S\+C\+I\+I\+\_\+\+M\+I\+X\+E\+D\+\_\+\+T\+Y\+P\+E@{N\+A\+M\+E\+\_\+8\+P3\+\_\+\+A\+S\+C\+I\+I\+\_\+\+M\+I\+X\+E\+D\+\_\+\+T\+Y\+P\+E}}\item[{\em 
+\hypertarget{_f_s_i_o_8c_a00c4ddb483cba42b80631a563d949008a190d2cf1373177be2a93a8ab03d18952}{}N\+A\+M\+E\+\_\+8\+P3\+\_\+\+A\+S\+C\+I\+I\+\_\+\+M\+I\+X\+E\+D\+\_\+\+T\+Y\+P\+E\label{_f_s_i_o_8c_a00c4ddb483cba42b80631a563d949008a190d2cf1373177be2a93a8ab03d18952}
+}]\index{N\+A\+M\+E\+\_\+8\+P3\+\_\+\+U\+T\+F16\+\_\+\+T\+Y\+P\+E@{N\+A\+M\+E\+\_\+8\+P3\+\_\+\+U\+T\+F16\+\_\+\+T\+Y\+P\+E}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!N\+A\+M\+E\+\_\+8\+P3\+\_\+\+U\+T\+F16\+\_\+\+T\+Y\+P\+E@{N\+A\+M\+E\+\_\+8\+P3\+\_\+\+U\+T\+F16\+\_\+\+T\+Y\+P\+E}}\item[{\em 
+\hypertarget{_f_s_i_o_8c_a00c4ddb483cba42b80631a563d949008a996ca3c079cd40f36460ddf69589b8eb}{}N\+A\+M\+E\+\_\+8\+P3\+\_\+\+U\+T\+F16\+\_\+\+T\+Y\+P\+E\label{_f_s_i_o_8c_a00c4ddb483cba42b80631a563d949008a996ca3c079cd40f36460ddf69589b8eb}
+}]\index{N\+A\+M\+E\+\_\+8\+P3\+\_\+\+U\+T\+F16\+\_\+\+A\+S\+C\+I\+I\+\_\+\+C\+A\+P\+S\+\_\+\+T\+Y\+P\+E@{N\+A\+M\+E\+\_\+8\+P3\+\_\+\+U\+T\+F16\+\_\+\+A\+S\+C\+I\+I\+\_\+\+C\+A\+P\+S\+\_\+\+T\+Y\+P\+E}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!N\+A\+M\+E\+\_\+8\+P3\+\_\+\+U\+T\+F16\+\_\+\+A\+S\+C\+I\+I\+\_\+\+C\+A\+P\+S\+\_\+\+T\+Y\+P\+E@{N\+A\+M\+E\+\_\+8\+P3\+\_\+\+U\+T\+F16\+\_\+\+A\+S\+C\+I\+I\+\_\+\+C\+A\+P\+S\+\_\+\+T\+Y\+P\+E}}\item[{\em 
+\hypertarget{_f_s_i_o_8c_a00c4ddb483cba42b80631a563d949008a00b05193a71ae91af8633c8538f3be0d}{}N\+A\+M\+E\+\_\+8\+P3\+\_\+\+U\+T\+F16\+\_\+\+A\+S\+C\+I\+I\+\_\+\+C\+A\+P\+S\+\_\+\+T\+Y\+P\+E\label{_f_s_i_o_8c_a00c4ddb483cba42b80631a563d949008a00b05193a71ae91af8633c8538f3be0d}
+}]\index{N\+A\+M\+E\+\_\+8\+P3\+\_\+\+U\+T\+F16\+\_\+\+A\+S\+C\+I\+I\+\_\+\+M\+I\+X\+E\+D\+\_\+\+T\+Y\+P\+E@{N\+A\+M\+E\+\_\+8\+P3\+\_\+\+U\+T\+F16\+\_\+\+A\+S\+C\+I\+I\+\_\+\+M\+I\+X\+E\+D\+\_\+\+T\+Y\+P\+E}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!N\+A\+M\+E\+\_\+8\+P3\+\_\+\+U\+T\+F16\+\_\+\+A\+S\+C\+I\+I\+\_\+\+M\+I\+X\+E\+D\+\_\+\+T\+Y\+P\+E@{N\+A\+M\+E\+\_\+8\+P3\+\_\+\+U\+T\+F16\+\_\+\+A\+S\+C\+I\+I\+\_\+\+M\+I\+X\+E\+D\+\_\+\+T\+Y\+P\+E}}\item[{\em 
+\hypertarget{_f_s_i_o_8c_a00c4ddb483cba42b80631a563d949008a9497d7fef35966c5ffc900718e6618de}{}N\+A\+M\+E\+\_\+8\+P3\+\_\+\+U\+T\+F16\+\_\+\+A\+S\+C\+I\+I\+\_\+\+M\+I\+X\+E\+D\+\_\+\+T\+Y\+P\+E\label{_f_s_i_o_8c_a00c4ddb483cba42b80631a563d949008a9497d7fef35966c5ffc900718e6618de}
+}]\index{N\+A\+M\+E\+\_\+8\+P3\+\_\+\+U\+T\+F16\+\_\+\+N\+O\+N\+A\+S\+C\+I\+I\+\_\+\+T\+Y\+P\+E@{N\+A\+M\+E\+\_\+8\+P3\+\_\+\+U\+T\+F16\+\_\+\+N\+O\+N\+A\+S\+C\+I\+I\+\_\+\+T\+Y\+P\+E}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!N\+A\+M\+E\+\_\+8\+P3\+\_\+\+U\+T\+F16\+\_\+\+N\+O\+N\+A\+S\+C\+I\+I\+\_\+\+T\+Y\+P\+E@{N\+A\+M\+E\+\_\+8\+P3\+\_\+\+U\+T\+F16\+\_\+\+N\+O\+N\+A\+S\+C\+I\+I\+\_\+\+T\+Y\+P\+E}}\item[{\em 
+\hypertarget{_f_s_i_o_8c_a00c4ddb483cba42b80631a563d949008a4c2a5841efe58a87208717d8ae8688fd}{}N\+A\+M\+E\+\_\+8\+P3\+\_\+\+U\+T\+F16\+\_\+\+N\+O\+N\+A\+S\+C\+I\+I\+\_\+\+T\+Y\+P\+E\label{_f_s_i_o_8c_a00c4ddb483cba42b80631a563d949008a4c2a5841efe58a87208717d8ae8688fd}
+}]\index{N\+A\+M\+E\+\_\+\+L\+F\+N\+\_\+\+T\+Y\+P\+E@{N\+A\+M\+E\+\_\+\+L\+F\+N\+\_\+\+T\+Y\+P\+E}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!N\+A\+M\+E\+\_\+\+L\+F\+N\+\_\+\+T\+Y\+P\+E@{N\+A\+M\+E\+\_\+\+L\+F\+N\+\_\+\+T\+Y\+P\+E}}\item[{\em 
+\hypertarget{_f_s_i_o_8c_a00c4ddb483cba42b80631a563d949008a0e25a9d7666ac53c06e0f150bdc25849}{}N\+A\+M\+E\+\_\+\+L\+F\+N\+\_\+\+T\+Y\+P\+E\label{_f_s_i_o_8c_a00c4ddb483cba42b80631a563d949008a0e25a9d7666ac53c06e0f150bdc25849}
+}]\index{N\+A\+M\+E\+\_\+\+E\+R\+R\+O\+R@{N\+A\+M\+E\+\_\+\+E\+R\+R\+O\+R}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!N\+A\+M\+E\+\_\+\+E\+R\+R\+O\+R@{N\+A\+M\+E\+\_\+\+E\+R\+R\+O\+R}}\item[{\em 
+\hypertarget{_f_s_i_o_8c_a00c4ddb483cba42b80631a563d949008a28f3d49101d0d9e766d6b5ae7f944f36}{}N\+A\+M\+E\+\_\+\+E\+R\+R\+O\+R\label{_f_s_i_o_8c_a00c4ddb483cba42b80631a563d949008a28f3d49101d0d9e766d6b5ae7f944f36}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 266 of file F\+S\+I\+O.\+c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_f_s_i_o_8c_a2c0446aec539db935e45da19e55fa3f1}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!Cache\+\_\+\+File\+\_\+\+Entry@{Cache\+\_\+\+File\+\_\+\+Entry}}
+\index{Cache\+\_\+\+File\+\_\+\+Entry@{Cache\+\_\+\+File\+\_\+\+Entry}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{Cache\+\_\+\+File\+\_\+\+Entry}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+I\+R\+E\+N\+T\+R\+Y} Cache\+\_\+\+File\+\_\+\+Entry (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+I\+L\+E\+O\+B\+J}}]{fo, }
+\item[{{\bf W\+O\+R\+D} $\ast$}]{cur\+Entry, }
+\item[{{\bf B\+Y\+T\+E}}]{Force\+Read}
+\end{DoxyParamCaption}
+)}\label{_f_s_i_o_8c_a2c0446aec539db935e45da19e55fa3f1}
+
+
+Definition at line 3057 of file F\+S\+I\+O.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\hypertarget{_f_s_i_o_8c_a770482c21b6c1913ef159307ddb56b7e}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!Cluster2\+Sector@{Cluster2\+Sector}}
+\index{Cluster2\+Sector@{Cluster2\+Sector}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{Cluster2\+Sector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} Cluster2\+Sector (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+I\+S\+K} $\ast$}]{disk, }
+\item[{{\bf D\+W\+O\+R\+D}}]{cluster}
+\end{DoxyParamCaption}
+)}\label{_f_s_i_o_8c_a770482c21b6c1913ef159307ddb56b7e}
+
+
+Definition at line 6409 of file F\+S\+I\+O.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\hypertarget{_f_s_i_o_8c_a477331baab18d704e6a8f36a5f7b27cc}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!D\+I\+S\+Kmount@{D\+I\+S\+Kmount}}
+\index{D\+I\+S\+Kmount@{D\+I\+S\+Kmount}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{D\+I\+S\+Kmount}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} D\+I\+S\+Kmount (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+I\+S\+K} $\ast$}]{dsk}
+\end{DoxyParamCaption}
+)}\label{_f_s_i_o_8c_a477331baab18d704e6a8f36a5f7b27cc}
+
+
+Definition at line 1557 of file F\+S\+I\+O.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 5
+
+
+\hypertarget{_f_s_i_o_8c_aa0953ab0c059963e7b5c2076fdb01f9b}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!F\+I\+L\+Efind@{F\+I\+L\+Efind}}
+\index{F\+I\+L\+Efind@{F\+I\+L\+Efind}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{F\+I\+L\+Efind}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+E\+T\+Y\+P\+E} F\+I\+L\+Efind (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+I\+L\+E\+O\+B\+J}}]{fo\+Dest, }
+\item[{{\bf F\+I\+L\+E\+O\+B\+J}}]{fo\+Compare\+To, }
+\item[{{\bf B\+Y\+T\+E}}]{cmd, }
+\item[{{\bf B\+Y\+T\+E}}]{mode}
+\end{DoxyParamCaption}
+)}\label{_f_s_i_o_8c_aa0953ab0c059963e7b5c2076fdb01f9b}
+
+
+Definition at line 514 of file F\+S\+I\+O.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 6
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 7
+
+
+\hypertarget{_f_s_i_o_8c_a11c64fd4e3052b4db1ace3e6da53512b}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!F\+I\+L\+Eget\+\_\+next\+\_\+cluster@{F\+I\+L\+Eget\+\_\+next\+\_\+cluster}}
+\index{F\+I\+L\+Eget\+\_\+next\+\_\+cluster@{F\+I\+L\+Eget\+\_\+next\+\_\+cluster}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{F\+I\+L\+Eget\+\_\+next\+\_\+cluster}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} F\+I\+L\+Eget\+\_\+next\+\_\+cluster (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+S\+F\+I\+L\+E} $\ast$}]{fo, }
+\item[{{\bf D\+W\+O\+R\+D}}]{n}
+\end{DoxyParamCaption}
+)}\label{_f_s_i_o_8c_a11c64fd4e3052b4db1ace3e6da53512b}
+
+
+Definition at line 1470 of file F\+S\+I\+O.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 8
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 9
+
+
+\hypertarget{_f_s_i_o_8c_a75a26039a04177772a323b069b0bdcf2}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!File\+Object\+Copy@{File\+Object\+Copy}}
+\index{File\+Object\+Copy@{File\+Object\+Copy}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{File\+Object\+Copy}]{\setlength{\rightskip}{0pt plus 5cm}void File\+Object\+Copy (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+I\+L\+E\+O\+B\+J}}]{fo\+Dest, }
+\item[{{\bf F\+I\+L\+E\+O\+B\+J}}]{fo\+Source}
+\end{DoxyParamCaption}
+)}\label{_f_s_i_o_8c_a75a26039a04177772a323b069b0bdcf2}
+
+
+Definition at line 6134 of file F\+S\+I\+O.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 10
+
+
+\hypertarget{_f_s_i_o_8c_aefbcc2c762e5983bc83d6baf60d962f1}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!F\+I\+L\+Eopen@{F\+I\+L\+Eopen}}
+\index{F\+I\+L\+Eopen@{F\+I\+L\+Eopen}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{F\+I\+L\+Eopen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+E\+T\+Y\+P\+E} F\+I\+L\+Eopen (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+I\+L\+E\+O\+B\+J}}]{fo, }
+\item[{{\bf W\+O\+R\+D} $\ast$}]{f\+Handle, }
+\item[{char}]{type}
+\end{DoxyParamCaption}
+)}\label{_f_s_i_o_8c_aefbcc2c762e5983bc83d6baf60d962f1}
+
+
+Definition at line 1349 of file F\+S\+I\+O.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 11
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 12
+
+
+\hypertarget{_f_s_i_o_8c_aa92838a16615c1bb64460c551b9efc23}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!Fill\+\_\+\+File\+\_\+\+Object@{Fill\+\_\+\+File\+\_\+\+Object}}
+\index{Fill\+\_\+\+File\+\_\+\+Object@{Fill\+\_\+\+File\+\_\+\+Object}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{Fill\+\_\+\+File\+\_\+\+Object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} Fill\+\_\+\+File\+\_\+\+Object (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+I\+L\+E\+O\+B\+J}}]{fo, }
+\item[{{\bf W\+O\+R\+D} $\ast$}]{f\+Handle}
+\end{DoxyParamCaption}
+)}\label{_f_s_i_o_8c_aa92838a16615c1bb64460c551b9efc23}
+-\/\+Get and store the attributes 
+
+Definition at line 4736 of file F\+S\+I\+O.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 13
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 14
+
+
+\hypertarget{_f_s_i_o_8c_a34a71e8c40389a7bd57551c35c1f6d0c}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!Format\+File\+Name@{Format\+File\+Name}}
+\index{Format\+File\+Name@{Format\+File\+Name}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{Format\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} Format\+File\+Name (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file\+Name, }
+\item[{{\bf F\+I\+L\+E\+O\+B\+J}}]{fptr, }
+\item[{{\bf B\+Y\+T\+E}}]{mode}
+\end{DoxyParamCaption}
+)}\label{_f_s_i_o_8c_a34a71e8c40389a7bd57551c35c1f6d0c}
+
+
+Definition at line 6973 of file F\+S\+I\+O.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 15
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 16
+
+
+\hypertarget{_f_s_i_o_8c_abbe2bcb5a3adb480d6fed81487d3e74e}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!F\+Serror@{F\+Serror}}
+\index{F\+Serror@{F\+Serror}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{F\+Serror}]{\setlength{\rightskip}{0pt plus 5cm}int F\+Serror (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_f_s_i_o_8c_abbe2bcb5a3adb480d6fed81487d3e74e}
+
+
+Definition at line 6107 of file F\+S\+I\+O.\+c.
+
+\hypertarget{_f_s_i_o_8c_a7af3ca3a0534ded81fcc5d0744a2428e}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!F\+Sfclose@{F\+Sfclose}}
+\index{F\+Sfclose@{F\+Sfclose}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{F\+Sfclose}]{\setlength{\rightskip}{0pt plus 5cm}int F\+Sfclose (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+S\+F\+I\+L\+E} $\ast$}]{fo}
+\end{DoxyParamCaption}
+)}\label{_f_s_i_o_8c_a7af3ca3a0534ded81fcc5d0744a2428e}
+
+
+Definition at line 4496 of file F\+S\+I\+O.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 17
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 18
+
+
+\hypertarget{_f_s_i_o_8c_aec3a02f0851654b4c3e584a241f75e6f}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!F\+Sfeof@{F\+Sfeof}}
+\index{F\+Sfeof@{F\+Sfeof}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{F\+Sfeof}]{\setlength{\rightskip}{0pt plus 5cm}int F\+Sfeof (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+S\+F\+I\+L\+E} $\ast$}]{stream}
+\end{DoxyParamCaption}
+)}\label{_f_s_i_o_8c_aec3a02f0851654b4c3e584a241f75e6f}
+
+
+Definition at line 6802 of file F\+S\+I\+O.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 19
+
+
+\hypertarget{_f_s_i_o_8c_a80780b69226fc956fb01be96e3dd4e66}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!F\+Sfopen@{F\+Sfopen}}
+\index{F\+Sfopen@{F\+Sfopen}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{F\+Sfopen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+S\+F\+I\+L\+E}$\ast$ F\+Sfopen (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file\+Name, }
+\item[{const char $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}\label{_f_s_i_o_8c_a80780b69226fc956fb01be96e3dd4e66}
+
+
+Definition at line 5411 of file F\+S\+I\+O.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 20
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 21
+
+
+\hypertarget{_f_s_i_o_8c_ae2416613659351f120d760526eb44d16}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!F\+Sfread@{F\+Sfread}}
+\index{F\+Sfread@{F\+Sfread}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{F\+Sfread}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t F\+Sfread (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr, }
+\item[{size\+\_\+t}]{size, }
+\item[{size\+\_\+t}]{n, }
+\item[{{\bf F\+S\+F\+I\+L\+E} $\ast$}]{stream}
+\end{DoxyParamCaption}
+)}\label{_f_s_i_o_8c_ae2416613659351f120d760526eb44d16}
+
+
+Definition at line 6839 of file F\+S\+I\+O.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 22
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 23
+
+
+\hypertarget{_f_s_i_o_8c_a919fabb3203e0eacf711b957bf803c10}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!F\+Sfseek@{F\+Sfseek}}
+\index{F\+Sfseek@{F\+Sfseek}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{F\+Sfseek}]{\setlength{\rightskip}{0pt plus 5cm}int F\+Sfseek (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+S\+F\+I\+L\+E} $\ast$}]{stream, }
+\item[{long}]{offset, }
+\item[{int}]{whence}
+\end{DoxyParamCaption}
+)}\label{_f_s_i_o_8c_a919fabb3203e0eacf711b957bf803c10}
+
+
+Definition at line 7800 of file F\+S\+I\+O.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 24
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 25
+
+
+\hypertarget{_f_s_i_o_8c_a9e906fe417369377d4cb15dcaec8b02a}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!F\+Sftell@{F\+Sftell}}
+\index{F\+Sftell@{F\+Sftell}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{F\+Sftell}]{\setlength{\rightskip}{0pt plus 5cm}long F\+Sftell (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+S\+F\+I\+L\+E} $\ast$}]{fo}
+\end{DoxyParamCaption}
+)}\label{_f_s_i_o_8c_a9e906fe417369377d4cb15dcaec8b02a}
+
+
+Definition at line 5711 of file F\+S\+I\+O.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 26
+
+
+\hypertarget{_f_s_i_o_8c_a77bf783068cdee8bbca1f73af66cb1c5}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!F\+S\+Init@{F\+S\+Init}}
+\index{F\+S\+Init@{F\+S\+Init}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{F\+S\+Init}]{\setlength{\rightskip}{0pt plus 5cm}int F\+S\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_f_s_i_o_8c_a77bf783068cdee8bbca1f73af66cb1c5}
+
+
+Definition at line 424 of file F\+S\+I\+O.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 27
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 28
+
+
+\hypertarget{_f_s_i_o_8c_addb98c8f53936a7ea80ffca6c6d5cb54}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!F\+Srewind@{F\+Srewind}}
+\index{F\+Srewind@{F\+Srewind}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{F\+Srewind}]{\setlength{\rightskip}{0pt plus 5cm}void F\+Srewind (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+S\+F\+I\+L\+E} $\ast$}]{fo}
+\end{DoxyParamCaption}
+)}\label{_f_s_i_o_8c_addb98c8f53936a7ea80ffca6c6d5cb54}
+
+
+Definition at line 5907 of file F\+S\+I\+O.\+c.
+
+\hypertarget{_f_s_i_o_8c_acb6be567ae4ba9d84a2edcb4fa1c2319}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!Get\+Full\+Cluster\+Number@{Get\+Full\+Cluster\+Number}}
+\index{Get\+Full\+Cluster\+Number@{Get\+Full\+Cluster\+Number}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{Get\+Full\+Cluster\+Number}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} Get\+Full\+Cluster\+Number (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+I\+R\+E\+N\+T\+R\+Y}}]{entry}
+\end{DoxyParamCaption}
+)}\label{_f_s_i_o_8c_acb6be567ae4ba9d84a2edcb4fa1c2319}
+
+
+Definition at line 2051 of file F\+S\+I\+O.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 29
+
+
+\hypertarget{_f_s_i_o_8c_ad2f0426848c078bb63c0dc4aa5092f65}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!Load\+Boot\+Sector@{Load\+Boot\+Sector}}
+\index{Load\+Boot\+Sector@{Load\+Boot\+Sector}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{Load\+Boot\+Sector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} Load\+Boot\+Sector (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+I\+S\+K} $\ast$}]{dsk}
+\end{DoxyParamCaption}
+)}\label{_f_s_i_o_8c_ad2f0426848c078bb63c0dc4aa5092f65}
+
+
+Definition at line 1780 of file F\+S\+I\+O.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 30
+
+
+\hypertarget{_f_s_i_o_8c_a85280edaf801e1a3f13e62344c2d6ce4}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!Load\+Dir\+Attrib@{Load\+Dir\+Attrib}}
+\index{Load\+Dir\+Attrib@{Load\+Dir\+Attrib}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{Load\+Dir\+Attrib}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+I\+R\+E\+N\+T\+R\+Y} Load\+Dir\+Attrib (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+I\+L\+E\+O\+B\+J}}]{fo, }
+\item[{{\bf W\+O\+R\+D} $\ast$}]{f\+Handle}
+\end{DoxyParamCaption}
+)}\label{_f_s_i_o_8c_a85280edaf801e1a3f13e62344c2d6ce4}
+
+
+Definition at line 4949 of file F\+S\+I\+O.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 31
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 32
+
+
+\hypertarget{_f_s_i_o_8c_a7db7c692f57ae591bcbcda26833552a6}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!Load\+M\+B\+R@{Load\+M\+B\+R}}
+\index{Load\+M\+B\+R@{Load\+M\+B\+R}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{Load\+M\+B\+R}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} Load\+M\+B\+R (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+I\+S\+K} $\ast$}]{dsk}
+\end{DoxyParamCaption}
+)}\label{_f_s_i_o_8c_a7db7c692f57ae591bcbcda26833552a6}
+
+
+Definition at line 1631 of file F\+S\+I\+O.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 33
+
+
+\hypertarget{_f_s_i_o_8c_a4d7dfa3bb2dff15bed1982fa8e4595e0}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!Read\+F\+A\+T@{Read\+F\+A\+T}}
+\index{Read\+F\+A\+T@{Read\+F\+A\+T}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{Read\+F\+A\+T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} Read\+F\+A\+T (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+I\+S\+K} $\ast$}]{dsk, }
+\item[{{\bf D\+W\+O\+R\+D}}]{ccls}
+\end{DoxyParamCaption}
+)}\label{_f_s_i_o_8c_a4d7dfa3bb2dff15bed1982fa8e4595e0}
+
+
+Definition at line 8167 of file F\+S\+I\+O.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 34
+
+
+\hypertarget{_f_s_i_o_8c_a16024f44ce3d91334d0ae223edd5fb32}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!Validate\+Chars@{Validate\+Chars}}
+\index{Validate\+Chars@{Validate\+Chars}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{Validate\+Chars}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+I\+L\+E\+\_\+\+D\+I\+R\+\_\+\+N\+A\+M\+E\+\_\+\+T\+Y\+P\+E} Validate\+Chars (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{mode}
+\end{DoxyParamCaption}
+)}\label{_f_s_i_o_8c_a16024f44ce3d91334d0ae223edd5fb32}
+
+
+Definition at line 7585 of file F\+S\+I\+O.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 35
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{_f_s_i_o_8c_ab9dd6ffd46655ec943ce3913ea9d2034}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!ascii\+Filename@{ascii\+Filename}}
+\index{ascii\+Filename@{ascii\+Filename}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{ascii\+Filename}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ ascii\+Filename}\label{_f_s_i_o_8c_ab9dd6ffd46655ec943ce3913ea9d2034}
+
+
+Definition at line 212 of file F\+S\+I\+O.\+c.
+
+\hypertarget{_f_s_i_o_8c_ab336cd87e59961d2014431b241ff0278}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!cwd@{cwd}}
+\index{cwd@{cwd}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{cwd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+S\+F\+I\+L\+E} cwd}\label{_f_s_i_o_8c_ab336cd87e59961d2014431b241ff0278}
+
+
+Definition at line 193 of file F\+S\+I\+O.\+c.
+
+\hypertarget{_f_s_i_o_8c_a5af4a65a59daa27cc78efefae5faadea}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!cwdptr@{cwdptr}}
+\index{cwdptr@{cwdptr}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{cwdptr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+S\+F\+I\+L\+E}$\ast$ cwdptr = \&{\bf cwd}}\label{_f_s_i_o_8c_a5af4a65a59daa27cc78efefae5faadea}
+
+
+Definition at line 194 of file F\+S\+I\+O.\+c.
+
+\hypertarget{_f_s_i_o_8c_ab997f25030bc81a4a0679f61ab4a918a}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!dir\+Cleared@{dir\+Cleared}}
+\index{dir\+Cleared@{dir\+Cleared}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{dir\+Cleared}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} dir\+Cleared}\label{_f_s_i_o_8c_ab997f25030bc81a4a0679f61ab4a918a}
+
+
+Definition at line 188 of file F\+S\+I\+O.\+c.
+
+\hypertarget{_f_s_i_o_8c_a3158be699a79b4006fef0841eed663bf}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!Fat\+Root\+Dir\+Cluster\+Value@{Fat\+Root\+Dir\+Cluster\+Value}}
+\index{Fat\+Root\+Dir\+Cluster\+Value@{Fat\+Root\+Dir\+Cluster\+Value}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{Fat\+Root\+Dir\+Cluster\+Value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} Fat\+Root\+Dir\+Cluster\+Value}\label{_f_s_i_o_8c_a3158be699a79b4006fef0841eed663bf}
+
+
+Definition at line 183 of file F\+S\+I\+O.\+c.
+
+\hypertarget{_f_s_i_o_8c_af7ceb221ecea7563c772d44b8093efef}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!file\+Name\+Length@{file\+Name\+Length}}
+\index{file\+Name\+Length@{file\+Name\+Length}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{file\+Name\+Length}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short int file\+Name\+Length}\label{_f_s_i_o_8c_af7ceb221ecea7563c772d44b8093efef}
+
+
+Definition at line 213 of file F\+S\+I\+O.\+c.
+
+\hypertarget{_f_s_i_o_8c_a59d0e63a170e466cb809c05ecced3115}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!F\+Serrno@{F\+Serrno}}
+\index{F\+Serrno@{F\+Serrno}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{F\+Serrno}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} F\+Serrno}\label{_f_s_i_o_8c_a59d0e63a170e466cb809c05ecced3115}
+
+
+Definition at line 185 of file F\+S\+I\+O.\+c.
+
+\hypertarget{_f_s_i_o_8c_a1b1f91478a77696942e61b80d2e7e759}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!g\+Buffer\+Owner@{g\+Buffer\+Owner}}
+\index{g\+Buffer\+Owner@{g\+Buffer\+Owner}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{g\+Buffer\+Owner}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+S\+F\+I\+L\+E}$\ast$ g\+Buffer\+Owner = N\+U\+L\+L}\label{_f_s_i_o_8c_a1b1f91478a77696942e61b80d2e7e759}
+
+
+Definition at line 176 of file F\+S\+I\+O.\+c.
+
+\hypertarget{_f_s_i_o_8c_a37bc8a1459bbc3a62cde9b63f36b3b67}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!g\+Buffer\+Zeroed@{g\+Buffer\+Zeroed}}
+\index{g\+Buffer\+Zeroed@{g\+Buffer\+Zeroed}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{g\+Buffer\+Zeroed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} g\+Buffer\+Zeroed = {\bf F\+A\+L\+S\+E}}\label{_f_s_i_o_8c_a37bc8a1459bbc3a62cde9b63f36b3b67}
+
+
+Definition at line 181 of file F\+S\+I\+O.\+c.
+
+\hypertarget{_f_s_i_o_8c_a65c2e8932d3fc7aa29eb3efca57fe1c0}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!g\+Disk\+Data@{g\+Disk\+Data}}
+\index{g\+Disk\+Data@{g\+Disk\+Data}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{g\+Disk\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+I\+S\+K} g\+Disk\+Data}\label{_f_s_i_o_8c_a65c2e8932d3fc7aa29eb3efca57fe1c0}
+
+
+Definition at line 209 of file F\+S\+I\+O.\+c.
+
+\hypertarget{_f_s_i_o_8c_a4a9da356cbd25e6ff449b811093d72e0}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!g\+File\+Array@{g\+File\+Array}}
+\index{g\+File\+Array@{g\+File\+Array}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{g\+File\+Array}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+S\+F\+I\+L\+E} g\+File\+Array\mbox{[}F\+S\+\_\+\+M\+A\+X\+\_\+\+F\+I\+L\+E\+S\+\_\+\+O\+P\+E\+N\mbox{]}}\label{_f_s_i_o_8c_a4a9da356cbd25e6ff449b811093d72e0}
+
+
+Definition at line 146 of file F\+S\+I\+O.\+c.
+
+\hypertarget{_f_s_i_o_8c_ae261a56db4fb4d1ae4c3558903d280ce}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!g\+File\+Slot\+Open@{g\+File\+Slot\+Open}}
+\index{g\+File\+Slot\+Open@{g\+File\+Slot\+Open}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{g\+File\+Slot\+Open}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} g\+File\+Slot\+Open\mbox{[}F\+S\+\_\+\+M\+A\+X\+\_\+\+F\+I\+L\+E\+S\+\_\+\+O\+P\+E\+N\mbox{]}}\label{_f_s_i_o_8c_ae261a56db4fb4d1ae4c3558903d280ce}
+
+
+Definition at line 147 of file F\+S\+I\+O.\+c.
+
+\hypertarget{_f_s_i_o_8c_a0c3742f0b089d5e190cb61b310ce4450}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!g\+File\+Temp@{g\+File\+Temp}}
+\index{g\+File\+Temp@{g\+File\+Temp}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{g\+File\+Temp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+S\+F\+I\+L\+E} g\+File\+Temp}\label{_f_s_i_o_8c_a0c3742f0b089d5e190cb61b310ce4450}
+
+
+Definition at line 191 of file F\+S\+I\+O.\+c.
+
+\hypertarget{_f_s_i_o_8c_a671d3cee3f9354612937e77679b9f01e}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!g\+Last\+Data\+Sector\+Read@{g\+Last\+Data\+Sector\+Read}}
+\index{g\+Last\+Data\+Sector\+Read@{g\+Last\+Data\+Sector\+Read}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{g\+Last\+Data\+Sector\+Read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} g\+Last\+Data\+Sector\+Read = 0x\+F\+F\+F\+F\+F\+F\+F\+F}\label{_f_s_i_o_8c_a671d3cee3f9354612937e77679b9f01e}
+
+
+Definition at line 177 of file F\+S\+I\+O.\+c.
+
+\hypertarget{_f_s_i_o_8c_a53c696081a3e1e027a624197ecf49eb2}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!g\+Last\+F\+A\+T\+Sector\+Read@{g\+Last\+F\+A\+T\+Sector\+Read}}
+\index{g\+Last\+F\+A\+T\+Sector\+Read@{g\+Last\+F\+A\+T\+Sector\+Read}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{g\+Last\+F\+A\+T\+Sector\+Read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} g\+Last\+F\+A\+T\+Sector\+Read = 0x\+F\+F\+F\+F\+F\+F\+F\+F}\label{_f_s_i_o_8c_a53c696081a3e1e027a624197ecf49eb2}
+
+
+Definition at line 174 of file F\+S\+I\+O.\+c.
+
+\hypertarget{_f_s_i_o_8c_a5b98c2cd40829f35610cf226a7f399b8}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!g\+Need\+Data\+Write@{g\+Need\+Data\+Write}}
+\index{g\+Need\+Data\+Write@{g\+Need\+Data\+Write}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{g\+Need\+Data\+Write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} g\+Need\+Data\+Write = {\bf F\+A\+L\+S\+E}}\label{_f_s_i_o_8c_a5b98c2cd40829f35610cf226a7f399b8}
+
+
+Definition at line 178 of file F\+S\+I\+O.\+c.
+
+\hypertarget{_f_s_i_o_8c_a3e384367efefa94463a80970e64784d6}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!g\+Need\+F\+A\+T\+Write@{g\+Need\+F\+A\+T\+Write}}
+\index{g\+Need\+F\+A\+T\+Write@{g\+Need\+F\+A\+T\+Write}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{g\+Need\+F\+A\+T\+Write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} g\+Need\+F\+A\+T\+Write = {\bf F\+A\+L\+S\+E}}\label{_f_s_i_o_8c_a3e384367efefa94463a80970e64784d6}
+
+
+Definition at line 175 of file F\+S\+I\+O.\+c.
+
+\hypertarget{_f_s_i_o_8c_a4f8ac1b932c44cd14f73130bcd6edf43}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!next\+Cluster\+Is\+Last@{next\+Cluster\+Is\+Last}}
+\index{next\+Cluster\+Is\+Last@{next\+Cluster\+Is\+Last}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{next\+Cluster\+Is\+Last}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} next\+Cluster\+Is\+Last = {\bf F\+A\+L\+S\+E}}\label{_f_s_i_o_8c_a4f8ac1b932c44cd14f73130bcd6edf43}
+
+
+Definition at line 179 of file F\+S\+I\+O.\+c.
+
+\hypertarget{_f_s_i_o_8c_a59c485086b6d45cd5d37bb216ea70ec4}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!recache@{recache}}
+\index{recache@{recache}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{recache}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} recache = {\bf F\+A\+L\+S\+E}}\label{_f_s_i_o_8c_a59c485086b6d45cd5d37bb216ea70ec4}
+
+
+Definition at line 189 of file F\+S\+I\+O.\+c.
+
+\hypertarget{_f_s_i_o_8c_a1a231362f3589da41ece3bc1d092d436}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!Temp\+Cluster\+Calc@{Temp\+Cluster\+Calc}}
+\index{Temp\+Cluster\+Calc@{Temp\+Cluster\+Calc}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{Temp\+Cluster\+Calc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} Temp\+Cluster\+Calc}\label{_f_s_i_o_8c_a1a231362f3589da41ece3bc1d092d436}
+
+
+Definition at line 187 of file F\+S\+I\+O.\+c.
+
+\hypertarget{_f_s_i_o_8c_ad44d5a57ea5c7c71297cdc08c6d34229}{}\index{F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}!temp\+C\+W\+Dobj@{temp\+C\+W\+Dobj}}
+\index{temp\+C\+W\+Dobj@{temp\+C\+W\+Dobj}!F\+S\+I\+O.\+c@{F\+S\+I\+O.\+c}}
+\subsubsection[{temp\+C\+W\+Dobj}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+S\+F\+I\+L\+E} temp\+C\+W\+Dobj}\label{_f_s_i_o_8c_ad44d5a57ea5c7c71297cdc08c6d34229}
+
+
+Definition at line 190 of file F\+S\+I\+O.\+c.
+

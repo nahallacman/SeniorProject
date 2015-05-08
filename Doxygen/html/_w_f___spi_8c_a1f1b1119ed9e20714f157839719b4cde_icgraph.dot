@@ -1,0 +1,24 @@
+digraph "WF_SpiEnableChipSelect"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="WF_SpiEnableChipSelect",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Read8BitWFRegister",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_driver_com_8c.html#a2950b0ad81e544cbd631ff0747d888ec"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="WFEintHandler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_driver_com_8c.html#a595ec5f432cb300205eda02e2664d586"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Write8BitWFRegister",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_driver_com_8c.html#a223ca877db70b65e6ca4ab27c78b13d5"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Read16BitWFRegister",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_driver_com_8c.html#a0bf9eb8a56860f2fccbf68f53ca8eb46"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Write16BitWFRegister",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_driver_com_8c.html#a914c1bea2233e373d5f6180b0be32b03"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="WriteWFArray",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_driver_com_8c.html#ac672392a40ad7e2f252b08b5f730f39c"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="ReadWFArray",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_driver_com_8c.html#a953c0c8d5badc9f3d0f7bcbc960ec758"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="WriteWFROMArray",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_driver_com_8c.html#a7537952e20b253009225706ac2723286"];
+}

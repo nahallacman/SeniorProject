@@ -1,0 +1,13 @@
+digraph "USBDevicePHDCReceiveData"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="USBDevicePHDCReceiveData",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="PHDConnect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__function__phdc__com__model_8c.html#a2bc43327f3d63bbc638b32a0212e92e8"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="PHDSendMeasuredData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__function__phdc__com__model_8c.html#a8a64ce19401b8f808b904707e11acd86"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="PHDTimeoutHandler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__function__phdc__com__model_8c.html#a22d6eb1c93ff621b3e66153133d46fdf"];
+}

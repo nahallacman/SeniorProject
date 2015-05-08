@@ -1,0 +1,574 @@
+\hypertarget{_u_d_p_8h}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+T\+C\+P\+I\+P Stack/\+U\+D\+P.h File Reference}
+\label{_u_d_p_8h}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+T\+C\+P\+I\+P Stack/\+U\+D\+P.\+h@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+T\+C\+P\+I\+P Stack/\+U\+D\+P.\+h}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_u_d_p___s_o_c_k_e_t___i_n_f_o}{U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+\+I\+N\+F\+O}
+\item 
+struct \hyperlink{struct_u_d_p___h_e_a_d_e_r}{U\+D\+P\+\_\+\+H\+E\+A\+D\+E\+R}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_u_d_p_8h_abe6e72d540ec531acbd9d7d8a72922a5}{U\+D\+P\+\_\+\+P\+O\+R\+T}
+\item 
+typedef \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_u_d_p_8h_a74f1b6fad75426b918419bbf943179c3}{U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_u_d_p_8h_a9a877d35743ec846bb449ec827859e6e}{U\+D\+P\+\_\+\+S\+T\+A\+T\+E} \{ \\*
+\hyperlink{_u_d_p_8h_a9a877d35743ec846bb449ec827859e6eae4ab67e69c2b7a537b42e3000c68b848}{U\+D\+P\+\_\+\+D\+N\+S\+\_\+\+I\+S\+\_\+\+R\+E\+S\+O\+L\+V\+E\+D}, 
+\hyperlink{_u_d_p_8h_a9a877d35743ec846bb449ec827859e6ea0c27282fb8d7b228ddc976e564087a7f}{U\+D\+P\+\_\+\+D\+N\+S\+\_\+\+R\+E\+S\+O\+L\+V\+E}, 
+\hyperlink{_u_d_p_8h_a9a877d35743ec846bb449ec827859e6eabc5af9f562923e8965d1435c3c10c435}{U\+D\+P\+\_\+\+G\+A\+T\+E\+W\+A\+Y\+\_\+\+S\+E\+N\+D\+\_\+\+A\+R\+P}, 
+\hyperlink{_u_d_p_8h_a9a877d35743ec846bb449ec827859e6eaa8da684edeaf9a4f18fdb0ee4f98adfa}{U\+D\+P\+\_\+\+G\+A\+T\+E\+W\+A\+Y\+\_\+\+G\+E\+T\+\_\+\+A\+R\+P}, 
+\\*
+\hyperlink{_u_d_p_8h_a9a877d35743ec846bb449ec827859e6ea493703e9df4c58949cf708beaa75f6fb}{U\+D\+P\+\_\+\+C\+L\+O\+S\+E\+D}, 
+\hyperlink{_u_d_p_8h_a9a877d35743ec846bb449ec827859e6eaae6938521d3e556376c7577e437fdf20}{U\+D\+P\+\_\+\+O\+P\+E\+N\+E\+D}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_u_d_p_8h_a26be5362fd254b256ce49813760578ad}{U\+D\+P\+Init} (void)
+\item 
+void \hyperlink{_u_d_p_8h_a04db7e90c0e235382b6068e5128bf2d1}{U\+D\+P\+Task} (void)
+\item 
+\hyperlink{_u_d_p_8h_a74f1b6fad75426b918419bbf943179c3}{U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T} \hyperlink{_u_d_p_8h_ae5069afb0cda35b9a306dcb37f222822}{U\+D\+P\+Open\+Ex} (\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} remote\+Host, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} remote\+Host\+Type, \hyperlink{_u_d_p_8h_abe6e72d540ec531acbd9d7d8a72922a5}{U\+D\+P\+\_\+\+P\+O\+R\+T} local\+Port, \hyperlink{_u_d_p_8h_abe6e72d540ec531acbd9d7d8a72922a5}{U\+D\+P\+\_\+\+P\+O\+R\+T} remote\+Port)
+\item 
+void \hyperlink{_u_d_p_8h_ab324430d82f92d41aec441f45ddf7d0f}{U\+D\+P\+Close} (\hyperlink{_u_d_p_8h_a74f1b6fad75426b918419bbf943179c3}{U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T} s)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_u_d_p_8h_a49305099f869233eaab80c0953df6eed}{U\+D\+P\+Process} (\hyperlink{_stack_tsk_8h_ac28a7d4076195ab8e3376f06055f8ee4}{N\+O\+D\+E\+\_\+\+I\+N\+F\+O} $\ast$\hyperlink{_stack_tsk_8c_a6b16370945614af823875b6bf9f2e94f}{remote\+Node}, I\+P\+\_\+\+A\+D\+D\+R $\ast$local\+I\+P, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} len)
+\item 
+void \hyperlink{_u_d_p_8h_a7cf79fb1794e17d66e3e960dba97097b}{U\+D\+P\+Set\+Tx\+Buffer} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} w\+Offset)
+\item 
+void \hyperlink{_u_d_p_8h_a0dc4b7c53e2e3d3b91fe53ff2e135d72}{U\+D\+P\+Set\+Rx\+Buffer} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} w\+Offset)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_u_d_p_8h_a8a80f5aa86eba6a6b09cb1a0eb7f01cb}{U\+D\+P\+Is\+Put\+Ready} (\hyperlink{_u_d_p_8h_a74f1b6fad75426b918419bbf943179c3}{U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T} s)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_u_d_p_8h_aa31511e0818a730f9a335d2349081d94}{U\+D\+P\+Put} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_s_p_i_flash_8c_a51a3fc6fe361f8f5a7a91799fecd2c9a}{v})
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_u_d_p_8h_a372fafc6c39a309ddc9bd3408b16a267}{U\+D\+P\+Put\+Array} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$c\+Data, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} w\+Data\+Len)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$ \hyperlink{_u_d_p_8h_a130da2cd4cf5df1f28d4fcdef153d130}{U\+D\+P\+Put\+String} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$str\+Data)
+\item 
+void \hyperlink{_u_d_p_8h_a6a60054cd55ad4d0e70b78f8083a39bd}{U\+D\+P\+Flush} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_u_d_p_8h_a3e45deb17e39a300bf04336d9223ab8b}{U\+D\+P\+Put\+R\+O\+M\+Array} (R\+O\+M \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$c\+Data, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} w\+Data\+Len)
+\item 
+R\+O\+M \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$ \hyperlink{_u_d_p_8h_a8a94524f00e282c6bea177bd05b1eedf}{U\+D\+P\+Put\+R\+O\+M\+String} (R\+O\+M \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$str\+Data)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_u_d_p_8h_ae6cafd8670068265c3d9d921cd7e0675}{U\+D\+P\+Is\+Get\+Ready} (\hyperlink{_u_d_p_8h_a74f1b6fad75426b918419bbf943179c3}{U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T} s)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_u_d_p_8h_a4292b49f8ba04393a7b301123108613c}{U\+D\+P\+Get} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$\hyperlink{_s_p_i_flash_8c_a51a3fc6fe361f8f5a7a91799fecd2c9a}{v})
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_u_d_p_8h_a2ad4741432dcc367e97c7c6e1d964bdb}{U\+D\+P\+Get\+Array} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$c\+Data, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} w\+Data\+Len)
+\item 
+void \hyperlink{_u_d_p_8h_a92198dc6ba0ef28c7ec35eefc2120a85}{U\+D\+P\+Discard} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_u_d_p_8h_a404d970c5f846e2a0459cf094232ad4c}{U\+D\+P\+Is\+Opened} (\hyperlink{_u_d_p_8h_a74f1b6fad75426b918419bbf943179c3}{U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T} \hyperlink{_berkeley_a_p_i_8c_a4bbac9ff89097f54941d2e1cf66f8ca9}{socket})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_u_d_p_8h_a74f1b6fad75426b918419bbf943179c3}{U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T} \hyperlink{_u_d_p_8h_a38d0573ffd5e095a68f831d13902a609}{active\+U\+D\+P\+Socket}
+\item 
+\hyperlink{struct_u_d_p___s_o_c_k_e_t___i_n_f_o}{U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+\+I\+N\+F\+O} \hyperlink{_u_d_p_8h_a88fdea4a7f8fd271c17e3ae224bb4df8}{U\+D\+P\+Socket\+Info} \mbox{[}\hyperlink{_t_c_p_i_p_01_m_r_f24_w_8h_a31601333c1413fc467b877e77addf20d}{M\+A\+X\+\_\+\+U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T\+S}\mbox{]}
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_u_d_p_8h_a3ea5864b7f21d01770fb56f0a6123b92}{U\+D\+P\+Tx\+Count}
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_u_d_p_8h_ac725d34083bcc6c00cc5c6b288d61fda}{U\+D\+P\+Rx\+Count}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_u_d_p_8h_abe6e72d540ec531acbd9d7d8a72922a5}{}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+\_\+\+P\+O\+R\+T@{U\+D\+P\+\_\+\+P\+O\+R\+T}}
+\index{U\+D\+P\+\_\+\+P\+O\+R\+T@{U\+D\+P\+\_\+\+P\+O\+R\+T}!U\+D\+P.\+h@{U\+D\+P.\+h}}
+\subsubsection[{U\+D\+P\+\_\+\+P\+O\+R\+T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf W\+O\+R\+D} {\bf U\+D\+P\+\_\+\+P\+O\+R\+T}}\label{_u_d_p_8h_abe6e72d540ec531acbd9d7d8a72922a5}
+
+
+Definition at line 56 of file U\+D\+P.\+h.
+
+\hypertarget{_u_d_p_8h_a74f1b6fad75426b918419bbf943179c3}{}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T@{U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T}}
+\index{U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T@{U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T}!U\+D\+P.\+h@{U\+D\+P.\+h}}
+\subsubsection[{U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf B\+Y\+T\+E} {\bf U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T}}\label{_u_d_p_8h_a74f1b6fad75426b918419bbf943179c3}
+
+
+Definition at line 59 of file U\+D\+P.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_u_d_p_8h_a9a877d35743ec846bb449ec827859e6e}{}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+\_\+\+S\+T\+A\+T\+E@{U\+D\+P\+\_\+\+S\+T\+A\+T\+E}}
+\index{U\+D\+P\+\_\+\+S\+T\+A\+T\+E@{U\+D\+P\+\_\+\+S\+T\+A\+T\+E}!U\+D\+P.\+h@{U\+D\+P.\+h}}
+\subsubsection[{U\+D\+P\+\_\+\+S\+T\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf U\+D\+P\+\_\+\+S\+T\+A\+T\+E}}\label{_u_d_p_8h_a9a877d35743ec846bb449ec827859e6e}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{U\+D\+P\+\_\+\+D\+N\+S\+\_\+\+I\+S\+\_\+\+R\+E\+S\+O\+L\+V\+E\+D@{U\+D\+P\+\_\+\+D\+N\+S\+\_\+\+I\+S\+\_\+\+R\+E\+S\+O\+L\+V\+E\+D}!U\+D\+P.\+h@{U\+D\+P.\+h}}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+\_\+\+D\+N\+S\+\_\+\+I\+S\+\_\+\+R\+E\+S\+O\+L\+V\+E\+D@{U\+D\+P\+\_\+\+D\+N\+S\+\_\+\+I\+S\+\_\+\+R\+E\+S\+O\+L\+V\+E\+D}}\item[{\em 
+\hypertarget{_u_d_p_8h_a9a877d35743ec846bb449ec827859e6eae4ab67e69c2b7a537b42e3000c68b848}{}U\+D\+P\+\_\+\+D\+N\+S\+\_\+\+I\+S\+\_\+\+R\+E\+S\+O\+L\+V\+E\+D\label{_u_d_p_8h_a9a877d35743ec846bb449ec827859e6eae4ab67e69c2b7a537b42e3000c68b848}
+}]\index{U\+D\+P\+\_\+\+D\+N\+S\+\_\+\+R\+E\+S\+O\+L\+V\+E@{U\+D\+P\+\_\+\+D\+N\+S\+\_\+\+R\+E\+S\+O\+L\+V\+E}!U\+D\+P.\+h@{U\+D\+P.\+h}}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+\_\+\+D\+N\+S\+\_\+\+R\+E\+S\+O\+L\+V\+E@{U\+D\+P\+\_\+\+D\+N\+S\+\_\+\+R\+E\+S\+O\+L\+V\+E}}\item[{\em 
+\hypertarget{_u_d_p_8h_a9a877d35743ec846bb449ec827859e6ea0c27282fb8d7b228ddc976e564087a7f}{}U\+D\+P\+\_\+\+D\+N\+S\+\_\+\+R\+E\+S\+O\+L\+V\+E\label{_u_d_p_8h_a9a877d35743ec846bb449ec827859e6ea0c27282fb8d7b228ddc976e564087a7f}
+}]\index{U\+D\+P\+\_\+\+G\+A\+T\+E\+W\+A\+Y\+\_\+\+S\+E\+N\+D\+\_\+\+A\+R\+P@{U\+D\+P\+\_\+\+G\+A\+T\+E\+W\+A\+Y\+\_\+\+S\+E\+N\+D\+\_\+\+A\+R\+P}!U\+D\+P.\+h@{U\+D\+P.\+h}}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+\_\+\+G\+A\+T\+E\+W\+A\+Y\+\_\+\+S\+E\+N\+D\+\_\+\+A\+R\+P@{U\+D\+P\+\_\+\+G\+A\+T\+E\+W\+A\+Y\+\_\+\+S\+E\+N\+D\+\_\+\+A\+R\+P}}\item[{\em 
+\hypertarget{_u_d_p_8h_a9a877d35743ec846bb449ec827859e6eabc5af9f562923e8965d1435c3c10c435}{}U\+D\+P\+\_\+\+G\+A\+T\+E\+W\+A\+Y\+\_\+\+S\+E\+N\+D\+\_\+\+A\+R\+P\label{_u_d_p_8h_a9a877d35743ec846bb449ec827859e6eabc5af9f562923e8965d1435c3c10c435}
+}]\index{U\+D\+P\+\_\+\+G\+A\+T\+E\+W\+A\+Y\+\_\+\+G\+E\+T\+\_\+\+A\+R\+P@{U\+D\+P\+\_\+\+G\+A\+T\+E\+W\+A\+Y\+\_\+\+G\+E\+T\+\_\+\+A\+R\+P}!U\+D\+P.\+h@{U\+D\+P.\+h}}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+\_\+\+G\+A\+T\+E\+W\+A\+Y\+\_\+\+G\+E\+T\+\_\+\+A\+R\+P@{U\+D\+P\+\_\+\+G\+A\+T\+E\+W\+A\+Y\+\_\+\+G\+E\+T\+\_\+\+A\+R\+P}}\item[{\em 
+\hypertarget{_u_d_p_8h_a9a877d35743ec846bb449ec827859e6eaa8da684edeaf9a4f18fdb0ee4f98adfa}{}U\+D\+P\+\_\+\+G\+A\+T\+E\+W\+A\+Y\+\_\+\+G\+E\+T\+\_\+\+A\+R\+P\label{_u_d_p_8h_a9a877d35743ec846bb449ec827859e6eaa8da684edeaf9a4f18fdb0ee4f98adfa}
+}]\index{U\+D\+P\+\_\+\+C\+L\+O\+S\+E\+D@{U\+D\+P\+\_\+\+C\+L\+O\+S\+E\+D}!U\+D\+P.\+h@{U\+D\+P.\+h}}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+\_\+\+C\+L\+O\+S\+E\+D@{U\+D\+P\+\_\+\+C\+L\+O\+S\+E\+D}}\item[{\em 
+\hypertarget{_u_d_p_8h_a9a877d35743ec846bb449ec827859e6ea493703e9df4c58949cf708beaa75f6fb}{}U\+D\+P\+\_\+\+C\+L\+O\+S\+E\+D\label{_u_d_p_8h_a9a877d35743ec846bb449ec827859e6ea493703e9df4c58949cf708beaa75f6fb}
+}]\index{U\+D\+P\+\_\+\+O\+P\+E\+N\+E\+D@{U\+D\+P\+\_\+\+O\+P\+E\+N\+E\+D}!U\+D\+P.\+h@{U\+D\+P.\+h}}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+\_\+\+O\+P\+E\+N\+E\+D@{U\+D\+P\+\_\+\+O\+P\+E\+N\+E\+D}}\item[{\em 
+\hypertarget{_u_d_p_8h_a9a877d35743ec846bb449ec827859e6eaae6938521d3e556376c7577e437fdf20}{}U\+D\+P\+\_\+\+O\+P\+E\+N\+E\+D\label{_u_d_p_8h_a9a877d35743ec846bb449ec827859e6eaae6938521d3e556376c7577e437fdf20}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 62 of file U\+D\+P.\+h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_u_d_p_8h_ab324430d82f92d41aec441f45ddf7d0f}{}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+Close@{U\+D\+P\+Close}}
+\index{U\+D\+P\+Close@{U\+D\+P\+Close}!U\+D\+P.\+h@{U\+D\+P.\+h}}
+\subsubsection[{U\+D\+P\+Close}]{\setlength{\rightskip}{0pt plus 5cm}void U\+D\+P\+Close (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T}}]{s}
+\end{DoxyParamCaption}
+)}\label{_u_d_p_8h_ab324430d82f92d41aec441f45ddf7d0f}
+
+
+Definition at line 622 of file U\+D\+P.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+\hypertarget{_u_d_p_8h_a92198dc6ba0ef28c7ec35eefc2120a85}{}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+Discard@{U\+D\+P\+Discard}}
+\index{U\+D\+P\+Discard@{U\+D\+P\+Discard}!U\+D\+P.\+h@{U\+D\+P.\+h}}
+\subsubsection[{U\+D\+P\+Discard}]{\setlength{\rightskip}{0pt plus 5cm}void U\+D\+P\+Discard (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_u_d_p_8h_a92198dc6ba0ef28c7ec35eefc2120a85}
+
+
+Definition at line 1176 of file U\+D\+P.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\hypertarget{_u_d_p_8h_a6a60054cd55ad4d0e70b78f8083a39bd}{}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+Flush@{U\+D\+P\+Flush}}
+\index{U\+D\+P\+Flush@{U\+D\+P\+Flush}!U\+D\+P.\+h@{U\+D\+P.\+h}}
+\subsubsection[{U\+D\+P\+Flush}]{\setlength{\rightskip}{0pt plus 5cm}void U\+D\+P\+Flush (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_u_d_p_8h_a6a60054cd55ad4d0e70b78f8083a39bd}
+
+
+Definition at line 958 of file U\+D\+P.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+\hypertarget{_u_d_p_8h_a4292b49f8ba04393a7b301123108613c}{}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+Get@{U\+D\+P\+Get}}
+\index{U\+D\+P\+Get@{U\+D\+P\+Get}!U\+D\+P.\+h@{U\+D\+P.\+h}}
+\subsubsection[{U\+D\+P\+Get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} U\+D\+P\+Get (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{v}
+\end{DoxyParamCaption}
+)}\label{_u_d_p_8h_a4292b49f8ba04393a7b301123108613c}
+
+
+Definition at line 1092 of file U\+D\+P.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 5
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\hypertarget{_u_d_p_8h_a2ad4741432dcc367e97c7c6e1d964bdb}{}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+Get\+Array@{U\+D\+P\+Get\+Array}}
+\index{U\+D\+P\+Get\+Array@{U\+D\+P\+Get\+Array}!U\+D\+P.\+h@{U\+D\+P.\+h}}
+\subsubsection[{U\+D\+P\+Get\+Array}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} U\+D\+P\+Get\+Array (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{c\+Data, }
+\item[{{\bf W\+O\+R\+D}}]{w\+Data\+Len}
+\end{DoxyParamCaption}
+)}\label{_u_d_p_8h_a2ad4741432dcc367e97c7c6e1d964bdb}
+
+
+Definition at line 1132 of file U\+D\+P.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 7
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 8
+
+
+\hypertarget{_u_d_p_8h_a26be5362fd254b256ce49813760578ad}{}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+Init@{U\+D\+P\+Init}}
+\index{U\+D\+P\+Init@{U\+D\+P\+Init}!U\+D\+P.\+h@{U\+D\+P.\+h}}
+\subsubsection[{U\+D\+P\+Init}]{\setlength{\rightskip}{0pt plus 5cm}void U\+D\+P\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_u_d_p_8h_a26be5362fd254b256ce49813760578ad}
+
+
+Definition at line 167 of file U\+D\+P.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 9
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 10
+
+
+\hypertarget{_u_d_p_8h_ae6cafd8670068265c3d9d921cd7e0675}{}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+Is\+Get\+Ready@{U\+D\+P\+Is\+Get\+Ready}}
+\index{U\+D\+P\+Is\+Get\+Ready@{U\+D\+P\+Is\+Get\+Ready}!U\+D\+P.\+h@{U\+D\+P.\+h}}
+\subsubsection[{U\+D\+P\+Is\+Get\+Ready}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} U\+D\+P\+Is\+Get\+Ready (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T}}]{s}
+\end{DoxyParamCaption}
+)}\label{_u_d_p_8h_ae6cafd8670068265c3d9d921cd7e0675}
+
+
+Definition at line 1053 of file U\+D\+P.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 11
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 12
+
+
+\hypertarget{_u_d_p_8h_a404d970c5f846e2a0459cf094232ad4c}{}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+Is\+Opened@{U\+D\+P\+Is\+Opened}}
+\index{U\+D\+P\+Is\+Opened@{U\+D\+P\+Is\+Opened}!U\+D\+P.\+h@{U\+D\+P.\+h}}
+\subsubsection[{U\+D\+P\+Is\+Opened}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} U\+D\+P\+Is\+Opened (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T}}]{socket}
+\end{DoxyParamCaption}
+)}\label{_u_d_p_8h_a404d970c5f846e2a0459cf094232ad4c}
+
+
+Definition at line 468 of file U\+D\+P.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 13
+
+
+\hypertarget{_u_d_p_8h_a8a80f5aa86eba6a6b09cb1a0eb7f01cb}{}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+Is\+Put\+Ready@{U\+D\+P\+Is\+Put\+Ready}}
+\index{U\+D\+P\+Is\+Put\+Ready@{U\+D\+P\+Is\+Put\+Ready}!U\+D\+P.\+h@{U\+D\+P.\+h}}
+\subsubsection[{U\+D\+P\+Is\+Put\+Ready}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} U\+D\+P\+Is\+Put\+Ready (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T}}]{s}
+\end{DoxyParamCaption}
+)}\label{_u_d_p_8h_a8a80f5aa86eba6a6b09cb1a0eb7f01cb}
+
+
+Definition at line 720 of file U\+D\+P.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 14
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 15
+
+
+\hypertarget{_u_d_p_8h_ae5069afb0cda35b9a306dcb37f222822}{}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+Open\+Ex@{U\+D\+P\+Open\+Ex}}
+\index{U\+D\+P\+Open\+Ex@{U\+D\+P\+Open\+Ex}!U\+D\+P.\+h@{U\+D\+P.\+h}}
+\subsubsection[{U\+D\+P\+Open\+Ex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T} U\+D\+P\+Open\+Ex (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+W\+O\+R\+D}}]{remote\+Host, }
+\item[{{\bf B\+Y\+T\+E}}]{remote\+Host\+Type, }
+\item[{{\bf U\+D\+P\+\_\+\+P\+O\+R\+T}}]{local\+Port, }
+\item[{{\bf U\+D\+P\+\_\+\+P\+O\+R\+T}}]{remote\+Port}
+\end{DoxyParamCaption}
+)}\label{_u_d_p_8h_ae5069afb0cda35b9a306dcb37f222822}
+
+
+Definition at line 240 of file U\+D\+P.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 16
+
+
+\hypertarget{_u_d_p_8h_a49305099f869233eaab80c0953df6eed}{}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+Process@{U\+D\+P\+Process}}
+\index{U\+D\+P\+Process@{U\+D\+P\+Process}!U\+D\+P.\+h@{U\+D\+P.\+h}}
+\subsubsection[{U\+D\+P\+Process}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} U\+D\+P\+Process (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+O\+D\+E\+\_\+\+I\+N\+F\+O} $\ast$}]{remote\+Node, }
+\item[{I\+P\+\_\+\+A\+D\+D\+R $\ast$}]{local\+I\+P, }
+\item[{{\bf W\+O\+R\+D}}]{len}
+\end{DoxyParamCaption}
+)}\label{_u_d_p_8h_a49305099f869233eaab80c0953df6eed}
+
+
+Definition at line 1219 of file U\+D\+P.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 17
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 18
+
+
+\hypertarget{_u_d_p_8h_aa31511e0818a730f9a335d2349081d94}{}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+Put@{U\+D\+P\+Put}}
+\index{U\+D\+P\+Put@{U\+D\+P\+Put}!U\+D\+P.\+h@{U\+D\+P.\+h}}
+\subsubsection[{U\+D\+P\+Put}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} U\+D\+P\+Put (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{v}
+\end{DoxyParamCaption}
+)}\label{_u_d_p_8h_aa31511e0818a730f9a335d2349081d94}
+
+
+Definition at line 759 of file U\+D\+P.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 19
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 20
+
+
+\hypertarget{_u_d_p_8h_a372fafc6c39a309ddc9bd3408b16a267}{}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+Put\+Array@{U\+D\+P\+Put\+Array}}
+\index{U\+D\+P\+Put\+Array@{U\+D\+P\+Put\+Array}!U\+D\+P.\+h@{U\+D\+P.\+h}}
+\subsubsection[{U\+D\+P\+Put\+Array}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} U\+D\+P\+Put\+Array (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{c\+Data, }
+\item[{{\bf W\+O\+R\+D}}]{w\+Data\+Len}
+\end{DoxyParamCaption}
+)}\label{_u_d_p_8h_a372fafc6c39a309ddc9bd3408b16a267}
+
+
+Definition at line 800 of file U\+D\+P.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 21
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 22
+
+
+\hypertarget{_u_d_p_8h_a3e45deb17e39a300bf04336d9223ab8b}{}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+Put\+R\+O\+M\+Array@{U\+D\+P\+Put\+R\+O\+M\+Array}}
+\index{U\+D\+P\+Put\+R\+O\+M\+Array@{U\+D\+P\+Put\+R\+O\+M\+Array}!U\+D\+P.\+h@{U\+D\+P.\+h}}
+\subsubsection[{U\+D\+P\+Put\+R\+O\+M\+Array}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} U\+D\+P\+Put\+R\+O\+M\+Array (
+\begin{DoxyParamCaption}
+\item[{R\+O\+M {\bf B\+Y\+T\+E} $\ast$}]{c\+Data, }
+\item[{{\bf W\+O\+R\+D}}]{w\+Data\+Len}
+\end{DoxyParamCaption}
+)}\label{_u_d_p_8h_a3e45deb17e39a300bf04336d9223ab8b}
+
+
+Definition at line 847 of file U\+D\+P.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 23
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 24
+
+
+\hypertarget{_u_d_p_8h_a8a94524f00e282c6bea177bd05b1eedf}{}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+Put\+R\+O\+M\+String@{U\+D\+P\+Put\+R\+O\+M\+String}}
+\index{U\+D\+P\+Put\+R\+O\+M\+String@{U\+D\+P\+Put\+R\+O\+M\+String}!U\+D\+P.\+h@{U\+D\+P.\+h}}
+\subsubsection[{U\+D\+P\+Put\+R\+O\+M\+String}]{\setlength{\rightskip}{0pt plus 5cm}R\+O\+M {\bf B\+Y\+T\+E}$\ast$ U\+D\+P\+Put\+R\+O\+M\+String (
+\begin{DoxyParamCaption}
+\item[{R\+O\+M {\bf B\+Y\+T\+E} $\ast$}]{str\+Data}
+\end{DoxyParamCaption}
+)}\label{_u_d_p_8h_a8a94524f00e282c6bea177bd05b1eedf}
+
+
+Definition at line 925 of file U\+D\+P.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 25
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 26
+
+
+\hypertarget{_u_d_p_8h_a130da2cd4cf5df1f28d4fcdef153d130}{}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+Put\+String@{U\+D\+P\+Put\+String}}
+\index{U\+D\+P\+Put\+String@{U\+D\+P\+Put\+String}!U\+D\+P.\+h@{U\+D\+P.\+h}}
+\subsubsection[{U\+D\+P\+Put\+String}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E}$\ast$ U\+D\+P\+Put\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{str\+Data}
+\end{DoxyParamCaption}
+)}\label{_u_d_p_8h_a130da2cd4cf5df1f28d4fcdef153d130}
+
+
+Definition at line 891 of file U\+D\+P.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 27
+
+
+\hypertarget{_u_d_p_8h_a0dc4b7c53e2e3d3b91fe53ff2e135d72}{}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+Set\+Rx\+Buffer@{U\+D\+P\+Set\+Rx\+Buffer}}
+\index{U\+D\+P\+Set\+Rx\+Buffer@{U\+D\+P\+Set\+Rx\+Buffer}!U\+D\+P.\+h@{U\+D\+P.\+h}}
+\subsubsection[{U\+D\+P\+Set\+Rx\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}void U\+D\+P\+Set\+Rx\+Buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{w\+Offset}
+\end{DoxyParamCaption}
+)}\label{_u_d_p_8h_a0dc4b7c53e2e3d3b91fe53ff2e135d72}
+
+
+Definition at line 686 of file U\+D\+P.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 28
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 29
+
+
+\hypertarget{_u_d_p_8h_a7cf79fb1794e17d66e3e960dba97097b}{}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+Set\+Tx\+Buffer@{U\+D\+P\+Set\+Tx\+Buffer}}
+\index{U\+D\+P\+Set\+Tx\+Buffer@{U\+D\+P\+Set\+Tx\+Buffer}!U\+D\+P.\+h@{U\+D\+P.\+h}}
+\subsubsection[{U\+D\+P\+Set\+Tx\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}void U\+D\+P\+Set\+Tx\+Buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{w\+Offset}
+\end{DoxyParamCaption}
+)}\label{_u_d_p_8h_a7cf79fb1794e17d66e3e960dba97097b}
+
+
+Definition at line 656 of file U\+D\+P.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 30
+
+
+\hypertarget{_u_d_p_8h_a04db7e90c0e235382b6068e5128bf2d1}{}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+Task@{U\+D\+P\+Task}}
+\index{U\+D\+P\+Task@{U\+D\+P\+Task}!U\+D\+P.\+h@{U\+D\+P.\+h}}
+\subsubsection[{U\+D\+P\+Task}]{\setlength{\rightskip}{0pt plus 5cm}void U\+D\+P\+Task (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_u_d_p_8h_a04db7e90c0e235382b6068e5128bf2d1}
+
+
+Definition at line 500 of file U\+D\+P.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 31
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 32
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{_u_d_p_8h_a38d0573ffd5e095a68f831d13902a609}{}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!active\+U\+D\+P\+Socket@{active\+U\+D\+P\+Socket}}
+\index{active\+U\+D\+P\+Socket@{active\+U\+D\+P\+Socket}!U\+D\+P.\+h@{U\+D\+P.\+h}}
+\subsubsection[{active\+U\+D\+P\+Socket}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T} active\+U\+D\+P\+Socket}\label{_u_d_p_8h_a38d0573ffd5e095a68f831d13902a609}
+
+
+Definition at line 113 of file U\+D\+P.\+c.
+
+\hypertarget{_u_d_p_8h_ac725d34083bcc6c00cc5c6b288d61fda}{}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+Rx\+Count@{U\+D\+P\+Rx\+Count}}
+\index{U\+D\+P\+Rx\+Count@{U\+D\+P\+Rx\+Count}!U\+D\+P.\+h@{U\+D\+P.\+h}}
+\subsubsection[{U\+D\+P\+Rx\+Count}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} U\+D\+P\+Rx\+Count}\label{_u_d_p_8h_ac725d34083bcc6c00cc5c6b288d61fda}
+
+
+Definition at line 116 of file U\+D\+P.\+c.
+
+\hypertarget{_u_d_p_8h_a88fdea4a7f8fd271c17e3ae224bb4df8}{}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+Socket\+Info@{U\+D\+P\+Socket\+Info}}
+\index{U\+D\+P\+Socket\+Info@{U\+D\+P\+Socket\+Info}!U\+D\+P.\+h@{U\+D\+P.\+h}}
+\subsubsection[{U\+D\+P\+Socket\+Info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+\+I\+N\+F\+O} U\+D\+P\+Socket\+Info\mbox{[}{\bf M\+A\+X\+\_\+\+U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T\+S}\mbox{]}}\label{_u_d_p_8h_a88fdea4a7f8fd271c17e3ae224bb4df8}
+
+
+Definition at line 110 of file U\+D\+P.\+c.
+
+\hypertarget{_u_d_p_8h_a3ea5864b7f21d01770fb56f0a6123b92}{}\index{U\+D\+P.\+h@{U\+D\+P.\+h}!U\+D\+P\+Tx\+Count@{U\+D\+P\+Tx\+Count}}
+\index{U\+D\+P\+Tx\+Count@{U\+D\+P\+Tx\+Count}!U\+D\+P.\+h@{U\+D\+P.\+h}}
+\subsubsection[{U\+D\+P\+Tx\+Count}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} U\+D\+P\+Tx\+Count}\label{_u_d_p_8h_a3ea5864b7f21d01770fb56f0a6123b92}
+
+
+Definition at line 115 of file U\+D\+P.\+c.
+

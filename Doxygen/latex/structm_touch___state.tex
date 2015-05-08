@@ -1,0 +1,160 @@
+\hypertarget{structm_touch___state}{}\section{m\+Touch\+\_\+\+State Struct Reference}
+\label{structm_touch___state}\index{m\+Touch\+\_\+\+State@{m\+Touch\+\_\+\+State}}
+
+
+Collection of single-\/bit flags used by the m\+Touch Framework.  
+
+
+
+
+{\ttfamily \#include $<$m\+Touch.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \hyperlink{structm_touch___state_af799217cbdcc2ac20907a19c9b62a0d5}{data\+Ready}\+:1
+\begin{DoxyCompactList}\small\item\em Flag to determine if new data is ready for processing. \end{DoxyCompactList}\item 
+unsigned \hyperlink{structm_touch___state_ab1320a2e9a938dad2a563147945e97f9}{are\+Initialized}\+:1
+\begin{DoxyCompactList}\small\item\em Temporary flag used in local functions for a variety of uses. \end{DoxyCompactList}\item 
+unsigned \hyperlink{structm_touch___state_a915c76d157542b9acb3bfca42e0c4913}{button\+State\+Change}\+:1
+\begin{DoxyCompactList}\small\item\em Flag used to track when there has been a change in the button state. \end{DoxyCompactList}\item 
+unsigned \hyperlink{structm_touch___state_a98199bfb33a755cb711b9119e571bd7d}{isr\+Serviced}\+:1
+\begin{DoxyCompactList}\small\item\em Flag to alert the m\+Touch scanning algorithm that the I\+S\+R was serviced mid-\/scan. \end{DoxyCompactList}\item 
+unsigned \hyperlink{structm_touch___state_a815e542816b6deaf4affac094c2897d4}{is\+Repeat\+Scan}\+:1
+\begin{DoxyCompactList}\small\item\em Flag to track if this scan is being repeated due to an interrupting I\+S\+R call. \end{DoxyCompactList}\item 
+unsigned \hyperlink{structm_touch___state_a534f5559db0181635e45a781dc1f0d45}{all\+Released}\+:1
+\begin{DoxyCompactList}\small\item\em Flag used to track when all m\+Touch sensors are released. \end{DoxyCompactList}\item 
+unsigned \hyperlink{structm_touch___state_a5bc7c6dc7f7d0fb027257c8911a0deba}{skipped\+Decode}\+:1
+\begin{DoxyCompactList}\small\item\em Flag used to track if we just skipped the decode call. \end{DoxyCompactList}\item 
+unsigned \hyperlink{structm_touch___state_a61dd6125b007d7733bc098cb13c056d3}{change}\+:1
+\item 
+unsigned \hyperlink{structm_touch___state_abae066f8affc6afd4e968ed87dc1073f}{just\+Changed}\+:1
+\item 
+unsigned \hyperlink{structm_touch___state_a0e6f752c8d598d33da2440d70b8acd76}{scanning\+Enabled}\+:1
+\begin{DoxyCompactList}\small\item\em If running the m\+Touch scan from the main loop, this flag tracks whether scanning is currently enabled or not. \end{DoxyCompactList}\item 
+unsigned \hyperlink{structm_touch___state_aa25790aaf38769a83aeb3bf66ba2adc3}{error}\+:1
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Collection of single-\/bit flags used by the m\+Touch Framework. 
+
+Definition at line 232 of file m\+Touch.\+h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{structm_touch___state_a534f5559db0181635e45a781dc1f0d45}{}\index{m\+Touch\+\_\+\+State@{m\+Touch\+\_\+\+State}!all\+Released@{all\+Released}}
+\index{all\+Released@{all\+Released}!m\+Touch\+\_\+\+State@{m\+Touch\+\_\+\+State}}
+\subsubsection[{all\+Released}]{\setlength{\rightskip}{0pt plus 5cm}unsigned all\+Released}\label{structm_touch___state_a534f5559db0181635e45a781dc1f0d45}
+
+
+Flag used to track when all m\+Touch sensors are released. 
+
+
+
+Definition at line 244 of file m\+Touch.\+h.
+
+\hypertarget{structm_touch___state_ab1320a2e9a938dad2a563147945e97f9}{}\index{m\+Touch\+\_\+\+State@{m\+Touch\+\_\+\+State}!are\+Initialized@{are\+Initialized}}
+\index{are\+Initialized@{are\+Initialized}!m\+Touch\+\_\+\+State@{m\+Touch\+\_\+\+State}}
+\subsubsection[{are\+Initialized}]{\setlength{\rightskip}{0pt plus 5cm}unsigned are\+Initialized}\label{structm_touch___state_ab1320a2e9a938dad2a563147945e97f9}
+
+
+Temporary flag used in local functions for a variety of uses. 
+
+
+
+Definition at line 235 of file m\+Touch.\+h.
+
+\hypertarget{structm_touch___state_a915c76d157542b9acb3bfca42e0c4913}{}\index{m\+Touch\+\_\+\+State@{m\+Touch\+\_\+\+State}!button\+State\+Change@{button\+State\+Change}}
+\index{button\+State\+Change@{button\+State\+Change}!m\+Touch\+\_\+\+State@{m\+Touch\+\_\+\+State}}
+\subsubsection[{button\+State\+Change}]{\setlength{\rightskip}{0pt plus 5cm}unsigned button\+State\+Change}\label{structm_touch___state_a915c76d157542b9acb3bfca42e0c4913}
+
+
+Flag used to track when there has been a change in the button state. 
+
+
+
+Definition at line 236 of file m\+Touch.\+h.
+
+\hypertarget{structm_touch___state_a61dd6125b007d7733bc098cb13c056d3}{}\index{m\+Touch\+\_\+\+State@{m\+Touch\+\_\+\+State}!change@{change}}
+\index{change@{change}!m\+Touch\+\_\+\+State@{m\+Touch\+\_\+\+State}}
+\subsubsection[{change}]{\setlength{\rightskip}{0pt plus 5cm}unsigned change}\label{structm_touch___state_a61dd6125b007d7733bc098cb13c056d3}
+
+
+Definition at line 246 of file m\+Touch.\+h.
+
+\hypertarget{structm_touch___state_af799217cbdcc2ac20907a19c9b62a0d5}{}\index{m\+Touch\+\_\+\+State@{m\+Touch\+\_\+\+State}!data\+Ready@{data\+Ready}}
+\index{data\+Ready@{data\+Ready}!m\+Touch\+\_\+\+State@{m\+Touch\+\_\+\+State}}
+\subsubsection[{data\+Ready}]{\setlength{\rightskip}{0pt plus 5cm}unsigned data\+Ready}\label{structm_touch___state_af799217cbdcc2ac20907a19c9b62a0d5}
+
+
+Flag to determine if new data is ready for processing. 
+
+
+
+Definition at line 234 of file m\+Touch.\+h.
+
+\hypertarget{structm_touch___state_aa25790aaf38769a83aeb3bf66ba2adc3}{}\index{m\+Touch\+\_\+\+State@{m\+Touch\+\_\+\+State}!error@{error}}
+\index{error@{error}!m\+Touch\+\_\+\+State@{m\+Touch\+\_\+\+State}}
+\subsubsection[{error}]{\setlength{\rightskip}{0pt plus 5cm}unsigned error}\label{structm_touch___state_aa25790aaf38769a83aeb3bf66ba2adc3}
+
+
+Definition at line 255 of file m\+Touch.\+h.
+
+\hypertarget{structm_touch___state_a815e542816b6deaf4affac094c2897d4}{}\index{m\+Touch\+\_\+\+State@{m\+Touch\+\_\+\+State}!is\+Repeat\+Scan@{is\+Repeat\+Scan}}
+\index{is\+Repeat\+Scan@{is\+Repeat\+Scan}!m\+Touch\+\_\+\+State@{m\+Touch\+\_\+\+State}}
+\subsubsection[{is\+Repeat\+Scan}]{\setlength{\rightskip}{0pt plus 5cm}unsigned is\+Repeat\+Scan}\label{structm_touch___state_a815e542816b6deaf4affac094c2897d4}
+
+
+Flag to track if this scan is being repeated due to an interrupting I\+S\+R call. 
+
+
+
+Definition at line 240 of file m\+Touch.\+h.
+
+\hypertarget{structm_touch___state_a98199bfb33a755cb711b9119e571bd7d}{}\index{m\+Touch\+\_\+\+State@{m\+Touch\+\_\+\+State}!isr\+Serviced@{isr\+Serviced}}
+\index{isr\+Serviced@{isr\+Serviced}!m\+Touch\+\_\+\+State@{m\+Touch\+\_\+\+State}}
+\subsubsection[{isr\+Serviced}]{\setlength{\rightskip}{0pt plus 5cm}unsigned isr\+Serviced}\label{structm_touch___state_a98199bfb33a755cb711b9119e571bd7d}
+
+
+Flag to alert the m\+Touch scanning algorithm that the I\+S\+R was serviced mid-\/scan. 
+
+
+
+Definition at line 239 of file m\+Touch.\+h.
+
+\hypertarget{structm_touch___state_abae066f8affc6afd4e968ed87dc1073f}{}\index{m\+Touch\+\_\+\+State@{m\+Touch\+\_\+\+State}!just\+Changed@{just\+Changed}}
+\index{just\+Changed@{just\+Changed}!m\+Touch\+\_\+\+State@{m\+Touch\+\_\+\+State}}
+\subsubsection[{just\+Changed}]{\setlength{\rightskip}{0pt plus 5cm}unsigned just\+Changed}\label{structm_touch___state_abae066f8affc6afd4e968ed87dc1073f}
+
+
+Definition at line 247 of file m\+Touch.\+h.
+
+\hypertarget{structm_touch___state_a0e6f752c8d598d33da2440d70b8acd76}{}\index{m\+Touch\+\_\+\+State@{m\+Touch\+\_\+\+State}!scanning\+Enabled@{scanning\+Enabled}}
+\index{scanning\+Enabled@{scanning\+Enabled}!m\+Touch\+\_\+\+State@{m\+Touch\+\_\+\+State}}
+\subsubsection[{scanning\+Enabled}]{\setlength{\rightskip}{0pt plus 5cm}unsigned scanning\+Enabled}\label{structm_touch___state_a0e6f752c8d598d33da2440d70b8acd76}
+
+
+If running the m\+Touch scan from the main loop, this flag tracks whether scanning is currently enabled or not. 
+
+
+
+Definition at line 251 of file m\+Touch.\+h.
+
+\hypertarget{structm_touch___state_a5bc7c6dc7f7d0fb027257c8911a0deba}{}\index{m\+Touch\+\_\+\+State@{m\+Touch\+\_\+\+State}!skipped\+Decode@{skipped\+Decode}}
+\index{skipped\+Decode@{skipped\+Decode}!m\+Touch\+\_\+\+State@{m\+Touch\+\_\+\+State}}
+\subsubsection[{skipped\+Decode}]{\setlength{\rightskip}{0pt plus 5cm}unsigned skipped\+Decode}\label{structm_touch___state_a5bc7c6dc7f7d0fb027257c8911a0deba}
+
+
+Flag used to track if we just skipped the decode call. 
+
+
+
+Definition at line 245 of file m\+Touch.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/\hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h}{m\+Touch.\+h}\end{DoxyCompactItemize}

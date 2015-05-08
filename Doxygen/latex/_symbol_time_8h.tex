@@ -1,0 +1,185 @@
+\hypertarget{_symbol_time_8h}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+Wireless\+Protocols/\+Symbol\+Time.h File Reference}
+\label{_symbol_time_8h}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+Wireless\+Protocols/\+Symbol\+Time.\+h@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+Wireless\+Protocols/\+Symbol\+Time.\+h}}
+{\ttfamily \#include \char`\"{}Compiler.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Generic\+Type\+Defs.\+h\char`\"{}}\\*
+Include dependency graph for Symbol\+Time.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{union___m_i_w_i___t_i_c_k}{\+\_\+\+M\+I\+W\+I\+\_\+\+T\+I\+C\+K}
+\item 
+struct \hyperlink{struct___m_i_w_i___t_i_c_k_1_1___m_i_w_i___t_i_c_k__bytes}{\+\_\+\+M\+I\+W\+I\+\_\+\+T\+I\+C\+K\+::\+\_\+\+M\+I\+W\+I\+\_\+\+T\+I\+C\+K\+\_\+bytes}
+\item 
+struct \hyperlink{struct___m_i_w_i___t_i_c_k_1_1___m_i_w_i___t_i_c_k__words}{\+\_\+\+M\+I\+W\+I\+\_\+\+T\+I\+C\+K\+::\+\_\+\+M\+I\+W\+I\+\_\+\+T\+I\+C\+K\+\_\+words}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_symbol_time_8h_a26efc59f90e13bba774fdeec5321e12c}{O\+N\+E\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D}~(O\+N\+E\+\_\+\+S\+E\+C\+O\+N\+D/1000)
+\item 
+\#define \hyperlink{_symbol_time_8h_a795d19057b24de06131d25249431afb6}{H\+U\+N\+D\+R\+E\+D\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D}~(O\+N\+E\+\_\+\+S\+E\+C\+O\+N\+D/10)
+\item 
+\#define \hyperlink{_symbol_time_8h_a5caee098612767a4220cd2f0c5d34283}{F\+O\+R\+T\+Y\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D}~(O\+N\+E\+\_\+\+S\+E\+C\+O\+N\+D/25)
+\item 
+\#define \hyperlink{_symbol_time_8h_aa141faea339e835d92b2fac208b49727}{T\+W\+E\+N\+T\+Y\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D}~(O\+N\+E\+\_\+\+S\+E\+C\+O\+N\+D/50)
+\item 
+\#define \hyperlink{_symbol_time_8h_a0f81465e923ee193bfcd549a71af0245}{T\+E\+N\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D}~(O\+N\+E\+\_\+\+S\+E\+C\+O\+N\+D/100)
+\item 
+\#define \hyperlink{_symbol_time_8h_a7ab7af56c4be4e53449a3caed24a0adb}{F\+I\+V\+E\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D}~(O\+N\+E\+\_\+\+S\+E\+C\+O\+N\+D/200)
+\item 
+\#define \hyperlink{_symbol_time_8h_af5798a9ce8bc7280031b857a7da8eb73}{T\+W\+O\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D}~(O\+N\+E\+\_\+\+S\+E\+C\+O\+N\+D/500)
+\item 
+\#define \hyperlink{_symbol_time_8h_aa838923f78f23c9c9547de7795e93fa1}{O\+N\+E\+\_\+\+M\+I\+N\+U\+T\+E}~(O\+N\+E\+\_\+\+S\+E\+C\+O\+N\+D$\ast$60)
+\item 
+\#define \hyperlink{_symbol_time_8h_ae8dbeb3eda9f88f8f222adea789ec63d}{O\+N\+E\+\_\+\+H\+O\+U\+R}~(\hyperlink{_symbol_time_8h_aa838923f78f23c9c9547de7795e93fa1}{O\+N\+E\+\_\+\+M\+I\+N\+U\+T\+E}$\ast$60)
+\item 
+\#define \hyperlink{_symbol_time_8h_a9e0d8ffede9aada13e14a7bdf7bf6d81}{Mi\+Wi\+\_\+\+Tick\+Get\+Diff}(a,  b)~(\hyperlink{_t_f_t_pc_8c_a5ab8c2bf45b20b5f7aa3a4f083896cec}{a.\+Val} -\/ \hyperlink{_t_f_t_pc_8c_a5ab8c2bf45b20b5f7aa3a4f083896cec}{b.\+Val})
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef union \hyperlink{union___m_i_w_i___t_i_c_k}{\+\_\+\+M\+I\+W\+I\+\_\+\+T\+I\+C\+K} \hyperlink{_symbol_time_8h_aa0f8e40665d4ca8eb3e8f91e9e85c323}{M\+I\+W\+I\+\_\+\+T\+I\+C\+K}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_symbol_time_8h_ae4fef8757de0f6f73310f9998ad3b1a8}{Init\+Symbol\+Timer} (void)
+\item 
+\hyperlink{_symbol_time_8h_aa0f8e40665d4ca8eb3e8f91e9e85c323}{M\+I\+W\+I\+\_\+\+T\+I\+C\+K} \hyperlink{_symbol_time_8h_adfcefc0e83ca7ef50cc0b69e02b41871}{Mi\+Wi\+\_\+\+Tick\+Get} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_symbol_time_8h_a06d49569d84b1bff3e45ee4706911362}{timer\+Extension1}
+\item 
+volatile \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_symbol_time_8h_adaa6a56e1d9a4eee39ca7dde06a5cc1f}{timer\+Extension2}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_symbol_time_8h_a7ab7af56c4be4e53449a3caed24a0adb}{}\index{Symbol\+Time.\+h@{Symbol\+Time.\+h}!F\+I\+V\+E\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D@{F\+I\+V\+E\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D}}
+\index{F\+I\+V\+E\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D@{F\+I\+V\+E\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D}!Symbol\+Time.\+h@{Symbol\+Time.\+h}}
+\subsubsection[{F\+I\+V\+E\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+V\+E\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D~(O\+N\+E\+\_\+\+S\+E\+C\+O\+N\+D/200)}\label{_symbol_time_8h_a7ab7af56c4be4e53449a3caed24a0adb}
+
+
+Definition at line 182 of file Symbol\+Time.\+h.
+
+\hypertarget{_symbol_time_8h_a5caee098612767a4220cd2f0c5d34283}{}\index{Symbol\+Time.\+h@{Symbol\+Time.\+h}!F\+O\+R\+T\+Y\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D@{F\+O\+R\+T\+Y\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D}}
+\index{F\+O\+R\+T\+Y\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D@{F\+O\+R\+T\+Y\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D}!Symbol\+Time.\+h@{Symbol\+Time.\+h}}
+\subsubsection[{F\+O\+R\+T\+Y\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+O\+R\+T\+Y\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D~(O\+N\+E\+\_\+\+S\+E\+C\+O\+N\+D/25)}\label{_symbol_time_8h_a5caee098612767a4220cd2f0c5d34283}
+
+
+Definition at line 179 of file Symbol\+Time.\+h.
+
+\hypertarget{_symbol_time_8h_a795d19057b24de06131d25249431afb6}{}\index{Symbol\+Time.\+h@{Symbol\+Time.\+h}!H\+U\+N\+D\+R\+E\+D\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D@{H\+U\+N\+D\+R\+E\+D\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D}}
+\index{H\+U\+N\+D\+R\+E\+D\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D@{H\+U\+N\+D\+R\+E\+D\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D}!Symbol\+Time.\+h@{Symbol\+Time.\+h}}
+\subsubsection[{H\+U\+N\+D\+R\+E\+D\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+U\+N\+D\+R\+E\+D\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D~(O\+N\+E\+\_\+\+S\+E\+C\+O\+N\+D/10)}\label{_symbol_time_8h_a795d19057b24de06131d25249431afb6}
+
+
+Definition at line 178 of file Symbol\+Time.\+h.
+
+\hypertarget{_symbol_time_8h_a9e0d8ffede9aada13e14a7bdf7bf6d81}{}\index{Symbol\+Time.\+h@{Symbol\+Time.\+h}!Mi\+Wi\+\_\+\+Tick\+Get\+Diff@{Mi\+Wi\+\_\+\+Tick\+Get\+Diff}}
+\index{Mi\+Wi\+\_\+\+Tick\+Get\+Diff@{Mi\+Wi\+\_\+\+Tick\+Get\+Diff}!Symbol\+Time.\+h@{Symbol\+Time.\+h}}
+\subsubsection[{Mi\+Wi\+\_\+\+Tick\+Get\+Diff}]{\setlength{\rightskip}{0pt plus 5cm}\#define Mi\+Wi\+\_\+\+Tick\+Get\+Diff(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~({\bf a.\+Val} -\/ {\bf b.\+Val})}\label{_symbol_time_8h_a9e0d8ffede9aada13e14a7bdf7bf6d81}
+
+
+Definition at line 187 of file Symbol\+Time.\+h.
+
+\hypertarget{_symbol_time_8h_ae8dbeb3eda9f88f8f222adea789ec63d}{}\index{Symbol\+Time.\+h@{Symbol\+Time.\+h}!O\+N\+E\+\_\+\+H\+O\+U\+R@{O\+N\+E\+\_\+\+H\+O\+U\+R}}
+\index{O\+N\+E\+\_\+\+H\+O\+U\+R@{O\+N\+E\+\_\+\+H\+O\+U\+R}!Symbol\+Time.\+h@{Symbol\+Time.\+h}}
+\subsubsection[{O\+N\+E\+\_\+\+H\+O\+U\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\+N\+E\+\_\+\+H\+O\+U\+R~({\bf O\+N\+E\+\_\+\+M\+I\+N\+U\+T\+E}$\ast$60)}\label{_symbol_time_8h_ae8dbeb3eda9f88f8f222adea789ec63d}
+
+
+Definition at line 185 of file Symbol\+Time.\+h.
+
+\hypertarget{_symbol_time_8h_a26efc59f90e13bba774fdeec5321e12c}{}\index{Symbol\+Time.\+h@{Symbol\+Time.\+h}!O\+N\+E\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D@{O\+N\+E\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D}}
+\index{O\+N\+E\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D@{O\+N\+E\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D}!Symbol\+Time.\+h@{Symbol\+Time.\+h}}
+\subsubsection[{O\+N\+E\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\+N\+E\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D~(O\+N\+E\+\_\+\+S\+E\+C\+O\+N\+D/1000)}\label{_symbol_time_8h_a26efc59f90e13bba774fdeec5321e12c}
+
+
+Definition at line 177 of file Symbol\+Time.\+h.
+
+\hypertarget{_symbol_time_8h_aa838923f78f23c9c9547de7795e93fa1}{}\index{Symbol\+Time.\+h@{Symbol\+Time.\+h}!O\+N\+E\+\_\+\+M\+I\+N\+U\+T\+E@{O\+N\+E\+\_\+\+M\+I\+N\+U\+T\+E}}
+\index{O\+N\+E\+\_\+\+M\+I\+N\+U\+T\+E@{O\+N\+E\+\_\+\+M\+I\+N\+U\+T\+E}!Symbol\+Time.\+h@{Symbol\+Time.\+h}}
+\subsubsection[{O\+N\+E\+\_\+\+M\+I\+N\+U\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\+N\+E\+\_\+\+M\+I\+N\+U\+T\+E~(O\+N\+E\+\_\+\+S\+E\+C\+O\+N\+D$\ast$60)}\label{_symbol_time_8h_aa838923f78f23c9c9547de7795e93fa1}
+
+
+Definition at line 184 of file Symbol\+Time.\+h.
+
+\hypertarget{_symbol_time_8h_a0f81465e923ee193bfcd549a71af0245}{}\index{Symbol\+Time.\+h@{Symbol\+Time.\+h}!T\+E\+N\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D@{T\+E\+N\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D}}
+\index{T\+E\+N\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D@{T\+E\+N\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D}!Symbol\+Time.\+h@{Symbol\+Time.\+h}}
+\subsubsection[{T\+E\+N\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+E\+N\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D~(O\+N\+E\+\_\+\+S\+E\+C\+O\+N\+D/100)}\label{_symbol_time_8h_a0f81465e923ee193bfcd549a71af0245}
+
+
+Definition at line 181 of file Symbol\+Time.\+h.
+
+\hypertarget{_symbol_time_8h_aa141faea339e835d92b2fac208b49727}{}\index{Symbol\+Time.\+h@{Symbol\+Time.\+h}!T\+W\+E\+N\+T\+Y\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D@{T\+W\+E\+N\+T\+Y\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D}}
+\index{T\+W\+E\+N\+T\+Y\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D@{T\+W\+E\+N\+T\+Y\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D}!Symbol\+Time.\+h@{Symbol\+Time.\+h}}
+\subsubsection[{T\+W\+E\+N\+T\+Y\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+E\+N\+T\+Y\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D~(O\+N\+E\+\_\+\+S\+E\+C\+O\+N\+D/50)}\label{_symbol_time_8h_aa141faea339e835d92b2fac208b49727}
+
+
+Definition at line 180 of file Symbol\+Time.\+h.
+
+\hypertarget{_symbol_time_8h_af5798a9ce8bc7280031b857a7da8eb73}{}\index{Symbol\+Time.\+h@{Symbol\+Time.\+h}!T\+W\+O\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D@{T\+W\+O\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D}}
+\index{T\+W\+O\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D@{T\+W\+O\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D}!Symbol\+Time.\+h@{Symbol\+Time.\+h}}
+\subsubsection[{T\+W\+O\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+\_\+\+M\+I\+L\+I\+\_\+\+S\+E\+C\+O\+N\+D~(O\+N\+E\+\_\+\+S\+E\+C\+O\+N\+D/500)}\label{_symbol_time_8h_af5798a9ce8bc7280031b857a7da8eb73}
+
+
+Definition at line 183 of file Symbol\+Time.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_symbol_time_8h_aa0f8e40665d4ca8eb3e8f91e9e85c323}{}\index{Symbol\+Time.\+h@{Symbol\+Time.\+h}!M\+I\+W\+I\+\_\+\+T\+I\+C\+K@{M\+I\+W\+I\+\_\+\+T\+I\+C\+K}}
+\index{M\+I\+W\+I\+\_\+\+T\+I\+C\+K@{M\+I\+W\+I\+\_\+\+T\+I\+C\+K}!Symbol\+Time.\+h@{Symbol\+Time.\+h}}
+\subsubsection[{M\+I\+W\+I\+\_\+\+T\+I\+C\+K}]{\setlength{\rightskip}{0pt plus 5cm}typedef union {\bf \+\_\+\+M\+I\+W\+I\+\_\+\+T\+I\+C\+K}  {\bf M\+I\+W\+I\+\_\+\+T\+I\+C\+K}}\label{_symbol_time_8h_aa0f8e40665d4ca8eb3e8f91e9e85c323}
+
+
+\subsection{Function Documentation}
+\hypertarget{_symbol_time_8h_ae4fef8757de0f6f73310f9998ad3b1a8}{}\index{Symbol\+Time.\+h@{Symbol\+Time.\+h}!Init\+Symbol\+Timer@{Init\+Symbol\+Timer}}
+\index{Init\+Symbol\+Timer@{Init\+Symbol\+Timer}!Symbol\+Time.\+h@{Symbol\+Time.\+h}}
+\subsubsection[{Init\+Symbol\+Timer}]{\setlength{\rightskip}{0pt plus 5cm}void Init\+Symbol\+Timer (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_symbol_time_8h_ae4fef8757de0f6f73310f9998ad3b1a8}
+
+
+Definition at line 90 of file Symbol\+Time.\+c.
+
+\hypertarget{_symbol_time_8h_adfcefc0e83ca7ef50cc0b69e02b41871}{}\index{Symbol\+Time.\+h@{Symbol\+Time.\+h}!Mi\+Wi\+\_\+\+Tick\+Get@{Mi\+Wi\+\_\+\+Tick\+Get}}
+\index{Mi\+Wi\+\_\+\+Tick\+Get@{Mi\+Wi\+\_\+\+Tick\+Get}!Symbol\+Time.\+h@{Symbol\+Time.\+h}}
+\subsubsection[{Mi\+Wi\+\_\+\+Tick\+Get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+I\+W\+I\+\_\+\+T\+I\+C\+K} Mi\+Wi\+\_\+\+Tick\+Get (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_symbol_time_8h_adfcefc0e83ca7ef50cc0b69e02b41871}
+
+
+Definition at line 140 of file Symbol\+Time.\+c.
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{_symbol_time_8h_a06d49569d84b1bff3e45ee4706911362}{}\index{Symbol\+Time.\+h@{Symbol\+Time.\+h}!timer\+Extension1@{timer\+Extension1}}
+\index{timer\+Extension1@{timer\+Extension1}!Symbol\+Time.\+h@{Symbol\+Time.\+h}}
+\subsubsection[{timer\+Extension1}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf B\+Y\+T\+E} timer\+Extension1}\label{_symbol_time_8h_a06d49569d84b1bff3e45ee4706911362}
+
+
+Definition at line 63 of file Symbol\+Time.\+c.
+
+\hypertarget{_symbol_time_8h_adaa6a56e1d9a4eee39ca7dde06a5cc1f}{}\index{Symbol\+Time.\+h@{Symbol\+Time.\+h}!timer\+Extension2@{timer\+Extension2}}
+\index{timer\+Extension2@{timer\+Extension2}!Symbol\+Time.\+h@{Symbol\+Time.\+h}}
+\subsubsection[{timer\+Extension2}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf B\+Y\+T\+E} timer\+Extension2}\label{_symbol_time_8h_adaa6a56e1d9a4eee39ca7dde06a5cc1f}
+
+
+Definition at line 63 of file Symbol\+Time.\+c.
+

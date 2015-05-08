@@ -1,0 +1,175 @@
+\hypertarget{_jpeg_decoder_8h}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+Image Decoders/\+Jpeg\+Decoder.h File Reference}
+\label{_jpeg_decoder_8h}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+Image Decoders/\+Jpeg\+Decoder.\+h@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+Image Decoders/\+Jpeg\+Decoder.\+h}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_jpeg_decoder_8h_a5ae25384b18b10fa557f4189306cf64c}{J\+P\+E\+G\+\_\+\+Send\+Error}(x)~p\+Jpeg\+Decoder-\/$>$b\+Error = x; \hyperlink{_h_w_p___m_i_k_r_o__8_p_m_p_8h_a82fbe7f39de195b48629d4c73cb0f896}{return}(x); /$\ast$ Point to proper error handler routine $\ast$/
+\item 
+\#define \hyperlink{_jpeg_decoder_8h_ac69ee46f4a51ed14f0d68628c2dec71d}{M\+A\+X\+\_\+\+C\+H\+A\+N\+N\+E\+L\+S}~3 /$\ast$ This supports only Grayscale and Y\+Cb\+Cr images -\/ D\+O\+N\+T C\+H\+A\+N\+G\+E T\+H\+I\+S $\ast$/
+\item 
+\#define \hyperlink{_jpeg_decoder_8h_aba7f789f3266685ad8840806656e3692}{M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S}~6 /$\ast$ To decode one logical block, we have to decode 1 to 6 blocks depending on channels and subsampling -\/ D\+O\+N\+T R\+E\+D\+U\+C\+E T\+H\+I\+S $\ast$/
+\item 
+\#define \hyperlink{_jpeg_decoder_8h_a31a96db0b8d5c7e9048423cb9afd9d0d}{M\+A\+X\+\_\+\+H\+U\+F\+F\+\_\+\+T\+A\+B\+L\+E\+S}~2 /$\ast$ Each causes 2 tables -\/$>$ One for A\+C and another for D\+C -\/ D\+O\+N\+T R\+E\+D\+U\+C\+E T\+H\+I\+S $\ast$/
+\item 
+\#define \hyperlink{_jpeg_decoder_8h_a9628e1bedcbb811b2e5cb37061b52c21}{M\+A\+X\+\_\+\+D\+A\+T\+A\+\_\+\+B\+U\+F\+\_\+\+L\+E\+N}~128 /$\ast$ Increase if you have more data memory $\ast$/
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_jpeg_decoder_8h_a8fb872c72e116bbd3eba31f48d78e76b}{Errors} \{ \hyperlink{_jpeg_decoder_8h_a8fb872c72e116bbd3eba31f48d78e76bae09402f05c84dcc5ea0fbcaa111ffd73}{I\+M\+A\+G\+E\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+A\+V\+A\+I\+L\+A\+B\+L\+E}
+ \}
+\item 
+enum \hyperlink{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6}{Markers} \{ \\*
+\hyperlink{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6ace96f9639afd2d1884a935cba3b5b7a1}{S\+O\+F0} = 0x\+C0, 
+\hyperlink{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a3ab538a3121723d3f3135dc006209e50}{D\+H\+T} = 0x\+C4, 
+\hyperlink{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a90291956e102c1e1aa6e642164751197}{S\+O\+I} = 0x\+D8, 
+\hyperlink{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6aa32d54a7723cdca310f7994cb6aabe3a}{E\+O\+I} = 0x\+D9, 
+\\*
+\hyperlink{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a6c7377fbe01a9eca3a334db8b2f4b3ea}{S\+O\+S} = 0x\+D\+A, 
+\hyperlink{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a287db1142b21f48be04f9bcd33e07595}{D\+Q\+T} = 0x\+D\+B, 
+\hyperlink{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a34cf57e14b559b1f9c8b4feb26db9918}{D\+R\+I} = 0x\+D\+D, 
+\hyperlink{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a7ae3b50978684175271767d0a59b18b6}{A\+P\+P0} = 0x\+E0, 
+\\*
+\hyperlink{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6aaaabad2553753eb2aceaa31ab2ad3d72}{C\+O\+M} = 0x\+F\+E, 
+\hyperlink{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a86b41d792053fdb3f21b32ad7bca01f2}{T\+E\+M} = 0x01, 
+\hyperlink{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a0265f9610e6217725314876daaa6bffd}{R\+S\+T0} = 0x\+D0, 
+\hyperlink{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a373e3675202dc15d728a95375a2ee8f5}{R\+S\+T1} = 0x\+D1, 
+\\*
+\hyperlink{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a0433c87d66b244a38ccd0fe26ddab6cf}{R\+S\+T2} = 0x\+D2, 
+\hyperlink{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6ace7ac0a63fba5bf0b3ed7e314297a3e3}{R\+S\+T3} = 0x\+D3, 
+\hyperlink{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6add130a8aa9e62dd8084fe30cc56fa3d2}{R\+S\+T4} = 0x\+D4, 
+\hyperlink{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a0cb43e7b71b98bccc2b19c7389fac36d}{R\+S\+T5} = 0x\+D5, 
+\\*
+\hyperlink{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a4f76cbf6eda0fe63c87db302e0ffc259}{R\+S\+T6} = 0x\+D6, 
+\hyperlink{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6aa6ad88278f542edb36102429db30f89e}{R\+S\+T7} = 0x\+D7
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_jpeg_decoder_8h_a9a72d4217ed8c98baeb154fb438c107e}{J\+P\+E\+G\+\_\+b\+Decode} (\hyperlink{_image_decoder_8h_aa4153bf3c0bcd980fba8bb2f2ef258b6}{I\+M\+G\+\_\+\+F\+I\+L\+E} $\ast$pfile, \hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} b\+First\+Time)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_jpeg_decoder_8h_a5ae25384b18b10fa557f4189306cf64c}{}\index{Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}!J\+P\+E\+G\+\_\+\+Send\+Error@{J\+P\+E\+G\+\_\+\+Send\+Error}}
+\index{J\+P\+E\+G\+\_\+\+Send\+Error@{J\+P\+E\+G\+\_\+\+Send\+Error}!Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}}
+\subsubsection[{J\+P\+E\+G\+\_\+\+Send\+Error}]{\setlength{\rightskip}{0pt plus 5cm}\#define J\+P\+E\+G\+\_\+\+Send\+Error(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~p\+Jpeg\+Decoder-\/$>$b\+Error = x; {\bf return}(x); /$\ast$ Point to proper error handler routine $\ast$/}\label{_jpeg_decoder_8h_a5ae25384b18b10fa557f4189306cf64c}
+
+
+Definition at line 40 of file Jpeg\+Decoder.\+h.
+
+\hypertarget{_jpeg_decoder_8h_aba7f789f3266685ad8840806656e3692}{}\index{Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}!M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S@{M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S}}
+\index{M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S@{M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S}!Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}}
+\subsubsection[{M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S~6 /$\ast$ To decode one logical block, we have to decode 1 to 6 blocks depending on channels and subsampling -\/ D\+O\+N\+T R\+E\+D\+U\+C\+E T\+H\+I\+S $\ast$/}\label{_jpeg_decoder_8h_aba7f789f3266685ad8840806656e3692}
+
+
+Definition at line 43 of file Jpeg\+Decoder.\+h.
+
+\hypertarget{_jpeg_decoder_8h_ac69ee46f4a51ed14f0d68628c2dec71d}{}\index{Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}!M\+A\+X\+\_\+\+C\+H\+A\+N\+N\+E\+L\+S@{M\+A\+X\+\_\+\+C\+H\+A\+N\+N\+E\+L\+S}}
+\index{M\+A\+X\+\_\+\+C\+H\+A\+N\+N\+E\+L\+S@{M\+A\+X\+\_\+\+C\+H\+A\+N\+N\+E\+L\+S}!Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}}
+\subsubsection[{M\+A\+X\+\_\+\+C\+H\+A\+N\+N\+E\+L\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+C\+H\+A\+N\+N\+E\+L\+S~3 /$\ast$ This supports only Grayscale and Y\+Cb\+Cr images -\/ D\+O\+N\+T C\+H\+A\+N\+G\+E T\+H\+I\+S $\ast$/}\label{_jpeg_decoder_8h_ac69ee46f4a51ed14f0d68628c2dec71d}
+
+
+Definition at line 42 of file Jpeg\+Decoder.\+h.
+
+\hypertarget{_jpeg_decoder_8h_a9628e1bedcbb811b2e5cb37061b52c21}{}\index{Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}!M\+A\+X\+\_\+\+D\+A\+T\+A\+\_\+\+B\+U\+F\+\_\+\+L\+E\+N@{M\+A\+X\+\_\+\+D\+A\+T\+A\+\_\+\+B\+U\+F\+\_\+\+L\+E\+N}}
+\index{M\+A\+X\+\_\+\+D\+A\+T\+A\+\_\+\+B\+U\+F\+\_\+\+L\+E\+N@{M\+A\+X\+\_\+\+D\+A\+T\+A\+\_\+\+B\+U\+F\+\_\+\+L\+E\+N}!Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}}
+\subsubsection[{M\+A\+X\+\_\+\+D\+A\+T\+A\+\_\+\+B\+U\+F\+\_\+\+L\+E\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+D\+A\+T\+A\+\_\+\+B\+U\+F\+\_\+\+L\+E\+N~128 /$\ast$ Increase if you have more data memory $\ast$/}\label{_jpeg_decoder_8h_a9628e1bedcbb811b2e5cb37061b52c21}
+
+
+Definition at line 45 of file Jpeg\+Decoder.\+h.
+
+\hypertarget{_jpeg_decoder_8h_a31a96db0b8d5c7e9048423cb9afd9d0d}{}\index{Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}!M\+A\+X\+\_\+\+H\+U\+F\+F\+\_\+\+T\+A\+B\+L\+E\+S@{M\+A\+X\+\_\+\+H\+U\+F\+F\+\_\+\+T\+A\+B\+L\+E\+S}}
+\index{M\+A\+X\+\_\+\+H\+U\+F\+F\+\_\+\+T\+A\+B\+L\+E\+S@{M\+A\+X\+\_\+\+H\+U\+F\+F\+\_\+\+T\+A\+B\+L\+E\+S}!Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}}
+\subsubsection[{M\+A\+X\+\_\+\+H\+U\+F\+F\+\_\+\+T\+A\+B\+L\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+H\+U\+F\+F\+\_\+\+T\+A\+B\+L\+E\+S~2 /$\ast$ Each causes 2 tables -\/$>$ One for A\+C and another for D\+C -\/ D\+O\+N\+T R\+E\+D\+U\+C\+E T\+H\+I\+S $\ast$/}\label{_jpeg_decoder_8h_a31a96db0b8d5c7e9048423cb9afd9d0d}
+
+
+Definition at line 44 of file Jpeg\+Decoder.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_jpeg_decoder_8h_a8fb872c72e116bbd3eba31f48d78e76b}{}\index{Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}!Errors@{Errors}}
+\index{Errors@{Errors}!Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}}
+\subsubsection[{Errors}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Errors}}\label{_jpeg_decoder_8h_a8fb872c72e116bbd3eba31f48d78e76b}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{I\+M\+A\+G\+E\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+A\+V\+A\+I\+L\+A\+B\+L\+E@{I\+M\+A\+G\+E\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+A\+V\+A\+I\+L\+A\+B\+L\+E}!Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}}\index{Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}!I\+M\+A\+G\+E\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+A\+V\+A\+I\+L\+A\+B\+L\+E@{I\+M\+A\+G\+E\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+A\+V\+A\+I\+L\+A\+B\+L\+E}}\item[{\em 
+\hypertarget{_jpeg_decoder_8h_a8fb872c72e116bbd3eba31f48d78e76bae09402f05c84dcc5ea0fbcaa111ffd73}{}I\+M\+A\+G\+E\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+A\+V\+A\+I\+L\+A\+B\+L\+E\label{_jpeg_decoder_8h_a8fb872c72e116bbd3eba31f48d78e76bae09402f05c84dcc5ea0fbcaa111ffd73}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 48 of file Jpeg\+Decoder.\+h.
+
+\hypertarget{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6}{}\index{Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}!Markers@{Markers}}
+\index{Markers@{Markers}!Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}}
+\subsubsection[{Markers}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Markers}}\label{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+O\+F0@{S\+O\+F0}!Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}}\index{Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}!S\+O\+F0@{S\+O\+F0}}\item[{\em 
+\hypertarget{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6ace96f9639afd2d1884a935cba3b5b7a1}{}S\+O\+F0\label{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6ace96f9639afd2d1884a935cba3b5b7a1}
+}]\index{D\+H\+T@{D\+H\+T}!Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}}\index{Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}!D\+H\+T@{D\+H\+T}}\item[{\em 
+\hypertarget{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a3ab538a3121723d3f3135dc006209e50}{}D\+H\+T\label{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a3ab538a3121723d3f3135dc006209e50}
+}]\index{S\+O\+I@{S\+O\+I}!Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}}\index{Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}!S\+O\+I@{S\+O\+I}}\item[{\em 
+\hypertarget{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a90291956e102c1e1aa6e642164751197}{}S\+O\+I\label{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a90291956e102c1e1aa6e642164751197}
+}]\index{E\+O\+I@{E\+O\+I}!Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}}\index{Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}!E\+O\+I@{E\+O\+I}}\item[{\em 
+\hypertarget{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6aa32d54a7723cdca310f7994cb6aabe3a}{}E\+O\+I\label{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6aa32d54a7723cdca310f7994cb6aabe3a}
+}]\index{S\+O\+S@{S\+O\+S}!Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}}\index{Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}!S\+O\+S@{S\+O\+S}}\item[{\em 
+\hypertarget{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a6c7377fbe01a9eca3a334db8b2f4b3ea}{}S\+O\+S\label{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a6c7377fbe01a9eca3a334db8b2f4b3ea}
+}]\index{D\+Q\+T@{D\+Q\+T}!Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}}\index{Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}!D\+Q\+T@{D\+Q\+T}}\item[{\em 
+\hypertarget{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a287db1142b21f48be04f9bcd33e07595}{}D\+Q\+T\label{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a287db1142b21f48be04f9bcd33e07595}
+}]\index{D\+R\+I@{D\+R\+I}!Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}}\index{Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}!D\+R\+I@{D\+R\+I}}\item[{\em 
+\hypertarget{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a34cf57e14b559b1f9c8b4feb26db9918}{}D\+R\+I\label{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a34cf57e14b559b1f9c8b4feb26db9918}
+}]\index{A\+P\+P0@{A\+P\+P0}!Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}}\index{Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}!A\+P\+P0@{A\+P\+P0}}\item[{\em 
+\hypertarget{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a7ae3b50978684175271767d0a59b18b6}{}A\+P\+P0\label{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a7ae3b50978684175271767d0a59b18b6}
+}]\index{C\+O\+M@{C\+O\+M}!Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}}\index{Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}!C\+O\+M@{C\+O\+M}}\item[{\em 
+\hypertarget{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6aaaabad2553753eb2aceaa31ab2ad3d72}{}C\+O\+M\label{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6aaaabad2553753eb2aceaa31ab2ad3d72}
+}]\index{T\+E\+M@{T\+E\+M}!Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}}\index{Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}!T\+E\+M@{T\+E\+M}}\item[{\em 
+\hypertarget{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a86b41d792053fdb3f21b32ad7bca01f2}{}T\+E\+M\label{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a86b41d792053fdb3f21b32ad7bca01f2}
+}]\index{R\+S\+T0@{R\+S\+T0}!Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}}\index{Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}!R\+S\+T0@{R\+S\+T0}}\item[{\em 
+\hypertarget{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a0265f9610e6217725314876daaa6bffd}{}R\+S\+T0\label{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a0265f9610e6217725314876daaa6bffd}
+}]\index{R\+S\+T1@{R\+S\+T1}!Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}}\index{Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}!R\+S\+T1@{R\+S\+T1}}\item[{\em 
+\hypertarget{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a373e3675202dc15d728a95375a2ee8f5}{}R\+S\+T1\label{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a373e3675202dc15d728a95375a2ee8f5}
+}]\index{R\+S\+T2@{R\+S\+T2}!Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}}\index{Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}!R\+S\+T2@{R\+S\+T2}}\item[{\em 
+\hypertarget{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a0433c87d66b244a38ccd0fe26ddab6cf}{}R\+S\+T2\label{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a0433c87d66b244a38ccd0fe26ddab6cf}
+}]\index{R\+S\+T3@{R\+S\+T3}!Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}}\index{Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}!R\+S\+T3@{R\+S\+T3}}\item[{\em 
+\hypertarget{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6ace7ac0a63fba5bf0b3ed7e314297a3e3}{}R\+S\+T3\label{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6ace7ac0a63fba5bf0b3ed7e314297a3e3}
+}]\index{R\+S\+T4@{R\+S\+T4}!Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}}\index{Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}!R\+S\+T4@{R\+S\+T4}}\item[{\em 
+\hypertarget{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6add130a8aa9e62dd8084fe30cc56fa3d2}{}R\+S\+T4\label{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6add130a8aa9e62dd8084fe30cc56fa3d2}
+}]\index{R\+S\+T5@{R\+S\+T5}!Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}}\index{Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}!R\+S\+T5@{R\+S\+T5}}\item[{\em 
+\hypertarget{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a0cb43e7b71b98bccc2b19c7389fac36d}{}R\+S\+T5\label{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a0cb43e7b71b98bccc2b19c7389fac36d}
+}]\index{R\+S\+T6@{R\+S\+T6}!Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}}\index{Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}!R\+S\+T6@{R\+S\+T6}}\item[{\em 
+\hypertarget{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a4f76cbf6eda0fe63c87db302e0ffc259}{}R\+S\+T6\label{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6a4f76cbf6eda0fe63c87db302e0ffc259}
+}]\index{R\+S\+T7@{R\+S\+T7}!Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}}\index{Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}!R\+S\+T7@{R\+S\+T7}}\item[{\em 
+\hypertarget{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6aa6ad88278f542edb36102429db30f89e}{}R\+S\+T7\label{_jpeg_decoder_8h_a456be878416629b7bdbab1afa77a06e6aa6ad88278f542edb36102429db30f89e}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 54 of file Jpeg\+Decoder.\+h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_jpeg_decoder_8h_a9a72d4217ed8c98baeb154fb438c107e}{}\index{Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}!J\+P\+E\+G\+\_\+b\+Decode@{J\+P\+E\+G\+\_\+b\+Decode}}
+\index{J\+P\+E\+G\+\_\+b\+Decode@{J\+P\+E\+G\+\_\+b\+Decode}!Jpeg\+Decoder.\+h@{Jpeg\+Decoder.\+h}}
+\subsubsection[{J\+P\+E\+G\+\_\+b\+Decode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} J\+P\+E\+G\+\_\+b\+Decode (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+M\+G\+\_\+\+F\+I\+L\+E} $\ast$}]{pfile, }
+\item[{{\bf B\+O\+O\+L}}]{b\+First\+Time}
+\end{DoxyParamCaption}
+)}\label{_jpeg_decoder_8h_a9a72d4217ed8c98baeb154fb438c107e}
+
+
+Here is the caller graph for this function\+:
+% FIG 0
+
+

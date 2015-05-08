@@ -1,0 +1,594 @@
+\hypertarget{_w_f_driver_raw__24_g_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Wi\+Fi/\+W\+F\+Driver\+Raw\+\_\+24\+G.c File Reference}
+\label{_w_f_driver_raw__24_g_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Wi\+Fi/\+W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Wi\+Fi/\+W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_w_f_driver_raw__24_g_8c_a3e48c54b766e1acf33c56d43e6507aeb}{Raw\+Copy\+Test} ()
+\item 
+\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{_w_f_driver_raw__24_g_8c_ae462dfa5314eeb1b58cf6cca8fa7ad3e}{Get\+Read\+Ptr\+Raw\+Window} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} \hyperlink{_w_f_driver_raw__24_g_8c_a12528ed58fe9a988d4ef9f8241e966b4}{Raw\+Calculate\+Checksum} (\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} length)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_w_f_driver_raw__24_g_8c_ae9024b5547d799ae34eeddc7641c3a57}{Allocate\+Mgmt\+Tx\+Buffer} (\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} bytes\+Needed)
+\item 
+void \hyperlink{_w_f_driver_raw__24_g_8c_a479447fe09e853821ff2f38755885164}{Deallocate\+Mgmt\+Rx\+Buffer} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_w_f_driver_raw__24_g_8c_a7516a7177c1b9a843d543c57c4192af5}{Allocate\+Data\+Tx\+Buffer} (\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} bytes\+Needed)
+\item 
+void \hyperlink{_w_f_driver_raw__24_g_8c_ab3fe180f412b7b947ea503780d308724}{Send\+R\+A\+W\+Data\+Frame} (\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} buf\+Len)
+\item 
+void \hyperlink{_w_f_driver_raw__24_g_8c_adf3fd3449cb04ccdc635af8befe14e56}{Send\+R\+A\+W\+Management\+Frame} (\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} buf\+Len)
+\item 
+void \hyperlink{_w_f_driver_raw__24_g_8c_a61c8aa69bc80ab5110a6b84d50bacced}{Deallocate\+Data\+Rx\+Buffer} (void)
+\item 
+void \hyperlink{_w_f_driver_raw__24_g_8c_a270fb0e2bd37af95849fe1123203bef5}{Deallocate\+Data\+Tx\+Buffer} (void)
+\item 
+void \hyperlink{_w_f_driver_raw__24_g_8c_a16c4aa8238b4dec33fe41a8e09674112}{Raw\+Send\+Tx\+Buffer} (\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} len)
+\item 
+\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} \hyperlink{_w_f_driver_raw__24_g_8c_a57ae5f71d761cd8a4dc8b8964b1d8f06}{Raw\+Mount\+Rx\+Buffer} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} raw\+Id)
+\item 
+void \hyperlink{_w_f_driver_raw__24_g_8c_af845c35f81d46c86655b5030f78b411f}{Raw\+To\+Raw\+Copy} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} raw\+Dest\+Id, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} raw\+Source\+Id, \hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} length)
+\item 
+void \hyperlink{_w_f_driver_raw__24_g_8c_a8049404d577b086ace237d9aa6fd882e}{Push\+Raw\+Window} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} raw\+Id)
+\item 
+\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} \hyperlink{_w_f_driver_raw__24_g_8c_ae50feb41702ee7a5f6ab679e87d364ba}{Pop\+Raw\+Window} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} raw\+Id)
+\item 
+\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} \hyperlink{_w_f_driver_raw__24_g_8c_aea63aec51c3626eee9fe707528cdf205}{Scratch\+Mount} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} raw\+Id)
+\item 
+void \hyperlink{_w_f_driver_raw__24_g_8c_a2bb3166c9174ea82167a25de5a97d6ce}{Scratch\+Unmount} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} raw\+Id)
+\item 
+void \hyperlink{_w_f_driver_raw__24_g_8c_a80553d24a57673724467c812b2a00d7b}{Raw\+Read} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} raw\+Id, \hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} start\+Index, \hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} length, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+dest)
+\item 
+void \hyperlink{_w_f_driver_raw__24_g_8c_ac4a89b408bc2f5fb46f6b3def54a5270}{Raw\+Write} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} raw\+Id, \hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} start\+Index, \hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} length, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+\_\+src)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_w_f_driver_raw__24_g_8c_a0992ec8558dd60d4d002ea18d557dcdc}{Raw\+Set\+Index} (\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} raw\+Id, \hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} index)
+\item 
+\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} \hyperlink{_w_f_driver_raw__24_g_8c_ae711345d8d026efc0855febcaf41f7d0}{Raw\+Get\+Index} (\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} raw\+Id)
+\item 
+void \hyperlink{_w_f_driver_raw__24_g_8c_a0f9f450b78d964f8b34c2f3d50472527}{Raw\+Get\+Byte} (\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} raw\+Id, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+Buffer, \hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} length)
+\item 
+void \hyperlink{_w_f_driver_raw__24_g_8c_a080df0a533459a28bfccb89781df5e3a}{Raw\+Set\+Byte} (\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} raw\+Id, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+Buffer, \hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} length)
+\item 
+void \hyperlink{_w_f_driver_raw__24_g_8c_ae637669ad0062075a7f292f438c3ff72}{Raw\+Set\+Byte\+R\+O\+M} (\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} raw\+Id, R\+O\+M \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} $\ast$p\+Buffer, \hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} length)
+\item 
+void \hyperlink{_w_f_driver_raw__24_g_8c_a1a9f698a886a8a4f13419c5628e3bbcd}{Driver\+Raw\+\_\+\+Empty\+Func} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_w_f_driver_raw__24_g_8c_ad5a112046d412a79968cc55e679fdbc6}{g\+\_\+\+Host\+R\+A\+W\+Data\+Packet\+Received} = \hyperlink{_generic_type_defs_8h_afbf708854fe02af8475a9ba02f3196cbaa1e095cc966dbecf6a0d8aad75348d1a}{F\+A\+L\+S\+E}
+\item 
+\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{_w_f_driver_raw__24_g_8c_a4de960b07f8328008a0fe6b0ce819fea}{Raw\+Window\+State} \mbox{[}2\mbox{]}
+\item 
+R\+O\+M \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{_w_f_driver_raw__24_g_8c_a3698c55235aa9ecb095d10090aee1291}{g\+\_\+\+Raw\+Access\+Out\+Of\+Bounds\+Mask} \mbox{[}N\+U\+M\+\_\+\+R\+A\+W\+\_\+\+W\+I\+N\+D\+O\+W\+S\mbox{]} = \{0x01, 0x02, 0x04, 0x08, 0x10, 0x20\}
+\item 
+\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{_w_f_driver_raw__24_g_8c_afc7e10d65a58ebd8b6089b29daa97a5b}{g\+\_\+\+Raw\+Index\+Past\+End} = 0x00
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_w_f_driver_raw__24_g_8c_a7516a7177c1b9a843d543c57c4192af5}{}\index{W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}!Allocate\+Data\+Tx\+Buffer@{Allocate\+Data\+Tx\+Buffer}}
+\index{Allocate\+Data\+Tx\+Buffer@{Allocate\+Data\+Tx\+Buffer}!W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsubsection[{Allocate\+Data\+Tx\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} Allocate\+Data\+Tx\+Buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T16}}]{bytes\+Needed}
+\end{DoxyParamCaption}
+)}\label{_w_f_driver_raw__24_g_8c_a7516a7177c1b9a843d543c57c4192af5}
+
+
+Definition at line 391 of file W\+F\+Driver\+Raw\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 0
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+\hypertarget{_w_f_driver_raw__24_g_8c_ae9024b5547d799ae34eeddc7641c3a57}{}\index{W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}!Allocate\+Mgmt\+Tx\+Buffer@{Allocate\+Mgmt\+Tx\+Buffer}}
+\index{Allocate\+Mgmt\+Tx\+Buffer@{Allocate\+Mgmt\+Tx\+Buffer}!W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsubsection[{Allocate\+Mgmt\+Tx\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} Allocate\+Mgmt\+Tx\+Buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T16}}]{bytes\+Needed}
+\end{DoxyParamCaption}
+)}\label{_w_f_driver_raw__24_g_8c_ae9024b5547d799ae34eeddc7641c3a57}
+
+
+Definition at line 303 of file W\+F\+Driver\+Raw\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\hypertarget{_w_f_driver_raw__24_g_8c_a61c8aa69bc80ab5110a6b84d50bacced}{}\index{W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}!Deallocate\+Data\+Rx\+Buffer@{Deallocate\+Data\+Rx\+Buffer}}
+\index{Deallocate\+Data\+Rx\+Buffer@{Deallocate\+Data\+Rx\+Buffer}!W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsubsection[{Deallocate\+Data\+Rx\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}void Deallocate\+Data\+Rx\+Buffer (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_driver_raw__24_g_8c_a61c8aa69bc80ab5110a6b84d50bacced}
+
+
+Definition at line 535 of file W\+F\+Driver\+Raw\+\_\+24\+G.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+\hypertarget{_w_f_driver_raw__24_g_8c_a270fb0e2bd37af95849fe1123203bef5}{}\index{W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}!Deallocate\+Data\+Tx\+Buffer@{Deallocate\+Data\+Tx\+Buffer}}
+\index{Deallocate\+Data\+Tx\+Buffer@{Deallocate\+Data\+Tx\+Buffer}!W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsubsection[{Deallocate\+Data\+Tx\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}void Deallocate\+Data\+Tx\+Buffer (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_driver_raw__24_g_8c_a270fb0e2bd37af95849fe1123203bef5}
+
+
+Definition at line 550 of file W\+F\+Driver\+Raw\+\_\+24\+G.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 5
+
+
+\hypertarget{_w_f_driver_raw__24_g_8c_a479447fe09e853821ff2f38755885164}{}\index{W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}!Deallocate\+Mgmt\+Rx\+Buffer@{Deallocate\+Mgmt\+Rx\+Buffer}}
+\index{Deallocate\+Mgmt\+Rx\+Buffer@{Deallocate\+Mgmt\+Rx\+Buffer}!W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsubsection[{Deallocate\+Mgmt\+Rx\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}void Deallocate\+Mgmt\+Rx\+Buffer (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_driver_raw__24_g_8c_a479447fe09e853821ff2f38755885164}
+
+
+Definition at line 362 of file W\+F\+Driver\+Raw\+\_\+24\+G.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\hypertarget{_w_f_driver_raw__24_g_8c_a1a9f698a886a8a4f13419c5628e3bbcd}{}\index{W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}!Driver\+Raw\+\_\+\+Empty\+Func@{Driver\+Raw\+\_\+\+Empty\+Func}}
+\index{Driver\+Raw\+\_\+\+Empty\+Func@{Driver\+Raw\+\_\+\+Empty\+Func}!W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsubsection[{Driver\+Raw\+\_\+\+Empty\+Func}]{\setlength{\rightskip}{0pt plus 5cm}void Driver\+Raw\+\_\+\+Empty\+Func (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_driver_raw__24_g_8c_a1a9f698a886a8a4f13419c5628e3bbcd}
+
+
+Definition at line 1199 of file W\+F\+Driver\+Raw\+\_\+24\+G.\+c.
+
+\hypertarget{_w_f_driver_raw__24_g_8c_ae462dfa5314eeb1b58cf6cca8fa7ad3e}{}\index{W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}!Get\+Read\+Ptr\+Raw\+Window@{Get\+Read\+Ptr\+Raw\+Window}}
+\index{Get\+Read\+Ptr\+Raw\+Window@{Get\+Read\+Ptr\+Raw\+Window}!W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsubsection[{Get\+Read\+Ptr\+Raw\+Window}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} Get\+Read\+Ptr\+Raw\+Window (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_driver_raw__24_g_8c_ae462dfa5314eeb1b58cf6cca8fa7ad3e}
+
+
+Definition at line 238 of file W\+F\+Mac\+\_\+24\+G.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 7
+
+
+\hypertarget{_w_f_driver_raw__24_g_8c_ae50feb41702ee7a5f6ab679e87d364ba}{}\index{W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}!Pop\+Raw\+Window@{Pop\+Raw\+Window}}
+\index{Pop\+Raw\+Window@{Pop\+Raw\+Window}!W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsubsection[{Pop\+Raw\+Window}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T16} Pop\+Raw\+Window (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{raw\+Id}
+\end{DoxyParamCaption}
+)}\label{_w_f_driver_raw__24_g_8c_ae50feb41702ee7a5f6ab679e87d364ba}
+
+
+Definition at line 703 of file W\+F\+Driver\+Raw\+\_\+24\+G.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 8
+
+
+\hypertarget{_w_f_driver_raw__24_g_8c_a8049404d577b086ace237d9aa6fd882e}{}\index{W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}!Push\+Raw\+Window@{Push\+Raw\+Window}}
+\index{Push\+Raw\+Window@{Push\+Raw\+Window}!W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsubsection[{Push\+Raw\+Window}]{\setlength{\rightskip}{0pt plus 5cm}void Push\+Raw\+Window (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{raw\+Id}
+\end{DoxyParamCaption}
+)}\label{_w_f_driver_raw__24_g_8c_a8049404d577b086ace237d9aa6fd882e}
+
+
+Definition at line 671 of file W\+F\+Driver\+Raw\+\_\+24\+G.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 9
+
+
+\hypertarget{_w_f_driver_raw__24_g_8c_a12528ed58fe9a988d4ef9f8241e966b4}{}\index{W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}!Raw\+Calculate\+Checksum@{Raw\+Calculate\+Checksum}}
+\index{Raw\+Calculate\+Checksum@{Raw\+Calculate\+Checksum}!W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsubsection[{Raw\+Calculate\+Checksum}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T16} Raw\+Calculate\+Checksum (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T16}}]{length}
+\end{DoxyParamCaption}
+)}\label{_w_f_driver_raw__24_g_8c_a12528ed58fe9a988d4ef9f8241e966b4}
+
+
+Definition at line 266 of file W\+F\+Driver\+Raw\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 10
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 11
+
+
+\hypertarget{_w_f_driver_raw__24_g_8c_a3e48c54b766e1acf33c56d43e6507aeb}{}\index{W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}!Raw\+Copy\+Test@{Raw\+Copy\+Test}}
+\index{Raw\+Copy\+Test@{Raw\+Copy\+Test}!W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsubsection[{Raw\+Copy\+Test}]{\setlength{\rightskip}{0pt plus 5cm}void Raw\+Copy\+Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_w_f_driver_raw__24_g_8c_a3e48c54b766e1acf33c56d43e6507aeb}
+
+
+Definition at line 125 of file W\+F\+Driver\+Raw\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 12
+
+
+\hypertarget{_w_f_driver_raw__24_g_8c_a0f9f450b78d964f8b34c2f3d50472527}{}\index{W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}!Raw\+Get\+Byte@{Raw\+Get\+Byte}}
+\index{Raw\+Get\+Byte@{Raw\+Get\+Byte}!W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsubsection[{Raw\+Get\+Byte}]{\setlength{\rightskip}{0pt plus 5cm}void Raw\+Get\+Byte (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T16}}]{raw\+Id, }
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+Buffer, }
+\item[{{\bf U\+I\+N\+T16}}]{length}
+\end{DoxyParamCaption}
+)}\label{_w_f_driver_raw__24_g_8c_a0f9f450b78d964f8b34c2f3d50472527}
+
+
+Definition at line 1032 of file W\+F\+Driver\+Raw\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 13
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 14
+
+
+\hypertarget{_w_f_driver_raw__24_g_8c_ae711345d8d026efc0855febcaf41f7d0}{}\index{W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}!Raw\+Get\+Index@{Raw\+Get\+Index}}
+\index{Raw\+Get\+Index@{Raw\+Get\+Index}!W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsubsection[{Raw\+Get\+Index}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T16} Raw\+Get\+Index (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T16}}]{raw\+Id}
+\end{DoxyParamCaption}
+)}\label{_w_f_driver_raw__24_g_8c_ae711345d8d026efc0855febcaf41f7d0}
+
+
+Definition at line 1007 of file W\+F\+Driver\+Raw\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 15
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 16
+
+
+\hypertarget{_w_f_driver_raw__24_g_8c_a57ae5f71d761cd8a4dc8b8964b1d8f06}{}\index{W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}!Raw\+Mount\+Rx\+Buffer@{Raw\+Mount\+Rx\+Buffer}}
+\index{Raw\+Mount\+Rx\+Buffer@{Raw\+Mount\+Rx\+Buffer}!W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsubsection[{Raw\+Mount\+Rx\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T16} Raw\+Mount\+Rx\+Buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{raw\+Id}
+\end{DoxyParamCaption}
+)}\label{_w_f_driver_raw__24_g_8c_a57ae5f71d761cd8a4dc8b8964b1d8f06}
+
+
+Definition at line 589 of file W\+F\+Driver\+Raw\+\_\+24\+G.\+c.
+
+\hypertarget{_w_f_driver_raw__24_g_8c_a80553d24a57673724467c812b2a00d7b}{}\index{W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}!Raw\+Read@{Raw\+Read}}
+\index{Raw\+Read@{Raw\+Read}!W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsubsection[{Raw\+Read}]{\setlength{\rightskip}{0pt plus 5cm}void Raw\+Read (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{raw\+Id, }
+\item[{{\bf U\+I\+N\+T16}}]{start\+Index, }
+\item[{{\bf U\+I\+N\+T16}}]{length, }
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+dest}
+\end{DoxyParamCaption}
+)}\label{_w_f_driver_raw__24_g_8c_a80553d24a57673724467c812b2a00d7b}
+
+
+Definition at line 798 of file W\+F\+Driver\+Raw\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 17
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 18
+
+
+\hypertarget{_w_f_driver_raw__24_g_8c_a16c4aa8238b4dec33fe41a8e09674112}{}\index{W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}!Raw\+Send\+Tx\+Buffer@{Raw\+Send\+Tx\+Buffer}}
+\index{Raw\+Send\+Tx\+Buffer@{Raw\+Send\+Tx\+Buffer}!W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsubsection[{Raw\+Send\+Tx\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}void Raw\+Send\+Tx\+Buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T16}}]{len}
+\end{DoxyParamCaption}
+)}\label{_w_f_driver_raw__24_g_8c_a16c4aa8238b4dec33fe41a8e09674112}
+
+
+Definition at line 559 of file W\+F\+Driver\+Raw\+\_\+24\+G.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 19
+
+
+\hypertarget{_w_f_driver_raw__24_g_8c_a080df0a533459a28bfccb89781df5e3a}{}\index{W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}!Raw\+Set\+Byte@{Raw\+Set\+Byte}}
+\index{Raw\+Set\+Byte@{Raw\+Set\+Byte}!W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsubsection[{Raw\+Set\+Byte}]{\setlength{\rightskip}{0pt plus 5cm}void Raw\+Set\+Byte (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T16}}]{raw\+Id, }
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+Buffer, }
+\item[{{\bf U\+I\+N\+T16}}]{length}
+\end{DoxyParamCaption}
+)}\label{_w_f_driver_raw__24_g_8c_a080df0a533459a28bfccb89781df5e3a}
+
+
+Definition at line 1059 of file W\+F\+Driver\+Raw\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 20
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 21
+
+
+\hypertarget{_w_f_driver_raw__24_g_8c_ae637669ad0062075a7f292f438c3ff72}{}\index{W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}!Raw\+Set\+Byte\+R\+O\+M@{Raw\+Set\+Byte\+R\+O\+M}}
+\index{Raw\+Set\+Byte\+R\+O\+M@{Raw\+Set\+Byte\+R\+O\+M}!W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsubsection[{Raw\+Set\+Byte\+R\+O\+M}]{\setlength{\rightskip}{0pt plus 5cm}void Raw\+Set\+Byte\+R\+O\+M (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T16}}]{raw\+Id, }
+\item[{R\+O\+M {\bf U\+I\+N\+T8} $\ast$}]{p\+Buffer, }
+\item[{{\bf U\+I\+N\+T16}}]{length}
+\end{DoxyParamCaption}
+)}\label{_w_f_driver_raw__24_g_8c_ae637669ad0062075a7f292f438c3ff72}
+
+
+Definition at line 1090 of file W\+F\+Driver\+Raw\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 22
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 23
+
+
+\hypertarget{_w_f_driver_raw__24_g_8c_a0992ec8558dd60d4d002ea18d557dcdc}{}\index{W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}!Raw\+Set\+Index@{Raw\+Set\+Index}}
+\index{Raw\+Set\+Index@{Raw\+Set\+Index}!W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsubsection[{Raw\+Set\+Index}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} Raw\+Set\+Index (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T16}}]{raw\+Id, }
+\item[{{\bf U\+I\+N\+T16}}]{index}
+\end{DoxyParamCaption}
+)}\label{_w_f_driver_raw__24_g_8c_a0992ec8558dd60d4d002ea18d557dcdc}
+
+
+Definition at line 955 of file W\+F\+Driver\+Raw\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 24
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 25
+
+
+\hypertarget{_w_f_driver_raw__24_g_8c_af845c35f81d46c86655b5030f78b411f}{}\index{W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}!Raw\+To\+Raw\+Copy@{Raw\+To\+Raw\+Copy}}
+\index{Raw\+To\+Raw\+Copy@{Raw\+To\+Raw\+Copy}!W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsubsection[{Raw\+To\+Raw\+Copy}]{\setlength{\rightskip}{0pt plus 5cm}void Raw\+To\+Raw\+Copy (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{raw\+Dest\+Id, }
+\item[{{\bf U\+I\+N\+T8}}]{raw\+Source\+Id, }
+\item[{{\bf U\+I\+N\+T16}}]{length}
+\end{DoxyParamCaption}
+)}\label{_w_f_driver_raw__24_g_8c_af845c35f81d46c86655b5030f78b411f}
+
+
+Definition at line 633 of file W\+F\+Driver\+Raw\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 26
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 27
+
+
+\hypertarget{_w_f_driver_raw__24_g_8c_ac4a89b408bc2f5fb46f6b3def54a5270}{}\index{W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}!Raw\+Write@{Raw\+Write}}
+\index{Raw\+Write@{Raw\+Write}!W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsubsection[{Raw\+Write}]{\setlength{\rightskip}{0pt plus 5cm}void Raw\+Write (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{raw\+Id, }
+\item[{{\bf U\+I\+N\+T16}}]{start\+Index, }
+\item[{{\bf U\+I\+N\+T16}}]{length, }
+\item[{{\bf U\+I\+N\+T8} $\ast$}]{p\+\_\+src}
+\end{DoxyParamCaption}
+)}\label{_w_f_driver_raw__24_g_8c_ac4a89b408bc2f5fb46f6b3def54a5270}
+
+
+Definition at line 824 of file W\+F\+Driver\+Raw\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 28
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 29
+
+
+\hypertarget{_w_f_driver_raw__24_g_8c_aea63aec51c3626eee9fe707528cdf205}{}\index{W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}!Scratch\+Mount@{Scratch\+Mount}}
+\index{Scratch\+Mount@{Scratch\+Mount}!W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsubsection[{Scratch\+Mount}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T16} Scratch\+Mount (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{raw\+Id}
+\end{DoxyParamCaption}
+)}\label{_w_f_driver_raw__24_g_8c_aea63aec51c3626eee9fe707528cdf205}
+
+
+Definition at line 737 of file W\+F\+Driver\+Raw\+\_\+24\+G.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 30
+
+
+\hypertarget{_w_f_driver_raw__24_g_8c_a2bb3166c9174ea82167a25de5a97d6ce}{}\index{W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}!Scratch\+Unmount@{Scratch\+Unmount}}
+\index{Scratch\+Unmount@{Scratch\+Unmount}!W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsubsection[{Scratch\+Unmount}]{\setlength{\rightskip}{0pt plus 5cm}void Scratch\+Unmount (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{raw\+Id}
+\end{DoxyParamCaption}
+)}\label{_w_f_driver_raw__24_g_8c_a2bb3166c9174ea82167a25de5a97d6ce}
+
+
+Definition at line 772 of file W\+F\+Driver\+Raw\+\_\+24\+G.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 31
+
+
+\hypertarget{_w_f_driver_raw__24_g_8c_ab3fe180f412b7b947ea503780d308724}{}\index{W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}!Send\+R\+A\+W\+Data\+Frame@{Send\+R\+A\+W\+Data\+Frame}}
+\index{Send\+R\+A\+W\+Data\+Frame@{Send\+R\+A\+W\+Data\+Frame}!W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsubsection[{Send\+R\+A\+W\+Data\+Frame}]{\setlength{\rightskip}{0pt plus 5cm}void Send\+R\+A\+W\+Data\+Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T16}}]{buf\+Len}
+\end{DoxyParamCaption}
+)}\label{_w_f_driver_raw__24_g_8c_ab3fe180f412b7b947ea503780d308724}
+
+
+Definition at line 462 of file W\+F\+Driver\+Raw\+\_\+24\+G.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 32
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 33
+
+
+\hypertarget{_w_f_driver_raw__24_g_8c_adf3fd3449cb04ccdc635af8befe14e56}{}\index{W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}!Send\+R\+A\+W\+Management\+Frame@{Send\+R\+A\+W\+Management\+Frame}}
+\index{Send\+R\+A\+W\+Management\+Frame@{Send\+R\+A\+W\+Management\+Frame}!W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsubsection[{Send\+R\+A\+W\+Management\+Frame}]{\setlength{\rightskip}{0pt plus 5cm}void Send\+R\+A\+W\+Management\+Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T16}}]{buf\+Len}
+\end{DoxyParamCaption}
+)}\label{_w_f_driver_raw__24_g_8c_adf3fd3449cb04ccdc635af8befe14e56}
+
+
+Definition at line 503 of file W\+F\+Driver\+Raw\+\_\+24\+G.\+c.
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{_w_f_driver_raw__24_g_8c_ad5a112046d412a79968cc55e679fdbc6}{}\index{W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}!g\+\_\+\+Host\+R\+A\+W\+Data\+Packet\+Received@{g\+\_\+\+Host\+R\+A\+W\+Data\+Packet\+Received}}
+\index{g\+\_\+\+Host\+R\+A\+W\+Data\+Packet\+Received@{g\+\_\+\+Host\+R\+A\+W\+Data\+Packet\+Received}!W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsubsection[{g\+\_\+\+Host\+R\+A\+W\+Data\+Packet\+Received}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} g\+\_\+\+Host\+R\+A\+W\+Data\+Packet\+Received = {\bf F\+A\+L\+S\+E}}\label{_w_f_driver_raw__24_g_8c_ad5a112046d412a79968cc55e679fdbc6}
+
+
+Definition at line 91 of file W\+F\+Driver\+Raw\+\_\+24\+G.\+c.
+
+\hypertarget{_w_f_driver_raw__24_g_8c_a3698c55235aa9ecb095d10090aee1291}{}\index{W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}!g\+\_\+\+Raw\+Access\+Out\+Of\+Bounds\+Mask@{g\+\_\+\+Raw\+Access\+Out\+Of\+Bounds\+Mask}}
+\index{g\+\_\+\+Raw\+Access\+Out\+Of\+Bounds\+Mask@{g\+\_\+\+Raw\+Access\+Out\+Of\+Bounds\+Mask}!W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsubsection[{g\+\_\+\+Raw\+Access\+Out\+Of\+Bounds\+Mask}]{\setlength{\rightskip}{0pt plus 5cm}R\+O\+M {\bf U\+I\+N\+T8} g\+\_\+\+Raw\+Access\+Out\+Of\+Bounds\+Mask\mbox{[}N\+U\+M\+\_\+\+R\+A\+W\+\_\+\+W\+I\+N\+D\+O\+W\+S\mbox{]} = \{0x01, 0x02, 0x04, 0x08, 0x10, 0x20\}}\label{_w_f_driver_raw__24_g_8c_a3698c55235aa9ecb095d10090aee1291}
+
+
+Definition at line 113 of file W\+F\+Driver\+Raw\+\_\+24\+G.\+c.
+
+\hypertarget{_w_f_driver_raw__24_g_8c_afc7e10d65a58ebd8b6089b29daa97a5b}{}\index{W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}!g\+\_\+\+Raw\+Index\+Past\+End@{g\+\_\+\+Raw\+Index\+Past\+End}}
+\index{g\+\_\+\+Raw\+Index\+Past\+End@{g\+\_\+\+Raw\+Index\+Past\+End}!W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsubsection[{g\+\_\+\+Raw\+Index\+Past\+End}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} g\+\_\+\+Raw\+Index\+Past\+End = 0x00}\label{_w_f_driver_raw__24_g_8c_afc7e10d65a58ebd8b6089b29daa97a5b}
+
+
+Definition at line 114 of file W\+F\+Driver\+Raw\+\_\+24\+G.\+c.
+
+\hypertarget{_w_f_driver_raw__24_g_8c_a4de960b07f8328008a0fe6b0ce819fea}{}\index{W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}!Raw\+Window\+State@{Raw\+Window\+State}}
+\index{Raw\+Window\+State@{Raw\+Window\+State}!W\+F\+Driver\+Raw\+\_\+24\+G.\+c@{W\+F\+Driver\+Raw\+\_\+24\+G.\+c}}
+\subsubsection[{Raw\+Window\+State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} Raw\+Window\+State\mbox{[}2\mbox{]}}\label{_w_f_driver_raw__24_g_8c_a4de960b07f8328008a0fe6b0ce819fea}
+
+
+Definition at line 94 of file W\+F\+Driver\+Raw\+\_\+24\+G.\+c.
+

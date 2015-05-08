@@ -1,0 +1,34 @@
+digraph "SetSleepNeeded"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="SetSleepNeeded",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="EnsureWFisAwake",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_power_save_8c.html#af3cc6e34f74ac74fbd2424a49d521be2"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="WF_TxDataAllocateBuffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_data_tx_rx_8c.html#a1e0e56e8ae6c5977a24937b953778678"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="WF_TxSendCompleteDataPacket",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_data_tx_rx_8c.html#a72e6a14dc9339a7ce4bdbbe515c0ba68"];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="WF_TxDataWrite",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_data_tx_rx_8c.html#ac716bab4b82ee4be76c366ba119ac2c4"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="WF_TxDataSendPacket",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_data_tx_rx_8c.html#a536a932069cbd1758e64153fb4991dad"];
+  Node6 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="WF_RxDataReadPacket",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_data_tx_rx_8c.html#aa1f8c28f75d0758f48c272c6bd98ebe5"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="WF_RxReceiveCompleteData\lPacket",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_data_tx_rx_8c.html#a8a350698d1d89b46e9a9ae37ef877737"];
+  Node2 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="WF_RxDataDeallocateBuffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_data_tx_rx_8c.html#ab3b83a64ed43dd63b8cccc36c94db937"];
+  Node9 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="AllocateDataTxBuffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_driver_raw_8c.html#a7516a7177c1b9a843d543c57c4192af5"];
+  Node2 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="MACFlush",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_mac_8c.html#a38dc2cc8c71b2f6bfe51ea8db2acc67c"];
+  Node2 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="MACMemCopyAsync",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_mac_8c.html#a4442711ab4c3d47ffc913476630330e2"];
+  Node2 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="SendMgmtMsg",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_mgmt_msg_8c.html#a7a2761b3bd45a00435d7ea3ec7dec75d"];
+}

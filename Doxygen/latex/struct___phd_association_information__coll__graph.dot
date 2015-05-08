@@ -1,0 +1,16 @@
+digraph "_PhdAssociationInformation"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="_PhdAssociationInformation",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" system_id" ];
+  Node2 [label="_octet_string",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct__octet__string.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" optionList" ];
+  Node3 [label="_AttributeList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct___attribute_list.html"];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" value" ];
+  Node4 [label="_AVA_Type",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct___a_v_a___type.html"];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" attribute_value" ];
+  Node5 [label="_Any",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct___any.html"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" data_req_mode_capab" ];
+  Node6 [label="_DataReqModeCapab",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct___data_req_mode_capab.html"];
+}

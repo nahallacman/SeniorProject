@@ -1,0 +1,682 @@
+\hypertarget{_framework_features_Features}{}\section{m\+Touch Framework Implementation Features}\label{_framework_features_Features}
+We focused on creating a system that exhibits high signal sensitivity and noise immunity. To achieve these goals, we implemented the following features\+: \begin{DoxyItemize}
+\item \hyperlink{featBasic}{Basic m\+Touch Sensor Configuration} is fast and simple \item Built-\/in support for\+: 
+\begin{DoxyItemize}
+\item \hyperlink{featProximity}{Proximity Sensors} provide a higher level of signal-\/to-\/noise ratio by implementing an additional median filter 
+\item \hyperlink{featSliders}{Sliders and Wheels} decoding based on the relationship between sensor shift percentages 
+\item \hyperlink{featMatrix}{Matrix Designs} support to help guarantee the reliability of \textquotesingle{}node\textquotesingle{} press decisions 
+\item \hyperlink{featMostPressed}{Most-\/\+Pressed Algorithm} to limit the number of simultaneous \textquotesingle{}pressed\textquotesingle{} sensors in high-\/crosstalk systems 
+\item \hyperlink{featMode}{Scanning Modes} to support applications with multiple states and a desire to scan different sensors in each state 
+\item \hyperlink{featGuard}{Guard Ring / Shield} traces to {\bfseries actively reduce parasitic capacitance} and increase sensitivity 
+\item \hyperlink{featMutual}{Mutual Coupling Drives} to scan for changes in the relative permitivity, or coupling, near the sensor 
+\end{DoxyItemize}\item {\bfseries Detailed warning and error messages} guide the user in case of an incorrect configuration value \end{DoxyItemize}
+\hypertarget{_framework_features_AcquisitionFeatures}{}\subsection{-\/ Acquisition Module}\label{_framework_features_AcquisitionFeatures}
+\begin{DoxyItemize}
+\item Differential C\+V\+D scanning method drastically {\bfseries attenuates low frequency noise} (Including 50/60\+Hz, up to low K\+Hz) \item {\bfseries Sample rate jittering} algorithm eliminates issues with resonant noise frequencies \item Generated assembly implementation {\bfseries maximizes noise immunity} and {\bfseries minimizes execution time} \item Ability to force the scan sequence to use the {\bfseries D\+A\+C as the reference voltage} to the A\+D\+C\textquotesingle{}s hold capacitor. \end{DoxyItemize}
+\hypertarget{_framework_features_FilteringFeatures}{}\subsection{-\/ Filtering Module}\label{_framework_features_FilteringFeatures}
+\begin{DoxyItemize}
+\item Decimate-\/filtered result register seeding an accumulator array provides {\bfseries impulse noise rejection} and an increase in signal through {\bfseries oversampling} \item Baseline average {\bfseries tracks environmental changes} to maximize response time \item Enhanced filtering options allow for {\bfseries customizable filter behavior} and update speed based on the application\textquotesingle{}s requirements \item {\bfseries Median filter} implemented for proximity sensors to further increase the S\+N\+R \end{DoxyItemize}
+\hypertarget{_framework_features_DecodingFeatures}{}\subsection{-\/ Decoding Module}\label{_framework_features_DecodingFeatures}
+\begin{DoxyItemize}
+\item {\bfseries Individual thresholds} provide the ability to adjust for different sensor sizes and types \item {\bfseries Threshold hysteresis} reduces sensor flickering in noisy conditions as well as increasing the reliability of sensor state transitions \item Configurable {\bfseries press timer} to implement a {\bfseries maximum press duration} for the application \item {\bfseries Debounce counters} provided to further increase reliability, if desired. \item {\bfseries Most Pressed Algorithm} is implemented automatically for matrix applications on the rows and columns, separately. \item {\bfseries Toggle mode} provided to quickly and efficiently implement a change-\/on-\/press-\/only button output behavior. \end{DoxyItemize}
+\hypertarget{_framework_features_CommunicationFeatures}{}\subsection{-\/ Communication}\label{_framework_features_CommunicationFeatures}
+\begin{DoxyItemize}
+\item Preconfigured {\bfseries software or hardware U\+A\+R\+T} implementation to report A\+S\+C\+I\+I data one-\/way to a C\+O\+M port \item {\bfseries U\+A\+R\+T, I2\+C, and S\+P\+I two-\/way communication} protocol to read/write configuration and R\+A\+M values at run-\/time \item {\bfseries Store configuration values in E\+E\+P\+R\+O\+M} for run-\/time editing capability \end{DoxyItemize}
+\hypertarget{featBasic}{}\section{Basic m\+Touch Sensor Configuration}\label{featBasic}
+The m\+Touch Framework scans all sensors in the same basic manner. All sensors (whether normal \textquotesingle{}button\textquotesingle{}, part of a slider or wheel, a single row in a matrix, or a proximity sensor) start by being scanned using the m\+Touch C\+V\+D waveform. Once all enabled sensors have a \textquotesingle{}final\textquotesingle{} reading, the data ready flag is set and the decoding routine is called from the main loop.\hypertarget{feat_basic_featBasic-Config}{}\subsection{Basic m\+Touch Sensor Configuration}\label{feat_basic_featBasic-Config}
+
+\begin{DoxyEnumerate}
+\item In the \hyperlink{m_touch__config_8h}{m\+Touch\+\_\+config.\+h} file, under \textquotesingle{}System Setup\textquotesingle{} start by defining \#\+\_\+\+X\+T\+A\+L\+\_\+\+F\+R\+E\+Q to the frequency of your processor\textquotesingle{}s oscillator in Hz. This does not set the value of your oscillator -\/ it merely tells the framework what the value is initialized to by your application. 
+\item Set \#\+M\+T\+O\+U\+C\+H\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E to the behavior you desire for your application. 
+\begin{DoxyItemize}
+\item \#\+M\+T\+O\+U\+C\+H\+\_\+\+C\+O\+N\+T\+R\+O\+L\+S\+\_\+\+I\+S\+R \+:\+: means the framework is the only interrupt in the application 
+\item \#\+M\+T\+O\+U\+C\+H\+\_\+\+C\+A\+L\+L\+E\+D\+\_\+\+F\+R\+O\+M\+\_\+\+I\+S\+R \+:\+: means the application will be calling \hyperlink{group___acquisition_gaeeee5d5e14eaff7df78e9ad5d7ac9769}{m\+Touch\+\_\+\+Scan()} from its own I\+S\+R. 
+\item \#\+M\+T\+O\+U\+C\+H\+\_\+\+C\+A\+L\+L\+E\+D\+\_\+\+F\+R\+O\+M\+\_\+\+M\+A\+I\+N\+L\+O\+O\+P \+:\+: means the framework will perform scans any time the data-\/ready flag is checked. 
+\end{DoxyItemize}
+\item Set \#\+M\+T\+O\+U\+C\+H\+\_\+\+S\+C\+A\+N\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+A\+L\+I\+T\+Y to the behavior you desire for your application. 
+\begin{DoxyItemize}
+\item \#\+M\+T\+O\+U\+C\+H\+\_\+\+S\+C\+A\+N\+S\+\_\+\+O\+N\+E\+\_\+\+S\+E\+N\+S\+O\+R \+:\+: means the framework only scans a single sensor per \hyperlink{group___acquisition_gaeeee5d5e14eaff7df78e9ad5d7ac9769}{m\+Touch\+\_\+\+Scan()} call. 
+\begin{DoxyItemize}
+\item This is the preferred value. It provides the best noise immunity due to increased jittering. 
+\end{DoxyItemize}
+\item \#\+M\+T\+O\+U\+C\+H\+\_\+\+S\+C\+A\+N\+S\+\_\+\+A\+L\+L\+\_\+\+S\+E\+N\+S\+O\+R\+S \+:\+: means the framework scans all sensors one time per \hyperlink{group___acquisition_gaeeee5d5e14eaff7df78e9ad5d7ac9769}{m\+Touch\+\_\+\+Scan()} call. 
+\begin{DoxyItemize}
+\item This can be chosen to increase the sampling rate of the system. Trade-\/off\+: slightly decreased noise robustness 
+\end{DoxyItemize}
+\end{DoxyItemize}
+\item Under \textquotesingle{}Sensor Setup\textquotesingle{}, set \#\+M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S to the number of sensors to scan, in total. \begin{DoxyNote}{Note}
+Each sensor is usually a unique analog channel, but this is not required. To minimize the possibility of errors in the m\+Touch waveform, try not to repeat the same analog channel twice in a row. Also try and avoid having the first and last sensor as the same analog channel. 
+\end{DoxyNote}
+
+\item For each sensor\+: 
+\begin{DoxyEnumerate}
+\item Set M\+T\+O\+U\+C\+H\+\_\+\+S\+E\+N\+S\+O\+Rx to its corresponding analog channel. 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR0                AN0     // Sensor0 is connected to AN4}
+\end{DoxyCode}
+ 
+\item Set T\+H\+R\+E\+S\+H\+O\+L\+D\+\_\+\+P\+R\+E\+S\+S\+\_\+\+S\+E\+N\+S\+O\+Rx to the threshold value for this sensor. 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define THRESHOLD\_PRESS\_SENSOR0       100     // Reading must be 100 counts > the baseline}
+\end{DoxyCode}
+ \begin{DoxyNote}{Note}
+This value is difficult to determine prior to running the system on the hardware and examining the level of sensitivity. 100-\/500 is a good default value but may need to be drastically adjusted based on the specific hardware design. 
+\end{DoxyNote}
+
+\end{DoxyEnumerate}
+\item Under \textquotesingle{}Filtering\textquotesingle{}, set \#\+M\+T\+O\+U\+C\+H\+\_\+\+S\+A\+M\+P\+L\+E\+S\+\_\+\+P\+E\+R\+\_\+\+S\+C\+A\+N to the amount of oversampling to perform on each sensor. 
+\item Under \textquotesingle{}Decoding\textquotesingle{}, set \#\+M\+T\+O\+U\+C\+H\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+T\+I\+M\+E\+O\+U\+T to the maximum number of consecutive \textquotesingle{}pressed\textquotesingle{} state decisions in a row. After this counter is exceeded, the pressed sensor will be reset to unpressed. This creates a maximum press time and is an easy way to automatically recover from a stuck sensor. 
+\item Set \#\+M\+T\+O\+U\+C\+H\+\_\+\+D\+E\+B\+O\+U\+N\+C\+E\+\_\+\+P\+R\+E\+S\+S and \#\+M\+T\+O\+U\+C\+H\+\_\+\+D\+E\+B\+O\+U\+N\+C\+E\+\_\+\+R\+E\+L\+E\+A\+S\+E to the amount of debouncing to implement. 
+\end{DoxyEnumerate}\hypertarget{feat_basic_featBasic-Out}{}\subsection{Basic m\+Touch Sensor A\+P\+I}\label{feat_basic_featBasic-Out}
+First, we will need to set up the application to scan m\+Touch. To do this, we need to create a check in the main loop to service the m\+Touch decode function. If we are using m\+Touch as one of several I\+S\+Rs, we also need to add the scanning call to our I\+S\+R logic.
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} \hyperlink{_graphics_2_g_d_d_2_default___template_2_main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}(\textcolor{keywordtype}{void})
+\{
+    myApp\_Init();                       \textcolor{comment}{// Your application's initialization (examples provided in main.c)}
+
+    \hyperlink{m_touch_8c_ab73968cbb19d4ae25a65698c15906b65}{mTouch\_Init}();                      \textcolor{comment}{// mTouch initialization}
+
+\textcolor{preprocessor}{    #if defined(MCOMM\_ENABLED)}
+    \hyperlink{m_comm_8c_ae411cd73970859fd79070afa9a1cb319}{mComm\_Init}();                       \textcolor{comment}{// mComm initialization}
+\textcolor{preprocessor}{    #endif}
+
+    INTCONbits.GIE = 1;                 \textcolor{comment}{// Initialization complete. Begin servicing interrupts.}
+
+    \textcolor{keywordflow}{while}(1)
+    \{
+        \textcolor{keywordflow}{if} (mTouch\_isDataReady())       \textcolor{comment}{// Is new information ready?}
+        \{
+            mTouch\_Service();           \textcolor{comment}{// Decode the newly captured data and transmit new data updates.}
+            
+            \textcolor{comment}{// Application sensor-state logic checks go here.}
+        \}
+    \}
+\}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} interrupt ISR(\textcolor{keywordtype}{void})
+\{
+    SAVE\_STATE();                       \textcolor{comment}{// mTouch Framework-supplied general ISR save state macro. }
+                                        \textcolor{comment}{// Not required, but convenient. }
+
+\textcolor{preprocessor}{    #if (MTOUCH\_INTEGRATION\_TYPE == MTOUCH\_CALLED\_FROM\_ISR)}
+        \textcolor{keywordflow}{if} (mTouch\_checkInterrupt())    \textcolor{comment}{// Checks if the TMRxIE and TMRxIF flags are both equal to 1.}
+        \{
+            \hyperlink{group___acquisition_gaeeee5d5e14eaff7df78e9ad5d7ac9769}{mTouch\_Scan}();              \textcolor{comment}{// Required if running as ISR slave. The mTouch timer
+       interrupt }
+                                        \textcolor{comment}{// flag is cleared inside the mTouch\_Scan() function.}
+        \}
+\textcolor{preprocessor}{    #elif (MTOUCH\_INTEGRATION\_TYPE == MTOUCH\_CALLED\_FROM\_MAINLOOP)}
+        \hyperlink{m_touch_8c_ab678fb469a6bdd3d0b75cc4b48adf504}{mTouch\_state}.\hyperlink{structm_touch___state_a98199bfb33a755cb711b9119e571bd7d}{isrServiced} = 1;   \textcolor{comment}{// Alerts the mTouch scanning routine that
+       an interrupt may }
+                                        \textcolor{comment}{// have disrupted a scan. This is cleared at the start of a}
+                                        \textcolor{comment}{// new scan and is checked at the end of the scan.}
+                                        \textcolor{comment}{// Bad data can affect the readings if this flag is not set.}
+\textcolor{preprocessor}{    #endif}
+    
+    
+    RESTORE\_STATE();                    \textcolor{comment}{// mTouch Framework-supplied general ISR restore state macro. }
+                                        \textcolor{comment}{// Not required, but convienent.}
+\}
+\end{DoxyCode}
+
+
+The A\+P\+I for accessing button states is m\+Touch\+\_\+\+Get\+Button\+State(i). The states have been enumerated with the labels\+: \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a7d72b112c35bc51408030eb7ecdcacd2a8ac4e988fd74c22ff6e99ee854cc848f}{M\+T\+O\+U\+C\+H\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+I\+N\+G}, \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a7d72b112c35bc51408030eb7ecdcacd2a9171b63f68c2e5ed308f9700e824cbbe}{M\+T\+O\+U\+C\+H\+\_\+\+R\+E\+L\+E\+A\+S\+E\+D}, and \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a7d72b112c35bc51408030eb7ecdcacd2aed5b3f2b7065991010f45eb04759ef01}{M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+E\+S\+S\+E\+D}.
+
+
+\begin{DoxyCode}
+\textcolor{keywordflow}{if} (mTouch\_GetButtonState(0) < \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a7d72b112c35bc51408030eb7ecdcacd2aed5b3f2b7065991010f45eb04759ef01}{MTOUCH\_PRESSED})
+\{ 
+    LED0 = LED\_OFF;                     \textcolor{comment}{// Sensor0 not pressed. Turn off LED.}
+\} \textcolor{keywordflow}{else} \{ 
+    LED0 = LED\_ON;                      \textcolor{comment}{// Sensor0 pressed. Turn on LED.}
+\}
+\end{DoxyCode}
+ \hypertarget{featProximity}{}\section{Proximity Sensors}\label{featProximity}
+The m\+Touch Framework supports proximity detection sensors. Enabling this feature for a sensor will provide a higher signal-\/to-\/noise ratio by applying a median filter. Future updates may further enhance this capability. The A\+P\+I for handling the proximity sensor is exactly the same as with a normal sensor.\hypertarget{feat_proximity_featProx-How}{}\subsection{How It Works}\label{feat_proximity_featProx-How}
+The theory of operation for proximity sensors is the same as touch buttons and keys. However, proximity sensors must be able to detect very small changes in capacitance, so a median filter is implemented to reduce the noise level. The largest cost of implementing this feature is the R\+A\+M requirement since we must store the previous N samples for the median filter. This also means the response time will be longer than for a normal sensor while the median filter updates.
+
+The basic idea of a median filter is that it stores a history of the previous scan results in a first-\/in, first-\/out buffer. After each new scan, the oldest value is replaced with the newest, the array is sorted by size, and the middle values are averaged.
+
+ \hypertarget{feat_proximity_featProx-Config}{}\subsection{Proximity Sensor Configuration}\label{feat_proximity_featProx-Config}
+
+\begin{DoxyEnumerate}
+\item Configure the proximity sensor(s) to be scanned as normal sensors in the \hyperlink{m_touch__config_8h}{m\+Touch\+\_\+config.\+h} file. The differences are that you may need to set a larger oversampling value and a lower threshold value to make the sensor more sensitive. The threshold, unlike for button sensors, should not be set by evaluating the maximum touch shift. Instead, set it by observing the maximum noise level. Using the two-\/way communications with the m\+Touch Two-\/\+Way G\+U\+I is an easy way to adjust these values.~\newline
+ You can find the m\+Touch Two-\/\+Way G\+U\+I in {\ttfamily Your M\+L\+A Directory/m\+Touch\+Cap\+Demos/\+Utilities/\+P\+I\+C12\+F P\+I\+C16\+F Utilities/m\+Touch Two-\/\+Way G\+U\+I} 
+\item At the bottom of \hyperlink{m_touch__config_8h}{m\+Touch\+\_\+config.\+h} is the \textquotesingle{}Proximity\textquotesingle{} configuration section. 
+\begin{DoxyEnumerate}
+\item Set \#\+M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+P\+R\+O\+X\+I\+M\+I\+T\+Y to the total number of proximity sensors in your system. 
+\item Define one M\+T\+O\+U\+C\+H\+\_\+\+S\+E\+N\+S\+O\+Rx\+\_\+\+I\+S\+\_\+\+P\+R\+O\+X definition per enabled proximity sensor. The value of the definition must be its \textquotesingle{}proximity index\textquotesingle{} value. The \textquotesingle{}Proximity index\textquotesingle{} is used as the index to proximity variable arrays. In total, the indexes should start at 0 and end with M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+P\+R\+O\+X\+I\+M\+I\+T\+Y -\/ 1. The order is arbitrary. 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define MTOUCH\_NUMBER\_PROXIMITY     1          }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR3\_IS\_PROX      0   // MTOUCH\_SENSOR3 is a proximity sensor with index 0   }
+\end{DoxyCode}
+ 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define MTOUCH\_NUMBER\_PROXIMITY     2          }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR4\_IS\_PROX      0   // MTOUCH\_SENSOR4 is a proximity sensor with index 0          }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR9\_IS\_PROX      1   // MTOUCH\_SENSOR9 is a proximity sensor with index 1}
+\end{DoxyCode}
+ 
+\item Set the parameters for the median filter\+: 
+\begin{DoxyItemize}
+\item \#\+M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+O\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+Z\+E decides the size of the buffer for the median filter. Each proximity sensor will have its own median filter array, so be careful when assigning this value as it will have significant effects on the R\+A\+M requirements of the proximity implementation. Valid options are 5, 9, and 15. Larger number means more filtering, but higher R\+A\+M requirements and slower response times. 
+\item \#\+M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+O\+X\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+E\+X\+T\+R\+E\+M\+E determines how many of the largest and smallest numbers will be removed before averaging the middle values. For example, if we are filtering with a buffer size of 5 and this value is set to 1, we will average the 2nd, 3rd, and 4th values. With a buffer size of 9 and this value set to 2, we will average the 3rd, 4th, 5th, 6th, and 7th values. This value must be less than half the buffer size and greater than 0. 
+\item Enable (recommended) or disable the \#\+M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+O\+X\+\_\+\+U\+S\+E\+\_\+32\+B\+I\+T\+\_\+\+A\+C\+C\+U\+M option based on your proximity sensor\textquotesingle{}s output data. Enabling this will prevent math overflow errors when the buffer is being accumulated, but will add to the overall R\+A\+M requirement. It\textquotesingle{}s possible you will not need this protection, depending on the configuration, so this has been provided to easily allow toggling between the two. (Example when you don\textquotesingle{}t need the accumulator\+: buffer size of \textquotesingle{}5\textquotesingle{} and remove extreme value of \textquotesingle{}2\textquotesingle{}. No accumulation occurs\+: the middle value is taken as-\/is.) 
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+\end{DoxyEnumerate}\hypertarget{feat_proximity_featProx-Ex}{}\subsection{Example}\label{feat_proximity_featProx-Ex}
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define MTOUCH\_NUMBER\_PROXIMITY       2   // Two proximity sensors}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR0\_IS\_PROX        0   // MTOUCH\_SENSOR0 is a proximity sensor with index 0}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR5\_IS\_PROX        1   // MTOUCH\_SENSOR5 is a proximity sensor with index 1}
+\textcolor{preprocessor}{#define MTOUCH\_PROX\_BUFFER\_SIZE       5   // Median filter stores the last 5 values of each proximity
+       sensor}
+\textcolor{preprocessor}{#define MTOUCH\_PROX\_REMOVE\_EXTREME    1   // Removes the largest and smallest values before averaging}
+\textcolor{preprocessor}{#define MTOUCH\_PROX\_USE\_32BIT\_ACCUM       // Uses a 32-bit accumulator to prevent math overflow}
+\end{DoxyCode}
+\hypertarget{feat_proximity_featProx-Out}{}\subsection{Proximity Sensor Output}\label{feat_proximity_featProx-Out}
+The way to access proximity sensor states is the same as for a normal sensor -\/ using m\+Touch\+\_\+\+Get\+Button\+State(i). The index, i, is the normal sensor index -\/ not the proximity index. For example, in the above code we could check the state of the proximity sensors by using m\+Touch\+\_\+\+Get\+Button\+State(0) and m\+Touch\+\_\+\+Get\+Button\+State(5). \hypertarget{featSliders}{}\section{Sliders and Wheels}\label{featSliders}
+The m\+Touch Framework has a special decoding module for sliders and wheels. It can support up to 10 sliders and up to 8 sensors per slider. The sensors used for the slider/wheel are configured as normal touch sensors. They will be scanned as a normal sensor and then, later, decoded as part of the slider.\hypertarget{feat_sliders_featSlider-How}{}\subsection{How It Works}\label{feat_sliders_featSlider-How}
+The slider/wheel decoding module is built on top of the normal decoding. It uses the delta readings of the most-\/pressed sensor and it\textquotesingle{}s most-\/pressed neighbor to calculate the touched position. An example is shown below\+: The interpolated position is calculated as follows\+: \[ Interpolated Press Position = (256 \cdot n) \pm \frac{Delta_{n}}{Delta_{n} + Delta_{n \pm 1}} \]
+
+If \#\+M\+T\+O\+U\+C\+H\+\_\+\+S\+L\+I\+D\+E\+R\+\_\+\+S\+C\+A\+L\+I\+N\+G\+\_\+\+E\+N\+A\+B\+L\+E\+D is defined, the scaled interpolated position is calculated\+: \[ Scaled Interpolated Press Position = \frac{InterpolatedPressPosition}{n} \]
+
+In the equation, n is the most pressed sensor index.  \hypertarget{feat_sliders_featSlider-Config}{}\subsection{Slider/\+Wheel Configuration}\label{feat_sliders_featSlider-Config}
+
+\begin{DoxyEnumerate}
+\item Configure the slider/wheel sensors to be scanned as normal sensors in the \hyperlink{m_touch__config_8h}{m\+Touch\+\_\+config.\+h} file. Make sure every parameter is set appropriately, so that it can detect a normal touch. See the main configuration guide for more information on this step. 
+\item Open the \hyperlink{m_touch__config__slider_8h}{m\+Touch\+\_\+config\+\_\+slider.\+h} file 
+\begin{DoxyEnumerate}
+\item Set \#\+M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+L\+I\+D\+E\+R\+S to the total number of sliders/wheels you want to implement. 
+\item Set \#\+M\+T\+O\+U\+C\+H\+\_\+\+S\+L\+I\+D\+E\+R\+\_\+\+S\+T\+E\+P\+\_\+\+S\+I\+Z\+E. A small step size will smooth your slider result but will limit its speed and response time. The default value (10) will generally give good results. 
+\item Enable (recommended) or disable M\+T\+O\+U\+C\+H\+\_\+\+S\+L\+I\+D\+E\+R\+\_\+\+S\+C\+A\+L\+I\+N\+G\+\_\+\+E\+N\+A\+B\+L\+E\+D based on your needs. If scaling is enabled, the output value will always fall between 0 and 255. If it is disabled, the maximum output value will be dependant on the Interpolated\+Press\+Position equation shown above. 
+\item Configure each individual slider/wheel\+: 
+\begin{DoxyItemize}
+\item For each slider, set M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+L\+I\+D\+E\+Rx\+\_\+\+S\+E\+N\+S\+O\+R\+S to the number of sensors that will be used to implement this particularly slider/wheel. (Where \textquotesingle{}x\textquotesingle{} is the slider index.)
+
+Example\+: 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define MTOUCH\_NUMBER\_SLIDER0\_SENSORS  4}
+\end{DoxyCode}
+ Slider0 consists of 4 m\+Touch sensors
+
+
+\item For each sensor of each slider, set M\+T\+O\+U\+C\+H\+\_\+\+S\+L\+I\+D\+E\+Rx\+\_\+\+S\+E\+N\+S\+O\+Ry to the M\+T\+O\+U\+C\+H\+\_\+\+S\+E\+N\+S\+O\+R index. (Where \textquotesingle{}x\textquotesingle{} is the slider index and \textquotesingle{}y\textquotesingle{} is the sensor index for that slider.)
+
+Example\+: 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define MTOUCH\_SLIDER0\_SENSOR1  3}
+\end{DoxyCode}
+ Slider0\textquotesingle{}s second sensor is M\+T\+O\+U\+C\+H\+\_\+\+S\+E\+N\+S\+O\+R3
+
+
+\item Define M\+T\+O\+U\+C\+H\+\_\+\+S\+L\+I\+D\+E\+Rx\+\_\+\+W\+H\+E\+E\+L\+\_\+\+E\+N\+A\+B\+L\+E if the slider is implemented as a wheel on the P\+C\+B. This will have it connect the first and last sensors of the slider in the decoding math, as well as implementing a speed and direction indication for use by the application.
+
+
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+\end{DoxyEnumerate}
+
+{\bfseries L\+I\+M\+I\+T\+A\+T\+I\+O\+N\+:} The framework is not currently able to implement both wheels and sliders in the same application. The framework is not currently able to support more than one wheel. So, the framework is able to support up to 10 sliders with 8 sensors per slider {\bfseries O\+R} one wheel.\hypertarget{feat_sliders_featSlider-Ex}{}\subsection{Example}\label{feat_sliders_featSlider-Ex}
+Configure two sliders with scaling enabled. The first slider uses 4 sensors and the second slider uses 6.
+
+
+\begin{DoxyCode}
+\textcolor{comment}{// mTouch\_config\_slider.h}
+
+\textcolor{preprocessor}{#define MTOUCH\_NUMBER\_OF\_SLIDERS        2   }
+\textcolor{preprocessor}{#define MTOUCH\_SLIDER\_STEP\_SIZE         10        }
+\textcolor{preprocessor}{#define MTOUCH\_SLIDER\_SCALING\_ENABLED       // Slider values will be from 0 to 255}
+
+\textcolor{comment}{// mTouch Slider0 Configuration }
+\textcolor{preprocessor}{#define MTOUCH\_NUMBER\_SLIDER0\_SENSORS   4   // <-- Number of sensors that make up slider 0}
+\textcolor{preprocessor}{#define MTOUCH\_SLIDER0\_SENSOR0          3   }
+\textcolor{preprocessor}{#define MTOUCH\_SLIDER0\_SENSOR1          4   }
+\textcolor{preprocessor}{#define MTOUCH\_SLIDER0\_SENSOR2          5  }
+\textcolor{preprocessor}{#define MTOUCH\_SLIDER0\_SENSOR3          6   }
+\textcolor{comment}{//#define MTOUCH\_SLIDER0\_WHEEL\_ENABLE       // 'Wheel' disabled}
+   
+\textcolor{comment}{// mTouch Slider1 Configuration }
+\textcolor{preprocessor}{#define MTOUCH\_NUMBER\_SLIDER1\_SENSORS   6   // <-- Number of sensors that make up slider 1}
+\textcolor{preprocessor}{#define MTOUCH\_SLIDER1\_SENSOR0          7   }
+\textcolor{preprocessor}{#define MTOUCH\_SLIDER1\_SENSOR1          8       }
+\textcolor{preprocessor}{#define MTOUCH\_SLIDER1\_SENSOR2          9   }
+\textcolor{preprocessor}{#define MTOUCH\_SLIDER1\_SENSOR3          10       }
+\textcolor{preprocessor}{#define MTOUCH\_SLIDER1\_SENSOR4          11  }
+\textcolor{preprocessor}{#define MTOUCH\_SLIDER1\_SENSOR5          12       }
+\textcolor{preprocessor}{//#define MTOUCH\_SLIDER0\_WHEEL\_ENABLE       // 'Wheel' disabled}
+\end{DoxyCode}
+\hypertarget{feat_sliders_featSlider-Out}{}\subsection{Slider/\+Wheel Output}\label{feat_sliders_featSlider-Out}
+The framework provides one output for sliders (position) and three outputs for wheels (position, speed, direction). 
+\begin{DoxyItemize}
+\item The slider/wheel position output is stored in the m\+Touch\+\_\+slider array. 
+\item The wheel\textquotesingle{}s extra outputs are stored in a struct called wheel\+Status. It contains speed in wheel\+Status.\+speed and direction in wheel\+Status.\+direction. 
+\begin{DoxyItemize}
+\item The speed range is from 0 to 31, with 0 being no movement and 31 being the fastest. 
+\item The direction has three states\+: 0x00 for no-\/scrolling, 0x01 for scrolling in the positive index direction, 0x02 for scrolling in the negative index direction. 
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{feat_sliders_featSlider-API}{}\subsection{Slider/\+Wheel A\+P\+I}\label{feat_sliders_featSlider-API}
+The A\+P\+I for handling the slider and wheel outputs are\+: 
+\begin{DoxyItemize}
+\item m\+Touch\+\_\+\+Get\+Slider(i) \+:\+: returns the value of slider/wheel i 
+\item wheel\+Status.\+direction \+:\+: stores the current direction of the wheel 
+\item wheel\+Status.\+speed \+:\+: stores the current speed of the wheel 
+\end{DoxyItemize}
+
+Example\+: 
+\begin{DoxyCode}
+\textcolor{comment}{// Light a line of LEDs based on the slider output value}
+\textcolor{comment}{// 8 LEDs, 9 total "slider output values" for this application. 0 (all off) to 8 (all on).}
+\textcolor{keywordflow}{if} (mTouch\_GetSlider(0) >= 28)  \{ LED0 = LED\_ON; \} \textcolor{keywordflow}{else} \{ LED0 = LED\_OFF; \}
+\textcolor{keywordflow}{if} (mTouch\_GetSlider(0) >= 57)  \{ LED1 = LED\_ON; \} \textcolor{keywordflow}{else} \{ LED1 = LED\_OFF; \}
+\textcolor{keywordflow}{if} (mTouch\_GetSlider(0) >= 85)  \{ LED2 = LED\_ON; \} \textcolor{keywordflow}{else} \{ LED2 = LED\_OFF; \}
+\textcolor{keywordflow}{if} (mTouch\_GetSlider(0) >= 114) \{ LED3 = LED\_ON; \} \textcolor{keywordflow}{else} \{ LED3 = LED\_OFF; \}
+\textcolor{keywordflow}{if} (mTouch\_GetSlider(0) >= 142) \{ LED4 = LED\_ON; \} \textcolor{keywordflow}{else} \{ LED4 = LED\_OFF; \}
+\textcolor{keywordflow}{if} (mTouch\_GetSlider(0) >= 170) \{ LED5 = LED\_ON; \} \textcolor{keywordflow}{else} \{ LED5 = LED\_OFF; \}
+\textcolor{keywordflow}{if} (mTouch\_GetSlider(0) >= 199) \{ LED6 = LED\_ON; \} \textcolor{keywordflow}{else} \{ LED6 = LED\_OFF; \}
+\textcolor{keywordflow}{if} (mTouch\_GetSlider(0) >= 227) \{ LED7 = LED\_ON; \} \textcolor{keywordflow}{else} \{ LED7 = LED\_OFF; \}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}
+\textcolor{comment}{// Same as above, but with slider scaling disabled.}
+\textcolor{comment}{// 8 LEDs, 9 total "slider output values" for this application. 0 (all off) to 8 (all on).}
+\textcolor{preprocessor}{#define MTOUCH\_SLIDER0\_MAX\_VALUE     ((MTOUCH\_NUMBER\_SLIDER0\_SENSORS - 1) * 256)}
+\textcolor{keywordflow}{if} (mTouch\_GetSlider(0) >= (uint16\_t)( 1/9 * MTOUCH\_SLIDER0\_MAX\_VALUE)) \{ LED0 = LED\_ON; \} \textcolor{keywordflow}{else} \{ LED0 = 
+      LED\_OFF; \}
+\textcolor{keywordflow}{if} (mTouch\_GetSlider(0) >= (uint16\_t)( 2/9 * MTOUCH\_SLIDER0\_MAX\_VALUE)) \{ LED1 = LED\_ON; \} \textcolor{keywordflow}{else} \{ LED1 = 
+      LED\_OFF; \}
+\textcolor{keywordflow}{if} (mTouch\_GetSlider(0) >= (uint16\_t)( 3/9 * MTOUCH\_SLIDER0\_MAX\_VALUE)) \{ LED2 = LED\_ON; \} \textcolor{keywordflow}{else} \{ LED2 = 
+      LED\_OFF; \}
+\textcolor{keywordflow}{if} (mTouch\_GetSlider(0) >= (uint16\_t)( 4/9 * MTOUCH\_SLIDER0\_MAX\_VALUE)) \{ LED3 = LED\_ON; \} \textcolor{keywordflow}{else} \{ LED3 = 
+      LED\_OFF; \}
+\textcolor{keywordflow}{if} (mTouch\_GetSlider(0) >= (uint16\_t)( 5/9 * MTOUCH\_SLIDER0\_MAX\_VALUE)) \{ LED4 = LED\_ON; \} \textcolor{keywordflow}{else} \{ LED4 = 
+      LED\_OFF; \}
+\textcolor{keywordflow}{if} (mTouch\_GetSlider(0) >= (uint16\_t)( 6/9 * MTOUCH\_SLIDER0\_MAX\_VALUE)) \{ LED5 = LED\_ON; \} \textcolor{keywordflow}{else} \{ LED5 = 
+      LED\_OFF; \}
+\textcolor{keywordflow}{if} (mTouch\_GetSlider(0) >= (uint16\_t)( 7/9 * MTOUCH\_SLIDER0\_MAX\_VALUE)) \{ LED6 = LED\_ON; \} \textcolor{keywordflow}{else} \{ LED6 = 
+      LED\_OFF; \}
+\textcolor{keywordflow}{if} (mTouch\_GetSlider(0) >= (uint16\_t)( 8/9 * MTOUCH\_SLIDER0\_MAX\_VALUE)) \{ LED7 = LED\_ON; \} \textcolor{keywordflow}{else} \{ LED7 = 
+      LED\_OFF; \}
+\end{DoxyCode}
+\hypertarget{feat_sliders_featSlider-FAQ}{}\subsection{Frequently Asked Questions}\label{feat_sliders_featSlider-FAQ}
+
+\begin{DoxyItemize}
+\item {\bfseries Is it possible to make a slider using only one sensor? It could be a single long triangle that gets thinner/thicker as the finger moves along it.}~\newline
+~\newline
+ No. 
+\begin{DoxyItemize}
+\item With only one sensor, there is no way to distinguish between a finger moving side-\/to-\/side on the slider and a finger moving up-\/and-\/down over the largest part of the slider. The shift magnitude in both cases will change from 0 to 255. 
+\item If the slider\textquotesingle{}s current value is 255 (max) and the user presses on position 0 of the slider (the thinnest part) how will the slider know to update its value? The finger\textquotesingle{}s effect on the sensor will be minimal, so the shift will be close to 0. With a 2-\/channel slider, the shifts on the two sensors will be opposites. So we won\textquotesingle{}t see a shift on the first sensor, but the second one will have a large shift. 
+\item What if the slider\textquotesingle{}s value is 255 when the user releases in the \textquotesingle{}up\textquotesingle{} direction? How will the slider know that the user is going up instead of side-\/to-\/side? With a 2-\/channel slider, we compare the relationship between the two sensors to see if their ratio changes. Up-\/down press directions cause only small changes in the ratio while side-\/to-\/side directions cause large changes in the ratio. 
+\item The only output value of a sensor is its magnitude, but the maximum magnitude will depend on the user of the application. A middle-\/aged man with large hands will cause a larger maximum shift than a 50 lb child. So the ratio between two sensors must be used to eliminate this difference. 
+\end{DoxyItemize}\begin{DoxyNote}{Note}
+Regular capacitive buttons require only one sensors because we\textquotesingle{}re looking for a step-\/response in the signal -\/ the transition between pressed and released. We are not attempting to use the magnitude to further extrapolate information such as a position. 
+\end{DoxyNote}
+
+\end{DoxyItemize}\hypertarget{featMatrix}{}\section{Matrix Designs}\label{featMatrix}
+The m\+Touch Framework supports decoding of matrix\textquotesingle{}d sensors to simplify the user\textquotesingle{}s design process. This method allows for a larger number of possible unique press locations by decoding the state of two sensors at once\+: the row and the column.\hypertarget{feat_matrix_featMatrix-How}{}\subsection{How It Works}\label{feat_matrix_featMatrix-How}
+The m\+Touch Framework will scan all sensors as normal. When a new set of readings is available, the framework will first perform some logic to determine which row and which column is the most pressed of the matrix. If both a row and column are activated, the state machine for the sensors will begin debouncing the result. After the required number of repeated results, the matrix coordinate-\/output will be updated.
+
+ \hypertarget{feat_matrix_featMatrix-Config}{}\subsection{Proximity Sensor Configuration}\label{feat_matrix_featMatrix-Config}
+
+\begin{DoxyEnumerate}
+\item Configure the matrix\textquotesingle{}d sensors to be scanned as normal sensors in the \hyperlink{m_touch__config_8h}{m\+Touch\+\_\+config.\+h} file. We will be defining index ranges for the rows and columns, so when configuring the M\+T\+O\+U\+C\+H\+\_\+\+S\+E\+N\+S\+O\+Rx list, make sure to place the matrix sensors as a continuous group starting at 0 or place at the very end with no \textquotesingle{}normal\textquotesingle{} sensors after it. Within the matrix list, the rows should be grouped together and the columns should be grouped together. 
+\begin{DoxyCode}
+\textcolor{comment}{// Example sensor configuration for matrix}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR0              AN0     // Matrix Row0    }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR1              AN1     // Matrix Row1}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR2              AN2     // Matrix Col0}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR3              AN3     // Matrix Col1}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR4              AN4     // Matrix Col2}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR5              AN5     // Normal mTouch Sensor}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR6              AN6     // Normal mTouch Sensor}
+\end{DoxyCode}
+ 
+\begin{DoxyCode}
+\textcolor{comment}{// Example sensor configuration for matrix}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR0              AN0     // Normal mTouch Sensor}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR1              AN1     // Normal mTouch Sensor}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR2              AN2     // Matrix Col0}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR3              AN3     // Matrix Col1}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR4              AN4     // Matrix Col2}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR5              AN5     // Matrix Row0}
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR6              AN6     // Matrix Row1}
+\end{DoxyCode}
+ 
+\item At the bottom of \hyperlink{m_touch__config_8h}{m\+Touch\+\_\+config.\+h} is the \textquotesingle{}Decoding\textquotesingle{} section which contains the matrix configuration options. 
+\begin{DoxyEnumerate}
+\item Uncomment \#\+M\+T\+O\+U\+C\+H\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+E\+N\+A\+B\+L\+E\+D to enable matrix decoding. 
+\item Define \#\+M\+T\+O\+U\+C\+H\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+R\+O\+W\+\_\+\+S\+T\+A\+R\+T and \#\+M\+T\+O\+U\+C\+H\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+R\+O\+W\+\_\+\+E\+N\+D to the M\+T\+O\+U\+C\+H\+\_\+\+S\+E\+N\+S\+O\+Rx index values for the row sensors. In the first example, above, the start would be \textquotesingle{}0\textquotesingle{} and the end would be \textquotesingle{}1\textquotesingle{}. In the second example, the start would be \textquotesingle{}5\textquotesingle{} and the end would be \textquotesingle{}6\textquotesingle{}. 
+\item Define \#\+M\+T\+O\+U\+C\+H\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+S\+T\+A\+R\+T and \#\+M\+T\+O\+U\+C\+H\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+E\+N\+D to the M\+T\+O\+U\+C\+H\+\_\+\+S\+E\+N\+S\+O\+Rx index values for the column sensors. In the first example, above, the start would be \textquotesingle{}2\textquotesingle{} and the end would be \textquotesingle{}4\textquotesingle{}. In the second example, the start would be \textquotesingle{}2\textquotesingle{} and the end would be \textquotesingle{}4\textquotesingle{}. 
+\item Define one M\+T\+O\+U\+C\+H\+\_\+\+S\+E\+N\+S\+O\+Rx\+\_\+\+I\+S\+\_\+\+P\+R\+O\+X definition per enabled proximity sensor. The value of the definition must be its \textquotesingle{}proximity index\textquotesingle{} value. The \textquotesingle{}Proximity index\textquotesingle{} is used as the index to proximity variable arrays. In total, the indexes should start at 0 and end with M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+P\+R\+O\+X\+I\+M\+I\+T\+Y -\/ 1. The order is arbitrary. 
+\item If desired, set the value of \#\+M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+S\+T\+\_\+\+P\+R\+E\+S\+S\+E\+D\+\_\+\+T\+H\+R\+E\+S\+H\+O\+L\+D to the number of counts that the most-\/pressed row or column must be greater than the second-\/most-\/pressed row/column to qualify it as the \textquotesingle{}most pressed\textquotesingle{}. 
+\end{DoxyEnumerate}
+\end{DoxyEnumerate}\hypertarget{feat_matrix_featMatrix-Ex}{}\subsection{Example}\label{feat_matrix_featMatrix-Ex}
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define MTOUCH\_MATRIX\_ENABLED               // <-- Matrix decoding is enabled}
+\textcolor{preprocessor}{#define MTOUCH\_MATRIX\_ROW\_START         0   // <-- The sensor index of the first row}
+\textcolor{preprocessor}{#define MTOUCH\_MATRIX\_ROW\_END           1   // <-- The sensor index of the last row}
+\textcolor{preprocessor}{#define MTOUCH\_MATRIX\_COLUMN\_START      2   // <-- The sensor index of the first column}
+\textcolor{preprocessor}{#define MTOUCH\_MATRIX\_COLUMN\_END        4   // <-- The sensor index of the last column}
+\textcolor{preprocessor}{#define MTOUCH\_MOST\_PRESSED\_THRESHOLD   10  // <-- The most pressed column/row must be at least 10 counts}
+\textcolor{preprocessor}{                                            //     greater than the second-most-pressed column/row.}
+\end{DoxyCode}
+ 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define MTOUCH\_MATRIX\_ENABLED               // <-- Matrix decoding is enabled}
+\textcolor{preprocessor}{#define MTOUCH\_MATRIX\_ROW\_START         2   // <-- The sensor index of the first row}
+\textcolor{preprocessor}{#define MTOUCH\_MATRIX\_ROW\_END           3   // <-- The sensor index of the last row}
+\textcolor{preprocessor}{#define MTOUCH\_MATRIX\_COLUMN\_START      4   // <-- The sensor index of the first column}
+\textcolor{preprocessor}{#define MTOUCH\_MATRIX\_COLUMN\_END        6   // <-- The sensor index of the last column}
+\textcolor{preprocessor}{#define MTOUCH\_MOST\_PRESSED\_THRESHOLD   10  // <-- The most pressed column/row must be at least 10 counts}
+\textcolor{preprocessor}{                                            //     greater than the second-most-pressed column/row.}
+\end{DoxyCode}
+\hypertarget{feat_matrix_featMatrix-Out}{}\subsection{Matrix Output}\label{feat_matrix_featMatrix-Out}
+The m\+Touch Framework stores the column and row output coordinates in an 8-\/bit value to save on R\+A\+M requirements. To easily decode which row and column is pressed, use the m\+Touch\+\_\+\+Matrix\+\_\+get\+Row() and m\+Touch\+\_\+\+Matrix\+\_\+get\+Column() A\+P\+I functions. They will return the row and column indexes, respectively.
+
+Note\+: The index they will be returning is relative to the matrix rows and matrix columns -\/ not on the M\+T\+O\+U\+C\+H\+\_\+\+S\+E\+N\+S\+O\+Rx index value. For example, in the two example M\+T\+O\+U\+C\+H\+\_\+\+S\+E\+N\+S\+O\+Rx configurations above, pressing on Row0\textquotesingle{}s sensor will make m\+Touch\+\_\+\+Matrix\+\_\+get\+Row() return \textquotesingle{}0\textquotesingle{} -\/ regardless of whether the row is defined as M\+T\+O\+U\+C\+H\+\_\+\+S\+E\+N\+S\+O\+R0 or M\+T\+O\+U\+C\+H\+\_\+\+S\+E\+N\+S\+O\+R5.
+
+m\+Touch\+\_\+\+Matrix\+\_\+has\+Changed() will return a \textquotesingle{}0\textquotesingle{} if there was no change in the matrix output value since the last decode. m\+Touch\+\_\+\+Matrix\+\_\+latch\+New\+Value() will save the current value of the matrix for later comparison. m\+Touch\+\_\+\+Matrix\+\_\+is\+Pressed() will return a \textquotesingle{}0\textquotesingle{} if there are no pressed nodes on the matrix.\hypertarget{feat_matrix_featMatrix-API}{}\subsection{Example Matrix A\+P\+I}\label{feat_matrix_featMatrix-API}
+
+\begin{DoxyCode}
+\textcolor{keywordflow}{if} (mTouch\_Matrix\_hasChanged())         \textcolor{comment}{// If the matrix value has changed since last time}
+\{
+    mTouch\_Matrix\_latchNewValue();      \textcolor{comment}{// Save the new value of the matrix}
+    
+    LED1  = LED\_OFF;                    \textcolor{comment}{// Reset all matrix outputs}
+    LED2  = LED\_OFF;
+    LED3  = LED\_OFF;
+    LED4  = LED\_OFF;
+    LED5  = LED\_OFF;
+    LED6  = LED\_OFF;
+    LED7  = LED\_OFF;
+    LED8  = LED\_OFF;
+    LED9  = LED\_OFF;
+    LED10 = LED\_OFF;
+    LED11 = LED\_OFF;
+    LED12 = LED\_OFF;
+\}
+
+\textcolor{keywordflow}{if} (mTouch\_Matrix\_isPressed())          \textcolor{comment}{// If the matrix is being pressed}
+\{
+    \textcolor{keywordflow}{switch}(mTouch\_Matrix\_getRow())      \textcolor{comment}{// Find the row/column being pressed and output accordingly.}
+    \{
+        \textcolor{keywordflow}{case} 0:                         
+            \textcolor{keywordflow}{switch}(mTouch\_Matrix\_getColumn())
+            \{
+                \textcolor{keywordflow}{case} 0: LED1  = LED\_ON; \textcolor{keywordflow}{break};  \textcolor{comment}{// (0, 0)}
+                \textcolor{keywordflow}{case} 1: LED2  = LED\_ON; \textcolor{keywordflow}{break};  \textcolor{comment}{// (0, 1)}
+                \textcolor{keywordflow}{case} 2: LED3  = LED\_ON; \textcolor{keywordflow}{break};  \textcolor{comment}{// (0, 2)}
+                \textcolor{keywordflow}{case} 3: LED4  = LED\_ON; \textcolor{keywordflow}{break};  \textcolor{comment}{// (0, 3)}
+            \}
+            \textcolor{keywordflow}{break};
+        \textcolor{keywordflow}{case} 1:
+            \textcolor{keywordflow}{switch}(mTouch\_Matrix\_getColumn())
+            \{
+                \textcolor{keywordflow}{case} 0: LED5  = LED\_ON; \textcolor{keywordflow}{break};  \textcolor{comment}{// (1, 0)}
+                \textcolor{keywordflow}{case} 1: LED6  = LED\_ON; \textcolor{keywordflow}{break};  \textcolor{comment}{// (1, 1)}
+                \textcolor{keywordflow}{case} 2: LED7  = LED\_ON; \textcolor{keywordflow}{break};  \textcolor{comment}{// (1, 2)}
+                \textcolor{keywordflow}{case} 3: LED8  = LED\_ON; \textcolor{keywordflow}{break};  \textcolor{comment}{// (1, 3)}
+            \}
+            \textcolor{keywordflow}{break};
+        \textcolor{keywordflow}{case} 2:
+            \textcolor{keywordflow}{switch}(mTouch\_Matrix\_getColumn())
+            \{
+                \textcolor{keywordflow}{case} 0: LED9  = LED\_ON; \textcolor{keywordflow}{break};  \textcolor{comment}{// (2, 0)}
+                \textcolor{keywordflow}{case} 1: LED10 = LED\_ON; \textcolor{keywordflow}{break};  \textcolor{comment}{// (2, 1)}
+                \textcolor{keywordflow}{case} 2: LED11 = LED\_ON; \textcolor{keywordflow}{break};  \textcolor{comment}{// (2, 2)}
+                \textcolor{keywordflow}{case} 3: LED12 = LED\_ON; \textcolor{keywordflow}{break};  \textcolor{comment}{// (2, 3)}
+            \}
+            \textcolor{keywordflow}{break};
+    \}
+\}
+\end{DoxyCode}
+ \hypertarget{featMostPressed}{}\section{Most-\/\+Pressed Algorithm}\label{featMostPressed}
+The m\+Touch Framework can be configured to only allow a single m\+Touch sensor to be activated at a time, if desired. If a matrix is being implemented, the matrix sensors will be separated from the non-\/matrixed sensors and only the non-\/matrixed sensors will be limited to one-\/pressed-\/at-\/a-\/time.\hypertarget{feat_most_pressed_featMostPressed-How}{}\subsection{How It Works}\label{feat_most_pressed_featMostPressed-How}
+The m\+Touch Framework will scan all sensors as normal. When a new set of readings is available, the framework will first perform some logic to determine which row and which column is the most pressed of the matrix. If both a row and column are activated, the state machine for the sensors will begin debouncing the result. After the required number of repeated results, the matrix coordinate-\/output will be updated.\hypertarget{feat_most_pressed_featMostPressed-Config}{}\subsection{Most-\/\+Pressed Algorithm Configuration}\label{feat_most_pressed_featMostPressed-Config}
+
+\begin{DoxyEnumerate}
+\item Configure the matrix\textquotesingle{}d sensors to be scanned as normal sensors in the \hyperlink{m_touch__config_8h}{m\+Touch\+\_\+config.\+h} file. We will be defining index ranges for the rows and columns, so when configuring the M\+T\+O\+U\+C\+H\+\_\+\+S\+E\+N\+S\+O\+Rx list, make sure to place the matrix sensors as a continuous group starting at 0 or place at the very end with no \textquotesingle{}normal\textquotesingle{} sensors after it. Within the matrix list, the rows should be grouped together and the columns should be grouped together. 
+\item At the bottom of \hyperlink{m_touch__config_8h}{m\+Touch\+\_\+config.\+h} is the \textquotesingle{}Decoding\textquotesingle{} section which contains the matrix configuration options. 
+\begin{DoxyEnumerate}
+\item Uncomment \#\+M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+S\+T\+\_\+\+P\+R\+E\+S\+S\+E\+D\+\_\+\+O\+N\+L\+Y to enable the most-\/pressed algorithm on {\bfseries normal} m\+Touch sensors. 
+\begin{DoxyItemize}
+\item Matrix sensors are automatically compared against fellow row and column sensors to find the most-\/pressed. This will not affect them. 
+\item Proximity sensors use a separate decode state machine and, so, are also excluded from this algorithm. This means you can have a matrix decoding normally, a proximity sensor providing constant data, and several \textquotesingle{}normal\textquotesingle{} m\+Touch sensors that may only be activated one-\/at-\/a-\/time based on the highest shift value. 
+\end{DoxyItemize}
+\item Define \#\+M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+S\+T\+\_\+\+P\+R\+E\+S\+S\+E\+D\+\_\+\+T\+H\+R\+E\+S\+H\+O\+L\+D with the number of counts that the most pressed sensor must be above the second-\/most-\/pressed sensor to activate the algorithm. If this value is set to 10 and the two most-\/pressed sensors shifts are only different by 5 counts, no sensors will be activated. 
+\end{DoxyEnumerate}
+\end{DoxyEnumerate}\hypertarget{feat_most_pressed_featMostPressed-Ex}{}\subsection{Example}\label{feat_most_pressed_featMostPressed-Ex}
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define MTOUCH\_MOST\_PRESSED\_ONLY}
+\textcolor{preprocessor}{#define MTOUCH\_MOST\_PRESSED\_THRESHOLD   10}
+\end{DoxyCode}
+\hypertarget{feat_most_pressed_featMostPressed-Out}{}\subsection{Most-\/\+Pressed Output}\label{feat_most_pressed_featMostPressed-Out}
+There are no special A\+P\+I or output macros for the most-\/pressed algorithm. Treat them as normal sensors. \hypertarget{featMode}{}\section{Scanning Modes}\label{featMode}
+Scanning modes allow for an easy way to configure different states for the application where different sensors can be scanned in each state. For example, you could have a \textquotesingle{}sleep\textquotesingle{} mode scanning a single proximity sensor and an \textquotesingle{}active\textquotesingle{} mode that scans all sensors. You could then alternate between the states based on recent user activity to reduce power consumption.
+
+When switching modes, the first scan result is ignored to allow the filters to properly reset themselves. The m\+Touch\+\_\+state.\+skipped\+Decode bit will be set if this occured with the most recent decode and should be used to limit when mode changes can occur. An example is provided below.\hypertarget{feat_mode_featMode-How}{}\subsection{How It Works}\label{feat_mode_featMode-How}
+All m\+Touch sensors, regardless of which mode they are in, are first defined as a normal m\+Touch sensor in the \hyperlink{m_touch__config_8h}{m\+Touch\+\_\+config.\+h} file. The M\+T\+O\+U\+C\+H\+\_\+\+S\+E\+N\+S\+O\+Rx index value for the sensor will be used to configure the modes.
+
+The M\+T\+O\+U\+C\+H\+\_\+\+S\+E\+N\+S\+O\+Rx index value will be referred to as the \char`\"{}sensor index\char`\"{}.
+
+You can define up to 10 different modes. Each mode must have at least one sensor being scanned. (If you wish to simply disable scanning, use the m\+Touch\+\_\+\+Disable\+Scanning() macro.) The framework will start in Mode0. All decisions on when to change modes and why are left to the application. To change a mode, use the m\+Touch\+\_\+\+Change\+Mode(i) call, where i is the mode number.
+
+The framework will only scan and decode the sensors that are enabled for the currently-\/active mode.\hypertarget{feat_mode_featMode-Config}{}\subsection{Scanning Mode Configuration}\label{feat_mode_featMode-Config}
+
+\begin{DoxyEnumerate}
+\item Configure all sensors for the system in \hyperlink{m_touch__config_8h}{m\+Touch\+\_\+config.\+h} as normal. 
+\item Open \hyperlink{m_touch__config__modes_8h}{m\+Touch\+\_\+config\+\_\+modes.\+h} and set the value of M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+\_\+\+M\+O\+D\+E\+S to a value larger than 1. 
+\begin{DoxyItemize}
+\item (M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+\_\+\+M\+O\+D\+E\+S == 1) or (M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+\_\+\+M\+O\+D\+E\+S == 0) means \textquotesingle{}modes\textquotesingle{} will not be implemented. 
+\end{DoxyItemize}
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define MTOUCH\_NUM\_MODES                    2   // Two modes: Mode0 and Mode1}
+\end{DoxyCode}
+ 
+\item For each mode\+: 
+\begin{DoxyItemize}
+\item Set M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+Ex\+\_\+\+N\+U\+M\+\_\+\+S\+E\+N\+S\+O\+R\+S to the number of sensors that will be scanned in that mode. 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define MTOUCH\_MODE0\_NUM\_SENSORS      3   // Three sensors scanned in Mode0.}
+\end{DoxyCode}
+ 
+\item For each sensor in each mode\+: 
+\begin{DoxyItemize}
+\item Set M\+T\+O\+U\+C\+H\+\_\+\+M\+O\+D\+Ex\+\_\+\+S\+E\+N\+S\+O\+Rx to the sensor index to be scanned. 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define MTOUCH\_MODE0\_SENSOR0    4   // Sensor0 of Mode0 is MTOUCH\_SENSOR4}
+\end{DoxyCode}
+ 
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyEnumerate}\hypertarget{feat_mode_featMode-Ex}{}\subsection{Scanning Mode Configuration Example}\label{feat_mode_featMode-Ex}
+
+\begin{DoxyCode}
+\textcolor{comment}{//}
+\textcolor{comment}{// mTouch\_config.h        ::}
+\textcolor{comment}{//}
+\textcolor{preprocessor}{#define MTOUCH\_NUMBER\_SENSORS         4   // Total of four mTouch sensors}
+
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR0              AN4        }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR1              AN2            }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR2              AN7    }
+\textcolor{preprocessor}{#define MTOUCH\_SENSOR3              AN8  }
+
+\textcolor{comment}{//}
+\textcolor{comment}{// mTouch\_config\_modes.h  ::}
+\textcolor{comment}{//}
+\textcolor{preprocessor}{#define MTOUCH\_NUM\_MODES              3   // Three modes: Mode0, Mode1, Mode2}
+
+\textcolor{preprocessor}{#define MTOUCH\_MODE0\_NUM\_SENSORS      3   // Mode0 has 3 sensors}
+\textcolor{preprocessor}{#define MTOUCH\_MODE0\_SENSOR0          0   // Sensor0 of Mode0 is MTOUCH\_SENSOR0}
+\textcolor{preprocessor}{#define MTOUCH\_MODE0\_SENSOR1          1   // Sensor1 of Mode0 is MTOUCH\_SENSOR1}
+\textcolor{preprocessor}{#define MTOUCH\_MODE0\_SENSOR2          2   // Sensor2 of Mode0 is MTOUCH\_SENSOR2}
+
+\textcolor{preprocessor}{#define MTOUCH\_MODE1\_NUM\_SENSORS      1   // Mode1 has 1 sensor}
+\textcolor{preprocessor}{#define MTOUCH\_MODE1\_SENSOR0          0   // Sensor0 of Mode1 is MTOUCH\_SENSOR0}
+
+\textcolor{preprocessor}{#define MTOUCH\_MODE2\_NUM\_SENSORS      2   // Mode2 has 2 sensors}
+\textcolor{preprocessor}{#define MTOUCH\_MODE2\_SENSOR0          2   // Sensor0 of Mode2 is MTOUCH\_SENSOR2}
+\textcolor{preprocessor}{#define MTOUCH\_MODE2\_SENSOR1          3   // Sensor1 of Mode2 is MTOUCH\_SENSOR3}
+\end{DoxyCode}
+\hypertarget{feat_mode_featMode-Out}{}\subsection{Scanning Mode A\+P\+I}\label{feat_mode_featMode-Out}
+To change the current mode, use the m\+Touch\+\_\+\+Change\+Mode(i) macro.
+
+To read the current mode, use m\+Touch\+\_\+mode\+Index. Do N\+O\+T change m\+Touch\+\_\+mode\+Index directly. Use the m\+Touch\+\_\+\+Change\+Mode macro!
+
+When switching modes, the first scan result is ignored to allow the filters to properly reset themselves. The m\+Touch\+\_\+state.\+skipped\+Decode bit will be set if this occured with the most recent decode and should be used to limit when mode changes can occur. An example is provided below.
+
+An example usage of the A\+P\+I to switch between modes based on the state of different sensors\+: 
+\begin{DoxyCode}
+mTouch\_DisableScanning();   \textcolor{comment}{// Temporarily disable scanning while this logic completes}
+
+\textcolor{comment}{// Are all of the current sensors initialized? If not, stay in the current mode and keep scanning until }
+\textcolor{comment}{// they are. mTouch\_state.areInitialized is a single-bit reserved for making temporary, local checks }
+\textcolor{comment}{// such as this.}
+\hyperlink{m_touch_8c_ab678fb469a6bdd3d0b75cc4b48adf504}{mTouch\_state}.\hyperlink{structm_touch___state_ab1320a2e9a938dad2a563147945e97f9}{areInitialized} = 1;
+
+\textcolor{comment}{// Assuming four enabled sensors...}
+\textcolor{keywordflow}{if} (mTouch\_GetButtonState(0) == \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a7d72b112c35bc51408030eb7ecdcacd2a8ac4e988fd74c22ff6e99ee854cc848f}{MTOUCH\_INITIALIZING}) \{   
+      \hyperlink{m_touch_8c_ab678fb469a6bdd3d0b75cc4b48adf504}{mTouch\_state}.\hyperlink{structm_touch___state_ab1320a2e9a938dad2a563147945e97f9}{areInitialized} = 0;    \}
+\textcolor{keywordflow}{if} (mTouch\_GetButtonState(1) == \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a7d72b112c35bc51408030eb7ecdcacd2a8ac4e988fd74c22ff6e99ee854cc848f}{MTOUCH\_INITIALIZING}) \{   
+      \hyperlink{m_touch_8c_ab678fb469a6bdd3d0b75cc4b48adf504}{mTouch\_state}.\hyperlink{structm_touch___state_ab1320a2e9a938dad2a563147945e97f9}{areInitialized} = 0;    \}
+\textcolor{keywordflow}{if} (mTouch\_GetButtonState(2) == \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a7d72b112c35bc51408030eb7ecdcacd2a8ac4e988fd74c22ff6e99ee854cc848f}{MTOUCH\_INITIALIZING}) \{   
+      \hyperlink{m_touch_8c_ab678fb469a6bdd3d0b75cc4b48adf504}{mTouch\_state}.\hyperlink{structm_touch___state_ab1320a2e9a938dad2a563147945e97f9}{areInitialized} = 0;    \}
+\textcolor{keywordflow}{if} (mTouch\_GetButtonState(3) == \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a7d72b112c35bc51408030eb7ecdcacd2a8ac4e988fd74c22ff6e99ee854cc848f}{MTOUCH\_INITIALIZING}) \{   
+      \hyperlink{m_touch_8c_ab678fb469a6bdd3d0b75cc4b48adf504}{mTouch\_state}.\hyperlink{structm_touch___state_ab1320a2e9a938dad2a563147945e97f9}{areInitialized} = 0;    \}
+\textcolor{comment}{// NOTE: You'll want additional checks here for all sensors being currently scanned.}
+
+\textcolor{keywordflow}{if} (\hyperlink{m_touch_8c_ab678fb469a6bdd3d0b75cc4b48adf504}{mTouch\_state}.\hyperlink{structm_touch___state_ab1320a2e9a938dad2a563147945e97f9}{areInitialized} && !\hyperlink{m_touch_8c_ab678fb469a6bdd3d0b75cc4b48adf504}{mTouch\_state}.
+      \hyperlink{structm_touch___state_a5bc7c6dc7f7d0fb027257c8911a0deba}{skippedDecode})   \textcolor{comment}{// If we're not still initializing,}
+\{                                                                 \textcolor{comment}{// and we didn't skip the decode}
+                                                                  \textcolor{comment}{// due to just changing modes...}
+    \textcolor{keywordflow}{if} (\hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ac9181f1601e76c0ab3a4458c424ff707}{mTouch\_modeIndex} == 0)                            \textcolor{comment}{// Application Specific: When in
+       Mode0, let's}
+    \{                                                     \textcolor{comment}{//    change to Mode1 based on MTOUCH\_SENSOR1.}
+        \textcolor{keywordflow}{if} (mTouch\_GetButtonState(1) == \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a7d72b112c35bc51408030eb7ecdcacd2aed5b3f2b7065991010f45eb04759ef01}{MTOUCH\_PRESSED})
+        \{
+            \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ad4b3c623e779e2b0cbe5a8ace84c1561}{mTouch\_ChangeMode}(1); 
+        \}
+    \}
+    \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ac9181f1601e76c0ab3a4458c424ff707}{mTouch\_modeIndex} == 1)                       \textcolor{comment}{// Application Specific: When in
+       Mode1, let's}
+    \{                                                     \textcolor{comment}{//    sleep in-between decodes and change to}
+                                                          \textcolor{comment}{//    Mode0 based on MTOUCH\_SENSOR0.}
+
+\textcolor{preprocessor}{        #if defined(MCOMM\_ENABLED) && defined(MCOMM\_UART\_HARDWARE\_USED) }
+                                          \textcolor{comment}{// If we are outputting data using a hardware UART...}
+            \textcolor{keywordflow}{while}(MCOMM\_UART\_TXIF == 0);  \textcolor{comment}{// Finish all communications before entering sleep}
+\textcolor{preprocessor}{        #endif}
+        
+        PIC\_SWDTEN\_ON();                  \textcolor{comment}{// If using a software-enabled WDT, enable it now.}
+        SLEEP();                          \textcolor{comment}{// Sleep, if you want to.}
+        NOP();                            \textcolor{comment}{// One more instruction is executed before sleeping.}
+        
+        \textcolor{keywordflow}{if} (mTouch\_GetButtonState(0) == \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a7d72b112c35bc51408030eb7ecdcacd2aed5b3f2b7065991010f45eb04759ef01}{MTOUCH\_PRESSED})   \textcolor{comment}{// (Application Specific mode
+       change logic)}
+        \{
+            \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ad4b3c623e779e2b0cbe5a8ace84c1561}{mTouch\_ChangeMode}(0);
+        \}
+        
+        PIC\_SWDTEN\_OFF();                 \textcolor{comment}{// Sleep is over --> let's turn off the WDT.}
+    \}
+\}
+mTouch\_EnableScanning();    \textcolor{comment}{// Re-enable scanning now that mode-changing logic is complete.}
+\end{DoxyCode}
+ \hypertarget{featGuard}{}\section{Guard Ring / Shield}\label{featGuard}
+The framework is designed to output a synchronous signal on another pin to help maximize the sensitivity of the m\+Touch sensors. A guard ring is most effective when it encloses a sensor and shields it from any nearby communication traces, power planes (including ground), antennas, or other noise sources. The theory is that we want to decrease the voltage differential between the capacitive sensor and its environment.
+
+\begin{DoxyNote}{Note}
+One guard ring can be shared among all sensors.
+\end{DoxyNote}
+\hypertarget{feat_guard_featGuard-How}{}\subsection{How It Works}\label{feat_guard_featGuard-How}
+Guard rings (or shields) are driven by an I/\+O or the D\+A\+C\+O\+U\+T pin to minimize the amount of parasitic capacitance on the sensor. Parasitic capacitance will cause the field lines of the sensor to be distorted -\/ pulling them down and decreasing the amount of sensitivity. With the guard ring, however, the sensor will be shielded from this effect.
+
+ \hypertarget{feat_guard_featGuard-Config}{}\subsection{Guard Ring / Shield Configuration}\label{feat_guard_featGuard-Config}
+There are two possible ways to implement the guard ring.
+
+ To implement the blue line (maximum sensitivity gain), the D\+A\+C\+O\+U\+T pin must be connected to the guard ring on your board. This is the easiest and most fine-\/tunable of the two options. 
+\begin{DoxyEnumerate}
+\item Open the \hyperlink{m_touch__config__cvd_advanced_8h}{m\+Touch\+\_\+config\+\_\+cvd\+Advanced.\+h} file and uncomment \#\+C\+V\+D\+\_\+\+G\+U\+A\+R\+D\+\_\+\+D\+A\+C\+O\+U\+T\+\_\+\+E\+N\+A\+B\+L\+E\+D 
+\item Define \#\+C\+V\+D\+\_\+\+G\+U\+A\+R\+D\+\_\+\+D\+A\+C\+C\+O\+N0\+\_\+\+A with the value of D\+A\+C\+C\+O\+N0 during the settling phase of the first sample. 
+\item Define \#\+C\+V\+D\+\_\+\+G\+U\+A\+R\+D\+\_\+\+D\+A\+C\+C\+O\+N1\+\_\+\+A with the value of D\+A\+C\+C\+O\+N1 during the settling phase of the first sample. 
+\item Define \#\+C\+V\+D\+\_\+\+G\+U\+A\+R\+D\+\_\+\+D\+A\+C\+C\+O\+N0\+\_\+\+B with the value of D\+A\+C\+C\+O\+N0 during the settling phase of the second sample. 
+\item Define \#\+C\+V\+D\+\_\+\+G\+U\+A\+R\+D\+\_\+\+D\+A\+C\+C\+O\+N1\+\_\+\+B with the value of D\+A\+C\+C\+O\+N1 during the settling phase of the second sample. 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define CVD\_GUARD\_DACOUT\_ENABLED}
+\textcolor{preprocessor}{#define CVD\_GUARD\_DACCON0\_A     PIC\_DACOUT\_DACCON0\_HALF\_VDD    // Pre-defined value to set '1/2 VDD'}
+\textcolor{preprocessor}{#define CVD\_GUARD\_DACCON1\_A     PIC\_DACOUT\_DACCON1\_HALF\_VDD    // Pre-defined value to set '1/2 VDD'}
+\textcolor{preprocessor}{#define CVD\_GUARD\_DACCON0\_B     PIC\_DACOUT\_DACCON0\_HALF\_VDD    // Pre-defined value to set '1/2 VDD'}
+\textcolor{preprocessor}{#define CVD\_GUARD\_DACCON1\_B     PIC\_DACOUT\_DACCON1\_HALF\_VDD    // Pre-defined value to set '1/2 VDD'}
+\end{DoxyCode}
+ \textquotesingle{}A\textquotesingle{} refers to the first half of the C\+V\+D scan when the external sensor is held low, the internal hold capacitor is charged high, and then they are connected. \textquotesingle{}B\textquotesingle{} refers to the second half where the reverse is true. The settling voltage may be different for each of these, so different D\+A\+C\+C\+O\+N values may be required. 
+\end{DoxyEnumerate}
+
+To implement the red line, any I/\+O pin may be used. A large amount of series resistance should be added to the pin to lower the rise/fall time of the pin. The closer the rise/fall time of the I/\+O is able to match the rise/fall of the m\+Touch sensor, the better the result. Good typical starting value\+: 100\+K-\/200\+K ohms. 
+\begin{DoxyEnumerate}
+\item Open the \hyperlink{m_touch__config__cvd_advanced_8h}{m\+Touch\+\_\+config\+\_\+cvd\+Advanced.\+h} file and uncomment \#\+C\+V\+D\+\_\+\+G\+U\+A\+R\+D\+\_\+\+I\+O\+\_\+\+E\+N\+A\+B\+L\+E\+D 
+\item Define \#\+C\+V\+D\+\_\+\+G\+U\+A\+R\+D\+\_\+\+P\+O\+R\+T with the L\+A\+T or P\+O\+R\+T register for your output pin. 
+\item Define \#\+C\+V\+D\+\_\+\+G\+U\+A\+R\+D\+\_\+\+P\+I\+N with the L\+A\+T or P\+O\+R\+T bit that will access the output pin. 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define CVD\_GUARD\_IO\_ENABLED}
+\textcolor{preprocessor}{#define CVD\_GUARD\_PORT        LATA        // <-- Guard ring is connected to RA2 / LATA2}
+\textcolor{preprocessor}{#define CVD\_GUARD\_PIN         2           }
+\end{DoxyCode}
+ 
+\end{DoxyEnumerate}\hypertarget{featMutual}{}\section{Mutual Coupling Drives}\label{featMutual}
+In some cases, you may wish to measure the amount of coupling between a driven pin and a capacitive sensor. Detecting ungrounded metal, for instance, is not always easily done with a normal C\+V\+D scan. The metal will not cause a large enough change in the capacitance of the sensor since it is floating.
+
+Mutual drives can be used to look for an increase in the coupling between two traces. As that piece of floating metal (or a human finger, or...) comes near, the coupling between the two traces will increase. (The relative permativity between them is increasing.)
+
+This allows for two different capacitive features to be measured at once\+: 
+\begin{DoxyItemize}
+\item The {\bfseries self capacitance} of the sensor, determined by the relationship between the capacitance of the external sensor with the capacitance of the internal A\+D\+C hold capacitor. 
+\begin{DoxyItemize}
+\item (Default m\+Touch Scan) 
+\end{DoxyItemize}
+\item The {\bfseries coupling} between the external sensor and the mutual drive. 
+\begin{DoxyItemize}
+\item (Mutual Sensor Drive) 
+\end{DoxyItemize}
+\end{DoxyItemize}\begin{DoxyNote}{Note}
+One mutual drive can be shared among all sensors. 
+\end{DoxyNote}
+\hypertarget{feat_mutual_featMutual-How}{}\subsection{How It Works}\label{feat_mutual_featMutual-How}
+When the \#\+C\+V\+D\+\_\+\+M\+U\+T\+U\+A\+L\+\_\+\+E\+N\+A\+B\+L\+E\+D option in \hyperlink{m_touch__config__cvd_advanced_8h}{m\+Touch\+\_\+config\+\_\+cvd\+Advanced.\+h} is used, the defined mutual pin is driven so that increased coupling (between the mutual drive and the sensor) will cause a shift in the same direction as adding capacitance to the sensor. Both the C\+V\+D scan and the mutual drive will be occuring at the same time. This means you are getting the benefit of both scans in one. As the distance between the object-\/to-\/be-\/detected and the sensor gets smaller, the impact of the mutual scan will increase. As the distance gets larger, the self-\/capacitance m\+Touch scan will provide a majority of the sensitivity.
+
+ \hypertarget{feat_mutual_featMutual-Config}{}\subsection{Mutual Sensor Configuration}\label{feat_mutual_featMutual-Config}
+
+\begin{DoxyEnumerate}
+\item Open the \hyperlink{m_touch__config__cvd_advanced_8h}{m\+Touch\+\_\+config\+\_\+cvd\+Advanced.\+h} file and uncomment \#\+C\+V\+D\+\_\+\+M\+U\+T\+U\+A\+L\+\_\+\+E\+N\+A\+B\+L\+E\+D 
+\item Set \#\+C\+V\+D\+\_\+\+M\+U\+T\+U\+A\+L\+\_\+\+L\+A\+T to the exact L\+A\+T or P\+O\+R\+T bit for the mutual drive. 
+\item Set \#\+C\+V\+D\+\_\+\+M\+U\+T\+U\+A\+L\+\_\+\+T\+R\+I\+S to the exact T\+R\+I\+S bit for the mutual drive. 
+\end{DoxyEnumerate}\hypertarget{feat_mutual_featMutual-Ex}{}\subsection{Example}\label{feat_mutual_featMutual-Ex}
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define CVD\_MUTUAL\_ENABLED                        // <-- Enables a mutual drive during the mTouch scan}
+\textcolor{comment}{//#define CVD\_MUTUAL\_EXCLUSIVE\_ENABLED            // <-- NOT defined!}
+\textcolor{preprocessor}{#define CVD\_MUTUAL\_LAT                    LATA3   // <-- The mutual sensor's LAT pin label}
+\textcolor{preprocessor}{#define CVD\_MUTUAL\_TRIS                   TRISA3  // <-- The mutual sensor's TRIS pin label}
+\end{DoxyCode}
+ 
+\begin{DoxyCode}
+\textcolor{comment}{//#define CVD\_MUTUAL\_ENABLED                      // <-- NOT defined!}
+\textcolor{preprocessor}{#define CVD\_MUTUAL\_EXCLUSIVE\_ENABLED              // <-- Scanning ONLY with mutual coupling }
+                                                  \textcolor{comment}{//      and NO self-capacitance mTouch scan.}
+\textcolor{preprocessor}{#define CVD\_MUTUAL\_LAT                    LATC1   // <-- The mutual sensor's LAT pin label}
+\textcolor{preprocessor}{#define CVD\_MUTUAL\_TRIS                   TRISC1  // <-- The mutual sensor's TRIS pin label}
+\end{DoxyCode}
+\hypertarget{feat_mutual_featMutual-Out}{}\subsection{Mutual Sensor Output}\label{feat_mutual_featMutual-Out}
+There is no change to the m\+Touch A\+P\+I when using a mutual drive sensor. 

@@ -1,0 +1,17 @@
+digraph "USBHostGenericInit"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="USBHostGenericInit",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="UART2PrintString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uart2_8c.html#a4f250e76dccb6dc8450c04efbc8e9a8f"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="UART2PutChar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uart2_8c.html#a23f0e312ef33167a4c51b6b353135e89"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UART2PutHex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uart2_8c.html#af13e4f872814dbf76917927d9237a44f"];
+  Node4 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UART2PutDec",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uart2_8c.html#a58c86457543e83b150d2fb442f08c66d"];
+  Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

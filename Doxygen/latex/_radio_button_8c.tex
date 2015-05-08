@@ -1,0 +1,168 @@
+\hypertarget{_radio_button_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Graphics/\+Radio\+Button.c File Reference}
+\label{_radio_button_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Graphics/\+Radio\+Button.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Graphics/\+Radio\+Button.\+c}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_r_a_d_i_o_b_u_t_t_o_n}{R\+A\+D\+I\+O\+B\+U\+T\+T\+O\+N} $\ast$ \hyperlink{_radio_button_8c_a4bed4cf89c510288f46f65e2ecb8b3eb}{Rb\+Create} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} I\+D, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} left, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} top, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} right, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} bottom, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} state, X\+C\+H\+A\+R $\ast$p\+Text, \hyperlink{struct_g_o_l___s_c_h_e_m_e}{G\+O\+L\+\_\+\+S\+C\+H\+E\+M\+E} $\ast$p\+Scheme)
+\item 
+void \hyperlink{_radio_button_8c_a59f4404f1eab26972ff3ac6581e1eca2}{Rb\+Set\+Check} (\hyperlink{struct_r_a_d_i_o_b_u_t_t_o_n}{R\+A\+D\+I\+O\+B\+U\+T\+T\+O\+N} $\ast$p\+Rb, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} I\+D)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_radio_button_8c_a30a9aabd0f745fdb777a255041f57fc3}{Rb\+Get\+Check} (\hyperlink{struct_r_a_d_i_o_b_u_t_t_o_n}{R\+A\+D\+I\+O\+B\+U\+T\+T\+O\+N} $\ast$p\+Rb)
+\item 
+void \hyperlink{_radio_button_8c_a980bd750edd045e76de962c35b725afd}{Rb\+Set\+Text} (\hyperlink{struct_r_a_d_i_o_b_u_t_t_o_n}{R\+A\+D\+I\+O\+B\+U\+T\+T\+O\+N} $\ast$p\+Rb, X\+C\+H\+A\+R $\ast$p\+Text)
+\item 
+void \hyperlink{_radio_button_8c_a905e043543d26d4701199d74ff2927c0}{Rb\+Msg\+Default} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} translated\+Msg, void $\ast$p\+Obj, \hyperlink{struct_g_o_l___m_s_g}{G\+O\+L\+\_\+\+M\+S\+G} $\ast$p\+Msg)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_radio_button_8c_ad9e52fb74a2591968412e69eb4f3ad8d}{Rb\+Translate\+Msg} (void $\ast$p\+Obj, \hyperlink{struct_g_o_l___m_s_g}{G\+O\+L\+\_\+\+M\+S\+G} $\ast$p\+Msg)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_radio_button_8c_afc75c4b3bf496f30884ea9219baa3957}{Rb\+Draw} (void $\ast$p\+Obj)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_r_a_d_i_o_b_u_t_t_o_n}{R\+A\+D\+I\+O\+B\+U\+T\+T\+O\+N} $\ast$ \hyperlink{_radio_button_8c_a194855a0cb9280116f7b915a6322904e}{\+\_\+p\+List\+Buttons} = N\+U\+L\+L
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_radio_button_8c_a4bed4cf89c510288f46f65e2ecb8b3eb}{}\index{Radio\+Button.\+c@{Radio\+Button.\+c}!Rb\+Create@{Rb\+Create}}
+\index{Rb\+Create@{Rb\+Create}!Radio\+Button.\+c@{Radio\+Button.\+c}}
+\subsubsection[{Rb\+Create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+A\+D\+I\+O\+B\+U\+T\+T\+O\+N}$\ast$ Rb\+Create (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{I\+D, }
+\item[{{\bf S\+H\+O\+R\+T}}]{left, }
+\item[{{\bf S\+H\+O\+R\+T}}]{top, }
+\item[{{\bf S\+H\+O\+R\+T}}]{right, }
+\item[{{\bf S\+H\+O\+R\+T}}]{bottom, }
+\item[{{\bf W\+O\+R\+D}}]{state, }
+\item[{X\+C\+H\+A\+R $\ast$}]{p\+Text, }
+\item[{{\bf G\+O\+L\+\_\+\+S\+C\+H\+E\+M\+E} $\ast$}]{p\+Scheme}
+\end{DoxyParamCaption}
+)}\label{_radio_button_8c_a4bed4cf89c510288f46f65e2ecb8b3eb}
+
+
+Definition at line 58 of file Radio\+Button.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 0
+
+
+\hypertarget{_radio_button_8c_afc75c4b3bf496f30884ea9219baa3957}{}\index{Radio\+Button.\+c@{Radio\+Button.\+c}!Rb\+Draw@{Rb\+Draw}}
+\index{Rb\+Draw@{Rb\+Draw}!Radio\+Button.\+c@{Radio\+Button.\+c}}
+\subsubsection[{Rb\+Draw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Rb\+Draw (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{p\+Obj}
+\end{DoxyParamCaption}
+)}\label{_radio_button_8c_afc75c4b3bf496f30884ea9219baa3957}
+
+
+Definition at line 332 of file Radio\+Button.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\hypertarget{_radio_button_8c_a30a9aabd0f745fdb777a255041f57fc3}{}\index{Radio\+Button.\+c@{Radio\+Button.\+c}!Rb\+Get\+Check@{Rb\+Get\+Check}}
+\index{Rb\+Get\+Check@{Rb\+Get\+Check}!Radio\+Button.\+c@{Radio\+Button.\+c}}
+\subsubsection[{Rb\+Get\+Check}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Rb\+Get\+Check (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+A\+D\+I\+O\+B\+U\+T\+T\+O\+N} $\ast$}]{p\+Rb}
+\end{DoxyParamCaption}
+)}\label{_radio_button_8c_a30a9aabd0f745fdb777a255041f57fc3}
+
+
+Definition at line 176 of file Radio\+Button.\+c.
+
+\hypertarget{_radio_button_8c_a905e043543d26d4701199d74ff2927c0}{}\index{Radio\+Button.\+c@{Radio\+Button.\+c}!Rb\+Msg\+Default@{Rb\+Msg\+Default}}
+\index{Rb\+Msg\+Default@{Rb\+Msg\+Default}!Radio\+Button.\+c@{Radio\+Button.\+c}}
+\subsubsection[{Rb\+Msg\+Default}]{\setlength{\rightskip}{0pt plus 5cm}void Rb\+Msg\+Default (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{translated\+Msg, }
+\item[{void $\ast$}]{p\+Obj, }
+\item[{{\bf G\+O\+L\+\_\+\+M\+S\+G} $\ast$}]{p\+Msg}
+\end{DoxyParamCaption}
+)}\label{_radio_button_8c_a905e043543d26d4701199d74ff2927c0}
+
+
+Definition at line 218 of file Radio\+Button.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+\hypertarget{_radio_button_8c_a59f4404f1eab26972ff3ac6581e1eca2}{}\index{Radio\+Button.\+c@{Radio\+Button.\+c}!Rb\+Set\+Check@{Rb\+Set\+Check}}
+\index{Rb\+Set\+Check@{Rb\+Set\+Check}!Radio\+Button.\+c@{Radio\+Button.\+c}}
+\subsubsection[{Rb\+Set\+Check}]{\setlength{\rightskip}{0pt plus 5cm}void Rb\+Set\+Check (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+A\+D\+I\+O\+B\+U\+T\+T\+O\+N} $\ast$}]{p\+Rb, }
+\item[{{\bf W\+O\+R\+D}}]{I\+D}
+\end{DoxyParamCaption}
+)}\label{_radio_button_8c_a59f4404f1eab26972ff3ac6581e1eca2}
+
+
+Definition at line 144 of file Radio\+Button.\+c.
+
+\hypertarget{_radio_button_8c_a980bd750edd045e76de962c35b725afd}{}\index{Radio\+Button.\+c@{Radio\+Button.\+c}!Rb\+Set\+Text@{Rb\+Set\+Text}}
+\index{Rb\+Set\+Text@{Rb\+Set\+Text}!Radio\+Button.\+c@{Radio\+Button.\+c}}
+\subsubsection[{Rb\+Set\+Text}]{\setlength{\rightskip}{0pt plus 5cm}void Rb\+Set\+Text (
+\begin{DoxyParamCaption}
+\item[{{\bf R\+A\+D\+I\+O\+B\+U\+T\+T\+O\+N} $\ast$}]{p\+Rb, }
+\item[{X\+C\+H\+A\+R $\ast$}]{p\+Text}
+\end{DoxyParamCaption}
+)}\label{_radio_button_8c_a980bd750edd045e76de962c35b725afd}
+
+
+Definition at line 206 of file Radio\+Button.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 5
+
+
+\hypertarget{_radio_button_8c_ad9e52fb74a2591968412e69eb4f3ad8d}{}\index{Radio\+Button.\+c@{Radio\+Button.\+c}!Rb\+Translate\+Msg@{Rb\+Translate\+Msg}}
+\index{Rb\+Translate\+Msg@{Rb\+Translate\+Msg}!Radio\+Button.\+c@{Radio\+Button.\+c}}
+\subsubsection[{Rb\+Translate\+Msg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Rb\+Translate\+Msg (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{p\+Obj, }
+\item[{{\bf G\+O\+L\+\_\+\+M\+S\+G} $\ast$}]{p\+Msg}
+\end{DoxyParamCaption}
+)}\label{_radio_button_8c_ad9e52fb74a2591968412e69eb4f3ad8d}
+
+
+Definition at line 264 of file Radio\+Button.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{_radio_button_8c_a194855a0cb9280116f7b915a6322904e}{}\index{Radio\+Button.\+c@{Radio\+Button.\+c}!\+\_\+p\+List\+Buttons@{\+\_\+p\+List\+Buttons}}
+\index{\+\_\+p\+List\+Buttons@{\+\_\+p\+List\+Buttons}!Radio\+Button.\+c@{Radio\+Button.\+c}}
+\subsubsection[{\+\_\+p\+List\+Buttons}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+A\+D\+I\+O\+B\+U\+T\+T\+O\+N}$\ast$ \+\_\+p\+List\+Buttons = N\+U\+L\+L}\label{_radio_button_8c_a194855a0cb9280116f7b915a6322904e}
+
+
+Definition at line 48 of file Radio\+Button.\+c.
+

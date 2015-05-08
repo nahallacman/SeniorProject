@@ -1,0 +1,415 @@
+\hypertarget{_berkeley_a_p_i_8h}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+T\+C\+P\+I\+P Stack/\+Berkeley\+A\+P\+I.h File Reference}
+\label{_berkeley_a_p_i_8h}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+T\+C\+P\+I\+P Stack/\+Berkeley\+A\+P\+I.\+h@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+T\+C\+P\+I\+P Stack/\+Berkeley\+A\+P\+I.\+h}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_b_s_d_socket}{B\+S\+D\+Socket}
+\item 
+struct \hyperlink{structin__addr}{in\+\_\+addr}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_berkeley_a_p_i_8h_a09667d6990ba5c523a8a8fb92453a2f5}{S\+O\+C\+K\+E\+T}
+\item 
+typedef struct sockaddr\+\_\+in \hyperlink{_berkeley_a_p_i_8h_a29046dc0232f0e5c70adbc25090d77b8}{S\+O\+C\+K\+A\+D\+D\+R\+\_\+\+I\+N}
+\item 
+typedef struct sockaddr \hyperlink{_berkeley_a_p_i_8h_ae334b73cedf7204187dce3f817576009}{S\+O\+C\+K\+A\+D\+D\+R}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_berkeley_a_p_i_8h_a6afe3bd4d7a3f627c0ae03da2b955a47}{B\+S\+D\+\_\+\+S\+C\+K\+\_\+\+S\+T\+A\+T\+E} \{ \\*
+\hyperlink{_berkeley_a_p_i_8h_a6afe3bd4d7a3f627c0ae03da2b955a47a82e533c88b1e0b2326b8ee77468622c0}{S\+K\+T\+\_\+\+C\+L\+O\+S\+E\+D}, 
+\hyperlink{_berkeley_a_p_i_8h_a6afe3bd4d7a3f627c0ae03da2b955a47a785cbb43c46729c0f5b36b36f2719690}{S\+K\+T\+\_\+\+C\+R\+E\+A\+T\+E\+D}, 
+\hyperlink{_berkeley_a_p_i_8h_a6afe3bd4d7a3f627c0ae03da2b955a47a7e87759cbbf32254ee4fef199bb4a10a}{S\+K\+T\+\_\+\+B\+O\+U\+N\+D}, 
+\hyperlink{_berkeley_a_p_i_8h_a6afe3bd4d7a3f627c0ae03da2b955a47ac54fccefb4c275b78b5dfd2d8e98c626}{S\+K\+T\+\_\+\+B\+S\+D\+\_\+\+L\+I\+S\+T\+E\+N}, 
+\\*
+\hyperlink{_berkeley_a_p_i_8h_a6afe3bd4d7a3f627c0ae03da2b955a47a614e89760f068a3cca400021029f4105}{S\+K\+T\+\_\+\+L\+I\+S\+T\+E\+N}, 
+\hyperlink{_berkeley_a_p_i_8h_a6afe3bd4d7a3f627c0ae03da2b955a47ac967dfafddf5181e5ec82ae55d9c83ed}{S\+K\+T\+\_\+\+I\+N\+\_\+\+P\+R\+O\+G\+R\+E\+S\+S}, 
+\hyperlink{_berkeley_a_p_i_8h_a6afe3bd4d7a3f627c0ae03da2b955a47a8e6a8706ea7b7f767bd44bc87096fcb6}{S\+K\+T\+\_\+\+E\+S\+T}, 
+\hyperlink{_berkeley_a_p_i_8h_a6afe3bd4d7a3f627c0ae03da2b955a47a0bfaf45dcf398971671ed8ca9300cdee}{S\+K\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+E\+D}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{_berkeley_a_p_i_8h_abd563ec11311956b30c06b418aab09ae}{\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((\+\_\+\+\_\+packed\+\_\+\+\_\+)) sockaddr
+\item 
+void \hyperlink{_berkeley_a_p_i_8h_a45a368cee3d8258e84f073890e86bf7f}{Berkeley\+Socket\+Init} (void)
+\item 
+\hyperlink{_berkeley_a_p_i_8h_a09667d6990ba5c523a8a8fb92453a2f5}{S\+O\+C\+K\+E\+T} \hyperlink{_berkeley_a_p_i_8h_a4bbac9ff89097f54941d2e1cf66f8ca9}{socket} (int af, int type, int protocol)
+\item 
+int \hyperlink{_berkeley_a_p_i_8h_a44c79e6dc6ba6077163dc28533018243}{bind} (\hyperlink{_berkeley_a_p_i_8h_a09667d6990ba5c523a8a8fb92453a2f5}{S\+O\+C\+K\+E\+T} s, const struct sockaddr $\ast$name, int namelen)
+\item 
+int \hyperlink{_berkeley_a_p_i_8h_a4c434be919765796affc6e3e9a589a70}{listen} (\hyperlink{_berkeley_a_p_i_8h_a09667d6990ba5c523a8a8fb92453a2f5}{S\+O\+C\+K\+E\+T} s, int backlog)
+\item 
+\hyperlink{_berkeley_a_p_i_8h_a09667d6990ba5c523a8a8fb92453a2f5}{S\+O\+C\+K\+E\+T} \hyperlink{_berkeley_a_p_i_8h_a298a16c68986b08367adf670e48cc832}{accept} (\hyperlink{_berkeley_a_p_i_8h_a09667d6990ba5c523a8a8fb92453a2f5}{S\+O\+C\+K\+E\+T} s, struct sockaddr $\ast$addr, int $\ast$addrlen)
+\item 
+int \hyperlink{_berkeley_a_p_i_8h_adf2c9fc4a3ab6f2ce9de01b399621e4c}{connect} (\hyperlink{_berkeley_a_p_i_8h_a09667d6990ba5c523a8a8fb92453a2f5}{S\+O\+C\+K\+E\+T} s, struct sockaddr $\ast$name, int namelen)
+\item 
+int \hyperlink{_berkeley_a_p_i_8h_a2c1c377be70d94364327db5144c19c7a}{send} (\hyperlink{_berkeley_a_p_i_8h_a09667d6990ba5c523a8a8fb92453a2f5}{S\+O\+C\+K\+E\+T} s, const char $\ast$buf, int len, int flags)
+\item 
+int \hyperlink{_berkeley_a_p_i_8h_a4d78c2d82555ce1876c2964a6208e158}{sendto} (\hyperlink{_berkeley_a_p_i_8h_a09667d6990ba5c523a8a8fb92453a2f5}{S\+O\+C\+K\+E\+T} s, const char $\ast$buf, int len, int flags, const struct sockaddr $\ast$to, int tolen)
+\item 
+int \hyperlink{_berkeley_a_p_i_8h_a554ce7ef429f34cc322dff78061d60ab}{recv} (\hyperlink{_berkeley_a_p_i_8h_a09667d6990ba5c523a8a8fb92453a2f5}{S\+O\+C\+K\+E\+T} s, char $\ast$buf, int len, int flags)
+\item 
+int \hyperlink{_berkeley_a_p_i_8h_a74916359322194f9857034fb2750a427}{recvfrom} (\hyperlink{_berkeley_a_p_i_8h_a09667d6990ba5c523a8a8fb92453a2f5}{S\+O\+C\+K\+E\+T} s, char $\ast$buf, int len, int flags, struct sockaddr $\ast$from, int $\ast$fromlen)
+\item 
+int \hyperlink{_berkeley_a_p_i_8h_a26de86c35745c55c0f6dddb65ad08ceb}{gethostname} (char $\ast$name, int namelen)
+\item 
+int \hyperlink{_berkeley_a_p_i_8h_abe5d5449ec94553dfc9674e26d886b21}{closesocket} (\hyperlink{_berkeley_a_p_i_8h_a09667d6990ba5c523a8a8fb92453a2f5}{S\+O\+C\+K\+E\+T} s)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_berkeley_a_p_i_8h_ae334b73cedf7204187dce3f817576009}{}\index{Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}!S\+O\+C\+K\+A\+D\+D\+R@{S\+O\+C\+K\+A\+D\+D\+R}}
+\index{S\+O\+C\+K\+A\+D\+D\+R@{S\+O\+C\+K\+A\+D\+D\+R}!Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}}
+\subsubsection[{S\+O\+C\+K\+A\+D\+D\+R}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct sockaddr {\bf S\+O\+C\+K\+A\+D\+D\+R}}\label{_berkeley_a_p_i_8h_ae334b73cedf7204187dce3f817576009}
+
+
+Definition at line 131 of file Berkeley\+A\+P\+I.\+h.
+
+\hypertarget{_berkeley_a_p_i_8h_a29046dc0232f0e5c70adbc25090d77b8}{}\index{Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}!S\+O\+C\+K\+A\+D\+D\+R\+\_\+\+I\+N@{S\+O\+C\+K\+A\+D\+D\+R\+\_\+\+I\+N}}
+\index{S\+O\+C\+K\+A\+D\+D\+R\+\_\+\+I\+N@{S\+O\+C\+K\+A\+D\+D\+R\+\_\+\+I\+N}!Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}}
+\subsubsection[{S\+O\+C\+K\+A\+D\+D\+R\+\_\+\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct sockaddr\+\_\+in {\bf S\+O\+C\+K\+A\+D\+D\+R\+\_\+\+I\+N}}\label{_berkeley_a_p_i_8h_a29046dc0232f0e5c70adbc25090d77b8}
+
+
+Definition at line 130 of file Berkeley\+A\+P\+I.\+h.
+
+\hypertarget{_berkeley_a_p_i_8h_a09667d6990ba5c523a8a8fb92453a2f5}{}\index{Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}!S\+O\+C\+K\+E\+T@{S\+O\+C\+K\+E\+T}}
+\index{S\+O\+C\+K\+E\+T@{S\+O\+C\+K\+E\+T}!Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}}
+\subsubsection[{S\+O\+C\+K\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf B\+Y\+T\+E} {\bf S\+O\+C\+K\+E\+T}}\label{_berkeley_a_p_i_8h_a09667d6990ba5c523a8a8fb92453a2f5}
+
+
+Definition at line 54 of file Berkeley\+A\+P\+I.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_berkeley_a_p_i_8h_a6afe3bd4d7a3f627c0ae03da2b955a47}{}\index{Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}!B\+S\+D\+\_\+\+S\+C\+K\+\_\+\+S\+T\+A\+T\+E@{B\+S\+D\+\_\+\+S\+C\+K\+\_\+\+S\+T\+A\+T\+E}}
+\index{B\+S\+D\+\_\+\+S\+C\+K\+\_\+\+S\+T\+A\+T\+E@{B\+S\+D\+\_\+\+S\+C\+K\+\_\+\+S\+T\+A\+T\+E}!Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}}
+\subsubsection[{B\+S\+D\+\_\+\+S\+C\+K\+\_\+\+S\+T\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf B\+S\+D\+\_\+\+S\+C\+K\+\_\+\+S\+T\+A\+T\+E}}\label{_berkeley_a_p_i_8h_a6afe3bd4d7a3f627c0ae03da2b955a47}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+K\+T\+\_\+\+C\+L\+O\+S\+E\+D@{S\+K\+T\+\_\+\+C\+L\+O\+S\+E\+D}!Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}}\index{Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}!S\+K\+T\+\_\+\+C\+L\+O\+S\+E\+D@{S\+K\+T\+\_\+\+C\+L\+O\+S\+E\+D}}\item[{\em 
+\hypertarget{_berkeley_a_p_i_8h_a6afe3bd4d7a3f627c0ae03da2b955a47a82e533c88b1e0b2326b8ee77468622c0}{}S\+K\+T\+\_\+\+C\+L\+O\+S\+E\+D\label{_berkeley_a_p_i_8h_a6afe3bd4d7a3f627c0ae03da2b955a47a82e533c88b1e0b2326b8ee77468622c0}
+}]\index{S\+K\+T\+\_\+\+C\+R\+E\+A\+T\+E\+D@{S\+K\+T\+\_\+\+C\+R\+E\+A\+T\+E\+D}!Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}}\index{Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}!S\+K\+T\+\_\+\+C\+R\+E\+A\+T\+E\+D@{S\+K\+T\+\_\+\+C\+R\+E\+A\+T\+E\+D}}\item[{\em 
+\hypertarget{_berkeley_a_p_i_8h_a6afe3bd4d7a3f627c0ae03da2b955a47a785cbb43c46729c0f5b36b36f2719690}{}S\+K\+T\+\_\+\+C\+R\+E\+A\+T\+E\+D\label{_berkeley_a_p_i_8h_a6afe3bd4d7a3f627c0ae03da2b955a47a785cbb43c46729c0f5b36b36f2719690}
+}]\index{S\+K\+T\+\_\+\+B\+O\+U\+N\+D@{S\+K\+T\+\_\+\+B\+O\+U\+N\+D}!Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}}\index{Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}!S\+K\+T\+\_\+\+B\+O\+U\+N\+D@{S\+K\+T\+\_\+\+B\+O\+U\+N\+D}}\item[{\em 
+\hypertarget{_berkeley_a_p_i_8h_a6afe3bd4d7a3f627c0ae03da2b955a47a7e87759cbbf32254ee4fef199bb4a10a}{}S\+K\+T\+\_\+\+B\+O\+U\+N\+D\label{_berkeley_a_p_i_8h_a6afe3bd4d7a3f627c0ae03da2b955a47a7e87759cbbf32254ee4fef199bb4a10a}
+}]\index{S\+K\+T\+\_\+\+B\+S\+D\+\_\+\+L\+I\+S\+T\+E\+N@{S\+K\+T\+\_\+\+B\+S\+D\+\_\+\+L\+I\+S\+T\+E\+N}!Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}}\index{Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}!S\+K\+T\+\_\+\+B\+S\+D\+\_\+\+L\+I\+S\+T\+E\+N@{S\+K\+T\+\_\+\+B\+S\+D\+\_\+\+L\+I\+S\+T\+E\+N}}\item[{\em 
+\hypertarget{_berkeley_a_p_i_8h_a6afe3bd4d7a3f627c0ae03da2b955a47ac54fccefb4c275b78b5dfd2d8e98c626}{}S\+K\+T\+\_\+\+B\+S\+D\+\_\+\+L\+I\+S\+T\+E\+N\label{_berkeley_a_p_i_8h_a6afe3bd4d7a3f627c0ae03da2b955a47ac54fccefb4c275b78b5dfd2d8e98c626}
+}]\index{S\+K\+T\+\_\+\+L\+I\+S\+T\+E\+N@{S\+K\+T\+\_\+\+L\+I\+S\+T\+E\+N}!Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}}\index{Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}!S\+K\+T\+\_\+\+L\+I\+S\+T\+E\+N@{S\+K\+T\+\_\+\+L\+I\+S\+T\+E\+N}}\item[{\em 
+\hypertarget{_berkeley_a_p_i_8h_a6afe3bd4d7a3f627c0ae03da2b955a47a614e89760f068a3cca400021029f4105}{}S\+K\+T\+\_\+\+L\+I\+S\+T\+E\+N\label{_berkeley_a_p_i_8h_a6afe3bd4d7a3f627c0ae03da2b955a47a614e89760f068a3cca400021029f4105}
+}]\index{S\+K\+T\+\_\+\+I\+N\+\_\+\+P\+R\+O\+G\+R\+E\+S\+S@{S\+K\+T\+\_\+\+I\+N\+\_\+\+P\+R\+O\+G\+R\+E\+S\+S}!Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}}\index{Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}!S\+K\+T\+\_\+\+I\+N\+\_\+\+P\+R\+O\+G\+R\+E\+S\+S@{S\+K\+T\+\_\+\+I\+N\+\_\+\+P\+R\+O\+G\+R\+E\+S\+S}}\item[{\em 
+\hypertarget{_berkeley_a_p_i_8h_a6afe3bd4d7a3f627c0ae03da2b955a47ac967dfafddf5181e5ec82ae55d9c83ed}{}S\+K\+T\+\_\+\+I\+N\+\_\+\+P\+R\+O\+G\+R\+E\+S\+S\label{_berkeley_a_p_i_8h_a6afe3bd4d7a3f627c0ae03da2b955a47ac967dfafddf5181e5ec82ae55d9c83ed}
+}]\index{S\+K\+T\+\_\+\+E\+S\+T@{S\+K\+T\+\_\+\+E\+S\+T}!Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}}\index{Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}!S\+K\+T\+\_\+\+E\+S\+T@{S\+K\+T\+\_\+\+E\+S\+T}}\item[{\em 
+\hypertarget{_berkeley_a_p_i_8h_a6afe3bd4d7a3f627c0ae03da2b955a47a8e6a8706ea7b7f767bd44bc87096fcb6}{}S\+K\+T\+\_\+\+E\+S\+T\label{_berkeley_a_p_i_8h_a6afe3bd4d7a3f627c0ae03da2b955a47a8e6a8706ea7b7f767bd44bc87096fcb6}
+}]\index{S\+K\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+E\+D@{S\+K\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+E\+D}!Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}}\index{Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}!S\+K\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+E\+D@{S\+K\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+E\+D}}\item[{\em 
+\hypertarget{_berkeley_a_p_i_8h_a6afe3bd4d7a3f627c0ae03da2b955a47a0bfaf45dcf398971671ed8ca9300cdee}{}S\+K\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+E\+D\label{_berkeley_a_p_i_8h_a6afe3bd4d7a3f627c0ae03da2b955a47a0bfaf45dcf398971671ed8ca9300cdee}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 73 of file Berkeley\+A\+P\+I.\+h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_berkeley_a_p_i_8h_abd563ec11311956b30c06b418aab09ae}{}\index{Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}!\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}!Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}}
+\subsubsection[{\+\_\+\+\_\+attribute\+\_\+\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}struct \+\_\+\+\_\+attribute\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{(\+\_\+\+\_\+packed\+\_\+\+\_\+)}]{}
+\end{DoxyParamCaption}
+)}\label{_berkeley_a_p_i_8h_abd563ec11311956b30c06b418aab09ae}
+
+
+Definition at line 116 of file Berkeley\+A\+P\+I.\+h.
+
+\hypertarget{_berkeley_a_p_i_8h_a298a16c68986b08367adf670e48cc832}{}\index{Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}!accept@{accept}}
+\index{accept@{accept}!Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}}
+\subsubsection[{accept}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+O\+C\+K\+E\+T} accept (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+O\+C\+K\+E\+T}}]{s, }
+\item[{struct sockaddr $\ast$}]{addr, }
+\item[{int $\ast$}]{addrlen}
+\end{DoxyParamCaption}
+)}\label{_berkeley_a_p_i_8h_a298a16c68986b08367adf670e48cc832}
+
+
+Definition at line 375 of file Berkeley\+A\+P\+I.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 0
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+\hypertarget{_berkeley_a_p_i_8h_a45a368cee3d8258e84f073890e86bf7f}{}\index{Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}!Berkeley\+Socket\+Init@{Berkeley\+Socket\+Init}}
+\index{Berkeley\+Socket\+Init@{Berkeley\+Socket\+Init}!Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}}
+\subsubsection[{Berkeley\+Socket\+Init}]{\setlength{\rightskip}{0pt plus 5cm}void Berkeley\+Socket\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_berkeley_a_p_i_8h_a45a368cee3d8258e84f073890e86bf7f}
+
+
+Definition at line 96 of file Berkeley\+A\+P\+I.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\hypertarget{_berkeley_a_p_i_8h_a44c79e6dc6ba6077163dc28533018243}{}\index{Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}!bind@{bind}}
+\index{bind@{bind}!Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}}
+\subsubsection[{bind}]{\setlength{\rightskip}{0pt plus 5cm}int bind (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+O\+C\+K\+E\+T}}]{s, }
+\item[{const struct sockaddr $\ast$}]{name, }
+\item[{int}]{namelen}
+\end{DoxyParamCaption}
+)}\label{_berkeley_a_p_i_8h_a44c79e6dc6ba6077163dc28533018243}
+
+
+Definition at line 214 of file Berkeley\+A\+P\+I.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 5
+
+
+\hypertarget{_berkeley_a_p_i_8h_abe5d5449ec94553dfc9674e26d886b21}{}\index{Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}!closesocket@{closesocket}}
+\index{closesocket@{closesocket}!Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}}
+\subsubsection[{closesocket}]{\setlength{\rightskip}{0pt plus 5cm}int closesocket (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+O\+C\+K\+E\+T}}]{s}
+\end{DoxyParamCaption}
+)}\label{_berkeley_a_p_i_8h_abe5d5449ec94553dfc9674e26d886b21}
+
+
+Definition at line 947 of file Berkeley\+A\+P\+I.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 6
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 7
+
+
+\hypertarget{_berkeley_a_p_i_8h_adf2c9fc4a3ab6f2ce9de01b399621e4c}{}\index{Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}!connect@{connect}}
+\index{connect@{connect}!Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}}
+\subsubsection[{connect}]{\setlength{\rightskip}{0pt plus 5cm}int connect (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+O\+C\+K\+E\+T}}]{s, }
+\item[{struct sockaddr $\ast$}]{name, }
+\item[{int}]{namelen}
+\end{DoxyParamCaption}
+)}\label{_berkeley_a_p_i_8h_adf2c9fc4a3ab6f2ce9de01b399621e4c}
+
+
+Definition at line 464 of file Berkeley\+A\+P\+I.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 8
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 9
+
+
+\hypertarget{_berkeley_a_p_i_8h_a26de86c35745c55c0f6dddb65ad08ceb}{}\index{Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}!gethostname@{gethostname}}
+\index{gethostname@{gethostname}!Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}}
+\subsubsection[{gethostname}]{\setlength{\rightskip}{0pt plus 5cm}int gethostname (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name, }
+\item[{int}]{namelen}
+\end{DoxyParamCaption}
+)}\label{_berkeley_a_p_i_8h_a26de86c35745c55c0f6dddb65ad08ceb}
+
+
+Definition at line 897 of file Berkeley\+A\+P\+I.\+c.
+
+\hypertarget{_berkeley_a_p_i_8h_a4c434be919765796affc6e3e9a589a70}{}\index{Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}!listen@{listen}}
+\index{listen@{listen}!Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}}
+\subsubsection[{listen}]{\setlength{\rightskip}{0pt plus 5cm}int listen (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+O\+C\+K\+E\+T}}]{s, }
+\item[{int}]{backlog}
+\end{DoxyParamCaption}
+)}\label{_berkeley_a_p_i_8h_a4c434be919765796affc6e3e9a589a70}
+
+
+Definition at line 287 of file Berkeley\+A\+P\+I.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 10
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 11
+
+
+\hypertarget{_berkeley_a_p_i_8h_a554ce7ef429f34cc322dff78061d60ab}{}\index{Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}!recv@{recv}}
+\index{recv@{recv}!Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}}
+\subsubsection[{recv}]{\setlength{\rightskip}{0pt plus 5cm}int recv (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+O\+C\+K\+E\+T}}]{s, }
+\item[{char $\ast$}]{buf, }
+\item[{int}]{len, }
+\item[{int}]{flags}
+\end{DoxyParamCaption}
+)}\label{_berkeley_a_p_i_8h_a554ce7ef429f34cc322dff78061d60ab}
+
+
+Definition at line 749 of file Berkeley\+A\+P\+I.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 12
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 13
+
+
+\hypertarget{_berkeley_a_p_i_8h_a74916359322194f9857034fb2750a427}{}\index{Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}!recvfrom@{recvfrom}}
+\index{recvfrom@{recvfrom}!Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}}
+\subsubsection[{recvfrom}]{\setlength{\rightskip}{0pt plus 5cm}int recvfrom (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+O\+C\+K\+E\+T}}]{s, }
+\item[{char $\ast$}]{buf, }
+\item[{int}]{len, }
+\item[{int}]{flags, }
+\item[{struct sockaddr $\ast$}]{from, }
+\item[{int $\ast$}]{fromlen}
+\end{DoxyParamCaption}
+)}\label{_berkeley_a_p_i_8h_a74916359322194f9857034fb2750a427}
+
+
+Definition at line 819 of file Berkeley\+A\+P\+I.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 14
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 15
+
+
+\hypertarget{_berkeley_a_p_i_8h_a2c1c377be70d94364327db5144c19c7a}{}\index{Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}!send@{send}}
+\index{send@{send}!Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}}
+\subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}int send (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+O\+C\+K\+E\+T}}]{s, }
+\item[{const char $\ast$}]{buf, }
+\item[{int}]{len, }
+\item[{int}]{flags}
+\end{DoxyParamCaption}
+)}\label{_berkeley_a_p_i_8h_a2c1c377be70d94364327db5144c19c7a}
+
+
+Definition at line 582 of file Berkeley\+A\+P\+I.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 16
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 17
+
+
+\hypertarget{_berkeley_a_p_i_8h_a4d78c2d82555ce1876c2964a6208e158}{}\index{Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}!sendto@{sendto}}
+\index{sendto@{sendto}!Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}}
+\subsubsection[{sendto}]{\setlength{\rightskip}{0pt plus 5cm}int sendto (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+O\+C\+K\+E\+T}}]{s, }
+\item[{const char $\ast$}]{buf, }
+\item[{int}]{len, }
+\item[{int}]{flags, }
+\item[{const struct sockaddr $\ast$}]{to, }
+\item[{int}]{tolen}
+\end{DoxyParamCaption}
+)}\label{_berkeley_a_p_i_8h_a4d78c2d82555ce1876c2964a6208e158}
+
+
+Definition at line 620 of file Berkeley\+A\+P\+I.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 18
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 19
+
+
+\hypertarget{_berkeley_a_p_i_8h_a4bbac9ff89097f54941d2e1cf66f8ca9}{}\index{Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}!socket@{socket}}
+\index{socket@{socket}!Berkeley\+A\+P\+I.\+h@{Berkeley\+A\+P\+I.\+h}}
+\subsubsection[{socket}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+O\+C\+K\+E\+T} socket (
+\begin{DoxyParamCaption}
+\item[{int}]{af, }
+\item[{int}]{type, }
+\item[{int}]{protocol}
+\end{DoxyParamCaption}
+)}\label{_berkeley_a_p_i_8h_a4bbac9ff89097f54941d2e1cf66f8ca9}
+
+
+Definition at line 135 of file Berkeley\+A\+P\+I.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 20
+
+

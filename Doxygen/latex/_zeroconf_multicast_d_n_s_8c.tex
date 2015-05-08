@@ -1,0 +1,946 @@
+\hypertarget{_zeroconf_multicast_d_n_s_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Zeroconf\+Multicast\+D\+N\+S.c File Reference}
+\label{_zeroconf_multicast_d_n_s_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Zeroconf\+Multicast\+D\+N\+S.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{union___m_d_n_s___m_s_g___h_e_a_d_e_r___f_l_a_g_s}{\+\_\+\+M\+D\+N\+S\+\_\+\+M\+S\+G\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+F\+L\+A\+G\+S}
+\item 
+struct \hyperlink{struct___m_d_n_s___m_s_g___h_e_a_d_e_r}{\+\_\+\+M\+D\+N\+S\+\_\+\+M\+S\+G\+\_\+\+H\+E\+A\+D\+E\+R}
+\item 
+struct \hyperlink{structquestion}{question}
+\item 
+struct \hyperlink{struct__m_d_n_s_resource_record}{\+\_\+m\+D\+N\+S\+Resource\+Record}
+\item 
+struct \hyperlink{struct__m_d_n_s_process_ctx__common}{\+\_\+m\+D\+N\+S\+Process\+Ctx\+\_\+common}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef union \hyperlink{union___m_d_n_s___m_s_g___h_e_a_d_e_r___f_l_a_g_s}{\+\_\+\+M\+D\+N\+S\+\_\+\+M\+S\+G\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+F\+L\+A\+G\+S} \hyperlink{_zeroconf_multicast_d_n_s_8c_a8a9bca37eb1fdea3b90dbb38986cd622}{M\+D\+N\+S\+\_\+\+M\+S\+G\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+F\+L\+A\+G\+S}
+\item 
+typedef struct \hyperlink{struct___m_d_n_s___m_s_g___h_e_a_d_e_r}{\+\_\+\+M\+D\+N\+S\+\_\+\+M\+S\+G\+\_\+\+H\+E\+A\+D\+E\+R} \hyperlink{_zeroconf_multicast_d_n_s_8c_a0a4315dc7bcfbd9d5fba1faada140799}{M\+D\+N\+S\+\_\+\+M\+S\+G\+\_\+\+H\+E\+A\+D\+E\+R}
+\item 
+typedef struct \hyperlink{struct__m_d_n_s_resource_record}{\+\_\+m\+D\+N\+S\+Resource\+Record} \hyperlink{_zeroconf_multicast_d_n_s_8c_a88db1d86206536fcd2c3664244a9b9fe}{m\+D\+N\+S\+Resource\+Record}
+\item 
+typedef enum \hyperlink{_zeroconf_multicast_d_n_s_8c_ac381fc5dcc970180a07908c4927f04d5}{\+\_\+\+M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E} \hyperlink{_zeroconf_multicast_d_n_s_8c_a13d840af9cc0f5efa211563f570a992f}{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E}
+\item 
+typedef enum \hyperlink{_zeroconf_multicast_d_n_s_8c_aa2796a9c9bd402bd9e8a9815f8dda9eb}{\+\_\+\+M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P} \hyperlink{_zeroconf_multicast_d_n_s_8c_afdedbdb3eed6fb66781bfb7405bac3d9}{M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P}
+\item 
+typedef enum \hyperlink{_zeroconf_multicast_d_n_s_8c_a84bf1514c18b18fdcb46931955e7e4f7}{\+\_\+\+M\+D\+N\+S\+\_\+\+C\+T\+X\+\_\+\+T\+Y\+P\+E} \hyperlink{_zeroconf_multicast_d_n_s_8c_a1181d5fa8f2aec7e5d635f1f04f47554}{M\+D\+N\+S\+\_\+\+C\+T\+X\+\_\+\+T\+Y\+P\+E}
+\item 
+typedef struct \hyperlink{struct__m_d_n_s_process_ctx__common}{\+\_\+m\+D\+N\+S\+Process\+Ctx\+\_\+common} \hyperlink{_zeroconf_multicast_d_n_s_8c_a7bdc4fa0031528561f2da9eb0d1ba2fa}{m\+D\+N\+S\+Process\+Ctx\+\_\+common}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{_zeroconf_multicast_d_n_s_8c_a27f5620c38bd7c0ce77a9dffe1e219c4a06ed697aca2b1838ccf5117b4a050fed}{M\+D\+N\+S\+\_\+\+R\+E\+S\+P\+O\+N\+D\+E\+R\+\_\+\+I\+N\+I\+T} = 0, 
+\hyperlink{_zeroconf_multicast_d_n_s_8c_a27f5620c38bd7c0ce77a9dffe1e219c4affe4787d42e9cc08897760bc69ea17be}{M\+D\+N\+S\+\_\+\+R\+E\+S\+P\+O\+N\+D\+E\+R\+\_\+\+L\+I\+S\+T\+E\+N}
+ \}
+\item 
+enum \hyperlink{_zeroconf_multicast_d_n_s_8c_a4b71db0fb46cc3812ced6ec8423be001}{M\+D\+N\+S\+\_\+\+Q\+T\+Y\+P\+E} \{ \\*
+\hyperlink{_zeroconf_multicast_d_n_s_8c_a4b71db0fb46cc3812ced6ec8423be001a719279818de456cb44dbbca010137130}{Q\+T\+Y\+P\+E\+\_\+\+A} = 1, 
+\hyperlink{_zeroconf_multicast_d_n_s_8c_a4b71db0fb46cc3812ced6ec8423be001adb5f2e2ddd3d04541f9e97e1b2b26334}{Q\+T\+Y\+P\+E\+\_\+\+N\+S} = 2, 
+\hyperlink{_zeroconf_multicast_d_n_s_8c_a4b71db0fb46cc3812ced6ec8423be001ac7109bb0890b26619fe72e9f1c068d9f}{Q\+T\+Y\+P\+E\+\_\+\+C\+N\+A\+M\+E} = 5, 
+\hyperlink{_zeroconf_multicast_d_n_s_8c_a4b71db0fb46cc3812ced6ec8423be001a76174cdfbb45eeef170a89c5b2c9ffa5}{Q\+T\+Y\+P\+E\+\_\+\+P\+T\+R} = 12, 
+\\*
+\hyperlink{_zeroconf_multicast_d_n_s_8c_a4b71db0fb46cc3812ced6ec8423be001ad291a3106cc259b147646711c299e472}{Q\+T\+Y\+P\+E\+\_\+\+T\+X\+T} = 16, 
+\hyperlink{_zeroconf_multicast_d_n_s_8c_a4b71db0fb46cc3812ced6ec8423be001a9e9b4db28b546bb54ed9c2365ad4def9}{Q\+T\+Y\+P\+E\+\_\+\+S\+R\+V} = 33, 
+\hyperlink{_zeroconf_multicast_d_n_s_8c_a4b71db0fb46cc3812ced6ec8423be001a4803391235808252c3459335d23401be}{Q\+T\+Y\+P\+E\+\_\+\+A\+N\+Y} = 255
+ \}
+\item 
+enum \hyperlink{_zeroconf_multicast_d_n_s_8c_ac381fc5dcc970180a07908c4927f04d5}{\+\_\+\+M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E} \{ \\*
+\hyperlink{_zeroconf_multicast_d_n_s_8c_ac381fc5dcc970180a07908c4927f04d5a0cfdb95f6b41baea229d067e455382fe}{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+H\+O\+M\+E} = 0, 
+\hyperlink{_zeroconf_multicast_d_n_s_8c_ac381fc5dcc970180a07908c4927f04d5a52d2e943e5f3361e8cf0cc83a35b3080}{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+N\+T\+F\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+E\+D}, 
+\hyperlink{_zeroconf_multicast_d_n_s_8c_ac381fc5dcc970180a07908c4927f04d5aab1f52c7bd13eae2504b2691b82f10c0}{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+P\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+E\+D}, 
+\hyperlink{_zeroconf_multicast_d_n_s_8c_ac381fc5dcc970180a07908c4927f04d5ac4523adb6b4c3b02bac5c4820ec18644}{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+N\+O\+T\+\_\+\+R\+E\+A\+D\+Y}, 
+\\*
+\hyperlink{_zeroconf_multicast_d_n_s_8c_ac381fc5dcc970180a07908c4927f04d5a07bf42369da461365aaa364eb11851eb}{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+N\+I\+T}, 
+\hyperlink{_zeroconf_multicast_d_n_s_8c_ac381fc5dcc970180a07908c4927f04d5a022b93b9ac2b304838ac6f7ed367abc9}{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+R\+O\+B\+E}, 
+\hyperlink{_zeroconf_multicast_d_n_s_8c_ac381fc5dcc970180a07908c4927f04d5a1404929d546bdf66f629c202731aa0c5}{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+A\+N\+N\+O\+U\+N\+C\+E}, 
+\hyperlink{_zeroconf_multicast_d_n_s_8c_ac381fc5dcc970180a07908c4927f04d5a2dac1ec281bf649c5c4d43c6004dd5a4}{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+D\+E\+F\+E\+N\+D}
+ \}
+\item 
+enum \hyperlink{_zeroconf_multicast_d_n_s_8c_aa2796a9c9bd402bd9e8a9815f8dda9eb}{\+\_\+\+M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P} \{ \hyperlink{_zeroconf_multicast_d_n_s_8c_aa2796a9c9bd402bd9e8a9815f8dda9eba17fac45d83cf4eaa2fba6c058c931778}{M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P\+\_\+\+Q\+D}, 
+\hyperlink{_zeroconf_multicast_d_n_s_8c_aa2796a9c9bd402bd9e8a9815f8dda9eba55a854dbf53fd641e5994d2952b32840}{M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P\+\_\+\+A\+N}, 
+\hyperlink{_zeroconf_multicast_d_n_s_8c_aa2796a9c9bd402bd9e8a9815f8dda9eba3b40b3fe6f5c5675ac6c9a08a5074b6c}{M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P\+\_\+\+N\+S}, 
+\hyperlink{_zeroconf_multicast_d_n_s_8c_aa2796a9c9bd402bd9e8a9815f8dda9eba7b4ac6dd1c8e56963a749387fc8c5a81}{M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P\+\_\+\+A\+R}
+ \}
+\item 
+enum \hyperlink{_zeroconf_multicast_d_n_s_8c_a84bf1514c18b18fdcb46931955e7e4f7}{\+\_\+\+M\+D\+N\+S\+\_\+\+C\+T\+X\+\_\+\+T\+Y\+P\+E} \{ \hyperlink{_zeroconf_multicast_d_n_s_8c_a84bf1514c18b18fdcb46931955e7e4f7a38972129102649f0e5b4df64d27f0d16}{M\+D\+N\+S\+\_\+\+C\+T\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+H\+O\+S\+T} = 0, 
+\hyperlink{_zeroconf_multicast_d_n_s_8c_a84bf1514c18b18fdcb46931955e7e4f7a4f8c7f42874fefc8d47f5be36c03e371}{M\+D\+N\+S\+\_\+\+C\+T\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+D}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_zeroconf_multicast_d_n_s_8c_a8a69fd5952a14c7bfa97a304380d4bc1}{Display\+I\+P\+Value} (I\+P\+\_\+\+A\+D\+D\+R I\+P\+Val)
+\item 
+struct \hyperlink{_zeroconf_multicast_d_n_s_8c_ad09246453a4dabd919c7541484046a87}{\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((\+\_\+\+\_\+packed\+\_\+\+\_\+))
+\item 
+M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+I\+C void \hyperlink{_zeroconf_multicast_d_n_s_8c_a9db99a259559d5b3e5f537b2b4f235a6}{m\+D\+N\+S\+Responder} (void)
+\item 
+M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+I\+C \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_zeroconf_multicast_d_n_s_8c_a85f02dd49ff057009f82a11dd68b1cb6}{m\+D\+N\+S\+De\+Compress} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} w\+Pos, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$pc\+String, \hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} b\+Follow\+Ptr, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} c\+Element, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} c\+Depth)
+\item 
+M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+I\+C size\+\_\+t \hyperlink{_zeroconf_multicast_d_n_s_8c_a3cc63592c9d601ca82ac3a017dca5b91}{m\+D\+N\+S\+S\+D\+Format\+Service\+Instance} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$string, size\+\_\+t str\+Size)
+\item 
+M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+I\+C void \hyperlink{_zeroconf_multicast_d_n_s_8c_aa11b2c8f962821e5d4bcf941d2e94af0}{U\+D\+P\+P\+U\+T\+\_\+\+L\+O\+C\+A\+L} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} c)
+\item 
+M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+I\+C void \hyperlink{_zeroconf_multicast_d_n_s_8c_a5ef477a6a878005d4b44ce0196c04cbe}{Display\+Host\+Name} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$Host\+Name)
+\item 
+M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+I\+C \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_zeroconf_multicast_d_n_s_8c_abffa598c3f98375a1596201fa97170b8}{strcmp\+\_\+local\+\_\+ignore\+\_\+case} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$str\+\_\+1, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$str\+\_\+2)
+\item 
+M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+I\+C void \hyperlink{_zeroconf_multicast_d_n_s_8c_ac660af658400deb5fa1c0d0b63c7a0cd}{m\+D\+N\+S\+Reset\+Counters} (\hyperlink{_zeroconf_multicast_d_n_s_8c_a7bdc4fa0031528561f2da9eb0d1ba2fa}{m\+D\+N\+S\+Process\+Ctx\+\_\+common} $\ast$p\+Header, \hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} b\+Reset\+Probe\+Conflict\+Count)
+\item 
+M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+I\+C void \hyperlink{_zeroconf_multicast_d_n_s_8c_a83a3ff3ff6e7406423736e7c908d1e06}{m\+D\+N\+S\+Rename} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$str\+Label, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} n\+Label\+Id, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$str\+Base, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$str\+Target, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} n\+Max\+Len)
+\item 
+M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+I\+C void \hyperlink{_zeroconf_multicast_d_n_s_8c_a476f393d05186c2f6f05021290ce3b59}{m\+D\+N\+S\+Put\+String} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$string)
+\item 
+M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+I\+C \hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_zeroconf_multicast_d_n_s_8c_afc08a5421e1f6da3a23309ba56bb7f8e}{m\+D\+N\+S\+Probe} (\hyperlink{_zeroconf_multicast_d_n_s_8c_a7bdc4fa0031528561f2da9eb0d1ba2fa}{m\+D\+N\+S\+Process\+Ctx\+\_\+common} $\ast$p\+Ctx)
+\item 
+M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+I\+C \hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_zeroconf_multicast_d_n_s_8c_a73f6ad93226e78d3b3c677a0ac2ca133}{m\+D\+N\+S\+Send\+R\+R} (\hyperlink{_zeroconf_multicast_d_n_s_8c_a88db1d86206536fcd2c3664244a9b9fe}{m\+D\+N\+S\+Resource\+Record} $\ast$p\+Record, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} query\+\_\+id, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} c\+Flush, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} n\+Answers\+In\+Msg, \hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} b\+Is\+First\+R\+R, \hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} b\+Is\+Last\+R\+R)
+\item 
+void \hyperlink{_zeroconf_multicast_d_n_s_8c_a16416bc39793f7e5742717283b855f33}{m\+D\+N\+S\+S\+D\+Fill\+Res\+Records} (\hyperlink{_zeroconf_multicast_d_n_s_8c_a17204652be7e5ea7ae39b1c4cd572fd5}{m\+D\+N\+S\+Process\+Ctx\+\_\+sd} $\ast$sd)
+\item 
+\hyperlink{_zeroconf_multicast_d_n_s_8h_a8a22ff380a60ecd4608976bae2e2c1f1}{M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E} \hyperlink{_zeroconf_multicast_d_n_s_8c_a966ef56bb5b560e219237ab1a72da199}{m\+D\+N\+S\+Service\+Update} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} port, const \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$txt\+\_\+record)
+\item 
+\hyperlink{_zeroconf_multicast_d_n_s_8h_a8a22ff380a60ecd4608976bae2e2c1f1}{M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E} \hyperlink{_zeroconf_multicast_d_n_s_8c_aa057fa57f0614721f5f7f3ddeaf02def}{m\+D\+N\+S\+Service\+De\+Register} ()
+\item 
+\hyperlink{_zeroconf_multicast_d_n_s_8h_a8a22ff380a60ecd4608976bae2e2c1f1}{M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E} \hyperlink{_zeroconf_multicast_d_n_s_8c_ac1b42c70d1648a5e0d5103dcc0ec2567}{m\+D\+N\+S\+Service\+Register} (const char $\ast$srv\+\_\+name, const char $\ast$srv\+\_\+type, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} port, const \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$txt\+\_\+record, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} auto\+\_\+rename, void($\ast$call\+\_\+back)(char $\ast$name, \hyperlink{_zeroconf_multicast_d_n_s_8h_a8a22ff380a60ecd4608976bae2e2c1f1}{M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E} err, void $\ast$context), void $\ast$context)
+\item 
+void \hyperlink{_zeroconf_multicast_d_n_s_8c_a1e02c702d1b8e90e54b511bdd8c403d3}{m\+D\+N\+S\+Announce} (\hyperlink{_zeroconf_multicast_d_n_s_8c_a88db1d86206536fcd2c3664244a9b9fe}{m\+D\+N\+S\+Resource\+Record} $\ast$p\+R\+R)
+\item 
+M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+I\+C \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_zeroconf_multicast_d_n_s_8c_ac55c5857ff8637f0c9a2c8eaefb4969b}{m\+D\+N\+S\+Fetch} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} w\+Offset, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} w\+Len, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$pc\+String)
+\item 
+M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+I\+C \hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_zeroconf_multicast_d_n_s_8c_a0c7f2e53c8f5d25069fe64639d1e3179}{m\+D\+N\+S\+Tie\+Breaker} (\hyperlink{_zeroconf_multicast_d_n_s_8c_a88db1d86206536fcd2c3664244a9b9fe}{m\+D\+N\+S\+Resource\+Record} $\ast$their, \hyperlink{_zeroconf_multicast_d_n_s_8c_a88db1d86206536fcd2c3664244a9b9fe}{m\+D\+N\+S\+Resource\+Record} $\ast$our)
+\item 
+M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+I\+C \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_zeroconf_multicast_d_n_s_8c_a5d86d8b87c6bf781cb3692eb49041cb7}{m\+D\+N\+S\+Process\+Incoming\+R\+R} (\hyperlink{_zeroconf_multicast_d_n_s_8c_afdedbdb3eed6fb66781bfb7405bac3d9}{M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P} tag, \hyperlink{_zeroconf_multicast_d_n_s_8c_a0a4315dc7bcfbd9d5fba1faada140799}{M\+D\+N\+S\+\_\+\+M\+S\+G\+\_\+\+H\+E\+A\+D\+E\+R} $\ast$pm\+D\+N\+S\+Msg\+Header, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} idx\+Group, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} idx\+R\+R)
+\item 
+void \hyperlink{_zeroconf_multicast_d_n_s_8c_a59102f379c587b47f8c065d2cba9d3d7}{m\+D\+N\+S\+Fill\+Host\+Record} (void)
+\item 
+\hyperlink{_zeroconf_multicast_d_n_s_8h_a8a22ff380a60ecd4608976bae2e2c1f1}{M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E} \hyperlink{_zeroconf_multicast_d_n_s_8c_ade7f51beb8028f44a9267489ca00b9b6}{m\+D\+N\+S\+Host\+Register} (const char $\ast$host\+\_\+name)
+\item 
+void \hyperlink{_zeroconf_multicast_d_n_s_8c_adf52d26b251ad70adb7ca097394986d1}{m\+D\+N\+S\+Initialize} (const char $\ast$sz\+Host\+Name)
+\item 
+void \hyperlink{_zeroconf_multicast_d_n_s_8c_a790561fcaf99874b79eab7db039b8c71}{m\+D\+N\+S\+Process\+Internal} (\hyperlink{_zeroconf_multicast_d_n_s_8c_a7bdc4fa0031528561f2da9eb0d1ba2fa}{m\+D\+N\+S\+Process\+Ctx\+\_\+common} $\ast$p\+Ctx)
+\item 
+void \hyperlink{_zeroconf_multicast_d_n_s_8c_a2b66183d48d7fd2050e1661557927e1e}{m\+D\+N\+S\+Process} (void)
+\item 
+\hyperlink{_zeroconf_multicast_d_n_s_8h_a8a22ff380a60ecd4608976bae2e2c1f1}{M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E} \hyperlink{_zeroconf_multicast_d_n_s_8c_a3253063bc42dff909f35b3737051ef09}{m\+D\+N\+S\+Multicast\+Filter\+Register} (void)
+\item 
+void \hyperlink{_zeroconf_multicast_d_n_s_8c_adbad294cbcf56ad3b687c20feb020e5c}{m\+D\+N\+S\+Dump\+Info} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+enum  \{ ... \}  \hyperlink{_zeroconf_multicast_d_n_s_8c_a03b25bf23e42f992ef042a751f0888d8}{m\+D\+N\+S\+\_\+responder\+\_\+state} = \hyperlink{_zeroconf_multicast_d_n_s_8c_a27f5620c38bd7c0ce77a9dffe1e219c4a06ed697aca2b1838ccf5117b4a050fed}{M\+D\+N\+S\+\_\+\+R\+E\+S\+P\+O\+N\+D\+E\+R\+\_\+\+I\+N\+I\+T}
+\item 
+\hyperlink{_zeroconf_multicast_d_n_s_8c_a7a6bf3226d7c1a97d154cedda3227283}{m\+D\+N\+S\+Responder\+Ctx}
+\item 
+\hyperlink{_zeroconf_multicast_d_n_s_8c_af7117ca8092aaa2eeb9eb3136c9ca964}{m\+D\+N\+S\+Process\+Ctx\+\_\+host}
+\item 
+\hyperlink{_zeroconf_multicast_d_n_s_8c_a17204652be7e5ea7ae39b1c4cd572fd5}{m\+D\+N\+S\+Process\+Ctx\+\_\+sd}
+\item 
+const \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$ \hyperlink{_zeroconf_multicast_d_n_s_8c_a1b77ed048388b80f33d3212a30446fb1}{C\+O\+N\+S\+T\+\_\+\+S\+T\+R\+\_\+local} = (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$) \char`\"{}local\char`\"{}
+\item 
+\hyperlink{_u_d_p_8h_a74f1b6fad75426b918419bbf943179c3}{U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T} \hyperlink{_zeroconf_multicast_d_n_s_8c_ab137197b94c94637f6b84eb8ba3ce889}{m\+D\+N\+S\+\_\+socket} = I\+N\+V\+A\+L\+I\+D\+\_\+\+U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T
+\item 
+\hyperlink{_zeroconf_multicast_d_n_s_8c_a0a4315dc7bcfbd9d5fba1faada140799}{M\+D\+N\+S\+\_\+\+M\+S\+G\+\_\+\+H\+E\+A\+D\+E\+R} $\ast$ \hyperlink{_zeroconf_multicast_d_n_s_8c_a374a976da6ff9d90417bae587d2b7565}{dbg\+\_\+p\+\_\+m\+D\+N\+S\+\_\+header}
+\item 
+\hyperlink{_zeroconf_multicast_d_n_s_8c_a88db1d86206536fcd2c3664244a9b9fe}{m\+D\+N\+S\+Resource\+Record} $\ast$ \hyperlink{_zeroconf_multicast_d_n_s_8c_ab0c2e39f7a9989af74cc89d45c757792}{dbg\+\_\+p\+\_\+res\+\_\+rec}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a1181d5fa8f2aec7e5d635f1f04f47554}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!M\+D\+N\+S\+\_\+\+C\+T\+X\+\_\+\+T\+Y\+P\+E@{M\+D\+N\+S\+\_\+\+C\+T\+X\+\_\+\+T\+Y\+P\+E}}
+\index{M\+D\+N\+S\+\_\+\+C\+T\+X\+\_\+\+T\+Y\+P\+E@{M\+D\+N\+S\+\_\+\+C\+T\+X\+\_\+\+T\+Y\+P\+E}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{M\+D\+N\+S\+\_\+\+C\+T\+X\+\_\+\+T\+Y\+P\+E}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \+\_\+\+M\+D\+N\+S\+\_\+\+C\+T\+X\+\_\+\+T\+Y\+P\+E}  {\bf M\+D\+N\+S\+\_\+\+C\+T\+X\+\_\+\+T\+Y\+P\+E}}\label{_zeroconf_multicast_d_n_s_8c_a1181d5fa8f2aec7e5d635f1f04f47554}
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a0a4315dc7bcfbd9d5fba1faada140799}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!M\+D\+N\+S\+\_\+\+M\+S\+G\+\_\+\+H\+E\+A\+D\+E\+R@{M\+D\+N\+S\+\_\+\+M\+S\+G\+\_\+\+H\+E\+A\+D\+E\+R}}
+\index{M\+D\+N\+S\+\_\+\+M\+S\+G\+\_\+\+H\+E\+A\+D\+E\+R@{M\+D\+N\+S\+\_\+\+M\+S\+G\+\_\+\+H\+E\+A\+D\+E\+R}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{M\+D\+N\+S\+\_\+\+M\+S\+G\+\_\+\+H\+E\+A\+D\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+M\+D\+N\+S\+\_\+\+M\+S\+G\+\_\+\+H\+E\+A\+D\+E\+R}  {\bf M\+D\+N\+S\+\_\+\+M\+S\+G\+\_\+\+H\+E\+A\+D\+E\+R}}\label{_zeroconf_multicast_d_n_s_8c_a0a4315dc7bcfbd9d5fba1faada140799}
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a8a9bca37eb1fdea3b90dbb38986cd622}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!M\+D\+N\+S\+\_\+\+M\+S\+G\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+F\+L\+A\+G\+S@{M\+D\+N\+S\+\_\+\+M\+S\+G\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+F\+L\+A\+G\+S}}
+\index{M\+D\+N\+S\+\_\+\+M\+S\+G\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+F\+L\+A\+G\+S@{M\+D\+N\+S\+\_\+\+M\+S\+G\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+F\+L\+A\+G\+S}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{M\+D\+N\+S\+\_\+\+M\+S\+G\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+F\+L\+A\+G\+S}]{\setlength{\rightskip}{0pt plus 5cm}typedef union {\bf \+\_\+\+M\+D\+N\+S\+\_\+\+M\+S\+G\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+F\+L\+A\+G\+S}  {\bf M\+D\+N\+S\+\_\+\+M\+S\+G\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+F\+L\+A\+G\+S}}\label{_zeroconf_multicast_d_n_s_8c_a8a9bca37eb1fdea3b90dbb38986cd622}
+\hypertarget{_zeroconf_multicast_d_n_s_8c_afdedbdb3eed6fb66781bfb7405bac3d9}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P@{M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P}}
+\index{M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P@{M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \+\_\+\+M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P}  {\bf M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P}}\label{_zeroconf_multicast_d_n_s_8c_afdedbdb3eed6fb66781bfb7405bac3d9}
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a13d840af9cc0f5efa211563f570a992f}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E@{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E}}
+\index{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E@{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \+\_\+\+M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E}  {\bf M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E}}\label{_zeroconf_multicast_d_n_s_8c_a13d840af9cc0f5efa211563f570a992f}
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a7bdc4fa0031528561f2da9eb0d1ba2fa}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+Process\+Ctx\+\_\+common@{m\+D\+N\+S\+Process\+Ctx\+\_\+common}}
+\index{m\+D\+N\+S\+Process\+Ctx\+\_\+common@{m\+D\+N\+S\+Process\+Ctx\+\_\+common}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+Process\+Ctx\+\_\+common}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+m\+D\+N\+S\+Process\+Ctx\+\_\+common}  {\bf m\+D\+N\+S\+Process\+Ctx\+\_\+common}}\label{_zeroconf_multicast_d_n_s_8c_a7bdc4fa0031528561f2da9eb0d1ba2fa}
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a88db1d86206536fcd2c3664244a9b9fe}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+Resource\+Record@{m\+D\+N\+S\+Resource\+Record}}
+\index{m\+D\+N\+S\+Resource\+Record@{m\+D\+N\+S\+Resource\+Record}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+Resource\+Record}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+m\+D\+N\+S\+Resource\+Record}  {\bf m\+D\+N\+S\+Resource\+Record}}\label{_zeroconf_multicast_d_n_s_8c_a88db1d86206536fcd2c3664244a9b9fe}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a27f5620c38bd7c0ce77a9dffe1e219c4}{}\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{_zeroconf_multicast_d_n_s_8c_a27f5620c38bd7c0ce77a9dffe1e219c4}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\+D\+N\+S\+\_\+\+R\+E\+S\+P\+O\+N\+D\+E\+R\+\_\+\+I\+N\+I\+T@{M\+D\+N\+S\+\_\+\+R\+E\+S\+P\+O\+N\+D\+E\+R\+\_\+\+I\+N\+I\+T}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!M\+D\+N\+S\+\_\+\+R\+E\+S\+P\+O\+N\+D\+E\+R\+\_\+\+I\+N\+I\+T@{M\+D\+N\+S\+\_\+\+R\+E\+S\+P\+O\+N\+D\+E\+R\+\_\+\+I\+N\+I\+T}}\item[{\em 
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a27f5620c38bd7c0ce77a9dffe1e219c4a06ed697aca2b1838ccf5117b4a050fed}{}M\+D\+N\+S\+\_\+\+R\+E\+S\+P\+O\+N\+D\+E\+R\+\_\+\+I\+N\+I\+T\label{_zeroconf_multicast_d_n_s_8c_a27f5620c38bd7c0ce77a9dffe1e219c4a06ed697aca2b1838ccf5117b4a050fed}
+}]\index{M\+D\+N\+S\+\_\+\+R\+E\+S\+P\+O\+N\+D\+E\+R\+\_\+\+L\+I\+S\+T\+E\+N@{M\+D\+N\+S\+\_\+\+R\+E\+S\+P\+O\+N\+D\+E\+R\+\_\+\+L\+I\+S\+T\+E\+N}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!M\+D\+N\+S\+\_\+\+R\+E\+S\+P\+O\+N\+D\+E\+R\+\_\+\+L\+I\+S\+T\+E\+N@{M\+D\+N\+S\+\_\+\+R\+E\+S\+P\+O\+N\+D\+E\+R\+\_\+\+L\+I\+S\+T\+E\+N}}\item[{\em 
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a27f5620c38bd7c0ce77a9dffe1e219c4affe4787d42e9cc08897760bc69ea17be}{}M\+D\+N\+S\+\_\+\+R\+E\+S\+P\+O\+N\+D\+E\+R\+\_\+\+L\+I\+S\+T\+E\+N\label{_zeroconf_multicast_d_n_s_8c_a27f5620c38bd7c0ce77a9dffe1e219c4affe4787d42e9cc08897760bc69ea17be}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 107 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a84bf1514c18b18fdcb46931955e7e4f7}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!\+\_\+\+M\+D\+N\+S\+\_\+\+C\+T\+X\+\_\+\+T\+Y\+P\+E@{\+\_\+\+M\+D\+N\+S\+\_\+\+C\+T\+X\+\_\+\+T\+Y\+P\+E}}
+\index{\+\_\+\+M\+D\+N\+S\+\_\+\+C\+T\+X\+\_\+\+T\+Y\+P\+E@{\+\_\+\+M\+D\+N\+S\+\_\+\+C\+T\+X\+\_\+\+T\+Y\+P\+E}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{\+\_\+\+M\+D\+N\+S\+\_\+\+C\+T\+X\+\_\+\+T\+Y\+P\+E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \+\_\+\+M\+D\+N\+S\+\_\+\+C\+T\+X\+\_\+\+T\+Y\+P\+E}}\label{_zeroconf_multicast_d_n_s_8c_a84bf1514c18b18fdcb46931955e7e4f7}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\+D\+N\+S\+\_\+\+C\+T\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+H\+O\+S\+T@{M\+D\+N\+S\+\_\+\+C\+T\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+H\+O\+S\+T}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!M\+D\+N\+S\+\_\+\+C\+T\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+H\+O\+S\+T@{M\+D\+N\+S\+\_\+\+C\+T\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+H\+O\+S\+T}}\item[{\em 
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a84bf1514c18b18fdcb46931955e7e4f7a38972129102649f0e5b4df64d27f0d16}{}M\+D\+N\+S\+\_\+\+C\+T\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+H\+O\+S\+T\label{_zeroconf_multicast_d_n_s_8c_a84bf1514c18b18fdcb46931955e7e4f7a38972129102649f0e5b4df64d27f0d16}
+}]\index{M\+D\+N\+S\+\_\+\+C\+T\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+D@{M\+D\+N\+S\+\_\+\+C\+T\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+D}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!M\+D\+N\+S\+\_\+\+C\+T\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+D@{M\+D\+N\+S\+\_\+\+C\+T\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+D}}\item[{\em 
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a84bf1514c18b18fdcb46931955e7e4f7a4f8c7f42874fefc8d47f5be36c03e371}{}M\+D\+N\+S\+\_\+\+C\+T\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+D\label{_zeroconf_multicast_d_n_s_8c_a84bf1514c18b18fdcb46931955e7e4f7a4f8c7f42874fefc8d47f5be36c03e371}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 241 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_aa2796a9c9bd402bd9e8a9815f8dda9eb}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!\+\_\+\+M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P@{\+\_\+\+M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P}}
+\index{\+\_\+\+M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P@{\+\_\+\+M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{\+\_\+\+M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \+\_\+\+M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P}}\label{_zeroconf_multicast_d_n_s_8c_aa2796a9c9bd402bd9e8a9815f8dda9eb}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P\+\_\+\+Q\+D@{M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P\+\_\+\+Q\+D}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P\+\_\+\+Q\+D@{M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P\+\_\+\+Q\+D}}\item[{\em 
+\hypertarget{_zeroconf_multicast_d_n_s_8c_aa2796a9c9bd402bd9e8a9815f8dda9eba17fac45d83cf4eaa2fba6c058c931778}{}M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P\+\_\+\+Q\+D\label{_zeroconf_multicast_d_n_s_8c_aa2796a9c9bd402bd9e8a9815f8dda9eba17fac45d83cf4eaa2fba6c058c931778}
+}]\index{M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P\+\_\+\+A\+N@{M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P\+\_\+\+A\+N}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P\+\_\+\+A\+N@{M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P\+\_\+\+A\+N}}\item[{\em 
+\hypertarget{_zeroconf_multicast_d_n_s_8c_aa2796a9c9bd402bd9e8a9815f8dda9eba55a854dbf53fd641e5994d2952b32840}{}M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P\+\_\+\+A\+N\label{_zeroconf_multicast_d_n_s_8c_aa2796a9c9bd402bd9e8a9815f8dda9eba55a854dbf53fd641e5994d2952b32840}
+}]\index{M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P\+\_\+\+N\+S@{M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P\+\_\+\+N\+S}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P\+\_\+\+N\+S@{M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P\+\_\+\+N\+S}}\item[{\em 
+\hypertarget{_zeroconf_multicast_d_n_s_8c_aa2796a9c9bd402bd9e8a9815f8dda9eba3b40b3fe6f5c5675ac6c9a08a5074b6c}{}M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P\+\_\+\+N\+S\label{_zeroconf_multicast_d_n_s_8c_aa2796a9c9bd402bd9e8a9815f8dda9eba3b40b3fe6f5c5675ac6c9a08a5074b6c}
+}]\index{M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P\+\_\+\+A\+R@{M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P\+\_\+\+A\+R}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P\+\_\+\+A\+R@{M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P\+\_\+\+A\+R}}\item[{\em 
+\hypertarget{_zeroconf_multicast_d_n_s_8c_aa2796a9c9bd402bd9e8a9815f8dda9eba7b4ac6dd1c8e56963a749387fc8c5a81}{}M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P\+\_\+\+A\+R\label{_zeroconf_multicast_d_n_s_8c_aa2796a9c9bd402bd9e8a9815f8dda9eba7b4ac6dd1c8e56963a749387fc8c5a81}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 224 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_ac381fc5dcc970180a07908c4927f04d5}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!\+\_\+\+M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E@{\+\_\+\+M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E}}
+\index{\+\_\+\+M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E@{\+\_\+\+M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{\+\_\+\+M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \+\_\+\+M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E}}\label{_zeroconf_multicast_d_n_s_8c_ac381fc5dcc970180a07908c4927f04d5}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+H\+O\+M\+E@{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+H\+O\+M\+E}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+H\+O\+M\+E@{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+H\+O\+M\+E}}\item[{\em 
+\hypertarget{_zeroconf_multicast_d_n_s_8c_ac381fc5dcc970180a07908c4927f04d5a0cfdb95f6b41baea229d067e455382fe}{}M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+H\+O\+M\+E\label{_zeroconf_multicast_d_n_s_8c_ac381fc5dcc970180a07908c4927f04d5a0cfdb95f6b41baea229d067e455382fe}
+}]\index{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+N\+T\+F\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+E\+D@{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+N\+T\+F\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+E\+D}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+N\+T\+F\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+E\+D@{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+N\+T\+F\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+E\+D}}\item[{\em 
+\hypertarget{_zeroconf_multicast_d_n_s_8c_ac381fc5dcc970180a07908c4927f04d5a52d2e943e5f3361e8cf0cc83a35b3080}{}M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+N\+T\+F\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+E\+D\label{_zeroconf_multicast_d_n_s_8c_ac381fc5dcc970180a07908c4927f04d5a52d2e943e5f3361e8cf0cc83a35b3080}
+}]\index{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+P\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+E\+D@{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+P\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+E\+D}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+P\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+E\+D@{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+P\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+E\+D}}\item[{\em 
+\hypertarget{_zeroconf_multicast_d_n_s_8c_ac381fc5dcc970180a07908c4927f04d5aab1f52c7bd13eae2504b2691b82f10c0}{}M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+P\+A\+D\+D\+R\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+E\+D\label{_zeroconf_multicast_d_n_s_8c_ac381fc5dcc970180a07908c4927f04d5aab1f52c7bd13eae2504b2691b82f10c0}
+}]\index{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+N\+O\+T\+\_\+\+R\+E\+A\+D\+Y@{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+N\+O\+T\+\_\+\+R\+E\+A\+D\+Y}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+N\+O\+T\+\_\+\+R\+E\+A\+D\+Y@{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+N\+O\+T\+\_\+\+R\+E\+A\+D\+Y}}\item[{\em 
+\hypertarget{_zeroconf_multicast_d_n_s_8c_ac381fc5dcc970180a07908c4927f04d5ac4523adb6b4c3b02bac5c4820ec18644}{}M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+N\+O\+T\+\_\+\+R\+E\+A\+D\+Y\label{_zeroconf_multicast_d_n_s_8c_ac381fc5dcc970180a07908c4927f04d5ac4523adb6b4c3b02bac5c4820ec18644}
+}]\index{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+N\+I\+T@{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+N\+I\+T}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+N\+I\+T@{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+N\+I\+T}}\item[{\em 
+\hypertarget{_zeroconf_multicast_d_n_s_8c_ac381fc5dcc970180a07908c4927f04d5a07bf42369da461365aaa364eb11851eb}{}M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+N\+I\+T\label{_zeroconf_multicast_d_n_s_8c_ac381fc5dcc970180a07908c4927f04d5a07bf42369da461365aaa364eb11851eb}
+}]\index{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+R\+O\+B\+E@{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+R\+O\+B\+E}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+R\+O\+B\+E@{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+R\+O\+B\+E}}\item[{\em 
+\hypertarget{_zeroconf_multicast_d_n_s_8c_ac381fc5dcc970180a07908c4927f04d5a022b93b9ac2b304838ac6f7ed367abc9}{}M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+R\+O\+B\+E\label{_zeroconf_multicast_d_n_s_8c_ac381fc5dcc970180a07908c4927f04d5a022b93b9ac2b304838ac6f7ed367abc9}
+}]\index{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+A\+N\+N\+O\+U\+N\+C\+E@{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+A\+N\+N\+O\+U\+N\+C\+E}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+A\+N\+N\+O\+U\+N\+C\+E@{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+A\+N\+N\+O\+U\+N\+C\+E}}\item[{\em 
+\hypertarget{_zeroconf_multicast_d_n_s_8c_ac381fc5dcc970180a07908c4927f04d5a1404929d546bdf66f629c202731aa0c5}{}M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+A\+N\+N\+O\+U\+N\+C\+E\label{_zeroconf_multicast_d_n_s_8c_ac381fc5dcc970180a07908c4927f04d5a1404929d546bdf66f629c202731aa0c5}
+}]\index{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+D\+E\+F\+E\+N\+D@{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+D\+E\+F\+E\+N\+D}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+D\+E\+F\+E\+N\+D@{M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+D\+E\+F\+E\+N\+D}}\item[{\em 
+\hypertarget{_zeroconf_multicast_d_n_s_8c_ac381fc5dcc970180a07908c4927f04d5a2dac1ec281bf649c5c4d43c6004dd5a4}{}M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+D\+E\+F\+E\+N\+D\label{_zeroconf_multicast_d_n_s_8c_ac381fc5dcc970180a07908c4927f04d5a2dac1ec281bf649c5c4d43c6004dd5a4}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 212 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a4b71db0fb46cc3812ced6ec8423be001}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!M\+D\+N\+S\+\_\+\+Q\+T\+Y\+P\+E@{M\+D\+N\+S\+\_\+\+Q\+T\+Y\+P\+E}}
+\index{M\+D\+N\+S\+\_\+\+Q\+T\+Y\+P\+E@{M\+D\+N\+S\+\_\+\+Q\+T\+Y\+P\+E}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{M\+D\+N\+S\+\_\+\+Q\+T\+Y\+P\+E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf M\+D\+N\+S\+\_\+\+Q\+T\+Y\+P\+E}}\label{_zeroconf_multicast_d_n_s_8c_a4b71db0fb46cc3812ced6ec8423be001}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Q\+T\+Y\+P\+E\+\_\+\+A@{Q\+T\+Y\+P\+E\+\_\+\+A}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!Q\+T\+Y\+P\+E\+\_\+\+A@{Q\+T\+Y\+P\+E\+\_\+\+A}}\item[{\em 
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a4b71db0fb46cc3812ced6ec8423be001a719279818de456cb44dbbca010137130}{}Q\+T\+Y\+P\+E\+\_\+\+A\label{_zeroconf_multicast_d_n_s_8c_a4b71db0fb46cc3812ced6ec8423be001a719279818de456cb44dbbca010137130}
+}]\index{Q\+T\+Y\+P\+E\+\_\+\+N\+S@{Q\+T\+Y\+P\+E\+\_\+\+N\+S}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!Q\+T\+Y\+P\+E\+\_\+\+N\+S@{Q\+T\+Y\+P\+E\+\_\+\+N\+S}}\item[{\em 
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a4b71db0fb46cc3812ced6ec8423be001adb5f2e2ddd3d04541f9e97e1b2b26334}{}Q\+T\+Y\+P\+E\+\_\+\+N\+S\label{_zeroconf_multicast_d_n_s_8c_a4b71db0fb46cc3812ced6ec8423be001adb5f2e2ddd3d04541f9e97e1b2b26334}
+}]\index{Q\+T\+Y\+P\+E\+\_\+\+C\+N\+A\+M\+E@{Q\+T\+Y\+P\+E\+\_\+\+C\+N\+A\+M\+E}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!Q\+T\+Y\+P\+E\+\_\+\+C\+N\+A\+M\+E@{Q\+T\+Y\+P\+E\+\_\+\+C\+N\+A\+M\+E}}\item[{\em 
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a4b71db0fb46cc3812ced6ec8423be001ac7109bb0890b26619fe72e9f1c068d9f}{}Q\+T\+Y\+P\+E\+\_\+\+C\+N\+A\+M\+E\label{_zeroconf_multicast_d_n_s_8c_a4b71db0fb46cc3812ced6ec8423be001ac7109bb0890b26619fe72e9f1c068d9f}
+}]\index{Q\+T\+Y\+P\+E\+\_\+\+P\+T\+R@{Q\+T\+Y\+P\+E\+\_\+\+P\+T\+R}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!Q\+T\+Y\+P\+E\+\_\+\+P\+T\+R@{Q\+T\+Y\+P\+E\+\_\+\+P\+T\+R}}\item[{\em 
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a4b71db0fb46cc3812ced6ec8423be001a76174cdfbb45eeef170a89c5b2c9ffa5}{}Q\+T\+Y\+P\+E\+\_\+\+P\+T\+R\label{_zeroconf_multicast_d_n_s_8c_a4b71db0fb46cc3812ced6ec8423be001a76174cdfbb45eeef170a89c5b2c9ffa5}
+}]\index{Q\+T\+Y\+P\+E\+\_\+\+T\+X\+T@{Q\+T\+Y\+P\+E\+\_\+\+T\+X\+T}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!Q\+T\+Y\+P\+E\+\_\+\+T\+X\+T@{Q\+T\+Y\+P\+E\+\_\+\+T\+X\+T}}\item[{\em 
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a4b71db0fb46cc3812ced6ec8423be001ad291a3106cc259b147646711c299e472}{}Q\+T\+Y\+P\+E\+\_\+\+T\+X\+T\label{_zeroconf_multicast_d_n_s_8c_a4b71db0fb46cc3812ced6ec8423be001ad291a3106cc259b147646711c299e472}
+}]\index{Q\+T\+Y\+P\+E\+\_\+\+S\+R\+V@{Q\+T\+Y\+P\+E\+\_\+\+S\+R\+V}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!Q\+T\+Y\+P\+E\+\_\+\+S\+R\+V@{Q\+T\+Y\+P\+E\+\_\+\+S\+R\+V}}\item[{\em 
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a4b71db0fb46cc3812ced6ec8423be001a9e9b4db28b546bb54ed9c2365ad4def9}{}Q\+T\+Y\+P\+E\+\_\+\+S\+R\+V\label{_zeroconf_multicast_d_n_s_8c_a4b71db0fb46cc3812ced6ec8423be001a9e9b4db28b546bb54ed9c2365ad4def9}
+}]\index{Q\+T\+Y\+P\+E\+\_\+\+A\+N\+Y@{Q\+T\+Y\+P\+E\+\_\+\+A\+N\+Y}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!Q\+T\+Y\+P\+E\+\_\+\+A\+N\+Y@{Q\+T\+Y\+P\+E\+\_\+\+A\+N\+Y}}\item[{\em 
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a4b71db0fb46cc3812ced6ec8423be001a4803391235808252c3459335d23401be}{}Q\+T\+Y\+P\+E\+\_\+\+A\+N\+Y\label{_zeroconf_multicast_d_n_s_8c_a4b71db0fb46cc3812ced6ec8423be001a4803391235808252c3459335d23401be}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 113 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_zeroconf_multicast_d_n_s_8c_ad09246453a4dabd919c7541484046a87}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{\+\_\+\+\_\+attribute\+\_\+\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}struct \+\_\+\+\_\+attribute\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{(\+\_\+\+\_\+packed\+\_\+\+\_\+)}]{}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8c_ad09246453a4dabd919c7541484046a87}
+
+
+Definition at line 232 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a5ef477a6a878005d4b44ce0196c04cbe}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!Display\+Host\+Name@{Display\+Host\+Name}}
+\index{Display\+Host\+Name@{Display\+Host\+Name}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{Display\+Host\+Name}]{\setlength{\rightskip}{0pt plus 5cm}M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+I\+C void Display\+Host\+Name (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{Host\+Name}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8c_a5ef477a6a878005d4b44ce0196c04cbe}
+
+
+Definition at line 365 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 0
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a8a69fd5952a14c7bfa97a304380d4bc1}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!Display\+I\+P\+Value@{Display\+I\+P\+Value}}
+\index{Display\+I\+P\+Value@{Display\+I\+P\+Value}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{Display\+I\+P\+Value}]{\setlength{\rightskip}{0pt plus 5cm}void Display\+I\+P\+Value (
+\begin{DoxyParamCaption}
+\item[{I\+P\+\_\+\+A\+D\+D\+R}]{I\+P\+Val}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8c_a8a69fd5952a14c7bfa97a304380d4bc1}
+
+
+Definition at line 670 of file Main\+Demo.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a1e02c702d1b8e90e54b511bdd8c403d3}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+Announce@{m\+D\+N\+S\+Announce}}
+\index{m\+D\+N\+S\+Announce@{m\+D\+N\+S\+Announce}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+Announce}]{\setlength{\rightskip}{0pt plus 5cm}void m\+D\+N\+S\+Announce (
+\begin{DoxyParamCaption}
+\item[{{\bf m\+D\+N\+S\+Resource\+Record} $\ast$}]{p\+R\+R}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8c_a1e02c702d1b8e90e54b511bdd8c403d3}
+
+
+Definition at line 1500 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a85f02dd49ff057009f82a11dd68b1cb6}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+De\+Compress@{m\+D\+N\+S\+De\+Compress}}
+\index{m\+D\+N\+S\+De\+Compress@{m\+D\+N\+S\+De\+Compress}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+De\+Compress}]{\setlength{\rightskip}{0pt plus 5cm}M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+I\+C {\bf W\+O\+R\+D} m\+D\+N\+S\+De\+Compress (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{w\+Pos, }
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{pc\+String, }
+\item[{{\bf B\+O\+O\+L}}]{b\+Follow\+Ptr, }
+\item[{{\bf B\+Y\+T\+E}}]{c\+Element, }
+\item[{{\bf B\+Y\+T\+E}}]{c\+Depth}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8c_a85f02dd49ff057009f82a11dd68b1cb6}
+
+
+Definition at line 1642 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 5
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_adbad294cbcf56ad3b687c20feb020e5c}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+Dump\+Info@{m\+D\+N\+S\+Dump\+Info}}
+\index{m\+D\+N\+S\+Dump\+Info@{m\+D\+N\+S\+Dump\+Info}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+Dump\+Info}]{\setlength{\rightskip}{0pt plus 5cm}void m\+D\+N\+S\+Dump\+Info (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8c_adbad294cbcf56ad3b687c20feb020e5c}
+
+
+Definition at line 2996 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_ac55c5857ff8637f0c9a2c8eaefb4969b}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+Fetch@{m\+D\+N\+S\+Fetch}}
+\index{m\+D\+N\+S\+Fetch@{m\+D\+N\+S\+Fetch}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+Fetch}]{\setlength{\rightskip}{0pt plus 5cm}M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+I\+C {\bf W\+O\+R\+D} m\+D\+N\+S\+Fetch (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{w\+Offset, }
+\item[{{\bf W\+O\+R\+D}}]{w\+Len, }
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{pc\+String}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8c_ac55c5857ff8637f0c9a2c8eaefb4969b}
+
+
+Definition at line 1587 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 7
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 8
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a59102f379c587b47f8c065d2cba9d3d7}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+Fill\+Host\+Record@{m\+D\+N\+S\+Fill\+Host\+Record}}
+\index{m\+D\+N\+S\+Fill\+Host\+Record@{m\+D\+N\+S\+Fill\+Host\+Record}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+Fill\+Host\+Record}]{\setlength{\rightskip}{0pt plus 5cm}void m\+D\+N\+S\+Fill\+Host\+Record (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8c_a59102f379c587b47f8c065d2cba9d3d7}
+
+
+Definition at line 2433 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 9
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_ade7f51beb8028f44a9267489ca00b9b6}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+Host\+Register@{m\+D\+N\+S\+Host\+Register}}
+\index{m\+D\+N\+S\+Host\+Register@{m\+D\+N\+S\+Host\+Register}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+Host\+Register}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E} m\+D\+N\+S\+Host\+Register (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{host\+\_\+name}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8c_ade7f51beb8028f44a9267489ca00b9b6}
+
+
+Definition at line 2451 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 10
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 11
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_adf52d26b251ad70adb7ca097394986d1}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+Initialize@{m\+D\+N\+S\+Initialize}}
+\index{m\+D\+N\+S\+Initialize@{m\+D\+N\+S\+Initialize}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void m\+D\+N\+S\+Initialize (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{sz\+Host\+Name}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8c_adf52d26b251ad70adb7ca097394986d1}
+
+
+Definition at line 2478 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 12
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 13
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a3253063bc42dff909f35b3737051ef09}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+Multicast\+Filter\+Register@{m\+D\+N\+S\+Multicast\+Filter\+Register}}
+\index{m\+D\+N\+S\+Multicast\+Filter\+Register@{m\+D\+N\+S\+Multicast\+Filter\+Register}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+Multicast\+Filter\+Register}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E} m\+D\+N\+S\+Multicast\+Filter\+Register (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8c_a3253063bc42dff909f35b3737051ef09}
+Zeroconf uses 224.\+0.\+0.\+251 =$>$ E0.\+00.\+00.\+F\+B =$>$ 1110\+\_\+0000.\+0000\+\_\+0000.\+0000\+\_\+0000.\+1111\+\_\+1011 Lower 23 bits are mapped to the multicast M\+A\+C address, prepended by 01\+:00\+:5\+E. This becomes 0000\+\_\+0001\+:0000\+\_\+0000\+:0101\+\_\+1110\+:0000\+\_\+0000\+:0000\+\_\+0000\+:1111\+\_\+1011 =$>$ 01\+:00\+:5\+E\+:00\+:00\+:F\+B 
+
+Definition at line 2956 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 14
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 15
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_afc08a5421e1f6da3a23309ba56bb7f8e}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+Probe@{m\+D\+N\+S\+Probe}}
+\index{m\+D\+N\+S\+Probe@{m\+D\+N\+S\+Probe}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+Probe}]{\setlength{\rightskip}{0pt plus 5cm}M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+I\+C {\bf B\+O\+O\+L} m\+D\+N\+S\+Probe (
+\begin{DoxyParamCaption}
+\item[{{\bf m\+D\+N\+S\+Process\+Ctx\+\_\+common} $\ast$}]{p\+Ctx}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8c_afc08a5421e1f6da3a23309ba56bb7f8e}
+
+
+Definition at line 635 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 16
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 17
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a2b66183d48d7fd2050e1661557927e1e}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+Process@{m\+D\+N\+S\+Process}}
+\index{m\+D\+N\+S\+Process@{m\+D\+N\+S\+Process}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+Process}]{\setlength{\rightskip}{0pt plus 5cm}void m\+D\+N\+S\+Process (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8c_a2b66183d48d7fd2050e1661557927e1e}
+
+
+Definition at line 2891 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 18
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 19
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a5d86d8b87c6bf781cb3692eb49041cb7}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+Process\+Incoming\+R\+R@{m\+D\+N\+S\+Process\+Incoming\+R\+R}}
+\index{m\+D\+N\+S\+Process\+Incoming\+R\+R@{m\+D\+N\+S\+Process\+Incoming\+R\+R}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+Process\+Incoming\+R\+R}]{\setlength{\rightskip}{0pt plus 5cm}M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+I\+C {\bf B\+Y\+T\+E} m\+D\+N\+S\+Process\+Incoming\+R\+R (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+D\+N\+S\+\_\+\+R\+R\+\_\+\+G\+R\+O\+U\+P}}]{tag, }
+\item[{{\bf M\+D\+N\+S\+\_\+\+M\+S\+G\+\_\+\+H\+E\+A\+D\+E\+R} $\ast$}]{pm\+D\+N\+S\+Msg\+Header, }
+\item[{{\bf W\+O\+R\+D}}]{idx\+Group, }
+\item[{{\bf W\+O\+R\+D}}]{idx\+R\+R}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8c_a5d86d8b87c6bf781cb3692eb49041cb7}
+
+
+Definition at line 1801 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 20
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 21
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a790561fcaf99874b79eab7db039b8c71}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+Process\+Internal@{m\+D\+N\+S\+Process\+Internal}}
+\index{m\+D\+N\+S\+Process\+Internal@{m\+D\+N\+S\+Process\+Internal}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+Process\+Internal}]{\setlength{\rightskip}{0pt plus 5cm}void m\+D\+N\+S\+Process\+Internal (
+\begin{DoxyParamCaption}
+\item[{{\bf m\+D\+N\+S\+Process\+Ctx\+\_\+common} $\ast$}]{p\+Ctx}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8c_a790561fcaf99874b79eab7db039b8c71}
+
+
+Definition at line 2546 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 22
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 23
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a476f393d05186c2f6f05021290ce3b59}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+Put\+String@{m\+D\+N\+S\+Put\+String}}
+\index{m\+D\+N\+S\+Put\+String@{m\+D\+N\+S\+Put\+String}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+Put\+String}]{\setlength{\rightskip}{0pt plus 5cm}M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+I\+C void m\+D\+N\+S\+Put\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{string}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8c_a476f393d05186c2f6f05021290ce3b59}
+
+
+Definition at line 557 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 24
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 25
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a83a3ff3ff6e7406423736e7c908d1e06}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+Rename@{m\+D\+N\+S\+Rename}}
+\index{m\+D\+N\+S\+Rename@{m\+D\+N\+S\+Rename}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+Rename}]{\setlength{\rightskip}{0pt plus 5cm}M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+I\+C void m\+D\+N\+S\+Rename (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{str\+Label, }
+\item[{{\bf B\+Y\+T\+E}}]{n\+Label\+Id, }
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{str\+Base, }
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{str\+Target, }
+\item[{{\bf B\+Y\+T\+E}}]{n\+Max\+Len}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8c_a83a3ff3ff6e7406423736e7c908d1e06}
+
+
+Definition at line 505 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 26
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 27
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_ac660af658400deb5fa1c0d0b63c7a0cd}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+Reset\+Counters@{m\+D\+N\+S\+Reset\+Counters}}
+\index{m\+D\+N\+S\+Reset\+Counters@{m\+D\+N\+S\+Reset\+Counters}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+Reset\+Counters}]{\setlength{\rightskip}{0pt plus 5cm}M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+I\+C void m\+D\+N\+S\+Reset\+Counters (
+\begin{DoxyParamCaption}
+\item[{{\bf m\+D\+N\+S\+Process\+Ctx\+\_\+common} $\ast$}]{p\+Header, }
+\item[{{\bf B\+O\+O\+L}}]{b\+Reset\+Probe\+Conflict\+Count}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8c_ac660af658400deb5fa1c0d0b63c7a0cd}
+
+
+Definition at line 449 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 28
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a9db99a259559d5b3e5f537b2b4f235a6}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+Responder@{m\+D\+N\+S\+Responder}}
+\index{m\+D\+N\+S\+Responder@{m\+D\+N\+S\+Responder}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+Responder}]{\setlength{\rightskip}{0pt plus 5cm}M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+I\+C void m\+D\+N\+S\+Responder (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8c_a9db99a259559d5b3e5f537b2b4f235a6}
+
+
+Definition at line 2106 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 29
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 30
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a16416bc39793f7e5742717283b855f33}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+S\+D\+Fill\+Res\+Records@{m\+D\+N\+S\+S\+D\+Fill\+Res\+Records}}
+\index{m\+D\+N\+S\+S\+D\+Fill\+Res\+Records@{m\+D\+N\+S\+S\+D\+Fill\+Res\+Records}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+S\+D\+Fill\+Res\+Records}]{\setlength{\rightskip}{0pt plus 5cm}void m\+D\+N\+S\+S\+D\+Fill\+Res\+Records (
+\begin{DoxyParamCaption}
+\item[{{\bf m\+D\+N\+S\+Process\+Ctx\+\_\+sd} $\ast$}]{sd}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8c_a16416bc39793f7e5742717283b855f33}
+
+
+Definition at line 1082 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 31
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 32
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a3cc63592c9d601ca82ac3a017dca5b91}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+S\+D\+Format\+Service\+Instance@{m\+D\+N\+S\+S\+D\+Format\+Service\+Instance}}
+\index{m\+D\+N\+S\+S\+D\+Format\+Service\+Instance@{m\+D\+N\+S\+S\+D\+Format\+Service\+Instance}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+S\+D\+Format\+Service\+Instance}]{\setlength{\rightskip}{0pt plus 5cm}M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+I\+C size\+\_\+t m\+D\+N\+S\+S\+D\+Format\+Service\+Instance (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{string, }
+\item[{size\+\_\+t}]{str\+Size}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8c_a3cc63592c9d601ca82ac3a017dca5b91}
+
+
+Definition at line 1000 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 33
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 34
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a73f6ad93226e78d3b3c677a0ac2ca133}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+Send\+R\+R@{m\+D\+N\+S\+Send\+R\+R}}
+\index{m\+D\+N\+S\+Send\+R\+R@{m\+D\+N\+S\+Send\+R\+R}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+Send\+R\+R}]{\setlength{\rightskip}{0pt plus 5cm}M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+I\+C {\bf B\+O\+O\+L} m\+D\+N\+S\+Send\+R\+R (
+\begin{DoxyParamCaption}
+\item[{{\bf m\+D\+N\+S\+Resource\+Record} $\ast$}]{p\+Record, }
+\item[{{\bf W\+O\+R\+D}}]{query\+\_\+id, }
+\item[{{\bf B\+Y\+T\+E}}]{c\+Flush, }
+\item[{{\bf W\+O\+R\+D}}]{n\+Answers\+In\+Msg, }
+\item[{{\bf B\+O\+O\+L}}]{b\+Is\+First\+R\+R, }
+\item[{{\bf B\+O\+O\+L}}]{b\+Is\+Last\+R\+R}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8c_a73f6ad93226e78d3b3c677a0ac2ca133}
+
+
+Definition at line 817 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 35
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 36
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_aa057fa57f0614721f5f7f3ddeaf02def}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+Service\+De\+Register@{m\+D\+N\+S\+Service\+De\+Register}}
+\index{m\+D\+N\+S\+Service\+De\+Register@{m\+D\+N\+S\+Service\+De\+Register}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+Service\+De\+Register}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E} m\+D\+N\+S\+Service\+De\+Register (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8c_aa057fa57f0614721f5f7f3ddeaf02def}
+
+
+Definition at line 1276 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 37
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_ac1b42c70d1648a5e0d5103dcc0ec2567}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+Service\+Register@{m\+D\+N\+S\+Service\+Register}}
+\index{m\+D\+N\+S\+Service\+Register@{m\+D\+N\+S\+Service\+Register}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+Service\+Register}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E} m\+D\+N\+S\+Service\+Register (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{srv\+\_\+name, }
+\item[{const char $\ast$}]{srv\+\_\+type, }
+\item[{{\bf W\+O\+R\+D}}]{port, }
+\item[{const {\bf B\+Y\+T\+E} $\ast$}]{txt\+\_\+record, }
+\item[{{\bf B\+Y\+T\+E}}]{auto\+\_\+rename, }
+\item[{void($\ast$)(char $\ast$name, {\bf M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E} err, void $\ast$context)}]{call\+\_\+back, }
+\item[{void $\ast$}]{context}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8c_ac1b42c70d1648a5e0d5103dcc0ec2567}
+
+
+Definition at line 1374 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 38
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 39
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a966ef56bb5b560e219237ab1a72da199}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+Service\+Update@{m\+D\+N\+S\+Service\+Update}}
+\index{m\+D\+N\+S\+Service\+Update@{m\+D\+N\+S\+Service\+Update}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+Service\+Update}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+D\+N\+S\+D\+\_\+\+E\+R\+R\+\_\+\+C\+O\+D\+E} m\+D\+N\+S\+Service\+Update (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{port, }
+\item[{const {\bf B\+Y\+T\+E} $\ast$}]{txt\+\_\+record}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8c_a966ef56bb5b560e219237ab1a72da199}
+
+
+Definition at line 1212 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 40
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a0c7f2e53c8f5d25069fe64639d1e3179}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+Tie\+Breaker@{m\+D\+N\+S\+Tie\+Breaker}}
+\index{m\+D\+N\+S\+Tie\+Breaker@{m\+D\+N\+S\+Tie\+Breaker}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+Tie\+Breaker}]{\setlength{\rightskip}{0pt plus 5cm}M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+I\+C {\bf B\+O\+O\+L} m\+D\+N\+S\+Tie\+Breaker (
+\begin{DoxyParamCaption}
+\item[{{\bf m\+D\+N\+S\+Resource\+Record} $\ast$}]{their, }
+\item[{{\bf m\+D\+N\+S\+Resource\+Record} $\ast$}]{our}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8c_a0c7f2e53c8f5d25069fe64639d1e3179}
+
+
+Definition at line 1766 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 41
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_abffa598c3f98375a1596201fa97170b8}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!strcmp\+\_\+local\+\_\+ignore\+\_\+case@{strcmp\+\_\+local\+\_\+ignore\+\_\+case}}
+\index{strcmp\+\_\+local\+\_\+ignore\+\_\+case@{strcmp\+\_\+local\+\_\+ignore\+\_\+case}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{strcmp\+\_\+local\+\_\+ignore\+\_\+case}]{\setlength{\rightskip}{0pt plus 5cm}M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+I\+C {\bf B\+Y\+T\+E} strcmp\+\_\+local\+\_\+ignore\+\_\+case (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{str\+\_\+1, }
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{str\+\_\+2}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8c_abffa598c3f98375a1596201fa97170b8}
+
+
+Definition at line 420 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 42
+
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_aa11b2c8f962821e5d4bcf941d2e94af0}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!U\+D\+P\+P\+U\+T\+\_\+\+L\+O\+C\+A\+L@{U\+D\+P\+P\+U\+T\+\_\+\+L\+O\+C\+A\+L}}
+\index{U\+D\+P\+P\+U\+T\+\_\+\+L\+O\+C\+A\+L@{U\+D\+P\+P\+U\+T\+\_\+\+L\+O\+C\+A\+L}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{U\+D\+P\+P\+U\+T\+\_\+\+L\+O\+C\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}M\+D\+N\+S\+\_\+\+S\+T\+A\+T\+I\+C void U\+D\+P\+P\+U\+T\+\_\+\+L\+O\+C\+A\+L (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{c}
+\end{DoxyParamCaption}
+)}\label{_zeroconf_multicast_d_n_s_8c_aa11b2c8f962821e5d4bcf941d2e94af0}
+
+
+Definition at line 342 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 43
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 44
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a1b77ed048388b80f33d3212a30446fb1}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!C\+O\+N\+S\+T\+\_\+\+S\+T\+R\+\_\+local@{C\+O\+N\+S\+T\+\_\+\+S\+T\+R\+\_\+local}}
+\index{C\+O\+N\+S\+T\+\_\+\+S\+T\+R\+\_\+local@{C\+O\+N\+S\+T\+\_\+\+S\+T\+R\+\_\+local}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{C\+O\+N\+S\+T\+\_\+\+S\+T\+R\+\_\+local}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf B\+Y\+T\+E}$\ast$ C\+O\+N\+S\+T\+\_\+\+S\+T\+R\+\_\+local = ({\bf B\+Y\+T\+E} $\ast$) \char`\"{}local\char`\"{}}\label{_zeroconf_multicast_d_n_s_8c_a1b77ed048388b80f33d3212a30446fb1}
+
+
+Definition at line 311 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a374a976da6ff9d90417bae587d2b7565}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!dbg\+\_\+p\+\_\+m\+D\+N\+S\+\_\+header@{dbg\+\_\+p\+\_\+m\+D\+N\+S\+\_\+header}}
+\index{dbg\+\_\+p\+\_\+m\+D\+N\+S\+\_\+header@{dbg\+\_\+p\+\_\+m\+D\+N\+S\+\_\+header}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{dbg\+\_\+p\+\_\+m\+D\+N\+S\+\_\+header}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+D\+N\+S\+\_\+\+M\+S\+G\+\_\+\+H\+E\+A\+D\+E\+R}$\ast$ dbg\+\_\+p\+\_\+m\+D\+N\+S\+\_\+header}\label{_zeroconf_multicast_d_n_s_8c_a374a976da6ff9d90417bae587d2b7565}
+
+
+Definition at line 1583 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_ab0c2e39f7a9989af74cc89d45c757792}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!dbg\+\_\+p\+\_\+res\+\_\+rec@{dbg\+\_\+p\+\_\+res\+\_\+rec}}
+\index{dbg\+\_\+p\+\_\+res\+\_\+rec@{dbg\+\_\+p\+\_\+res\+\_\+rec}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{dbg\+\_\+p\+\_\+res\+\_\+rec}]{\setlength{\rightskip}{0pt plus 5cm}{\bf m\+D\+N\+S\+Resource\+Record}$\ast$ dbg\+\_\+p\+\_\+res\+\_\+rec}\label{_zeroconf_multicast_d_n_s_8c_ab0c2e39f7a9989af74cc89d45c757792}
+
+
+Definition at line 1584 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a03b25bf23e42f992ef042a751f0888d8}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+\_\+responder\+\_\+state@{m\+D\+N\+S\+\_\+responder\+\_\+state}}
+\index{m\+D\+N\+S\+\_\+responder\+\_\+state@{m\+D\+N\+S\+\_\+responder\+\_\+state}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+\_\+responder\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}enum \{ ... \}   m\+D\+N\+S\+\_\+responder\+\_\+state}\label{_zeroconf_multicast_d_n_s_8c_a03b25bf23e42f992ef042a751f0888d8}
+\hypertarget{_zeroconf_multicast_d_n_s_8c_ab137197b94c94637f6b84eb8ba3ce889}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+\_\+socket@{m\+D\+N\+S\+\_\+socket}}
+\index{m\+D\+N\+S\+\_\+socket@{m\+D\+N\+S\+\_\+socket}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+\_\+socket}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T} m\+D\+N\+S\+\_\+socket = I\+N\+V\+A\+L\+I\+D\+\_\+\+U\+D\+P\+\_\+\+S\+O\+C\+K\+E\+T}\label{_zeroconf_multicast_d_n_s_8c_ab137197b94c94637f6b84eb8ba3ce889}
+
+
+Definition at line 324 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_af7117ca8092aaa2eeb9eb3136c9ca964}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+Process\+Ctx\+\_\+host@{m\+D\+N\+S\+Process\+Ctx\+\_\+host}}
+\index{m\+D\+N\+S\+Process\+Ctx\+\_\+host@{m\+D\+N\+S\+Process\+Ctx\+\_\+host}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+Process\+Ctx\+\_\+host}]{\setlength{\rightskip}{0pt plus 5cm}m\+D\+N\+S\+Process\+Ctx\+\_\+host}\label{_zeroconf_multicast_d_n_s_8c_af7117ca8092aaa2eeb9eb3136c9ca964}
+
+
+Definition at line 278 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a17204652be7e5ea7ae39b1c4cd572fd5}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+Process\+Ctx\+\_\+sd@{m\+D\+N\+S\+Process\+Ctx\+\_\+sd}}
+\index{m\+D\+N\+S\+Process\+Ctx\+\_\+sd@{m\+D\+N\+S\+Process\+Ctx\+\_\+sd}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+Process\+Ctx\+\_\+sd}]{\setlength{\rightskip}{0pt plus 5cm}m\+D\+N\+S\+Process\+Ctx\+\_\+sd}\label{_zeroconf_multicast_d_n_s_8c_a17204652be7e5ea7ae39b1c4cd572fd5}
+
+
+Definition at line 303 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+
+\hypertarget{_zeroconf_multicast_d_n_s_8c_a7a6bf3226d7c1a97d154cedda3227283}{}\index{Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}!m\+D\+N\+S\+Responder\+Ctx@{m\+D\+N\+S\+Responder\+Ctx}}
+\index{m\+D\+N\+S\+Responder\+Ctx@{m\+D\+N\+S\+Responder\+Ctx}!Zeroconf\+Multicast\+D\+N\+S.\+c@{Zeroconf\+Multicast\+D\+N\+S.\+c}}
+\subsubsection[{m\+D\+N\+S\+Responder\+Ctx}]{\setlength{\rightskip}{0pt plus 5cm}m\+D\+N\+S\+Responder\+Ctx}\label{_zeroconf_multicast_d_n_s_8c_a7a6bf3226d7c1a97d154cedda3227283}
+
+
+Definition at line 239 of file Zeroconf\+Multicast\+D\+N\+S.\+c.
+

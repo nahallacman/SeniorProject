@@ -1,0 +1,265 @@
+\hypertarget{_w_f_console_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Wi\+Fi/\+W\+F\+Console.c File Reference}
+\label{_w_f_console_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Wi\+Fi/\+W\+F\+Console.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Wi\+Fi/\+W\+F\+Console.\+c}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structhistory__struct}{history\+\_\+struct}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structhistory__struct}{history\+\_\+struct} \hyperlink{_w_f_console_8c_a835c630db1d98ee2b76b5c2784a43e4c}{t\+W\+F\+History}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{_w_f_console_8c_a721d9e580614a77d6065dbaecc3b7078a810b9b3a24074f70a7a7719af819e31b}{k\+S\+T\+Wait\+For\+Char}, 
+\hyperlink{_w_f_console_8c_a721d9e580614a77d6065dbaecc3b7078a1d76313348bdcb54ef1a0a5c77d6adbe}{k\+S\+T\+Wait\+For\+Esc\+Seq\+Second\+Char}, 
+\hyperlink{_w_f_console_8c_a721d9e580614a77d6065dbaecc3b7078ab199c79392b48efab800b9b045ba761a}{k\+S\+T\+Wait\+For\+Esc\+Seq\+Third\+Char}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_w_f_console_8c_ad07c811dcea7ef70b7ee3b8a19cd96d0}{W\+F\+Console\+Init} (void)
+\item 
+void \hyperlink{_w_f_console_8c_a08bebeac07c49ec2d103d7eda5841a4b}{W\+F\+Console\+Process} (void)
+\item 
+void \hyperlink{_w_f_console_8c_a780a76e11294990a58b6c71c2f7948bd}{W\+F\+Console\+Process\+Epilogue} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_a7ebe70ceca856797319175e30bcf003d}{I\+N\+T8} $\ast$$\ast$ \hyperlink{_w_f_console_8c_afc118d531adcef578e765f670447a3da}{W\+F\+Console\+Get\+Cmd\+Line\+Argv} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{_w_f_console_8c_a968199f7b0a50165bc15f97ae9d33db7}{W\+F\+Console\+Get\+Cmd\+Line\+Argc} (void)
+\item 
+void \hyperlink{_w_f_console_8c_ad9e3c1553d567ce485f6e8ef1eb399b7}{Output\+\_\+\+Monitor\+\_\+\+Hdr} (void)
+\item 
+void \hyperlink{_w_f_console_8c_a069902fab6eaba1079d062a04758370c}{W\+F\+Console\+Set\+Msg\+Flag} (void)
+\item 
+void \hyperlink{_w_f_console_8c_acfbfcfb3dc958a59c2b1f8d2a871bb28}{W\+F\+Console\+Release\+Console\+Msg} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{_w_f_console_8c_a57434e344f6a227b6f6f6997175cea67}{W\+F\+Console\+Is\+Console\+Msg\+Received} (void)
+\item 
+void \hyperlink{_w_f_console_8c_a474292b9800daa7b741a175a35afa9b7}{W\+F\+Console\+Print\+Integer} (\hyperlink{_generic_type_defs_8h_a1720f33f59b583f0c2ed071815623a86}{U\+I\+N\+T32} val, char mode)
+\item 
+void \hyperlink{_w_f_console_8c_aa9545014de5168d555a661ec51416b4e}{W\+F\+Console\+Print\+Hex} (\hyperlink{_generic_type_defs_8h_a1720f33f59b583f0c2ed071815623a86}{U\+I\+N\+T32} val, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} width)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structt_console_context}{t\+Console\+Context} \hyperlink{_w_f_console_8c_a6de4a26a81eb9eb6d1f6d97d86998302}{g\+\_\+\+Console\+Context}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_w_f_console_8c_a835c630db1d98ee2b76b5c2784a43e4c}{}\index{W\+F\+Console.\+c@{W\+F\+Console.\+c}!t\+W\+F\+History@{t\+W\+F\+History}}
+\index{t\+W\+F\+History@{t\+W\+F\+History}!W\+F\+Console.\+c@{W\+F\+Console.\+c}}
+\subsubsection[{t\+W\+F\+History}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf history\+\_\+struct}  {\bf t\+W\+F\+History}}\label{_w_f_console_8c_a835c630db1d98ee2b76b5c2784a43e4c}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_w_f_console_8c_a721d9e580614a77d6065dbaecc3b7078}{}\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{_w_f_console_8c_a721d9e580614a77d6065dbaecc3b7078}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{k\+S\+T\+Wait\+For\+Char@{k\+S\+T\+Wait\+For\+Char}!W\+F\+Console.\+c@{W\+F\+Console.\+c}}\index{W\+F\+Console.\+c@{W\+F\+Console.\+c}!k\+S\+T\+Wait\+For\+Char@{k\+S\+T\+Wait\+For\+Char}}\item[{\em 
+\hypertarget{_w_f_console_8c_a721d9e580614a77d6065dbaecc3b7078a810b9b3a24074f70a7a7719af819e31b}{}k\+S\+T\+Wait\+For\+Char\label{_w_f_console_8c_a721d9e580614a77d6065dbaecc3b7078a810b9b3a24074f70a7a7719af819e31b}
+}]\index{k\+S\+T\+Wait\+For\+Esc\+Seq\+Second\+Char@{k\+S\+T\+Wait\+For\+Esc\+Seq\+Second\+Char}!W\+F\+Console.\+c@{W\+F\+Console.\+c}}\index{W\+F\+Console.\+c@{W\+F\+Console.\+c}!k\+S\+T\+Wait\+For\+Esc\+Seq\+Second\+Char@{k\+S\+T\+Wait\+For\+Esc\+Seq\+Second\+Char}}\item[{\em 
+\hypertarget{_w_f_console_8c_a721d9e580614a77d6065dbaecc3b7078a1d76313348bdcb54ef1a0a5c77d6adbe}{}k\+S\+T\+Wait\+For\+Esc\+Seq\+Second\+Char\label{_w_f_console_8c_a721d9e580614a77d6065dbaecc3b7078a1d76313348bdcb54ef1a0a5c77d6adbe}
+}]\index{k\+S\+T\+Wait\+For\+Esc\+Seq\+Third\+Char@{k\+S\+T\+Wait\+For\+Esc\+Seq\+Third\+Char}!W\+F\+Console.\+c@{W\+F\+Console.\+c}}\index{W\+F\+Console.\+c@{W\+F\+Console.\+c}!k\+S\+T\+Wait\+For\+Esc\+Seq\+Third\+Char@{k\+S\+T\+Wait\+For\+Esc\+Seq\+Third\+Char}}\item[{\em 
+\hypertarget{_w_f_console_8c_a721d9e580614a77d6065dbaecc3b7078ab199c79392b48efab800b9b045ba761a}{}k\+S\+T\+Wait\+For\+Esc\+Seq\+Third\+Char\label{_w_f_console_8c_a721d9e580614a77d6065dbaecc3b7078ab199c79392b48efab800b9b045ba761a}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 73 of file W\+F\+Console.\+c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_w_f_console_8c_ad9e3c1553d567ce485f6e8ef1eb399b7}{}\index{W\+F\+Console.\+c@{W\+F\+Console.\+c}!Output\+\_\+\+Monitor\+\_\+\+Hdr@{Output\+\_\+\+Monitor\+\_\+\+Hdr}}
+\index{Output\+\_\+\+Monitor\+\_\+\+Hdr@{Output\+\_\+\+Monitor\+\_\+\+Hdr}!W\+F\+Console.\+c@{W\+F\+Console.\+c}}
+\subsubsection[{Output\+\_\+\+Monitor\+\_\+\+Hdr}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+\_\+\+Monitor\+\_\+\+Hdr (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_console_8c_ad9e3c1553d567ce485f6e8ef1eb399b7}
+
+
+Definition at line 486 of file W\+F\+Console.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+\hypertarget{_w_f_console_8c_a968199f7b0a50165bc15f97ae9d33db7}{}\index{W\+F\+Console.\+c@{W\+F\+Console.\+c}!W\+F\+Console\+Get\+Cmd\+Line\+Argc@{W\+F\+Console\+Get\+Cmd\+Line\+Argc}}
+\index{W\+F\+Console\+Get\+Cmd\+Line\+Argc@{W\+F\+Console\+Get\+Cmd\+Line\+Argc}!W\+F\+Console.\+c@{W\+F\+Console.\+c}}
+\subsubsection[{W\+F\+Console\+Get\+Cmd\+Line\+Argc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} W\+F\+Console\+Get\+Cmd\+Line\+Argc (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_console_8c_a968199f7b0a50165bc15f97ae9d33db7}
+
+
+Definition at line 426 of file W\+F\+Console.\+c.
+
+\hypertarget{_w_f_console_8c_afc118d531adcef578e765f670447a3da}{}\index{W\+F\+Console.\+c@{W\+F\+Console.\+c}!W\+F\+Console\+Get\+Cmd\+Line\+Argv@{W\+F\+Console\+Get\+Cmd\+Line\+Argv}}
+\index{W\+F\+Console\+Get\+Cmd\+Line\+Argv@{W\+F\+Console\+Get\+Cmd\+Line\+Argv}!W\+F\+Console.\+c@{W\+F\+Console.\+c}}
+\subsubsection[{W\+F\+Console\+Get\+Cmd\+Line\+Argv}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+N\+T8}$\ast$$\ast$ W\+F\+Console\+Get\+Cmd\+Line\+Argv (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_console_8c_afc118d531adcef578e765f670447a3da}
+
+
+Definition at line 421 of file W\+F\+Console.\+c.
+
+\hypertarget{_w_f_console_8c_ad07c811dcea7ef70b7ee3b8a19cd96d0}{}\index{W\+F\+Console.\+c@{W\+F\+Console.\+c}!W\+F\+Console\+Init@{W\+F\+Console\+Init}}
+\index{W\+F\+Console\+Init@{W\+F\+Console\+Init}!W\+F\+Console.\+c@{W\+F\+Console.\+c}}
+\subsubsection[{W\+F\+Console\+Init}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+Console\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_console_8c_ad07c811dcea7ef70b7ee3b8a19cd96d0}
+
+
+Definition at line 241 of file W\+F\+Console.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+\hypertarget{_w_f_console_8c_a57434e344f6a227b6f6f6997175cea67}{}\index{W\+F\+Console.\+c@{W\+F\+Console.\+c}!W\+F\+Console\+Is\+Console\+Msg\+Received@{W\+F\+Console\+Is\+Console\+Msg\+Received}}
+\index{W\+F\+Console\+Is\+Console\+Msg\+Received@{W\+F\+Console\+Is\+Console\+Msg\+Received}!W\+F\+Console.\+c@{W\+F\+Console.\+c}}
+\subsubsection[{W\+F\+Console\+Is\+Console\+Msg\+Received}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} W\+F\+Console\+Is\+Console\+Msg\+Received (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_console_8c_a57434e344f6a227b6f6f6997175cea67}
+
+
+Definition at line 1161 of file W\+F\+Console.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\hypertarget{_w_f_console_8c_aa9545014de5168d555a661ec51416b4e}{}\index{W\+F\+Console.\+c@{W\+F\+Console.\+c}!W\+F\+Console\+Print\+Hex@{W\+F\+Console\+Print\+Hex}}
+\index{W\+F\+Console\+Print\+Hex@{W\+F\+Console\+Print\+Hex}!W\+F\+Console.\+c@{W\+F\+Console.\+c}}
+\subsubsection[{W\+F\+Console\+Print\+Hex}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+Console\+Print\+Hex (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T32}}]{val, }
+\item[{{\bf U\+I\+N\+T8}}]{width}
+\end{DoxyParamCaption}
+)}\label{_w_f_console_8c_aa9545014de5168d555a661ec51416b4e}
+
+
+Definition at line 1188 of file W\+F\+Console.\+c.
+
+\hypertarget{_w_f_console_8c_a474292b9800daa7b741a175a35afa9b7}{}\index{W\+F\+Console.\+c@{W\+F\+Console.\+c}!W\+F\+Console\+Print\+Integer@{W\+F\+Console\+Print\+Integer}}
+\index{W\+F\+Console\+Print\+Integer@{W\+F\+Console\+Print\+Integer}!W\+F\+Console.\+c@{W\+F\+Console.\+c}}
+\subsubsection[{W\+F\+Console\+Print\+Integer}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+Console\+Print\+Integer (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T32}}]{val, }
+\item[{char}]{mode}
+\end{DoxyParamCaption}
+)}\label{_w_f_console_8c_a474292b9800daa7b741a175a35afa9b7}
+
+
+Definition at line 1167 of file W\+F\+Console.\+c.
+
+\hypertarget{_w_f_console_8c_a08bebeac07c49ec2d103d7eda5841a4b}{}\index{W\+F\+Console.\+c@{W\+F\+Console.\+c}!W\+F\+Console\+Process@{W\+F\+Console\+Process}}
+\index{W\+F\+Console\+Process@{W\+F\+Console\+Process}!W\+F\+Console.\+c@{W\+F\+Console.\+c}}
+\subsubsection[{W\+F\+Console\+Process}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+Console\+Process (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_console_8c_a08bebeac07c49ec2d103d7eda5841a4b}
+
+
+Definition at line 273 of file W\+F\+Console.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+\hypertarget{_w_f_console_8c_a780a76e11294990a58b6c71c2f7948bd}{}\index{W\+F\+Console.\+c@{W\+F\+Console.\+c}!W\+F\+Console\+Process\+Epilogue@{W\+F\+Console\+Process\+Epilogue}}
+\index{W\+F\+Console\+Process\+Epilogue@{W\+F\+Console\+Process\+Epilogue}!W\+F\+Console.\+c@{W\+F\+Console.\+c}}
+\subsubsection[{W\+F\+Console\+Process\+Epilogue}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+Console\+Process\+Epilogue (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_console_8c_a780a76e11294990a58b6c71c2f7948bd}
+
+
+Definition at line 399 of file W\+F\+Console.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 5
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\hypertarget{_w_f_console_8c_acfbfcfb3dc958a59c2b1f8d2a871bb28}{}\index{W\+F\+Console.\+c@{W\+F\+Console.\+c}!W\+F\+Console\+Release\+Console\+Msg@{W\+F\+Console\+Release\+Console\+Msg}}
+\index{W\+F\+Console\+Release\+Console\+Msg@{W\+F\+Console\+Release\+Console\+Msg}!W\+F\+Console.\+c@{W\+F\+Console.\+c}}
+\subsubsection[{W\+F\+Console\+Release\+Console\+Msg}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+Console\+Release\+Console\+Msg (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_console_8c_acfbfcfb3dc958a59c2b1f8d2a871bb28}
+
+
+Definition at line 1153 of file W\+F\+Console.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 7
+
+
+\hypertarget{_w_f_console_8c_a069902fab6eaba1079d062a04758370c}{}\index{W\+F\+Console.\+c@{W\+F\+Console.\+c}!W\+F\+Console\+Set\+Msg\+Flag@{W\+F\+Console\+Set\+Msg\+Flag}}
+\index{W\+F\+Console\+Set\+Msg\+Flag@{W\+F\+Console\+Set\+Msg\+Flag}!W\+F\+Console.\+c@{W\+F\+Console.\+c}}
+\subsubsection[{W\+F\+Console\+Set\+Msg\+Flag}]{\setlength{\rightskip}{0pt plus 5cm}void W\+F\+Console\+Set\+Msg\+Flag (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_w_f_console_8c_a069902fab6eaba1079d062a04758370c}
+
+
+Definition at line 1148 of file W\+F\+Console.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 8
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{_w_f_console_8c_a6de4a26a81eb9eb6d1f6d97d86998302}{}\index{W\+F\+Console.\+c@{W\+F\+Console.\+c}!g\+\_\+\+Console\+Context@{g\+\_\+\+Console\+Context}}
+\index{g\+\_\+\+Console\+Context@{g\+\_\+\+Console\+Context}!W\+F\+Console.\+c@{W\+F\+Console.\+c}}
+\subsubsection[{g\+\_\+\+Console\+Context}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\+Console\+Context} g\+\_\+\+Console\+Context}\label{_w_f_console_8c_a6de4a26a81eb9eb6d1f6d97d86998302}
+
+
+Definition at line 182 of file W\+F\+Console.\+c.
+

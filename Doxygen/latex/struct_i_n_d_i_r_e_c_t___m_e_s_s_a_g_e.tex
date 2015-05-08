@@ -1,0 +1,147 @@
+\hypertarget{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e}{}\section{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E Struct Reference}
+\label{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e}\index{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E@{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E}}
+
+
+{\ttfamily \#include $<$Mi\+Wi.\+h$>$}
+
+
+
+Collaboration diagram for I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E\+:
+% FIG 0
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_symbol_time_8h_aa0f8e40665d4ca8eb3e8f91e9e85c323}{M\+I\+W\+I\+\_\+\+T\+I\+C\+K} \hyperlink{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_ae503564adfdfd377ffa93790d164ca18}{Tick\+Start}
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_a37d13c21b54bfcaeff8c5e1e5cc69bd1}{Dest\+Address} \mbox{[}M\+Y\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+L\+E\+N\+G\+T\+H\mbox{]}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE} \hyperlink{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_a5ab8c2bf45b20b5f7aa3a4f083896cec}{Val}\\
+\>struct \{\\
+\>\>\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE} \hyperlink{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_af1cac6e82b75a4d9e92ac637101c54e2}{isValid}: 1\\
+\>\>\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE} \hyperlink{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_a96538013b2f93acf8ef08671b38b63dd}{isBroadcast}: 1\\
+\>\>\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE} \hyperlink{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_aeaccc3aae04d11711ce7c8b1923788cf}{isCommand}: 1\\
+\>\>\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE} \hyperlink{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_aa2fc68f45fbebcd0e0aa5219878719e2}{isSecured}: 1\\
+\>\>\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE} \hyperlink{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_abec340a9c6fdb591175374a007838097}{isAltAddr}: 1\\
+\>\} \hyperlink{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_a6912fea850e806d0ec013a05c40ea1ce}{bits}\\
+\} \hyperlink{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_abdc3b5d2061cbd7476dcddb0c03047eb}{flags}\\
+
+\end{tabbing}\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_a0afc809f4b5f61d553c168150037df57}{Pay\+Load\+Size}
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_a87328217db29b463f904a3934289dc36}{Pay\+Load} \mbox{[}T\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+Z\+E+\hyperlink{_mi_wi_8h_ab3d07208131a3506483a0d2b7d159bad}{M\+I\+W\+I\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+L\+E\+N}\mbox{]}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE} \hyperlink{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_a5ab8c2bf45b20b5f7aa3a4f083896cec}{Val}\\
+\>struct \{\\
+\>\>\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE} \hyperlink{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_af1cac6e82b75a4d9e92ac637101c54e2}{isValid}: 1\\
+\>\>\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE} \hyperlink{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_a96538013b2f93acf8ef08671b38b63dd}{isBroadcast}: 1\\
+\>\>\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE} \hyperlink{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_aeaccc3aae04d11711ce7c8b1923788cf}{isCommand}: 1\\
+\>\>\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE} \hyperlink{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_aa2fc68f45fbebcd0e0aa5219878719e2}{isSecured}: 1\\
+\>\>\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE} \hyperlink{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_abec340a9c6fdb591175374a007838097}{isAltAddr}: 1\\
+\>\} \hyperlink{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_a8a0dd26a9a0818928f5a49b9e6e5f490}{bits}\\
+\} \hyperlink{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_a3be861af08709eda0fe021434330965b}{flags}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 193 of file Mi\+Wi.\+h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_a6912fea850e806d0ec013a05c40ea1ce}{}\index{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E@{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E}!bits@{bits}}
+\index{bits@{bits}!I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E@{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E}}
+\subsubsection[{bits}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   bits}\label{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_a6912fea850e806d0ec013a05c40ea1ce}
+\hypertarget{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_a8a0dd26a9a0818928f5a49b9e6e5f490}{}\index{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E@{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E}!bits@{bits}}
+\index{bits@{bits}!I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E@{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E}}
+\subsubsection[{bits}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   bits}\label{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_a8a0dd26a9a0818928f5a49b9e6e5f490}
+\hypertarget{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_a37d13c21b54bfcaeff8c5e1e5cc69bd1}{}\index{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E@{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E}!Dest\+Address@{Dest\+Address}}
+\index{Dest\+Address@{Dest\+Address}!I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E@{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E}}
+\subsubsection[{Dest\+Address}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} Dest\+Address}\label{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_a37d13c21b54bfcaeff8c5e1e5cc69bd1}
+
+
+Definition at line 200 of file Mi\+Wi.\+h.
+
+\hypertarget{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_abdc3b5d2061cbd7476dcddb0c03047eb}{}\index{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E@{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E}!flags@{flags}}
+\index{flags@{flags}!I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E@{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E}}
+\subsubsection[{flags}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \}   flags}\label{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_abdc3b5d2061cbd7476dcddb0c03047eb}
+\hypertarget{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_a3be861af08709eda0fe021434330965b}{}\index{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E@{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E}!flags@{flags}}
+\index{flags@{flags}!I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E@{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E}}
+\subsubsection[{flags}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \}   flags}\label{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_a3be861af08709eda0fe021434330965b}
+\hypertarget{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_abec340a9c6fdb591175374a007838097}{}\index{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E@{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E}!is\+Alt\+Addr@{is\+Alt\+Addr}}
+\index{is\+Alt\+Addr@{is\+Alt\+Addr}!I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E@{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E}}
+\subsubsection[{is\+Alt\+Addr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} is\+Alt\+Addr}\label{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_abec340a9c6fdb591175374a007838097}
+
+
+Definition at line 210 of file Mi\+Wi.\+h.
+
+\hypertarget{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_a96538013b2f93acf8ef08671b38b63dd}{}\index{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E@{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E}!is\+Broadcast@{is\+Broadcast}}
+\index{is\+Broadcast@{is\+Broadcast}!I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E@{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E}}
+\subsubsection[{is\+Broadcast}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} is\+Broadcast}\label{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_a96538013b2f93acf8ef08671b38b63dd}
+
+
+Definition at line 207 of file Mi\+Wi.\+h.
+
+\hypertarget{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_aeaccc3aae04d11711ce7c8b1923788cf}{}\index{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E@{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E}!is\+Command@{is\+Command}}
+\index{is\+Command@{is\+Command}!I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E@{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E}}
+\subsubsection[{is\+Command}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} is\+Command}\label{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_aeaccc3aae04d11711ce7c8b1923788cf}
+
+
+Definition at line 208 of file Mi\+Wi.\+h.
+
+\hypertarget{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_aa2fc68f45fbebcd0e0aa5219878719e2}{}\index{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E@{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E}!is\+Secured@{is\+Secured}}
+\index{is\+Secured@{is\+Secured}!I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E@{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E}}
+\subsubsection[{is\+Secured}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} is\+Secured}\label{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_aa2fc68f45fbebcd0e0aa5219878719e2}
+
+
+Definition at line 209 of file Mi\+Wi.\+h.
+
+\hypertarget{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_af1cac6e82b75a4d9e92ac637101c54e2}{}\index{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E@{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E@{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E}}
+\subsubsection[{is\+Valid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} is\+Valid}\label{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_af1cac6e82b75a4d9e92ac637101c54e2}
+
+
+Definition at line 206 of file Mi\+Wi.\+h.
+
+\hypertarget{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_a87328217db29b463f904a3934289dc36}{}\index{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E@{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E}!Pay\+Load@{Pay\+Load}}
+\index{Pay\+Load@{Pay\+Load}!I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E@{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E}}
+\subsubsection[{Pay\+Load}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} Pay\+Load}\label{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_a87328217db29b463f904a3934289dc36}
+
+
+Definition at line 217 of file Mi\+Wi.\+h.
+
+\hypertarget{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_a0afc809f4b5f61d553c168150037df57}{}\index{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E@{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E}!Pay\+Load\+Size@{Pay\+Load\+Size}}
+\index{Pay\+Load\+Size@{Pay\+Load\+Size}!I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E@{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E}}
+\subsubsection[{Pay\+Load\+Size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} Pay\+Load\+Size}\label{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_a0afc809f4b5f61d553c168150037df57}
+
+
+Definition at line 213 of file Mi\+Wi.\+h.
+
+\hypertarget{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_ae503564adfdfd377ffa93790d164ca18}{}\index{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E@{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E}!Tick\+Start@{Tick\+Start}}
+\index{Tick\+Start@{Tick\+Start}!I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E@{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E}}
+\subsubsection[{Tick\+Start}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+I\+W\+I\+\_\+\+T\+I\+C\+K} Tick\+Start}\label{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_ae503564adfdfd377ffa93790d164ca18}
+
+
+Definition at line 195 of file Mi\+Wi.\+h.
+
+\hypertarget{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_a5ab8c2bf45b20b5f7aa3a4f083896cec}{}\index{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E@{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E}!Val@{Val}}
+\index{Val@{Val}!I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E@{I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E}}
+\subsubsection[{Val}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} Val}\label{struct_i_n_d_i_r_e_c_t___m_e_s_s_a_g_e_a5ab8c2bf45b20b5f7aa3a4f083896cec}
+
+
+Definition at line 203 of file Mi\+Wi.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+Wireless\+Protocols/\+Mi\+Wi/\hyperlink{_mi_wi_8h}{Mi\+Wi.\+h}\item 
+C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+Wireless\+Protocols/\+Mi\+Wi\+P\+R\+O/\hyperlink{_mi_wi_p_r_o_8h}{Mi\+Wi\+P\+R\+O.\+h}\end{DoxyCompactItemize}

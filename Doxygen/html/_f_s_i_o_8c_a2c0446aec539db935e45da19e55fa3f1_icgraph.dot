@@ -1,0 +1,28 @@
+digraph "Cache_File_Entry"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Cache_File_Entry",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="FILEfind",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_f_s_i_o_8c.html#aa0953ab0c059963e7b5c2076fdb01f9b"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="FSfopen",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_f_s_i_o_8c.html#a80780b69226fc956fb01be96e3dd4e66"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="FileOpen",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_file_system_8c.html#aa82c8d7821c63cb52f019ffeb362c64b"];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="FileOpenROM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_file_system_8c.html#ac74a42145bf44bfe5754a02f0b50bc55"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="FILEopen",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_f_s_i_o_8c.html#aefbcc2c762e5983bc83d6baf60d962f1"];
+  Node6 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Fill_File_Object",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_f_s_i_o_8c.html#aa92838a16615c1bb64460c551b9efc23"];
+  Node7 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="LoadDirAttrib",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_f_s_i_o_8c.html#a85280edaf801e1a3f13e62344c2d6ce4"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="FSfclose",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_f_s_i_o_8c.html#a7af3ca3a0534ded81fcc5d0744a2428e"];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="FileClose",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_file_system_8c.html#abce5f11a9272346065c5ebe7fb90a8cf"];
+}

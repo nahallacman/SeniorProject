@@ -1,0 +1,158 @@
+\hypertarget{_palette_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Graphics/\+Palette.c File Reference}
+\label{_palette_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Graphics/\+Palette.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Graphics/\+Palette.\+c}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_palette_8c_aafc99fb00545763188038ccb970465b8}{Start\+V\+Blank\+Interrupt} (void)
+\item 
+void \hyperlink{_palette_8c_a25ee30a5cd482faeee888f5d4da1e31e}{Request\+Palette\+Change} (void $\ast$p\+Palette, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} start\+Entry, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} length)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_palette_8c_a4cd91e710974fcd3eead8f1667fee977}{Set\+Palette} (void $\ast$p\+Palette, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} start\+Entry, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} length)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_palette_8c_aada15e333fb13794ffb9892d436ae82a}{Get\+Palette\+Change\+Error} (void)
+\item 
+void \hyperlink{_palette_8c_a3c135dfc7aa17b2ebff37fbb60cc4197}{Clear\+Palette\+Change\+Error} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_palette_8c_ab1a98603b70264777f3cd8482dd741a0}{Palette\+Bpp}
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_palette_8c_a6179271a23d19c05518e045c0d2fc1ff}{bl\+Palette\+Change\+Error}
+\item 
+void $\ast$ \hyperlink{_palette_8c_ae60b0fe93f2a7b01f6d8a76d9cfb0590}{p\+Pending\+Palette}
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_palette_8c_afe0483dad5667d8e1e42c27f0f4f796f}{Pending\+Start\+Entry}
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_palette_8c_a0c8a066d472f18b965fef7f4cca69176}{Pending\+Length}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_palette_8c_a3c135dfc7aa17b2ebff37fbb60cc4197}{}\index{Palette.\+c@{Palette.\+c}!Clear\+Palette\+Change\+Error@{Clear\+Palette\+Change\+Error}}
+\index{Clear\+Palette\+Change\+Error@{Clear\+Palette\+Change\+Error}!Palette.\+c@{Palette.\+c}}
+\subsubsection[{Clear\+Palette\+Change\+Error}]{\setlength{\rightskip}{0pt plus 5cm}void Clear\+Palette\+Change\+Error (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_palette_8c_a3c135dfc7aa17b2ebff37fbb60cc4197}
+
+
+Definition at line 160 of file Palette.\+c.
+
+\hypertarget{_palette_8c_aada15e333fb13794ffb9892d436ae82a}{}\index{Palette.\+c@{Palette.\+c}!Get\+Palette\+Change\+Error@{Get\+Palette\+Change\+Error}}
+\index{Get\+Palette\+Change\+Error@{Get\+Palette\+Change\+Error}!Palette.\+c@{Palette.\+c}}
+\subsubsection[{Get\+Palette\+Change\+Error}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} Get\+Palette\+Change\+Error (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_palette_8c_aada15e333fb13794ffb9892d436ae82a}
+
+
+Definition at line 141 of file Palette.\+c.
+
+\hypertarget{_palette_8c_a25ee30a5cd482faeee888f5d4da1e31e}{}\index{Palette.\+c@{Palette.\+c}!Request\+Palette\+Change@{Request\+Palette\+Change}}
+\index{Request\+Palette\+Change@{Request\+Palette\+Change}!Palette.\+c@{Palette.\+c}}
+\subsubsection[{Request\+Palette\+Change}]{\setlength{\rightskip}{0pt plus 5cm}void Request\+Palette\+Change (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{p\+Palette, }
+\item[{{\bf W\+O\+R\+D}}]{start\+Entry, }
+\item[{{\bf W\+O\+R\+D}}]{length}
+\end{DoxyParamCaption}
+)}\label{_palette_8c_a25ee30a5cd482faeee888f5d4da1e31e}
+
+
+Definition at line 70 of file Palette.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 0
+
+
+\hypertarget{_palette_8c_a4cd91e710974fcd3eead8f1667fee977}{}\index{Palette.\+c@{Palette.\+c}!Set\+Palette@{Set\+Palette}}
+\index{Set\+Palette@{Set\+Palette}!Palette.\+c@{Palette.\+c}}
+\subsubsection[{Set\+Palette}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} Set\+Palette (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{p\+Palette, }
+\item[{{\bf W\+O\+R\+D}}]{start\+Entry, }
+\item[{{\bf W\+O\+R\+D}}]{length}
+\end{DoxyParamCaption}
+)}\label{_palette_8c_a4cd91e710974fcd3eead8f1667fee977}
+
+
+Definition at line 95 of file Palette.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\hypertarget{_palette_8c_aafc99fb00545763188038ccb970465b8}{}\index{Palette.\+c@{Palette.\+c}!Start\+V\+Blank\+Interrupt@{Start\+V\+Blank\+Interrupt}}
+\index{Start\+V\+Blank\+Interrupt@{Start\+V\+Blank\+Interrupt}!Palette.\+c@{Palette.\+c}}
+\subsubsection[{Start\+V\+Blank\+Interrupt}]{\setlength{\rightskip}{0pt plus 5cm}void Start\+V\+Blank\+Interrupt (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_palette_8c_aafc99fb00545763188038ccb970465b8}
+
+
+Definition at line 6533 of file mchp\+Gfx\+Drv.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{_palette_8c_a6179271a23d19c05518e045c0d2fc1ff}{}\index{Palette.\+c@{Palette.\+c}!bl\+Palette\+Change\+Error@{bl\+Palette\+Change\+Error}}
+\index{bl\+Palette\+Change\+Error@{bl\+Palette\+Change\+Error}!Palette.\+c@{Palette.\+c}}
+\subsubsection[{bl\+Palette\+Change\+Error}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} bl\+Palette\+Change\+Error}\label{_palette_8c_a6179271a23d19c05518e045c0d2fc1ff}
+
+
+Definition at line 47 of file Palette.\+c.
+
+\hypertarget{_palette_8c_ab1a98603b70264777f3cd8482dd741a0}{}\index{Palette.\+c@{Palette.\+c}!Palette\+Bpp@{Palette\+Bpp}}
+\index{Palette\+Bpp@{Palette\+Bpp}!Palette.\+c@{Palette.\+c}}
+\subsubsection[{Palette\+Bpp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} Palette\+Bpp}\label{_palette_8c_ab1a98603b70264777f3cd8482dd741a0}
+
+
+Definition at line 46 of file Palette.\+c.
+
+\hypertarget{_palette_8c_a0c8a066d472f18b965fef7f4cca69176}{}\index{Palette.\+c@{Palette.\+c}!Pending\+Length@{Pending\+Length}}
+\index{Pending\+Length@{Pending\+Length}!Palette.\+c@{Palette.\+c}}
+\subsubsection[{Pending\+Length}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Pending\+Length}\label{_palette_8c_a0c8a066d472f18b965fef7f4cca69176}
+
+
+Definition at line 50 of file Palette.\+c.
+
+\hypertarget{_palette_8c_afe0483dad5667d8e1e42c27f0f4f796f}{}\index{Palette.\+c@{Palette.\+c}!Pending\+Start\+Entry@{Pending\+Start\+Entry}}
+\index{Pending\+Start\+Entry@{Pending\+Start\+Entry}!Palette.\+c@{Palette.\+c}}
+\subsubsection[{Pending\+Start\+Entry}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Pending\+Start\+Entry}\label{_palette_8c_afe0483dad5667d8e1e42c27f0f4f796f}
+
+
+Definition at line 49 of file Palette.\+c.
+
+\hypertarget{_palette_8c_ae60b0fe93f2a7b01f6d8a76d9cfb0590}{}\index{Palette.\+c@{Palette.\+c}!p\+Pending\+Palette@{p\+Pending\+Palette}}
+\index{p\+Pending\+Palette@{p\+Pending\+Palette}!Palette.\+c@{Palette.\+c}}
+\subsubsection[{p\+Pending\+Palette}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ p\+Pending\+Palette}\label{_palette_8c_ae60b0fe93f2a7b01f6d8a76d9cfb0590}
+
+
+Definition at line 48 of file Palette.\+c.
+

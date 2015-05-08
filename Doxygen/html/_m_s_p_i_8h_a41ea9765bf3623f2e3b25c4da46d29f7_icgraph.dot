@@ -1,0 +1,24 @@
+digraph "SPIPut"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="SPIPut",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="LCDInitPortA",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_wireless_protocols_2_l_c_d_blocking_8c.html#a46e16d3249248d31682947ad94f8b35f"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="LCDInitPortB",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_wireless_protocols_2_l_c_d_blocking_8c.html#aaf53986136d04051bb4ffd68b04d5e65"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="LCDWritePortA",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_wireless_protocols_2_l_c_d_blocking_8c.html#a796037f1ac5c0f01dde3a2136af988f3"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="LCDInitWrite",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_wireless_protocols_2_l_c_d_blocking_8c.html#a141525b7e23013651c45495ed7327f46"];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="LCD_i_write",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_wireless_protocols_2_l_c_d_blocking_8c.html#af8c0cd5fef77e5dc36c5249ea316708e"];
+  Node4 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="LCD_d_write",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_wireless_protocols_2_l_c_d_blocking_8c.html#af32cd8e5449b976ae39ed8e1a48ad31d"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="LCDWritePortB",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_wireless_protocols_2_l_c_d_blocking_8c.html#a6c4c0b78ba7dbfecffc8b9eb68fc3318"];
+  Node8 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

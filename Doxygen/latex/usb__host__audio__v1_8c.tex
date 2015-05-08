@@ -1,0 +1,585 @@
+\hypertarget{usb__host__audio__v1_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+U\+S\+B/\+Audio v1 Host Driver/usb\+\_\+host\+\_\+audio\+\_\+v1.c File Reference}
+\label{usb__host__audio__v1_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+U\+S\+B/\+Audio v1 Host Driver/usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+U\+S\+B/\+Audio v1 Host Driver/usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Generic\+Type\+Defs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Hardware\+Profile.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}U\+S\+B/usb.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}U\+S\+B/usb\+\_\+host\+\_\+audio\+\_\+v1.\+h\char`\"{}}\\*
+Include dependency graph for usb\+\_\+host\+\_\+audio\+\_\+v1.\+c\+:
+% FIG 0
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct___u_s_b___a_u_d_i_o___d_e_v_i_c_e___i_n_f_o}{\+\_\+\+U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+F\+O}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_acaba03c9d42908cc49948217995014ac}{U\+S\+B\+\_\+\+M\+A\+X\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+V\+I\+C\+E\+S}~1
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_a8785f84db1be6b0b5da34cd91a1b6138}{U\+S\+B\+\_\+\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O}~0x01
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_ac15481a4c15b9862dff1ce1fb372d9e5}{U\+S\+B\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D}~0x00
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_a663a276864a22677bffa6f6629293504}{U\+S\+B\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+C\+O\+N\+T\+R\+O\+L}~0x01
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_a9ff78cac82cd68f31988dd47e332dcb9}{U\+S\+B\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+S\+T\+R\+E\+A\+M\+I\+N\+G}~0x02
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_a36cca4bc6af0b948d4ed429855febfe9}{U\+S\+B\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+M\+I\+D\+I\+S\+T\+R\+E\+A\+M\+I\+N\+G}~0x03
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_a6bf7cbc7f92abbbec8e28e60f01c0bff}{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D}~0x20
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_ae34a6eea55d1a096dc766ca306112e5e}{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+D\+E\+V\+I\+C\+E}~0x21
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_ac6726080c69639f08c5a475f8b618e6d}{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N}~0x22
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_aa5d7b0fdb025cf6f273067e183817efa}{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+S\+T\+R\+I\+N\+G}~0x23
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_a6fc0c31fb66897fcc0cdf7d8b1ba8d56}{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E}~0x24
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_a273f4f5fe8b78d5bafb4dd27528e49d9}{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T}~0x25
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_a3035fb9c824b03940fc01f5e851cb284}{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D}~0x00
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_a7e91c7658ea15295b1908c616b12f23f}{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+H\+E\+A\+D\+E\+R}~0x01
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_a1e23adfbccdfeee833ad16cc34262ea6}{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+I\+N\+P\+U\+T\+\_\+\+T\+E\+R\+M\+I\+N\+A\+L}~0x02
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_a9c0ec52fada510226a6e5369fef755e5}{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+T\+E\+R\+M\+I\+N\+A\+L}~0x03
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_a585f8c1f160dd1008d26c1eb3d9234ef}{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+M\+I\+X\+E\+R\+\_\+\+U\+N\+I\+T}~0x04
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_a4249182c3643620fb5b45950f9ec28c9}{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+S\+E\+L\+E\+C\+T\+O\+R\+\_\+\+U\+N\+I\+T}~0x05
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_aafe5b61d134d830b416bf5d6ee129416}{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+I\+T}~0x06
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_a6566b308109e2b86c286250ad314e8b6}{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+P\+R\+O\+C\+E\+S\+S\+I\+N\+G\+\_\+\+U\+N\+I\+T}~0x07
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_acaba4d0a14a530e26d853237faf3ef50}{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+N\+\_\+\+U\+N\+I\+T}~0x08
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_a612969c7f5946a11ede30bfd1ba8d250}{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+S\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D}~0x00
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_a0b2c43a7cc35016e8ebb7f00d3cc70cc}{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+S\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+G\+E\+N\+E\+R\+A\+L}~0x01
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_ad7e767f2f622b94fa974afe54fd46fae}{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+S\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E}~0x02
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_a3b39d6075ed6705dd96761f67d5e4f9b}{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+S\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C}~0x03
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_abed50ac1b1b09eb8cd0d6c3f055258fb}{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D}~0x00
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_a69808306d682de44f988d1db75688454}{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I}~0x01
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_a9bfabb6ed52ca95f1918d7c15c429773}{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+I}~0x02
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_a8fe420cc4860748dbae1c1e6e294ef42}{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+I\+I}~0x03
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_a4413225db49eaff4da90f47bd0baa9c7}{S\+E\+T\+\_\+\+C\+U\+R}~0x01
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_af0ae2b9799bd02858d9d56d1381dacdb}{G\+E\+T\+\_\+\+C\+U\+R}~0x81
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_a43e841bfecfb099701222007b1d76b92}{S\+E\+T\+\_\+\+M\+I\+N}~0x02
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_a0cd9cbd5d772d1b0741f76aecca804dc}{G\+E\+T\+\_\+\+M\+I\+N}~0x82
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_ae404c7e492064fc7831ee4acc7b0fc2e}{S\+E\+T\+\_\+\+M\+A\+X}~0x03
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_afd8a6e72a40b3bacd71ba7d1cea02ab8}{G\+E\+T\+\_\+\+M\+A\+X}~0x83
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_aac7cc6ae1526808cb70bc95de2d9e348}{S\+E\+T\+\_\+\+R\+E\+S}~0x04
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_aa77c14d7a0730d9f649c17d43c161381}{G\+E\+T\+\_\+\+R\+E\+S}~0x84
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_a97c821df1d178722b310247935db46c9}{S\+E\+T\+\_\+\+M\+E\+M}~0x05
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_a205e45f6e9404b9b802d6c349c6a0826}{G\+E\+T\+\_\+\+M\+E\+M}~0x85
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_a3a7234074d9028a5753ae8be6197d023}{G\+E\+T\+\_\+\+S\+T\+A\+T}~0x\+F\+F
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_a106e968c6836a5ba57f5d8e6ef24fe0d}{S\+A\+M\+P\+L\+I\+N\+G\+\_\+\+F\+R\+E\+Q\+\_\+\+C\+O\+N\+T\+R\+O\+L}~0x0100
+\item 
+\#define \hyperlink{usb__host__audio__v1_8c_aca2963252ca9dd4fb6becdbf1df0c6f0}{P\+I\+T\+C\+H\+\_\+\+C\+O\+N\+T\+R\+O\+L}~0x0200
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct___u_s_b___a_u_d_i_o___d_e_v_i_c_e___i_n_f_o}{\+\_\+\+U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+F\+O} \hyperlink{usb__host__audio__v1_8c_a13a805eaebe8e1c0b6d8bcd09b8d8222}{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+F\+O}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{usb__host__audio__v1_8c_a7e8225c49c425f01d701bfc19def1d6d}{U\+S\+B\+Host\+Audio\+V1\+Receive\+Audio\+Data} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} device\+Address, \hyperlink{usb__host_8h_ade8a4b4156715111d625b5c693497cc5}{I\+S\+O\+C\+H\+R\+O\+N\+O\+U\+S\+\_\+\+D\+A\+T\+A} $\ast$p\+Isochronous\+Data)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{usb__host__audio__v1_8c_a36b0b9dacba16ed6814e80bb7d1b28fb}{U\+S\+B\+Host\+Audio\+V1\+Set\+Interface\+Full\+Bandwidth} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} device\+Address)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{usb__host__audio__v1_8c_ae4fcdb5b497fe8a416d7b791ea44aa37}{U\+S\+B\+Host\+Audio\+V1\+Set\+Interface\+Zero\+Bandwidth} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} device\+Address)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{usb__host__audio__v1_8c_aba866ef9d87f8a178e3b4814ebee7c06}{U\+S\+B\+Host\+Audio\+V1\+Set\+Sampling\+Frequency} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} device\+Address, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$frequency)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$ \hyperlink{usb__host__audio__v1_8c_a6deae4a604d0e7aadda64d6db71f331d}{U\+S\+B\+Host\+Audio\+V1\+Supported\+Frequencies} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} device\+Address)
+\item 
+void \hyperlink{usb__host__audio__v1_8c_aa77cdf9f66324a42f51539ec07074f1e}{U\+S\+B\+Host\+Audio\+V1\+Terminate\+Transfer} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} device\+Address)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__audio__v1_8c_a7975b0939a446e238bbdf6d3cf41f0dd}{U\+S\+B\+Host\+Audio\+V1\+Data\+Event\+Handler} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} address, \hyperlink{usb__common_8h_a58f011a3d1f4cad0e69a9bf036fb847c}{U\+S\+B\+\_\+\+E\+V\+E\+N\+T} event, void $\ast$data, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} size)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__audio__v1_8c_a49268d7d051fdd76019281a5989779ad}{U\+S\+B\+Host\+Audio\+V1\+Initialize} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} address, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} flags, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} client\+Driver\+I\+D)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__audio__v1_8c_ad0561733bbc8aa75b2f492b6e94306f0}{U\+S\+B\+Host\+Audio\+V1\+Event\+Handler} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} address, \hyperlink{usb__common_8h_a58f011a3d1f4cad0e69a9bf036fb847c}{U\+S\+B\+\_\+\+E\+V\+E\+N\+T} event, void $\ast$data, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} size)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{usb__host__audio__v1_8c_af0ae2b9799bd02858d9d56d1381dacdb}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!G\+E\+T\+\_\+\+C\+U\+R@{G\+E\+T\+\_\+\+C\+U\+R}}
+\index{G\+E\+T\+\_\+\+C\+U\+R@{G\+E\+T\+\_\+\+C\+U\+R}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{G\+E\+T\+\_\+\+C\+U\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+E\+T\+\_\+\+C\+U\+R~0x81}\label{usb__host__audio__v1_8c_af0ae2b9799bd02858d9d56d1381dacdb}
+
+
+Definition at line 150 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_afd8a6e72a40b3bacd71ba7d1cea02ab8}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!G\+E\+T\+\_\+\+M\+A\+X@{G\+E\+T\+\_\+\+M\+A\+X}}
+\index{G\+E\+T\+\_\+\+M\+A\+X@{G\+E\+T\+\_\+\+M\+A\+X}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{G\+E\+T\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+E\+T\+\_\+\+M\+A\+X~0x83}\label{usb__host__audio__v1_8c_afd8a6e72a40b3bacd71ba7d1cea02ab8}
+
+
+Definition at line 154 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_a205e45f6e9404b9b802d6c349c6a0826}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!G\+E\+T\+\_\+\+M\+E\+M@{G\+E\+T\+\_\+\+M\+E\+M}}
+\index{G\+E\+T\+\_\+\+M\+E\+M@{G\+E\+T\+\_\+\+M\+E\+M}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{G\+E\+T\+\_\+\+M\+E\+M}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+E\+T\+\_\+\+M\+E\+M~0x85}\label{usb__host__audio__v1_8c_a205e45f6e9404b9b802d6c349c6a0826}
+
+
+Definition at line 158 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_a0cd9cbd5d772d1b0741f76aecca804dc}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!G\+E\+T\+\_\+\+M\+I\+N@{G\+E\+T\+\_\+\+M\+I\+N}}
+\index{G\+E\+T\+\_\+\+M\+I\+N@{G\+E\+T\+\_\+\+M\+I\+N}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{G\+E\+T\+\_\+\+M\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+E\+T\+\_\+\+M\+I\+N~0x82}\label{usb__host__audio__v1_8c_a0cd9cbd5d772d1b0741f76aecca804dc}
+
+
+Definition at line 152 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_aa77c14d7a0730d9f649c17d43c161381}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!G\+E\+T\+\_\+\+R\+E\+S@{G\+E\+T\+\_\+\+R\+E\+S}}
+\index{G\+E\+T\+\_\+\+R\+E\+S@{G\+E\+T\+\_\+\+R\+E\+S}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{G\+E\+T\+\_\+\+R\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+E\+T\+\_\+\+R\+E\+S~0x84}\label{usb__host__audio__v1_8c_aa77c14d7a0730d9f649c17d43c161381}
+
+
+Definition at line 156 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_a3a7234074d9028a5753ae8be6197d023}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!G\+E\+T\+\_\+\+S\+T\+A\+T@{G\+E\+T\+\_\+\+S\+T\+A\+T}}
+\index{G\+E\+T\+\_\+\+S\+T\+A\+T@{G\+E\+T\+\_\+\+S\+T\+A\+T}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{G\+E\+T\+\_\+\+S\+T\+A\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+E\+T\+\_\+\+S\+T\+A\+T~0x\+F\+F}\label{usb__host__audio__v1_8c_a3a7234074d9028a5753ae8be6197d023}
+
+
+Definition at line 159 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_aca2963252ca9dd4fb6becdbf1df0c6f0}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!P\+I\+T\+C\+H\+\_\+\+C\+O\+N\+T\+R\+O\+L@{P\+I\+T\+C\+H\+\_\+\+C\+O\+N\+T\+R\+O\+L}}
+\index{P\+I\+T\+C\+H\+\_\+\+C\+O\+N\+T\+R\+O\+L@{P\+I\+T\+C\+H\+\_\+\+C\+O\+N\+T\+R\+O\+L}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{P\+I\+T\+C\+H\+\_\+\+C\+O\+N\+T\+R\+O\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+I\+T\+C\+H\+\_\+\+C\+O\+N\+T\+R\+O\+L~0x0200}\label{usb__host__audio__v1_8c_aca2963252ca9dd4fb6becdbf1df0c6f0}
+
+
+Definition at line 168 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_a106e968c6836a5ba57f5d8e6ef24fe0d}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!S\+A\+M\+P\+L\+I\+N\+G\+\_\+\+F\+R\+E\+Q\+\_\+\+C\+O\+N\+T\+R\+O\+L@{S\+A\+M\+P\+L\+I\+N\+G\+\_\+\+F\+R\+E\+Q\+\_\+\+C\+O\+N\+T\+R\+O\+L}}
+\index{S\+A\+M\+P\+L\+I\+N\+G\+\_\+\+F\+R\+E\+Q\+\_\+\+C\+O\+N\+T\+R\+O\+L@{S\+A\+M\+P\+L\+I\+N\+G\+\_\+\+F\+R\+E\+Q\+\_\+\+C\+O\+N\+T\+R\+O\+L}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{S\+A\+M\+P\+L\+I\+N\+G\+\_\+\+F\+R\+E\+Q\+\_\+\+C\+O\+N\+T\+R\+O\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+A\+M\+P\+L\+I\+N\+G\+\_\+\+F\+R\+E\+Q\+\_\+\+C\+O\+N\+T\+R\+O\+L~0x0100}\label{usb__host__audio__v1_8c_a106e968c6836a5ba57f5d8e6ef24fe0d}
+
+
+Definition at line 167 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_a4413225db49eaff4da90f47bd0baa9c7}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!S\+E\+T\+\_\+\+C\+U\+R@{S\+E\+T\+\_\+\+C\+U\+R}}
+\index{S\+E\+T\+\_\+\+C\+U\+R@{S\+E\+T\+\_\+\+C\+U\+R}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{S\+E\+T\+\_\+\+C\+U\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+E\+T\+\_\+\+C\+U\+R~0x01}\label{usb__host__audio__v1_8c_a4413225db49eaff4da90f47bd0baa9c7}
+
+
+Definition at line 149 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_ae404c7e492064fc7831ee4acc7b0fc2e}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!S\+E\+T\+\_\+\+M\+A\+X@{S\+E\+T\+\_\+\+M\+A\+X}}
+\index{S\+E\+T\+\_\+\+M\+A\+X@{S\+E\+T\+\_\+\+M\+A\+X}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{S\+E\+T\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+E\+T\+\_\+\+M\+A\+X~0x03}\label{usb__host__audio__v1_8c_ae404c7e492064fc7831ee4acc7b0fc2e}
+
+
+Definition at line 153 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_a97c821df1d178722b310247935db46c9}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!S\+E\+T\+\_\+\+M\+E\+M@{S\+E\+T\+\_\+\+M\+E\+M}}
+\index{S\+E\+T\+\_\+\+M\+E\+M@{S\+E\+T\+\_\+\+M\+E\+M}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{S\+E\+T\+\_\+\+M\+E\+M}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+E\+T\+\_\+\+M\+E\+M~0x05}\label{usb__host__audio__v1_8c_a97c821df1d178722b310247935db46c9}
+
+
+Definition at line 157 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_a43e841bfecfb099701222007b1d76b92}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!S\+E\+T\+\_\+\+M\+I\+N@{S\+E\+T\+\_\+\+M\+I\+N}}
+\index{S\+E\+T\+\_\+\+M\+I\+N@{S\+E\+T\+\_\+\+M\+I\+N}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{S\+E\+T\+\_\+\+M\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+E\+T\+\_\+\+M\+I\+N~0x02}\label{usb__host__audio__v1_8c_a43e841bfecfb099701222007b1d76b92}
+
+
+Definition at line 151 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_aac7cc6ae1526808cb70bc95de2d9e348}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!S\+E\+T\+\_\+\+R\+E\+S@{S\+E\+T\+\_\+\+R\+E\+S}}
+\index{S\+E\+T\+\_\+\+R\+E\+S@{S\+E\+T\+\_\+\+R\+E\+S}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{S\+E\+T\+\_\+\+R\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+E\+T\+\_\+\+R\+E\+S~0x04}\label{usb__host__audio__v1_8c_aac7cc6ae1526808cb70bc95de2d9e348}
+
+
+Definition at line 155 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_acaba4d0a14a530e26d853237faf3ef50}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+N\+\_\+\+U\+N\+I\+T@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+N\+\_\+\+U\+N\+I\+T}}
+\index{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+N\+\_\+\+U\+N\+I\+T@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+N\+\_\+\+U\+N\+I\+T}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+N\+\_\+\+U\+N\+I\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+N\+\_\+\+U\+N\+I\+T~0x08}\label{usb__host__audio__v1_8c_acaba4d0a14a530e26d853237faf3ef50}
+
+
+Definition at line 132 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_aafe5b61d134d830b416bf5d6ee129416}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+I\+T@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+I\+T}}
+\index{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+I\+T@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+I\+T}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+I\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+U\+N\+I\+T~0x06}\label{usb__host__audio__v1_8c_aafe5b61d134d830b416bf5d6ee129416}
+
+
+Definition at line 130 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_a7e91c7658ea15295b1908c616b12f23f}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+H\+E\+A\+D\+E\+R@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+H\+E\+A\+D\+E\+R}}
+\index{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+H\+E\+A\+D\+E\+R@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+H\+E\+A\+D\+E\+R}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+H\+E\+A\+D\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+H\+E\+A\+D\+E\+R~0x01}\label{usb__host__audio__v1_8c_a7e91c7658ea15295b1908c616b12f23f}
+
+
+Definition at line 125 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_a1e23adfbccdfeee833ad16cc34262ea6}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+I\+N\+P\+U\+T\+\_\+\+T\+E\+R\+M\+I\+N\+A\+L@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+I\+N\+P\+U\+T\+\_\+\+T\+E\+R\+M\+I\+N\+A\+L}}
+\index{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+I\+N\+P\+U\+T\+\_\+\+T\+E\+R\+M\+I\+N\+A\+L@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+I\+N\+P\+U\+T\+\_\+\+T\+E\+R\+M\+I\+N\+A\+L}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+I\+N\+P\+U\+T\+\_\+\+T\+E\+R\+M\+I\+N\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+I\+N\+P\+U\+T\+\_\+\+T\+E\+R\+M\+I\+N\+A\+L~0x02}\label{usb__host__audio__v1_8c_a1e23adfbccdfeee833ad16cc34262ea6}
+
+
+Definition at line 126 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_a585f8c1f160dd1008d26c1eb3d9234ef}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+M\+I\+X\+E\+R\+\_\+\+U\+N\+I\+T@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+M\+I\+X\+E\+R\+\_\+\+U\+N\+I\+T}}
+\index{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+M\+I\+X\+E\+R\+\_\+\+U\+N\+I\+T@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+M\+I\+X\+E\+R\+\_\+\+U\+N\+I\+T}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+M\+I\+X\+E\+R\+\_\+\+U\+N\+I\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+M\+I\+X\+E\+R\+\_\+\+U\+N\+I\+T~0x04}\label{usb__host__audio__v1_8c_a585f8c1f160dd1008d26c1eb3d9234ef}
+
+
+Definition at line 128 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_a9c0ec52fada510226a6e5369fef755e5}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+T\+E\+R\+M\+I\+N\+A\+L@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+T\+E\+R\+M\+I\+N\+A\+L}}
+\index{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+T\+E\+R\+M\+I\+N\+A\+L@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+T\+E\+R\+M\+I\+N\+A\+L}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+T\+E\+R\+M\+I\+N\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+T\+E\+R\+M\+I\+N\+A\+L~0x03}\label{usb__host__audio__v1_8c_a9c0ec52fada510226a6e5369fef755e5}
+
+
+Definition at line 127 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_a6566b308109e2b86c286250ad314e8b6}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+P\+R\+O\+C\+E\+S\+S\+I\+N\+G\+\_\+\+U\+N\+I\+T@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+P\+R\+O\+C\+E\+S\+S\+I\+N\+G\+\_\+\+U\+N\+I\+T}}
+\index{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+P\+R\+O\+C\+E\+S\+S\+I\+N\+G\+\_\+\+U\+N\+I\+T@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+P\+R\+O\+C\+E\+S\+S\+I\+N\+G\+\_\+\+U\+N\+I\+T}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+P\+R\+O\+C\+E\+S\+S\+I\+N\+G\+\_\+\+U\+N\+I\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+P\+R\+O\+C\+E\+S\+S\+I\+N\+G\+\_\+\+U\+N\+I\+T~0x07}\label{usb__host__audio__v1_8c_a6566b308109e2b86c286250ad314e8b6}
+
+
+Definition at line 131 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_a4249182c3643620fb5b45950f9ec28c9}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+S\+E\+L\+E\+C\+T\+O\+R\+\_\+\+U\+N\+I\+T@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+S\+E\+L\+E\+C\+T\+O\+R\+\_\+\+U\+N\+I\+T}}
+\index{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+S\+E\+L\+E\+C\+T\+O\+R\+\_\+\+U\+N\+I\+T@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+S\+E\+L\+E\+C\+T\+O\+R\+\_\+\+U\+N\+I\+T}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+S\+E\+L\+E\+C\+T\+O\+R\+\_\+\+U\+N\+I\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+S\+E\+L\+E\+C\+T\+O\+R\+\_\+\+U\+N\+I\+T~0x05}\label{usb__host__audio__v1_8c_a4249182c3643620fb5b45950f9ec28c9}
+
+
+Definition at line 129 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_a3035fb9c824b03940fc01f5e851cb284}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D}}
+\index{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+C\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D~0x00}\label{usb__host__audio__v1_8c_a3035fb9c824b03940fc01f5e851cb284}
+
+
+Definition at line 124 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_a3b39d6075ed6705dd96761f67d5e4f9b}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+S\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+S\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C}}
+\index{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+S\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+S\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+S\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+S\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C~0x03}\label{usb__host__audio__v1_8c_a3b39d6075ed6705dd96761f67d5e4f9b}
+
+
+Definition at line 137 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_ad7e767f2f622b94fa974afe54fd46fae}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+S\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+S\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E}}
+\index{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+S\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+S\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+S\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+S\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E~0x02}\label{usb__host__audio__v1_8c_ad7e767f2f622b94fa974afe54fd46fae}
+
+
+Definition at line 136 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_a0b2c43a7cc35016e8ebb7f00d3cc70cc}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+S\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+G\+E\+N\+E\+R\+A\+L@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+S\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+G\+E\+N\+E\+R\+A\+L}}
+\index{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+S\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+G\+E\+N\+E\+R\+A\+L@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+S\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+G\+E\+N\+E\+R\+A\+L}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+S\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+G\+E\+N\+E\+R\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+S\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+G\+E\+N\+E\+R\+A\+L~0x01}\label{usb__host__audio__v1_8c_a0b2c43a7cc35016e8ebb7f00d3cc70cc}
+
+
+Definition at line 135 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_a612969c7f5946a11ede30bfd1ba8d250}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+S\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+S\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D}}
+\index{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+S\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+S\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+S\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+A\+S\+\_\+\+I\+F\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D~0x00}\label{usb__host__audio__v1_8c_a612969c7f5946a11ede30bfd1ba8d250}
+
+
+Definition at line 134 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_ac6726080c69639f08c5a475f8b618e6d}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N}}
+\index{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N~0x22}\label{usb__host__audio__v1_8c_ac6726080c69639f08c5a475f8b618e6d}
+
+
+Definition at line 119 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_ae34a6eea55d1a096dc766ca306112e5e}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+D\+E\+V\+I\+C\+E@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+D\+E\+V\+I\+C\+E}}
+\index{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+D\+E\+V\+I\+C\+E@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+D\+E\+V\+I\+C\+E}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+D\+E\+V\+I\+C\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+D\+E\+V\+I\+C\+E~0x21}\label{usb__host__audio__v1_8c_ae34a6eea55d1a096dc766ca306112e5e}
+
+
+Definition at line 118 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_a273f4f5fe8b78d5bafb4dd27528e49d9}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T}}
+\index{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+E\+N\+D\+P\+O\+I\+N\+T~0x25}\label{usb__host__audio__v1_8c_a273f4f5fe8b78d5bafb4dd27528e49d9}
+
+
+Definition at line 122 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_a6fc0c31fb66897fcc0cdf7d8b1ba8d56}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E}}
+\index{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E~0x24}\label{usb__host__audio__v1_8c_a6fc0c31fb66897fcc0cdf7d8b1ba8d56}
+
+
+Definition at line 121 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_aa5d7b0fdb025cf6f273067e183817efa}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+S\+T\+R\+I\+N\+G@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+S\+T\+R\+I\+N\+G}}
+\index{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+S\+T\+R\+I\+N\+G@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+S\+T\+R\+I\+N\+G}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+S\+T\+R\+I\+N\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+S\+T\+R\+I\+N\+G~0x23}\label{usb__host__audio__v1_8c_aa5d7b0fdb025cf6f273067e183817efa}
+
+
+Definition at line 120 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_a6bf7cbc7f92abbbec8e28e60f01c0bff}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D}}
+\index{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+O\+R\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D~0x20}\label{usb__host__audio__v1_8c_a6bf7cbc7f92abbbec8e28e60f01c0bff}
+
+
+Definition at line 117 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_a69808306d682de44f988d1db75688454}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I}}
+\index{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I~0x01}\label{usb__host__audio__v1_8c_a69808306d682de44f988d1db75688454}
+
+
+Definition at line 140 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_a9bfabb6ed52ca95f1918d7c15c429773}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+I@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+I}}
+\index{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+I@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+I}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+I}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+I~0x02}\label{usb__host__audio__v1_8c_a9bfabb6ed52ca95f1918d7c15c429773}
+
+
+Definition at line 141 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_a8fe420cc4860748dbae1c1e6e294ef42}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+I\+I@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+I\+I}}
+\index{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+I\+I@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+I\+I}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+I\+I}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+I\+I~0x03}\label{usb__host__audio__v1_8c_a8fe420cc4860748dbae1c1e6e294ef42}
+
+
+Definition at line 142 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_abed50ac1b1b09eb8cd0d6c3f055258fb}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D}}
+\index{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D~0x00}\label{usb__host__audio__v1_8c_abed50ac1b1b09eb8cd0d6c3f055258fb}
+
+
+Definition at line 139 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_a8785f84db1be6b0b5da34cd91a1b6138}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O@{U\+S\+B\+\_\+\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O}}
+\index{U\+S\+B\+\_\+\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O@{U\+S\+B\+\_\+\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O~0x01}\label{usb__host__audio__v1_8c_a8785f84db1be6b0b5da34cd91a1b6138}
+
+
+Definition at line 110 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_acaba03c9d42908cc49948217995014ac}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+M\+A\+X\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+V\+I\+C\+E\+S@{U\+S\+B\+\_\+\+M\+A\+X\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+V\+I\+C\+E\+S}}
+\index{U\+S\+B\+\_\+\+M\+A\+X\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+V\+I\+C\+E\+S@{U\+S\+B\+\_\+\+M\+A\+X\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+V\+I\+C\+E\+S}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+M\+A\+X\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+V\+I\+C\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+M\+A\+X\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+V\+I\+C\+E\+S~1}\label{usb__host__audio__v1_8c_acaba03c9d42908cc49948217995014ac}
+
+
+Definition at line 101 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_a663a276864a22677bffa6f6629293504}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+C\+O\+N\+T\+R\+O\+L@{U\+S\+B\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+C\+O\+N\+T\+R\+O\+L}}
+\index{U\+S\+B\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+C\+O\+N\+T\+R\+O\+L@{U\+S\+B\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+C\+O\+N\+T\+R\+O\+L}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+C\+O\+N\+T\+R\+O\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+C\+O\+N\+T\+R\+O\+L~0x01}\label{usb__host__audio__v1_8c_a663a276864a22677bffa6f6629293504}
+
+
+Definition at line 113 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_a36cca4bc6af0b948d4ed429855febfe9}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+M\+I\+D\+I\+S\+T\+R\+E\+A\+M\+I\+N\+G@{U\+S\+B\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+M\+I\+D\+I\+S\+T\+R\+E\+A\+M\+I\+N\+G}}
+\index{U\+S\+B\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+M\+I\+D\+I\+S\+T\+R\+E\+A\+M\+I\+N\+G@{U\+S\+B\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+M\+I\+D\+I\+S\+T\+R\+E\+A\+M\+I\+N\+G}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+M\+I\+D\+I\+S\+T\+R\+E\+A\+M\+I\+N\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+M\+I\+D\+I\+S\+T\+R\+E\+A\+M\+I\+N\+G~0x03}\label{usb__host__audio__v1_8c_a36cca4bc6af0b948d4ed429855febfe9}
+
+
+Definition at line 115 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_a9ff78cac82cd68f31988dd47e332dcb9}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+S\+T\+R\+E\+A\+M\+I\+N\+G@{U\+S\+B\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+S\+T\+R\+E\+A\+M\+I\+N\+G}}
+\index{U\+S\+B\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+S\+T\+R\+E\+A\+M\+I\+N\+G@{U\+S\+B\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+S\+T\+R\+E\+A\+M\+I\+N\+G}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+S\+T\+R\+E\+A\+M\+I\+N\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+S\+T\+R\+E\+A\+M\+I\+N\+G~0x02}\label{usb__host__audio__v1_8c_a9ff78cac82cd68f31988dd47e332dcb9}
+
+
+Definition at line 114 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_ac15481a4c15b9862dff1ce1fb372d9e5}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D@{U\+S\+B\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D}}
+\index{U\+S\+B\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D@{U\+S\+B\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+A\+U\+D\+I\+O\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D~0x00}\label{usb__host__audio__v1_8c_ac15481a4c15b9862dff1ce1fb372d9e5}
+
+
+Definition at line 112 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{usb__host__audio__v1_8c_a13a805eaebe8e1c0b6d8bcd09b8d8222}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+F\+O@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+F\+O}}
+\index{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+F\+O@{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+F\+O}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+F\+O}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+F\+O}  {\bf U\+S\+B\+\_\+\+A\+U\+D\+I\+O\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+F\+O}}\label{usb__host__audio__v1_8c_a13a805eaebe8e1c0b6d8bcd09b8d8222}
+
+
+\subsection{Function Documentation}
+\hypertarget{usb__host__audio__v1_8c_a7975b0939a446e238bbdf6d3cf41f0dd}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+Host\+Audio\+V1\+Data\+Event\+Handler@{U\+S\+B\+Host\+Audio\+V1\+Data\+Event\+Handler}}
+\index{U\+S\+B\+Host\+Audio\+V1\+Data\+Event\+Handler@{U\+S\+B\+Host\+Audio\+V1\+Data\+Event\+Handler}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+Host\+Audio\+V1\+Data\+Event\+Handler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} U\+S\+B\+Host\+Audio\+V1\+Data\+Event\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{address, }
+\item[{{\bf U\+S\+B\+\_\+\+E\+V\+E\+N\+T}}]{event, }
+\item[{void $\ast$}]{data, }
+\item[{{\bf D\+W\+O\+R\+D}}]{size}
+\end{DoxyParamCaption}
+)}\label{usb__host__audio__v1_8c_a7975b0939a446e238bbdf6d3cf41f0dd}
+
+
+Definition at line 773 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_ad0561733bbc8aa75b2f492b6e94306f0}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+Host\+Audio\+V1\+Event\+Handler@{U\+S\+B\+Host\+Audio\+V1\+Event\+Handler}}
+\index{U\+S\+B\+Host\+Audio\+V1\+Event\+Handler@{U\+S\+B\+Host\+Audio\+V1\+Event\+Handler}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+Host\+Audio\+V1\+Event\+Handler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} U\+S\+B\+Host\+Audio\+V1\+Event\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{address, }
+\item[{{\bf U\+S\+B\+\_\+\+E\+V\+E\+N\+T}}]{event, }
+\item[{void $\ast$}]{data, }
+\item[{{\bf D\+W\+O\+R\+D}}]{size}
+\end{DoxyParamCaption}
+)}\label{usb__host__audio__v1_8c_ad0561733bbc8aa75b2f492b6e94306f0}
+
+
+Definition at line 1009 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+\hypertarget{usb__host__audio__v1_8c_a49268d7d051fdd76019281a5989779ad}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+Host\+Audio\+V1\+Initialize@{U\+S\+B\+Host\+Audio\+V1\+Initialize}}
+\index{U\+S\+B\+Host\+Audio\+V1\+Initialize@{U\+S\+B\+Host\+Audio\+V1\+Initialize}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+Host\+Audio\+V1\+Initialize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} U\+S\+B\+Host\+Audio\+V1\+Initialize (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{address, }
+\item[{{\bf D\+W\+O\+R\+D}}]{flags, }
+\item[{{\bf B\+Y\+T\+E}}]{client\+Driver\+I\+D}
+\end{DoxyParamCaption}
+)}\label{usb__host__audio__v1_8c_a49268d7d051fdd76019281a5989779ad}
+
+
+Definition at line 814 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+\hypertarget{usb__host__audio__v1_8c_a7e8225c49c425f01d701bfc19def1d6d}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+Host\+Audio\+V1\+Receive\+Audio\+Data@{U\+S\+B\+Host\+Audio\+V1\+Receive\+Audio\+Data}}
+\index{U\+S\+B\+Host\+Audio\+V1\+Receive\+Audio\+Data@{U\+S\+B\+Host\+Audio\+V1\+Receive\+Audio\+Data}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+Host\+Audio\+V1\+Receive\+Audio\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} U\+S\+B\+Host\+Audio\+V1\+Receive\+Audio\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{device\+Address, }
+\item[{{\bf I\+S\+O\+C\+H\+R\+O\+N\+O\+U\+S\+\_\+\+D\+A\+T\+A} $\ast$}]{p\+Isochronous\+Data}
+\end{DoxyParamCaption}
+)}\label{usb__host__audio__v1_8c_a7e8225c49c425f01d701bfc19def1d6d}
+
+
+Definition at line 278 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+\hypertarget{usb__host__audio__v1_8c_a36b0b9dacba16ed6814e80bb7d1b28fb}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+Host\+Audio\+V1\+Set\+Interface\+Full\+Bandwidth@{U\+S\+B\+Host\+Audio\+V1\+Set\+Interface\+Full\+Bandwidth}}
+\index{U\+S\+B\+Host\+Audio\+V1\+Set\+Interface\+Full\+Bandwidth@{U\+S\+B\+Host\+Audio\+V1\+Set\+Interface\+Full\+Bandwidth}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+Host\+Audio\+V1\+Set\+Interface\+Full\+Bandwidth}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} U\+S\+B\+Host\+Audio\+V1\+Set\+Interface\+Full\+Bandwidth (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{device\+Address}
+\end{DoxyParamCaption}
+)}\label{usb__host__audio__v1_8c_a36b0b9dacba16ed6814e80bb7d1b28fb}
+
+
+Definition at line 348 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+\hypertarget{usb__host__audio__v1_8c_ae4fcdb5b497fe8a416d7b791ea44aa37}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+Host\+Audio\+V1\+Set\+Interface\+Zero\+Bandwidth@{U\+S\+B\+Host\+Audio\+V1\+Set\+Interface\+Zero\+Bandwidth}}
+\index{U\+S\+B\+Host\+Audio\+V1\+Set\+Interface\+Zero\+Bandwidth@{U\+S\+B\+Host\+Audio\+V1\+Set\+Interface\+Zero\+Bandwidth}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+Host\+Audio\+V1\+Set\+Interface\+Zero\+Bandwidth}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} U\+S\+B\+Host\+Audio\+V1\+Set\+Interface\+Zero\+Bandwidth (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{device\+Address}
+\end{DoxyParamCaption}
+)}\label{usb__host__audio__v1_8c_ae4fcdb5b497fe8a416d7b791ea44aa37}
+
+
+Definition at line 420 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 5
+
+
+\hypertarget{usb__host__audio__v1_8c_aba866ef9d87f8a178e3b4814ebee7c06}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+Host\+Audio\+V1\+Set\+Sampling\+Frequency@{U\+S\+B\+Host\+Audio\+V1\+Set\+Sampling\+Frequency}}
+\index{U\+S\+B\+Host\+Audio\+V1\+Set\+Sampling\+Frequency@{U\+S\+B\+Host\+Audio\+V1\+Set\+Sampling\+Frequency}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+Host\+Audio\+V1\+Set\+Sampling\+Frequency}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} U\+S\+B\+Host\+Audio\+V1\+Set\+Sampling\+Frequency (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{device\+Address, }
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{frequency}
+\end{DoxyParamCaption}
+)}\label{usb__host__audio__v1_8c_aba866ef9d87f8a178e3b4814ebee7c06}
+
+
+Definition at line 559 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 6
+
+
+\hypertarget{usb__host__audio__v1_8c_a6deae4a604d0e7aadda64d6db71f331d}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+Host\+Audio\+V1\+Supported\+Frequencies@{U\+S\+B\+Host\+Audio\+V1\+Supported\+Frequencies}}
+\index{U\+S\+B\+Host\+Audio\+V1\+Supported\+Frequencies@{U\+S\+B\+Host\+Audio\+V1\+Supported\+Frequencies}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+Host\+Audio\+V1\+Supported\+Frequencies}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E}$\ast$ U\+S\+B\+Host\+Audio\+V1\+Supported\+Frequencies (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{device\+Address}
+\end{DoxyParamCaption}
+)}\label{usb__host__audio__v1_8c_a6deae4a604d0e7aadda64d6db71f331d}
+
+
+Definition at line 670 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+\hypertarget{usb__host__audio__v1_8c_aa77cdf9f66324a42f51539ec07074f1e}{}\index{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}!U\+S\+B\+Host\+Audio\+V1\+Terminate\+Transfer@{U\+S\+B\+Host\+Audio\+V1\+Terminate\+Transfer}}
+\index{U\+S\+B\+Host\+Audio\+V1\+Terminate\+Transfer@{U\+S\+B\+Host\+Audio\+V1\+Terminate\+Transfer}!usb\+\_\+host\+\_\+audio\+\_\+v1.\+c@{usb\+\_\+host\+\_\+audio\+\_\+v1.\+c}}
+\subsubsection[{U\+S\+B\+Host\+Audio\+V1\+Terminate\+Transfer}]{\setlength{\rightskip}{0pt plus 5cm}void U\+S\+B\+Host\+Audio\+V1\+Terminate\+Transfer (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{device\+Address}
+\end{DoxyParamCaption}
+)}\label{usb__host__audio__v1_8c_aa77cdf9f66324a42f51539ec07074f1e}
+
+
+Definition at line 720 of file usb\+\_\+host\+\_\+audio\+\_\+v1.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 7
+
+

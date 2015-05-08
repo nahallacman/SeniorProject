@@ -1,0 +1,79 @@
+\hypertarget{m_touch__slider_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch\+\_\+slider.c File Reference}
+\label{m_touch__slider_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch\+\_\+slider.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch\+\_\+slider.\+c}}
+
+
+Implements the m\+Touch sliders\textquotesingle{} decoding, if enabled.  
+
+
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structm_touch___slider_state}{m\+Touch\+\_\+\+Slider\+State}
+\begin{DoxyCompactList}\small\item\em Constant array storing configuration data for enabled sliders. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{m_touch__slider_8c_a1bb12f1a1c629bbfccbef2723ef626fc}{m\+Touch\+\_\+\+Slider\+Decode} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{m_touch__slider_8c_a19ced2802a74f2544f5b245a23eb90ea}{m\+Touch\+\_\+slider} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+L\+I\+D\+E\+R\+S\mbox{]}
+\begin{DoxyCompactList}\small\item\em Stores the current slider output value when scaling is enabled. \end{DoxyCompactList}\item 
+const \hyperlink{structm_touch___slider_state}{m\+Touch\+\_\+\+Slider\+State} \hyperlink{m_touch__slider_8c_a1c3402dd8c146fc66cae9ca53e0f4912}{m\+Touch\+\_\+slider\+State} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+L\+I\+D\+E\+R\+S\mbox{]} = M\+T\+O\+U\+C\+H\+\_\+\+S\+L\+I\+D\+E\+R\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+I\+N\+I\+T
+\item 
+const uint8\+\_\+t \hyperlink{m_touch__slider_8c_a95d12a626d3c5123f65b2e9305642617}{m\+Touch\+\_\+slider\+Index} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+L\+I\+D\+E\+R\+S\mbox{]}\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+S\+L\+I\+D\+E\+R\+S\+\_\+\+M\+A\+X\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]} = M\+T\+O\+U\+C\+H\+\_\+\+S\+L\+I\+D\+E\+R\+I\+N\+D\+E\+X\+\_\+\+I\+N\+I\+T
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements the m\+Touch sliders\textquotesingle{} decoding, if enabled. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{m_touch__slider_8c_a1bb12f1a1c629bbfccbef2723ef626fc}{}\index{m\+Touch\+\_\+slider.\+c@{m\+Touch\+\_\+slider.\+c}!m\+Touch\+\_\+\+Slider\+Decode@{m\+Touch\+\_\+\+Slider\+Decode}}
+\index{m\+Touch\+\_\+\+Slider\+Decode@{m\+Touch\+\_\+\+Slider\+Decode}!m\+Touch\+\_\+slider.\+c@{m\+Touch\+\_\+slider.\+c}}
+\subsubsection[{m\+Touch\+\_\+\+Slider\+Decode}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Touch\+\_\+\+Slider\+Decode (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_touch__slider_8c_a1bb12f1a1c629bbfccbef2723ef626fc}
+
+
+Definition at line 104 of file m\+Touch\+\_\+slider.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{m_touch__slider_8c_a19ced2802a74f2544f5b245a23eb90ea}{}\index{m\+Touch\+\_\+slider.\+c@{m\+Touch\+\_\+slider.\+c}!m\+Touch\+\_\+slider@{m\+Touch\+\_\+slider}}
+\index{m\+Touch\+\_\+slider@{m\+Touch\+\_\+slider}!m\+Touch\+\_\+slider.\+c@{m\+Touch\+\_\+slider.\+c}}
+\subsubsection[{m\+Touch\+\_\+slider}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t m\+Touch\+\_\+slider\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+L\+I\+D\+E\+R\+S\mbox{]}}\label{m_touch__slider_8c_a19ced2802a74f2544f5b245a23eb90ea}
+
+
+Stores the current slider output value when scaling is enabled. 
+
+Stores the current slider output value when scaling is disabled. 
+
+Definition at line 63 of file m\+Touch\+\_\+slider.\+c.
+
+\hypertarget{m_touch__slider_8c_a95d12a626d3c5123f65b2e9305642617}{}\index{m\+Touch\+\_\+slider.\+c@{m\+Touch\+\_\+slider.\+c}!m\+Touch\+\_\+slider\+Index@{m\+Touch\+\_\+slider\+Index}}
+\index{m\+Touch\+\_\+slider\+Index@{m\+Touch\+\_\+slider\+Index}!m\+Touch\+\_\+slider.\+c@{m\+Touch\+\_\+slider.\+c}}
+\subsubsection[{m\+Touch\+\_\+slider\+Index}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\+\_\+t m\+Touch\+\_\+slider\+Index\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+L\+I\+D\+E\+R\+S\mbox{]}\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+S\+L\+I\+D\+E\+R\+S\+\_\+\+M\+A\+X\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]} = M\+T\+O\+U\+C\+H\+\_\+\+S\+L\+I\+D\+E\+R\+I\+N\+D\+E\+X\+\_\+\+I\+N\+I\+T}\label{m_touch__slider_8c_a95d12a626d3c5123f65b2e9305642617}
+
+
+Definition at line 86 of file m\+Touch\+\_\+slider.\+c.
+
+\hypertarget{m_touch__slider_8c_a1c3402dd8c146fc66cae9ca53e0f4912}{}\index{m\+Touch\+\_\+slider.\+c@{m\+Touch\+\_\+slider.\+c}!m\+Touch\+\_\+slider\+State@{m\+Touch\+\_\+slider\+State}}
+\index{m\+Touch\+\_\+slider\+State@{m\+Touch\+\_\+slider\+State}!m\+Touch\+\_\+slider.\+c@{m\+Touch\+\_\+slider.\+c}}
+\subsubsection[{m\+Touch\+\_\+slider\+State}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf m\+Touch\+\_\+\+Slider\+State} m\+Touch\+\_\+slider\+State\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+L\+I\+D\+E\+R\+S\mbox{]} = M\+T\+O\+U\+C\+H\+\_\+\+S\+L\+I\+D\+E\+R\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+I\+N\+I\+T}\label{m_touch__slider_8c_a1c3402dd8c146fc66cae9ca53e0f4912}
+
+
+Definition at line 82 of file m\+Touch\+\_\+slider.\+c.
+

@@ -1,0 +1,22 @@
+digraph "WF_RxReceiveCompleteDataPacket"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="WF_RxReceiveCompleteData\lPacket",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="WF_RxDataReadPacket",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_data_tx_rx_8c.html#aa1f8c28f75d0758f48c272c6bd98ebe5"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="EnsureWFisAwake",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_driver_prv_8h.html#a967067df584a596445a8bc793df7933e"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="RawMountRxBuffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_raw_8h.html#abad9b6e42aa974dc86e7dd842911e2c5"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="WF_EintEnable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_api_8h.html#a939bc519999b13755ac6af4911d8fffb"];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="RawRead",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_raw_8h.html#a80553d24a57673724467c812b2a00d7b"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="WF_RxDataDeallocateBuffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_data_tx_rx_8c.html#ab3b83a64ed43dd63b8cccc36c94db937"];
+  Node7 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="DeallocateDataRxBuffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_w_f_raw_8h.html#a61c8aa69bc80ab5110a6b84d50bacced"];
+}

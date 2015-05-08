@@ -1,0 +1,15 @@
+digraph "_USB_INTERFACE_INFO"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="_USB_INTERFACE_INFO",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pInterfaceSettings\npCurrentSetting" ];
+  Node2 [label="_USB_INTERFACE_SETTING_INFO",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct___u_s_b___i_n_t_e_r_f_a_c_e___s_e_t_t_i_n_g___i_n_f_o.html"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pEndpointList" ];
+  Node3 [label="_USB_ENDPOINT_INFO",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct___u_s_b___e_n_d_p_o_i_n_t___i_n_f_o.html"];
+  Node3 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next" ];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" bmAttributes" ];
+  Node4 [label="TRANSFER_ATTRIBUTES",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$union_t_r_a_n_s_f_e_r___a_t_t_r_i_b_u_t_e_s.html"];
+  Node2 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next" ];
+  Node1 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next" ];
+}

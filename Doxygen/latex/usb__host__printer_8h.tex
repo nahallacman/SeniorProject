@@ -1,0 +1,1298 @@
+\hypertarget{usb__host__printer_8h}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+U\+S\+B/usb\+\_\+host\+\_\+printer.h File Reference}
+\label{usb__host__printer_8h}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+U\+S\+B/usb\+\_\+host\+\_\+printer.\+h@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+U\+S\+B/usb\+\_\+host\+\_\+printer.\+h}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{union_u_s_b___d_a_t_a___p_o_i_n_t_e_r}{U\+S\+B\+\_\+\+D\+A\+T\+A\+\_\+\+P\+O\+I\+N\+T\+E\+R}
+\item 
+union \hyperlink{union_u_s_b___p_r_i_n_t_e_r___f_u_n_c_t_i_o_n___s_u_p_p_o_r_t}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+S\+U\+P\+P\+O\+R\+T}
+\item 
+struct \hyperlink{struct___u_s_b___p_r_i_n_t_e_r___d_e_v_i_c_e___i_d}{\+\_\+\+U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+D}
+\item 
+struct \hyperlink{struct_u_s_b___p_r_i_n_t_e_r___i_m_a_g_e___i_n_f_o}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+I\+M\+A\+G\+E\+\_\+\+I\+N\+F\+O}
+\item 
+union \hyperlink{union_u_s_b___p_r_i_n_t_e_r___g_r_a_p_h_i_c_s___p_a_r_a_m_e_t_e_r_s}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+S}
+\item 
+struct \hyperlink{struct_u_s_b___p_r_i_n_t_e_r___i_n_t_e_r_f_a_c_e}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E}
+\item 
+struct \hyperlink{struct_u_s_b___p_r_i_n_t_e_r___s_p_e_c_i_f_i_c___i_n_t_e_r_f_a_c_e}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{usb__host__printer_8h_ac80bdc3075fe3663fe23a455ce4d56fb}{U\+S\+B\+\_\+\+M\+A\+X\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+S}~1
+\item 
+\#define \hyperlink{usb__host__printer_8h_a35f435697f344722aa62aa996a0e929e}{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+C\+H\+A\+R}~\textquotesingle{}\{\textquotesingle{}
+\item 
+\#define \hyperlink{usb__host__printer_8h_a46eba458381ab86ad2717df31048ae36}{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+S\+T\+R\+I\+N\+G}~\char`\"{}\{\char`\"{}
+\item 
+\#define \hyperlink{usb__host__printer_8h_ac82fa28c9978a78bbedd47a884e0d074}{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+A\+\_\+\+C\+H\+A\+R}~\textquotesingle{}A\textquotesingle{}
+\item 
+\#define \hyperlink{usb__host__printer_8h_ad979c1539bf867288dfee3c2ddc886c4}{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+A\+\_\+\+S\+T\+R\+I\+N\+G}~\char`\"{}A\char`\"{}
+\item 
+\#define \hyperlink{usb__host__printer_8h_ab4c7471bb2a4789c867dd4cc746f8095}{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+B\+\_\+\+C\+H\+A\+R}~\textquotesingle{}B\textquotesingle{}
+\item 
+\#define \hyperlink{usb__host__printer_8h_a4bd3d0efec6341664219be47e96f411f}{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+B\+\_\+\+S\+T\+R\+I\+N\+G}~\char`\"{}B\char`\"{}
+\item 
+\#define \hyperlink{usb__host__printer_8h_a97fbbfeb075e5d729cc0b5853db04246}{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+C\+\_\+\+C\+H\+A\+R}~\textquotesingle{}\hyperlink{_w_f_console_msgs_8h_aaa53ca0b650dfd85c4f59fa156f7a2cc}{C}\textquotesingle{}
+\item 
+\#define \hyperlink{usb__host__printer_8h_a15c8ab43d0a92f812af2704b003d1fad}{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+C\+\_\+\+S\+T\+R\+I\+N\+G}~\char`\"{}C\char`\"{}
+\item 
+\#define \hyperlink{usb__host__printer_8h_ad7e41404850faf32b3ea51ebe9370cc7}{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+18x36}~0
+\item 
+\#define \hyperlink{usb__host__printer_8h_ad6e319b041a5c118432ab176436a4e62}{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+12x24}~1
+\item 
+\#define \hyperlink{usb__host__printer_8h_a3d7219337f7ce58988c09c7ea92ac02c}{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+\+O\+M\+I\+T}~0
+\item 
+\#define \hyperlink{usb__host__printer_8h_ae043defe046595d8e82fa4e0a65b4594}{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+\+A\+B\+O\+V\+E}~1
+\item 
+\#define \hyperlink{usb__host__printer_8h_ab2070832d30ecf7b2ac6de3de264baa9}{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+\+B\+E\+L\+O\+W}~2
+\item 
+\#define \hyperlink{usb__host__printer_8h_a6e009f28c8542f4a228f1ca6189f716b}{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+\+A\+B\+O\+V\+E\+\_\+\+A\+N\+D\+\_\+\+B\+E\+L\+O\+W}~3
+\item 
+\#define \hyperlink{usb__host__printer_8h_a60c5e1dc97d80b891f3b836665c33d46}{P\+R\+I\+N\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+L\+A\+C\+K}~0
+\item 
+\#define \hyperlink{usb__host__printer_8h_aeaa0ff9cac94ea201ce8b1d3b8c350ff}{P\+R\+I\+N\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+W\+H\+I\+T\+E}~1
+\item 
+\#define \hyperlink{usb__host__printer_8h_a5d483fde4ff020eac513311e3028098a}{P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+D}~0x00
+\item 
+\#define \hyperlink{usb__host__printer_8h_a48b996631232277aab3dd0d7b0ba6f90}{P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+U\+S}~0x01
+\item 
+\#define \hyperlink{usb__host__printer_8h_a1c4d4d7f8c9a84e9aaac0375aff44d6e}{P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+O\+F\+T\+\_\+\+R\+E\+S\+E\+T}~0x02
+\item 
+\#define \hyperlink{usb__host__printer_8h_ae06e4b75d91aaa82acb558806e419398}{P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+I\+L\+L\+\_\+\+S\+O\+L\+I\+D}~0
+\item 
+\#define \hyperlink{usb__host__printer_8h_a9664fd475a02926e6b8ada431b54d663}{P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+I\+L\+L\+\_\+\+S\+H\+A\+D\+E\+D}~1
+\item 
+\#define \hyperlink{usb__host__printer_8h_af6f952b7b97f8c09fd3f2ed58445ad48}{P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+I\+L\+L\+\_\+\+H\+A\+T\+C\+H\+E\+D}~2
+\item 
+\#define \hyperlink{usb__host__printer_8h_a01590fbaa213b6d9e1e2b8d09d8982b9}{P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+I\+L\+L\+\_\+\+C\+R\+O\+S\+S\+\_\+\+H\+A\+T\+C\+H\+E\+D}~3
+\item 
+\#define \hyperlink{usb__host__printer_8h_af65fe76a7f4ef9ac42efa0e73bd393d5}{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+A\+S\+H\+E\+D}~1
+\item 
+\#define \hyperlink{usb__host__printer_8h_a13afaad5747a9686c0aebaf0f1eebc95}{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+O\+T\+T\+E\+D}~2
+\item 
+\#define \hyperlink{usb__host__printer_8h_a4ae4b79879f6257601d7d822e7089f7b}{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+O\+L\+I\+D}~0
+\item 
+\#define \hyperlink{usb__host__printer_8h_a45f710fb1f3451c3fa7acb661fbc9901}{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+T\+H\+\_\+\+N\+O\+R\+M\+A\+L}~0
+\item 
+\#define \hyperlink{usb__host__printer_8h_a9ffc4893d670341eadd2a10d43bb95c7}{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+T\+H\+\_\+\+T\+H\+I\+C\+K}~1
+\item 
+\#define \hyperlink{usb__host__printer_8h_ada84032aaa8af1b9f5c54c5c7786a001}{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+E\+N\+D\+\_\+\+B\+U\+T\+T}~0
+\item 
+\#define \hyperlink{usb__host__printer_8h_ac725f3ff400fc7497ba2b90e1bda4cdd}{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+E\+N\+D\+\_\+\+R\+O\+U\+N\+D}~1
+\item 
+\#define \hyperlink{usb__host__printer_8h_acc99c4bf05ced849fc4333866150f1d3}{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+E\+N\+D\+\_\+\+S\+Q\+U\+A\+R\+E}~2
+\item 
+\#define \hyperlink{usb__host__printer_8h_a43d6163ac80994d18c3f245d84cb1fc1}{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+J\+O\+I\+N\+\_\+\+B\+E\+V\+E\+L}~0
+\item 
+\#define \hyperlink{usb__host__printer_8h_adecd2854a96eb80d0000c9548b06ac53}{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+J\+O\+I\+N\+\_\+\+M\+I\+T\+E\+R}~1
+\item 
+\#define \hyperlink{usb__host__printer_8h_a81adc4afe9484146d0caf03403bba36e}{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+J\+O\+I\+N\+\_\+\+R\+O\+U\+N\+D}~2
+\item 
+\#define \hyperlink{usb__host__printer_8h_a62fedb4be63ea293d53a9cebcc0cc546}{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+L\+A\+N\+D\+S\+C\+A\+P\+E\+\_\+\+H\+E\+I\+G\+H\+T}~612
+\item 
+\#define \hyperlink{usb__host__printer_8h_a05eb0d2280bd60a2c1b60429a0b36758}{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+L\+A\+N\+D\+S\+C\+A\+P\+E\+\_\+\+W\+I\+D\+T\+H}~792
+\item 
+\#define \hyperlink{usb__host__printer_8h_a57f04b5dc85e55f086444ea1b4784b90}{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+H\+E\+I\+G\+H\+T}~792
+\item 
+\#define \hyperlink{usb__host__printer_8h_af8d4361d188d899d7860edb366f993fc}{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+W\+I\+D\+T\+H}~612
+\item 
+\#define \hyperlink{usb__host__printer_8h_ac38a093ea0330221f324db5b08940604}{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+H\+O\+R\+I\+Z\+O\+N\+T\+A\+L\+\_\+\+D\+O\+U\+B\+L\+E}~2
+\item 
+\#define \hyperlink{usb__host__printer_8h_a8b01d2a914c3066cad99c1a15c4b46a5}{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+H\+O\+R\+I\+Z\+O\+N\+T\+A\+L\+\_\+\+S\+I\+N\+G\+L\+E}~1
+\item 
+\#define \hyperlink{usb__host__printer_8h_a67e31e1b30976f20d0900d0defe7788d}{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+8}~8
+\item 
+\#define \hyperlink{usb__host__printer_8h_aa1ce8fac093decb249ec0d3c4678d84b}{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+24}~24
+\item 
+\#define \hyperlink{usb__host__printer_8h_a2789378e6803ec4bf06f5007a8aa9171}{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+L\+E\+F\+T\+\_\+\+T\+O\+\_\+\+R\+I\+G\+H\+T}~0
+\item 
+\#define \hyperlink{usb__host__printer_8h_a92ba61afd73b7d0cc9b74dfe494023a6}{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+B\+O\+T\+T\+O\+M\+\_\+\+T\+O\+\_\+\+T\+O\+P}~1
+\item 
+\#define \hyperlink{usb__host__printer_8h_aeff5adeb93467f3013bed730a11d09fc}{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+R\+I\+G\+H\+T\+\_\+\+T\+O\+\_\+\+L\+E\+F\+T}~2
+\item 
+\#define \hyperlink{usb__host__printer_8h_ac05ca784ba56595142f36aad7673bed5}{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+T\+O\+P\+\_\+\+T\+O\+\_\+\+B\+O\+T\+T\+O\+M}~3
+\item 
+\#define \hyperlink{usb__host__printer_8h_a5001e2ea4bc1713d5e4713277885f3c9}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+P\+O\+S}~0x0002
+\item 
+\#define \hyperlink{usb__host__printer_8h_a1a5aaa975c16637ba153a23595ff70f3}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S}~0x0001
+\item 
+\#define \hyperlink{usb__host__printer_8h_a2c5a0ed618dc733f4b9bcacdc9e3b9cd}{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T}~0
+\item 
+\#define \hyperlink{usb__host__printer_8h_af52b51032aa7eb979368ffd9f5117f86}{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+A\+T\+T\+A\+C\+H}~(\hyperlink{usb__common_8h_a58f011a3d1f4cad0e69a9bf036fb847ca55ccde266708fe2fb30bac23dcf250b9}{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+A\+S\+E}+\hyperlink{usb__host__printer_8h_a2c5a0ed618dc733f4b9bcacdc9e3b9cd}{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T}+0)
+\item 
+\#define \hyperlink{usb__host__printer_8h_a1787dcbf5b0bdcccc03c07ae6c3047bc}{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+T\+A\+C\+H}~(\hyperlink{usb__common_8h_a58f011a3d1f4cad0e69a9bf036fb847ca55ccde266708fe2fb30bac23dcf250b9}{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+A\+S\+E}+\hyperlink{usb__host__printer_8h_a2c5a0ed618dc733f4b9bcacdc9e3b9cd}{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T}+1)
+\item 
+\#define \hyperlink{usb__host__printer_8h_ae77ee5b051dd2daf05c1bcde58c81dbf}{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+X\+\_\+\+D\+O\+N\+E}~(\hyperlink{usb__common_8h_a58f011a3d1f4cad0e69a9bf036fb847ca55ccde266708fe2fb30bac23dcf250b9}{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+A\+S\+E}+\hyperlink{usb__host__printer_8h_a2c5a0ed618dc733f4b9bcacdc9e3b9cd}{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T}+2)
+\item 
+\#define \hyperlink{usb__host__printer_8h_ab3cb27d7771837db2aa074978349e77f}{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+R\+X\+\_\+\+D\+O\+N\+E}~(\hyperlink{usb__common_8h_a58f011a3d1f4cad0e69a9bf036fb847ca55ccde266708fe2fb30bac23dcf250b9}{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+A\+S\+E}+\hyperlink{usb__host__printer_8h_a2c5a0ed618dc733f4b9bcacdc9e3b9cd}{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T}+3)
+\item 
+\#define \hyperlink{usb__host__printer_8h_af87f99f8eadae725c7826f97606cf167}{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+O\+N\+E}~(\hyperlink{usb__common_8h_a58f011a3d1f4cad0e69a9bf036fb847ca55ccde266708fe2fb30bac23dcf250b9}{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+A\+S\+E}+\hyperlink{usb__host__printer_8h_a2c5a0ed618dc733f4b9bcacdc9e3b9cd}{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T}+4)
+\item 
+\#define \hyperlink{usb__host__printer_8h_a29c98b07305f56cb320da46b2cf8906b}{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+X\+\_\+\+E\+R\+R\+O\+R}~(\hyperlink{usb__common_8h_a58f011a3d1f4cad0e69a9bf036fb847ca55ccde266708fe2fb30bac23dcf250b9}{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+A\+S\+E}+\hyperlink{usb__host__printer_8h_a2c5a0ed618dc733f4b9bcacdc9e3b9cd}{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T}+5)
+\item 
+\#define \hyperlink{usb__host__printer_8h_aa8c82be7d2383616f294629048f97186}{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+R\+X\+\_\+\+E\+R\+R\+O\+R}~(\hyperlink{usb__common_8h_a58f011a3d1f4cad0e69a9bf036fb847ca55ccde266708fe2fb30bac23dcf250b9}{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+A\+S\+E}+\hyperlink{usb__host__printer_8h_a2c5a0ed618dc733f4b9bcacdc9e3b9cd}{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T}+6)
+\item 
+\#define \hyperlink{usb__host__printer_8h_a92193b57585b40dc3211ddccccd705c5}{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+E\+R\+R\+O\+R}~(\hyperlink{usb__common_8h_a58f011a3d1f4cad0e69a9bf036fb847ca55ccde266708fe2fb30bac23dcf250b9}{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+A\+S\+E}+\hyperlink{usb__host__printer_8h_a2c5a0ed618dc733f4b9bcacdc9e3b9cd}{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T}+7)
+\item 
+\#define \hyperlink{usb__host__printer_8h_a283a6b5442528a59527fe9561b386685}{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+U\+N\+S\+U\+P\+P\+O\+R\+T\+E\+D}~(\hyperlink{usb__common_8h_a58f011a3d1f4cad0e69a9bf036fb847ca55ccde266708fe2fb30bac23dcf250b9}{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+A\+S\+E}+\hyperlink{usb__host__printer_8h_a2c5a0ed618dc733f4b9bcacdc9e3b9cd}{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T}+8)
+\item 
+\#define \hyperlink{usb__host__printer_8h_a6feda561c0c62dfe27e1bc25a2ced4d2}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+C\+O\+P\+Y\+\_\+\+D\+A\+T\+A}~0x01
+\item 
+\#define \hyperlink{usb__host__printer_8h_a7aca5f64f2e789032bed0e62e30064d5}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+D\+A\+T\+A}~0x00
+\item 
+\#define \hyperlink{usb__host__printer_8h_af196e654d2702ae5f8b9bd4fe43de235}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+N\+O\+T\+I\+F\+Y}~0x02
+\item 
+\#define \hyperlink{usb__host__printer_8h_a44a74bf52829afeddef095def9db1e2b}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+F\+R\+O\+M\+\_\+\+R\+O\+M}~0x04
+\item 
+\#define \hyperlink{usb__host__printer_8h_a7981c94670fffc2c644e1c2c77a296d1}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+F\+R\+O\+M\+\_\+\+R\+A\+M}~0x00
+\item 
+\#define \hyperlink{usb__host__printer_8h_a44faa706a68787509ae023f8d8cbb0a2}{U\+S\+B\+H\+O\+S\+T\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+E\+T\+F\+L\+A\+G\+\_\+\+C\+O\+P\+Y\+\_\+\+D\+A\+T\+A}(x)~\{x $\vert$= \hyperlink{usb__host__printer_8h_a6feda561c0c62dfe27e1bc25a2ced4d2}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+C\+O\+P\+Y\+\_\+\+D\+A\+T\+A};\}
+\item 
+\#define \hyperlink{usb__host__printer_8h_afbb171fbbe68c93da8820eeac664222b}{U\+S\+B\+H\+O\+S\+T\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+E\+T\+F\+L\+A\+G\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+D\+A\+T\+A}(x)~\{x \&= $\sim$\hyperlink{usb__host__printer_8h_a6feda561c0c62dfe27e1bc25a2ced4d2}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+C\+O\+P\+Y\+\_\+\+D\+A\+T\+A};\}
+\item 
+\#define \hyperlink{usb__host__printer_8h_a997c3a05fc684c5d76ea4cadada04952}{U\+S\+B\+H\+O\+S\+T\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+E\+T\+F\+L\+A\+G\+\_\+\+N\+O\+T\+I\+F\+Y}(x)~\{x $\vert$= \hyperlink{usb__host__printer_8h_af196e654d2702ae5f8b9bd4fe43de235}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+N\+O\+T\+I\+F\+Y};\}
+\item 
+\#define \hyperlink{usb__host__printer_8h_abe4114bf3801b96f8d5612fbc4f8cb15}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E\+A\+B\+A\+R}~U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+A\+B\+A\+R
+\item 
+\#define \hyperlink{usb__host__printer_8h_acfb913dbe298b17793535019cef10af8}{U\+S\+B\+\_\+\+D\+A\+T\+A\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+R\+A\+M}(x)~((\hyperlink{union_u_s_b___d_a_t_a___p_o_i_n_t_e_r}{U\+S\+B\+\_\+\+D\+A\+T\+A\+\_\+\+P\+O\+I\+N\+T\+E\+R})(void $\ast$)x)
+\item 
+\#define \hyperlink{usb__host__printer_8h_acb1821e78ca6d77e518e0e45eda9d537}{U\+S\+B\+\_\+\+N\+U\+L\+L}~(\hyperlink{union_u_s_b___d_a_t_a___p_o_i_n_t_e_r}{U\+S\+B\+\_\+\+D\+A\+T\+A\+\_\+\+P\+O\+I\+N\+T\+E\+R})(void $\ast$)N\+U\+L\+L
+\item 
+\#define \hyperlink{usb__host__printer_8h_a4a71b4aa1f983040cac8525048a32183}{U\+S\+B\+Host\+Printer\+Command\+With\+Ready\+Wait}(return\+Code,  device\+Address,  command,  data,  size,  flags)
+\item 
+\#define \hyperlink{usb__host__printer_8h_aeafd798108e77aaa38b3f133f8dc23d5}{U\+S\+B\+Host\+Printer\+Position}(X,  \hyperlink{_r_s_a_8c_aa6297e7c4b19827a8b423088c0e5b2cd}{Y})~(((\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D})(X) $<$$<$ 16) $\vert$ ((\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D})(\hyperlink{_r_s_a_8c_aa6297e7c4b19827a8b423088c0e5b2cd}{Y}) \& 0x\+F\+F\+F\+F))
+\item 
+\#define \hyperlink{usb__host__printer_8h_a627ac395f94d808bc2c3c5af05795a54}{U\+S\+B\+Host\+Printer\+Position\+Relative}(d\+X,  d\+Y)~(((\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D})(d\+X) $<$$<$ 16) $\vert$ ((\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D})(d\+Y) \& 0x\+F\+F\+F\+F))
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct___u_s_b___p_r_i_n_t_e_r___d_e_v_i_c_e___i_d}{\+\_\+\+U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+D} \hyperlink{usb__host__printer_8h_acc6ade4e12b3e7bd440550fefe53bf5d}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+D}
+\item 
+typedef \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E}($\ast$ \hyperlink{usb__host__printer_8h_a386c8d36e894c3aaee8d1ec1802652d9}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+H\+A\+N\+D\+L\+E\+R}) (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} address, \hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+C\+O\+M\+M\+A\+N\+D} command, \hyperlink{union_u_s_b___d_a_t_a___p_o_i_n_t_e_r}{U\+S\+B\+\_\+\+D\+A\+T\+A\+\_\+\+P\+O\+I\+N\+T\+E\+R} data, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} size, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} flags)
+\item 
+typedef \hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L}($\ast$ \hyperlink{usb__host__printer_8h_ad717cd392ab7e52ccfe221f0e4f6a66f}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+S\+U\+P\+P\+O\+R\+T\+E\+D}) (char $\ast$device\+I\+D, \hyperlink{union_u_s_b___p_r_i_n_t_e_r___f_u_n_c_t_i_o_n___s_u_p_p_o_r_t}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+S\+U\+P\+P\+O\+R\+T} $\ast$support)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+C\+O\+M\+M\+A\+N\+D} \{ \\*
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9af263c4c6015e6ab45527aaf894677ee9}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+A\+T\+T\+A\+C\+H\+E\+D}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9ad036ca901aa851473648e81d5ceeff3f}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+T\+A\+C\+H\+E\+D}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9af1d265c6a2169f25fcb4684af7bfa452}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+N\+T}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9ab137270e43f3808444a9eb7c70067e55}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+J\+O\+B\+\_\+\+S\+T\+A\+R\+T}, 
+\\*
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a200f1fa7ee4f0bd801642625b7e8f5cb}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+J\+O\+B\+\_\+\+S\+T\+O\+P}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9abd979103d81c49162fc943e12db3f318}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+P\+O\+R\+T\+R\+A\+I\+T}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a1269f204681729f7f9e090c0132389ff}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+L\+A\+N\+D\+S\+C\+A\+P\+E}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a55cf69634951ccd9832be820ba54f557}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+N\+A\+M\+E}, 
+\\*
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a736e7a994fcb391582cf92b8ed81e1dd}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+S\+I\+Z\+E}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a239eef3f7dd16d00bbe93f8a327b3bc0}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+I\+T\+A\+L\+I\+C}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a0c0f7652c05768e080c10479c79e56c6}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+U\+P\+R\+I\+G\+H\+T}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a2ec8df17ae95536ed4016282b7e5aab3}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+B\+O\+L\+D}, 
+\\*
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a02780b58e3076ead046eefd12942cfe6}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+M\+E\+D\+I\+U\+M}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a35d0d96a139496d4b40e2708a88ce169}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+E\+J\+E\+C\+T\+\_\+\+P\+A\+G\+E}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a376ca7d67782742a39f064196727652d}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+E\+X\+T\+\_\+\+S\+T\+A\+R\+T}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9afe7bc68a97fbe5e65754af1b73f68b45}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+E\+X\+T}, 
+\\*
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9ada0206f03b2bb72336afd5f8ae252437}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+E\+X\+T\+\_\+\+S\+T\+O\+P}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9aee756f62a2d6b64aa366b4de540e3600}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+E\+T\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9ae27a75975174724f538ed4bf338646f5}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+I\+M\+A\+G\+E\+\_\+\+S\+T\+A\+R\+T}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a5e2451333d3064579c92e1526a53b29c}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+I\+M\+A\+G\+E\+\_\+\+D\+A\+T\+A\+\_\+\+H\+E\+A\+D\+E\+R}, 
+\\*
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a81d147961b6e7976d095677497f66efb}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+I\+M\+A\+G\+E\+\_\+\+D\+A\+T\+A}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9abef1235f312019da7ca68929d95ea9aa}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+I\+M\+A\+G\+E\+\_\+\+S\+T\+O\+P}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9af056239c83980ee20f9c3b0ec1fb0579}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+S\+T\+A\+R\+T}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9aa1ac94c27c232df9b61b0a014d4148d6}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+T\+Y\+P\+E}, 
+\\*
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a8e12c27fe502a3f4e47c1c42cb7c4ce8}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+T\+H}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9af0e258f78d72eca23141af47fcb31048}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+E\+N\+D}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a176b4af3fc4c274fead5ff7ab535f2da}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+J\+O\+I\+N}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9abbe6fc9859cc329be31644f7a2c10486}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+F\+I\+L\+L\+\_\+\+T\+Y\+P\+E}, 
+\\*
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a99c903b4dd5bb4d9d43f2089613d4196}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+C\+O\+L\+O\+R}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a63bc236cfc747d0d6d8587acf6ebcce7}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+M\+O\+V\+E\+\_\+\+T\+O}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9aed365ccdd0709386ec97143463426b82}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+M\+O\+V\+E\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9ac39fafba069365785d9c8a8aba536b1a}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E}, 
+\\*
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9aa2fbbed7a0044abbf2e6793086517cae}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+T\+O}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a331e21c4a339fcb08af0ea6b2928a1b0}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+T\+O\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a2f40d8aac3d8d2c973339b7d4714031e}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+A\+R\+C}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a4fbdec33e6d633c12f4ad95d4c60f0ca}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+C\+I\+R\+C\+L\+E}, 
+\\*
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a667d97c061a5dabbe5c24502be81ca9f}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+C\+I\+R\+C\+L\+E\+\_\+\+F\+I\+L\+L\+E\+D}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9aadf02455d872af13f14dd8cf86bbc0a2}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+B\+E\+V\+E\+L}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a146f8840878e819668c55d3bdbedba3c}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+B\+E\+V\+E\+L\+\_\+\+F\+I\+L\+L\+E\+D}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9ab57c5fefc8211dd3ce76c26f9e29a8c6}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+R\+E\+C\+T\+A\+N\+G\+L\+E}, 
+\\*
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a5b409ae6f16877e67ecc647d299b3e73}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+R\+E\+C\+T\+A\+N\+G\+L\+E\+\_\+\+F\+I\+L\+L\+E\+D}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a3b56dad21c771490d617c79d652a58f5}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+P\+O\+L\+Y\+G\+O\+N}, 
+\hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a9436c7beb0a84688ab0c4daeaf81c316}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+E\+N\+D}
+ \}
+\item 
+enum \hyperlink{usb__host__printer_8h_abdf150befb558700f76f24196b606de3}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+S} \{ \\*
+\hyperlink{usb__host__printer_8h_abdf150befb558700f76f24196b606de3a7f64800fd2818418ddd7d7ce2addd0fa}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+A\+V\+A\+N\+T\+\_\+\+G\+A\+R\+D\+E} = 0, 
+\hyperlink{usb__host__printer_8h_abdf150befb558700f76f24196b606de3aedcb91a8a86c95f7bbc167e3de83e14a}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+B\+O\+O\+K\+M\+A\+N}, 
+\hyperlink{usb__host__printer_8h_abdf150befb558700f76f24196b606de3a425f0128c27fc2d85766c1cac00c3772}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+C\+O\+U\+R\+I\+E\+R}, 
+\hyperlink{usb__host__printer_8h_abdf150befb558700f76f24196b606de3ae91c6981363b5c29c3228e385fc120c0}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+H\+E\+L\+V\+E\+T\+I\+C\+A}, 
+\\*
+\hyperlink{usb__host__printer_8h_abdf150befb558700f76f24196b606de3a7b300f65b0e4adb3317c7b4edab636df}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+H\+E\+L\+V\+E\+T\+I\+C\+A\+\_\+\+N\+A\+R\+R\+O\+W}, 
+\hyperlink{usb__host__printer_8h_abdf150befb558700f76f24196b606de3abbaab9407b28e717ca8538137a5eb405}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+N\+E\+W\+\_\+\+C\+E\+N\+T\+U\+R\+Y\+\_\+\+S\+C\+H\+O\+O\+L\+B\+O\+O\+K}, 
+\hyperlink{usb__host__printer_8h_abdf150befb558700f76f24196b606de3a2c3af5bcae4708c1cdb7c2f20f95f2e8}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+A\+L\+A\+T\+I\+N\+O}, 
+\hyperlink{usb__host__printer_8h_abdf150befb558700f76f24196b606de3afbf22049f5ca087481706279e795e7ab}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+T\+I\+M\+E\+S\+\_\+\+N\+E\+W\+\_\+\+R\+O\+M\+A\+N}, 
+\\*
+\hyperlink{usb__host__printer_8h_abdf150befb558700f76f24196b606de3a43b11b77923b91cd3e8b0276038b22dd}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+M\+A\+X\+\_\+\+F\+O\+N\+T}
+ \}
+\item 
+enum \hyperlink{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+S\+\_\+\+P\+O\+S} \{ \\*
+\hyperlink{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18a3f4ce804d100c246c68a536326d170d4}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+18x36}, 
+\hyperlink{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18a0ac83cf9b016b25e7cc540050ea22038}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+18x72}, 
+\hyperlink{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18a1ef7cd6fe98981489ef6c537a0e1cd19}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+36x36}, 
+\hyperlink{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18aeac7c5b99057b72dff5943cb9a8e1729}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+36x72}, 
+\\*
+\hyperlink{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18a77f2ff231f19a4db33d15bba42f0e07a}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+12x24}, 
+\hyperlink{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18a6b97a0babd0d61629e0004fb2e9ca369}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+12x48}, 
+\hyperlink{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18a8d6e8cb2ff5b66abb99db8903a9d84e2}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+24x24}, 
+\hyperlink{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18aeebbfd8cf86bfd11f789319e80754f61}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+24x48}, 
+\\*
+\hyperlink{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18adb70ec5bf40b3663a115682b14577a08}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+\+M\+A\+X\+\_\+\+F\+O\+N\+T}
+ \}
+\item 
+enum \hyperlink{usb__host__printer_8h_a4c4b55aa07ce1ea5339665103b1c3bf7}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+E\+R\+R\+O\+R\+S} \{ \\*
+\hyperlink{usb__host__printer_8h_a4c4b55aa07ce1ea5339665103b1c3bf7ae1455c7e02bbbe8e7b004b8c058cca5f}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+U\+C\+C\+E\+S\+S} = 0, 
+\hyperlink{usb__host__printer_8h_a4c4b55aa07ce1ea5339665103b1c3bf7a7deba734850144cf3d3211e497e521dc}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+U\+S\+Y} = U\+S\+B\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+L\+A\+S\+S\+\_\+\+D\+E\+F\+I\+N\+E\+D, 
+\hyperlink{usb__host__printer_8h_a4c4b55aa07ce1ea5339665103b1c3bf7aaf1a9a241d56d6dddbe7dc53aa5a862c}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+C\+O\+M\+M\+A\+N\+D}, 
+\hyperlink{usb__host__printer_8h_a4c4b55aa07ce1ea5339665103b1c3bf7af1b79076882694d05de3909fdf0b77e2}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+D\+E\+V\+I\+C\+E}, 
+\\*
+\hyperlink{usb__host__printer_8h_a4c4b55aa07ce1ea5339665103b1c3bf7aaf2aefd89b832ec004b15131fe7bc40d}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+R\+Y}, 
+\hyperlink{usb__host__printer_8h_a4c4b55aa07ce1ea5339665103b1c3bf7a13d9c0fee905c32510581bfd3f22c900}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+D\+E\+V\+I\+C\+E\+S}, 
+\hyperlink{usb__host__printer_8h_a4c4b55aa07ce1ea5339665103b1c3bf7af5a7ffe529ab46ab626f44658edb93d6}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__printer_8h_a7c2c11f9c18453fff06b06533ac59f97}{U\+S\+B\+Host\+Printer\+Initialize} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} address, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} flags, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} client\+Driver\+I\+D)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__printer_8h_a5e1b4daf8b38172c637641f4adff5f4d}{U\+S\+B\+Host\+Printer\+Event\+Handler} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} address, \hyperlink{usb__common_8h_a58f011a3d1f4cad0e69a9bf036fb847c}{U\+S\+B\+\_\+\+E\+V\+E\+N\+T} event, void $\ast$data, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} size)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{usb__host__printer_8h_a69eb4a7d81cbfc11f10262ddbc5c6c4e}{U\+S\+B\+Host\+Printer\+Command} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} device\+Address, \hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+C\+O\+M\+M\+A\+N\+D} command, \hyperlink{union_u_s_b___d_a_t_a___p_o_i_n_t_e_r}{U\+S\+B\+\_\+\+D\+A\+T\+A\+\_\+\+P\+O\+I\+N\+T\+E\+R} data, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} size, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} flags)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__printer_8h_adf709877723b4a7fe66f706359ee83ea}{U\+S\+B\+Host\+Printer\+Command\+Ready} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} device\+Address)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__printer_8h_a4c5bd47451d6d852dd8a3c3d421dfc49}{U\+S\+B\+Host\+Printer\+Device\+Detached} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} device\+Address)
+\item 
+\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} \hyperlink{usb__host__printer_8h_aaf5c322226e1ab55e5413a4ff08ff7e1}{U\+S\+B\+Host\+Printer\+Get\+Rx\+Length} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} device\+Address)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{usb__host__printer_8h_ad889e22b3c483b948895b16354f31d08}{U\+S\+B\+Host\+Printer\+Get\+Status} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} device\+Address, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$status)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{usb__host__printer_8h_a435ca6eef12a62794eb8e635320cc68b}{U\+S\+B\+Host\+Printer\+Read} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} device\+Address, void $\ast$buffer, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} length, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} transfer\+Flags)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{usb__host__printer_8h_a81d411dd8e43a87a1dce8a8316f72ddc}{U\+S\+B\+Host\+Printer\+Reset} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} device\+Address)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__printer_8h_a24ba2b123cbdf4d79c0ff0d8ed629e19}{U\+S\+B\+Host\+Printer\+Rx\+Is\+Busy} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} device\+Address)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{usb__host__printer_8h_a5daabbacbe0be1c9d393a7b65471bb62}{U\+S\+B\+Host\+Printer\+Write} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} device\+Address, void $\ast$buffer, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} length, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} flags)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__printer_8h_ab4a79025e648bee0a14dd55185b524f5}{U\+S\+B\+Host\+Printer\+Write\+Complete} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} device\+Address)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{usb__host__printer_8h_ac82fa28c9978a78bbedd47a884e0d074}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+A\+\_\+\+C\+H\+A\+R@{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+A\+\_\+\+C\+H\+A\+R}}
+\index{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+A\+\_\+\+C\+H\+A\+R@{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+A\+\_\+\+C\+H\+A\+R}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+A\+\_\+\+C\+H\+A\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+A\+\_\+\+C\+H\+A\+R~\textquotesingle{}A\textquotesingle{}}\label{usb__host__printer_8h_ac82fa28c9978a78bbedd47a884e0d074}
+
+
+Definition at line 149 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_ad979c1539bf867288dfee3c2ddc886c4}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+A\+\_\+\+S\+T\+R\+I\+N\+G@{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+A\+\_\+\+S\+T\+R\+I\+N\+G}}
+\index{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+A\+\_\+\+S\+T\+R\+I\+N\+G@{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+A\+\_\+\+S\+T\+R\+I\+N\+G}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+A\+\_\+\+S\+T\+R\+I\+N\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+A\+\_\+\+S\+T\+R\+I\+N\+G~\char`\"{}A\char`\"{}}\label{usb__host__printer_8h_ad979c1539bf867288dfee3c2ddc886c4}
+
+
+Definition at line 154 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_ab4c7471bb2a4789c867dd4cc746f8095}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+B\+\_\+\+C\+H\+A\+R@{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+B\+\_\+\+C\+H\+A\+R}}
+\index{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+B\+\_\+\+C\+H\+A\+R@{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+B\+\_\+\+C\+H\+A\+R}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+B\+\_\+\+C\+H\+A\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+B\+\_\+\+C\+H\+A\+R~\textquotesingle{}B\textquotesingle{}}\label{usb__host__printer_8h_ab4c7471bb2a4789c867dd4cc746f8095}
+
+
+Definition at line 160 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a4bd3d0efec6341664219be47e96f411f}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+B\+\_\+\+S\+T\+R\+I\+N\+G@{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+B\+\_\+\+S\+T\+R\+I\+N\+G}}
+\index{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+B\+\_\+\+S\+T\+R\+I\+N\+G@{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+B\+\_\+\+S\+T\+R\+I\+N\+G}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+B\+\_\+\+S\+T\+R\+I\+N\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+B\+\_\+\+S\+T\+R\+I\+N\+G~\char`\"{}B\char`\"{}}\label{usb__host__printer_8h_a4bd3d0efec6341664219be47e96f411f}
+
+
+Definition at line 166 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a97fbbfeb075e5d729cc0b5853db04246}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+C\+\_\+\+C\+H\+A\+R@{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+C\+\_\+\+C\+H\+A\+R}}
+\index{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+C\+\_\+\+C\+H\+A\+R@{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+C\+\_\+\+C\+H\+A\+R}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+C\+\_\+\+C\+H\+A\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+C\+\_\+\+C\+H\+A\+R~\textquotesingle{}{\bf C}\textquotesingle{}}\label{usb__host__printer_8h_a97fbbfeb075e5d729cc0b5853db04246}
+
+
+Definition at line 171 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a15c8ab43d0a92f812af2704b003d1fad}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+C\+\_\+\+S\+T\+R\+I\+N\+G@{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+C\+\_\+\+S\+T\+R\+I\+N\+G}}
+\index{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+C\+\_\+\+S\+T\+R\+I\+N\+G@{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+C\+\_\+\+S\+T\+R\+I\+N\+G}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+C\+\_\+\+S\+T\+R\+I\+N\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+C\+\_\+\+S\+T\+R\+I\+N\+G~\char`\"{}C\char`\"{}}\label{usb__host__printer_8h_a15c8ab43d0a92f812af2704b003d1fad}
+
+
+Definition at line 176 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a35f435697f344722aa62aa996a0e929e}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+C\+H\+A\+R@{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+C\+H\+A\+R}}
+\index{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+C\+H\+A\+R@{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+C\+H\+A\+R}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+C\+H\+A\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+C\+H\+A\+R~\textquotesingle{}\{\textquotesingle{}}\label{usb__host__printer_8h_a35f435697f344722aa62aa996a0e929e}
+
+
+Definition at line 139 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a46eba458381ab86ad2717df31048ae36}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+S\+T\+R\+I\+N\+G@{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+S\+T\+R\+I\+N\+G}}
+\index{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+S\+T\+R\+I\+N\+G@{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+S\+T\+R\+I\+N\+G}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+S\+T\+R\+I\+N\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E128\+\_\+\+C\+O\+D\+E\+S\+E\+T\+\_\+\+S\+T\+R\+I\+N\+G~\char`\"{}\{\char`\"{}}\label{usb__host__printer_8h_a46eba458381ab86ad2717df31048ae36}
+
+
+Definition at line 144 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_ad6e319b041a5c118432ab176436a4e62}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+12x24@{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+12x24}}
+\index{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+12x24@{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+12x24}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+12x24}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+12x24~1}\label{usb__host__printer_8h_ad6e319b041a5c118432ab176436a4e62}
+
+
+Definition at line 182 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_ad7e41404850faf32b3ea51ebe9370cc7}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+18x36@{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+18x36}}
+\index{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+18x36@{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+18x36}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+18x36}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+18x36~0}\label{usb__host__printer_8h_ad7e41404850faf32b3ea51ebe9370cc7}
+
+
+Definition at line 179 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_ae043defe046595d8e82fa4e0a65b4594}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+\+A\+B\+O\+V\+E@{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+\+A\+B\+O\+V\+E}}
+\index{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+\+A\+B\+O\+V\+E@{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+\+A\+B\+O\+V\+E}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+\+A\+B\+O\+V\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+\+A\+B\+O\+V\+E~1}\label{usb__host__printer_8h_ae043defe046595d8e82fa4e0a65b4594}
+
+
+Definition at line 188 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a6e009f28c8542f4a228f1ca6189f716b}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+\+A\+B\+O\+V\+E\+\_\+\+A\+N\+D\+\_\+\+B\+E\+L\+O\+W@{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+\+A\+B\+O\+V\+E\+\_\+\+A\+N\+D\+\_\+\+B\+E\+L\+O\+W}}
+\index{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+\+A\+B\+O\+V\+E\+\_\+\+A\+N\+D\+\_\+\+B\+E\+L\+O\+W@{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+\+A\+B\+O\+V\+E\+\_\+\+A\+N\+D\+\_\+\+B\+E\+L\+O\+W}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+\+A\+B\+O\+V\+E\+\_\+\+A\+N\+D\+\_\+\+B\+E\+L\+O\+W}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+\+A\+B\+O\+V\+E\+\_\+\+A\+N\+D\+\_\+\+B\+E\+L\+O\+W~3}\label{usb__host__printer_8h_a6e009f28c8542f4a228f1ca6189f716b}
+
+
+Definition at line 194 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_ab2070832d30ecf7b2ac6de3de264baa9}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+\+B\+E\+L\+O\+W@{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+\+B\+E\+L\+O\+W}}
+\index{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+\+B\+E\+L\+O\+W@{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+\+B\+E\+L\+O\+W}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+\+B\+E\+L\+O\+W}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+\+B\+E\+L\+O\+W~2}\label{usb__host__printer_8h_ab2070832d30ecf7b2ac6de3de264baa9}
+
+
+Definition at line 191 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a3d7219337f7ce58988c09c7ea92ac02c}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+\+O\+M\+I\+T@{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+\+O\+M\+I\+T}}
+\index{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+\+O\+M\+I\+T@{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+\+O\+M\+I\+T}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+\+O\+M\+I\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+A\+R\+C\+O\+D\+E\+\_\+\+T\+E\+X\+T\+\_\+\+O\+M\+I\+T~0}\label{usb__host__printer_8h_a3d7219337f7ce58988c09c7ea92ac02c}
+
+
+Definition at line 185 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_af52b51032aa7eb979368ffd9f5117f86}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+A\+T\+T\+A\+C\+H@{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+A\+T\+T\+A\+C\+H}}
+\index{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+A\+T\+T\+A\+C\+H@{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+A\+T\+T\+A\+C\+H}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+A\+T\+T\+A\+C\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+A\+T\+T\+A\+C\+H~({\bf E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+A\+S\+E}+{\bf E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T}+0)}\label{usb__host__printer_8h_af52b51032aa7eb979368ffd9f5117f86}
+
+
+Definition at line 292 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a1787dcbf5b0bdcccc03c07ae6c3047bc}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+T\+A\+C\+H@{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+T\+A\+C\+H}}
+\index{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+T\+A\+C\+H@{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+T\+A\+C\+H}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+T\+A\+C\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+T\+A\+C\+H~({\bf E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+A\+S\+E}+{\bf E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T}+1)}\label{usb__host__printer_8h_a1787dcbf5b0bdcccc03c07ae6c3047bc}
+
+
+Definition at line 298 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a2c5a0ed618dc733f4b9bcacdc9e3b9cd}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T@{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T}}
+\index{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T@{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T~0}\label{usb__host__printer_8h_a2c5a0ed618dc733f4b9bcacdc9e3b9cd}
+
+
+Definition at line 283 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_af87f99f8eadae725c7826f97606cf167}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+O\+N\+E@{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+O\+N\+E}}
+\index{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+O\+N\+E@{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+O\+N\+E}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+O\+N\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+O\+N\+E~({\bf E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+A\+S\+E}+{\bf E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T}+4)}\label{usb__host__printer_8h_af87f99f8eadae725c7826f97606cf167}
+
+
+Definition at line 315 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a92193b57585b40dc3211ddccccd705c5}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+E\+R\+R\+O\+R@{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+E\+R\+R\+O\+R}}
+\index{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+E\+R\+R\+O\+R@{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+E\+R\+R\+O\+R}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+E\+R\+R\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+E\+R\+R\+O\+R~({\bf E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+A\+S\+E}+{\bf E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T}+7)}\label{usb__host__printer_8h_a92193b57585b40dc3211ddccccd705c5}
+
+
+Definition at line 330 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_ab3cb27d7771837db2aa074978349e77f}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+R\+X\+\_\+\+D\+O\+N\+E@{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+R\+X\+\_\+\+D\+O\+N\+E}}
+\index{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+R\+X\+\_\+\+D\+O\+N\+E@{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+R\+X\+\_\+\+D\+O\+N\+E}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+R\+X\+\_\+\+D\+O\+N\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+R\+X\+\_\+\+D\+O\+N\+E~({\bf E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+A\+S\+E}+{\bf E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T}+3)}\label{usb__host__printer_8h_ab3cb27d7771837db2aa074978349e77f}
+
+
+Definition at line 310 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_aa8c82be7d2383616f294629048f97186}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+R\+X\+\_\+\+E\+R\+R\+O\+R@{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+R\+X\+\_\+\+E\+R\+R\+O\+R}}
+\index{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+R\+X\+\_\+\+E\+R\+R\+O\+R@{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+R\+X\+\_\+\+E\+R\+R\+O\+R}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+R\+X\+\_\+\+E\+R\+R\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+R\+X\+\_\+\+E\+R\+R\+O\+R~({\bf E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+A\+S\+E}+{\bf E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T}+6)}\label{usb__host__printer_8h_aa8c82be7d2383616f294629048f97186}
+
+
+Definition at line 325 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_ae77ee5b051dd2daf05c1bcde58c81dbf}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+X\+\_\+\+D\+O\+N\+E@{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+X\+\_\+\+D\+O\+N\+E}}
+\index{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+X\+\_\+\+D\+O\+N\+E@{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+X\+\_\+\+D\+O\+N\+E}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+X\+\_\+\+D\+O\+N\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+X\+\_\+\+D\+O\+N\+E~({\bf E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+A\+S\+E}+{\bf E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T}+2)}\label{usb__host__printer_8h_ae77ee5b051dd2daf05c1bcde58c81dbf}
+
+
+Definition at line 304 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a29c98b07305f56cb320da46b2cf8906b}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+X\+\_\+\+E\+R\+R\+O\+R@{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+X\+\_\+\+E\+R\+R\+O\+R}}
+\index{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+X\+\_\+\+E\+R\+R\+O\+R@{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+X\+\_\+\+E\+R\+R\+O\+R}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+X\+\_\+\+E\+R\+R\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+X\+\_\+\+E\+R\+R\+O\+R~({\bf E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+A\+S\+E}+{\bf E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T}+5)}\label{usb__host__printer_8h_a29c98b07305f56cb320da46b2cf8906b}
+
+
+Definition at line 320 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a283a6b5442528a59527fe9561b386685}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+U\+N\+S\+U\+P\+P\+O\+R\+T\+E\+D@{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+U\+N\+S\+U\+P\+P\+O\+R\+T\+E\+D}}
+\index{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+U\+N\+S\+U\+P\+P\+O\+R\+T\+E\+D@{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+U\+N\+S\+U\+P\+P\+O\+R\+T\+E\+D}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+U\+N\+S\+U\+P\+P\+O\+R\+T\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+U\+N\+S\+U\+P\+P\+O\+R\+T\+E\+D~({\bf E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+A\+S\+E}+{\bf E\+V\+E\+N\+T\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+F\+F\+S\+E\+T}+8)}\label{usb__host__printer_8h_a283a6b5442528a59527fe9561b386685}
+
+
+Definition at line 336 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a60c5e1dc97d80b891f3b836665c33d46}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+L\+A\+C\+K@{P\+R\+I\+N\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+L\+A\+C\+K}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+L\+A\+C\+K@{P\+R\+I\+N\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+L\+A\+C\+K}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+L\+A\+C\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+L\+A\+C\+K~0}\label{usb__host__printer_8h_a60c5e1dc97d80b891f3b836665c33d46}
+
+
+Definition at line 196 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_aeaa0ff9cac94ea201ce8b1d3b8c350ff}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+W\+H\+I\+T\+E@{P\+R\+I\+N\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+W\+H\+I\+T\+E}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+W\+H\+I\+T\+E@{P\+R\+I\+N\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+W\+H\+I\+T\+E}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+W\+H\+I\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+W\+H\+I\+T\+E~1}\label{usb__host__printer_8h_aeaa0ff9cac94ea201ce8b1d3b8c350ff}
+
+
+Definition at line 198 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a5d483fde4ff020eac513311e3028098a}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+D@{P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+D}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+D@{P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+D}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+D~0x00}\label{usb__host__printer_8h_a5d483fde4ff020eac513311e3028098a}
+
+
+Definition at line 200 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a48b996631232277aab3dd0d7b0ba6f90}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+U\+S@{P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+U\+S}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+U\+S@{P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+U\+S}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+U\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+U\+S~0x01}\label{usb__host__printer_8h_a48b996631232277aab3dd0d7b0ba6f90}
+
+
+Definition at line 202 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a1c4d4d7f8c9a84e9aaac0375aff44d6e}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+O\+F\+T\+\_\+\+R\+E\+S\+E\+T@{P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+O\+F\+T\+\_\+\+R\+E\+S\+E\+T}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+O\+F\+T\+\_\+\+R\+E\+S\+E\+T@{P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+O\+F\+T\+\_\+\+R\+E\+S\+E\+T}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+O\+F\+T\+\_\+\+R\+E\+S\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+O\+F\+T\+\_\+\+R\+E\+S\+E\+T~0x02}\label{usb__host__printer_8h_a1c4d4d7f8c9a84e9aaac0375aff44d6e}
+
+
+Definition at line 204 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a01590fbaa213b6d9e1e2b8d09d8982b9}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+I\+L\+L\+\_\+\+C\+R\+O\+S\+S\+\_\+\+H\+A\+T\+C\+H\+E\+D@{P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+I\+L\+L\+\_\+\+C\+R\+O\+S\+S\+\_\+\+H\+A\+T\+C\+H\+E\+D}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+I\+L\+L\+\_\+\+C\+R\+O\+S\+S\+\_\+\+H\+A\+T\+C\+H\+E\+D@{P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+I\+L\+L\+\_\+\+C\+R\+O\+S\+S\+\_\+\+H\+A\+T\+C\+H\+E\+D}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+I\+L\+L\+\_\+\+C\+R\+O\+S\+S\+\_\+\+H\+A\+T\+C\+H\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+I\+L\+L\+\_\+\+C\+R\+O\+S\+S\+\_\+\+H\+A\+T\+C\+H\+E\+D~3}\label{usb__host__printer_8h_a01590fbaa213b6d9e1e2b8d09d8982b9}
+
+
+Definition at line 215 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_af6f952b7b97f8c09fd3f2ed58445ad48}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+I\+L\+L\+\_\+\+H\+A\+T\+C\+H\+E\+D@{P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+I\+L\+L\+\_\+\+H\+A\+T\+C\+H\+E\+D}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+I\+L\+L\+\_\+\+H\+A\+T\+C\+H\+E\+D@{P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+I\+L\+L\+\_\+\+H\+A\+T\+C\+H\+E\+D}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+I\+L\+L\+\_\+\+H\+A\+T\+C\+H\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+I\+L\+L\+\_\+\+H\+A\+T\+C\+H\+E\+D~2}\label{usb__host__printer_8h_af6f952b7b97f8c09fd3f2ed58445ad48}
+
+
+Definition at line 212 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a9664fd475a02926e6b8ada431b54d663}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+I\+L\+L\+\_\+\+S\+H\+A\+D\+E\+D@{P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+I\+L\+L\+\_\+\+S\+H\+A\+D\+E\+D}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+I\+L\+L\+\_\+\+S\+H\+A\+D\+E\+D@{P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+I\+L\+L\+\_\+\+S\+H\+A\+D\+E\+D}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+I\+L\+L\+\_\+\+S\+H\+A\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+I\+L\+L\+\_\+\+S\+H\+A\+D\+E\+D~1}\label{usb__host__printer_8h_a9664fd475a02926e6b8ada431b54d663}
+
+
+Definition at line 209 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_ae06e4b75d91aaa82acb558806e419398}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+I\+L\+L\+\_\+\+S\+O\+L\+I\+D@{P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+I\+L\+L\+\_\+\+S\+O\+L\+I\+D}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+I\+L\+L\+\_\+\+S\+O\+L\+I\+D@{P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+I\+L\+L\+\_\+\+S\+O\+L\+I\+D}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+I\+L\+L\+\_\+\+S\+O\+L\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+I\+L\+L\+\_\+\+S\+O\+L\+I\+D~0}\label{usb__host__printer_8h_ae06e4b75d91aaa82acb558806e419398}
+
+
+Definition at line 206 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_ada84032aaa8af1b9f5c54c5c7786a001}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+E\+N\+D\+\_\+\+B\+U\+T\+T@{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+E\+N\+D\+\_\+\+B\+U\+T\+T}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+E\+N\+D\+\_\+\+B\+U\+T\+T@{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+E\+N\+D\+\_\+\+B\+U\+T\+T}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+E\+N\+D\+\_\+\+B\+U\+T\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+E\+N\+D\+\_\+\+B\+U\+T\+T~0}\label{usb__host__printer_8h_ada84032aaa8af1b9f5c54c5c7786a001}
+
+
+Definition at line 227 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_ac725f3ff400fc7497ba2b90e1bda4cdd}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+E\+N\+D\+\_\+\+R\+O\+U\+N\+D@{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+E\+N\+D\+\_\+\+R\+O\+U\+N\+D}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+E\+N\+D\+\_\+\+R\+O\+U\+N\+D@{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+E\+N\+D\+\_\+\+R\+O\+U\+N\+D}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+E\+N\+D\+\_\+\+R\+O\+U\+N\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+E\+N\+D\+\_\+\+R\+O\+U\+N\+D~1}\label{usb__host__printer_8h_ac725f3ff400fc7497ba2b90e1bda4cdd}
+
+
+Definition at line 229 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_acc99c4bf05ced849fc4333866150f1d3}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+E\+N\+D\+\_\+\+S\+Q\+U\+A\+R\+E@{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+E\+N\+D\+\_\+\+S\+Q\+U\+A\+R\+E}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+E\+N\+D\+\_\+\+S\+Q\+U\+A\+R\+E@{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+E\+N\+D\+\_\+\+S\+Q\+U\+A\+R\+E}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+E\+N\+D\+\_\+\+S\+Q\+U\+A\+R\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+E\+N\+D\+\_\+\+S\+Q\+U\+A\+R\+E~2}\label{usb__host__printer_8h_acc99c4bf05ced849fc4333866150f1d3}
+
+
+Definition at line 231 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a43d6163ac80994d18c3f245d84cb1fc1}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+J\+O\+I\+N\+\_\+\+B\+E\+V\+E\+L@{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+J\+O\+I\+N\+\_\+\+B\+E\+V\+E\+L}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+J\+O\+I\+N\+\_\+\+B\+E\+V\+E\+L@{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+J\+O\+I\+N\+\_\+\+B\+E\+V\+E\+L}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+J\+O\+I\+N\+\_\+\+B\+E\+V\+E\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+J\+O\+I\+N\+\_\+\+B\+E\+V\+E\+L~0}\label{usb__host__printer_8h_a43d6163ac80994d18c3f245d84cb1fc1}
+
+
+Definition at line 233 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_adecd2854a96eb80d0000c9548b06ac53}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+J\+O\+I\+N\+\_\+\+M\+I\+T\+E\+R@{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+J\+O\+I\+N\+\_\+\+M\+I\+T\+E\+R}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+J\+O\+I\+N\+\_\+\+M\+I\+T\+E\+R@{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+J\+O\+I\+N\+\_\+\+M\+I\+T\+E\+R}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+J\+O\+I\+N\+\_\+\+M\+I\+T\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+J\+O\+I\+N\+\_\+\+M\+I\+T\+E\+R~1}\label{usb__host__printer_8h_adecd2854a96eb80d0000c9548b06ac53}
+
+
+Definition at line 235 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a81adc4afe9484146d0caf03403bba36e}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+J\+O\+I\+N\+\_\+\+R\+O\+U\+N\+D@{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+J\+O\+I\+N\+\_\+\+R\+O\+U\+N\+D}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+J\+O\+I\+N\+\_\+\+R\+O\+U\+N\+D@{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+J\+O\+I\+N\+\_\+\+R\+O\+U\+N\+D}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+J\+O\+I\+N\+\_\+\+R\+O\+U\+N\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+J\+O\+I\+N\+\_\+\+R\+O\+U\+N\+D~2}\label{usb__host__printer_8h_a81adc4afe9484146d0caf03403bba36e}
+
+
+Definition at line 237 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_af65fe76a7f4ef9ac42efa0e73bd393d5}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+A\+S\+H\+E\+D@{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+A\+S\+H\+E\+D}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+A\+S\+H\+E\+D@{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+A\+S\+H\+E\+D}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+A\+S\+H\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+A\+S\+H\+E\+D~1}\label{usb__host__printer_8h_af65fe76a7f4ef9ac42efa0e73bd393d5}
+
+
+Definition at line 217 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a13afaad5747a9686c0aebaf0f1eebc95}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+O\+T\+T\+E\+D@{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+O\+T\+T\+E\+D}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+O\+T\+T\+E\+D@{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+O\+T\+T\+E\+D}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+O\+T\+T\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+O\+T\+T\+E\+D~2}\label{usb__host__printer_8h_a13afaad5747a9686c0aebaf0f1eebc95}
+
+
+Definition at line 219 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a4ae4b79879f6257601d7d822e7089f7b}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+O\+L\+I\+D@{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+O\+L\+I\+D}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+O\+L\+I\+D@{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+O\+L\+I\+D}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+O\+L\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+O\+L\+I\+D~0}\label{usb__host__printer_8h_a4ae4b79879f6257601d7d822e7089f7b}
+
+
+Definition at line 221 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a45f710fb1f3451c3fa7acb661fbc9901}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+T\+H\+\_\+\+N\+O\+R\+M\+A\+L@{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+T\+H\+\_\+\+N\+O\+R\+M\+A\+L}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+T\+H\+\_\+\+N\+O\+R\+M\+A\+L@{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+T\+H\+\_\+\+N\+O\+R\+M\+A\+L}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+T\+H\+\_\+\+N\+O\+R\+M\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+T\+H\+\_\+\+N\+O\+R\+M\+A\+L~0}\label{usb__host__printer_8h_a45f710fb1f3451c3fa7acb661fbc9901}
+
+
+Definition at line 223 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a9ffc4893d670341eadd2a10d43bb95c7}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+T\+H\+\_\+\+T\+H\+I\+C\+K@{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+T\+H\+\_\+\+T\+H\+I\+C\+K}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+T\+H\+\_\+\+T\+H\+I\+C\+K@{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+T\+H\+\_\+\+T\+H\+I\+C\+K}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+T\+H\+\_\+\+T\+H\+I\+C\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+T\+H\+\_\+\+T\+H\+I\+C\+K~1}\label{usb__host__printer_8h_a9ffc4893d670341eadd2a10d43bb95c7}
+
+
+Definition at line 225 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a62fedb4be63ea293d53a9cebcc0cc546}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+L\+A\+N\+D\+S\+C\+A\+P\+E\+\_\+\+H\+E\+I\+G\+H\+T@{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+L\+A\+N\+D\+S\+C\+A\+P\+E\+\_\+\+H\+E\+I\+G\+H\+T}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+L\+A\+N\+D\+S\+C\+A\+P\+E\+\_\+\+H\+E\+I\+G\+H\+T@{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+L\+A\+N\+D\+S\+C\+A\+P\+E\+\_\+\+H\+E\+I\+G\+H\+T}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+L\+A\+N\+D\+S\+C\+A\+P\+E\+\_\+\+H\+E\+I\+G\+H\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+L\+A\+N\+D\+S\+C\+A\+P\+E\+\_\+\+H\+E\+I\+G\+H\+T~612}\label{usb__host__printer_8h_a62fedb4be63ea293d53a9cebcc0cc546}
+
+
+Definition at line 239 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a05eb0d2280bd60a2c1b60429a0b36758}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+L\+A\+N\+D\+S\+C\+A\+P\+E\+\_\+\+W\+I\+D\+T\+H@{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+L\+A\+N\+D\+S\+C\+A\+P\+E\+\_\+\+W\+I\+D\+T\+H}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+L\+A\+N\+D\+S\+C\+A\+P\+E\+\_\+\+W\+I\+D\+T\+H@{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+L\+A\+N\+D\+S\+C\+A\+P\+E\+\_\+\+W\+I\+D\+T\+H}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+L\+A\+N\+D\+S\+C\+A\+P\+E\+\_\+\+W\+I\+D\+T\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+L\+A\+N\+D\+S\+C\+A\+P\+E\+\_\+\+W\+I\+D\+T\+H~792}\label{usb__host__printer_8h_a05eb0d2280bd60a2c1b60429a0b36758}
+
+
+Definition at line 241 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a57f04b5dc85e55f086444ea1b4784b90}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+H\+E\+I\+G\+H\+T@{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+H\+E\+I\+G\+H\+T}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+H\+E\+I\+G\+H\+T@{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+H\+E\+I\+G\+H\+T}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+H\+E\+I\+G\+H\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+H\+E\+I\+G\+H\+T~792}\label{usb__host__printer_8h_a57f04b5dc85e55f086444ea1b4784b90}
+
+
+Definition at line 243 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_af8d4361d188d899d7860edb366f993fc}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+W\+I\+D\+T\+H@{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+W\+I\+D\+T\+H}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+W\+I\+D\+T\+H@{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+W\+I\+D\+T\+H}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+W\+I\+D\+T\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+A\+G\+E\+\_\+\+P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+W\+I\+D\+T\+H~612}\label{usb__host__printer_8h_af8d4361d188d899d7860edb366f993fc}
+
+
+Definition at line 245 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a92ba61afd73b7d0cc9b74dfe494023a6}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+B\+O\+T\+T\+O\+M\+\_\+\+T\+O\+\_\+\+T\+O\+P@{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+B\+O\+T\+T\+O\+M\+\_\+\+T\+O\+\_\+\+T\+O\+P}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+B\+O\+T\+T\+O\+M\+\_\+\+T\+O\+\_\+\+T\+O\+P@{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+B\+O\+T\+T\+O\+M\+\_\+\+T\+O\+\_\+\+T\+O\+P}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+B\+O\+T\+T\+O\+M\+\_\+\+T\+O\+\_\+\+T\+O\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+B\+O\+T\+T\+O\+M\+\_\+\+T\+O\+\_\+\+T\+O\+P~1}\label{usb__host__printer_8h_a92ba61afd73b7d0cc9b74dfe494023a6}
+
+
+Definition at line 257 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_ac38a093ea0330221f324db5b08940604}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+H\+O\+R\+I\+Z\+O\+N\+T\+A\+L\+\_\+\+D\+O\+U\+B\+L\+E@{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+H\+O\+R\+I\+Z\+O\+N\+T\+A\+L\+\_\+\+D\+O\+U\+B\+L\+E}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+H\+O\+R\+I\+Z\+O\+N\+T\+A\+L\+\_\+\+D\+O\+U\+B\+L\+E@{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+H\+O\+R\+I\+Z\+O\+N\+T\+A\+L\+\_\+\+D\+O\+U\+B\+L\+E}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+H\+O\+R\+I\+Z\+O\+N\+T\+A\+L\+\_\+\+D\+O\+U\+B\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+H\+O\+R\+I\+Z\+O\+N\+T\+A\+L\+\_\+\+D\+O\+U\+B\+L\+E~2}\label{usb__host__printer_8h_ac38a093ea0330221f324db5b08940604}
+
+
+Definition at line 247 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a8b01d2a914c3066cad99c1a15c4b46a5}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+H\+O\+R\+I\+Z\+O\+N\+T\+A\+L\+\_\+\+S\+I\+N\+G\+L\+E@{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+H\+O\+R\+I\+Z\+O\+N\+T\+A\+L\+\_\+\+S\+I\+N\+G\+L\+E}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+H\+O\+R\+I\+Z\+O\+N\+T\+A\+L\+\_\+\+S\+I\+N\+G\+L\+E@{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+H\+O\+R\+I\+Z\+O\+N\+T\+A\+L\+\_\+\+S\+I\+N\+G\+L\+E}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+H\+O\+R\+I\+Z\+O\+N\+T\+A\+L\+\_\+\+S\+I\+N\+G\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+H\+O\+R\+I\+Z\+O\+N\+T\+A\+L\+\_\+\+S\+I\+N\+G\+L\+E~1}\label{usb__host__printer_8h_a8b01d2a914c3066cad99c1a15c4b46a5}
+
+
+Definition at line 249 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_aa1ce8fac093decb249ec0d3c4678d84b}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+24@{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+24}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+24@{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+24}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+24}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+24~24}\label{usb__host__printer_8h_aa1ce8fac093decb249ec0d3c4678d84b}
+
+
+Definition at line 253 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a67e31e1b30976f20d0900d0defe7788d}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+8@{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+8}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+8@{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+8}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+8}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+D\+E\+N\+S\+I\+T\+Y\+\_\+\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+8~8}\label{usb__host__printer_8h_a67e31e1b30976f20d0900d0defe7788d}
+
+
+Definition at line 251 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a2789378e6803ec4bf06f5007a8aa9171}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+L\+E\+F\+T\+\_\+\+T\+O\+\_\+\+R\+I\+G\+H\+T@{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+L\+E\+F\+T\+\_\+\+T\+O\+\_\+\+R\+I\+G\+H\+T}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+L\+E\+F\+T\+\_\+\+T\+O\+\_\+\+R\+I\+G\+H\+T@{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+L\+E\+F\+T\+\_\+\+T\+O\+\_\+\+R\+I\+G\+H\+T}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+L\+E\+F\+T\+\_\+\+T\+O\+\_\+\+R\+I\+G\+H\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+L\+E\+F\+T\+\_\+\+T\+O\+\_\+\+R\+I\+G\+H\+T~0}\label{usb__host__printer_8h_a2789378e6803ec4bf06f5007a8aa9171}
+
+
+Definition at line 255 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_aeff5adeb93467f3013bed730a11d09fc}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+R\+I\+G\+H\+T\+\_\+\+T\+O\+\_\+\+L\+E\+F\+T@{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+R\+I\+G\+H\+T\+\_\+\+T\+O\+\_\+\+L\+E\+F\+T}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+R\+I\+G\+H\+T\+\_\+\+T\+O\+\_\+\+L\+E\+F\+T@{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+R\+I\+G\+H\+T\+\_\+\+T\+O\+\_\+\+L\+E\+F\+T}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+R\+I\+G\+H\+T\+\_\+\+T\+O\+\_\+\+L\+E\+F\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+R\+I\+G\+H\+T\+\_\+\+T\+O\+\_\+\+L\+E\+F\+T~2}\label{usb__host__printer_8h_aeff5adeb93467f3013bed730a11d09fc}
+
+
+Definition at line 259 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_ac05ca784ba56595142f36aad7673bed5}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+T\+O\+P\+\_\+\+T\+O\+\_\+\+B\+O\+T\+T\+O\+M@{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+T\+O\+P\+\_\+\+T\+O\+\_\+\+B\+O\+T\+T\+O\+M}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+T\+O\+P\+\_\+\+T\+O\+\_\+\+B\+O\+T\+T\+O\+M@{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+T\+O\+P\+\_\+\+T\+O\+\_\+\+B\+O\+T\+T\+O\+M}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+T\+O\+P\+\_\+\+T\+O\+\_\+\+B\+O\+T\+T\+O\+M}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+T\+O\+P\+\_\+\+T\+O\+\_\+\+B\+O\+T\+T\+O\+M~3}\label{usb__host__printer_8h_ac05ca784ba56595142f36aad7673bed5}
+
+
+Definition at line 261 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_acfb913dbe298b17793535019cef10af8}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+D\+A\+T\+A\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+R\+A\+M@{U\+S\+B\+\_\+\+D\+A\+T\+A\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+R\+A\+M}}
+\index{U\+S\+B\+\_\+\+D\+A\+T\+A\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+R\+A\+M@{U\+S\+B\+\_\+\+D\+A\+T\+A\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+R\+A\+M}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+\_\+\+D\+A\+T\+A\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+R\+A\+M}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+D\+A\+T\+A\+\_\+\+P\+O\+I\+N\+T\+E\+R\+\_\+\+R\+A\+M(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~(({\bf U\+S\+B\+\_\+\+D\+A\+T\+A\+\_\+\+P\+O\+I\+N\+T\+E\+R})(void $\ast$)x)}\label{usb__host__printer_8h_acfb913dbe298b17793535019cef10af8}
+
+
+Definition at line 1146 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_ac80bdc3075fe3663fe23a455ce4d56fb}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+M\+A\+X\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+S@{U\+S\+B\+\_\+\+M\+A\+X\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+S}}
+\index{U\+S\+B\+\_\+\+M\+A\+X\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+S@{U\+S\+B\+\_\+\+M\+A\+X\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+S}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+\_\+\+M\+A\+X\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+M\+A\+X\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+S~1}\label{usb__host__printer_8h_ac80bdc3075fe3663fe23a455ce4d56fb}
+
+
+Definition at line 119 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_acb1821e78ca6d77e518e0e45eda9d537}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+N\+U\+L\+L@{U\+S\+B\+\_\+\+N\+U\+L\+L}}
+\index{U\+S\+B\+\_\+\+N\+U\+L\+L@{U\+S\+B\+\_\+\+N\+U\+L\+L}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+\_\+\+N\+U\+L\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+N\+U\+L\+L~({\bf U\+S\+B\+\_\+\+D\+A\+T\+A\+\_\+\+P\+O\+I\+N\+T\+E\+R})(void $\ast$)N\+U\+L\+L}\label{usb__host__printer_8h_acb1821e78ca6d77e518e0e45eda9d537}
+
+
+Definition at line 1156 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a5001e2ea4bc1713d5e4713277885f3c9}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+P\+O\+S@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+P\+O\+S}}
+\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+P\+O\+S@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+P\+O\+S}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+P\+O\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+P\+O\+S~0x0002}\label{usb__host__printer_8h_a5001e2ea4bc1713d5e4713277885f3c9}
+
+
+Definition at line 266 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a1a5aaa975c16637ba153a23595ff70f3}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S}}
+\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S~0x0001}\label{usb__host__printer_8h_a1a5aaa975c16637ba153a23595ff70f3}
+
+
+Definition at line 269 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_abe4114bf3801b96f8d5612fbc4f8cb15}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E\+A\+B\+A\+R@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E\+A\+B\+A\+R}}
+\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E\+A\+B\+A\+R@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E\+A\+B\+A\+R}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E\+A\+B\+A\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+E\+A\+B\+A\+R~U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+O\+S\+\_\+\+B\+A\+R\+C\+O\+D\+E\+\_\+\+C\+O\+D\+A\+B\+A\+R}\label{usb__host__printer_8h_abe4114bf3801b96f8d5612fbc4f8cb15}
+
+
+Definition at line 1118 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a6feda561c0c62dfe27e1bc25a2ced4d2}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+C\+O\+P\+Y\+\_\+\+D\+A\+T\+A@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+C\+O\+P\+Y\+\_\+\+D\+A\+T\+A}}
+\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+C\+O\+P\+Y\+\_\+\+D\+A\+T\+A@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+C\+O\+P\+Y\+\_\+\+D\+A\+T\+A}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+C\+O\+P\+Y\+\_\+\+D\+A\+T\+A}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+C\+O\+P\+Y\+\_\+\+D\+A\+T\+A~0x01}\label{usb__host__printer_8h_a6feda561c0c62dfe27e1bc25a2ced4d2}
+
+
+Definition at line 888 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a7981c94670fffc2c644e1c2c77a296d1}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+F\+R\+O\+M\+\_\+\+R\+A\+M@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+F\+R\+O\+M\+\_\+\+R\+A\+M}}
+\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+F\+R\+O\+M\+\_\+\+R\+A\+M@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+F\+R\+O\+M\+\_\+\+R\+A\+M}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+F\+R\+O\+M\+\_\+\+R\+A\+M}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+F\+R\+O\+M\+\_\+\+R\+A\+M~0x00}\label{usb__host__printer_8h_a7981c94670fffc2c644e1c2c77a296d1}
+
+
+Definition at line 909 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a44a74bf52829afeddef095def9db1e2b}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+F\+R\+O\+M\+\_\+\+R\+O\+M@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+F\+R\+O\+M\+\_\+\+R\+O\+M}}
+\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+F\+R\+O\+M\+\_\+\+R\+O\+M@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+F\+R\+O\+M\+\_\+\+R\+O\+M}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+F\+R\+O\+M\+\_\+\+R\+O\+M}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+F\+R\+O\+M\+\_\+\+R\+O\+M~0x04}\label{usb__host__printer_8h_a44a74bf52829afeddef095def9db1e2b}
+
+
+Definition at line 904 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_af196e654d2702ae5f8b9bd4fe43de235}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+N\+O\+T\+I\+F\+Y@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+N\+O\+T\+I\+F\+Y}}
+\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+N\+O\+T\+I\+F\+Y@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+N\+O\+T\+I\+F\+Y}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+N\+O\+T\+I\+F\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+N\+O\+T\+I\+F\+Y~0x02}\label{usb__host__printer_8h_af196e654d2702ae5f8b9bd4fe43de235}
+
+
+Definition at line 897 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a7aca5f64f2e789032bed0e62e30064d5}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+D\+A\+T\+A@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+D\+A\+T\+A}}
+\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+D\+A\+T\+A@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+D\+A\+T\+A}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+D\+A\+T\+A}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+D\+A\+T\+A~0x00}\label{usb__host__printer_8h_a7aca5f64f2e789032bed0e62e30064d5}
+
+
+Definition at line 893 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a44faa706a68787509ae023f8d8cbb0a2}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+H\+O\+S\+T\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+E\+T\+F\+L\+A\+G\+\_\+\+C\+O\+P\+Y\+\_\+\+D\+A\+T\+A@{U\+S\+B\+H\+O\+S\+T\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+E\+T\+F\+L\+A\+G\+\_\+\+C\+O\+P\+Y\+\_\+\+D\+A\+T\+A}}
+\index{U\+S\+B\+H\+O\+S\+T\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+E\+T\+F\+L\+A\+G\+\_\+\+C\+O\+P\+Y\+\_\+\+D\+A\+T\+A@{U\+S\+B\+H\+O\+S\+T\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+E\+T\+F\+L\+A\+G\+\_\+\+C\+O\+P\+Y\+\_\+\+D\+A\+T\+A}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+H\+O\+S\+T\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+E\+T\+F\+L\+A\+G\+\_\+\+C\+O\+P\+Y\+\_\+\+D\+A\+T\+A}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+H\+O\+S\+T\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+E\+T\+F\+L\+A\+G\+\_\+\+C\+O\+P\+Y\+\_\+\+D\+A\+T\+A(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~\{x $\vert$= {\bf U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+C\+O\+P\+Y\+\_\+\+D\+A\+T\+A};\}}\label{usb__host__printer_8h_a44faa706a68787509ae023f8d8cbb0a2}
+
+
+Definition at line 918 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a997c3a05fc684c5d76ea4cadada04952}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+H\+O\+S\+T\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+E\+T\+F\+L\+A\+G\+\_\+\+N\+O\+T\+I\+F\+Y@{U\+S\+B\+H\+O\+S\+T\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+E\+T\+F\+L\+A\+G\+\_\+\+N\+O\+T\+I\+F\+Y}}
+\index{U\+S\+B\+H\+O\+S\+T\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+E\+T\+F\+L\+A\+G\+\_\+\+N\+O\+T\+I\+F\+Y@{U\+S\+B\+H\+O\+S\+T\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+E\+T\+F\+L\+A\+G\+\_\+\+N\+O\+T\+I\+F\+Y}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+H\+O\+S\+T\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+E\+T\+F\+L\+A\+G\+\_\+\+N\+O\+T\+I\+F\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+H\+O\+S\+T\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+E\+T\+F\+L\+A\+G\+\_\+\+N\+O\+T\+I\+F\+Y(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~\{x $\vert$= {\bf U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+N\+O\+T\+I\+F\+Y};\}}\label{usb__host__printer_8h_a997c3a05fc684c5d76ea4cadada04952}
+
+
+Definition at line 926 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_afbb171fbbe68c93da8820eeac664222b}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+H\+O\+S\+T\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+E\+T\+F\+L\+A\+G\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+D\+A\+T\+A@{U\+S\+B\+H\+O\+S\+T\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+E\+T\+F\+L\+A\+G\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+D\+A\+T\+A}}
+\index{U\+S\+B\+H\+O\+S\+T\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+E\+T\+F\+L\+A\+G\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+D\+A\+T\+A@{U\+S\+B\+H\+O\+S\+T\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+E\+T\+F\+L\+A\+G\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+D\+A\+T\+A}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+H\+O\+S\+T\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+E\+T\+F\+L\+A\+G\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+D\+A\+T\+A}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+H\+O\+S\+T\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+E\+T\+F\+L\+A\+G\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+D\+A\+T\+A(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~\{x \&= $\sim${\bf U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+C\+O\+P\+Y\+\_\+\+D\+A\+T\+A};\}}\label{usb__host__printer_8h_afbb171fbbe68c93da8820eeac664222b}
+
+
+Definition at line 922 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a4a71b4aa1f983040cac8525048a32183}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+Host\+Printer\+Command\+With\+Ready\+Wait@{U\+S\+B\+Host\+Printer\+Command\+With\+Ready\+Wait}}
+\index{U\+S\+B\+Host\+Printer\+Command\+With\+Ready\+Wait@{U\+S\+B\+Host\+Printer\+Command\+With\+Ready\+Wait}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+Host\+Printer\+Command\+With\+Ready\+Wait}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+Host\+Printer\+Command\+With\+Ready\+Wait(
+\begin{DoxyParamCaption}
+\item[{}]{return\+Code, }
+\item[{}]{device\+Address, }
+\item[{}]{command, }
+\item[{}]{data, }
+\item[{}]{size, }
+\item[{}]{flags}
+\end{DoxyParamCaption}
+)}\label{usb__host__printer_8h_a4a71b4aa1f983040cac8525048a32183}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                                                                               \(\backslash\)
+            while (!\hyperlink{usb__host__printer_8h_adf709877723b4a7fe66f706359ee83ea}{USBHostPrinterCommandReady}( deviceAddress )) 
+      \hyperlink{usb__host__msd__scsi_8c_a2b502e85e4037b18f51ed8a1364c483d}{USBTasks}();                            \(\backslash\)
+            *(returnCode) = \hyperlink{usb__host__printer_8h_a69eb4a7d81cbfc11f10262ddbc5c6c4e}{USBHostPrinterCommand}( deviceAddress, command, data, size,
+       flags );         \(\backslash\)
+        \}
+\end{DoxyCode}
+
+
+Definition at line 1903 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_aeafd798108e77aaa38b3f133f8dc23d5}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+Host\+Printer\+Position@{U\+S\+B\+Host\+Printer\+Position}}
+\index{U\+S\+B\+Host\+Printer\+Position@{U\+S\+B\+Host\+Printer\+Position}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+Host\+Printer\+Position}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+Host\+Printer\+Position(
+\begin{DoxyParamCaption}
+\item[{}]{X, }
+\item[{}]{{\bf Y}}
+\end{DoxyParamCaption}
+)~((({\bf D\+W\+O\+R\+D})(X) $<$$<$ 16) $\vert$ (({\bf D\+W\+O\+R\+D})({\bf Y}) \& 0x\+F\+F\+F\+F))}\label{usb__host__printer_8h_aeafd798108e77aaa38b3f133f8dc23d5}
+
+
+Definition at line 2049 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a627ac395f94d808bc2c3c5af05795a54}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+Host\+Printer\+Position\+Relative@{U\+S\+B\+Host\+Printer\+Position\+Relative}}
+\index{U\+S\+B\+Host\+Printer\+Position\+Relative@{U\+S\+B\+Host\+Printer\+Position\+Relative}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+Host\+Printer\+Position\+Relative}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+Host\+Printer\+Position\+Relative(
+\begin{DoxyParamCaption}
+\item[{}]{d\+X, }
+\item[{}]{d\+Y}
+\end{DoxyParamCaption}
+)~((({\bf D\+W\+O\+R\+D})(d\+X) $<$$<$ 16) $\vert$ (({\bf D\+W\+O\+R\+D})(d\+Y) \& 0x\+F\+F\+F\+F))}\label{usb__host__printer_8h_a627ac395f94d808bc2c3c5af05795a54}
+
+
+Definition at line 2093 of file usb\+\_\+host\+\_\+printer.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{usb__host__printer_8h_acc6ade4e12b3e7bd440550fefe53bf5d}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+D@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+D}}
+\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+D@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+D}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+D}  {\bf U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+D}}\label{usb__host__printer_8h_acc6ade4e12b3e7bd440550fefe53bf5d}
+\hypertarget{usb__host__printer_8h_a386c8d36e894c3aaee8d1ec1802652d9}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+H\+A\+N\+D\+L\+E\+R@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+H\+A\+N\+D\+L\+E\+R}}
+\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+H\+A\+N\+D\+L\+E\+R@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+H\+A\+N\+D\+L\+E\+R}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+H\+A\+N\+D\+L\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf B\+Y\+T\+E}($\ast$ U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+H\+A\+N\+D\+L\+E\+R) ({\bf B\+Y\+T\+E} address, {\bf U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+C\+O\+M\+M\+A\+N\+D} command, {\bf U\+S\+B\+\_\+\+D\+A\+T\+A\+\_\+\+P\+O\+I\+N\+T\+E\+R} data, {\bf D\+W\+O\+R\+D} size, {\bf B\+Y\+T\+E} flags)}\label{usb__host__printer_8h_a386c8d36e894c3aaee8d1ec1802652d9}
+
+
+Definition at line 1455 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_ad717cd392ab7e52ccfe221f0e4f6a66f}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+S\+U\+P\+P\+O\+R\+T\+E\+D@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+S\+U\+P\+P\+O\+R\+T\+E\+D}}
+\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+S\+U\+P\+P\+O\+R\+T\+E\+D@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+S\+U\+P\+P\+O\+R\+T\+E\+D}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+S\+U\+P\+P\+O\+R\+T\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf B\+O\+O\+L}($\ast$ U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+S\+U\+P\+P\+O\+R\+T\+E\+D) (char $\ast$device\+I\+D, {\bf U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+S\+U\+P\+P\+O\+R\+T} $\ast$support)}\label{usb__host__printer_8h_ad717cd392ab7e52ccfe221f0e4f6a66f}
+
+
+Definition at line 1502 of file usb\+\_\+host\+\_\+printer.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+C\+O\+M\+M\+A\+N\+D@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+C\+O\+M\+M\+A\+N\+D}}
+\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+C\+O\+M\+M\+A\+N\+D@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+C\+O\+M\+M\+A\+N\+D}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+C\+O\+M\+M\+A\+N\+D}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+C\+O\+M\+M\+A\+N\+D}}\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+A\+T\+T\+A\+C\+H\+E\+D@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+A\+T\+T\+A\+C\+H\+E\+D}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+A\+T\+T\+A\+C\+H\+E\+D@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+A\+T\+T\+A\+C\+H\+E\+D}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9af263c4c6015e6ab45527aaf894677ee9}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+A\+T\+T\+A\+C\+H\+E\+D\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9af263c4c6015e6ab45527aaf894677ee9}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+T\+A\+C\+H\+E\+D@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+T\+A\+C\+H\+E\+D}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+T\+A\+C\+H\+E\+D@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+T\+A\+C\+H\+E\+D}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9ad036ca901aa851473648e81d5ceeff3f}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+T\+A\+C\+H\+E\+D\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9ad036ca901aa851473648e81d5ceeff3f}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+N\+T@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+N\+T}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+N\+T@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+N\+T}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9af1d265c6a2169f25fcb4684af7bfa452}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+N\+T\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9af1d265c6a2169f25fcb4684af7bfa452}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+J\+O\+B\+\_\+\+S\+T\+A\+R\+T@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+J\+O\+B\+\_\+\+S\+T\+A\+R\+T}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+J\+O\+B\+\_\+\+S\+T\+A\+R\+T@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+J\+O\+B\+\_\+\+S\+T\+A\+R\+T}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9ab137270e43f3808444a9eb7c70067e55}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+J\+O\+B\+\_\+\+S\+T\+A\+R\+T\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9ab137270e43f3808444a9eb7c70067e55}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+J\+O\+B\+\_\+\+S\+T\+O\+P@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+J\+O\+B\+\_\+\+S\+T\+O\+P}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+J\+O\+B\+\_\+\+S\+T\+O\+P@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+J\+O\+B\+\_\+\+S\+T\+O\+P}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a200f1fa7ee4f0bd801642625b7e8f5cb}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+J\+O\+B\+\_\+\+S\+T\+O\+P\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a200f1fa7ee4f0bd801642625b7e8f5cb}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+P\+O\+R\+T\+R\+A\+I\+T@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+P\+O\+R\+T\+R\+A\+I\+T}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+P\+O\+R\+T\+R\+A\+I\+T@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+P\+O\+R\+T\+R\+A\+I\+T}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9abd979103d81c49162fc943e12db3f318}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+P\+O\+R\+T\+R\+A\+I\+T\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9abd979103d81c49162fc943e12db3f318}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+L\+A\+N\+D\+S\+C\+A\+P\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+L\+A\+N\+D\+S\+C\+A\+P\+E}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+L\+A\+N\+D\+S\+C\+A\+P\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+L\+A\+N\+D\+S\+C\+A\+P\+E}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a1269f204681729f7f9e090c0132389ff}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+L\+A\+N\+D\+S\+C\+A\+P\+E\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a1269f204681729f7f9e090c0132389ff}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+N\+A\+M\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+N\+A\+M\+E}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+N\+A\+M\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+N\+A\+M\+E}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a55cf69634951ccd9832be820ba54f557}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+N\+A\+M\+E\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a55cf69634951ccd9832be820ba54f557}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+S\+I\+Z\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+S\+I\+Z\+E}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+S\+I\+Z\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+S\+I\+Z\+E}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a736e7a994fcb391582cf92b8ed81e1dd}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+S\+I\+Z\+E\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a736e7a994fcb391582cf92b8ed81e1dd}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+I\+T\+A\+L\+I\+C@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+I\+T\+A\+L\+I\+C}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+I\+T\+A\+L\+I\+C@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+I\+T\+A\+L\+I\+C}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a239eef3f7dd16d00bbe93f8a327b3bc0}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+I\+T\+A\+L\+I\+C\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a239eef3f7dd16d00bbe93f8a327b3bc0}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+U\+P\+R\+I\+G\+H\+T@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+U\+P\+R\+I\+G\+H\+T}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+U\+P\+R\+I\+G\+H\+T@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+U\+P\+R\+I\+G\+H\+T}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a0c0f7652c05768e080c10479c79e56c6}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+U\+P\+R\+I\+G\+H\+T\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a0c0f7652c05768e080c10479c79e56c6}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+B\+O\+L\+D@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+B\+O\+L\+D}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+B\+O\+L\+D@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+B\+O\+L\+D}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a2ec8df17ae95536ed4016282b7e5aab3}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+B\+O\+L\+D\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a2ec8df17ae95536ed4016282b7e5aab3}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+M\+E\+D\+I\+U\+M@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+M\+E\+D\+I\+U\+M}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+M\+E\+D\+I\+U\+M@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+M\+E\+D\+I\+U\+M}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a02780b58e3076ead046eefd12942cfe6}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+M\+E\+D\+I\+U\+M\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a02780b58e3076ead046eefd12942cfe6}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+E\+J\+E\+C\+T\+\_\+\+P\+A\+G\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+E\+J\+E\+C\+T\+\_\+\+P\+A\+G\+E}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+E\+J\+E\+C\+T\+\_\+\+P\+A\+G\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+E\+J\+E\+C\+T\+\_\+\+P\+A\+G\+E}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a35d0d96a139496d4b40e2708a88ce169}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+E\+J\+E\+C\+T\+\_\+\+P\+A\+G\+E\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a35d0d96a139496d4b40e2708a88ce169}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+E\+X\+T\+\_\+\+S\+T\+A\+R\+T@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+E\+X\+T\+\_\+\+S\+T\+A\+R\+T}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+E\+X\+T\+\_\+\+S\+T\+A\+R\+T@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+E\+X\+T\+\_\+\+S\+T\+A\+R\+T}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a376ca7d67782742a39f064196727652d}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+E\+X\+T\+\_\+\+S\+T\+A\+R\+T\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a376ca7d67782742a39f064196727652d}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+E\+X\+T@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+E\+X\+T}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+E\+X\+T@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+E\+X\+T}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9afe7bc68a97fbe5e65754af1b73f68b45}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+E\+X\+T\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9afe7bc68a97fbe5e65754af1b73f68b45}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+E\+X\+T\+\_\+\+S\+T\+O\+P@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+E\+X\+T\+\_\+\+S\+T\+O\+P}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+E\+X\+T\+\_\+\+S\+T\+O\+P@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+E\+X\+T\+\_\+\+S\+T\+O\+P}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9ada0206f03b2bb72336afd5f8ae252437}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+E\+X\+T\+\_\+\+S\+T\+O\+P\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9ada0206f03b2bb72336afd5f8ae252437}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+E\+T\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+E\+T\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+E\+T\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+E\+T\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9aee756f62a2d6b64aa366b4de540e3600}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+E\+T\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9aee756f62a2d6b64aa366b4de540e3600}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+I\+M\+A\+G\+E\+\_\+\+S\+T\+A\+R\+T@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+I\+M\+A\+G\+E\+\_\+\+S\+T\+A\+R\+T}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+I\+M\+A\+G\+E\+\_\+\+S\+T\+A\+R\+T@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+I\+M\+A\+G\+E\+\_\+\+S\+T\+A\+R\+T}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9ae27a75975174724f538ed4bf338646f5}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+I\+M\+A\+G\+E\+\_\+\+S\+T\+A\+R\+T\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9ae27a75975174724f538ed4bf338646f5}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+I\+M\+A\+G\+E\+\_\+\+D\+A\+T\+A\+\_\+\+H\+E\+A\+D\+E\+R@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+I\+M\+A\+G\+E\+\_\+\+D\+A\+T\+A\+\_\+\+H\+E\+A\+D\+E\+R}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+I\+M\+A\+G\+E\+\_\+\+D\+A\+T\+A\+\_\+\+H\+E\+A\+D\+E\+R@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+I\+M\+A\+G\+E\+\_\+\+D\+A\+T\+A\+\_\+\+H\+E\+A\+D\+E\+R}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a5e2451333d3064579c92e1526a53b29c}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+I\+M\+A\+G\+E\+\_\+\+D\+A\+T\+A\+\_\+\+H\+E\+A\+D\+E\+R\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a5e2451333d3064579c92e1526a53b29c}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+I\+M\+A\+G\+E\+\_\+\+D\+A\+T\+A@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+I\+M\+A\+G\+E\+\_\+\+D\+A\+T\+A}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+I\+M\+A\+G\+E\+\_\+\+D\+A\+T\+A@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+I\+M\+A\+G\+E\+\_\+\+D\+A\+T\+A}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a81d147961b6e7976d095677497f66efb}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+I\+M\+A\+G\+E\+\_\+\+D\+A\+T\+A\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a81d147961b6e7976d095677497f66efb}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+I\+M\+A\+G\+E\+\_\+\+S\+T\+O\+P@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+I\+M\+A\+G\+E\+\_\+\+S\+T\+O\+P}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+I\+M\+A\+G\+E\+\_\+\+S\+T\+O\+P@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+I\+M\+A\+G\+E\+\_\+\+S\+T\+O\+P}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9abef1235f312019da7ca68929d95ea9aa}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+I\+M\+A\+G\+E\+\_\+\+S\+T\+O\+P\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9abef1235f312019da7ca68929d95ea9aa}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+S\+T\+A\+R\+T@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+S\+T\+A\+R\+T}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+S\+T\+A\+R\+T@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+S\+T\+A\+R\+T}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9af056239c83980ee20f9c3b0ec1fb0579}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+S\+T\+A\+R\+T\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9af056239c83980ee20f9c3b0ec1fb0579}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+T\+Y\+P\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+T\+Y\+P\+E}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+T\+Y\+P\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+T\+Y\+P\+E}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9aa1ac94c27c232df9b61b0a014d4148d6}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+T\+Y\+P\+E\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9aa1ac94c27c232df9b61b0a014d4148d6}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+T\+H@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+T\+H}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+T\+H@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+T\+H}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a8e12c27fe502a3f4e47c1c42cb7c4ce8}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+T\+H\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a8e12c27fe502a3f4e47c1c42cb7c4ce8}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+E\+N\+D@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+E\+N\+D}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+E\+N\+D@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+E\+N\+D}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9af0e258f78d72eca23141af47fcb31048}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+E\+N\+D\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9af0e258f78d72eca23141af47fcb31048}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+J\+O\+I\+N@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+J\+O\+I\+N}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+J\+O\+I\+N@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+J\+O\+I\+N}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a176b4af3fc4c274fead5ff7ab535f2da}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+J\+O\+I\+N\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a176b4af3fc4c274fead5ff7ab535f2da}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+F\+I\+L\+L\+\_\+\+T\+Y\+P\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+F\+I\+L\+L\+\_\+\+T\+Y\+P\+E}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+F\+I\+L\+L\+\_\+\+T\+Y\+P\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+F\+I\+L\+L\+\_\+\+T\+Y\+P\+E}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9abbe6fc9859cc329be31644f7a2c10486}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+F\+I\+L\+L\+\_\+\+T\+Y\+P\+E\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9abbe6fc9859cc329be31644f7a2c10486}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+C\+O\+L\+O\+R@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+C\+O\+L\+O\+R}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+C\+O\+L\+O\+R@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+C\+O\+L\+O\+R}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a99c903b4dd5bb4d9d43f2089613d4196}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+C\+O\+L\+O\+R\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a99c903b4dd5bb4d9d43f2089613d4196}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+M\+O\+V\+E\+\_\+\+T\+O@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+M\+O\+V\+E\+\_\+\+T\+O}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+M\+O\+V\+E\+\_\+\+T\+O@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+M\+O\+V\+E\+\_\+\+T\+O}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a63bc236cfc747d0d6d8587acf6ebcce7}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+M\+O\+V\+E\+\_\+\+T\+O\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a63bc236cfc747d0d6d8587acf6ebcce7}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+M\+O\+V\+E\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+M\+O\+V\+E\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+M\+O\+V\+E\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+M\+O\+V\+E\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9aed365ccdd0709386ec97143463426b82}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+M\+O\+V\+E\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9aed365ccdd0709386ec97143463426b82}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9ac39fafba069365785d9c8a8aba536b1a}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9ac39fafba069365785d9c8a8aba536b1a}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+T\+O@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+T\+O}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+T\+O@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+T\+O}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9aa2fbbed7a0044abbf2e6793086517cae}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+T\+O\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9aa2fbbed7a0044abbf2e6793086517cae}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+T\+O\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+T\+O\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+T\+O\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+T\+O\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a331e21c4a339fcb08af0ea6b2928a1b0}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+L\+I\+N\+E\+\_\+\+T\+O\+\_\+\+R\+E\+L\+A\+T\+I\+V\+E\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a331e21c4a339fcb08af0ea6b2928a1b0}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+A\+R\+C@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+A\+R\+C}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+A\+R\+C@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+A\+R\+C}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a2f40d8aac3d8d2c973339b7d4714031e}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+A\+R\+C\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a2f40d8aac3d8d2c973339b7d4714031e}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+C\+I\+R\+C\+L\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+C\+I\+R\+C\+L\+E}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+C\+I\+R\+C\+L\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+C\+I\+R\+C\+L\+E}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a4fbdec33e6d633c12f4ad95d4c60f0ca}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+C\+I\+R\+C\+L\+E\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a4fbdec33e6d633c12f4ad95d4c60f0ca}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+C\+I\+R\+C\+L\+E\+\_\+\+F\+I\+L\+L\+E\+D@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+C\+I\+R\+C\+L\+E\+\_\+\+F\+I\+L\+L\+E\+D}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+C\+I\+R\+C\+L\+E\+\_\+\+F\+I\+L\+L\+E\+D@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+C\+I\+R\+C\+L\+E\+\_\+\+F\+I\+L\+L\+E\+D}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a667d97c061a5dabbe5c24502be81ca9f}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+C\+I\+R\+C\+L\+E\+\_\+\+F\+I\+L\+L\+E\+D\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a667d97c061a5dabbe5c24502be81ca9f}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+B\+E\+V\+E\+L@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+B\+E\+V\+E\+L}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+B\+E\+V\+E\+L@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+B\+E\+V\+E\+L}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9aadf02455d872af13f14dd8cf86bbc0a2}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+B\+E\+V\+E\+L\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9aadf02455d872af13f14dd8cf86bbc0a2}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+B\+E\+V\+E\+L\+\_\+\+F\+I\+L\+L\+E\+D@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+B\+E\+V\+E\+L\+\_\+\+F\+I\+L\+L\+E\+D}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+B\+E\+V\+E\+L\+\_\+\+F\+I\+L\+L\+E\+D@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+B\+E\+V\+E\+L\+\_\+\+F\+I\+L\+L\+E\+D}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a146f8840878e819668c55d3bdbedba3c}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+B\+E\+V\+E\+L\+\_\+\+F\+I\+L\+L\+E\+D\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a146f8840878e819668c55d3bdbedba3c}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+R\+E\+C\+T\+A\+N\+G\+L\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+R\+E\+C\+T\+A\+N\+G\+L\+E}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+R\+E\+C\+T\+A\+N\+G\+L\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+R\+E\+C\+T\+A\+N\+G\+L\+E}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9ab57c5fefc8211dd3ce76c26f9e29a8c6}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+R\+E\+C\+T\+A\+N\+G\+L\+E\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9ab57c5fefc8211dd3ce76c26f9e29a8c6}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+R\+E\+C\+T\+A\+N\+G\+L\+E\+\_\+\+F\+I\+L\+L\+E\+D@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+R\+E\+C\+T\+A\+N\+G\+L\+E\+\_\+\+F\+I\+L\+L\+E\+D}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+R\+E\+C\+T\+A\+N\+G\+L\+E\+\_\+\+F\+I\+L\+L\+E\+D@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+R\+E\+C\+T\+A\+N\+G\+L\+E\+\_\+\+F\+I\+L\+L\+E\+D}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a5b409ae6f16877e67ecc647d299b3e73}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+R\+E\+C\+T\+A\+N\+G\+L\+E\+\_\+\+F\+I\+L\+L\+E\+D\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a5b409ae6f16877e67ecc647d299b3e73}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+P\+O\+L\+Y\+G\+O\+N@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+P\+O\+L\+Y\+G\+O\+N}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+P\+O\+L\+Y\+G\+O\+N@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+P\+O\+L\+Y\+G\+O\+N}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a3b56dad21c771490d617c79d652a58f5}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+P\+O\+L\+Y\+G\+O\+N\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a3b56dad21c771490d617c79d652a58f5}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+E\+N\+D@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+E\+N\+D}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+E\+N\+D@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+E\+N\+D}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a9436c7beb0a84688ab0c4daeaf81c316}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+E\+N\+D\label{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9a9436c7beb0a84688ab0c4daeaf81c316}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 351 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_a4c4b55aa07ce1ea5339665103b1c3bf7}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+E\+R\+R\+O\+R\+S@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+E\+R\+R\+O\+R\+S}}
+\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+E\+R\+R\+O\+R\+S@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+E\+R\+R\+O\+R\+S}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+E\+R\+R\+O\+R\+S}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+E\+R\+R\+O\+R\+S}}\label{usb__host__printer_8h_a4c4b55aa07ce1ea5339665103b1c3bf7}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+U\+C\+C\+E\+S\+S@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+U\+C\+C\+E\+S\+S}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+U\+C\+C\+E\+S\+S@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+U\+C\+C\+E\+S\+S}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a4c4b55aa07ce1ea5339665103b1c3bf7ae1455c7e02bbbe8e7b004b8c058cca5f}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+U\+C\+C\+E\+S\+S\label{usb__host__printer_8h_a4c4b55aa07ce1ea5339665103b1c3bf7ae1455c7e02bbbe8e7b004b8c058cca5f}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+U\+S\+Y@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+U\+S\+Y}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+U\+S\+Y@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+U\+S\+Y}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a4c4b55aa07ce1ea5339665103b1c3bf7a7deba734850144cf3d3211e497e521dc}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+U\+S\+Y\label{usb__host__printer_8h_a4c4b55aa07ce1ea5339665103b1c3bf7a7deba734850144cf3d3211e497e521dc}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+C\+O\+M\+M\+A\+N\+D@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+C\+O\+M\+M\+A\+N\+D}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+C\+O\+M\+M\+A\+N\+D@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+C\+O\+M\+M\+A\+N\+D}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a4c4b55aa07ce1ea5339665103b1c3bf7aaf1a9a241d56d6dddbe7dc53aa5a862c}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+C\+O\+M\+M\+A\+N\+D\label{usb__host__printer_8h_a4c4b55aa07ce1ea5339665103b1c3bf7aaf1a9a241d56d6dddbe7dc53aa5a862c}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+D\+E\+V\+I\+C\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+D\+E\+V\+I\+C\+E}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+D\+E\+V\+I\+C\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+D\+E\+V\+I\+C\+E}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a4c4b55aa07ce1ea5339665103b1c3bf7af1b79076882694d05de3909fdf0b77e2}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+D\+E\+V\+I\+C\+E\label{usb__host__printer_8h_a4c4b55aa07ce1ea5339665103b1c3bf7af1b79076882694d05de3909fdf0b77e2}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+R\+Y@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+R\+Y}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+R\+Y@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+R\+Y}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a4c4b55aa07ce1ea5339665103b1c3bf7aaf2aefd89b832ec004b15131fe7bc40d}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+R\+Y\label{usb__host__printer_8h_a4c4b55aa07ce1ea5339665103b1c3bf7aaf2aefd89b832ec004b15131fe7bc40d}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+D\+E\+V\+I\+C\+E\+S@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+D\+E\+V\+I\+C\+E\+S}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+D\+E\+V\+I\+C\+E\+S@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+D\+E\+V\+I\+C\+E\+S}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a4c4b55aa07ce1ea5339665103b1c3bf7a13d9c0fee905c32510581bfd3f22c900}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+D\+E\+V\+I\+C\+E\+S\label{usb__host__printer_8h_a4c4b55aa07ce1ea5339665103b1c3bf7a13d9c0fee905c32510581bfd3f22c900}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R}}\item[{\em 
+\hypertarget{usb__host__printer_8h_a4c4b55aa07ce1ea5339665103b1c3bf7af5a7ffe529ab46ab626f44658edb93d6}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+B\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\label{usb__host__printer_8h_a4c4b55aa07ce1ea5339665103b1c3bf7af5a7ffe529ab46ab626f44658edb93d6}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 979 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_abdf150befb558700f76f24196b606de3}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+S@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+S}}
+\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+S@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+S}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+S}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+S}}\label{usb__host__printer_8h_abdf150befb558700f76f24196b606de3}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+A\+V\+A\+N\+T\+\_\+\+G\+A\+R\+D\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+A\+V\+A\+N\+T\+\_\+\+G\+A\+R\+D\+E}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+A\+V\+A\+N\+T\+\_\+\+G\+A\+R\+D\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+A\+V\+A\+N\+T\+\_\+\+G\+A\+R\+D\+E}}\item[{\em 
+\hypertarget{usb__host__printer_8h_abdf150befb558700f76f24196b606de3a7f64800fd2818418ddd7d7ce2addd0fa}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+A\+V\+A\+N\+T\+\_\+\+G\+A\+R\+D\+E\label{usb__host__printer_8h_abdf150befb558700f76f24196b606de3a7f64800fd2818418ddd7d7ce2addd0fa}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+B\+O\+O\+K\+M\+A\+N@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+B\+O\+O\+K\+M\+A\+N}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+B\+O\+O\+K\+M\+A\+N@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+B\+O\+O\+K\+M\+A\+N}}\item[{\em 
+\hypertarget{usb__host__printer_8h_abdf150befb558700f76f24196b606de3aedcb91a8a86c95f7bbc167e3de83e14a}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+B\+O\+O\+K\+M\+A\+N\label{usb__host__printer_8h_abdf150befb558700f76f24196b606de3aedcb91a8a86c95f7bbc167e3de83e14a}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+C\+O\+U\+R\+I\+E\+R@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+C\+O\+U\+R\+I\+E\+R}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+C\+O\+U\+R\+I\+E\+R@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+C\+O\+U\+R\+I\+E\+R}}\item[{\em 
+\hypertarget{usb__host__printer_8h_abdf150befb558700f76f24196b606de3a425f0128c27fc2d85766c1cac00c3772}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+C\+O\+U\+R\+I\+E\+R\label{usb__host__printer_8h_abdf150befb558700f76f24196b606de3a425f0128c27fc2d85766c1cac00c3772}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+H\+E\+L\+V\+E\+T\+I\+C\+A@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+H\+E\+L\+V\+E\+T\+I\+C\+A}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+H\+E\+L\+V\+E\+T\+I\+C\+A@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+H\+E\+L\+V\+E\+T\+I\+C\+A}}\item[{\em 
+\hypertarget{usb__host__printer_8h_abdf150befb558700f76f24196b606de3ae91c6981363b5c29c3228e385fc120c0}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+H\+E\+L\+V\+E\+T\+I\+C\+A\label{usb__host__printer_8h_abdf150befb558700f76f24196b606de3ae91c6981363b5c29c3228e385fc120c0}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+H\+E\+L\+V\+E\+T\+I\+C\+A\+\_\+\+N\+A\+R\+R\+O\+W@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+H\+E\+L\+V\+E\+T\+I\+C\+A\+\_\+\+N\+A\+R\+R\+O\+W}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+H\+E\+L\+V\+E\+T\+I\+C\+A\+\_\+\+N\+A\+R\+R\+O\+W@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+H\+E\+L\+V\+E\+T\+I\+C\+A\+\_\+\+N\+A\+R\+R\+O\+W}}\item[{\em 
+\hypertarget{usb__host__printer_8h_abdf150befb558700f76f24196b606de3a7b300f65b0e4adb3317c7b4edab636df}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+H\+E\+L\+V\+E\+T\+I\+C\+A\+\_\+\+N\+A\+R\+R\+O\+W\label{usb__host__printer_8h_abdf150befb558700f76f24196b606de3a7b300f65b0e4adb3317c7b4edab636df}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+N\+E\+W\+\_\+\+C\+E\+N\+T\+U\+R\+Y\+\_\+\+S\+C\+H\+O\+O\+L\+B\+O\+O\+K@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+N\+E\+W\+\_\+\+C\+E\+N\+T\+U\+R\+Y\+\_\+\+S\+C\+H\+O\+O\+L\+B\+O\+O\+K}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+N\+E\+W\+\_\+\+C\+E\+N\+T\+U\+R\+Y\+\_\+\+S\+C\+H\+O\+O\+L\+B\+O\+O\+K@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+N\+E\+W\+\_\+\+C\+E\+N\+T\+U\+R\+Y\+\_\+\+S\+C\+H\+O\+O\+L\+B\+O\+O\+K}}\item[{\em 
+\hypertarget{usb__host__printer_8h_abdf150befb558700f76f24196b606de3abbaab9407b28e717ca8538137a5eb405}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+N\+E\+W\+\_\+\+C\+E\+N\+T\+U\+R\+Y\+\_\+\+S\+C\+H\+O\+O\+L\+B\+O\+O\+K\label{usb__host__printer_8h_abdf150befb558700f76f24196b606de3abbaab9407b28e717ca8538137a5eb405}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+A\+L\+A\+T\+I\+N\+O@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+A\+L\+A\+T\+I\+N\+O}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+A\+L\+A\+T\+I\+N\+O@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+A\+L\+A\+T\+I\+N\+O}}\item[{\em 
+\hypertarget{usb__host__printer_8h_abdf150befb558700f76f24196b606de3a2c3af5bcae4708c1cdb7c2f20f95f2e8}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+A\+L\+A\+T\+I\+N\+O\label{usb__host__printer_8h_abdf150befb558700f76f24196b606de3a2c3af5bcae4708c1cdb7c2f20f95f2e8}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+T\+I\+M\+E\+S\+\_\+\+N\+E\+W\+\_\+\+R\+O\+M\+A\+N@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+T\+I\+M\+E\+S\+\_\+\+N\+E\+W\+\_\+\+R\+O\+M\+A\+N}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+T\+I\+M\+E\+S\+\_\+\+N\+E\+W\+\_\+\+R\+O\+M\+A\+N@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+T\+I\+M\+E\+S\+\_\+\+N\+E\+W\+\_\+\+R\+O\+M\+A\+N}}\item[{\em 
+\hypertarget{usb__host__printer_8h_abdf150befb558700f76f24196b606de3afbf22049f5ca087481706279e795e7ab}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+T\+I\+M\+E\+S\+\_\+\+N\+E\+W\+\_\+\+R\+O\+M\+A\+N\label{usb__host__printer_8h_abdf150befb558700f76f24196b606de3afbf22049f5ca087481706279e795e7ab}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+M\+A\+X\+\_\+\+F\+O\+N\+T@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+M\+A\+X\+\_\+\+F\+O\+N\+T}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+M\+A\+X\+\_\+\+F\+O\+N\+T@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+M\+A\+X\+\_\+\+F\+O\+N\+T}}\item[{\em 
+\hypertarget{usb__host__printer_8h_abdf150befb558700f76f24196b606de3a43b11b77923b91cd3e8b0276038b22dd}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+M\+A\+X\+\_\+\+F\+O\+N\+T\label{usb__host__printer_8h_abdf150befb558700f76f24196b606de3a43b11b77923b91cd3e8b0276038b22dd}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 937 of file usb\+\_\+host\+\_\+printer.\+h.
+
+\hypertarget{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+S\+\_\+\+P\+O\+S@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+S\+\_\+\+P\+O\+S}}
+\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+S\+\_\+\+P\+O\+S@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+S\+\_\+\+P\+O\+S}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+S\+\_\+\+P\+O\+S}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+S\+\_\+\+P\+O\+S}}\label{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+18x36@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+18x36}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+18x36@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+18x36}}\item[{\em 
+\hypertarget{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18a3f4ce804d100c246c68a536326d170d4}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+18x36\label{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18a3f4ce804d100c246c68a536326d170d4}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+18x72@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+18x72}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+18x72@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+18x72}}\item[{\em 
+\hypertarget{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18a0ac83cf9b016b25e7cc540050ea22038}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+18x72\label{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18a0ac83cf9b016b25e7cc540050ea22038}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+36x36@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+36x36}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+36x36@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+36x36}}\item[{\em 
+\hypertarget{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18a1ef7cd6fe98981489ef6c537a0e1cd19}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+36x36\label{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18a1ef7cd6fe98981489ef6c537a0e1cd19}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+36x72@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+36x72}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+36x72@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+36x72}}\item[{\em 
+\hypertarget{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18aeac7c5b99057b72dff5943cb9a8e1729}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+36x72\label{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18aeac7c5b99057b72dff5943cb9a8e1729}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+12x24@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+12x24}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+12x24@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+12x24}}\item[{\em 
+\hypertarget{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18a77f2ff231f19a4db33d15bba42f0e07a}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+12x24\label{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18a77f2ff231f19a4db33d15bba42f0e07a}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+12x48@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+12x48}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+12x48@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+12x48}}\item[{\em 
+\hypertarget{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18a6b97a0babd0d61629e0004fb2e9ca369}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+12x48\label{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18a6b97a0babd0d61629e0004fb2e9ca369}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+24x24@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+24x24}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+24x24@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+24x24}}\item[{\em 
+\hypertarget{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18a8d6e8cb2ff5b66abb99db8903a9d84e2}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+24x24\label{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18a8d6e8cb2ff5b66abb99db8903a9d84e2}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+24x48@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+24x48}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+24x48@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+24x48}}\item[{\em 
+\hypertarget{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18aeebbfd8cf86bfd11f789319e80754f61}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+24x48\label{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18aeebbfd8cf86bfd11f789319e80754f61}
+}]\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+\+M\+A\+X\+\_\+\+F\+O\+N\+T@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+\+M\+A\+X\+\_\+\+F\+O\+N\+T}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+\+M\+A\+X\+\_\+\+F\+O\+N\+T@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+\+M\+A\+X\+\_\+\+F\+O\+N\+T}}\item[{\em 
+\hypertarget{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18adb70ec5bf40b3663a115682b14577a08}{}U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+F\+O\+N\+T\+\_\+\+P\+O\+S\+\_\+\+M\+A\+X\+\_\+\+F\+O\+N\+T\label{usb__host__printer_8h_abda3c60de31bcb26e8408f99f4554f18adb70ec5bf40b3663a115682b14577a08}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 959 of file usb\+\_\+host\+\_\+printer.\+h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{usb__host__printer_8h_a69eb4a7d81cbfc11f10262ddbc5c6c4e}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+Host\+Printer\+Command@{U\+S\+B\+Host\+Printer\+Command}}
+\index{U\+S\+B\+Host\+Printer\+Command@{U\+S\+B\+Host\+Printer\+Command}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+Host\+Printer\+Command}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} U\+S\+B\+Host\+Printer\+Command (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{device\+Address, }
+\item[{{\bf U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+C\+O\+M\+M\+A\+N\+D}}]{command, }
+\item[{{\bf U\+S\+B\+\_\+\+D\+A\+T\+A\+\_\+\+P\+O\+I\+N\+T\+E\+R}}]{data, }
+\item[{{\bf D\+W\+O\+R\+D}}]{size, }
+\item[{{\bf B\+Y\+T\+E}}]{flags}
+\end{DoxyParamCaption}
+)}\label{usb__host__printer_8h_a69eb4a7d81cbfc11f10262ddbc5c6c4e}
+
+
+Definition at line 872 of file usb\+\_\+host\+\_\+printer.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\hypertarget{usb__host__printer_8h_adf709877723b4a7fe66f706359ee83ea}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+Host\+Printer\+Command\+Ready@{U\+S\+B\+Host\+Printer\+Command\+Ready}}
+\index{U\+S\+B\+Host\+Printer\+Command\+Ready@{U\+S\+B\+Host\+Printer\+Command\+Ready}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+Host\+Printer\+Command\+Ready}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} U\+S\+B\+Host\+Printer\+Command\+Ready (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{device\+Address}
+\end{DoxyParamCaption}
+)}\label{usb__host__printer_8h_adf709877723b4a7fe66f706359ee83ea}
+
+
+Definition at line 920 of file usb\+\_\+host\+\_\+printer.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+\hypertarget{usb__host__printer_8h_a4c5bd47451d6d852dd8a3c3d421dfc49}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+Host\+Printer\+Device\+Detached@{U\+S\+B\+Host\+Printer\+Device\+Detached}}
+\index{U\+S\+B\+Host\+Printer\+Device\+Detached@{U\+S\+B\+Host\+Printer\+Device\+Detached}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+Host\+Printer\+Device\+Detached}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} U\+S\+B\+Host\+Printer\+Device\+Detached (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{device\+Address}
+\end{DoxyParamCaption}
+)}\label{usb__host__printer_8h_a4c5bd47451d6d852dd8a3c3d421dfc49}
+
+
+Definition at line 966 of file usb\+\_\+host\+\_\+printer.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+\hypertarget{usb__host__printer_8h_a5e1b4daf8b38172c637641f4adff5f4d}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+Host\+Printer\+Event\+Handler@{U\+S\+B\+Host\+Printer\+Event\+Handler}}
+\index{U\+S\+B\+Host\+Printer\+Event\+Handler@{U\+S\+B\+Host\+Printer\+Event\+Handler}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+Host\+Printer\+Event\+Handler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} U\+S\+B\+Host\+Printer\+Event\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{address, }
+\item[{{\bf U\+S\+B\+\_\+\+E\+V\+E\+N\+T}}]{event, }
+\item[{void $\ast$}]{data, }
+\item[{{\bf D\+W\+O\+R\+D}}]{size}
+\end{DoxyParamCaption}
+)}\label{usb__host__printer_8h_a5e1b4daf8b38172c637641f4adff5f4d}
+
+
+Definition at line 569 of file usb\+\_\+host\+\_\+printer.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 5
+
+
+\hypertarget{usb__host__printer_8h_aaf5c322226e1ab55e5413a4ff08ff7e1}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+Host\+Printer\+Get\+Rx\+Length@{U\+S\+B\+Host\+Printer\+Get\+Rx\+Length}}
+\index{U\+S\+B\+Host\+Printer\+Get\+Rx\+Length@{U\+S\+B\+Host\+Printer\+Get\+Rx\+Length}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+Host\+Printer\+Get\+Rx\+Length}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} U\+S\+B\+Host\+Printer\+Get\+Rx\+Length (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{device\+Address}
+\end{DoxyParamCaption}
+)}\label{usb__host__printer_8h_aaf5c322226e1ab55e5413a4ff08ff7e1}
+
+
+Definition at line 998 of file usb\+\_\+host\+\_\+printer.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 6
+
+
+\hypertarget{usb__host__printer_8h_ad889e22b3c483b948895b16354f31d08}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+Host\+Printer\+Get\+Status@{U\+S\+B\+Host\+Printer\+Get\+Status}}
+\index{U\+S\+B\+Host\+Printer\+Get\+Status@{U\+S\+B\+Host\+Printer\+Get\+Status}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+Host\+Printer\+Get\+Status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} U\+S\+B\+Host\+Printer\+Get\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{device\+Address, }
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{status}
+\end{DoxyParamCaption}
+)}\label{usb__host__printer_8h_ad889e22b3c483b948895b16354f31d08}
+
+
+Definition at line 1048 of file usb\+\_\+host\+\_\+printer.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 7
+
+
+\hypertarget{usb__host__printer_8h_a7c2c11f9c18453fff06b06533ac59f97}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+Host\+Printer\+Initialize@{U\+S\+B\+Host\+Printer\+Initialize}}
+\index{U\+S\+B\+Host\+Printer\+Initialize@{U\+S\+B\+Host\+Printer\+Initialize}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+Host\+Printer\+Initialize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} U\+S\+B\+Host\+Printer\+Initialize (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{address, }
+\item[{{\bf D\+W\+O\+R\+D}}]{flags, }
+\item[{{\bf B\+Y\+T\+E}}]{client\+Driver\+I\+D}
+\end{DoxyParamCaption}
+)}\label{usb__host__printer_8h_a7c2c11f9c18453fff06b06533ac59f97}
+
+
+Definition at line 299 of file usb\+\_\+host\+\_\+printer.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 8
+
+
+\hypertarget{usb__host__printer_8h_a435ca6eef12a62794eb8e635320cc68b}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+Host\+Printer\+Read@{U\+S\+B\+Host\+Printer\+Read}}
+\index{U\+S\+B\+Host\+Printer\+Read@{U\+S\+B\+Host\+Printer\+Read}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+Host\+Printer\+Read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} U\+S\+B\+Host\+Printer\+Read (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{device\+Address, }
+\item[{void $\ast$}]{buffer, }
+\item[{{\bf D\+W\+O\+R\+D}}]{length, }
+\item[{{\bf B\+Y\+T\+E}}]{transfer\+Flags}
+\end{DoxyParamCaption}
+)}\label{usb__host__printer_8h_a435ca6eef12a62794eb8e635320cc68b}
+
+
+Definition at line 1097 of file usb\+\_\+host\+\_\+printer.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 9
+
+
+\hypertarget{usb__host__printer_8h_a81d411dd8e43a87a1dce8a8316f72ddc}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+Host\+Printer\+Reset@{U\+S\+B\+Host\+Printer\+Reset}}
+\index{U\+S\+B\+Host\+Printer\+Reset@{U\+S\+B\+Host\+Printer\+Reset}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+Host\+Printer\+Reset}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} U\+S\+B\+Host\+Printer\+Reset (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{device\+Address}
+\end{DoxyParamCaption}
+)}\label{usb__host__printer_8h_a81d411dd8e43a87a1dce8a8316f72ddc}
+
+
+Definition at line 1155 of file usb\+\_\+host\+\_\+printer.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 10
+
+
+\hypertarget{usb__host__printer_8h_a24ba2b123cbdf4d79c0ff0d8ed629e19}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+Host\+Printer\+Rx\+Is\+Busy@{U\+S\+B\+Host\+Printer\+Rx\+Is\+Busy}}
+\index{U\+S\+B\+Host\+Printer\+Rx\+Is\+Busy@{U\+S\+B\+Host\+Printer\+Rx\+Is\+Busy}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+Host\+Printer\+Rx\+Is\+Busy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} U\+S\+B\+Host\+Printer\+Rx\+Is\+Busy (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{device\+Address}
+\end{DoxyParamCaption}
+)}\label{usb__host__printer_8h_a24ba2b123cbdf4d79c0ff0d8ed629e19}
+
+
+Definition at line 1207 of file usb\+\_\+host\+\_\+printer.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 11
+
+
+\hypertarget{usb__host__printer_8h_a5daabbacbe0be1c9d393a7b65471bb62}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+Host\+Printer\+Write@{U\+S\+B\+Host\+Printer\+Write}}
+\index{U\+S\+B\+Host\+Printer\+Write@{U\+S\+B\+Host\+Printer\+Write}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+Host\+Printer\+Write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} U\+S\+B\+Host\+Printer\+Write (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{device\+Address, }
+\item[{void $\ast$}]{buffer, }
+\item[{{\bf D\+W\+O\+R\+D}}]{length, }
+\item[{{\bf B\+Y\+T\+E}}]{flags}
+\end{DoxyParamCaption}
+)}\label{usb__host__printer_8h_a5daabbacbe0be1c9d393a7b65471bb62}
+
+
+Definition at line 1256 of file usb\+\_\+host\+\_\+printer.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 12
+
+
+\hypertarget{usb__host__printer_8h_ab4a79025e648bee0a14dd55185b524f5}{}\index{usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}!U\+S\+B\+Host\+Printer\+Write\+Complete@{U\+S\+B\+Host\+Printer\+Write\+Complete}}
+\index{U\+S\+B\+Host\+Printer\+Write\+Complete@{U\+S\+B\+Host\+Printer\+Write\+Complete}!usb\+\_\+host\+\_\+printer.\+h@{usb\+\_\+host\+\_\+printer.\+h}}
+\subsubsection[{U\+S\+B\+Host\+Printer\+Write\+Complete}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} U\+S\+B\+Host\+Printer\+Write\+Complete (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{device\+Address}
+\end{DoxyParamCaption}
+)}\label{usb__host__printer_8h_ab4a79025e648bee0a14dd55185b524f5}
+
+
+Definition at line 1325 of file usb\+\_\+host\+\_\+printer.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 13
+
+

@@ -1,0 +1,150 @@
+\hypertarget{structm_comm___input_buffer}{}\section{m\+Comm\+\_\+\+Input\+Buffer Struct Reference}
+\label{structm_comm___input_buffer}\index{m\+Comm\+\_\+\+Input\+Buffer@{m\+Comm\+\_\+\+Input\+Buffer}}
+
+
+{\ttfamily \#include $<$m\+Comm.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{structm_comm___input_buffer_aae5a12e607d0f782506d9e6ec6179c64}{index}
+\item 
+uint8\+\_\+t \hyperlink{structm_comm___input_buffer_a0480b812cba9c1d9c71a5fb1071bd0fc}{counter}
+\item 
+uint8\+\_\+t \hyperlink{structm_comm___input_buffer_a59eac9627282a484fbaf0aa7aa3b8a9a}{checksum}
+\item 
+uint8\+\_\+t \hyperlink{structm_comm___input_buffer_a0b57aa10271a66f3dc936bba1d2f3830}{state}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>uint8\_t \hyperlink{structm_comm___input_buffer_af61f8246015db4f0a85a942ac747131e}{all}\\
+\>struct \{\\
+\>\>unsigned \hyperlink{structm_comm___input_buffer_a69e2d5ccbb19f5e4b8bc58074fca8f54}{full}:1\\
+\>\>\>{\em \textquotesingle{}1\textquotesingle{} if the input buffer is full and ready for processing }\\
+\>\>unsigned \hyperlink{structm_comm___input_buffer_a066d82270b94fbd24c215e42052f8c33}{invalid}:1\\
+\>\>\>{\em \textquotesingle{}1\textquotesingle{} if the data packet had an invalid checksum }\\
+\>\>unsigned \hyperlink{structm_comm___input_buffer_a7f9bd405bd2f03dec58905c3ec5f2964}{write}:1\\
+\>\>\>{\em \textquotesingle{}1\textquotesingle{} if this is a write command }\\
+\>\>unsigned \hyperlink{structm_comm___input_buffer_a54eec99f0e68e78d3ed4b064a5960cb5}{startPacket}:1\\
+\>\>unsigned \hyperlink{structm_comm___input_buffer_a562a2e23a37e69c437ce24e2af6b408b}{ssLatch}:1\\
+\>\} \hyperlink{structm_comm___input_buffer_a79fd6172bbc3e268bf9c6a31aed08376}{bits}\\
+\} \hyperlink{structm_comm___input_buffer_ae65be2fdbb0559c8de9fb8842bd6338e}{flags}\\
+
+\end{tabbing}\item 
+uint8\+\_\+t \hyperlink{structm_comm___input_buffer_a8d06f288063a5615acb5cb64ecb2028d}{buffer} \mbox{[}M\+C\+O\+M\+M\+\_\+\+I\+N\+P\+U\+T\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+Z\+E\mbox{]}
+\begin{DoxyCompactList}\small\item\em Stores the input packet data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 130 of file m\+Comm.\+h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{structm_comm___input_buffer_af61f8246015db4f0a85a942ac747131e}{}\index{m\+Comm\+\_\+\+Input\+Buffer@{m\+Comm\+\_\+\+Input\+Buffer}!all@{all}}
+\index{all@{all}!m\+Comm\+\_\+\+Input\+Buffer@{m\+Comm\+\_\+\+Input\+Buffer}}
+\subsubsection[{all}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t all}\label{structm_comm___input_buffer_af61f8246015db4f0a85a942ac747131e}
+
+
+Definition at line 141 of file m\+Comm.\+h.
+
+\hypertarget{structm_comm___input_buffer_a79fd6172bbc3e268bf9c6a31aed08376}{}\index{m\+Comm\+\_\+\+Input\+Buffer@{m\+Comm\+\_\+\+Input\+Buffer}!bits@{bits}}
+\index{bits@{bits}!m\+Comm\+\_\+\+Input\+Buffer@{m\+Comm\+\_\+\+Input\+Buffer}}
+\subsubsection[{bits}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   bits}\label{structm_comm___input_buffer_a79fd6172bbc3e268bf9c6a31aed08376}
+\hypertarget{structm_comm___input_buffer_a8d06f288063a5615acb5cb64ecb2028d}{}\index{m\+Comm\+\_\+\+Input\+Buffer@{m\+Comm\+\_\+\+Input\+Buffer}!buffer@{buffer}}
+\index{buffer@{buffer}!m\+Comm\+\_\+\+Input\+Buffer@{m\+Comm\+\_\+\+Input\+Buffer}}
+\subsubsection[{buffer}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t buffer\mbox{[}M\+C\+O\+M\+M\+\_\+\+I\+N\+P\+U\+T\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+Z\+E\mbox{]}}\label{structm_comm___input_buffer_a8d06f288063a5615acb5cb64ecb2028d}
+
+
+Stores the input packet data. 
+
+
+
+Definition at line 162 of file m\+Comm.\+h.
+
+\hypertarget{structm_comm___input_buffer_a59eac9627282a484fbaf0aa7aa3b8a9a}{}\index{m\+Comm\+\_\+\+Input\+Buffer@{m\+Comm\+\_\+\+Input\+Buffer}!checksum@{checksum}}
+\index{checksum@{checksum}!m\+Comm\+\_\+\+Input\+Buffer@{m\+Comm\+\_\+\+Input\+Buffer}}
+\subsubsection[{checksum}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t checksum}\label{structm_comm___input_buffer_a59eac9627282a484fbaf0aa7aa3b8a9a}
+
+
+Definition at line 134 of file m\+Comm.\+h.
+
+\hypertarget{structm_comm___input_buffer_a0480b812cba9c1d9c71a5fb1071bd0fc}{}\index{m\+Comm\+\_\+\+Input\+Buffer@{m\+Comm\+\_\+\+Input\+Buffer}!counter@{counter}}
+\index{counter@{counter}!m\+Comm\+\_\+\+Input\+Buffer@{m\+Comm\+\_\+\+Input\+Buffer}}
+\subsubsection[{counter}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t counter}\label{structm_comm___input_buffer_a0480b812cba9c1d9c71a5fb1071bd0fc}
+
+
+Definition at line 133 of file m\+Comm.\+h.
+
+\hypertarget{structm_comm___input_buffer_ae65be2fdbb0559c8de9fb8842bd6338e}{}\index{m\+Comm\+\_\+\+Input\+Buffer@{m\+Comm\+\_\+\+Input\+Buffer}!flags@{flags}}
+\index{flags@{flags}!m\+Comm\+\_\+\+Input\+Buffer@{m\+Comm\+\_\+\+Input\+Buffer}}
+\subsubsection[{flags}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \}   flags}\label{structm_comm___input_buffer_ae65be2fdbb0559c8de9fb8842bd6338e}
+\hypertarget{structm_comm___input_buffer_a69e2d5ccbb19f5e4b8bc58074fca8f54}{}\index{m\+Comm\+\_\+\+Input\+Buffer@{m\+Comm\+\_\+\+Input\+Buffer}!full@{full}}
+\index{full@{full}!m\+Comm\+\_\+\+Input\+Buffer@{m\+Comm\+\_\+\+Input\+Buffer}}
+\subsubsection[{full}]{\setlength{\rightskip}{0pt plus 5cm}unsigned full}\label{structm_comm___input_buffer_a69e2d5ccbb19f5e4b8bc58074fca8f54}
+
+
+\textquotesingle{}1\textquotesingle{} if the input buffer is full and ready for processing 
+
+
+
+Definition at line 144 of file m\+Comm.\+h.
+
+\hypertarget{structm_comm___input_buffer_aae5a12e607d0f782506d9e6ec6179c64}{}\index{m\+Comm\+\_\+\+Input\+Buffer@{m\+Comm\+\_\+\+Input\+Buffer}!index@{index}}
+\index{index@{index}!m\+Comm\+\_\+\+Input\+Buffer@{m\+Comm\+\_\+\+Input\+Buffer}}
+\subsubsection[{index}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t index}\label{structm_comm___input_buffer_aae5a12e607d0f782506d9e6ec6179c64}
+
+
+Definition at line 132 of file m\+Comm.\+h.
+
+\hypertarget{structm_comm___input_buffer_a066d82270b94fbd24c215e42052f8c33}{}\index{m\+Comm\+\_\+\+Input\+Buffer@{m\+Comm\+\_\+\+Input\+Buffer}!invalid@{invalid}}
+\index{invalid@{invalid}!m\+Comm\+\_\+\+Input\+Buffer@{m\+Comm\+\_\+\+Input\+Buffer}}
+\subsubsection[{invalid}]{\setlength{\rightskip}{0pt plus 5cm}unsigned invalid}\label{structm_comm___input_buffer_a066d82270b94fbd24c215e42052f8c33}
+
+
+\textquotesingle{}1\textquotesingle{} if the data packet had an invalid checksum 
+
+
+
+Definition at line 147 of file m\+Comm.\+h.
+
+\hypertarget{structm_comm___input_buffer_a562a2e23a37e69c437ce24e2af6b408b}{}\index{m\+Comm\+\_\+\+Input\+Buffer@{m\+Comm\+\_\+\+Input\+Buffer}!ss\+Latch@{ss\+Latch}}
+\index{ss\+Latch@{ss\+Latch}!m\+Comm\+\_\+\+Input\+Buffer@{m\+Comm\+\_\+\+Input\+Buffer}}
+\subsubsection[{ss\+Latch}]{\setlength{\rightskip}{0pt plus 5cm}unsigned ss\+Latch}\label{structm_comm___input_buffer_a562a2e23a37e69c437ce24e2af6b408b}
+
+
+Definition at line 156 of file m\+Comm.\+h.
+
+\hypertarget{structm_comm___input_buffer_a54eec99f0e68e78d3ed4b064a5960cb5}{}\index{m\+Comm\+\_\+\+Input\+Buffer@{m\+Comm\+\_\+\+Input\+Buffer}!start\+Packet@{start\+Packet}}
+\index{start\+Packet@{start\+Packet}!m\+Comm\+\_\+\+Input\+Buffer@{m\+Comm\+\_\+\+Input\+Buffer}}
+\subsubsection[{start\+Packet}]{\setlength{\rightskip}{0pt plus 5cm}unsigned start\+Packet}\label{structm_comm___input_buffer_a54eec99f0e68e78d3ed4b064a5960cb5}
+
+
+Definition at line 155 of file m\+Comm.\+h.
+
+\hypertarget{structm_comm___input_buffer_a0b57aa10271a66f3dc936bba1d2f3830}{}\index{m\+Comm\+\_\+\+Input\+Buffer@{m\+Comm\+\_\+\+Input\+Buffer}!state@{state}}
+\index{state@{state}!m\+Comm\+\_\+\+Input\+Buffer@{m\+Comm\+\_\+\+Input\+Buffer}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t state}\label{structm_comm___input_buffer_a0b57aa10271a66f3dc936bba1d2f3830}
+
+
+Definition at line 136 of file m\+Comm.\+h.
+
+\hypertarget{structm_comm___input_buffer_a7f9bd405bd2f03dec58905c3ec5f2964}{}\index{m\+Comm\+\_\+\+Input\+Buffer@{m\+Comm\+\_\+\+Input\+Buffer}!write@{write}}
+\index{write@{write}!m\+Comm\+\_\+\+Input\+Buffer@{m\+Comm\+\_\+\+Input\+Buffer}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}unsigned write}\label{structm_comm___input_buffer_a7f9bd405bd2f03dec58905c3ec5f2964}
+
+
+\textquotesingle{}1\textquotesingle{} if this is a write command 
+
+
+
+Definition at line 151 of file m\+Comm.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/\hyperlink{m_comm_8h}{m\+Comm.\+h}\end{DoxyCompactItemize}

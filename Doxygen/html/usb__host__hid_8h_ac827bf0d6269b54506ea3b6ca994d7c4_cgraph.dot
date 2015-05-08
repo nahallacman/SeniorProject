@@ -1,0 +1,27 @@
+digraph "USBHostHIDResetDeviceWithWait"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="USBHostHIDResetDeviceWithWait",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="USBHostHIDResetDevice",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__hid_8c.html#a41ffee5052e192ebba5f92d758c53b44"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="_USBHostHID_ResetStateJump",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__hid_8c.html#a74b8f37fa690fdd3da5c4799fa5ecbe1"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="USBHostIssueDeviceRequest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host_8h.html#a17f2dbf6b2ef2c47a52dc50b64776344"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="_USB_ResetDATA0",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host_8c.html#a5d09188ddf7b972f9b2f54d11c0081f6"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="_USB_FindEndpoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host_8c.html#ae449b4da12d04e5c006874382c84caab"];
+  Node4 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="_USB_InitControlWrite",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host_8c.html#a058419fc74add8358df667b00c827581"];
+  Node4 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="_USB_InitControlRead",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host_8c.html#af241c7058876aad3e2680b191af50a5c"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="USBHostHIDDeviceStatus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__hid_8c.html#ac92f0571066031a0051679a48cf24fa1"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="USBHostDeviceStatus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host_8h.html#a72451c3e34425ccd427bdd3a4eae723c"];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="USBHostHIDTransferIsComplete",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$usb__host__hid_8c.html#a3d8ff0d959c71167e7745a2052051f88"];
+}

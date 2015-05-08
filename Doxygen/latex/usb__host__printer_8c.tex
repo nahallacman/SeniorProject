@@ -1,0 +1,491 @@
+\hypertarget{usb__host__printer_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+U\+S\+B/\+Printer Host Driver/usb\+\_\+host\+\_\+printer.c File Reference}
+\label{usb__host__printer_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+U\+S\+B/\+Printer Host Driver/usb\+\_\+host\+\_\+printer.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+U\+S\+B/\+Printer Host Driver/usb\+\_\+host\+\_\+printer.\+c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Generic\+Type\+Defs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\+\_\+config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}struct\+\_\+queue.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}U\+S\+B/usb.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}U\+S\+B/usb\+\_\+host\+\_\+printer.\+h\char`\"{}}\\*
+Include dependency graph for usb\+\_\+host\+\_\+printer.\+c\+:
+% FIG 0
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct___u_s_b___p_r_i_n_t_e_r___q_u_e_u_e___i_t_e_m}{\+\_\+\+U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+I\+T\+E\+M}
+\item 
+struct \hyperlink{struct___u_s_b___p_r_i_n_t_e_r___q_u_e_u_e}{\+\_\+\+U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+Q\+U\+E\+U\+E}
+\item 
+struct \hyperlink{struct___u_s_b___p_r_i_n_t_e_r___d_e_v_i_c_e}{\+\_\+\+U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{usb__host__printer_8c_ad1a878962b7ce05c1834f04341597821}{U\+S\+B\+\_\+\+M\+A\+L\+L\+O\+C}(size)~malloc(size)
+\item 
+\#define \hyperlink{usb__host__printer_8c_a08a085581de0e53cde8e567ddf62f24f}{U\+S\+B\+\_\+\+F\+R\+E\+E}(ptr)~free(ptr)
+\item 
+\#define \hyperlink{usb__host__printer_8c_a0d2718457d63c6258a27aece819cefe1}{U\+S\+B\+\_\+\+F\+R\+E\+E\+\_\+\+A\+N\+D\+\_\+\+C\+L\+E\+A\+R}(ptr)~\{\hyperlink{usb__host_8c_a08a085581de0e53cde8e567ddf62f24f}{U\+S\+B\+\_\+\+F\+R\+E\+E}(ptr); ptr = N\+U\+L\+L;\}
+\item 
+\#define \hyperlink{usb__host__printer_8c_a6dd0f52e29567a2981601860e6e1aab1}{D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+R\+I\+N\+T\+E\+R}~0x07
+\item 
+\#define \hyperlink{usb__host__printer_8c_ad1d5d3d389fcd0a3dfa9f94c331e8df3}{D\+E\+V\+I\+C\+E\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+P\+R\+I\+N\+T\+E\+R\+S}~0x01
+\item 
+\#define \hyperlink{usb__host__printer_8c_ae19f4df7a74665681ae2b48b9ead1814}{D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+U\+N\+I\+D\+I\+R\+E\+C\+T\+I\+O\+N\+A\+L}~0x01
+\item 
+\#define \hyperlink{usb__host__printer_8c_a6e91c6fc3858505a7ea1c6b050a57749}{D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+B\+I\+D\+I\+R\+E\+C\+T\+I\+O\+N\+A\+L}~0x02
+\item 
+\#define \hyperlink{usb__host__printer_8c_a3b1bd207c554308db2a13f24e00e6564}{D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+I\+E\+E\+E1284\+\_\+4}~0x03
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct___u_s_b___p_r_i_n_t_e_r___q_u_e_u_e___i_t_e_m}{\+\_\+\+U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+I\+T\+E\+M} \hyperlink{usb__host__printer_8c_aa65bc8f707c4b3884cbe053344100bfe}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+I\+T\+E\+M}
+\item 
+typedef struct \hyperlink{struct___u_s_b___p_r_i_n_t_e_r___q_u_e_u_e}{\+\_\+\+U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+Q\+U\+E\+U\+E} \hyperlink{usb__host__printer_8c_a502fc71b78efb6ff7757de1547b58895}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+Q\+U\+E\+U\+E}
+\item 
+typedef struct \hyperlink{struct___u_s_b___p_r_i_n_t_e_r___d_e_v_i_c_e}{\+\_\+\+U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E} \hyperlink{usb__host__printer_8c_ab7d6a375e00cd04123028a00c961755a}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__printer_8c_acdca20ebfd78d5539c5aad1914065f39}{\+\_\+\+U\+S\+B\+Host\+Printer\+\_\+\+Find\+Device} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} address)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{usb__host__printer_8c_a217c298721781e2e287baf1b2b14f9c2}{\+\_\+\+U\+S\+B\+Host\+Printer\+\_\+\+Read\+From\+Queue} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} device\+Address)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{usb__host__printer_8c_a28c61a0f843c82f59895bdb1d0740bd1}{\+\_\+\+U\+S\+B\+Host\+Printer\+\_\+\+Write\+From\+Queue} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} device\+Address)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__printer_8c_a7c2c11f9c18453fff06b06533ac59f97}{U\+S\+B\+Host\+Printer\+Initialize} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} address, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} flags, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} client\+Driver\+I\+D)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__printer_8c_a5e1b4daf8b38172c637641f4adff5f4d}{U\+S\+B\+Host\+Printer\+Event\+Handler} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} address, \hyperlink{usb__common_8h_a58f011a3d1f4cad0e69a9bf036fb847c}{U\+S\+B\+\_\+\+E\+V\+E\+N\+T} event, void $\ast$data, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} size)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{usb__host__printer_8c_a69eb4a7d81cbfc11f10262ddbc5c6c4e}{U\+S\+B\+Host\+Printer\+Command} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} device\+Address, \hyperlink{usb__host__printer_8h_a93a1d6f4064eaad2b3a8c0ab9cf1bae9}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+C\+O\+M\+M\+A\+N\+D} command, \hyperlink{union_u_s_b___d_a_t_a___p_o_i_n_t_e_r}{U\+S\+B\+\_\+\+D\+A\+T\+A\+\_\+\+P\+O\+I\+N\+T\+E\+R} data, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} size, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} flags)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__printer_8c_adf709877723b4a7fe66f706359ee83ea}{U\+S\+B\+Host\+Printer\+Command\+Ready} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} device\+Address)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__printer_8c_a4c5bd47451d6d852dd8a3c3d421dfc49}{U\+S\+B\+Host\+Printer\+Device\+Detached} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} device\+Address)
+\item 
+\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} \hyperlink{usb__host__printer_8c_aaf5c322226e1ab55e5413a4ff08ff7e1}{U\+S\+B\+Host\+Printer\+Get\+Rx\+Length} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} device\+Address)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{usb__host__printer_8c_ad889e22b3c483b948895b16354f31d08}{U\+S\+B\+Host\+Printer\+Get\+Status} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} device\+Address, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$status)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{usb__host__printer_8c_a435ca6eef12a62794eb8e635320cc68b}{U\+S\+B\+Host\+Printer\+Read} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} device\+Address, void $\ast$buffer, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} length, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} transfer\+Flags)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{usb__host__printer_8c_a81d411dd8e43a87a1dce8a8316f72ddc}{U\+S\+B\+Host\+Printer\+Reset} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} device\+Address)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__printer_8c_a24ba2b123cbdf4d79c0ff0d8ed629e19}{U\+S\+B\+Host\+Printer\+Rx\+Is\+Busy} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} device\+Address)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{usb__host__printer_8c_af60f70dd5035278bd3a4d9d6d54032eb}{U\+S\+B\+Host\+Printer\+Write} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} device\+Address, void $\ast$buffer, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} length, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} transfer\+Flags)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__printer_8c_ab4a79025e648bee0a14dd55185b524f5}{U\+S\+B\+Host\+Printer\+Write\+Complete} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} device\+Address)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{usb__host__printer_8c_abc7d2ef530157798709848a02d51b600}{current\+Printer\+Record}
+\item 
+\hyperlink{struct_u_s_b___p_r_i_n_t_e_r___i_n_t_e_r_f_a_c_e}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E} \hyperlink{usb__host__printer_8c_a53b44501394ad15d5e8ceb330bd14149}{usb\+Printer\+Client\+Languages} \mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{usb__host__printer_8c_ab7d6a375e00cd04123028a00c961755a}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E} \hyperlink{usb__host__printer_8c_ac1f8ee5930d5d9b8b740897bc4d89993}{usb\+Printers} \mbox{[}\hyperlink{usb__host__printer_8h_ac80bdc3075fe3663fe23a455ce4d56fb}{U\+S\+B\+\_\+\+M\+A\+X\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+S}\mbox{]}
+\item 
+\hyperlink{struct_u_s_b___p_r_i_n_t_e_r___s_p_e_c_i_f_i_c___i_n_t_e_r_f_a_c_e}{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E} \hyperlink{usb__host__printer_8c_af1ccd2d159804408fd2a1a2fa58ac79c}{usb\+Printer\+Specific\+Language} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{usb__host__printer_8c_a6dd0f52e29567a2981601860e6e1aab1}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+R\+I\+N\+T\+E\+R@{D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+R\+I\+N\+T\+E\+R}}
+\index{D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+R\+I\+N\+T\+E\+R@{D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+R\+I\+N\+T\+E\+R}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+R\+I\+N\+T\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+V\+I\+C\+E\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+R\+I\+N\+T\+E\+R~0x07}\label{usb__host__printer_8c_a6dd0f52e29567a2981601860e6e1aab1}
+
+
+Definition at line 152 of file usb\+\_\+host\+\_\+printer.\+c.
+
+\hypertarget{usb__host__printer_8c_a6e91c6fc3858505a7ea1c6b050a57749}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+B\+I\+D\+I\+R\+E\+C\+T\+I\+O\+N\+A\+L@{D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+B\+I\+D\+I\+R\+E\+C\+T\+I\+O\+N\+A\+L}}
+\index{D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+B\+I\+D\+I\+R\+E\+C\+T\+I\+O\+N\+A\+L@{D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+B\+I\+D\+I\+R\+E\+C\+T\+I\+O\+N\+A\+L}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+B\+I\+D\+I\+R\+E\+C\+T\+I\+O\+N\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+B\+I\+D\+I\+R\+E\+C\+T\+I\+O\+N\+A\+L~0x02}\label{usb__host__printer_8c_a6e91c6fc3858505a7ea1c6b050a57749}
+
+
+Definition at line 157 of file usb\+\_\+host\+\_\+printer.\+c.
+
+\hypertarget{usb__host__printer_8c_a3b1bd207c554308db2a13f24e00e6564}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+I\+E\+E\+E1284\+\_\+4@{D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+I\+E\+E\+E1284\+\_\+4}}
+\index{D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+I\+E\+E\+E1284\+\_\+4@{D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+I\+E\+E\+E1284\+\_\+4}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+I\+E\+E\+E1284\+\_\+4}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+I\+E\+E\+E1284\+\_\+4~0x03}\label{usb__host__printer_8c_a3b1bd207c554308db2a13f24e00e6564}
+
+
+Definition at line 158 of file usb\+\_\+host\+\_\+printer.\+c.
+
+\hypertarget{usb__host__printer_8c_ae19f4df7a74665681ae2b48b9ead1814}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+U\+N\+I\+D\+I\+R\+E\+C\+T\+I\+O\+N\+A\+L@{D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+U\+N\+I\+D\+I\+R\+E\+C\+T\+I\+O\+N\+A\+L}}
+\index{D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+U\+N\+I\+D\+I\+R\+E\+C\+T\+I\+O\+N\+A\+L@{D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+U\+N\+I\+D\+I\+R\+E\+C\+T\+I\+O\+N\+A\+L}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+U\+N\+I\+D\+I\+R\+E\+C\+T\+I\+O\+N\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+U\+N\+I\+D\+I\+R\+E\+C\+T\+I\+O\+N\+A\+L~0x01}\label{usb__host__printer_8c_ae19f4df7a74665681ae2b48b9ead1814}
+
+
+Definition at line 156 of file usb\+\_\+host\+\_\+printer.\+c.
+
+\hypertarget{usb__host__printer_8c_ad1d5d3d389fcd0a3dfa9f94c331e8df3}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!D\+E\+V\+I\+C\+E\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+P\+R\+I\+N\+T\+E\+R\+S@{D\+E\+V\+I\+C\+E\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+P\+R\+I\+N\+T\+E\+R\+S}}
+\index{D\+E\+V\+I\+C\+E\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+P\+R\+I\+N\+T\+E\+R\+S@{D\+E\+V\+I\+C\+E\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+P\+R\+I\+N\+T\+E\+R\+S}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{D\+E\+V\+I\+C\+E\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+P\+R\+I\+N\+T\+E\+R\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+V\+I\+C\+E\+\_\+\+S\+U\+B\+C\+L\+A\+S\+S\+\_\+\+P\+R\+I\+N\+T\+E\+R\+S~0x01}\label{usb__host__printer_8c_ad1d5d3d389fcd0a3dfa9f94c331e8df3}
+
+
+Definition at line 154 of file usb\+\_\+host\+\_\+printer.\+c.
+
+\hypertarget{usb__host__printer_8c_a08a085581de0e53cde8e567ddf62f24f}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!U\+S\+B\+\_\+\+F\+R\+E\+E@{U\+S\+B\+\_\+\+F\+R\+E\+E}}
+\index{U\+S\+B\+\_\+\+F\+R\+E\+E@{U\+S\+B\+\_\+\+F\+R\+E\+E}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+F\+R\+E\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+F\+R\+E\+E(
+\begin{DoxyParamCaption}
+\item[{}]{ptr}
+\end{DoxyParamCaption}
+)~free(ptr)}\label{usb__host__printer_8c_a08a085581de0e53cde8e567ddf62f24f}
+
+
+Definition at line 119 of file usb\+\_\+host\+\_\+printer.\+c.
+
+\hypertarget{usb__host__printer_8c_a0d2718457d63c6258a27aece819cefe1}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!U\+S\+B\+\_\+\+F\+R\+E\+E\+\_\+\+A\+N\+D\+\_\+\+C\+L\+E\+A\+R@{U\+S\+B\+\_\+\+F\+R\+E\+E\+\_\+\+A\+N\+D\+\_\+\+C\+L\+E\+A\+R}}
+\index{U\+S\+B\+\_\+\+F\+R\+E\+E\+\_\+\+A\+N\+D\+\_\+\+C\+L\+E\+A\+R@{U\+S\+B\+\_\+\+F\+R\+E\+E\+\_\+\+A\+N\+D\+\_\+\+C\+L\+E\+A\+R}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+F\+R\+E\+E\+\_\+\+A\+N\+D\+\_\+\+C\+L\+E\+A\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+F\+R\+E\+E\+\_\+\+A\+N\+D\+\_\+\+C\+L\+E\+A\+R(
+\begin{DoxyParamCaption}
+\item[{}]{ptr}
+\end{DoxyParamCaption}
+)~\{{\bf U\+S\+B\+\_\+\+F\+R\+E\+E}(ptr); ptr = N\+U\+L\+L;\}}\label{usb__host__printer_8c_a0d2718457d63c6258a27aece819cefe1}
+
+
+Definition at line 122 of file usb\+\_\+host\+\_\+printer.\+c.
+
+\hypertarget{usb__host__printer_8c_ad1a878962b7ce05c1834f04341597821}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!U\+S\+B\+\_\+\+M\+A\+L\+L\+O\+C@{U\+S\+B\+\_\+\+M\+A\+L\+L\+O\+C}}
+\index{U\+S\+B\+\_\+\+M\+A\+L\+L\+O\+C@{U\+S\+B\+\_\+\+M\+A\+L\+L\+O\+C}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+M\+A\+L\+L\+O\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+M\+A\+L\+L\+O\+C(
+\begin{DoxyParamCaption}
+\item[{}]{size}
+\end{DoxyParamCaption}
+)~malloc(size)}\label{usb__host__printer_8c_ad1a878962b7ce05c1834f04341597821}
+
+
+Definition at line 115 of file usb\+\_\+host\+\_\+printer.\+c.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{usb__host__printer_8c_ab7d6a375e00cd04123028a00c961755a}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E}}
+\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E}  {\bf U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E}}\label{usb__host__printer_8c_ab7d6a375e00cd04123028a00c961755a}
+\hypertarget{usb__host__printer_8c_a502fc71b78efb6ff7757de1547b58895}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+Q\+U\+E\+U\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+Q\+U\+E\+U\+E}}
+\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+Q\+U\+E\+U\+E@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+Q\+U\+E\+U\+E}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+Q\+U\+E\+U\+E}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+Q\+U\+E\+U\+E}  {\bf U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+Q\+U\+E\+U\+E}}\label{usb__host__printer_8c_a502fc71b78efb6ff7757de1547b58895}
+\hypertarget{usb__host__printer_8c_aa65bc8f707c4b3884cbe053344100bfe}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+I\+T\+E\+M@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+I\+T\+E\+M}}
+\index{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+I\+T\+E\+M@{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+I\+T\+E\+M}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+I\+T\+E\+M}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+I\+T\+E\+M}  {\bf U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+I\+T\+E\+M}}\label{usb__host__printer_8c_aa65bc8f707c4b3884cbe053344100bfe}
+
+
+\subsection{Function Documentation}
+\hypertarget{usb__host__printer_8c_acdca20ebfd78d5539c5aad1914065f39}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!\+\_\+\+U\+S\+B\+Host\+Printer\+\_\+\+Find\+Device@{\+\_\+\+U\+S\+B\+Host\+Printer\+\_\+\+Find\+Device}}
+\index{\+\_\+\+U\+S\+B\+Host\+Printer\+\_\+\+Find\+Device@{\+\_\+\+U\+S\+B\+Host\+Printer\+\_\+\+Find\+Device}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{\+\_\+\+U\+S\+B\+Host\+Printer\+\_\+\+Find\+Device}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} \+\_\+\+U\+S\+B\+Host\+Printer\+\_\+\+Find\+Device (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{address}
+\end{DoxyParamCaption}
+)}\label{usb__host__printer_8c_acdca20ebfd78d5539c5aad1914065f39}
+
+
+Definition at line 1373 of file usb\+\_\+host\+\_\+printer.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+\hypertarget{usb__host__printer_8c_a217c298721781e2e287baf1b2b14f9c2}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!\+\_\+\+U\+S\+B\+Host\+Printer\+\_\+\+Read\+From\+Queue@{\+\_\+\+U\+S\+B\+Host\+Printer\+\_\+\+Read\+From\+Queue}}
+\index{\+\_\+\+U\+S\+B\+Host\+Printer\+\_\+\+Read\+From\+Queue@{\+\_\+\+U\+S\+B\+Host\+Printer\+\_\+\+Read\+From\+Queue}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{\+\_\+\+U\+S\+B\+Host\+Printer\+\_\+\+Read\+From\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} \+\_\+\+U\+S\+B\+Host\+Printer\+\_\+\+Read\+From\+Queue (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{device\+Address}
+\end{DoxyParamCaption}
+)}\label{usb__host__printer_8c_a217c298721781e2e287baf1b2b14f9c2}
+
+
+Definition at line 1607 of file usb\+\_\+host\+\_\+printer.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\hypertarget{usb__host__printer_8c_a28c61a0f843c82f59895bdb1d0740bd1}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!\+\_\+\+U\+S\+B\+Host\+Printer\+\_\+\+Write\+From\+Queue@{\+\_\+\+U\+S\+B\+Host\+Printer\+\_\+\+Write\+From\+Queue}}
+\index{\+\_\+\+U\+S\+B\+Host\+Printer\+\_\+\+Write\+From\+Queue@{\+\_\+\+U\+S\+B\+Host\+Printer\+\_\+\+Write\+From\+Queue}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{\+\_\+\+U\+S\+B\+Host\+Printer\+\_\+\+Write\+From\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} \+\_\+\+U\+S\+B\+Host\+Printer\+\_\+\+Write\+From\+Queue (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{device\+Address}
+\end{DoxyParamCaption}
+)}\label{usb__host__printer_8c_a28c61a0f843c82f59895bdb1d0740bd1}
+
+
+Definition at line 1651 of file usb\+\_\+host\+\_\+printer.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 5
+
+
+\hypertarget{usb__host__printer_8c_a69eb4a7d81cbfc11f10262ddbc5c6c4e}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!U\+S\+B\+Host\+Printer\+Command@{U\+S\+B\+Host\+Printer\+Command}}
+\index{U\+S\+B\+Host\+Printer\+Command@{U\+S\+B\+Host\+Printer\+Command}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{U\+S\+B\+Host\+Printer\+Command}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} U\+S\+B\+Host\+Printer\+Command (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{device\+Address, }
+\item[{{\bf U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+C\+O\+M\+M\+A\+N\+D}}]{command, }
+\item[{{\bf U\+S\+B\+\_\+\+D\+A\+T\+A\+\_\+\+P\+O\+I\+N\+T\+E\+R}}]{data, }
+\item[{{\bf D\+W\+O\+R\+D}}]{size, }
+\item[{{\bf B\+Y\+T\+E}}]{flags}
+\end{DoxyParamCaption}
+)}\label{usb__host__printer_8c_a69eb4a7d81cbfc11f10262ddbc5c6c4e}
+
+
+Definition at line 872 of file usb\+\_\+host\+\_\+printer.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 6
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 7
+
+
+\hypertarget{usb__host__printer_8c_adf709877723b4a7fe66f706359ee83ea}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!U\+S\+B\+Host\+Printer\+Command\+Ready@{U\+S\+B\+Host\+Printer\+Command\+Ready}}
+\index{U\+S\+B\+Host\+Printer\+Command\+Ready@{U\+S\+B\+Host\+Printer\+Command\+Ready}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{U\+S\+B\+Host\+Printer\+Command\+Ready}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} U\+S\+B\+Host\+Printer\+Command\+Ready (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{device\+Address}
+\end{DoxyParamCaption}
+)}\label{usb__host__printer_8c_adf709877723b4a7fe66f706359ee83ea}
+
+
+Definition at line 920 of file usb\+\_\+host\+\_\+printer.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 8
+
+
+\hypertarget{usb__host__printer_8c_a4c5bd47451d6d852dd8a3c3d421dfc49}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!U\+S\+B\+Host\+Printer\+Device\+Detached@{U\+S\+B\+Host\+Printer\+Device\+Detached}}
+\index{U\+S\+B\+Host\+Printer\+Device\+Detached@{U\+S\+B\+Host\+Printer\+Device\+Detached}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{U\+S\+B\+Host\+Printer\+Device\+Detached}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} U\+S\+B\+Host\+Printer\+Device\+Detached (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{device\+Address}
+\end{DoxyParamCaption}
+)}\label{usb__host__printer_8c_a4c5bd47451d6d852dd8a3c3d421dfc49}
+
+
+Definition at line 966 of file usb\+\_\+host\+\_\+printer.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 9
+
+
+\hypertarget{usb__host__printer_8c_a5e1b4daf8b38172c637641f4adff5f4d}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!U\+S\+B\+Host\+Printer\+Event\+Handler@{U\+S\+B\+Host\+Printer\+Event\+Handler}}
+\index{U\+S\+B\+Host\+Printer\+Event\+Handler@{U\+S\+B\+Host\+Printer\+Event\+Handler}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{U\+S\+B\+Host\+Printer\+Event\+Handler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} U\+S\+B\+Host\+Printer\+Event\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{address, }
+\item[{{\bf U\+S\+B\+\_\+\+E\+V\+E\+N\+T}}]{event, }
+\item[{void $\ast$}]{data, }
+\item[{{\bf D\+W\+O\+R\+D}}]{size}
+\end{DoxyParamCaption}
+)}\label{usb__host__printer_8c_a5e1b4daf8b38172c637641f4adff5f4d}
+
+
+Definition at line 569 of file usb\+\_\+host\+\_\+printer.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 10
+
+
+\hypertarget{usb__host__printer_8c_aaf5c322226e1ab55e5413a4ff08ff7e1}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!U\+S\+B\+Host\+Printer\+Get\+Rx\+Length@{U\+S\+B\+Host\+Printer\+Get\+Rx\+Length}}
+\index{U\+S\+B\+Host\+Printer\+Get\+Rx\+Length@{U\+S\+B\+Host\+Printer\+Get\+Rx\+Length}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{U\+S\+B\+Host\+Printer\+Get\+Rx\+Length}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+W\+O\+R\+D} U\+S\+B\+Host\+Printer\+Get\+Rx\+Length (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{device\+Address}
+\end{DoxyParamCaption}
+)}\label{usb__host__printer_8c_aaf5c322226e1ab55e5413a4ff08ff7e1}
+
+
+Definition at line 998 of file usb\+\_\+host\+\_\+printer.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 11
+
+
+\hypertarget{usb__host__printer_8c_ad889e22b3c483b948895b16354f31d08}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!U\+S\+B\+Host\+Printer\+Get\+Status@{U\+S\+B\+Host\+Printer\+Get\+Status}}
+\index{U\+S\+B\+Host\+Printer\+Get\+Status@{U\+S\+B\+Host\+Printer\+Get\+Status}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{U\+S\+B\+Host\+Printer\+Get\+Status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} U\+S\+B\+Host\+Printer\+Get\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{device\+Address, }
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{status}
+\end{DoxyParamCaption}
+)}\label{usb__host__printer_8c_ad889e22b3c483b948895b16354f31d08}
+
+
+Definition at line 1048 of file usb\+\_\+host\+\_\+printer.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 12
+
+
+\hypertarget{usb__host__printer_8c_a7c2c11f9c18453fff06b06533ac59f97}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!U\+S\+B\+Host\+Printer\+Initialize@{U\+S\+B\+Host\+Printer\+Initialize}}
+\index{U\+S\+B\+Host\+Printer\+Initialize@{U\+S\+B\+Host\+Printer\+Initialize}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{U\+S\+B\+Host\+Printer\+Initialize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} U\+S\+B\+Host\+Printer\+Initialize (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{address, }
+\item[{{\bf D\+W\+O\+R\+D}}]{flags, }
+\item[{{\bf B\+Y\+T\+E}}]{client\+Driver\+I\+D}
+\end{DoxyParamCaption}
+)}\label{usb__host__printer_8c_a7c2c11f9c18453fff06b06533ac59f97}
+
+
+Definition at line 299 of file usb\+\_\+host\+\_\+printer.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 13
+
+
+\hypertarget{usb__host__printer_8c_a435ca6eef12a62794eb8e635320cc68b}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!U\+S\+B\+Host\+Printer\+Read@{U\+S\+B\+Host\+Printer\+Read}}
+\index{U\+S\+B\+Host\+Printer\+Read@{U\+S\+B\+Host\+Printer\+Read}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{U\+S\+B\+Host\+Printer\+Read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} U\+S\+B\+Host\+Printer\+Read (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{device\+Address, }
+\item[{void $\ast$}]{buffer, }
+\item[{{\bf D\+W\+O\+R\+D}}]{length, }
+\item[{{\bf B\+Y\+T\+E}}]{transfer\+Flags}
+\end{DoxyParamCaption}
+)}\label{usb__host__printer_8c_a435ca6eef12a62794eb8e635320cc68b}
+
+
+Definition at line 1097 of file usb\+\_\+host\+\_\+printer.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 14
+
+
+\hypertarget{usb__host__printer_8c_a81d411dd8e43a87a1dce8a8316f72ddc}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!U\+S\+B\+Host\+Printer\+Reset@{U\+S\+B\+Host\+Printer\+Reset}}
+\index{U\+S\+B\+Host\+Printer\+Reset@{U\+S\+B\+Host\+Printer\+Reset}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{U\+S\+B\+Host\+Printer\+Reset}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} U\+S\+B\+Host\+Printer\+Reset (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{device\+Address}
+\end{DoxyParamCaption}
+)}\label{usb__host__printer_8c_a81d411dd8e43a87a1dce8a8316f72ddc}
+
+
+Definition at line 1155 of file usb\+\_\+host\+\_\+printer.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 15
+
+
+\hypertarget{usb__host__printer_8c_a24ba2b123cbdf4d79c0ff0d8ed629e19}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!U\+S\+B\+Host\+Printer\+Rx\+Is\+Busy@{U\+S\+B\+Host\+Printer\+Rx\+Is\+Busy}}
+\index{U\+S\+B\+Host\+Printer\+Rx\+Is\+Busy@{U\+S\+B\+Host\+Printer\+Rx\+Is\+Busy}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{U\+S\+B\+Host\+Printer\+Rx\+Is\+Busy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} U\+S\+B\+Host\+Printer\+Rx\+Is\+Busy (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{device\+Address}
+\end{DoxyParamCaption}
+)}\label{usb__host__printer_8c_a24ba2b123cbdf4d79c0ff0d8ed629e19}
+
+
+Definition at line 1207 of file usb\+\_\+host\+\_\+printer.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 16
+
+
+\hypertarget{usb__host__printer_8c_af60f70dd5035278bd3a4d9d6d54032eb}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!U\+S\+B\+Host\+Printer\+Write@{U\+S\+B\+Host\+Printer\+Write}}
+\index{U\+S\+B\+Host\+Printer\+Write@{U\+S\+B\+Host\+Printer\+Write}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{U\+S\+B\+Host\+Printer\+Write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} U\+S\+B\+Host\+Printer\+Write (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{device\+Address, }
+\item[{void $\ast$}]{buffer, }
+\item[{{\bf D\+W\+O\+R\+D}}]{length, }
+\item[{{\bf B\+Y\+T\+E}}]{transfer\+Flags}
+\end{DoxyParamCaption}
+)}\label{usb__host__printer_8c_af60f70dd5035278bd3a4d9d6d54032eb}
+
+
+Definition at line 1256 of file usb\+\_\+host\+\_\+printer.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 17
+
+
+\hypertarget{usb__host__printer_8c_ab4a79025e648bee0a14dd55185b524f5}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!U\+S\+B\+Host\+Printer\+Write\+Complete@{U\+S\+B\+Host\+Printer\+Write\+Complete}}
+\index{U\+S\+B\+Host\+Printer\+Write\+Complete@{U\+S\+B\+Host\+Printer\+Write\+Complete}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{U\+S\+B\+Host\+Printer\+Write\+Complete}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} U\+S\+B\+Host\+Printer\+Write\+Complete (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{device\+Address}
+\end{DoxyParamCaption}
+)}\label{usb__host__printer_8c_ab4a79025e648bee0a14dd55185b524f5}
+
+
+Definition at line 1325 of file usb\+\_\+host\+\_\+printer.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 18
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{usb__host__printer_8c_abc7d2ef530157798709848a02d51b600}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!current\+Printer\+Record@{current\+Printer\+Record}}
+\index{current\+Printer\+Record@{current\+Printer\+Record}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{current\+Printer\+Record}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} current\+Printer\+Record}\label{usb__host__printer_8c_abc7d2ef530157798709848a02d51b600}
+
+
+Definition at line 242 of file usb\+\_\+host\+\_\+printer.\+c.
+
+\hypertarget{usb__host__printer_8c_a53b44501394ad15d5e8ceb330bd14149}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!usb\+Printer\+Client\+Languages@{usb\+Printer\+Client\+Languages}}
+\index{usb\+Printer\+Client\+Languages@{usb\+Printer\+Client\+Languages}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{usb\+Printer\+Client\+Languages}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E} usb\+Printer\+Client\+Languages\mbox{[}$\,$\mbox{]}}\label{usb__host__printer_8c_a53b44501394ad15d5e8ceb330bd14149}
+\hypertarget{usb__host__printer_8c_ac1f8ee5930d5d9b8b740897bc4d89993}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!usb\+Printers@{usb\+Printers}}
+\index{usb\+Printers@{usb\+Printers}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{usb\+Printers}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E} usb\+Printers\mbox{[}{\bf U\+S\+B\+\_\+\+M\+A\+X\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+D\+E\+V\+I\+C\+E\+S}\mbox{]}}\label{usb__host__printer_8c_ac1f8ee5930d5d9b8b740897bc4d89993}
+
+
+Definition at line 244 of file usb\+\_\+host\+\_\+printer.\+c.
+
+\hypertarget{usb__host__printer_8c_af1ccd2d159804408fd2a1a2fa58ac79c}{}\index{usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}!usb\+Printer\+Specific\+Language@{usb\+Printer\+Specific\+Language}}
+\index{usb\+Printer\+Specific\+Language@{usb\+Printer\+Specific\+Language}!usb\+\_\+host\+\_\+printer.\+c@{usb\+\_\+host\+\_\+printer.\+c}}
+\subsubsection[{usb\+Printer\+Specific\+Language}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+S\+B\+\_\+\+P\+R\+I\+N\+T\+E\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E} usb\+Printer\+Specific\+Language\mbox{[}$\,$\mbox{]}}\label{usb__host__printer_8c_af1ccd2d159804408fd2a1a2fa58ac79c}

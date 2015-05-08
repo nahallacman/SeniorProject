@@ -1,0 +1,215 @@
+\hypertarget{_grid_8h}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+Graphics/\+Grid.h File Reference}
+\label{_grid_8h}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+Graphics/\+Grid.\+h@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+Graphics/\+Grid.\+h}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_g_r_i_d_i_t_e_m}{G\+R\+I\+D\+I\+T\+E\+M}
+\item 
+struct \hyperlink{struct_g_r_i_d}{G\+R\+I\+D}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_g_r_i_d}{G\+R\+I\+D} $\ast$ \hyperlink{_grid_8h_a5ad337d7eee0d24aa7f9e3969b6097f7}{Grid\+Create} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} I\+D, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} left, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} top, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} right, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} bottom, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} state, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} num\+Columns, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} num\+Rows, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} cell\+Width, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} cell\+Height, \hyperlink{struct_g_o_l___s_c_h_e_m_e}{G\+O\+L\+\_\+\+S\+C\+H\+E\+M\+E} $\ast$p\+Scheme)
+\item 
+void \hyperlink{_grid_8h_a6785bf98a35129593e565ebebf0007f8}{Grid\+Clear\+Cell\+State} (\hyperlink{struct_g_r_i_d}{G\+R\+I\+D} $\ast$p\+Grid, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} column, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} row, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} state)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_grid_8h_a4cf2e40a4862e15e2bb5bb96d947305d}{Grid\+Draw} (void $\ast$p\+Obj)
+\item 
+void \hyperlink{_grid_8h_ab32a1d0d1fd980681bd9fd8be97cffe8}{Grid\+Free\+Items} (void $\ast$p\+Obj)
+\item 
+void $\ast$ \hyperlink{_grid_8h_a23e8f10a649f857b219b8a34f4c79e19}{Grid\+Get\+Cell} (\hyperlink{struct_g_r_i_d}{G\+R\+I\+D} $\ast$p\+Grid, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} column, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} row, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} $\ast$cell\+Type)
+\item 
+void \hyperlink{_grid_8h_aa204ddbbfca07c534c9022de5a9d4fa3}{Grid\+Msg\+Default} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} translated\+Msg, void $\ast$p\+Obj, \hyperlink{struct_g_o_l___m_s_g}{G\+O\+L\+\_\+\+M\+S\+G} $\ast$p\+Msg)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_grid_8h_a7ecb8a857aefa4a5d4fc5e17ef7702e0}{Grid\+Translate\+Msg} (void $\ast$p\+Obj, \hyperlink{struct_g_o_l___m_s_g}{G\+O\+L\+\_\+\+M\+S\+G} $\ast$p\+Msg)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_grid_8h_aa366ba9e5026a7329bf774ec8a9fd60e}{Grid\+Set\+Cell} (\hyperlink{struct_g_r_i_d}{G\+R\+I\+D} $\ast$p\+Grid, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} column, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} row, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} state, void $\ast$data)
+\item 
+void \hyperlink{_grid_8h_ab25c58210d42d9eebc177f6ca17d2f4f}{Grid\+Set\+Cell\+State} (\hyperlink{struct_g_r_i_d}{G\+R\+I\+D} $\ast$p\+Grid, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} column, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} row, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} state)
+\item 
+void \hyperlink{_grid_8h_a5a8f96bf35d63659aaffe61300dea42f}{Grid\+Set\+Focus} (\hyperlink{struct_g_r_i_d}{G\+R\+I\+D} $\ast$p\+Grid, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} column, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} row)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_grid_8h_a6785bf98a35129593e565ebebf0007f8}{}\index{Grid.\+h@{Grid.\+h}!Grid\+Clear\+Cell\+State@{Grid\+Clear\+Cell\+State}}
+\index{Grid\+Clear\+Cell\+State@{Grid\+Clear\+Cell\+State}!Grid.\+h@{Grid.\+h}}
+\subsubsection[{Grid\+Clear\+Cell\+State}]{\setlength{\rightskip}{0pt plus 5cm}void Grid\+Clear\+Cell\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+R\+I\+D} $\ast$}]{p\+Grid, }
+\item[{{\bf S\+H\+O\+R\+T}}]{column, }
+\item[{{\bf S\+H\+O\+R\+T}}]{row, }
+\item[{{\bf W\+O\+R\+D}}]{state}
+\end{DoxyParamCaption}
+)}\label{_grid_8h_a6785bf98a35129593e565ebebf0007f8}
+
+
+Definition at line 343 of file Grid.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+\hypertarget{_grid_8h_a5ad337d7eee0d24aa7f9e3969b6097f7}{}\index{Grid.\+h@{Grid.\+h}!Grid\+Create@{Grid\+Create}}
+\index{Grid\+Create@{Grid\+Create}!Grid.\+h@{Grid.\+h}}
+\subsubsection[{Grid\+Create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+R\+I\+D}$\ast$ Grid\+Create (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{I\+D, }
+\item[{{\bf S\+H\+O\+R\+T}}]{left, }
+\item[{{\bf S\+H\+O\+R\+T}}]{top, }
+\item[{{\bf S\+H\+O\+R\+T}}]{right, }
+\item[{{\bf S\+H\+O\+R\+T}}]{bottom, }
+\item[{{\bf W\+O\+R\+D}}]{state, }
+\item[{{\bf S\+H\+O\+R\+T}}]{num\+Columns, }
+\item[{{\bf S\+H\+O\+R\+T}}]{num\+Rows, }
+\item[{{\bf S\+H\+O\+R\+T}}]{cell\+Width, }
+\item[{{\bf S\+H\+O\+R\+T}}]{cell\+Height, }
+\item[{{\bf G\+O\+L\+\_\+\+S\+C\+H\+E\+M\+E} $\ast$}]{p\+Scheme}
+\end{DoxyParamCaption}
+)}\label{_grid_8h_a5ad337d7eee0d24aa7f9e3969b6097f7}
+
+
+Definition at line 58 of file Grid.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+\hypertarget{_grid_8h_a4cf2e40a4862e15e2bb5bb96d947305d}{}\index{Grid.\+h@{Grid.\+h}!Grid\+Draw@{Grid\+Draw}}
+\index{Grid\+Draw@{Grid\+Draw}!Grid.\+h@{Grid.\+h}}
+\subsubsection[{Grid\+Draw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Grid\+Draw (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{p\+Obj}
+\end{DoxyParamCaption}
+)}\label{_grid_8h_a4cf2e40a4862e15e2bb5bb96d947305d}
+
+
+Definition at line 131 of file Grid.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\hypertarget{_grid_8h_ab32a1d0d1fd980681bd9fd8be97cffe8}{}\index{Grid.\+h@{Grid.\+h}!Grid\+Free\+Items@{Grid\+Free\+Items}}
+\index{Grid\+Free\+Items@{Grid\+Free\+Items}!Grid.\+h@{Grid.\+h}}
+\subsubsection[{Grid\+Free\+Items}]{\setlength{\rightskip}{0pt plus 5cm}void Grid\+Free\+Items (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{p\+Obj}
+\end{DoxyParamCaption}
+)}\label{_grid_8h_ab32a1d0d1fd980681bd9fd8be97cffe8}
+
+
+Definition at line 316 of file Grid.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+\hypertarget{_grid_8h_a23e8f10a649f857b219b8a34f4c79e19}{}\index{Grid.\+h@{Grid.\+h}!Grid\+Get\+Cell@{Grid\+Get\+Cell}}
+\index{Grid\+Get\+Cell@{Grid\+Get\+Cell}!Grid.\+h@{Grid.\+h}}
+\subsubsection[{Grid\+Get\+Cell}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ Grid\+Get\+Cell (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+R\+I\+D} $\ast$}]{p\+Grid, }
+\item[{{\bf S\+H\+O\+R\+T}}]{column, }
+\item[{{\bf S\+H\+O\+R\+T}}]{row, }
+\item[{{\bf W\+O\+R\+D} $\ast$}]{cell\+Type}
+\end{DoxyParamCaption}
+)}\label{_grid_8h_a23e8f10a649f857b219b8a34f4c79e19}
+
+
+Definition at line 381 of file Grid.\+c.
+
+\hypertarget{_grid_8h_aa204ddbbfca07c534c9022de5a9d4fa3}{}\index{Grid.\+h@{Grid.\+h}!Grid\+Msg\+Default@{Grid\+Msg\+Default}}
+\index{Grid\+Msg\+Default@{Grid\+Msg\+Default}!Grid.\+h@{Grid.\+h}}
+\subsubsection[{Grid\+Msg\+Default}]{\setlength{\rightskip}{0pt plus 5cm}void Grid\+Msg\+Default (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{translated\+Msg, }
+\item[{void $\ast$}]{p\+Obj, }
+\item[{{\bf G\+O\+L\+\_\+\+M\+S\+G} $\ast$}]{p\+Msg}
+\end{DoxyParamCaption}
+)}\label{_grid_8h_aa204ddbbfca07c534c9022de5a9d4fa3}
+
+
+Definition at line 394 of file Grid.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 5
+
+
+\hypertarget{_grid_8h_aa366ba9e5026a7329bf774ec8a9fd60e}{}\index{Grid.\+h@{Grid.\+h}!Grid\+Set\+Cell@{Grid\+Set\+Cell}}
+\index{Grid\+Set\+Cell@{Grid\+Set\+Cell}!Grid.\+h@{Grid.\+h}}
+\subsubsection[{Grid\+Set\+Cell}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Grid\+Set\+Cell (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+R\+I\+D} $\ast$}]{p\+Grid, }
+\item[{{\bf S\+H\+O\+R\+T}}]{column, }
+\item[{{\bf S\+H\+O\+R\+T}}]{row, }
+\item[{{\bf W\+O\+R\+D}}]{state, }
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}\label{_grid_8h_aa366ba9e5026a7329bf774ec8a9fd60e}
+
+
+Definition at line 330 of file Grid.\+c.
+
+\hypertarget{_grid_8h_ab25c58210d42d9eebc177f6ca17d2f4f}{}\index{Grid.\+h@{Grid.\+h}!Grid\+Set\+Cell\+State@{Grid\+Set\+Cell\+State}}
+\index{Grid\+Set\+Cell\+State@{Grid\+Set\+Cell\+State}!Grid.\+h@{Grid.\+h}}
+\subsubsection[{Grid\+Set\+Cell\+State}]{\setlength{\rightskip}{0pt plus 5cm}void Grid\+Set\+Cell\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+R\+I\+D} $\ast$}]{p\+Grid, }
+\item[{{\bf S\+H\+O\+R\+T}}]{column, }
+\item[{{\bf S\+H\+O\+R\+T}}]{row, }
+\item[{{\bf W\+O\+R\+D}}]{state}
+\end{DoxyParamCaption}
+)}\label{_grid_8h_ab25c58210d42d9eebc177f6ca17d2f4f}
+
+
+Definition at line 368 of file Grid.\+c.
+
+\hypertarget{_grid_8h_a5a8f96bf35d63659aaffe61300dea42f}{}\index{Grid.\+h@{Grid.\+h}!Grid\+Set\+Focus@{Grid\+Set\+Focus}}
+\index{Grid\+Set\+Focus@{Grid\+Set\+Focus}!Grid.\+h@{Grid.\+h}}
+\subsubsection[{Grid\+Set\+Focus}]{\setlength{\rightskip}{0pt plus 5cm}void Grid\+Set\+Focus (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+R\+I\+D} $\ast$}]{p\+Grid, }
+\item[{{\bf S\+H\+O\+R\+T}}]{column, }
+\item[{{\bf S\+H\+O\+R\+T}}]{row}
+\end{DoxyParamCaption}
+)}\label{_grid_8h_a5a8f96bf35d63659aaffe61300dea42f}
+
+
+Definition at line 356 of file Grid.\+c.
+
+\hypertarget{_grid_8h_a7ecb8a857aefa4a5d4fc5e17ef7702e0}{}\index{Grid.\+h@{Grid.\+h}!Grid\+Translate\+Msg@{Grid\+Translate\+Msg}}
+\index{Grid\+Translate\+Msg@{Grid\+Translate\+Msg}!Grid.\+h@{Grid.\+h}}
+\subsubsection[{Grid\+Translate\+Msg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Grid\+Translate\+Msg (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{p\+Obj, }
+\item[{{\bf G\+O\+L\+\_\+\+M\+S\+G} $\ast$}]{p\+Msg}
+\end{DoxyParamCaption}
+)}\label{_grid_8h_a7ecb8a857aefa4a5d4fc5e17ef7702e0}
+
+
+Definition at line 463 of file Grid.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+

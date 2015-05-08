@@ -1,0 +1,266 @@
+\hypertarget{jidctint_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Image Decoders/jidctint.c File Reference}
+\label{jidctint_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Image Decoders/jidctint.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Image Decoders/jidctint.\+c}}
+{\ttfamily \#include \char`\"{}Generic\+Type\+Defs.\+h\char`\"{}}\\*
+Include dependency graph for jidctint.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{jidctint_8c_a44825d9811bddd408cb8db623b83aacb}{D\+C\+T\+S\+I\+Z\+E}~8	/$\ast$ The basic D\+C\+T block is 8x8 samples $\ast$/
+\item 
+\#define \hyperlink{jidctint_8c_af89dff4200396563157d4a1e59da3bdf}{D\+C\+T\+S\+I\+Z\+E2}~64	/$\ast$ \hyperlink{jidctint_8c_a44825d9811bddd408cb8db623b83aacb}{D\+C\+T\+S\+I\+Z\+E} squared; \# of elements in a block $\ast$/
+\item 
+\#define \hyperlink{jidctint_8c_a9fa8f69a0c7688843792648c12c655f7}{B\+I\+T\+S\+\_\+\+I\+N\+\_\+\+J\+S\+A\+M\+P\+L\+E}~8
+\item 
+\#define \hyperlink{jidctint_8c_a18ee9371e9fc23cff4000ee5d9356520}{N\+O\+\_\+\+Z\+E\+R\+O\+\_\+\+R\+O\+W\+\_\+\+T\+E\+S\+T}
+\item 
+\#define \hyperlink{jidctint_8c_a7240c16d369c637fe4cabc4c129b2d2b}{D\+C\+T\+E\+L\+E\+M}~\hyperlink{_generic_type_defs_8h_a73a5fec9b19159a6647fbf000017b221}{L\+O\+N\+G}
+\item 
+\#define \hyperlink{jidctint_8c_a60551099e0e59afa6bcdb5f8afc32230}{C\+O\+N\+S\+T\+\_\+\+B\+I\+T\+S}~13
+\item 
+\#define \hyperlink{jidctint_8c_a531b3898a04cc04bf727fa41b69f0fd8}{P\+A\+S\+S1\+\_\+\+B\+I\+T\+S}~2
+\item 
+\#define \hyperlink{jidctint_8c_aac92c5ec332dafe0abb24688dad1b795}{I\+N\+T32}~\hyperlink{_generic_type_defs_8h_a73a5fec9b19159a6647fbf000017b221}{L\+O\+N\+G}
+\item 
+\#define \hyperlink{jidctint_8c_a92c934dbd3bacb5f20dee7bfae4a5bf6}{F\+I\+X\+\_\+0\+\_\+298631336}~((\hyperlink{_generic_type_defs_8h_acb31961b5585201db715eb476f8e1d82}{I\+N\+T32})  2446)	/$\ast$ F\+I\+X(0.\+298631336) $\ast$/
+\item 
+\#define \hyperlink{jidctint_8c_a56a1c93bfc12024497bb0a582e3449a0}{F\+I\+X\+\_\+0\+\_\+390180644}~((\hyperlink{_generic_type_defs_8h_acb31961b5585201db715eb476f8e1d82}{I\+N\+T32})  3196)	/$\ast$ F\+I\+X(0.\+390180644) $\ast$/
+\item 
+\#define \hyperlink{jidctint_8c_a69e116dc293f6d30c469d5f6b1cc7e25}{F\+I\+X\+\_\+0\+\_\+541196100}~((\hyperlink{_generic_type_defs_8h_acb31961b5585201db715eb476f8e1d82}{I\+N\+T32})  4433)	/$\ast$ F\+I\+X(0.\+541196100) $\ast$/
+\item 
+\#define \hyperlink{jidctint_8c_a5a1b66fd74e098a471bbed4ef8dada29}{F\+I\+X\+\_\+0\+\_\+765366865}~((\hyperlink{_generic_type_defs_8h_acb31961b5585201db715eb476f8e1d82}{I\+N\+T32})  6270)	/$\ast$ F\+I\+X(0.\+765366865) $\ast$/
+\item 
+\#define \hyperlink{jidctint_8c_abf3678750fca4008f6c26fbc4dc4cc95}{F\+I\+X\+\_\+0\+\_\+899976223}~((\hyperlink{_generic_type_defs_8h_acb31961b5585201db715eb476f8e1d82}{I\+N\+T32})  7373)	/$\ast$ F\+I\+X(0.\+899976223) $\ast$/
+\item 
+\#define \hyperlink{jidctint_8c_a8e6a809ae2970a298bc917cbc3ac6447}{F\+I\+X\+\_\+1\+\_\+175875602}~((\hyperlink{_generic_type_defs_8h_acb31961b5585201db715eb476f8e1d82}{I\+N\+T32})  9633)	/$\ast$ F\+I\+X(1.\+175875602) $\ast$/
+\item 
+\#define \hyperlink{jidctint_8c_a6e352b4e627b7804da9260329ebfc1aa}{F\+I\+X\+\_\+1\+\_\+501321110}~((\hyperlink{_generic_type_defs_8h_acb31961b5585201db715eb476f8e1d82}{I\+N\+T32})  12299)	/$\ast$ F\+I\+X(1.\+501321110) $\ast$/
+\item 
+\#define \hyperlink{jidctint_8c_aae01f5a981ce1fb5a0bb0160932c24ea}{F\+I\+X\+\_\+1\+\_\+847759065}~((\hyperlink{_generic_type_defs_8h_acb31961b5585201db715eb476f8e1d82}{I\+N\+T32})  15137)	/$\ast$ F\+I\+X(1.\+847759065) $\ast$/
+\item 
+\#define \hyperlink{jidctint_8c_aa1f12d278a0a64e5c603ac6eff53e383}{F\+I\+X\+\_\+1\+\_\+961570560}~((\hyperlink{_generic_type_defs_8h_acb31961b5585201db715eb476f8e1d82}{I\+N\+T32})  16069)	/$\ast$ F\+I\+X(1.\+961570560) $\ast$/
+\item 
+\#define \hyperlink{jidctint_8c_a281d26d03f6272e278cc01f6aab70426}{F\+I\+X\+\_\+2\+\_\+053119869}~((\hyperlink{_generic_type_defs_8h_acb31961b5585201db715eb476f8e1d82}{I\+N\+T32})  16819)	/$\ast$ F\+I\+X(2.\+053119869) $\ast$/
+\item 
+\#define \hyperlink{jidctint_8c_a6ce4d6e71f32b35291f42c7ba0f420bc}{F\+I\+X\+\_\+2\+\_\+562915447}~((\hyperlink{_generic_type_defs_8h_acb31961b5585201db715eb476f8e1d82}{I\+N\+T32})  20995)	/$\ast$ F\+I\+X(2.\+562915447) $\ast$/
+\item 
+\#define \hyperlink{jidctint_8c_ad73a6abedd72dd5bfb212b4b96d6c2ba}{F\+I\+X\+\_\+3\+\_\+072711026}~((\hyperlink{_generic_type_defs_8h_acb31961b5585201db715eb476f8e1d82}{I\+N\+T32})  25172)	/$\ast$ F\+I\+X(3.\+072711026) $\ast$/
+\item 
+\#define \hyperlink{jidctint_8c_affd087378f3038026c7395cd02d2ac86}{D\+E\+S\+C\+A\+L\+E}(x,  n)~((x) + ((\hyperlink{_generic_type_defs_8h_a73a5fec9b19159a6647fbf000017b221}{L\+O\+N\+G})0x01 $<$$<$ ((n)-\/1)))$>$$>$(n)
+\item 
+\#define \hyperlink{jidctint_8c_aac4a9f02ec45ccb867b662d227b29de0}{M\+U\+L\+T\+I\+P\+L\+Y}(var,  constant)~((\hyperlink{_generic_type_defs_8h_a73a5fec9b19159a6647fbf000017b221}{L\+O\+N\+G})(var) $\ast$ (constant));
+\item 
+\#define \hyperlink{jidctint_8c_aebb4a6c1803bea878c71c95ca0a61f83}{range\+\_\+limit}(x)~((x)$<$-\/128)?-\/128\+:((x)$>$127)?127\+:(x)
+\item 
+\#define \hyperlink{jidctint_8c_a37697e1838dc75e1e69368bff4c60cea}{D\+E\+Q\+U\+A\+N\+T\+I\+Z\+E}(coef,  quantval)~((\hyperlink{_generic_type_defs_8h_a73a5fec9b19159a6647fbf000017b221}{L\+O\+N\+G})(coef) $\ast$ (quantval))
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{jidctint_8c_a5d3de90f4a3fab9fc67986e568a8a0e9}{jpeg\+\_\+idct\+\_\+islow} (\hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} $\ast$inbuf, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} $\ast$quantptr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{jidctint_8c_a9fa8f69a0c7688843792648c12c655f7}{}\index{jidctint.\+c@{jidctint.\+c}!B\+I\+T\+S\+\_\+\+I\+N\+\_\+\+J\+S\+A\+M\+P\+L\+E@{B\+I\+T\+S\+\_\+\+I\+N\+\_\+\+J\+S\+A\+M\+P\+L\+E}}
+\index{B\+I\+T\+S\+\_\+\+I\+N\+\_\+\+J\+S\+A\+M\+P\+L\+E@{B\+I\+T\+S\+\_\+\+I\+N\+\_\+\+J\+S\+A\+M\+P\+L\+E}!jidctint.\+c@{jidctint.\+c}}
+\subsubsection[{B\+I\+T\+S\+\_\+\+I\+N\+\_\+\+J\+S\+A\+M\+P\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+I\+T\+S\+\_\+\+I\+N\+\_\+\+J\+S\+A\+M\+P\+L\+E~8}\label{jidctint_8c_a9fa8f69a0c7688843792648c12c655f7}
+
+
+Definition at line 68 of file jidctint.\+c.
+
+\hypertarget{jidctint_8c_a60551099e0e59afa6bcdb5f8afc32230}{}\index{jidctint.\+c@{jidctint.\+c}!C\+O\+N\+S\+T\+\_\+\+B\+I\+T\+S@{C\+O\+N\+S\+T\+\_\+\+B\+I\+T\+S}}
+\index{C\+O\+N\+S\+T\+\_\+\+B\+I\+T\+S@{C\+O\+N\+S\+T\+\_\+\+B\+I\+T\+S}!jidctint.\+c@{jidctint.\+c}}
+\subsubsection[{C\+O\+N\+S\+T\+\_\+\+B\+I\+T\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+\_\+\+B\+I\+T\+S~13}\label{jidctint_8c_a60551099e0e59afa6bcdb5f8afc32230}
+
+
+Definition at line 72 of file jidctint.\+c.
+
+\hypertarget{jidctint_8c_a7240c16d369c637fe4cabc4c129b2d2b}{}\index{jidctint.\+c@{jidctint.\+c}!D\+C\+T\+E\+L\+E\+M@{D\+C\+T\+E\+L\+E\+M}}
+\index{D\+C\+T\+E\+L\+E\+M@{D\+C\+T\+E\+L\+E\+M}!jidctint.\+c@{jidctint.\+c}}
+\subsubsection[{D\+C\+T\+E\+L\+E\+M}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+C\+T\+E\+L\+E\+M~{\bf L\+O\+N\+G}}\label{jidctint_8c_a7240c16d369c637fe4cabc4c129b2d2b}
+
+
+Definition at line 70 of file jidctint.\+c.
+
+\hypertarget{jidctint_8c_a44825d9811bddd408cb8db623b83aacb}{}\index{jidctint.\+c@{jidctint.\+c}!D\+C\+T\+S\+I\+Z\+E@{D\+C\+T\+S\+I\+Z\+E}}
+\index{D\+C\+T\+S\+I\+Z\+E@{D\+C\+T\+S\+I\+Z\+E}!jidctint.\+c@{jidctint.\+c}}
+\subsubsection[{D\+C\+T\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+C\+T\+S\+I\+Z\+E~8	/$\ast$ The basic D\+C\+T block is 8x8 samples $\ast$/}\label{jidctint_8c_a44825d9811bddd408cb8db623b83aacb}
+
+
+Definition at line 66 of file jidctint.\+c.
+
+\hypertarget{jidctint_8c_af89dff4200396563157d4a1e59da3bdf}{}\index{jidctint.\+c@{jidctint.\+c}!D\+C\+T\+S\+I\+Z\+E2@{D\+C\+T\+S\+I\+Z\+E2}}
+\index{D\+C\+T\+S\+I\+Z\+E2@{D\+C\+T\+S\+I\+Z\+E2}!jidctint.\+c@{jidctint.\+c}}
+\subsubsection[{D\+C\+T\+S\+I\+Z\+E2}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+C\+T\+S\+I\+Z\+E2~64	/$\ast$ {\bf D\+C\+T\+S\+I\+Z\+E} squared; \# of elements in a block $\ast$/}\label{jidctint_8c_af89dff4200396563157d4a1e59da3bdf}
+
+
+Definition at line 67 of file jidctint.\+c.
+
+\hypertarget{jidctint_8c_a37697e1838dc75e1e69368bff4c60cea}{}\index{jidctint.\+c@{jidctint.\+c}!D\+E\+Q\+U\+A\+N\+T\+I\+Z\+E@{D\+E\+Q\+U\+A\+N\+T\+I\+Z\+E}}
+\index{D\+E\+Q\+U\+A\+N\+T\+I\+Z\+E@{D\+E\+Q\+U\+A\+N\+T\+I\+Z\+E}!jidctint.\+c@{jidctint.\+c}}
+\subsubsection[{D\+E\+Q\+U\+A\+N\+T\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+Q\+U\+A\+N\+T\+I\+Z\+E(
+\begin{DoxyParamCaption}
+\item[{}]{coef, }
+\item[{}]{quantval}
+\end{DoxyParamCaption}
+)~(({\bf L\+O\+N\+G})(coef) $\ast$ (quantval))}\label{jidctint_8c_a37697e1838dc75e1e69368bff4c60cea}
+
+
+Definition at line 114 of file jidctint.\+c.
+
+\hypertarget{jidctint_8c_affd087378f3038026c7395cd02d2ac86}{}\index{jidctint.\+c@{jidctint.\+c}!D\+E\+S\+C\+A\+L\+E@{D\+E\+S\+C\+A\+L\+E}}
+\index{D\+E\+S\+C\+A\+L\+E@{D\+E\+S\+C\+A\+L\+E}!jidctint.\+c@{jidctint.\+c}}
+\subsubsection[{D\+E\+S\+C\+A\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+S\+C\+A\+L\+E(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~((x) + (({\bf L\+O\+N\+G})0x01 $<$$<$ ((n)-\/1)))$>$$>$(n)}\label{jidctint_8c_affd087378f3038026c7395cd02d2ac86}
+
+
+Definition at line 105 of file jidctint.\+c.
+
+\hypertarget{jidctint_8c_a92c934dbd3bacb5f20dee7bfae4a5bf6}{}\index{jidctint.\+c@{jidctint.\+c}!F\+I\+X\+\_\+0\+\_\+298631336@{F\+I\+X\+\_\+0\+\_\+298631336}}
+\index{F\+I\+X\+\_\+0\+\_\+298631336@{F\+I\+X\+\_\+0\+\_\+298631336}!jidctint.\+c@{jidctint.\+c}}
+\subsubsection[{F\+I\+X\+\_\+0\+\_\+298631336}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+X\+\_\+0\+\_\+298631336~(({\bf I\+N\+T32})  2446)	/$\ast$ F\+I\+X(0.\+298631336) $\ast$/}\label{jidctint_8c_a92c934dbd3bacb5f20dee7bfae4a5bf6}
+
+
+Definition at line 84 of file jidctint.\+c.
+
+\hypertarget{jidctint_8c_a56a1c93bfc12024497bb0a582e3449a0}{}\index{jidctint.\+c@{jidctint.\+c}!F\+I\+X\+\_\+0\+\_\+390180644@{F\+I\+X\+\_\+0\+\_\+390180644}}
+\index{F\+I\+X\+\_\+0\+\_\+390180644@{F\+I\+X\+\_\+0\+\_\+390180644}!jidctint.\+c@{jidctint.\+c}}
+\subsubsection[{F\+I\+X\+\_\+0\+\_\+390180644}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+X\+\_\+0\+\_\+390180644~(({\bf I\+N\+T32})  3196)	/$\ast$ F\+I\+X(0.\+390180644) $\ast$/}\label{jidctint_8c_a56a1c93bfc12024497bb0a582e3449a0}
+
+
+Definition at line 85 of file jidctint.\+c.
+
+\hypertarget{jidctint_8c_a69e116dc293f6d30c469d5f6b1cc7e25}{}\index{jidctint.\+c@{jidctint.\+c}!F\+I\+X\+\_\+0\+\_\+541196100@{F\+I\+X\+\_\+0\+\_\+541196100}}
+\index{F\+I\+X\+\_\+0\+\_\+541196100@{F\+I\+X\+\_\+0\+\_\+541196100}!jidctint.\+c@{jidctint.\+c}}
+\subsubsection[{F\+I\+X\+\_\+0\+\_\+541196100}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+X\+\_\+0\+\_\+541196100~(({\bf I\+N\+T32})  4433)	/$\ast$ F\+I\+X(0.\+541196100) $\ast$/}\label{jidctint_8c_a69e116dc293f6d30c469d5f6b1cc7e25}
+
+
+Definition at line 86 of file jidctint.\+c.
+
+\hypertarget{jidctint_8c_a5a1b66fd74e098a471bbed4ef8dada29}{}\index{jidctint.\+c@{jidctint.\+c}!F\+I\+X\+\_\+0\+\_\+765366865@{F\+I\+X\+\_\+0\+\_\+765366865}}
+\index{F\+I\+X\+\_\+0\+\_\+765366865@{F\+I\+X\+\_\+0\+\_\+765366865}!jidctint.\+c@{jidctint.\+c}}
+\subsubsection[{F\+I\+X\+\_\+0\+\_\+765366865}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+X\+\_\+0\+\_\+765366865~(({\bf I\+N\+T32})  6270)	/$\ast$ F\+I\+X(0.\+765366865) $\ast$/}\label{jidctint_8c_a5a1b66fd74e098a471bbed4ef8dada29}
+
+
+Definition at line 87 of file jidctint.\+c.
+
+\hypertarget{jidctint_8c_abf3678750fca4008f6c26fbc4dc4cc95}{}\index{jidctint.\+c@{jidctint.\+c}!F\+I\+X\+\_\+0\+\_\+899976223@{F\+I\+X\+\_\+0\+\_\+899976223}}
+\index{F\+I\+X\+\_\+0\+\_\+899976223@{F\+I\+X\+\_\+0\+\_\+899976223}!jidctint.\+c@{jidctint.\+c}}
+\subsubsection[{F\+I\+X\+\_\+0\+\_\+899976223}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+X\+\_\+0\+\_\+899976223~(({\bf I\+N\+T32})  7373)	/$\ast$ F\+I\+X(0.\+899976223) $\ast$/}\label{jidctint_8c_abf3678750fca4008f6c26fbc4dc4cc95}
+
+
+Definition at line 88 of file jidctint.\+c.
+
+\hypertarget{jidctint_8c_a8e6a809ae2970a298bc917cbc3ac6447}{}\index{jidctint.\+c@{jidctint.\+c}!F\+I\+X\+\_\+1\+\_\+175875602@{F\+I\+X\+\_\+1\+\_\+175875602}}
+\index{F\+I\+X\+\_\+1\+\_\+175875602@{F\+I\+X\+\_\+1\+\_\+175875602}!jidctint.\+c@{jidctint.\+c}}
+\subsubsection[{F\+I\+X\+\_\+1\+\_\+175875602}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+X\+\_\+1\+\_\+175875602~(({\bf I\+N\+T32})  9633)	/$\ast$ F\+I\+X(1.\+175875602) $\ast$/}\label{jidctint_8c_a8e6a809ae2970a298bc917cbc3ac6447}
+
+
+Definition at line 89 of file jidctint.\+c.
+
+\hypertarget{jidctint_8c_a6e352b4e627b7804da9260329ebfc1aa}{}\index{jidctint.\+c@{jidctint.\+c}!F\+I\+X\+\_\+1\+\_\+501321110@{F\+I\+X\+\_\+1\+\_\+501321110}}
+\index{F\+I\+X\+\_\+1\+\_\+501321110@{F\+I\+X\+\_\+1\+\_\+501321110}!jidctint.\+c@{jidctint.\+c}}
+\subsubsection[{F\+I\+X\+\_\+1\+\_\+501321110}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+X\+\_\+1\+\_\+501321110~(({\bf I\+N\+T32})  12299)	/$\ast$ F\+I\+X(1.\+501321110) $\ast$/}\label{jidctint_8c_a6e352b4e627b7804da9260329ebfc1aa}
+
+
+Definition at line 90 of file jidctint.\+c.
+
+\hypertarget{jidctint_8c_aae01f5a981ce1fb5a0bb0160932c24ea}{}\index{jidctint.\+c@{jidctint.\+c}!F\+I\+X\+\_\+1\+\_\+847759065@{F\+I\+X\+\_\+1\+\_\+847759065}}
+\index{F\+I\+X\+\_\+1\+\_\+847759065@{F\+I\+X\+\_\+1\+\_\+847759065}!jidctint.\+c@{jidctint.\+c}}
+\subsubsection[{F\+I\+X\+\_\+1\+\_\+847759065}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+X\+\_\+1\+\_\+847759065~(({\bf I\+N\+T32})  15137)	/$\ast$ F\+I\+X(1.\+847759065) $\ast$/}\label{jidctint_8c_aae01f5a981ce1fb5a0bb0160932c24ea}
+
+
+Definition at line 91 of file jidctint.\+c.
+
+\hypertarget{jidctint_8c_aa1f12d278a0a64e5c603ac6eff53e383}{}\index{jidctint.\+c@{jidctint.\+c}!F\+I\+X\+\_\+1\+\_\+961570560@{F\+I\+X\+\_\+1\+\_\+961570560}}
+\index{F\+I\+X\+\_\+1\+\_\+961570560@{F\+I\+X\+\_\+1\+\_\+961570560}!jidctint.\+c@{jidctint.\+c}}
+\subsubsection[{F\+I\+X\+\_\+1\+\_\+961570560}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+X\+\_\+1\+\_\+961570560~(({\bf I\+N\+T32})  16069)	/$\ast$ F\+I\+X(1.\+961570560) $\ast$/}\label{jidctint_8c_aa1f12d278a0a64e5c603ac6eff53e383}
+
+
+Definition at line 92 of file jidctint.\+c.
+
+\hypertarget{jidctint_8c_a281d26d03f6272e278cc01f6aab70426}{}\index{jidctint.\+c@{jidctint.\+c}!F\+I\+X\+\_\+2\+\_\+053119869@{F\+I\+X\+\_\+2\+\_\+053119869}}
+\index{F\+I\+X\+\_\+2\+\_\+053119869@{F\+I\+X\+\_\+2\+\_\+053119869}!jidctint.\+c@{jidctint.\+c}}
+\subsubsection[{F\+I\+X\+\_\+2\+\_\+053119869}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+X\+\_\+2\+\_\+053119869~(({\bf I\+N\+T32})  16819)	/$\ast$ F\+I\+X(2.\+053119869) $\ast$/}\label{jidctint_8c_a281d26d03f6272e278cc01f6aab70426}
+
+
+Definition at line 93 of file jidctint.\+c.
+
+\hypertarget{jidctint_8c_a6ce4d6e71f32b35291f42c7ba0f420bc}{}\index{jidctint.\+c@{jidctint.\+c}!F\+I\+X\+\_\+2\+\_\+562915447@{F\+I\+X\+\_\+2\+\_\+562915447}}
+\index{F\+I\+X\+\_\+2\+\_\+562915447@{F\+I\+X\+\_\+2\+\_\+562915447}!jidctint.\+c@{jidctint.\+c}}
+\subsubsection[{F\+I\+X\+\_\+2\+\_\+562915447}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+X\+\_\+2\+\_\+562915447~(({\bf I\+N\+T32})  20995)	/$\ast$ F\+I\+X(2.\+562915447) $\ast$/}\label{jidctint_8c_a6ce4d6e71f32b35291f42c7ba0f420bc}
+
+
+Definition at line 94 of file jidctint.\+c.
+
+\hypertarget{jidctint_8c_ad73a6abedd72dd5bfb212b4b96d6c2ba}{}\index{jidctint.\+c@{jidctint.\+c}!F\+I\+X\+\_\+3\+\_\+072711026@{F\+I\+X\+\_\+3\+\_\+072711026}}
+\index{F\+I\+X\+\_\+3\+\_\+072711026@{F\+I\+X\+\_\+3\+\_\+072711026}!jidctint.\+c@{jidctint.\+c}}
+\subsubsection[{F\+I\+X\+\_\+3\+\_\+072711026}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+X\+\_\+3\+\_\+072711026~(({\bf I\+N\+T32})  25172)	/$\ast$ F\+I\+X(3.\+072711026) $\ast$/}\label{jidctint_8c_ad73a6abedd72dd5bfb212b4b96d6c2ba}
+
+
+Definition at line 95 of file jidctint.\+c.
+
+\hypertarget{jidctint_8c_aac92c5ec332dafe0abb24688dad1b795}{}\index{jidctint.\+c@{jidctint.\+c}!I\+N\+T32@{I\+N\+T32}}
+\index{I\+N\+T32@{I\+N\+T32}!jidctint.\+c@{jidctint.\+c}}
+\subsubsection[{I\+N\+T32}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf I\+N\+T32}~{\bf L\+O\+N\+G}}\label{jidctint_8c_aac92c5ec332dafe0abb24688dad1b795}
+
+
+Definition at line 75 of file jidctint.\+c.
+
+\hypertarget{jidctint_8c_aac4a9f02ec45ccb867b662d227b29de0}{}\index{jidctint.\+c@{jidctint.\+c}!M\+U\+L\+T\+I\+P\+L\+Y@{M\+U\+L\+T\+I\+P\+L\+Y}}
+\index{M\+U\+L\+T\+I\+P\+L\+Y@{M\+U\+L\+T\+I\+P\+L\+Y}!jidctint.\+c@{jidctint.\+c}}
+\subsubsection[{M\+U\+L\+T\+I\+P\+L\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+U\+L\+T\+I\+P\+L\+Y(
+\begin{DoxyParamCaption}
+\item[{}]{var, }
+\item[{}]{constant}
+\end{DoxyParamCaption}
+)~(({\bf L\+O\+N\+G})(var) $\ast$ (constant));}\label{jidctint_8c_aac4a9f02ec45ccb867b662d227b29de0}
+
+
+Definition at line 106 of file jidctint.\+c.
+
+\hypertarget{jidctint_8c_a18ee9371e9fc23cff4000ee5d9356520}{}\index{jidctint.\+c@{jidctint.\+c}!N\+O\+\_\+\+Z\+E\+R\+O\+\_\+\+R\+O\+W\+\_\+\+T\+E\+S\+T@{N\+O\+\_\+\+Z\+E\+R\+O\+\_\+\+R\+O\+W\+\_\+\+T\+E\+S\+T}}
+\index{N\+O\+\_\+\+Z\+E\+R\+O\+\_\+\+R\+O\+W\+\_\+\+T\+E\+S\+T@{N\+O\+\_\+\+Z\+E\+R\+O\+\_\+\+R\+O\+W\+\_\+\+T\+E\+S\+T}!jidctint.\+c@{jidctint.\+c}}
+\subsubsection[{N\+O\+\_\+\+Z\+E\+R\+O\+\_\+\+R\+O\+W\+\_\+\+T\+E\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+O\+\_\+\+Z\+E\+R\+O\+\_\+\+R\+O\+W\+\_\+\+T\+E\+S\+T}\label{jidctint_8c_a18ee9371e9fc23cff4000ee5d9356520}
+
+
+Definition at line 69 of file jidctint.\+c.
+
+\hypertarget{jidctint_8c_a531b3898a04cc04bf727fa41b69f0fd8}{}\index{jidctint.\+c@{jidctint.\+c}!P\+A\+S\+S1\+\_\+\+B\+I\+T\+S@{P\+A\+S\+S1\+\_\+\+B\+I\+T\+S}}
+\index{P\+A\+S\+S1\+\_\+\+B\+I\+T\+S@{P\+A\+S\+S1\+\_\+\+B\+I\+T\+S}!jidctint.\+c@{jidctint.\+c}}
+\subsubsection[{P\+A\+S\+S1\+\_\+\+B\+I\+T\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+A\+S\+S1\+\_\+\+B\+I\+T\+S~2}\label{jidctint_8c_a531b3898a04cc04bf727fa41b69f0fd8}
+
+
+Definition at line 73 of file jidctint.\+c.
+
+\hypertarget{jidctint_8c_aebb4a6c1803bea878c71c95ca0a61f83}{}\index{jidctint.\+c@{jidctint.\+c}!range\+\_\+limit@{range\+\_\+limit}}
+\index{range\+\_\+limit@{range\+\_\+limit}!jidctint.\+c@{jidctint.\+c}}
+\subsubsection[{range\+\_\+limit}]{\setlength{\rightskip}{0pt plus 5cm}\#define range\+\_\+limit(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~((x)$<$-\/128)?-\/128\+:((x)$>$127)?127\+:(x)}\label{jidctint_8c_aebb4a6c1803bea878c71c95ca0a61f83}
+
+
+Definition at line 107 of file jidctint.\+c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{jidctint_8c_a5d3de90f4a3fab9fc67986e568a8a0e9}{}\index{jidctint.\+c@{jidctint.\+c}!jpeg\+\_\+idct\+\_\+islow@{jpeg\+\_\+idct\+\_\+islow}}
+\index{jpeg\+\_\+idct\+\_\+islow@{jpeg\+\_\+idct\+\_\+islow}!jidctint.\+c@{jidctint.\+c}}
+\subsubsection[{jpeg\+\_\+idct\+\_\+islow}]{\setlength{\rightskip}{0pt plus 5cm}void jpeg\+\_\+idct\+\_\+islow (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+H\+O\+R\+T} $\ast$}]{inbuf, }
+\item[{{\bf W\+O\+R\+D} $\ast$}]{quantptr}
+\end{DoxyParamCaption}
+)}\label{jidctint_8c_a5d3de90f4a3fab9fc67986e568a8a0e9}
+
+
+Definition at line 121 of file jidctint.\+c.
+

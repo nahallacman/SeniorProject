@@ -1,0 +1,126 @@
+\hypertarget{m_touch_sensor_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C18\+F P\+I\+C24\+F P\+I\+C24\+H ds\+P\+I\+C Library/m\+Touch\+Sensor.c File Reference}
+\label{m_touch_sensor_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C18\+F P\+I\+C24\+F P\+I\+C24\+H ds\+P\+I\+C Library/m\+Touch\+Sensor.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C18\+F P\+I\+C24\+F P\+I\+C24\+H ds\+P\+I\+C Library/m\+Touch\+Sensor.\+c}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{m_touch_sensor_8c_ac75723ae0f4ecb3827de237cf71e6726}{M\+Touch\+Update\+Sensor\+Average} (\hyperlink{m_touch_sensor_8h_a20ea6ae73be2b43f0c39bae385b66266}{S\+E\+N\+S\+O\+R} $\ast$p\+Sensor, \hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} rate)
+\item 
+void \hyperlink{m_touch_sensor_8c_a2c3d5b1caa18b5f919a7be5db6733401}{M\+Touch\+Sensor\+Decode} (\hyperlink{m_touch_sensor_8h_a20ea6ae73be2b43f0c39bae385b66266}{S\+E\+N\+S\+O\+R} $\ast$p\+Sensor)
+\item 
+void \hyperlink{m_touch_sensor_8c_a8b68530f8569467d5d11941172047e26}{M\+Touch\+Set\+Sensor} (\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} sensor\+Number, \hyperlink{m_touch_sensor_8h_a21cb12f98ab6bc7f80e6fa31286a2f5f}{S\+F\+R} tris, \hyperlink{m_touch_sensor_8h_a21cb12f98ab6bc7f80e6fa31286a2f5f}{S\+F\+R} \hyperlink{_h_w_p___m_i_k_r_o__8_p_m_p_8h_a872c3b43c5f7a471ea820346d9041724}{lat}, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} io\+Bit\+Number, \hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} channel\+Number, \hyperlink{_generic_type_defs_8h_ad87465075f24df28ef66f25e43f0bd5a}{I\+N\+T16} threshold, \hyperlink{_generic_type_defs_8h_ad87465075f24df28ef66f25e43f0bd5a}{I\+N\+T16} oversampling, \hyperlink{_generic_type_defs_8h_a7ebe70ceca856797319175e30bcf003d}{I\+N\+T8} \hyperlink{m_touch_acquistion_8c_ace9c04b24442a586a8c603902c58b781}{charge\+Delay})
+\item 
+void \hyperlink{m_touch_sensor_8c_ac252a183e6d953dad6ed3abb6308b2e0}{M\+Touch\+Init} (void)
+\item 
+void \hyperlink{m_touch_sensor_8c_ad683ef3c5aedd12fdac65f05abe5a848}{M\+Touch\+Acquisition} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile \hyperlink{m_touch_sensor_8h_a20ea6ae73be2b43f0c39bae385b66266}{S\+E\+N\+S\+O\+R} \hyperlink{m_touch_sensor_8c_a6c08f90b8c5863dc965495a6441bdc7d}{sensors} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+S\+E\+N\+S\+O\+R\+S\+\_\+\+N\+U\+M\+B\+E\+R\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{m_touch_sensor_8c_ad683ef3c5aedd12fdac65f05abe5a848}{}\index{m\+Touch\+Sensor.\+c@{m\+Touch\+Sensor.\+c}!M\+Touch\+Acquisition@{M\+Touch\+Acquisition}}
+\index{M\+Touch\+Acquisition@{M\+Touch\+Acquisition}!m\+Touch\+Sensor.\+c@{m\+Touch\+Sensor.\+c}}
+\subsubsection[{M\+Touch\+Acquisition}]{\setlength{\rightskip}{0pt plus 5cm}void M\+Touch\+Acquisition (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_touch_sensor_8c_ad683ef3c5aedd12fdac65f05abe5a848}
+
+
+Definition at line 249 of file m\+Touch\+Sensor.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 0
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+\hypertarget{m_touch_sensor_8c_ac252a183e6d953dad6ed3abb6308b2e0}{}\index{m\+Touch\+Sensor.\+c@{m\+Touch\+Sensor.\+c}!M\+Touch\+Init@{M\+Touch\+Init}}
+\index{M\+Touch\+Init@{M\+Touch\+Init}!m\+Touch\+Sensor.\+c@{m\+Touch\+Sensor.\+c}}
+\subsubsection[{M\+Touch\+Init}]{\setlength{\rightskip}{0pt plus 5cm}void M\+Touch\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_touch_sensor_8c_ac252a183e6d953dad6ed3abb6308b2e0}
+
+
+Definition at line 125 of file m\+Touch\+Sensor.\+c.
+
+\hypertarget{m_touch_sensor_8c_a2c3d5b1caa18b5f919a7be5db6733401}{}\index{m\+Touch\+Sensor.\+c@{m\+Touch\+Sensor.\+c}!M\+Touch\+Sensor\+Decode@{M\+Touch\+Sensor\+Decode}}
+\index{M\+Touch\+Sensor\+Decode@{M\+Touch\+Sensor\+Decode}!m\+Touch\+Sensor.\+c@{m\+Touch\+Sensor.\+c}}
+\subsubsection[{M\+Touch\+Sensor\+Decode}]{\setlength{\rightskip}{0pt plus 5cm}void M\+Touch\+Sensor\+Decode (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+N\+S\+O\+R} $\ast$}]{p\+Sensor}
+\end{DoxyParamCaption}
+)}\label{m_touch_sensor_8c_a2c3d5b1caa18b5f919a7be5db6733401}
+
+
+Definition at line 136 of file m\+Touch\+Sensor.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\hypertarget{m_touch_sensor_8c_a8b68530f8569467d5d11941172047e26}{}\index{m\+Touch\+Sensor.\+c@{m\+Touch\+Sensor.\+c}!M\+Touch\+Set\+Sensor@{M\+Touch\+Set\+Sensor}}
+\index{M\+Touch\+Set\+Sensor@{M\+Touch\+Set\+Sensor}!m\+Touch\+Sensor.\+c@{m\+Touch\+Sensor.\+c}}
+\subsubsection[{M\+Touch\+Set\+Sensor}]{\setlength{\rightskip}{0pt plus 5cm}void M\+Touch\+Set\+Sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+I\+N\+T8}}]{sensor\+Number, }
+\item[{{\bf S\+F\+R}}]{tris, }
+\item[{{\bf S\+F\+R}}]{lat, }
+\item[{{\bf U\+I\+N\+T8}}]{io\+Bit\+Number, }
+\item[{{\bf U\+I\+N\+T8}}]{channel\+Number, }
+\item[{{\bf I\+N\+T16}}]{threshold, }
+\item[{{\bf I\+N\+T16}}]{oversampling, }
+\item[{{\bf I\+N\+T8}}]{charge\+Delay}
+\end{DoxyParamCaption}
+)}\label{m_touch_sensor_8c_a8b68530f8569467d5d11941172047e26}
+
+
+Definition at line 78 of file m\+Touch\+Sensor.\+c.
+
+\hypertarget{m_touch_sensor_8c_ac75723ae0f4ecb3827de237cf71e6726}{}\index{m\+Touch\+Sensor.\+c@{m\+Touch\+Sensor.\+c}!M\+Touch\+Update\+Sensor\+Average@{M\+Touch\+Update\+Sensor\+Average}}
+\index{M\+Touch\+Update\+Sensor\+Average@{M\+Touch\+Update\+Sensor\+Average}!m\+Touch\+Sensor.\+c@{m\+Touch\+Sensor.\+c}}
+\subsubsection[{M\+Touch\+Update\+Sensor\+Average}]{\setlength{\rightskip}{0pt plus 5cm}void M\+Touch\+Update\+Sensor\+Average (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+E\+N\+S\+O\+R} $\ast$}]{p\+Sensor, }
+\item[{{\bf U\+I\+N\+T16}}]{rate}
+\end{DoxyParamCaption}
+)}\label{m_touch_sensor_8c_ac75723ae0f4ecb3827de237cf71e6726}
+
+
+Definition at line 214 of file m\+Touch\+Sensor.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{m_touch_sensor_8c_a6c08f90b8c5863dc965495a6441bdc7d}{}\index{m\+Touch\+Sensor.\+c@{m\+Touch\+Sensor.\+c}!sensors@{sensors}}
+\index{sensors@{sensors}!m\+Touch\+Sensor.\+c@{m\+Touch\+Sensor.\+c}}
+\subsubsection[{sensors}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf S\+E\+N\+S\+O\+R} sensors\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+S\+E\+N\+S\+O\+R\+S\+\_\+\+N\+U\+M\+B\+E\+R\mbox{]}}\label{m_touch_sensor_8c_a6c08f90b8c5863dc965495a6441bdc7d}
+
+
+Definition at line 64 of file m\+Touch\+Sensor.\+c.
+

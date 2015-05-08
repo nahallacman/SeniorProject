@@ -1,0 +1,22 @@
+digraph "mComm_Service"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="mComm_Service",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="mComm_UART_SendACKorNACK",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$m_comm_8c.html#af342943db55e1a4a0d9e9c3b9e32b37a"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="mComm_UART_PutChar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$m_comm_8c.html#a52e190faf8c2c0afe082c6ab232da4c8"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="mComm_Process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$m_comm_8c.html#a233a49570a500f2391ef8e894e465241"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="mComm_ErrorIterator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$m_comm_8h.html#a993aa704b4a1c9ddc6fca5fdc80fa6aa"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="mComm_UART_Int2ASCII",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$m_comm_8c.html#af25da52c9da7c8fa9337c43ad5d7a1b6"];
+  Node6 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="mComm_UART_Char2ASCII",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$m_comm_8c.html#a239a6ceb1aeca100de01f2522fb3ca2c"];
+  Node7 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+}

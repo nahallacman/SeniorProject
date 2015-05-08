@@ -1,0 +1,27 @@
+var _s_d__s_p_i_8c =
+[
+    [ "SendMediaSlowCmd", "_s_d-_s_p_i_8c.html#a5d378e74d32d2c729f8c02e1038fcd4a", null ],
+    [ "WriteSPISlow", "_s_d-_s_p_i_8c.html#ac8426536455869c8e1fac618a62fb708", null ],
+    [ "CloseSPIM", "_s_d-_s_p_i_8c.html#a046824de7bd39b019b942d8ef3643546", null ],
+    [ "Delayms", "_s_d-_s_p_i_8c.html#a5051d074e6b2361e58b3ea5585443e25", null ],
+    [ "InitSPISlowMode", "_s_d-_s_p_i_8c.html#abb14b787d26043d7597171c47429dcef", null ],
+    [ "MDD_SDSPI_AsyncReadTasks", "_s_d-_s_p_i_8c.html#aa23a73d4e8ad01a7431a1f09195be6e9", null ],
+    [ "MDD_SDSPI_AsyncWriteTasks", "_s_d-_s_p_i_8c.html#a020ed7ef9ebcf7dce1002ef668c2a32e", null ],
+    [ "MDD_SDSPI_InitIO", "_s_d-_s_p_i_8c.html#aa57c9a50f2928e5fa73b694820d0b9ee", null ],
+    [ "MDD_SDSPI_MediaDetect", "_s_d-_s_p_i_8c.html#a30887940b056f7563f2c31cfdc9b9527", null ],
+    [ "MDD_SDSPI_MediaInitialize", "_s_d-_s_p_i_8c.html#a399249708046e5c18471a82c2e8119ab", null ],
+    [ "MDD_SDSPI_ReadCapacity", "_s_d-_s_p_i_8c.html#abf7ff1b0a96625e8108c47957de8d46d", null ],
+    [ "MDD_SDSPI_ReadMedia", "_s_d-_s_p_i_8c.html#a4990e32f9f0abd51bb486f148ab98875", null ],
+    [ "MDD_SDSPI_ReadSectorSize", "_s_d-_s_p_i_8c.html#a20a071eb0f4d5fdcd574d4c359686d71", null ],
+    [ "MDD_SDSPI_SectorRead", "_s_d-_s_p_i_8c.html#a36e18542755f672a02b549ba9d9a5b3d", null ],
+    [ "MDD_SDSPI_SectorWrite", "_s_d-_s_p_i_8c.html#a1d6db29d5e24aebec87110db1ca5823d", null ],
+    [ "MDD_SDSPI_ShutdownMedia", "_s_d-_s_p_i_8c.html#a8f03681bf00e9f6d8f31581f55ad7c1d", null ],
+    [ "MDD_SDSPI_WriteProtectState", "_s_d-_s_p_i_8c.html#a27a3238b87bb45f8d37c958982ace55e", null ],
+    [ "OpenSPIM", "_s_d-_s_p_i_8c.html#a7c6595aec33f6c0757dc30133f3a1646", null ],
+    [ "SendMMCCmd", "_s_d-_s_p_i_8c.html#a88d057eb424e5ae206be5465387b2e0a", null ],
+    [ "WriteSPIM", "_s_d-_s_p_i_8c.html#ab4e7f228a81fb435b37e82b99fb27bb5", null ],
+    [ "gMediaSectorSize", "_s_d-_s_p_i_8c.html#a4e9107c4b54b4f4b6e3d3419838a6433", null ],
+    [ "gSDMode", "_s_d-_s_p_i_8c.html#a1add6537f239a64057ced48518073f6c", null ],
+    [ "MDD_SDSPI_finalLBA", "_s_d-_s_p_i_8c.html#a6339523d4a5e4a949a160d07ee4c39c0", null ],
+    [ "sdmmc_cmdtable", "_s_d-_s_p_i_8c.html#ab6715f92255ff9a1b45df34c10c4803a", null ]
+];

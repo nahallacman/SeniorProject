@@ -1,0 +1,111 @@
+\hypertarget{salloc_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+P\+I\+C18 salloc/salloc.c File Reference}
+\label{salloc_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+P\+I\+C18 salloc/salloc.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+P\+I\+C18 salloc/salloc.\+c}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{union___s_a_l_l_o_c}{\+\_\+\+S\+A\+L\+L\+O\+C}
+\item 
+struct \hyperlink{struct___s_a_l_l_o_c_1_1___b_i_t_s}{\+\_\+\+S\+A\+L\+L\+O\+C\+::\+\_\+\+B\+I\+T\+S}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef union \hyperlink{union___s_a_l_l_o_c}{\+\_\+\+S\+A\+L\+L\+O\+C} \hyperlink{salloc_8c_a15aca3189a553bb27bfd3988e76ad1d7}{S\+A\+L\+L\+O\+C}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+N\+E\+A\+R unsigned char \hyperlink{salloc_8c_a8aea515c10f2e5747837d5461e2f325f}{\+\_\+\+S\+R\+A\+Mmerge} (\hyperlink{salloc_8c_a15aca3189a553bb27bfd3988e76ad1d7}{S\+A\+L\+L\+O\+C} $\ast$N\+E\+A\+R p\+Seg\+A)
+\item 
+unsigned char $\ast$N\+E\+A\+R \hyperlink{salloc_8c_a5dec1ecac657ac6eced21ca49a9c81dc}{S\+R\+A\+Malloc} (N\+E\+A\+R unsigned char n\+Bytes)
+\item 
+void \hyperlink{salloc_8c_a6e098e4795583bebef9439129c427713}{S\+R\+A\+Mfree} (unsigned char $\ast$N\+E\+A\+R p\+S\+R\+A\+M)
+\item 
+void \hyperlink{salloc_8c_a27cef686e276985668dd700d0590e663}{S\+R\+A\+M\+Init\+Heap} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \hyperlink{salloc_8c_abba051584dec87f36d2c89ee5238049c}{\+\_\+u\+Dynamic\+Heap} \mbox{[}M\+A\+X\+\_\+\+H\+E\+A\+P\+\_\+\+S\+I\+Z\+E\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{salloc_8c_a15aca3189a553bb27bfd3988e76ad1d7}{}\index{salloc.\+c@{salloc.\+c}!S\+A\+L\+L\+O\+C@{S\+A\+L\+L\+O\+C}}
+\index{S\+A\+L\+L\+O\+C@{S\+A\+L\+L\+O\+C}!salloc.\+c@{salloc.\+c}}
+\subsubsection[{S\+A\+L\+L\+O\+C}]{\setlength{\rightskip}{0pt plus 5cm}typedef union {\bf \+\_\+\+S\+A\+L\+L\+O\+C} {\bf S\+A\+L\+L\+O\+C}}\label{salloc_8c_a15aca3189a553bb27bfd3988e76ad1d7}
+
+
+\subsection{Function Documentation}
+\hypertarget{salloc_8c_a8aea515c10f2e5747837d5461e2f325f}{}\index{salloc.\+c@{salloc.\+c}!\+\_\+\+S\+R\+A\+Mmerge@{\+\_\+\+S\+R\+A\+Mmerge}}
+\index{\+\_\+\+S\+R\+A\+Mmerge@{\+\_\+\+S\+R\+A\+Mmerge}!salloc.\+c@{salloc.\+c}}
+\subsubsection[{\+\_\+\+S\+R\+A\+Mmerge}]{\setlength{\rightskip}{0pt plus 5cm}N\+E\+A\+R unsigned char \+\_\+\+S\+R\+A\+Mmerge (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+A\+L\+L\+O\+C} $\ast$N\+E\+A\+R}]{p\+Seg\+A}
+\end{DoxyParamCaption}
+)}\label{salloc_8c_a8aea515c10f2e5747837d5461e2f325f}
+
+
+Definition at line 370 of file salloc.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+\hypertarget{salloc_8c_a5dec1ecac657ac6eced21ca49a9c81dc}{}\index{salloc.\+c@{salloc.\+c}!S\+R\+A\+Malloc@{S\+R\+A\+Malloc}}
+\index{S\+R\+A\+Malloc@{S\+R\+A\+Malloc}!salloc.\+c@{salloc.\+c}}
+\subsubsection[{S\+R\+A\+Malloc}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ N\+E\+A\+R S\+R\+A\+Malloc (
+\begin{DoxyParamCaption}
+\item[{N\+E\+A\+R unsigned char}]{n\+Bytes}
+\end{DoxyParamCaption}
+)}\label{salloc_8c_a5dec1ecac657ac6eced21ca49a9c81dc}
+
+
+Definition at line 202 of file salloc.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+\hypertarget{salloc_8c_a6e098e4795583bebef9439129c427713}{}\index{salloc.\+c@{salloc.\+c}!S\+R\+A\+Mfree@{S\+R\+A\+Mfree}}
+\index{S\+R\+A\+Mfree@{S\+R\+A\+Mfree}!salloc.\+c@{salloc.\+c}}
+\subsubsection[{S\+R\+A\+Mfree}]{\setlength{\rightskip}{0pt plus 5cm}void S\+R\+A\+Mfree (
+\begin{DoxyParamCaption}
+\item[{unsigned char $\ast$N\+E\+A\+R}]{p\+S\+R\+A\+M}
+\end{DoxyParamCaption}
+)}\label{salloc_8c_a6e098e4795583bebef9439129c427713}
+
+
+Definition at line 298 of file salloc.\+c.
+
+\hypertarget{salloc_8c_a27cef686e276985668dd700d0590e663}{}\index{salloc.\+c@{salloc.\+c}!S\+R\+A\+M\+Init\+Heap@{S\+R\+A\+M\+Init\+Heap}}
+\index{S\+R\+A\+M\+Init\+Heap@{S\+R\+A\+M\+Init\+Heap}!salloc.\+c@{salloc.\+c}}
+\subsubsection[{S\+R\+A\+M\+Init\+Heap}]{\setlength{\rightskip}{0pt plus 5cm}void S\+R\+A\+M\+Init\+Heap (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{salloc_8c_a27cef686e276985668dd700d0590e663}
+
+
+Definition at line 324 of file salloc.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{salloc_8c_abba051584dec87f36d2c89ee5238049c}{}\index{salloc.\+c@{salloc.\+c}!\+\_\+u\+Dynamic\+Heap@{\+\_\+u\+Dynamic\+Heap}}
+\index{\+\_\+u\+Dynamic\+Heap@{\+\_\+u\+Dynamic\+Heap}!salloc.\+c@{salloc.\+c}}
+\subsubsection[{\+\_\+u\+Dynamic\+Heap}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char \+\_\+u\+Dynamic\+Heap\mbox{[}M\+A\+X\+\_\+\+H\+E\+A\+P\+\_\+\+S\+I\+Z\+E\mbox{]}}\label{salloc_8c_abba051584dec87f36d2c89ee5238049c}
+
+
+Definition at line 155 of file salloc.\+c.
+

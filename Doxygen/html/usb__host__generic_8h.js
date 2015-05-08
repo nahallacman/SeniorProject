@@ -1,0 +1,27 @@
+var usb__host__generic_8h =
+[
+    [ "_GENERIC_DEVICE_ID", "struct___g_e_n_e_r_i_c___d_e_v_i_c_e___i_d.html", "struct___g_e_n_e_r_i_c___d_e_v_i_c_e___i_d" ],
+    [ "_GENERIC_DEVICE", "struct___g_e_n_e_r_i_c___d_e_v_i_c_e.html", "struct___g_e_n_e_r_i_c___d_e_v_i_c_e" ],
+    [ "API_VALID", "usb__host__generic_8h.html#aa5763a646d0aa229a994cce461db19b8", null ],
+    [ "EVENT_GENERIC_ATTACH", "usb__host__generic_8h.html#a137193de5aebc1eb9255008767ea0e92", null ],
+    [ "EVENT_GENERIC_DETACH", "usb__host__generic_8h.html#ab5b98a4e65c9a1987c8643ae2a0e0752", null ],
+    [ "EVENT_GENERIC_OFFSET", "usb__host__generic_8h.html#abda2912f5a8f78f980556a5a6d95487f", null ],
+    [ "EVENT_GENERIC_RX_DONE", "usb__host__generic_8h.html#aa128f181b7deb29e15ab144b83465f78", null ],
+    [ "EVENT_GENERIC_TX_DONE", "usb__host__generic_8h.html#afe73c62edb723fa94ef29326de3c9d2f", null ],
+    [ "USB_GENERIC_EP", "usb__host__generic_8h.html#a291c6df18b46d067ef709a124d534a37", null ],
+    [ "USBHostGenericDeviceDetached", "usb__host__generic_8h.html#a14a225205b6db1e96b036c791c5b9b01", null ],
+    [ "USBHostGenericGetRxLength", "usb__host__generic_8h.html#a7277022caf36ec66ebdb5f901141f94b", null ],
+    [ "USBHostGenericRxIsBusy", "usb__host__generic_8h.html#a5bad930629cf7d83e74caae6ddff4f75", null ],
+    [ "USBHostGenericTxIsBusy", "usb__host__generic_8h.html#a449dfdeab9ca5826d2f222b2d25ca8dd", null ],
+    [ "GENERIC_DEVICE", "usb__host__generic_8h.html#ae304de0d219db02c86faf585703064fc", null ],
+    [ "GENERIC_DEVICE_ID", "usb__host__generic_8h.html#a47abb66a665e1ac367cdb2c95a09d915", null ],
+    [ "USBHostGenericEventHandler", "usb__host__generic_8h.html#ab6793d6131600ac70dcd090a174b05a6", null ],
+    [ "USBHostGenericGetDeviceAddress", "usb__host__generic_8h.html#ab3f37b45aafda05aeb7f123a2ea0b26a", null ],
+    [ "USBHostGenericInit", "usb__host__generic_8h.html#a50f2b1039d611d9004a974cfb0cc25f6", null ],
+    [ "USBHostGenericRead", "usb__host__generic_8h.html#ac95315a0abeaac5ea83281f60b444b51", null ],
+    [ "USBHostGenericRxIsComplete", "usb__host__generic_8h.html#aafec9517994b29e9e4926224d10ca9b8", null ],
+    [ "USBHostGenericTasks", "usb__host__generic_8h.html#abd6ca7e1f63df6b4ed20110b719b2a1c", null ],
+    [ "USBHostGenericTxIsComplete", "usb__host__generic_8h.html#a09c1090ba6be422b04a4ab4a86665b89", null ],
+    [ "USBHostGenericWrite", "usb__host__generic_8h.html#a17abe6d67643d55ff690e1204c04dad2", null ],
+    [ "gc_DevData", "usb__host__generic_8h.html#af0fc9419fe5fae145b3292ad49aaae6d", null ]
+];

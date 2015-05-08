@@ -1,0 +1,10 @@
+digraph "_PT_MBR"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="_PT_MBR",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Partition0\nPartition1\nPartition2\nPartition3" ];
+  Node2 [label="PTE_MBR",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_p_t_e___m_b_r.html"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" PTE_LstPartSect\nPTE_FrstPartSect" ];
+  Node3 [label="SWORD",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_s_w_o_r_d.html"];
+}

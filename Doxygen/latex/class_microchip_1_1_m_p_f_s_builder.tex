@@ -1,0 +1,255 @@
+\hypertarget{class_microchip_1_1_m_p_f_s_builder}{}\section{M\+P\+F\+S\+Builder Class Reference}
+\label{class_microchip_1_1_m_p_f_s_builder}\index{M\+P\+F\+S\+Builder@{M\+P\+F\+S\+Builder}}
+
+
+Inheritance diagram for M\+P\+F\+S\+Builder\+:
+% FIG 0
+
+
+Collaboration diagram for M\+P\+F\+S\+Builder\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_microchip_1_1_m_p_f_s_builder_a73304519d4d0da7e8f5b32a87344f150}{M\+P\+F\+S\+Builder} ()
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{class_microchip_1_1_m_p_f_s_builder}{M\+P\+F\+S\+Builder} \end{DoxyCompactList}\item 
+abstract bool \hyperlink{class_microchip_1_1_m_p_f_s_builder_ad20e3945d7451ee3ca6909ce34780774}{Add\+File} (String local\+Name, String image\+Name)
+\begin{DoxyCompactList}\small\item\em Adds a file to the M\+P\+F\+S image \end{DoxyCompactList}\item 
+abstract bool \hyperlink{class_microchip_1_1_m_p_f_s_builder_a900413fb1fb5bba441654920de06b81d}{Add\+Directory} (String data\+Path, String image\+Path)
+\begin{DoxyCompactList}\small\item\em Recursively adds a directory of files to the image \end{DoxyCompactList}\item 
+abstract bool \hyperlink{class_microchip_1_1_m_p_f_s_builder_a287235d1a30bc3bb959b1c3b38fb154a}{Generate} (\hyperlink{namespace_microchip_aa4ebbf0f9a9e92e601f6a9aac07b5e1e}{M\+P\+F\+S\+Output\+Format} format)
+\begin{DoxyCompactList}\small\item\em Generates the M\+P\+F\+S image and any necessary support files \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{class_microchip_1_1_m_p_f_s_builder_a62437d97e6140d62bcdb357ca9a3d10e}{Mddpath}
+\item 
+String \hyperlink{class_microchip_1_1_m_p_f_s_builder_a50bcab31eeaf73bd5975d595d2bbe8cf}{local\+Path}
+\item 
+String \hyperlink{class_microchip_1_1_m_p_f_s_builder_ab110f2474a6be5f43ee032058d6ddd65}{local\+File}
+\item 
+List$<$ string $>$ \hyperlink{class_microchip_1_1_m_p_f_s_builder_a31a8312feb632071ed26469c2f3b0591}{log}
+\item 
+List$<$ \hyperlink{class_microchip_1_1_m_p_f_s_file_record}{M\+P\+F\+S\+File\+Record} $>$ \hyperlink{class_microchip_1_1_m_p_f_s_builder_a7bf6578967afbe6305c4301b7161822d}{files}
+\item 
+String \hyperlink{class_microchip_1_1_m_p_f_s_builder_af35e78a632fd4f732c2b79b4d70992a5}{generated\+Image\+Name}
+\item 
+bool \hyperlink{class_microchip_1_1_m_p_f_s_builder_a506e41c5901bcb099779d8addeb42fe4}{index\+Updated}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{class_microchip_1_1_m_p_f_s_builder_aa396fc601d5eda5056c98ece9d06b262}{Local\+Path}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies the path for the image file, along with any associated index files \end{DoxyCompactList}\item 
+String \hyperlink{class_microchip_1_1_m_p_f_s_builder_a26bf3056ff1696480b7019462a2b408d}{Local\+File}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies the name of the image file to save to the file system \end{DoxyCompactList}\item 
+String \hyperlink{class_microchip_1_1_m_p_f_s_builder_aa5d595675bc1157c4418af50c2683023}{Generated\+Image\+File\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Retrieves the file name of the most recently generated image \end{DoxyCompactList}\item 
+List$<$ string $>$ \hyperlink{class_microchip_1_1_m_p_f_s_builder_a06712a1c8dec792865a961869c7acf59}{Log}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Retrieves the log from the last procedure \end{DoxyCompactList}\item 
+bool \hyperlink{class_microchip_1_1_m_p_f_s_builder_a944fdb01a06b9ef65786b8de57dcd97a}{Index\+Updated}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates whether or not the index file was updated \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 76 of file M\+P\+F\+Slib.\+cs.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_microchip_1_1_m_p_f_s_builder_a73304519d4d0da7e8f5b32a87344f150}{}\index{Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}!M\+P\+F\+S\+Builder@{M\+P\+F\+S\+Builder}}
+\index{M\+P\+F\+S\+Builder@{M\+P\+F\+S\+Builder}!Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}}
+\subsubsection[{M\+P\+F\+S\+Builder}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+P\+F\+S\+Builder} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_microchip_1_1_m_p_f_s_builder_a73304519d4d0da7e8f5b32a87344f150}
+
+
+Creates a new \hyperlink{class_microchip_1_1_m_p_f_s_builder}{M\+P\+F\+S\+Builder} 
+
+
+
+Definition at line 136 of file M\+P\+F\+Slib.\+cs.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_microchip_1_1_m_p_f_s_builder_a900413fb1fb5bba441654920de06b81d}{}\index{Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}!Add\+Directory@{Add\+Directory}}
+\index{Add\+Directory@{Add\+Directory}!Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}}
+\subsubsection[{Add\+Directory}]{\setlength{\rightskip}{0pt plus 5cm}abstract bool Add\+Directory (
+\begin{DoxyParamCaption}
+\item[{String}]{data\+Path, }
+\item[{String}]{image\+Path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_microchip_1_1_m_p_f_s_builder_a900413fb1fb5bba441654920de06b81d}
+
+
+Recursively adds a directory of files to the image 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+Path} & Local directory name to add\\
+\hline
+{\em image\+Path} & Path in M\+P\+F\+S image to add files to\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_microchip_1_1_m_p_f_s2_builder_afed308f440de4af9b943d9e0bb4e4ced}{M\+P\+F\+S2\+Builder}, and \hyperlink{class_microchip_1_1_m_p_f_s_classic_builder_afed308f440de4af9b943d9e0bb4e4ced}{M\+P\+F\+S\+Classic\+Builder}.
+
+\hypertarget{class_microchip_1_1_m_p_f_s_builder_ad20e3945d7451ee3ca6909ce34780774}{}\index{Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}!Add\+File@{Add\+File}}
+\index{Add\+File@{Add\+File}!Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}}
+\subsubsection[{Add\+File}]{\setlength{\rightskip}{0pt plus 5cm}abstract bool Add\+File (
+\begin{DoxyParamCaption}
+\item[{String}]{local\+Name, }
+\item[{String}]{image\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_microchip_1_1_m_p_f_s_builder_ad20e3945d7451ee3ca6909ce34780774}
+
+
+Adds a file to the M\+P\+F\+S image 
+
+
+\begin{DoxyParams}{Parameters}
+{\em local\+Name} & Local file name to read\\
+\hline
+{\em image\+Name} & Name to use in image file\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_microchip_1_1_m_p_f_s2_builder_aabf44779c0c6c813d9d25aa890fae0cf}{M\+P\+F\+S2\+Builder}, and \hyperlink{class_microchip_1_1_m_p_f_s_classic_builder_aabf44779c0c6c813d9d25aa890fae0cf}{M\+P\+F\+S\+Classic\+Builder}.
+
+\hypertarget{class_microchip_1_1_m_p_f_s_builder_a287235d1a30bc3bb959b1c3b38fb154a}{}\index{Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}!Generate@{Generate}}
+\index{Generate@{Generate}!Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}}
+\subsubsection[{Generate}]{\setlength{\rightskip}{0pt plus 5cm}abstract bool Generate (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+P\+F\+S\+Output\+Format}}]{format}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_microchip_1_1_m_p_f_s_builder_a287235d1a30bc3bb959b1c3b38fb154a}
+
+
+Generates the M\+P\+F\+S image and any necessary support files 
+
+
+
+Implemented in \hyperlink{class_microchip_1_1_m_p_f_s2_builder_a6b6e569a945c1c9c3e59c93a353f006b}{M\+P\+F\+S2\+Builder}, and \hyperlink{class_microchip_1_1_m_p_f_s_classic_builder_a6b6e569a945c1c9c3e59c93a353f006b}{M\+P\+F\+S\+Classic\+Builder}.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{class_microchip_1_1_m_p_f_s_builder_a7bf6578967afbe6305c4301b7161822d}{}\index{Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}!files@{files}}
+\index{files@{files}!Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}}
+\subsubsection[{files}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf M\+P\+F\+S\+File\+Record}$>$ files\hspace{0.3cm}{\ttfamily [protected]}}\label{class_microchip_1_1_m_p_f_s_builder_a7bf6578967afbe6305c4301b7161822d}
+
+
+Definition at line 83 of file M\+P\+F\+Slib.\+cs.
+
+\hypertarget{class_microchip_1_1_m_p_f_s_builder_af35e78a632fd4f732c2b79b4d70992a5}{}\index{Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}!generated\+Image\+Name@{generated\+Image\+Name}}
+\index{generated\+Image\+Name@{generated\+Image\+Name}!Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}}
+\subsubsection[{generated\+Image\+Name}]{\setlength{\rightskip}{0pt plus 5cm}String generated\+Image\+Name\hspace{0.3cm}{\ttfamily [protected]}}\label{class_microchip_1_1_m_p_f_s_builder_af35e78a632fd4f732c2b79b4d70992a5}
+
+
+Definition at line 84 of file M\+P\+F\+Slib.\+cs.
+
+\hypertarget{class_microchip_1_1_m_p_f_s_builder_a506e41c5901bcb099779d8addeb42fe4}{}\index{Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}!index\+Updated@{index\+Updated}}
+\index{index\+Updated@{index\+Updated}!Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}}
+\subsubsection[{index\+Updated}]{\setlength{\rightskip}{0pt plus 5cm}bool index\+Updated\hspace{0.3cm}{\ttfamily [protected]}}\label{class_microchip_1_1_m_p_f_s_builder_a506e41c5901bcb099779d8addeb42fe4}
+
+
+Definition at line 85 of file M\+P\+F\+Slib.\+cs.
+
+\hypertarget{class_microchip_1_1_m_p_f_s_builder_ab110f2474a6be5f43ee032058d6ddd65}{}\index{Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}!local\+File@{local\+File}}
+\index{local\+File@{local\+File}!Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}}
+\subsubsection[{local\+File}]{\setlength{\rightskip}{0pt plus 5cm}String local\+File\hspace{0.3cm}{\ttfamily [protected]}}\label{class_microchip_1_1_m_p_f_s_builder_ab110f2474a6be5f43ee032058d6ddd65}
+
+
+Definition at line 81 of file M\+P\+F\+Slib.\+cs.
+
+\hypertarget{class_microchip_1_1_m_p_f_s_builder_a50bcab31eeaf73bd5975d595d2bbe8cf}{}\index{Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}!local\+Path@{local\+Path}}
+\index{local\+Path@{local\+Path}!Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}}
+\subsubsection[{local\+Path}]{\setlength{\rightskip}{0pt plus 5cm}String local\+Path\hspace{0.3cm}{\ttfamily [protected]}}\label{class_microchip_1_1_m_p_f_s_builder_a50bcab31eeaf73bd5975d595d2bbe8cf}
+
+
+Definition at line 80 of file M\+P\+F\+Slib.\+cs.
+
+\hypertarget{class_microchip_1_1_m_p_f_s_builder_a31a8312feb632071ed26469c2f3b0591}{}\index{Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}!log@{log}}
+\index{log@{log}!Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}}
+\subsubsection[{log}]{\setlength{\rightskip}{0pt plus 5cm}List$<$string$>$ log\hspace{0.3cm}{\ttfamily [protected]}}\label{class_microchip_1_1_m_p_f_s_builder_a31a8312feb632071ed26469c2f3b0591}
+
+
+Definition at line 82 of file M\+P\+F\+Slib.\+cs.
+
+\hypertarget{class_microchip_1_1_m_p_f_s_builder_a62437d97e6140d62bcdb357ca9a3d10e}{}\index{Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}!Mddpath@{Mddpath}}
+\index{Mddpath@{Mddpath}!Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}}
+\subsubsection[{Mddpath}]{\setlength{\rightskip}{0pt plus 5cm}String Mddpath\hspace{0.3cm}{\ttfamily [protected]}}\label{class_microchip_1_1_m_p_f_s_builder_a62437d97e6140d62bcdb357ca9a3d10e}
+
+
+Definition at line 79 of file M\+P\+F\+Slib.\+cs.
+
+
+
+\subsection{Property Documentation}
+\hypertarget{class_microchip_1_1_m_p_f_s_builder_aa5d595675bc1157c4418af50c2683023}{}\index{Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}!Generated\+Image\+File\+Name@{Generated\+Image\+File\+Name}}
+\index{Generated\+Image\+File\+Name@{Generated\+Image\+File\+Name}!Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}}
+\subsubsection[{Generated\+Image\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}String Generated\+Image\+File\+Name\hspace{0.3cm}{\ttfamily [get]}}\label{class_microchip_1_1_m_p_f_s_builder_aa5d595675bc1157c4418af50c2683023}
+
+
+Retrieves the file name of the most recently generated image 
+
+
+
+Definition at line 111 of file M\+P\+F\+Slib.\+cs.
+
+\hypertarget{class_microchip_1_1_m_p_f_s_builder_a944fdb01a06b9ef65786b8de57dcd97a}{}\index{Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}!Index\+Updated@{Index\+Updated}}
+\index{Index\+Updated@{Index\+Updated}!Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}}
+\subsubsection[{Index\+Updated}]{\setlength{\rightskip}{0pt plus 5cm}bool Index\+Updated\hspace{0.3cm}{\ttfamily [get]}}\label{class_microchip_1_1_m_p_f_s_builder_a944fdb01a06b9ef65786b8de57dcd97a}
+
+
+Indicates whether or not the index file was updated 
+
+
+
+Definition at line 127 of file M\+P\+F\+Slib.\+cs.
+
+\hypertarget{class_microchip_1_1_m_p_f_s_builder_a26bf3056ff1696480b7019462a2b408d}{}\index{Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}!Local\+File@{Local\+File}}
+\index{Local\+File@{Local\+File}!Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}}
+\subsubsection[{Local\+File}]{\setlength{\rightskip}{0pt plus 5cm}String Local\+File\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}, {\ttfamily [protected]}}\label{class_microchip_1_1_m_p_f_s_builder_a26bf3056ff1696480b7019462a2b408d}
+
+
+Specifies the name of the image file to save to the file system 
+
+
+
+Definition at line 102 of file M\+P\+F\+Slib.\+cs.
+
+\hypertarget{class_microchip_1_1_m_p_f_s_builder_aa396fc601d5eda5056c98ece9d06b262}{}\index{Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}!Local\+Path@{Local\+Path}}
+\index{Local\+Path@{Local\+Path}!Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}}
+\subsubsection[{Local\+Path}]{\setlength{\rightskip}{0pt plus 5cm}String Local\+Path\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}, {\ttfamily [protected]}}\label{class_microchip_1_1_m_p_f_s_builder_aa396fc601d5eda5056c98ece9d06b262}
+
+
+Specifies the path for the image file, along with any associated index files 
+
+
+
+Definition at line 93 of file M\+P\+F\+Slib.\+cs.
+
+\hypertarget{class_microchip_1_1_m_p_f_s_builder_a06712a1c8dec792865a961869c7acf59}{}\index{Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}!Log@{Log}}
+\index{Log@{Log}!Microchip\+::\+M\+P\+F\+S\+Builder@{Microchip\+::\+M\+P\+F\+S\+Builder}}
+\subsubsection[{Log}]{\setlength{\rightskip}{0pt plus 5cm}List$<$string$>$ Log\hspace{0.3cm}{\ttfamily [get]}}\label{class_microchip_1_1_m_p_f_s_builder_a06712a1c8dec792865a961869c7acf59}
+
+
+Retrieves the log from the last procedure 
+
+
+
+Definition at line 119 of file M\+P\+F\+Slib.\+cs.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+T\+C\+P\+I\+P Stack/\+Utilities/\+Source/\+M\+P\+F\+Slib/\+M\+P\+F\+Slib/\hyperlink{_m_p_f_slib_8cs}{M\+P\+F\+Slib.\+cs}\end{DoxyCompactItemize}

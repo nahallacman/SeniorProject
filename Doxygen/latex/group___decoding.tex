@@ -1,0 +1,76 @@
+\hypertarget{group___decoding}{}\section{Filtering and Decoding}
+\label{group___decoding}\index{Filtering and Decoding@{Filtering and Decoding}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___decoding_ga8955adf440115510aace00d81444e268}{m\+Touch\+\_\+\+Decode} (void)
+\begin{DoxyCompactList}\small\item\em Updates the state of each active-\/mode sensor using the latest acquisition value. \end{DoxyCompactList}\item 
+void \hyperlink{group___decoding_gad860d35191988afa8f9d02bcb946c08b}{m\+Touch\+\_\+\+Update\+Baseline} (void)
+\begin{DoxyCompactList}\small\item\em Updates the baseline for the given sensor with the given value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The m\+Touch Filtering and Decoding module executes the detection algorithms for the framework. Using the latched output from the acquisition module, the service function is called each time a new value is available for each sensor. It will then loop through all of the active sensors and determine if they have changed state.
+
+This is achieved by implementing a baseline average of the sensor\textquotesingle{}s reading. The baseline is only updated while the sensor is in the \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a7d72b112c35bc51408030eb7ecdcacd2a9171b63f68c2e5ed308f9700e824cbbe}{M\+T\+O\+U\+C\+H\+\_\+\+R\+E\+L\+E\+A\+S\+E\+D} state. The difference between the baseline and the current reading is compared against the \#\+T\+H\+R\+E\+S\+H\+O\+L\+D\+\_\+\+P\+R\+E\+S\+S\+\_\+\+S\+E\+N\+S\+O\+R0 (or equivalent) value to determine if a change in state is necessary.
+
+If the system sees that the reading has dipped below the baseline -\/ the opposite direction of a finger press -\/ the baseline will update itself based on the behavior chosen by configuration option \#\+M\+T\+O\+U\+C\+H\+\_\+\+N\+E\+G\+A\+T\+I\+V\+E\+\_\+\+C\+A\+P\+A\+C\+I\+T\+A\+N\+C\+E. 
+
+\subsection{Function Documentation}
+\hypertarget{group___decoding_ga8955adf440115510aace00d81444e268}{}\index{Filtering and Decoding@{Filtering and Decoding}!m\+Touch\+\_\+\+Decode@{m\+Touch\+\_\+\+Decode}}
+\index{m\+Touch\+\_\+\+Decode@{m\+Touch\+\_\+\+Decode}!Filtering and Decoding@{Filtering and Decoding}}
+\subsubsection[{m\+Touch\+\_\+\+Decode}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Touch\+\_\+\+Decode (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{group___decoding_ga8955adf440115510aace00d81444e268}
+
+
+Updates the state of each active-\/mode sensor using the latest acquisition value. 
+
+This is the m\+Touch service routine that performs sensor state transitions based on the value of the latest acquisition value as compared to its previous behavior. \begin{DoxyItemize}
+\item Get the current shift amount by comparing the new reading with the average and store it in the variable \textquotesingle{}delta\textquotesingle{}. If a negative shift is detected, clear the delta variable. Then, if required by the features that have been enabled, store the delta value in the m\+Touch\+\_\+deltas array for later use.\end{DoxyItemize}
+
+\begin{DoxyEnumerate}
+\item Now that all sensors have had their initial decoding step completed, if sliders are implemented in this application, perform decoding on them now.
+\item Finally, if all active sensors are initialized and the system is not about to change modes, send communications data.
+\item Enable active-\/mode m\+Touch scanning now that we\textquotesingle{}re finished.
+\end{DoxyEnumerate}
+
+Definition at line 391 of file m\+Touch.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 0
+
+
+\hypertarget{group___decoding_gad860d35191988afa8f9d02bcb946c08b}{}\index{Filtering and Decoding@{Filtering and Decoding}!m\+Touch\+\_\+\+Update\+Baseline@{m\+Touch\+\_\+\+Update\+Baseline}}
+\index{m\+Touch\+\_\+\+Update\+Baseline@{m\+Touch\+\_\+\+Update\+Baseline}!Filtering and Decoding@{Filtering and Decoding}}
+\subsubsection[{m\+Touch\+\_\+\+Update\+Baseline}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Touch\+\_\+\+Update\+Baseline (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{group___decoding_gad860d35191988afa8f9d02bcb946c08b}
+
+
+Updates the baseline for the given sensor with the given value. 
+
+Updates a sensor\textquotesingle{}s baseline (or baseline) in order to track the environmental changes of the system. \hypertarget{group___decoding_UAvgImp}{}\subsection{Algorithm Implementation Notes}\label{group___decoding_UAvgImp}
+This function has several possible implementations based on the current configuration options of the framework. The important configuration options are\+: \begin{DoxyItemize}
+\item \#\+M\+T\+O\+U\+C\+H\+\_\+\+B\+A\+S\+E\+L\+I\+N\+E\+\_\+\+R\+A\+T\+E -\/ acts as a debounce counter for updating the baseline only every N scans. \item \#\+M\+T\+O\+U\+C\+H\+\_\+\+B\+A\+S\+E\+L\+I\+N\+E\+\_\+\+W\+E\+I\+G\+H\+T -\/ determines what weight to give the reading when updating the baseline.\end{DoxyItemize}
+The average updates the counter variable and compares it with \#\+M\+T\+O\+U\+C\+H\+\_\+\+B\+A\+S\+E\+L\+I\+N\+E\+\_\+\+R\+A\+T\+E to see if it should continue or return. If the counter allows it to continue, the average is then updated using one of four possible implementations which is determined by the \#\+M\+T\+O\+U\+C\+H\+\_\+\+B\+A\+S\+E\+L\+I\+N\+E\+\_\+\+W\+E\+I\+G\+H\+T option.
+
+~\newline
+~\newline
+~\newline
+ 
+
+Definition at line 1021 of file m\+Touch.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+

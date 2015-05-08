@@ -1,0 +1,25 @@
+var m_touch_8c =
+[
+    [ "mTouch_ButtonStateMachine", "m_touch_8c.html#a375aad16aafd424786ba67e79cc454d3", null ],
+    [ "mTouch_ChangeState", "m_touch_8c.html#ad155881d69a8795e0c91a6eede8c0308", null ],
+    [ "mTouch_Decode", "group___decoding.html#ga8955adf440115510aace00d81444e268", null ],
+    [ "mTouch_ErrorDetect", "m_touch_8c.html#a4e75a069b800f4deceefc6974a2b6e90", null ],
+    [ "mTouch_FindMostPressed", "m_touch_8c.html#ac8cfeefacb22ca490c1adbedd6fefcc1", null ],
+    [ "mTouch_Init", "m_touch_8c.html#ab73968cbb19d4ae25a65698c15906b65", null ],
+    [ "mTouch_UpdateBaseline", "group___decoding.html#gad860d35191988afa8f9d02bcb946c08b", null ],
+    [ "mTouch_UpdateMatrixOutput", "m_touch_8c.html#afdcb5b33e2c73a81f71714ad360f1f50", null ],
+    [ "mTouch_average", "m_touch_8c.html#a64be528d090489e1cc2bd740d55501ac", null ],
+    [ "mTouch_deltas", "m_touch_8c.html#a702d784953ba5bda08d044ce70491eab", null ],
+    [ "mTouch_matrix", "m_touch_8c.html#a87da226c0ba1ce6c8a452ead526b366d", null ],
+    [ "mTouch_matrix_latch", "m_touch_8c.html#a7c093cdeafc06345997ee5d8fa518d9f", null ],
+    [ "mTouch_mostPressed", "m_touch_8c.html#ad0f396a12de88542d2461383d4bcc506", null ],
+    [ "mTouch_mostPressedData", "m_touch_8c.html#af2398619b264fd3f03386d89de32da07", null ],
+    [ "mTouch_mostPressedIndex", "m_touch_8c.html#a5d6c0fb3a30070bee2ecccbfb65da43a", null ],
+    [ "mTouch_pressThreshold", "m_touch_8c.html#ab29410255e81d186a19b48c01053fc96", null ],
+    [ "mTouch_releaseThreshold", "m_touch_8c.html#a8684610eda16ac0df01d05ec5d7c362c", null ],
+    [ "mTouch_state", "m_touch_8c.html#ab678fb469a6bdd3d0b75cc4b48adf504", null ],
+    [ "mTouch_StateMachine", "m_touch_8c.html#a0e2a8ea4196b78b7aa765058fd758cd1", null ],
+    [ "mTouch_stateMask", "m_touch_8c.html#ab288c49098e419b3232336a4245b757d", null ],
+    [ "mTouch_stateVars", "m_touch_8c.html#affc22e96882bd0d8b258dd2241fe3fd9", null ],
+    [ "mTouch_toggle", "m_touch_8c.html#a827719a95ea3e7c38efa02c8e1188015", null ]
+];

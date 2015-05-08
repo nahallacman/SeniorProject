@@ -1,0 +1,491 @@
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.h File Reference}
+\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structm_touch___sensor_variables}{m\+Touch\+\_\+\+Sensor\+Variables}
+\begin{DoxyCompactList}\small\item\em Contains all variables used in active mode which can/will be reinitialized after each mode switch. \end{DoxyCompactList}\item 
+union \hyperlink{structm_touch___state_variables}{m\+Touch\+\_\+\+State\+Variables}
+\begin{DoxyCompactList}\small\item\em Contains sensor and state variables. \end{DoxyCompactList}\item 
+union \hyperlink{unionm_touch___acquisition_data}{m\+Touch\+\_\+\+Acquisition\+Data}
+\begin{DoxyCompactList}\small\item\em Structure used to implement both a 12-\/bit and a 20-\/bit variable inside a single 32-\/bit array. \end{DoxyCompactList}\item 
+struct \hyperlink{structm_touch___state}{m\+Touch\+\_\+\+State}
+\begin{DoxyCompactList}\small\item\em Collection of single-\/bit flags used by the m\+Touch Framework. \end{DoxyCompactList}\item 
+struct \hyperlink{structm_touch___most_pressed_data}{m\+Touch\+\_\+\+Most\+Pressed\+Data}
+\item 
+struct \hyperlink{structm_touch___most_pressed_index}{m\+Touch\+\_\+\+Most\+Pressed\+Index}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a7d72b112c35bc51408030eb7ecdcacd2}{m\+Touch\+\_\+enum\+\_\+\+Button\+State} \{ \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a7d72b112c35bc51408030eb7ecdcacd2a8ac4e988fd74c22ff6e99ee854cc848f}{M\+T\+O\+U\+C\+H\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+I\+N\+G}, 
+\hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a7d72b112c35bc51408030eb7ecdcacd2a9171b63f68c2e5ed308f9700e824cbbe}{M\+T\+O\+U\+C\+H\+\_\+\+R\+E\+L\+E\+A\+S\+E\+D}, 
+\hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a7d72b112c35bc51408030eb7ecdcacd2aed5b3f2b7065991010f45eb04759ef01}{M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+E\+S\+S\+E\+D}
+ \}
+\item 
+enum \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a6e6fd9c20c142fe535350e3b41201a01}{m\+Touch\+\_\+enum\+\_\+\+Toggle\+State} \{ \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a6e6fd9c20c142fe535350e3b41201a01a9a7a448938e4a424e4f92ed55fbc9721}{M\+T\+O\+U\+C\+H\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+O\+F\+F}, 
+\hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a6e6fd9c20c142fe535350e3b41201a01af9d375ca9cbc2e6ffbc6eabc3f09d81f}{M\+T\+O\+U\+C\+H\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+O\+N}
+ \}
+\item 
+enum \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a0a884a6b6ea7636d22ef9047accde496}{m\+Touch\+\_\+\+Prox\+\_\+enum\+\_\+\+Sensor\+State} \{ \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a0a884a6b6ea7636d22ef9047accde496a87084b053f6a58075f9de7f8a3185a94}{M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+O\+X\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+I\+N\+G}, 
+\hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a0a884a6b6ea7636d22ef9047accde496af2533cc94b23155c01887252b4a35035}{M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+O\+X\+\_\+\+N\+O\+T\+\_\+\+A\+C\+T\+I\+V\+A\+T\+E\+D}, 
+\hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a0a884a6b6ea7636d22ef9047accde496aaac7b0f096ad876198d41a9d0495757e}{M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+O\+X\+\_\+\+A\+C\+T\+I\+V\+A\+T\+E\+D}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ab73968cbb19d4ae25a65698c15906b65}{m\+Touch\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Main initialization routine for all m\+Touch framework modules including the built-\/in communication module, if enabled. \end{DoxyCompactList}\item 
+void \hyperlink{group___decoding_ga8955adf440115510aace00d81444e268}{m\+Touch\+\_\+\+Decode} (void)
+\begin{DoxyCompactList}\small\item\em Updates the state of each active-\/mode sensor using the latest acquisition value. \end{DoxyCompactList}\item 
+void \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ad4b3c623e779e2b0cbe5a8ace84c1561}{m\+Touch\+\_\+\+Change\+Mode} (uint8\+\_\+t)
+\item 
+void \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a5c62bf914c0353b75955a34212c1faae}{m\+Touch\+\_\+\+Change\+Mode} (void)
+\item 
+void \hyperlink{group___acquisition_gaeeee5d5e14eaff7df78e9ad5d7ac9769}{m\+Touch\+\_\+\+Scan} (void)
+\begin{DoxyCompactList}\small\item\em Implements the framework\textquotesingle{}s active-\/mode acquisition routine. Sometimes implemented as an I\+S\+R, sometimes as a normal function. \end{DoxyCompactList}\item 
+void \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a1bb12f1a1c629bbfccbef2723ef626fc}{m\+Touch\+\_\+\+Slider\+Decode} (void)
+\item 
+void \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a4e75a069b800f4deceefc6974a2b6e90}{m\+Touch\+\_\+\+Error\+Detect} (void)
+\item 
+void \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ab276b7ff0a1a5b2f908a7311096bbb14}{m\+Touch\+\_\+\+H\+C\+V\+D\+\_\+\+Init} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structm_touch___state}{m\+Touch\+\_\+\+State} \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ab678fb469a6bdd3d0b75cc4b48adf504}{m\+Touch\+\_\+state}
+\begin{DoxyCompactList}\small\item\em Tracks the state of the m\+Touch algorithm. \end{DoxyCompactList}\item 
+\hyperlink{structm_touch___state_variables}{m\+Touch\+\_\+\+State\+Variables} \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_affc22e96882bd0d8b258dd2241fe3fd9}{m\+Touch\+\_\+state\+Vars}
+\begin{DoxyCompactList}\small\item\em Stores all state-\/temporary variables to be reinitialized each mode change. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a6e24f307e58e95e12550082469099ae2}{m\+Touch\+\_\+sensor\+Data} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]}
+\begin{DoxyCompactList}\small\item\em Latch register storing the latest m\+Touch acquisition results. \end{DoxyCompactList}\item 
+\hyperlink{unionm_touch___acquisition_data}{m\+Touch\+\_\+\+Acquisition\+Data} \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a699585423cd352f17a4edc5388970d20}{m\+Touch\+\_\+acq\+Data} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]}
+\begin{DoxyCompactList}\small\item\em Internal m\+Touch acquisition variable structure. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a64be528d090489e1cc2bd740d55501ac}{m\+Touch\+\_\+average} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array to track the unpressed value of each sensor. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ab288c49098e419b3232336a4245b757d}{m\+Touch\+\_\+state\+Mask}
+\begin{DoxyCompactList}\small\item\em Stores the state of each sensor in a bit mask for output by m\+Comm when there are 8 or fewer sensors. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a8d74be95f98e1d233f912708ef99d445}{m\+Touch\+\_\+slider} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+L\+I\+D\+E\+R\+S\mbox{]}
+\begin{DoxyCompactList}\small\item\em Stores the current slider output value when scaling is enabled. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a827719a95ea3e7c38efa02c8e1188015}{m\+Touch\+\_\+toggle}
+\begin{DoxyCompactList}\small\item\em Toggle state register when there are 8 or fewer sensors. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a702d784953ba5bda08d044ce70491eab}{m\+Touch\+\_\+deltas} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]}
+\begin{DoxyCompactList}\small\item\em Stores the latest delta value for each sensor. Only needed for functions that must compare sensors\textquotesingle{} relative shift amounts with each other. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a87da226c0ba1ce6c8a452ead526b366d}{m\+Touch\+\_\+matrix}
+\begin{DoxyCompactList}\small\item\em Stores the current matrix output value for access by main application. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a7c093cdeafc06345997ee5d8fa518d9f}{m\+Touch\+\_\+matrix\+\_\+latch}
+\begin{DoxyCompactList}\small\item\em Stores the last matrix value for comparison with the new one. \end{DoxyCompactList}\item 
+near uint8\+\_\+t \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_abbd1ed885b8c910c40d3acc2c2f648bb}{int\+\_\+w}
+\begin{DoxyCompactList}\small\item\em I\+S\+R\+: Saves the state of the W register, if required. \end{DoxyCompactList}\item 
+near uint8\+\_\+t \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a1aaee7386a9431bbddba8c43d3b1d38c}{int\+\_\+status}
+\begin{DoxyCompactList}\small\item\em I\+S\+R\+: Saves the state of the S\+T\+A\+T\+U\+S register, if required. \end{DoxyCompactList}\item 
+near uint8\+\_\+t \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ae1fdd6ad3c5cd2d11c880d6a6cfe4d8d}{int\+\_\+fsr}
+\begin{DoxyCompactList}\small\item\em I\+S\+R\+: Saves the state of the F\+S\+R register, if required. \end{DoxyCompactList}\item 
+near uint8\+\_\+t \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_af669f1f74c65995cead62800ce5249d5}{int\+\_\+pclath}
+\begin{DoxyCompactList}\small\item\em I\+S\+R\+: Saves the state of the P\+C\+L\+A\+T\+H register, if required. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a59f64049782b1d7d997a1f4ddcb34c17}{int\+\_\+bsr}
+\begin{DoxyCompactList}\small\item\em I\+S\+R\+: Saves the state of the B\+S\+R register, if required. \end{DoxyCompactList}\item 
+const uint16\+\_\+t \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ab29410255e81d186a19b48c01053fc96}{m\+Touch\+\_\+press\+Threshold} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]}
+\begin{DoxyCompactList}\small\item\em Constant array containing the press threshold for each sensor. \end{DoxyCompactList}\item 
+const uint16\+\_\+t \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a8684610eda16ac0df01d05ec5d7c362c}{m\+Touch\+\_\+release\+Threshold} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]}
+\begin{DoxyCompactList}\small\item\em Constant array containing the release threshold for each sensor. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a915c29b37d393ca5a3293b0f32517a91}{m\+Touch\+\_\+config\+Options} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+S\+T\+A\+R\+T\+\_\+\+A\+D\+R+M\+T\+O\+U\+C\+H\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+S\+I\+Z\+E\mbox{]}
+\item 
+uint8\+\_\+t \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ac9181f1601e76c0ab3a4458c424ff707}{m\+Touch\+\_\+mode\+Index}
+\item 
+const uint8\+\_\+t $\ast$const \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ac6e10bb8cfb806594e8224193d95ec40}{m\+Touch\+\_\+mode} \mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+\_\+\+M\+O\+D\+E\+S\mbox{]}
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf m\+Touch Acquisition I\+S\+R Variables}\par
+{\em These variables are used by the I\+S\+R of the m\+Touch Framework and should not be directly accessed by the main loop application. }\begin{DoxyCompactItemize}
+\item 
+const uint8\+\_\+t $\ast$ \hyperlink{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ad74b3f8b877c7b7d513b9212d54dcb82}{m\+Touch\+\_\+current\+Scan}
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a7d72b112c35bc51408030eb7ecdcacd2}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!m\+Touch\+\_\+enum\+\_\+\+Button\+State@{m\+Touch\+\_\+enum\+\_\+\+Button\+State}}
+\index{m\+Touch\+\_\+enum\+\_\+\+Button\+State@{m\+Touch\+\_\+enum\+\_\+\+Button\+State}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{m\+Touch\+\_\+enum\+\_\+\+Button\+State}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf m\+Touch\+\_\+enum\+\_\+\+Button\+State}}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a7d72b112c35bc51408030eb7ecdcacd2}
+Enumeration of the valid m\+Touch active-\/mode sensor states \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\+T\+O\+U\+C\+H\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+I\+N\+G@{M\+T\+O\+U\+C\+H\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+I\+N\+G}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!M\+T\+O\+U\+C\+H\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+I\+N\+G@{M\+T\+O\+U\+C\+H\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+I\+N\+G}}\item[{\em 
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a7d72b112c35bc51408030eb7ecdcacd2a8ac4e988fd74c22ff6e99ee854cc848f}{}M\+T\+O\+U\+C\+H\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+I\+N\+G\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a7d72b112c35bc51408030eb7ecdcacd2a8ac4e988fd74c22ff6e99ee854cc848f}
+}]Sensor is still initializing. \index{M\+T\+O\+U\+C\+H\+\_\+\+R\+E\+L\+E\+A\+S\+E\+D@{M\+T\+O\+U\+C\+H\+\_\+\+R\+E\+L\+E\+A\+S\+E\+D}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!M\+T\+O\+U\+C\+H\+\_\+\+R\+E\+L\+E\+A\+S\+E\+D@{M\+T\+O\+U\+C\+H\+\_\+\+R\+E\+L\+E\+A\+S\+E\+D}}\item[{\em 
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a7d72b112c35bc51408030eb7ecdcacd2a9171b63f68c2e5ed308f9700e824cbbe}{}M\+T\+O\+U\+C\+H\+\_\+\+R\+E\+L\+E\+A\+S\+E\+D\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a7d72b112c35bc51408030eb7ecdcacd2a9171b63f68c2e5ed308f9700e824cbbe}
+}]Sensor is currently released. \index{M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+E\+S\+S\+E\+D@{M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+E\+S\+S\+E\+D}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+E\+S\+S\+E\+D@{M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+E\+S\+S\+E\+D}}\item[{\em 
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a7d72b112c35bc51408030eb7ecdcacd2aed5b3f2b7065991010f45eb04759ef01}{}M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+E\+S\+S\+E\+D\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a7d72b112c35bc51408030eb7ecdcacd2aed5b3f2b7065991010f45eb04759ef01}
+}]Sensor is currently pressed. \end{description}
+\end{Desc}
+
+
+Definition at line 378 of file m\+Touch.\+h.
+
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a6e6fd9c20c142fe535350e3b41201a01}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!m\+Touch\+\_\+enum\+\_\+\+Toggle\+State@{m\+Touch\+\_\+enum\+\_\+\+Toggle\+State}}
+\index{m\+Touch\+\_\+enum\+\_\+\+Toggle\+State@{m\+Touch\+\_\+enum\+\_\+\+Toggle\+State}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{m\+Touch\+\_\+enum\+\_\+\+Toggle\+State}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf m\+Touch\+\_\+enum\+\_\+\+Toggle\+State}}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a6e6fd9c20c142fe535350e3b41201a01}
+Enumeration of the valid m\+Touch toggle states \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\+T\+O\+U\+C\+H\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+O\+F\+F@{M\+T\+O\+U\+C\+H\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+O\+F\+F}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!M\+T\+O\+U\+C\+H\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+O\+F\+F@{M\+T\+O\+U\+C\+H\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+O\+F\+F}}\item[{\em 
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a6e6fd9c20c142fe535350e3b41201a01a9a7a448938e4a424e4f92ed55fbc9721}{}M\+T\+O\+U\+C\+H\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+O\+F\+F\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a6e6fd9c20c142fe535350e3b41201a01a9a7a448938e4a424e4f92ed55fbc9721}
+}]Sensor toggle output is now \textquotesingle{}off\textquotesingle{}. \index{M\+T\+O\+U\+C\+H\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+O\+N@{M\+T\+O\+U\+C\+H\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+O\+N}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!M\+T\+O\+U\+C\+H\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+O\+N@{M\+T\+O\+U\+C\+H\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+O\+N}}\item[{\em 
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a6e6fd9c20c142fe535350e3b41201a01af9d375ca9cbc2e6ffbc6eabc3f09d81f}{}M\+T\+O\+U\+C\+H\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+O\+N\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a6e6fd9c20c142fe535350e3b41201a01af9d375ca9cbc2e6ffbc6eabc3f09d81f}
+}]Sensor toggle output is now \textquotesingle{}on\textquotesingle{}. \end{description}
+\end{Desc}
+
+
+Definition at line 387 of file m\+Touch.\+h.
+
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a0a884a6b6ea7636d22ef9047accde496}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!m\+Touch\+\_\+\+Prox\+\_\+enum\+\_\+\+Sensor\+State@{m\+Touch\+\_\+\+Prox\+\_\+enum\+\_\+\+Sensor\+State}}
+\index{m\+Touch\+\_\+\+Prox\+\_\+enum\+\_\+\+Sensor\+State@{m\+Touch\+\_\+\+Prox\+\_\+enum\+\_\+\+Sensor\+State}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{m\+Touch\+\_\+\+Prox\+\_\+enum\+\_\+\+Sensor\+State}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf m\+Touch\+\_\+\+Prox\+\_\+enum\+\_\+\+Sensor\+State}}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a0a884a6b6ea7636d22ef9047accde496}
+Enumeration of the valid m\+Touch proximity sensor states \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+O\+X\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+I\+N\+G@{M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+O\+X\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+I\+N\+G}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+O\+X\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+I\+N\+G@{M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+O\+X\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+I\+N\+G}}\item[{\em 
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a0a884a6b6ea7636d22ef9047accde496a87084b053f6a58075f9de7f8a3185a94}{}M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+O\+X\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+I\+N\+G\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a0a884a6b6ea7636d22ef9047accde496a87084b053f6a58075f9de7f8a3185a94}
+}]Proximity sensor is still initializing. \index{M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+O\+X\+\_\+\+N\+O\+T\+\_\+\+A\+C\+T\+I\+V\+A\+T\+E\+D@{M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+O\+X\+\_\+\+N\+O\+T\+\_\+\+A\+C\+T\+I\+V\+A\+T\+E\+D}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+O\+X\+\_\+\+N\+O\+T\+\_\+\+A\+C\+T\+I\+V\+A\+T\+E\+D@{M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+O\+X\+\_\+\+N\+O\+T\+\_\+\+A\+C\+T\+I\+V\+A\+T\+E\+D}}\item[{\em 
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a0a884a6b6ea7636d22ef9047accde496af2533cc94b23155c01887252b4a35035}{}M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+O\+X\+\_\+\+N\+O\+T\+\_\+\+A\+C\+T\+I\+V\+A\+T\+E\+D\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a0a884a6b6ea7636d22ef9047accde496af2533cc94b23155c01887252b4a35035}
+}]Proximity sensor reading is stable. \index{M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+O\+X\+\_\+\+A\+C\+T\+I\+V\+A\+T\+E\+D@{M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+O\+X\+\_\+\+A\+C\+T\+I\+V\+A\+T\+E\+D}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+O\+X\+\_\+\+A\+C\+T\+I\+V\+A\+T\+E\+D@{M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+O\+X\+\_\+\+A\+C\+T\+I\+V\+A\+T\+E\+D}}\item[{\em 
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a0a884a6b6ea7636d22ef9047accde496aaac7b0f096ad876198d41a9d0495757e}{}M\+T\+O\+U\+C\+H\+\_\+\+P\+R\+O\+X\+\_\+\+A\+C\+T\+I\+V\+A\+T\+E\+D\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a0a884a6b6ea7636d22ef9047accde496aaac7b0f096ad876198d41a9d0495757e}
+}]Proximity sensor reading is changing. \end{description}
+\end{Desc}
+
+
+Definition at line 396 of file m\+Touch.\+h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ad4b3c623e779e2b0cbe5a8ace84c1561}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!m\+Touch\+\_\+\+Change\+Mode@{m\+Touch\+\_\+\+Change\+Mode}}
+\index{m\+Touch\+\_\+\+Change\+Mode@{m\+Touch\+\_\+\+Change\+Mode}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{m\+Touch\+\_\+\+Change\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Touch\+\_\+\+Change\+Mode (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{}
+\end{DoxyParamCaption}
+)}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ad4b3c623e779e2b0cbe5a8ace84c1561}
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a5c62bf914c0353b75955a34212c1faae}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!m\+Touch\+\_\+\+Change\+Mode@{m\+Touch\+\_\+\+Change\+Mode}}
+\index{m\+Touch\+\_\+\+Change\+Mode@{m\+Touch\+\_\+\+Change\+Mode}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{m\+Touch\+\_\+\+Change\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Touch\+\_\+\+Change\+Mode (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a5c62bf914c0353b75955a34212c1faae}
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a4e75a069b800f4deceefc6974a2b6e90}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!m\+Touch\+\_\+\+Error\+Detect@{m\+Touch\+\_\+\+Error\+Detect}}
+\index{m\+Touch\+\_\+\+Error\+Detect@{m\+Touch\+\_\+\+Error\+Detect}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{m\+Touch\+\_\+\+Error\+Detect}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Touch\+\_\+\+Error\+Detect (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a4e75a069b800f4deceefc6974a2b6e90}
+
+
+Definition at line 1106 of file m\+Touch.\+c.
+
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ab276b7ff0a1a5b2f908a7311096bbb14}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!m\+Touch\+\_\+\+H\+C\+V\+D\+\_\+\+Init@{m\+Touch\+\_\+\+H\+C\+V\+D\+\_\+\+Init}}
+\index{m\+Touch\+\_\+\+H\+C\+V\+D\+\_\+\+Init@{m\+Touch\+\_\+\+H\+C\+V\+D\+\_\+\+Init}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{m\+Touch\+\_\+\+H\+C\+V\+D\+\_\+\+Init}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Touch\+\_\+\+H\+C\+V\+D\+\_\+\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ab276b7ff0a1a5b2f908a7311096bbb14}
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ab73968cbb19d4ae25a65698c15906b65}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!m\+Touch\+\_\+\+Init@{m\+Touch\+\_\+\+Init}}
+\index{m\+Touch\+\_\+\+Init@{m\+Touch\+\_\+\+Init}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{m\+Touch\+\_\+\+Init}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Touch\+\_\+\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ab73968cbb19d4ae25a65698c15906b65}
+
+
+Main initialization routine for all m\+Touch framework modules including the built-\/in communication module, if enabled. 
+
+\hypertarget{mTouch.c_InitImp}{}\subsection{Framework Initialization Notes}\label{mTouch.c_InitImp}
+
+\begin{DoxyEnumerate}
+\item Loop through all enabled, active sensors and initialize their variables.
+\item Loop through all enabled sliders and initialize the slider\textquotesingle{}s output value.
+\item Initialize mode variables and flags
+\item Initialize non-\/array system variables
+\item Initialize the D\+A\+C\+O\+U\+T pin when it is used as a guard ring.
+\item Initialize the A\+D\+C module for m\+Touch operation.
+\item Initialization complete -\/ enable active-\/mode m\+Touch scanning.
+\end{DoxyEnumerate}
+
+~\newline
+~\newline
+ 
+
+Definition at line 258 of file m\+Touch.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a1bb12f1a1c629bbfccbef2723ef626fc}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!m\+Touch\+\_\+\+Slider\+Decode@{m\+Touch\+\_\+\+Slider\+Decode}}
+\index{m\+Touch\+\_\+\+Slider\+Decode@{m\+Touch\+\_\+\+Slider\+Decode}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{m\+Touch\+\_\+\+Slider\+Decode}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Touch\+\_\+\+Slider\+Decode (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a1bb12f1a1c629bbfccbef2723ef626fc}
+
+
+Definition at line 104 of file m\+Touch\+\_\+slider.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a59f64049782b1d7d997a1f4ddcb34c17}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!int\+\_\+bsr@{int\+\_\+bsr}}
+\index{int\+\_\+bsr@{int\+\_\+bsr}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{int\+\_\+bsr}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t int\+\_\+bsr}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a59f64049782b1d7d997a1f4ddcb34c17}
+
+
+I\+S\+R\+: Saves the state of the B\+S\+R register, if required. 
+
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ae1fdd6ad3c5cd2d11c880d6a6cfe4d8d}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!int\+\_\+fsr@{int\+\_\+fsr}}
+\index{int\+\_\+fsr@{int\+\_\+fsr}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{int\+\_\+fsr}]{\setlength{\rightskip}{0pt plus 5cm}near uint8\+\_\+t int\+\_\+fsr}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ae1fdd6ad3c5cd2d11c880d6a6cfe4d8d}
+
+
+I\+S\+R\+: Saves the state of the F\+S\+R register, if required. 
+
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_af669f1f74c65995cead62800ce5249d5}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!int\+\_\+pclath@{int\+\_\+pclath}}
+\index{int\+\_\+pclath@{int\+\_\+pclath}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{int\+\_\+pclath}]{\setlength{\rightskip}{0pt plus 5cm}near uint8\+\_\+t int\+\_\+pclath}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_af669f1f74c65995cead62800ce5249d5}
+
+
+I\+S\+R\+: Saves the state of the P\+C\+L\+A\+T\+H register, if required. 
+
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a1aaee7386a9431bbddba8c43d3b1d38c}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!int\+\_\+status@{int\+\_\+status}}
+\index{int\+\_\+status@{int\+\_\+status}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{int\+\_\+status}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t int\+\_\+status}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a1aaee7386a9431bbddba8c43d3b1d38c}
+
+
+I\+S\+R\+: Saves the state of the S\+T\+A\+T\+U\+S register, if required. 
+
+
+
+Definition at line 338 of file m\+Touch.\+h.
+
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_abbd1ed885b8c910c40d3acc2c2f648bb}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!int\+\_\+w@{int\+\_\+w}}
+\index{int\+\_\+w@{int\+\_\+w}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{int\+\_\+w}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t int\+\_\+w}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_abbd1ed885b8c910c40d3acc2c2f648bb}
+
+
+I\+S\+R\+: Saves the state of the W register, if required. 
+
+
+
+Definition at line 337 of file m\+Touch.\+h.
+
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a699585423cd352f17a4edc5388970d20}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!m\+Touch\+\_\+acq\+Data@{m\+Touch\+\_\+acq\+Data}}
+\index{m\+Touch\+\_\+acq\+Data@{m\+Touch\+\_\+acq\+Data}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{m\+Touch\+\_\+acq\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf m\+Touch\+\_\+\+Acquisition\+Data} m\+Touch\+\_\+acq\+Data\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]}}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a699585423cd352f17a4edc5388970d20}
+
+
+Internal m\+Touch acquisition variable structure. 
+
+
+
+Definition at line 88 of file m\+Touch\+\_\+acquisition.\+c.
+
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a64be528d090489e1cc2bd740d55501ac}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!m\+Touch\+\_\+average@{m\+Touch\+\_\+average}}
+\index{m\+Touch\+\_\+average@{m\+Touch\+\_\+average}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{m\+Touch\+\_\+average}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t m\+Touch\+\_\+average\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]}}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a64be528d090489e1cc2bd740d55501ac}
+
+
+Array to track the unpressed value of each sensor. 
+
+
+
+Definition at line 86 of file m\+Touch.\+c.
+
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a915c29b37d393ca5a3293b0f32517a91}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!m\+Touch\+\_\+config\+Options@{m\+Touch\+\_\+config\+Options}}
+\index{m\+Touch\+\_\+config\+Options@{m\+Touch\+\_\+config\+Options}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{m\+Touch\+\_\+config\+Options}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t m\+Touch\+\_\+config\+Options\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+S\+T\+A\+R\+T\+\_\+\+A\+D\+R+M\+T\+O\+U\+C\+H\+\_\+\+E\+E\+P\+R\+O\+M\+\_\+\+S\+I\+Z\+E\mbox{]}}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a915c29b37d393ca5a3293b0f32517a91}
+
+
+Definition at line 95 of file m\+Touch\+\_\+eeprom.\+c.
+
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ad74b3f8b877c7b7d513b9212d54dcb82}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!m\+Touch\+\_\+current\+Scan@{m\+Touch\+\_\+current\+Scan}}
+\index{m\+Touch\+\_\+current\+Scan@{m\+Touch\+\_\+current\+Scan}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{m\+Touch\+\_\+current\+Scan}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t m\+Touch\+\_\+current\+Scan}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ad74b3f8b877c7b7d513b9212d54dcb82}
+
+
+Definition at line 358 of file m\+Touch.\+h.
+
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a702d784953ba5bda08d044ce70491eab}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!m\+Touch\+\_\+deltas@{m\+Touch\+\_\+deltas}}
+\index{m\+Touch\+\_\+deltas@{m\+Touch\+\_\+deltas}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{m\+Touch\+\_\+deltas}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t m\+Touch\+\_\+deltas\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]}}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a702d784953ba5bda08d044ce70491eab}
+
+
+Stores the latest delta value for each sensor. Only needed for functions that must compare sensors\textquotesingle{} relative shift amounts with each other. 
+
+
+
+Definition at line 101 of file m\+Touch.\+c.
+
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a87da226c0ba1ce6c8a452ead526b366d}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!m\+Touch\+\_\+matrix@{m\+Touch\+\_\+matrix}}
+\index{m\+Touch\+\_\+matrix@{m\+Touch\+\_\+matrix}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{m\+Touch\+\_\+matrix}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t m\+Touch\+\_\+matrix}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a87da226c0ba1ce6c8a452ead526b366d}
+
+
+Stores the current matrix output value for access by main application. 
+
+
+
+Definition at line 124 of file m\+Touch.\+c.
+
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a7c093cdeafc06345997ee5d8fa518d9f}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!m\+Touch\+\_\+matrix\+\_\+latch@{m\+Touch\+\_\+matrix\+\_\+latch}}
+\index{m\+Touch\+\_\+matrix\+\_\+latch@{m\+Touch\+\_\+matrix\+\_\+latch}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{m\+Touch\+\_\+matrix\+\_\+latch}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t m\+Touch\+\_\+matrix\+\_\+latch}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a7c093cdeafc06345997ee5d8fa518d9f}
+
+
+Stores the last matrix value for comparison with the new one. 
+
+
+
+Definition at line 125 of file m\+Touch.\+c.
+
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ac6e10bb8cfb806594e8224193d95ec40}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!m\+Touch\+\_\+mode@{m\+Touch\+\_\+mode}}
+\index{m\+Touch\+\_\+mode@{m\+Touch\+\_\+mode}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{m\+Touch\+\_\+mode}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\+\_\+t$\ast$ const m\+Touch\+\_\+mode\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+\_\+\+M\+O\+D\+E\+S\mbox{]}}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ac6e10bb8cfb806594e8224193d95ec40}
+
+
+Definition at line 160 of file m\+Touch\+\_\+acquisition.\+c.
+
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ac9181f1601e76c0ab3a4458c424ff707}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!m\+Touch\+\_\+mode\+Index@{m\+Touch\+\_\+mode\+Index}}
+\index{m\+Touch\+\_\+mode\+Index@{m\+Touch\+\_\+mode\+Index}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{m\+Touch\+\_\+mode\+Index}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t m\+Touch\+\_\+mode\+Index}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ac9181f1601e76c0ab3a4458c424ff707}
+
+
+Definition at line 96 of file m\+Touch\+\_\+acquisition.\+c.
+
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ab29410255e81d186a19b48c01053fc96}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!m\+Touch\+\_\+press\+Threshold@{m\+Touch\+\_\+press\+Threshold}}
+\index{m\+Touch\+\_\+press\+Threshold@{m\+Touch\+\_\+press\+Threshold}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{m\+Touch\+\_\+press\+Threshold}]{\setlength{\rightskip}{0pt plus 5cm}const uint16\+\_\+t m\+Touch\+\_\+press\+Threshold\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]}}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ab29410255e81d186a19b48c01053fc96}
+
+
+Constant array containing the press threshold for each sensor. 
+
+
+
+Definition at line 184 of file m\+Touch.\+c.
+
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a8684610eda16ac0df01d05ec5d7c362c}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!m\+Touch\+\_\+release\+Threshold@{m\+Touch\+\_\+release\+Threshold}}
+\index{m\+Touch\+\_\+release\+Threshold@{m\+Touch\+\_\+release\+Threshold}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{m\+Touch\+\_\+release\+Threshold}]{\setlength{\rightskip}{0pt plus 5cm}const uint16\+\_\+t m\+Touch\+\_\+release\+Threshold\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]}}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a8684610eda16ac0df01d05ec5d7c362c}
+
+
+Constant array containing the release threshold for each sensor. 
+
+
+
+Definition at line 185 of file m\+Touch.\+c.
+
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a6e24f307e58e95e12550082469099ae2}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!m\+Touch\+\_\+sensor\+Data@{m\+Touch\+\_\+sensor\+Data}}
+\index{m\+Touch\+\_\+sensor\+Data@{m\+Touch\+\_\+sensor\+Data}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{m\+Touch\+\_\+sensor\+Data}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t m\+Touch\+\_\+sensor\+Data\mbox{[}M\+T\+O\+U\+C\+H\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\mbox{]}}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a6e24f307e58e95e12550082469099ae2}
+
+
+Latch register storing the latest m\+Touch acquisition results. 
+
+
+
+Definition at line 90 of file m\+Touch\+\_\+acquisition.\+c.
+
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a8d74be95f98e1d233f912708ef99d445}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!m\+Touch\+\_\+slider@{m\+Touch\+\_\+slider}}
+\index{m\+Touch\+\_\+slider@{m\+Touch\+\_\+slider}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{m\+Touch\+\_\+slider}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t m\+Touch\+\_\+slider}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a8d74be95f98e1d233f912708ef99d445}
+
+
+Stores the current slider output value when scaling is enabled. 
+
+Stores the current slider output value when scaling is disabled. 
+
+Definition at line 305 of file m\+Touch.\+h.
+
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ab678fb469a6bdd3d0b75cc4b48adf504}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!m\+Touch\+\_\+state@{m\+Touch\+\_\+state}}
+\index{m\+Touch\+\_\+state@{m\+Touch\+\_\+state}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{m\+Touch\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}{\bf m\+Touch\+\_\+\+State} m\+Touch\+\_\+state}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ab678fb469a6bdd3d0b75cc4b48adf504}
+
+
+Tracks the state of the m\+Touch algorithm. 
+
+
+
+Definition at line 84 of file m\+Touch.\+c.
+
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ab288c49098e419b3232336a4245b757d}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!m\+Touch\+\_\+state\+Mask@{m\+Touch\+\_\+state\+Mask}}
+\index{m\+Touch\+\_\+state\+Mask@{m\+Touch\+\_\+state\+Mask}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{m\+Touch\+\_\+state\+Mask}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t m\+Touch\+\_\+state\+Mask}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_ab288c49098e419b3232336a4245b757d}
+
+
+Stores the state of each sensor in a bit mask for output by m\+Comm when there are 8 or fewer sensors. 
+
+Stores the state of each sensor in a bit mask for output by m\+Comm when there are 32 or fewer sensors.
+
+Stores the state of each sensor in a bit mask for output by m\+Comm when there are 24 or fewer sensors.
+
+Stores the state of each sensor in a bit mask for output by m\+Comm when there are 16 or fewer sensors.
+
+Stores the state of each sensor in a bit mask for output by m\+Comm when there are 8 or fewer sensors.
+
+Stores the state of each sensor in a bit mask for output by m\+Comm when there are 32 or fewer sensors.
+
+Stores the state of each sensor in a bit mask for output by m\+Comm when there are 24 or fewer sensors. 
+
+Definition at line 293 of file m\+Touch.\+h.
+
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_affc22e96882bd0d8b258dd2241fe3fd9}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!m\+Touch\+\_\+state\+Vars@{m\+Touch\+\_\+state\+Vars}}
+\index{m\+Touch\+\_\+state\+Vars@{m\+Touch\+\_\+state\+Vars}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{m\+Touch\+\_\+state\+Vars}]{\setlength{\rightskip}{0pt plus 5cm}{\bf m\+Touch\+\_\+\+State\+Variables} m\+Touch\+\_\+state\+Vars}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_affc22e96882bd0d8b258dd2241fe3fd9}
+
+
+Stores all state-\/temporary variables to be reinitialized each mode change. 
+
+
+
+Definition at line 85 of file m\+Touch.\+c.
+
+\hypertarget{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a827719a95ea3e7c38efa02c8e1188015}{}\index{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}!m\+Touch\+\_\+toggle@{m\+Touch\+\_\+toggle}}
+\index{m\+Touch\+\_\+toggle@{m\+Touch\+\_\+toggle}!m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h@{m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Touch.\+h}}
+\subsubsection[{m\+Touch\+\_\+toggle}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t m\+Touch\+\_\+toggle}\label{m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h_a827719a95ea3e7c38efa02c8e1188015}
+
+
+Toggle state register when there are 8 or fewer sensors. 
+
+Toggle state register when there are 25 or more sensors.
+
+Toggle state register when there are 24 or fewer sensors.
+
+Toggle state register when there are 16 or fewer sensors.
+
+Toggle state register when there are 8 or fewer sensors.
+
+Toggle state register when there are 25 or more sensors.
+
+Toggle state register when there are 24 or fewer sensors. 
+
+Definition at line 313 of file m\+Touch.\+h.
+

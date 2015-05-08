@@ -1,0 +1,139 @@
+\hypertarget{usb__host__midi_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+U\+S\+B/\+M\+I\+D\+I Host Driver/usb\+\_\+host\+\_\+midi.c File Reference}
+\label{usb__host__midi_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+U\+S\+B/\+M\+I\+D\+I Host Driver/usb\+\_\+host\+\_\+midi.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+U\+S\+B/\+M\+I\+D\+I Host Driver/usb\+\_\+host\+\_\+midi.\+c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Generic\+Type\+Defs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}U\+S\+B/usb.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}U\+S\+B/usb\+\_\+host\+\_\+midi.\+h\char`\"{}}\\*
+Include dependency graph for usb\+\_\+host\+\_\+midi.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{usb__host__midi_8c_aae1247ffd438609778d965016d4d674a}{U\+S\+B\+\_\+\+M\+A\+X\+\_\+\+M\+I\+D\+I\+\_\+\+D\+E\+V\+I\+C\+E\+S}~1
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__midi_8c_a2f956e35e63ed6de41ec41757fef067a}{U\+S\+B\+Host\+M\+I\+D\+I\+Init} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} address, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} flags, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} client\+Driver\+I\+D)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__midi_8c_a854130c359b51285f7a3e08525a56f10}{U\+S\+B\+Host\+M\+I\+D\+I\+Event\+Handler} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} address, \hyperlink{usb__common_8h_a58f011a3d1f4cad0e69a9bf036fb847c}{U\+S\+B\+\_\+\+E\+V\+E\+N\+T} event, void $\ast$data, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} size)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{usb__host__midi_8c_a59dce7eabd2a9a7ea69e433f010fa8a3}{U\+S\+B\+Host\+M\+I\+D\+I\+Read} (void $\ast$handle, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} endpoint\+Index, void $\ast$buffer, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} length)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__midi_8c_a6665273de0449ec7f98be52f8dc2a46c}{U\+S\+B\+Host\+M\+I\+D\+I\+Transfer\+Is\+Complete} (void $\ast$handle, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} endpoint\+Index, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$error\+Code, \hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} $\ast$byte\+Count)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{usb__host__midi_8c_af4c19be422440715dcfc4f1523d1910f}{U\+S\+B\+Host\+M\+I\+D\+I\+Write} (void $\ast$handle, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} endpoint\+Index, void $\ast$buffer, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} length)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{usb__host__midi_8c_aae1247ffd438609778d965016d4d674a}{}\index{usb\+\_\+host\+\_\+midi.\+c@{usb\+\_\+host\+\_\+midi.\+c}!U\+S\+B\+\_\+\+M\+A\+X\+\_\+\+M\+I\+D\+I\+\_\+\+D\+E\+V\+I\+C\+E\+S@{U\+S\+B\+\_\+\+M\+A\+X\+\_\+\+M\+I\+D\+I\+\_\+\+D\+E\+V\+I\+C\+E\+S}}
+\index{U\+S\+B\+\_\+\+M\+A\+X\+\_\+\+M\+I\+D\+I\+\_\+\+D\+E\+V\+I\+C\+E\+S@{U\+S\+B\+\_\+\+M\+A\+X\+\_\+\+M\+I\+D\+I\+\_\+\+D\+E\+V\+I\+C\+E\+S}!usb\+\_\+host\+\_\+midi.\+c@{usb\+\_\+host\+\_\+midi.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+M\+A\+X\+\_\+\+M\+I\+D\+I\+\_\+\+D\+E\+V\+I\+C\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+M\+A\+X\+\_\+\+M\+I\+D\+I\+\_\+\+D\+E\+V\+I\+C\+E\+S~1}\label{usb__host__midi_8c_aae1247ffd438609778d965016d4d674a}
+
+
+Definition at line 98 of file usb\+\_\+host\+\_\+midi.\+c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{usb__host__midi_8c_a854130c359b51285f7a3e08525a56f10}{}\index{usb\+\_\+host\+\_\+midi.\+c@{usb\+\_\+host\+\_\+midi.\+c}!U\+S\+B\+Host\+M\+I\+D\+I\+Event\+Handler@{U\+S\+B\+Host\+M\+I\+D\+I\+Event\+Handler}}
+\index{U\+S\+B\+Host\+M\+I\+D\+I\+Event\+Handler@{U\+S\+B\+Host\+M\+I\+D\+I\+Event\+Handler}!usb\+\_\+host\+\_\+midi.\+c@{usb\+\_\+host\+\_\+midi.\+c}}
+\subsubsection[{U\+S\+B\+Host\+M\+I\+D\+I\+Event\+Handler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} U\+S\+B\+Host\+M\+I\+D\+I\+Event\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{address, }
+\item[{{\bf U\+S\+B\+\_\+\+E\+V\+E\+N\+T}}]{event, }
+\item[{void $\ast$}]{data, }
+\item[{{\bf D\+W\+O\+R\+D}}]{size}
+\end{DoxyParamCaption}
+)}\label{usb__host__midi_8c_a854130c359b51285f7a3e08525a56f10}
+
+
+Definition at line 344 of file usb\+\_\+host\+\_\+midi.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+\hypertarget{usb__host__midi_8c_a2f956e35e63ed6de41ec41757fef067a}{}\index{usb\+\_\+host\+\_\+midi.\+c@{usb\+\_\+host\+\_\+midi.\+c}!U\+S\+B\+Host\+M\+I\+D\+I\+Init@{U\+S\+B\+Host\+M\+I\+D\+I\+Init}}
+\index{U\+S\+B\+Host\+M\+I\+D\+I\+Init@{U\+S\+B\+Host\+M\+I\+D\+I\+Init}!usb\+\_\+host\+\_\+midi.\+c@{usb\+\_\+host\+\_\+midi.\+c}}
+\subsubsection[{U\+S\+B\+Host\+M\+I\+D\+I\+Init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} U\+S\+B\+Host\+M\+I\+D\+I\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{address, }
+\item[{{\bf D\+W\+O\+R\+D}}]{flags, }
+\item[{{\bf B\+Y\+T\+E}}]{client\+Driver\+I\+D}
+\end{DoxyParamCaption}
+)}\label{usb__host__midi_8c_a2f956e35e63ed6de41ec41757fef067a}
+
+
+Definition at line 153 of file usb\+\_\+host\+\_\+midi.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+\hypertarget{usb__host__midi_8c_a59dce7eabd2a9a7ea69e433f010fa8a3}{}\index{usb\+\_\+host\+\_\+midi.\+c@{usb\+\_\+host\+\_\+midi.\+c}!U\+S\+B\+Host\+M\+I\+D\+I\+Read@{U\+S\+B\+Host\+M\+I\+D\+I\+Read}}
+\index{U\+S\+B\+Host\+M\+I\+D\+I\+Read@{U\+S\+B\+Host\+M\+I\+D\+I\+Read}!usb\+\_\+host\+\_\+midi.\+c@{usb\+\_\+host\+\_\+midi.\+c}}
+\subsubsection[{U\+S\+B\+Host\+M\+I\+D\+I\+Read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} U\+S\+B\+Host\+M\+I\+D\+I\+Read (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{handle, }
+\item[{{\bf B\+Y\+T\+E}}]{endpoint\+Index, }
+\item[{void $\ast$}]{buffer, }
+\item[{{\bf W\+O\+R\+D}}]{length}
+\end{DoxyParamCaption}
+)}\label{usb__host__midi_8c_a59dce7eabd2a9a7ea69e433f010fa8a3}
+
+
+Definition at line 557 of file usb\+\_\+host\+\_\+midi.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+\hypertarget{usb__host__midi_8c_a6665273de0449ec7f98be52f8dc2a46c}{}\index{usb\+\_\+host\+\_\+midi.\+c@{usb\+\_\+host\+\_\+midi.\+c}!U\+S\+B\+Host\+M\+I\+D\+I\+Transfer\+Is\+Complete@{U\+S\+B\+Host\+M\+I\+D\+I\+Transfer\+Is\+Complete}}
+\index{U\+S\+B\+Host\+M\+I\+D\+I\+Transfer\+Is\+Complete@{U\+S\+B\+Host\+M\+I\+D\+I\+Transfer\+Is\+Complete}!usb\+\_\+host\+\_\+midi.\+c@{usb\+\_\+host\+\_\+midi.\+c}}
+\subsubsection[{U\+S\+B\+Host\+M\+I\+D\+I\+Transfer\+Is\+Complete}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} U\+S\+B\+Host\+M\+I\+D\+I\+Transfer\+Is\+Complete (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{handle, }
+\item[{{\bf B\+Y\+T\+E}}]{endpoint\+Index, }
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{error\+Code, }
+\item[{{\bf D\+W\+O\+R\+D} $\ast$}]{byte\+Count}
+\end{DoxyParamCaption}
+)}\label{usb__host__midi_8c_a6665273de0449ec7f98be52f8dc2a46c}
+
+
+Definition at line 653 of file usb\+\_\+host\+\_\+midi.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 4
+
+
+\hypertarget{usb__host__midi_8c_af4c19be422440715dcfc4f1523d1910f}{}\index{usb\+\_\+host\+\_\+midi.\+c@{usb\+\_\+host\+\_\+midi.\+c}!U\+S\+B\+Host\+M\+I\+D\+I\+Write@{U\+S\+B\+Host\+M\+I\+D\+I\+Write}}
+\index{U\+S\+B\+Host\+M\+I\+D\+I\+Write@{U\+S\+B\+Host\+M\+I\+D\+I\+Write}!usb\+\_\+host\+\_\+midi.\+c@{usb\+\_\+host\+\_\+midi.\+c}}
+\subsubsection[{U\+S\+B\+Host\+M\+I\+D\+I\+Write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} U\+S\+B\+Host\+M\+I\+D\+I\+Write (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{handle, }
+\item[{{\bf B\+Y\+T\+E}}]{endpoint\+Index, }
+\item[{void $\ast$}]{buffer, }
+\item[{{\bf W\+O\+R\+D}}]{length}
+\end{DoxyParamCaption}
+)}\label{usb__host__midi_8c_af4c19be422440715dcfc4f1523d1910f}
+
+
+Definition at line 704 of file usb\+\_\+host\+\_\+midi.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 5
+
+

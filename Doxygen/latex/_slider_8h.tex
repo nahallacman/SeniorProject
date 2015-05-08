@@ -1,0 +1,179 @@
+\hypertarget{_slider_8h}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+Graphics/\+Slider.h File Reference}
+\label{_slider_8h}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+Graphics/\+Slider.\+h@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+Graphics/\+Slider.\+h}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_s_l_i_d_e_r}{S\+L\+I\+D\+E\+R}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_slider_8h_a1eb2f3eb4821f2ccc8603b5623ff14c8}{Sld\+Set\+Range} (\hyperlink{struct_s_l_i_d_e_r}{S\+L\+I\+D\+E\+R} $\ast$p\+Sld, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} new\+Range)
+\item 
+void \hyperlink{_slider_8h_a3b70befafff9c559b5d519fe4d5c0a8a}{Sld\+Set\+Page} (\hyperlink{struct_s_l_i_d_e_r}{S\+L\+I\+D\+E\+R} $\ast$p\+Sld, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} new\+Page)
+\item 
+void \hyperlink{_slider_8h_aac9306427f299e139bc5c48b76b3cf09}{Sld\+Set\+Pos} (\hyperlink{struct_s_l_i_d_e_r}{S\+L\+I\+D\+E\+R} $\ast$p\+Sld, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} new\+Pos)
+\item 
+\hyperlink{struct_s_l_i_d_e_r}{S\+L\+I\+D\+E\+R} $\ast$ \hyperlink{_slider_8h_a2c24b3f670799ef372288caba9811afd}{Sld\+Create} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} I\+D, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} left, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} top, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} right, \hyperlink{_generic_type_defs_8h_ae9bb25d3afecf3bfab0fbe3c22c2050f}{S\+H\+O\+R\+T} bottom, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} state, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} range, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} page, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} pos, \hyperlink{struct_g_o_l___s_c_h_e_m_e}{G\+O\+L\+\_\+\+S\+C\+H\+E\+M\+E} $\ast$p\+Scheme)
+\item 
+void \hyperlink{_slider_8h_aab1e927c7427d1524e4cffb9c2996d6e}{Sld\+Msg\+Default} (\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} translated\+Msg, void $\ast$p\+Obj, \hyperlink{struct_g_o_l___m_s_g}{G\+O\+L\+\_\+\+M\+S\+G} $\ast$p\+Msg)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_slider_8h_ad179882b0382dcde9ba3aa61691d587d}{Sld\+Translate\+Msg} (void $\ast$p\+Obj, \hyperlink{struct_g_o_l___m_s_g}{G\+O\+L\+\_\+\+M\+S\+G} $\ast$p\+Msg)
+\item 
+\hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} \hyperlink{_slider_8h_a7c047563deea387da3510b081ccc2bd9}{Sld\+Draw} (void $\ast$p\+Obj)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_slider_8h_a2c24b3f670799ef372288caba9811afd}{}\index{Slider.\+h@{Slider.\+h}!Sld\+Create@{Sld\+Create}}
+\index{Sld\+Create@{Sld\+Create}!Slider.\+h@{Slider.\+h}}
+\subsubsection[{Sld\+Create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+L\+I\+D\+E\+R}$\ast$ Sld\+Create (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{I\+D, }
+\item[{{\bf S\+H\+O\+R\+T}}]{left, }
+\item[{{\bf S\+H\+O\+R\+T}}]{top, }
+\item[{{\bf S\+H\+O\+R\+T}}]{right, }
+\item[{{\bf S\+H\+O\+R\+T}}]{bottom, }
+\item[{{\bf W\+O\+R\+D}}]{state, }
+\item[{{\bf W\+O\+R\+D}}]{range, }
+\item[{{\bf W\+O\+R\+D}}]{page, }
+\item[{{\bf W\+O\+R\+D}}]{pos, }
+\item[{{\bf G\+O\+L\+\_\+\+S\+C\+H\+E\+M\+E} $\ast$}]{p\+Scheme}
+\end{DoxyParamCaption}
+)}\label{_slider_8h_a2c24b3f670799ef372288caba9811afd}
+
+
+Definition at line 72 of file Slider.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 0
+
+
+\hypertarget{_slider_8h_a7c047563deea387da3510b081ccc2bd9}{}\index{Slider.\+h@{Slider.\+h}!Sld\+Draw@{Sld\+Draw}}
+\index{Sld\+Draw@{Sld\+Draw}!Slider.\+h@{Slider.\+h}}
+\subsubsection[{Sld\+Draw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Sld\+Draw (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{p\+Obj}
+\end{DoxyParamCaption}
+)}\label{_slider_8h_a7c047563deea387da3510b081ccc2bd9}
+
+
+Definition at line 652 of file Slider.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\hypertarget{_slider_8h_aab1e927c7427d1524e4cffb9c2996d6e}{}\index{Slider.\+h@{Slider.\+h}!Sld\+Msg\+Default@{Sld\+Msg\+Default}}
+\index{Sld\+Msg\+Default@{Sld\+Msg\+Default}!Slider.\+h@{Slider.\+h}}
+\subsubsection[{Sld\+Msg\+Default}]{\setlength{\rightskip}{0pt plus 5cm}void Sld\+Msg\+Default (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+O\+R\+D}}]{translated\+Msg, }
+\item[{void $\ast$}]{p\+Obj, }
+\item[{{\bf G\+O\+L\+\_\+\+M\+S\+G} $\ast$}]{p\+Msg}
+\end{DoxyParamCaption}
+)}\label{_slider_8h_aab1e927c7427d1524e4cffb9c2996d6e}
+
+
+Definition at line 453 of file Slider.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+\hypertarget{_slider_8h_a3b70befafff9c559b5d519fe4d5c0a8a}{}\index{Slider.\+h@{Slider.\+h}!Sld\+Set\+Page@{Sld\+Set\+Page}}
+\index{Sld\+Set\+Page@{Sld\+Set\+Page}!Slider.\+h@{Slider.\+h}}
+\subsubsection[{Sld\+Set\+Page}]{\setlength{\rightskip}{0pt plus 5cm}void Sld\+Set\+Page (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+L\+I\+D\+E\+R} $\ast$}]{p\+Sld, }
+\item[{{\bf W\+O\+R\+D}}]{new\+Page}
+\end{DoxyParamCaption}
+)}\label{_slider_8h_a3b70befafff9c559b5d519fe4d5c0a8a}
+
+
+Definition at line 346 of file Slider.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 5
+
+
+\hypertarget{_slider_8h_aac9306427f299e139bc5c48b76b3cf09}{}\index{Slider.\+h@{Slider.\+h}!Sld\+Set\+Pos@{Sld\+Set\+Pos}}
+\index{Sld\+Set\+Pos@{Sld\+Set\+Pos}!Slider.\+h@{Slider.\+h}}
+\subsubsection[{Sld\+Set\+Pos}]{\setlength{\rightskip}{0pt plus 5cm}void Sld\+Set\+Pos (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+L\+I\+D\+E\+R} $\ast$}]{p\+Sld, }
+\item[{{\bf S\+H\+O\+R\+T}}]{new\+Pos}
+\end{DoxyParamCaption}
+)}\label{_slider_8h_aac9306427f299e139bc5c48b76b3cf09}
+
+
+Definition at line 368 of file Slider.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 6
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 7
+
+
+\hypertarget{_slider_8h_a1eb2f3eb4821f2ccc8603b5623ff14c8}{}\index{Slider.\+h@{Slider.\+h}!Sld\+Set\+Range@{Sld\+Set\+Range}}
+\index{Sld\+Set\+Range@{Sld\+Set\+Range}!Slider.\+h@{Slider.\+h}}
+\subsubsection[{Sld\+Set\+Range}]{\setlength{\rightskip}{0pt plus 5cm}void Sld\+Set\+Range (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+L\+I\+D\+E\+R} $\ast$}]{p\+Sld, }
+\item[{{\bf S\+H\+O\+R\+T}}]{new\+Range}
+\end{DoxyParamCaption}
+)}\label{_slider_8h_a1eb2f3eb4821f2ccc8603b5623ff14c8}
+
+
+Definition at line 302 of file Slider.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 8
+
+
+\hypertarget{_slider_8h_ad179882b0382dcde9ba3aa61691d587d}{}\index{Slider.\+h@{Slider.\+h}!Sld\+Translate\+Msg@{Sld\+Translate\+Msg}}
+\index{Sld\+Translate\+Msg@{Sld\+Translate\+Msg}!Slider.\+h@{Slider.\+h}}
+\subsubsection[{Sld\+Translate\+Msg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+O\+R\+D} Sld\+Translate\+Msg (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{p\+Obj, }
+\item[{{\bf G\+O\+L\+\_\+\+M\+S\+G} $\ast$}]{p\+Msg}
+\end{DoxyParamCaption}
+)}\label{_slider_8h_ad179882b0382dcde9ba3aa61691d587d}
+
+
+Definition at line 570 of file Slider.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 9
+
+

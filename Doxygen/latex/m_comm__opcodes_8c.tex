@@ -1,0 +1,201 @@
+\hypertarget{m_comm__opcodes_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Comm\+\_\+opcodes.c File Reference}
+\label{m_comm__opcodes_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Comm\+\_\+opcodes.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Comm\+\_\+opcodes.\+c}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{m_comm__opcodes_8c_aa22147454b2d7b146a5b1c3077179784}{m\+Comm\+\_\+process\+N\+V\+M} (void)
+\item 
+uint8\+\_\+t \hyperlink{m_comm__opcodes_8c_a26ce0f0cb1eb3f83abf6f0c08ef68838}{m\+Comm\+\_\+nvm\+Read\+Iterator} (void)
+\item 
+uint8\+\_\+t \hyperlink{m_comm__opcodes_8c_a78fae7060f0df3e6fcb6e781089fc50b}{m\+Comm\+\_\+nvm\+Write\+Iterator} (void)
+\item 
+void \hyperlink{m_comm__opcodes_8c_a7865474138faa08dbf40c37ae52b4683}{m\+Comm\+\_\+process\+R\+A\+M} (void)
+\item 
+uint8\+\_\+t \hyperlink{m_comm__opcodes_8c_ac873f5efca8b4e31a67fd089fcb051a0}{m\+Comm\+\_\+ram\+Read\+Iterator} (void)
+\item 
+uint8\+\_\+t \hyperlink{m_comm__opcodes_8c_aaf4d32872c1e5f64a7e4164efeb8cc2e}{m\+Comm\+\_\+ram\+Write\+Iterator} (void)
+\item 
+void \hyperlink{m_comm__opcodes_8c_a6eabe77246d07f1e4ee6a6ec8605a333}{m\+Comm\+\_\+process\+Stream} (void)
+\item 
+uint8\+\_\+t \hyperlink{m_comm__opcodes_8c_a30dc231efdb86ed94494e316eae420ef}{m\+Comm\+\_\+\+Stream\+Read\+Iterator} (void)
+\item 
+void \hyperlink{m_comm__opcodes_8c_a509f012dec42b9728ec6a6245a3ec6c9}{m\+Comm\+\_\+\+Error\+Process} (void)
+\item 
+uint8\+\_\+t \hyperlink{m_comm__opcodes_8c_a993aa704b4a1c9ddc6fca5fdc80fa6aa}{m\+Comm\+\_\+\+Error\+Iterator} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{structm_comm___opcode}{m\+Comm\+\_\+\+Opcode} \hyperlink{m_comm__opcodes_8c_a4d7da934e2fba27d269f5e1f4d52d591}{m\+Comm\+\_\+opcode} \mbox{[}M\+C\+O\+M\+M\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+P\+C\+O\+D\+E\+S\mbox{]} = M\+C\+O\+M\+M\+\_\+\+O\+P\+C\+O\+D\+E\+\_\+\+V\+A\+L\+U\+E\+S
+\item 
+const uint8\+\_\+t \hyperlink{m_comm__opcodes_8c_a39601452b2127ebd32d2e0dd0b28ea00}{m\+Comm\+\_\+\+Config\+Block\+\_\+\+Literals} \mbox{[}M\+C\+O\+M\+M\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+L\+I\+T\+\_\+\+S\+I\+Z\+E\mbox{]} = M\+C\+O\+M\+M\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+L\+I\+T\+\_\+\+I\+N\+I\+T
+\item 
+uint8\+\_\+t $\ast$const \hyperlink{m_comm__opcodes_8c_aec35649d93106c56105abdee1318981e}{m\+Comm\+\_\+\+Config\+Block\+\_\+\+Addrs} \mbox{[}M\+C\+O\+M\+M\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+A\+D\+D\+R\+\_\+\+S\+I\+Z\+E\mbox{]} = M\+C\+O\+M\+M\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+A\+D\+D\+R\+\_\+\+I\+N\+I\+T
+\item 
+\hyperlink{structm_comm___vector}{m\+Comm\+\_\+\+Vector} \hyperlink{m_comm__opcodes_8c_a56b29f06f189d19bb02d49a523f97ccd}{m\+Comm\+\_\+stream} \mbox{[}M\+C\+O\+M\+M\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+S\+I\+Z\+E+1\mbox{]} = M\+C\+O\+M\+M\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+V\+A\+L\+U\+E\+S
+\item 
+\hyperlink{structm_comm___stream_config}{m\+Comm\+\_\+\+Stream\+Config} \hyperlink{m_comm__opcodes_8c_a40f0a05d1a01b015535cfa851023877b}{m\+Comm\+\_\+stream\+Config}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{m_comm__opcodes_8c_a993aa704b4a1c9ddc6fca5fdc80fa6aa}{}\index{m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}!m\+Comm\+\_\+\+Error\+Iterator@{m\+Comm\+\_\+\+Error\+Iterator}}
+\index{m\+Comm\+\_\+\+Error\+Iterator@{m\+Comm\+\_\+\+Error\+Iterator}!m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}}
+\subsubsection[{m\+Comm\+\_\+\+Error\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t m\+Comm\+\_\+\+Error\+Iterator (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_comm__opcodes_8c_a993aa704b4a1c9ddc6fca5fdc80fa6aa}
+
+
+Definition at line 547 of file m\+Comm\+\_\+opcodes.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 0
+
+
+\hypertarget{m_comm__opcodes_8c_a509f012dec42b9728ec6a6245a3ec6c9}{}\index{m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}!m\+Comm\+\_\+\+Error\+Process@{m\+Comm\+\_\+\+Error\+Process}}
+\index{m\+Comm\+\_\+\+Error\+Process@{m\+Comm\+\_\+\+Error\+Process}!m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}}
+\subsubsection[{m\+Comm\+\_\+\+Error\+Process}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Comm\+\_\+\+Error\+Process (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_comm__opcodes_8c_a509f012dec42b9728ec6a6245a3ec6c9}
+
+
+Definition at line 552 of file m\+Comm\+\_\+opcodes.\+c.
+
+\hypertarget{m_comm__opcodes_8c_a26ce0f0cb1eb3f83abf6f0c08ef68838}{}\index{m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}!m\+Comm\+\_\+nvm\+Read\+Iterator@{m\+Comm\+\_\+nvm\+Read\+Iterator}}
+\index{m\+Comm\+\_\+nvm\+Read\+Iterator@{m\+Comm\+\_\+nvm\+Read\+Iterator}!m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}}
+\subsubsection[{m\+Comm\+\_\+nvm\+Read\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t m\+Comm\+\_\+nvm\+Read\+Iterator (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_comm__opcodes_8c_a26ce0f0cb1eb3f83abf6f0c08ef68838}
+
+
+Definition at line 182 of file m\+Comm\+\_\+opcodes.\+c.
+
+\hypertarget{m_comm__opcodes_8c_a78fae7060f0df3e6fcb6e781089fc50b}{}\index{m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}!m\+Comm\+\_\+nvm\+Write\+Iterator@{m\+Comm\+\_\+nvm\+Write\+Iterator}}
+\index{m\+Comm\+\_\+nvm\+Write\+Iterator@{m\+Comm\+\_\+nvm\+Write\+Iterator}!m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}}
+\subsubsection[{m\+Comm\+\_\+nvm\+Write\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t m\+Comm\+\_\+nvm\+Write\+Iterator (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_comm__opcodes_8c_a78fae7060f0df3e6fcb6e781089fc50b}
+
+
+Definition at line 136 of file m\+Comm\+\_\+opcodes.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+\hypertarget{m_comm__opcodes_8c_aa22147454b2d7b146a5b1c3077179784}{}\index{m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}!m\+Comm\+\_\+process\+N\+V\+M@{m\+Comm\+\_\+process\+N\+V\+M}}
+\index{m\+Comm\+\_\+process\+N\+V\+M@{m\+Comm\+\_\+process\+N\+V\+M}!m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}}
+\subsubsection[{m\+Comm\+\_\+process\+N\+V\+M}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Comm\+\_\+process\+N\+V\+M (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_comm__opcodes_8c_aa22147454b2d7b146a5b1c3077179784}
+
+
+Definition at line 129 of file m\+Comm\+\_\+opcodes.\+c.
+
+\hypertarget{m_comm__opcodes_8c_a7865474138faa08dbf40c37ae52b4683}{}\index{m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}!m\+Comm\+\_\+process\+R\+A\+M@{m\+Comm\+\_\+process\+R\+A\+M}}
+\index{m\+Comm\+\_\+process\+R\+A\+M@{m\+Comm\+\_\+process\+R\+A\+M}!m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}}
+\subsubsection[{m\+Comm\+\_\+process\+R\+A\+M}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Comm\+\_\+process\+R\+A\+M (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_comm__opcodes_8c_a7865474138faa08dbf40c37ae52b4683}
+
+
+Definition at line 256 of file m\+Comm\+\_\+opcodes.\+c.
+
+\hypertarget{m_comm__opcodes_8c_a6eabe77246d07f1e4ee6a6ec8605a333}{}\index{m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}!m\+Comm\+\_\+process\+Stream@{m\+Comm\+\_\+process\+Stream}}
+\index{m\+Comm\+\_\+process\+Stream@{m\+Comm\+\_\+process\+Stream}!m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}}
+\subsubsection[{m\+Comm\+\_\+process\+Stream}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Comm\+\_\+process\+Stream (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_comm__opcodes_8c_a6eabe77246d07f1e4ee6a6ec8605a333}
+
+
+Definition at line 430 of file m\+Comm\+\_\+opcodes.\+c.
+
+\hypertarget{m_comm__opcodes_8c_ac873f5efca8b4e31a67fd089fcb051a0}{}\index{m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}!m\+Comm\+\_\+ram\+Read\+Iterator@{m\+Comm\+\_\+ram\+Read\+Iterator}}
+\index{m\+Comm\+\_\+ram\+Read\+Iterator@{m\+Comm\+\_\+ram\+Read\+Iterator}!m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}}
+\subsubsection[{m\+Comm\+\_\+ram\+Read\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t m\+Comm\+\_\+ram\+Read\+Iterator (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_comm__opcodes_8c_ac873f5efca8b4e31a67fd089fcb051a0}
+
+
+Definition at line 274 of file m\+Comm\+\_\+opcodes.\+c.
+
+\hypertarget{m_comm__opcodes_8c_aaf4d32872c1e5f64a7e4164efeb8cc2e}{}\index{m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}!m\+Comm\+\_\+ram\+Write\+Iterator@{m\+Comm\+\_\+ram\+Write\+Iterator}}
+\index{m\+Comm\+\_\+ram\+Write\+Iterator@{m\+Comm\+\_\+ram\+Write\+Iterator}!m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}}
+\subsubsection[{m\+Comm\+\_\+ram\+Write\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t m\+Comm\+\_\+ram\+Write\+Iterator (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_comm__opcodes_8c_aaf4d32872c1e5f64a7e4164efeb8cc2e}
+
+
+Definition at line 353 of file m\+Comm\+\_\+opcodes.\+c.
+
+\hypertarget{m_comm__opcodes_8c_a30dc231efdb86ed94494e316eae420ef}{}\index{m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}!m\+Comm\+\_\+\+Stream\+Read\+Iterator@{m\+Comm\+\_\+\+Stream\+Read\+Iterator}}
+\index{m\+Comm\+\_\+\+Stream\+Read\+Iterator@{m\+Comm\+\_\+\+Stream\+Read\+Iterator}!m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}}
+\subsubsection[{m\+Comm\+\_\+\+Stream\+Read\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t m\+Comm\+\_\+\+Stream\+Read\+Iterator (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_comm__opcodes_8c_a30dc231efdb86ed94494e316eae420ef}
+
+
+Definition at line 452 of file m\+Comm\+\_\+opcodes.\+c.
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{m_comm__opcodes_8c_aec35649d93106c56105abdee1318981e}{}\index{m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}!m\+Comm\+\_\+\+Config\+Block\+\_\+\+Addrs@{m\+Comm\+\_\+\+Config\+Block\+\_\+\+Addrs}}
+\index{m\+Comm\+\_\+\+Config\+Block\+\_\+\+Addrs@{m\+Comm\+\_\+\+Config\+Block\+\_\+\+Addrs}!m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}}
+\subsubsection[{m\+Comm\+\_\+\+Config\+Block\+\_\+\+Addrs}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t$\ast$ const m\+Comm\+\_\+\+Config\+Block\+\_\+\+Addrs\mbox{[}M\+C\+O\+M\+M\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+A\+D\+D\+R\+\_\+\+S\+I\+Z\+E\mbox{]} = M\+C\+O\+M\+M\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+A\+D\+D\+R\+\_\+\+I\+N\+I\+T}\label{m_comm__opcodes_8c_aec35649d93106c56105abdee1318981e}
+
+
+Definition at line 80 of file m\+Comm\+\_\+opcodes.\+c.
+
+\hypertarget{m_comm__opcodes_8c_a39601452b2127ebd32d2e0dd0b28ea00}{}\index{m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}!m\+Comm\+\_\+\+Config\+Block\+\_\+\+Literals@{m\+Comm\+\_\+\+Config\+Block\+\_\+\+Literals}}
+\index{m\+Comm\+\_\+\+Config\+Block\+\_\+\+Literals@{m\+Comm\+\_\+\+Config\+Block\+\_\+\+Literals}!m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}}
+\subsubsection[{m\+Comm\+\_\+\+Config\+Block\+\_\+\+Literals}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\+\_\+t m\+Comm\+\_\+\+Config\+Block\+\_\+\+Literals\mbox{[}M\+C\+O\+M\+M\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+L\+I\+T\+\_\+\+S\+I\+Z\+E\mbox{]} = M\+C\+O\+M\+M\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+L\+I\+T\+\_\+\+I\+N\+I\+T}\label{m_comm__opcodes_8c_a39601452b2127ebd32d2e0dd0b28ea00}
+
+
+Definition at line 79 of file m\+Comm\+\_\+opcodes.\+c.
+
+\hypertarget{m_comm__opcodes_8c_a4d7da934e2fba27d269f5e1f4d52d591}{}\index{m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}!m\+Comm\+\_\+opcode@{m\+Comm\+\_\+opcode}}
+\index{m\+Comm\+\_\+opcode@{m\+Comm\+\_\+opcode}!m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}}
+\subsubsection[{m\+Comm\+\_\+opcode}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf m\+Comm\+\_\+\+Opcode} m\+Comm\+\_\+opcode\mbox{[}M\+C\+O\+M\+M\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+P\+C\+O\+D\+E\+S\mbox{]} = M\+C\+O\+M\+M\+\_\+\+O\+P\+C\+O\+D\+E\+\_\+\+V\+A\+L\+U\+E\+S}\label{m_comm__opcodes_8c_a4d7da934e2fba27d269f5e1f4d52d591}
+
+
+Definition at line 63 of file m\+Comm\+\_\+opcodes.\+c.
+
+\hypertarget{m_comm__opcodes_8c_a56b29f06f189d19bb02d49a523f97ccd}{}\index{m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}!m\+Comm\+\_\+stream@{m\+Comm\+\_\+stream}}
+\index{m\+Comm\+\_\+stream@{m\+Comm\+\_\+stream}!m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}}
+\subsubsection[{m\+Comm\+\_\+stream}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf m\+Comm\+\_\+\+Vector} m\+Comm\+\_\+stream\mbox{[}M\+C\+O\+M\+M\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+S\+I\+Z\+E+1\mbox{]} = M\+C\+O\+M\+M\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+V\+A\+L\+U\+E\+S}\label{m_comm__opcodes_8c_a56b29f06f189d19bb02d49a523f97ccd}
+
+
+Definition at line 84 of file m\+Comm\+\_\+opcodes.\+c.
+
+\hypertarget{m_comm__opcodes_8c_a40f0a05d1a01b015535cfa851023877b}{}\index{m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}!m\+Comm\+\_\+stream\+Config@{m\+Comm\+\_\+stream\+Config}}
+\index{m\+Comm\+\_\+stream\+Config@{m\+Comm\+\_\+stream\+Config}!m\+Comm\+\_\+opcodes.\+c@{m\+Comm\+\_\+opcodes.\+c}}
+\subsubsection[{m\+Comm\+\_\+stream\+Config}]{\setlength{\rightskip}{0pt plus 5cm}{\bf m\+Comm\+\_\+\+Stream\+Config} m\+Comm\+\_\+stream\+Config}\label{m_comm__opcodes_8c_a40f0a05d1a01b015535cfa851023877b}
+
+
+Definition at line 88 of file m\+Comm\+\_\+opcodes.\+c.
+

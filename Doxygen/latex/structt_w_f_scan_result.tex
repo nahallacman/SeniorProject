@@ -1,0 +1,157 @@
+\hypertarget{structt_w_f_scan_result}{}\section{t\+W\+F\+Scan\+Result Struct Reference}
+\label{structt_w_f_scan_result}\index{t\+W\+F\+Scan\+Result@{t\+W\+F\+Scan\+Result}}
+
+
+{\ttfamily \#include $<$W\+F\+Api.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{structt_w_f_scan_result_a6ba08c6781f28198648162e150327c27}{bssid} \mbox{[}W\+F\+\_\+\+B\+S\+S\+I\+D\+\_\+\+L\+E\+N\+G\+T\+H\mbox{]}
+\item 
+\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{structt_w_f_scan_result_ae4db714f99c265eab8eebaf9427da658}{ssid} \mbox{[}W\+F\+\_\+\+M\+A\+X\+\_\+\+S\+S\+I\+D\+\_\+\+L\+E\+N\+G\+T\+H\mbox{]}
+\item 
+\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{structt_w_f_scan_result_a2d484311df32505759a52ea17e01f6d9}{ap\+Config}
+\item 
+\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{structt_w_f_scan_result_a61b1cfce69fc0011cd7b07b127a3f3f6}{reserved}
+\item 
+\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} \hyperlink{structt_w_f_scan_result_ad8457bb69452cbc0b2d065ceb377d03d}{beacon\+Period}
+\item 
+\hyperlink{_generic_type_defs_8h_acfa284fa8026c4aace2728f7f15d6c13}{U\+I\+N\+T16} \hyperlink{structt_w_f_scan_result_aeb2ce2278c2e879a8988c58d5f7bb606}{atim\+Window}
+\item 
+\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{structt_w_f_scan_result_abd14de236169aa02a0504925b1dab626}{basic\+Rate\+Set} \mbox{[}W\+F\+\_\+\+M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+R\+A\+T\+E\+S\mbox{]}
+\item 
+\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{structt_w_f_scan_result_ac219f836c66b6004ed87869ec52604f5}{rssi}
+\item 
+\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{structt_w_f_scan_result_a1cc35997ddca866acaf466138b01c47c}{num\+Rates}
+\item 
+\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{structt_w_f_scan_result_ad6320fb2250e15caf33f66afef13cf45}{Dtim\+Period}
+\item 
+\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{structt_w_f_scan_result_a3bb46411ce5a127fcf6784f1644f0921}{bss\+Type}
+\item 
+\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{structt_w_f_scan_result_a52d69a3bd7bdfdfc6f9e40f4962c575d}{channel}
+\item 
+\hyperlink{_generic_type_defs_8h_ab27e9918b538ce9d8ca692479b375b6a}{U\+I\+N\+T8} \hyperlink{structt_w_f_scan_result_a2172fc4e4cae6a48b945435288912995}{ssid\+Len}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 835 of file W\+F\+Api.\+h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{structt_w_f_scan_result_a2d484311df32505759a52ea17e01f6d9}{}\index{t\+W\+F\+Scan\+Result@{t\+W\+F\+Scan\+Result}!ap\+Config@{ap\+Config}}
+\index{ap\+Config@{ap\+Config}!t\+W\+F\+Scan\+Result@{t\+W\+F\+Scan\+Result}}
+\subsubsection[{ap\+Config}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} ap\+Config}\label{structt_w_f_scan_result_a2d484311df32505759a52ea17e01f6d9}
+Access point configuration \begin{TabularC}{0}
+\hline
+\end{TabularC}
+7 Bit 6 Bit 5 Bit 4 Bit 3 Bit 2 Bit 1 Bit 0 
+
+ W\+P\+A2 W\+P\+A Preamble Privacy Reserved Reserved Reserved I\+E 
+
+\begin{TabularC}{0}
+\hline
+\end{TabularC}
+1 if A\+P broadcasting one or more Information Elements, else 0 Privacy 0 \+: A\+P is open (no security) 1\+: A\+P using security, if neither W\+P\+A and W\+P\+A2 set then security is W\+E\+P. Preamble 0\+: A\+P transmitting with short preamble 1\+: A\+P transmitting with long preamble W\+P\+A Only valid if Privacy is 1. 0\+: A\+P does not support W\+P\+A 1\+: A\+P supports W\+P\+A W\+P\+A2 Only valid if Privacy is 1. 0\+: A\+P does not support W\+P\+A2 1\+: A\+P supports W\+P\+A2 
+
+Definition at line 862 of file W\+F\+Api.\+h.
+
+\hypertarget{structt_w_f_scan_result_aeb2ce2278c2e879a8988c58d5f7bb606}{}\index{t\+W\+F\+Scan\+Result@{t\+W\+F\+Scan\+Result}!atim\+Window@{atim\+Window}}
+\index{atim\+Window@{atim\+Window}!t\+W\+F\+Scan\+Result@{t\+W\+F\+Scan\+Result}}
+\subsubsection[{atim\+Window}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T16} atim\+Window}\label{structt_w_f_scan_result_aeb2ce2278c2e879a8988c58d5f7bb606}
+
+
+Definition at line 865 of file W\+F\+Api.\+h.
+
+\hypertarget{structt_w_f_scan_result_abd14de236169aa02a0504925b1dab626}{}\index{t\+W\+F\+Scan\+Result@{t\+W\+F\+Scan\+Result}!basic\+Rate\+Set@{basic\+Rate\+Set}}
+\index{basic\+Rate\+Set@{basic\+Rate\+Set}!t\+W\+F\+Scan\+Result@{t\+W\+F\+Scan\+Result}}
+\subsubsection[{basic\+Rate\+Set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} basic\+Rate\+Set\mbox{[}W\+F\+\_\+\+M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+R\+A\+T\+E\+S\mbox{]}}\label{structt_w_f_scan_result_abd14de236169aa02a0504925b1dab626}
+List of Network basic rates. Each rate has the following format\+:
+
+Bit 7 0 – rate is not part of the basic rates set 1 – rate is part of the basic rates set
+
+Bits 6\+:0 Multiple of 500kbps giving the supported rate. For example, a value of 2 (2 $\ast$ 500kbps) indicates that 1mbps is a supported rate. A value of 4 in this field indicates a 2mbps rate (4 $\ast$ 500kbps). 
+
+Definition at line 879 of file W\+F\+Api.\+h.
+
+\hypertarget{structt_w_f_scan_result_ad8457bb69452cbc0b2d065ceb377d03d}{}\index{t\+W\+F\+Scan\+Result@{t\+W\+F\+Scan\+Result}!beacon\+Period@{beacon\+Period}}
+\index{beacon\+Period@{beacon\+Period}!t\+W\+F\+Scan\+Result@{t\+W\+F\+Scan\+Result}}
+\subsubsection[{beacon\+Period}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T16} beacon\+Period}\label{structt_w_f_scan_result_ad8457bb69452cbc0b2d065ceb377d03d}
+
+
+Definition at line 864 of file W\+F\+Api.\+h.
+
+\hypertarget{structt_w_f_scan_result_a6ba08c6781f28198648162e150327c27}{}\index{t\+W\+F\+Scan\+Result@{t\+W\+F\+Scan\+Result}!bssid@{bssid}}
+\index{bssid@{bssid}!t\+W\+F\+Scan\+Result@{t\+W\+F\+Scan\+Result}}
+\subsubsection[{bssid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} bssid\mbox{[}W\+F\+\_\+\+B\+S\+S\+I\+D\+\_\+\+L\+E\+N\+G\+T\+H\mbox{]}}\label{structt_w_f_scan_result_a6ba08c6781f28198648162e150327c27}
+
+
+Definition at line 837 of file W\+F\+Api.\+h.
+
+\hypertarget{structt_w_f_scan_result_a3bb46411ce5a127fcf6784f1644f0921}{}\index{t\+W\+F\+Scan\+Result@{t\+W\+F\+Scan\+Result}!bss\+Type@{bss\+Type}}
+\index{bss\+Type@{bss\+Type}!t\+W\+F\+Scan\+Result@{t\+W\+F\+Scan\+Result}}
+\subsubsection[{bss\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} bss\+Type}\label{structt_w_f_scan_result_a3bb46411ce5a127fcf6784f1644f0921}
+
+
+Definition at line 889 of file W\+F\+Api.\+h.
+
+\hypertarget{structt_w_f_scan_result_a52d69a3bd7bdfdfc6f9e40f4962c575d}{}\index{t\+W\+F\+Scan\+Result@{t\+W\+F\+Scan\+Result}!channel@{channel}}
+\index{channel@{channel}!t\+W\+F\+Scan\+Result@{t\+W\+F\+Scan\+Result}}
+\subsubsection[{channel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} channel}\label{structt_w_f_scan_result_a52d69a3bd7bdfdfc6f9e40f4962c575d}
+
+
+Definition at line 890 of file W\+F\+Api.\+h.
+
+\hypertarget{structt_w_f_scan_result_ad6320fb2250e15caf33f66afef13cf45}{}\index{t\+W\+F\+Scan\+Result@{t\+W\+F\+Scan\+Result}!Dtim\+Period@{Dtim\+Period}}
+\index{Dtim\+Period@{Dtim\+Period}!t\+W\+F\+Scan\+Result@{t\+W\+F\+Scan\+Result}}
+\subsubsection[{Dtim\+Period}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} Dtim\+Period}\label{structt_w_f_scan_result_ad6320fb2250e15caf33f66afef13cf45}
+
+
+Definition at line 888 of file W\+F\+Api.\+h.
+
+\hypertarget{structt_w_f_scan_result_a1cc35997ddca866acaf466138b01c47c}{}\index{t\+W\+F\+Scan\+Result@{t\+W\+F\+Scan\+Result}!num\+Rates@{num\+Rates}}
+\index{num\+Rates@{num\+Rates}!t\+W\+F\+Scan\+Result@{t\+W\+F\+Scan\+Result}}
+\subsubsection[{num\+Rates}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} num\+Rates}\label{structt_w_f_scan_result_a1cc35997ddca866acaf466138b01c47c}
+
+
+Definition at line 887 of file W\+F\+Api.\+h.
+
+\hypertarget{structt_w_f_scan_result_a61b1cfce69fc0011cd7b07b127a3f3f6}{}\index{t\+W\+F\+Scan\+Result@{t\+W\+F\+Scan\+Result}!reserved@{reserved}}
+\index{reserved@{reserved}!t\+W\+F\+Scan\+Result@{t\+W\+F\+Scan\+Result}}
+\subsubsection[{reserved}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} reserved}\label{structt_w_f_scan_result_a61b1cfce69fc0011cd7b07b127a3f3f6}
+
+
+Definition at line 863 of file W\+F\+Api.\+h.
+
+\hypertarget{structt_w_f_scan_result_ac219f836c66b6004ed87869ec52604f5}{}\index{t\+W\+F\+Scan\+Result@{t\+W\+F\+Scan\+Result}!rssi@{rssi}}
+\index{rssi@{rssi}!t\+W\+F\+Scan\+Result@{t\+W\+F\+Scan\+Result}}
+\subsubsection[{rssi}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} rssi}\label{structt_w_f_scan_result_ac219f836c66b6004ed87869ec52604f5}
+Signal Strength R\+S\+S\+I
+
+M\+R\+F24\+W\+B \+: R\+S\+S\+I\+\_\+\+M\+A\+X (200) , R\+S\+S\+I\+\_\+\+M\+I\+N (106) M\+R\+F24\+W\+G \+: R\+S\+S\+I\+\_\+\+M\+A\+X (128) , R\+S\+S\+I\+\_\+\+M\+I\+N (43) 
+
+Definition at line 886 of file W\+F\+Api.\+h.
+
+\hypertarget{structt_w_f_scan_result_ae4db714f99c265eab8eebaf9427da658}{}\index{t\+W\+F\+Scan\+Result@{t\+W\+F\+Scan\+Result}!ssid@{ssid}}
+\index{ssid@{ssid}!t\+W\+F\+Scan\+Result@{t\+W\+F\+Scan\+Result}}
+\subsubsection[{ssid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} ssid\mbox{[}W\+F\+\_\+\+M\+A\+X\+\_\+\+S\+S\+I\+D\+\_\+\+L\+E\+N\+G\+T\+H\mbox{]}}\label{structt_w_f_scan_result_ae4db714f99c265eab8eebaf9427da658}
+
+
+Definition at line 838 of file W\+F\+Api.\+h.
+
+\hypertarget{structt_w_f_scan_result_a2172fc4e4cae6a48b945435288912995}{}\index{t\+W\+F\+Scan\+Result@{t\+W\+F\+Scan\+Result}!ssid\+Len@{ssid\+Len}}
+\index{ssid\+Len@{ssid\+Len}!t\+W\+F\+Scan\+Result@{t\+W\+F\+Scan\+Result}}
+\subsubsection[{ssid\+Len}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+I\+N\+T8} ssid\+Len}\label{structt_w_f_scan_result_a2172fc4e4cae6a48b945435288912995}
+
+
+Definition at line 891 of file W\+F\+Api.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+Include/\+T\+C\+P\+I\+P Stack/\hyperlink{_w_f_api_8h}{W\+F\+Api.\+h}\end{DoxyCompactItemize}

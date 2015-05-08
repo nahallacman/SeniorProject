@@ -1,0 +1,17 @@
+digraph "TCPClose"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="TCPClose",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="TCPDisconnect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_t_c_p_8c.html#aacb150778e6f5cf748b05b0e0568f30e"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="DNSEndUsage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_d_n_s_8h.html#a27e8ba4b66a0d78061be23911cd3a426"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UDPClose",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_u_d_p_8h.html#ab324430d82f92d41aec441f45ddf7d0f"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="SSLTxRecord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_s_l_8h.html#a1cef416e587e77f9aeda9fbe53edf3ed"];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="SSLTxMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_s_l_8h.html#ae047f0c0ce6b7f6cdc5fe8098bfef8ee"];
+}

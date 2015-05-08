@@ -1,0 +1,27 @@
+digraph "closesocket"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="closesocket",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="socket",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_berkeley_a_p_i_8c.html#a4bbac9ff89097f54941d2e1cf66f8ca9"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="TCPClose",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_t_c_p_8h.html#a503025d07797068adaf6e8032f6bda5e"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="TCPDisconnect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_t_c_p_8c.html#aacb150778e6f5cf748b05b0e0568f30e"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="DNSEndUsage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_d_n_s_8h.html#a27e8ba4b66a0d78061be23911cd3a426"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="UDPClose",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_u_d_p_8h.html#ab324430d82f92d41aec441f45ddf7d0f"];
+  Node4 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="SSLTxRecord",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_s_l_8h.html#a1cef416e587e77f9aeda9fbe53edf3ed"];
+  Node4 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="SSLTxMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_s_s_l_8h.html#ae047f0c0ce6b7f6cdc5fe8098bfef8ee"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="TCPDisconnect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_t_c_p_8h.html#aacb150778e6f5cf748b05b0e0568f30e"];
+  Node9 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+}

@@ -1,0 +1,147 @@
+\hypertarget{usb__host__hid__parser_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+U\+S\+B/\+H\+I\+D Host Driver/usb\+\_\+host\+\_\+hid\+\_\+parser.c File Reference}
+\label{usb__host__hid__parser_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+U\+S\+B/\+H\+I\+D Host Driver/usb\+\_\+host\+\_\+hid\+\_\+parser.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+U\+S\+B/\+H\+I\+D Host Driver/usb\+\_\+host\+\_\+hid\+\_\+parser.\+c}}
+{\ttfamily \#include \char`\"{}Generic\+Type\+Defs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Hardware\+Profile.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\+\_\+config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}U\+S\+B/usb.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}U\+S\+B/usb\+\_\+host\+\_\+hid.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}U\+S\+B/usb\+\_\+host\+\_\+hid\+\_\+parser.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+Include dependency graph for usb\+\_\+host\+\_\+hid\+\_\+parser.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{usb__host__hid__parser_8c_ad1a878962b7ce05c1834f04341597821}{U\+S\+B\+\_\+\+M\+A\+L\+L\+O\+C}(size)~malloc(size)
+\item 
+\#define \hyperlink{usb__host__hid__parser_8c_a08a085581de0e53cde8e567ddf62f24f}{U\+S\+B\+\_\+\+F\+R\+E\+E}(ptr)~free(ptr)
+\item 
+\#define \hyperlink{usb__host__hid__parser_8c_a0d2718457d63c6258a27aece819cefe1}{U\+S\+B\+\_\+\+F\+R\+E\+E\+\_\+\+A\+N\+D\+\_\+\+C\+L\+E\+A\+R}(ptr)~\{\hyperlink{usb__host_8c_a08a085581de0e53cde8e567ddf62f24f}{U\+S\+B\+\_\+\+F\+R\+E\+E}(ptr); ptr = N\+U\+L\+L;\}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__host__hid__parser_8h_afc867ea57aea7da3322d924857a58e9a}{U\+S\+B\+\_\+\+H\+I\+D\+\_\+\+R\+P\+T\+\_\+\+D\+E\+S\+C\+\_\+\+E\+R\+R\+O\+R} \hyperlink{usb__host__hid__parser_8c_a751d1894f6255eceaf88d42685fe22df}{\+\_\+\+U\+S\+B\+Host\+H\+I\+D\+\_\+\+Parse\+\_\+\+Report} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$hid\+Report\+Descriptor, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} length\+Of\+Descriptor, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} poll\+Rate, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} interface\+Num)
+\item 
+\hyperlink{_generic_type_defs_8h_a54d65c7fa62e62c9754371e42f5111b9}{B\+O\+O\+L} \hyperlink{usb__host__hid__parser_8c_aab21cf89390703cd270187dc082499e1}{U\+S\+B\+Host\+H\+I\+D\+\_\+\+Has\+Usage} (\hyperlink{usb__host__hid__parser_8h_a267c28997732d31ee333a401e139071f}{H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+I\+T\+E\+M} $\ast$report\+Item, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} usage\+Page, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} usage, \hyperlink{_generic_type_defs_8h_a2b0e863dadf920709ec53d9088ee7c91}{W\+O\+R\+D} $\ast$pindex, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$count)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{usb__host__hid__parser_8h_ab13eff4bd3e93055d240690a6bcde9aa}{U\+S\+B\+\_\+\+H\+I\+D\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+R\+P\+T\+\_\+\+I\+N\+F\+O} \hyperlink{usb__host__hid__parser_8c_aa8c8d93f5500fbd99a6c1617ef0caff8}{device\+Rpt\+Info} = \{0\}
+\item 
+\hyperlink{usb__host__hid__parser_8h_ac2a3266b34cee072153bf5b840baf5bc}{U\+S\+B\+\_\+\+H\+I\+D\+\_\+\+I\+T\+E\+M\+\_\+\+L\+I\+S\+T} \hyperlink{usb__host__hid__parser_8c_abddd568464934131961fae5b5e6ec7bb}{item\+List\+Ptrs} =\{N\+U\+L\+L\}
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$ \hyperlink{usb__host__hid__parser_8c_afddfdcd9de86e5c20c06815f81945a42}{parsed\+Data\+Mem} = N\+U\+L\+L
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{usb__host__hid__parser_8c_a08a085581de0e53cde8e567ddf62f24f}{}\index{usb\+\_\+host\+\_\+hid\+\_\+parser.\+c@{usb\+\_\+host\+\_\+hid\+\_\+parser.\+c}!U\+S\+B\+\_\+\+F\+R\+E\+E@{U\+S\+B\+\_\+\+F\+R\+E\+E}}
+\index{U\+S\+B\+\_\+\+F\+R\+E\+E@{U\+S\+B\+\_\+\+F\+R\+E\+E}!usb\+\_\+host\+\_\+hid\+\_\+parser.\+c@{usb\+\_\+host\+\_\+hid\+\_\+parser.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+F\+R\+E\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+F\+R\+E\+E(
+\begin{DoxyParamCaption}
+\item[{}]{ptr}
+\end{DoxyParamCaption}
+)~free(ptr)}\label{usb__host__hid__parser_8c_a08a085581de0e53cde8e567ddf62f24f}
+
+
+Definition at line 93 of file usb\+\_\+host\+\_\+hid\+\_\+parser.\+c.
+
+\hypertarget{usb__host__hid__parser_8c_a0d2718457d63c6258a27aece819cefe1}{}\index{usb\+\_\+host\+\_\+hid\+\_\+parser.\+c@{usb\+\_\+host\+\_\+hid\+\_\+parser.\+c}!U\+S\+B\+\_\+\+F\+R\+E\+E\+\_\+\+A\+N\+D\+\_\+\+C\+L\+E\+A\+R@{U\+S\+B\+\_\+\+F\+R\+E\+E\+\_\+\+A\+N\+D\+\_\+\+C\+L\+E\+A\+R}}
+\index{U\+S\+B\+\_\+\+F\+R\+E\+E\+\_\+\+A\+N\+D\+\_\+\+C\+L\+E\+A\+R@{U\+S\+B\+\_\+\+F\+R\+E\+E\+\_\+\+A\+N\+D\+\_\+\+C\+L\+E\+A\+R}!usb\+\_\+host\+\_\+hid\+\_\+parser.\+c@{usb\+\_\+host\+\_\+hid\+\_\+parser.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+F\+R\+E\+E\+\_\+\+A\+N\+D\+\_\+\+C\+L\+E\+A\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+F\+R\+E\+E\+\_\+\+A\+N\+D\+\_\+\+C\+L\+E\+A\+R(
+\begin{DoxyParamCaption}
+\item[{}]{ptr}
+\end{DoxyParamCaption}
+)~\{{\bf U\+S\+B\+\_\+\+F\+R\+E\+E}(ptr); ptr = N\+U\+L\+L;\}}\label{usb__host__hid__parser_8c_a0d2718457d63c6258a27aece819cefe1}
+
+
+Definition at line 96 of file usb\+\_\+host\+\_\+hid\+\_\+parser.\+c.
+
+\hypertarget{usb__host__hid__parser_8c_ad1a878962b7ce05c1834f04341597821}{}\index{usb\+\_\+host\+\_\+hid\+\_\+parser.\+c@{usb\+\_\+host\+\_\+hid\+\_\+parser.\+c}!U\+S\+B\+\_\+\+M\+A\+L\+L\+O\+C@{U\+S\+B\+\_\+\+M\+A\+L\+L\+O\+C}}
+\index{U\+S\+B\+\_\+\+M\+A\+L\+L\+O\+C@{U\+S\+B\+\_\+\+M\+A\+L\+L\+O\+C}!usb\+\_\+host\+\_\+hid\+\_\+parser.\+c@{usb\+\_\+host\+\_\+hid\+\_\+parser.\+c}}
+\subsubsection[{U\+S\+B\+\_\+\+M\+A\+L\+L\+O\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+B\+\_\+\+M\+A\+L\+L\+O\+C(
+\begin{DoxyParamCaption}
+\item[{}]{size}
+\end{DoxyParamCaption}
+)~malloc(size)}\label{usb__host__hid__parser_8c_ad1a878962b7ce05c1834f04341597821}
+
+
+Definition at line 89 of file usb\+\_\+host\+\_\+hid\+\_\+parser.\+c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{usb__host__hid__parser_8c_a751d1894f6255eceaf88d42685fe22df}{}\index{usb\+\_\+host\+\_\+hid\+\_\+parser.\+c@{usb\+\_\+host\+\_\+hid\+\_\+parser.\+c}!\+\_\+\+U\+S\+B\+Host\+H\+I\+D\+\_\+\+Parse\+\_\+\+Report@{\+\_\+\+U\+S\+B\+Host\+H\+I\+D\+\_\+\+Parse\+\_\+\+Report}}
+\index{\+\_\+\+U\+S\+B\+Host\+H\+I\+D\+\_\+\+Parse\+\_\+\+Report@{\+\_\+\+U\+S\+B\+Host\+H\+I\+D\+\_\+\+Parse\+\_\+\+Report}!usb\+\_\+host\+\_\+hid\+\_\+parser.\+c@{usb\+\_\+host\+\_\+hid\+\_\+parser.\+c}}
+\subsubsection[{\+\_\+\+U\+S\+B\+Host\+H\+I\+D\+\_\+\+Parse\+\_\+\+Report}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+S\+B\+\_\+\+H\+I\+D\+\_\+\+R\+P\+T\+\_\+\+D\+E\+S\+C\+\_\+\+E\+R\+R\+O\+R} \+\_\+\+U\+S\+B\+Host\+H\+I\+D\+\_\+\+Parse\+\_\+\+Report (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{hid\+Report\+Descriptor, }
+\item[{{\bf W\+O\+R\+D}}]{length\+Of\+Descriptor, }
+\item[{{\bf W\+O\+R\+D}}]{poll\+Rate, }
+\item[{{\bf B\+Y\+T\+E}}]{interface\+Num}
+\end{DoxyParamCaption}
+)}\label{usb__host__hid__parser_8c_a751d1894f6255eceaf88d42685fe22df}
+
+
+Definition at line 149 of file usb\+\_\+host\+\_\+hid\+\_\+parser.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\hypertarget{usb__host__hid__parser_8c_aab21cf89390703cd270187dc082499e1}{}\index{usb\+\_\+host\+\_\+hid\+\_\+parser.\+c@{usb\+\_\+host\+\_\+hid\+\_\+parser.\+c}!U\+S\+B\+Host\+H\+I\+D\+\_\+\+Has\+Usage@{U\+S\+B\+Host\+H\+I\+D\+\_\+\+Has\+Usage}}
+\index{U\+S\+B\+Host\+H\+I\+D\+\_\+\+Has\+Usage@{U\+S\+B\+Host\+H\+I\+D\+\_\+\+Has\+Usage}!usb\+\_\+host\+\_\+hid\+\_\+parser.\+c@{usb\+\_\+host\+\_\+hid\+\_\+parser.\+c}}
+\subsubsection[{U\+S\+B\+Host\+H\+I\+D\+\_\+\+Has\+Usage}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+O\+O\+L} U\+S\+B\+Host\+H\+I\+D\+\_\+\+Has\+Usage (
+\begin{DoxyParamCaption}
+\item[{{\bf H\+I\+D\+\_\+\+R\+E\+P\+O\+R\+T\+I\+T\+E\+M} $\ast$}]{report\+Item, }
+\item[{{\bf W\+O\+R\+D}}]{usage\+Page, }
+\item[{{\bf W\+O\+R\+D}}]{usage, }
+\item[{{\bf W\+O\+R\+D} $\ast$}]{pindex, }
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{count}
+\end{DoxyParamCaption}
+)}\label{usb__host__hid__parser_8c_aab21cf89390703cd270187dc082499e1}
+
+
+Definition at line 1032 of file usb\+\_\+host\+\_\+hid\+\_\+parser.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{usb__host__hid__parser_8c_aa8c8d93f5500fbd99a6c1617ef0caff8}{}\index{usb\+\_\+host\+\_\+hid\+\_\+parser.\+c@{usb\+\_\+host\+\_\+hid\+\_\+parser.\+c}!device\+Rpt\+Info@{device\+Rpt\+Info}}
+\index{device\+Rpt\+Info@{device\+Rpt\+Info}!usb\+\_\+host\+\_\+hid\+\_\+parser.\+c@{usb\+\_\+host\+\_\+hid\+\_\+parser.\+c}}
+\subsubsection[{device\+Rpt\+Info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+S\+B\+\_\+\+H\+I\+D\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+R\+P\+T\+\_\+\+I\+N\+F\+O} device\+Rpt\+Info = \{0\}}\label{usb__host__hid__parser_8c_aa8c8d93f5500fbd99a6c1617ef0caff8}
+
+
+Definition at line 116 of file usb\+\_\+host\+\_\+hid\+\_\+parser.\+c.
+
+\hypertarget{usb__host__hid__parser_8c_abddd568464934131961fae5b5e6ec7bb}{}\index{usb\+\_\+host\+\_\+hid\+\_\+parser.\+c@{usb\+\_\+host\+\_\+hid\+\_\+parser.\+c}!item\+List\+Ptrs@{item\+List\+Ptrs}}
+\index{item\+List\+Ptrs@{item\+List\+Ptrs}!usb\+\_\+host\+\_\+hid\+\_\+parser.\+c@{usb\+\_\+host\+\_\+hid\+\_\+parser.\+c}}
+\subsubsection[{item\+List\+Ptrs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+S\+B\+\_\+\+H\+I\+D\+\_\+\+I\+T\+E\+M\+\_\+\+L\+I\+S\+T} item\+List\+Ptrs =\{N\+U\+L\+L\}}\label{usb__host__hid__parser_8c_abddd568464934131961fae5b5e6ec7bb}
+
+
+Definition at line 117 of file usb\+\_\+host\+\_\+hid\+\_\+parser.\+c.
+
+\hypertarget{usb__host__hid__parser_8c_afddfdcd9de86e5c20c06815f81945a42}{}\index{usb\+\_\+host\+\_\+hid\+\_\+parser.\+c@{usb\+\_\+host\+\_\+hid\+\_\+parser.\+c}!parsed\+Data\+Mem@{parsed\+Data\+Mem}}
+\index{parsed\+Data\+Mem@{parsed\+Data\+Mem}!usb\+\_\+host\+\_\+hid\+\_\+parser.\+c@{usb\+\_\+host\+\_\+hid\+\_\+parser.\+c}}
+\subsubsection[{parsed\+Data\+Mem}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E}$\ast$ parsed\+Data\+Mem = N\+U\+L\+L}\label{usb__host__hid__parser_8c_afddfdcd9de86e5c20c06815f81945a42}
+
+
+Definition at line 118 of file usb\+\_\+host\+\_\+hid\+\_\+parser.\+c.
+

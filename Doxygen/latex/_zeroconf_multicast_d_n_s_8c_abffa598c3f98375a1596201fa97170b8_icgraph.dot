@@ -1,0 +1,21 @@
+digraph "strcmp_local_ignore_case"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="strcmp_local_ignore_case",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="mDNSProcessIncomingRR",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_zeroconf_multicast_d_n_s_8c.html#a5d86d8b87c6bf781cb3692eb49041cb7"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="mDNSResponder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_zeroconf_multicast_d_n_s_8c.html#a9db99a259559d5b3e5f537b2b4f235a6"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="mDNSInitialize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_zeroconf_multicast_d_n_s_8c.html#adf52d26b251ad70adb7ca097394986d1"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_main_demo_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667"];
+  Node3 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="mDNSProcessInternal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_zeroconf_multicast_d_n_s_8c.html#a790561fcaf99874b79eab7db039b8c71"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="mDNSProcess",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_zeroconf_multicast_d_n_s_8c.html#a2b66183d48d7fd2050e1661557927e1e"];
+  Node7 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

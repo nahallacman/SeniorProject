@@ -1,0 +1,13 @@
+digraph "mTouch_EEPROM_Reset"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="mTouch_EEPROM_Reset",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="mComm_nvmWriteIterator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$m_comm__opcodes_8c.html#a78fae7060f0df3e6fcb6e781089fc50b"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="mTouch_EEPROM_Init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$m_touch__eeprom_8h.html#a988e636365acc839dda8a10de030c8d0"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="mTouch_Init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$m_touch_cap_2_p_i_c12_f_01_p_i_c16_f_01_library_2m_touch_8h.html#ab73968cbb19d4ae25a65698c15906b65",tooltip="Main initialization routine for all mTouch framework modules including the built-in communication mod..."];
+}

@@ -1,0 +1,249 @@
+\hypertarget{_p_s2_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Dev/\+P\+S2.c File Reference}
+\label{_p_s2_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Dev/\+P\+S2.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Dev/\+P\+S2.\+c}}
+{\ttfamily \#include \char`\"{}P\+S2.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$p32xxxx.\+h$>$}\\*
+Include dependency graph for P\+S2.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t $\ast$ \hyperlink{_p_s2_8c_ae311e9417c9347d550643de4daea45e5}{keyboard\+\_\+lookup} (uint8\+\_\+t number)
+\item 
+void \hyperlink{_p_s2_8c_a1c9949e161f05ecf2ba74181c4fdd1af}{keyboard\+\_\+setup} (void)
+\item 
+void \hyperlink{_p_s2_8c_a70132a6fe101c642b98c0b4336939930}{Input\+Capture2\+I\+S\+R} (void)
+\item 
+void \hyperlink{_p_s2_8c_aeb389b24fcb4bf0ef1cc98315dab5e5f}{interpret\+Keypress} (void)
+\item 
+uint8\+\_\+t \hyperlink{_p_s2_8c_a8ab149b8e337f892e4c07286e094ee54}{translate\+Keypress} (uint8\+\_\+t translate)
+\item 
+uint8\+\_\+t $\ast$ \hyperlink{_p_s2_8c_a3a060fca8f2dde6562e2f243414d47d7}{gettext\+Line} (void)
+\item 
+void \hyperlink{_p_s2_8c_aee82caceba560f01202c4459ba4497c7}{process\+Line} (uint8\+\_\+t $\ast$text\+Line\+Ptr)
+\item 
+char $\ast$ \hyperlink{_p_s2_8c_abe73bcf82b19d9727d29850864eac8b8}{get\+I\+P\+Target} ()
+\item 
+void \hyperlink{_p_s2_8c_a48945a9d13c0e9aa46dc3f1302c00223}{Compare\+Text\+Lines} (void)
+\item 
+void \hyperlink{_p_s2_8c_afb368b3eb12755cae8787b96e467e0e3}{press\+\_\+backspace} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{_p_s2_8c_a7cda0ad58ffd2ffb3ab59b7cad3a947c}{font\+\_\+map} \mbox{[}128\mbox{]}\mbox{[}8\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_p_s2_8c_a48945a9d13c0e9aa46dc3f1302c00223}{}\index{P\+S2.\+c@{P\+S2.\+c}!Compare\+Text\+Lines@{Compare\+Text\+Lines}}
+\index{Compare\+Text\+Lines@{Compare\+Text\+Lines}!P\+S2.\+c@{P\+S2.\+c}}
+\subsubsection[{Compare\+Text\+Lines}]{\setlength{\rightskip}{0pt plus 5cm}void Compare\+Text\+Lines (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8c_a48945a9d13c0e9aa46dc3f1302c00223}
+
+
+Definition at line 1226 of file P\+S2.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\hypertarget{_p_s2_8c_abe73bcf82b19d9727d29850864eac8b8}{}\index{P\+S2.\+c@{P\+S2.\+c}!get\+I\+P\+Target@{get\+I\+P\+Target}}
+\index{get\+I\+P\+Target@{get\+I\+P\+Target}!P\+S2.\+c@{P\+S2.\+c}}
+\subsubsection[{get\+I\+P\+Target}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+I\+P\+Target (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8c_abe73bcf82b19d9727d29850864eac8b8}
+
+
+Definition at line 1219 of file P\+S2.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\hypertarget{_p_s2_8c_a3a060fca8f2dde6562e2f243414d47d7}{}\index{P\+S2.\+c@{P\+S2.\+c}!gettext\+Line@{gettext\+Line}}
+\index{gettext\+Line@{gettext\+Line}!P\+S2.\+c@{P\+S2.\+c}}
+\subsubsection[{gettext\+Line}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t$\ast$ gettext\+Line (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8c_a3a060fca8f2dde6562e2f243414d47d7}
+
+
+Definition at line 1103 of file P\+S2.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+\hypertarget{_p_s2_8c_a70132a6fe101c642b98c0b4336939930}{}\index{P\+S2.\+c@{P\+S2.\+c}!Input\+Capture2\+I\+S\+R@{Input\+Capture2\+I\+S\+R}}
+\index{Input\+Capture2\+I\+S\+R@{Input\+Capture2\+I\+S\+R}!P\+S2.\+c@{P\+S2.\+c}}
+\subsubsection[{Input\+Capture2\+I\+S\+R}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+Capture2\+I\+S\+R (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8c_a70132a6fe101c642b98c0b4336939930}
+
+
+Definition at line 212 of file P\+S2.\+c.
+
+\hypertarget{_p_s2_8c_aeb389b24fcb4bf0ef1cc98315dab5e5f}{}\index{P\+S2.\+c@{P\+S2.\+c}!interpret\+Keypress@{interpret\+Keypress}}
+\index{interpret\+Keypress@{interpret\+Keypress}!P\+S2.\+c@{P\+S2.\+c}}
+\subsubsection[{interpret\+Keypress}]{\setlength{\rightskip}{0pt plus 5cm}void interpret\+Keypress (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8c_aeb389b24fcb4bf0ef1cc98315dab5e5f}
+
+
+Definition at line 287 of file P\+S2.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 5
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\hypertarget{_p_s2_8c_ae311e9417c9347d550643de4daea45e5}{}\index{P\+S2.\+c@{P\+S2.\+c}!keyboard\+\_\+lookup@{keyboard\+\_\+lookup}}
+\index{keyboard\+\_\+lookup@{keyboard\+\_\+lookup}!P\+S2.\+c@{P\+S2.\+c}}
+\subsubsection[{keyboard\+\_\+lookup}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t$\ast$ keyboard\+\_\+lookup (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{number}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8c_ae311e9417c9347d550643de4daea45e5}
+
+
+Definition at line 135 of file P\+S2.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 7
+
+
+\hypertarget{_p_s2_8c_a1c9949e161f05ecf2ba74181c4fdd1af}{}\index{P\+S2.\+c@{P\+S2.\+c}!keyboard\+\_\+setup@{keyboard\+\_\+setup}}
+\index{keyboard\+\_\+setup@{keyboard\+\_\+setup}!P\+S2.\+c@{P\+S2.\+c}}
+\subsubsection[{keyboard\+\_\+setup}]{\setlength{\rightskip}{0pt plus 5cm}void keyboard\+\_\+setup (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8c_a1c9949e161f05ecf2ba74181c4fdd1af}
+
+
+Definition at line 151 of file P\+S2.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 8
+
+
+\hypertarget{_p_s2_8c_afb368b3eb12755cae8787b96e467e0e3}{}\index{P\+S2.\+c@{P\+S2.\+c}!press\+\_\+backspace@{press\+\_\+backspace}}
+\index{press\+\_\+backspace@{press\+\_\+backspace}!P\+S2.\+c@{P\+S2.\+c}}
+\subsubsection[{press\+\_\+backspace}]{\setlength{\rightskip}{0pt plus 5cm}void press\+\_\+backspace (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8c_afb368b3eb12755cae8787b96e467e0e3}
+
+
+Definition at line 1279 of file P\+S2.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 9
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 10
+
+
+\hypertarget{_p_s2_8c_aee82caceba560f01202c4459ba4497c7}{}\index{P\+S2.\+c@{P\+S2.\+c}!process\+Line@{process\+Line}}
+\index{process\+Line@{process\+Line}!P\+S2.\+c@{P\+S2.\+c}}
+\subsubsection[{process\+Line}]{\setlength{\rightskip}{0pt plus 5cm}void process\+Line (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{text\+Line\+Ptr}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8c_aee82caceba560f01202c4459ba4497c7}
+
+
+Definition at line 1108 of file P\+S2.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 11
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 12
+
+
+\hypertarget{_p_s2_8c_a8ab149b8e337f892e4c07286e094ee54}{}\index{P\+S2.\+c@{P\+S2.\+c}!translate\+Keypress@{translate\+Keypress}}
+\index{translate\+Keypress@{translate\+Keypress}!P\+S2.\+c@{P\+S2.\+c}}
+\subsubsection[{translate\+Keypress}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t translate\+Keypress (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{translate}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8c_a8ab149b8e337f892e4c07286e094ee54}
+
+
+Definition at line 423 of file P\+S2.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 13
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 14
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{_p_s2_8c_a7cda0ad58ffd2ffb3ab59b7cad3a947c}{}\index{P\+S2.\+c@{P\+S2.\+c}!font\+\_\+map@{font\+\_\+map}}
+\index{font\+\_\+map@{font\+\_\+map}!P\+S2.\+c@{P\+S2.\+c}}
+\subsubsection[{font\+\_\+map}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t font\+\_\+map\mbox{[}128\mbox{]}\mbox{[}8\mbox{]}}\label{_p_s2_8c_a7cda0ad58ffd2ffb3ab59b7cad3a947c}
+font\+\_\+map based on the file \href{http://users.ices.utexas.edu/~lenharth/cs378/fall13/font8x8.h}{\tt http\+://users.\+ices.\+utexas.\+edu/$\sim$lenharth/cs378/fall13/font8x8.\+h} released with comments below\+:
+
+8x8 monochrome bitmap fonts for rendering Author\+: Daniel Hepper \href{mailto:daniel@hepper.net}{\tt daniel@hepper.\+net}
+
+License\+: Public Domain
+
+Based on\+: // Summary\+: font8x8.\+h // 8x8 monochrome bitmap fonts for rendering // // Author\+: // Marcel Sondaar // International Business Machines (public domain V\+G\+A fonts) // // License\+: // Public Domain
+
+Fetched from\+: \href{http://dimensionalrift.homelinux.net/combuster/mos3/?p=viewsource&file=/modules/gfx/font8_8.asm}{\tt http\+://dimensionalrift.\+homelinux.\+net/combuster/mos3/?p=viewsource\&file=/modules/gfx/font8\+\_\+8.\+asm} 
+
+Definition at line 4 of file P\+S2.\+c.
+

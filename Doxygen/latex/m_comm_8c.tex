@@ -1,0 +1,248 @@
+\hypertarget{m_comm_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Comm.c File Reference}
+\label{m_comm_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Comm.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/m\+Touch\+Cap/\+P\+I\+C12\+F P\+I\+C16\+F Library/m\+Comm.\+c}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{m_comm_8c_ae411cd73970859fd79070afa9a1cb319}{m\+Comm\+\_\+\+Init} (void)
+\item 
+void \hyperlink{m_comm_8c_aafbf294d1776aa387cf864fddf3810d3}{m\+Comm\+\_\+\+Receive} (void)
+\item 
+void \hyperlink{m_comm_8c_a233a49570a500f2391ef8e894e465241}{m\+Comm\+\_\+\+Process} (uint8\+\_\+t)
+\item 
+void \hyperlink{m_comm_8c_a8bfb942a7ae7836ae9748b1c294ece05}{m\+Comm\+\_\+\+Service} (void)
+\item 
+void \hyperlink{m_comm_8c_a52e190faf8c2c0afe082c6ab232da4c8}{m\+Comm\+\_\+\+U\+A\+R\+T\+\_\+\+Put\+Char} (uint8\+\_\+t)
+\item 
+void \hyperlink{m_comm_8c_a239a6ceb1aeca100de01f2522fb3ca2c}{m\+Comm\+\_\+\+U\+A\+R\+T\+\_\+\+Char2\+A\+S\+C\+I\+I} (uint8\+\_\+t)
+\item 
+void \hyperlink{m_comm_8c_af25da52c9da7c8fa9337c43ad5d7a1b6}{m\+Comm\+\_\+\+U\+A\+R\+T\+\_\+\+Int2\+A\+S\+C\+I\+I} (uint16\+\_\+t)
+\item 
+void \hyperlink{m_comm_8c_af342943db55e1a4a0d9e9c3b9e32b37a}{m\+Comm\+\_\+\+U\+A\+R\+T\+\_\+\+Send\+A\+C\+Kor\+N\+A\+C\+K} (uint8\+\_\+t)
+\item 
+void \hyperlink{m_comm_8c_acb0332b219764780573254069b61161c}{m\+Comm\+\_\+\+S\+P\+I\+\_\+\+Service\+S\+S} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structm_comm___output_vector}{m\+Comm\+\_\+\+Output\+Vector} \hyperlink{m_comm_8c_afd46f38648b53444b7698fa364fae15e}{m\+Comm\+\_\+output}
+\item 
+\hyperlink{structm_comm___input_buffer}{m\+Comm\+\_\+\+Input\+Buffer} \hyperlink{m_comm_8c_ae86cfa6b31746d0229d17e03658fef1c}{m\+Comm\+\_\+input}
+\item 
+bank0 uint8\+\_\+t \hyperlink{m_comm_8c_a19d89992e65970b980db12ea6c24555f}{m\+Comm\+\_\+shift\+Reg}
+\item 
+bank0 uint8\+\_\+t \hyperlink{m_comm_8c_a50c798160aefcb5377397e7539edfba5}{m\+Comm\+\_\+bit\+Count}
+\item 
+bank0 uint8\+\_\+t \hyperlink{m_comm_8c_a866ab4efa94b4c92fd8874ca7b66fc7e}{m\+Comm\+\_\+delay\+Count}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{m_comm_8c_ae411cd73970859fd79070afa9a1cb319}{}\index{m\+Comm.\+c@{m\+Comm.\+c}!m\+Comm\+\_\+\+Init@{m\+Comm\+\_\+\+Init}}
+\index{m\+Comm\+\_\+\+Init@{m\+Comm\+\_\+\+Init}!m\+Comm.\+c@{m\+Comm.\+c}}
+\subsubsection[{m\+Comm\+\_\+\+Init}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Comm\+\_\+\+Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_comm_8c_ae411cd73970859fd79070afa9a1cb319}
+
+
+Definition at line 108 of file m\+Comm.\+c.
+
+\hypertarget{m_comm_8c_a233a49570a500f2391ef8e894e465241}{}\index{m\+Comm.\+c@{m\+Comm.\+c}!m\+Comm\+\_\+\+Process@{m\+Comm\+\_\+\+Process}}
+\index{m\+Comm\+\_\+\+Process@{m\+Comm\+\_\+\+Process}!m\+Comm.\+c@{m\+Comm.\+c}}
+\subsubsection[{m\+Comm\+\_\+\+Process}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Comm\+\_\+\+Process (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{opcode}
+\end{DoxyParamCaption}
+)}\label{m_comm_8c_a233a49570a500f2391ef8e894e465241}
+
+
+Definition at line 865 of file m\+Comm.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 0
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+\hypertarget{m_comm_8c_aafbf294d1776aa387cf864fddf3810d3}{}\index{m\+Comm.\+c@{m\+Comm.\+c}!m\+Comm\+\_\+\+Receive@{m\+Comm\+\_\+\+Receive}}
+\index{m\+Comm\+\_\+\+Receive@{m\+Comm\+\_\+\+Receive}!m\+Comm.\+c@{m\+Comm.\+c}}
+\subsubsection[{m\+Comm\+\_\+\+Receive}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Comm\+\_\+\+Receive (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_comm_8c_aafbf294d1776aa387cf864fddf3810d3}
+
+
+Definition at line 264 of file m\+Comm.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+\hypertarget{m_comm_8c_a8bfb942a7ae7836ae9748b1c294ece05}{}\index{m\+Comm.\+c@{m\+Comm.\+c}!m\+Comm\+\_\+\+Service@{m\+Comm\+\_\+\+Service}}
+\index{m\+Comm\+\_\+\+Service@{m\+Comm\+\_\+\+Service}!m\+Comm.\+c@{m\+Comm.\+c}}
+\subsubsection[{m\+Comm\+\_\+\+Service}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Comm\+\_\+\+Service (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_comm_8c_a8bfb942a7ae7836ae9748b1c294ece05}
+
+
+Definition at line 632 of file m\+Comm.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 3
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+\hypertarget{m_comm_8c_acb0332b219764780573254069b61161c}{}\index{m\+Comm.\+c@{m\+Comm.\+c}!m\+Comm\+\_\+\+S\+P\+I\+\_\+\+Service\+S\+S@{m\+Comm\+\_\+\+S\+P\+I\+\_\+\+Service\+S\+S}}
+\index{m\+Comm\+\_\+\+S\+P\+I\+\_\+\+Service\+S\+S@{m\+Comm\+\_\+\+S\+P\+I\+\_\+\+Service\+S\+S}!m\+Comm.\+c@{m\+Comm.\+c}}
+\subsubsection[{m\+Comm\+\_\+\+S\+P\+I\+\_\+\+Service\+S\+S}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Comm\+\_\+\+S\+P\+I\+\_\+\+Service\+S\+S (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{m_comm_8c_acb0332b219764780573254069b61161c}
+
+
+Definition at line 598 of file m\+Comm.\+c.
+
+\hypertarget{m_comm_8c_a239a6ceb1aeca100de01f2522fb3ca2c}{}\index{m\+Comm.\+c@{m\+Comm.\+c}!m\+Comm\+\_\+\+U\+A\+R\+T\+\_\+\+Char2\+A\+S\+C\+I\+I@{m\+Comm\+\_\+\+U\+A\+R\+T\+\_\+\+Char2\+A\+S\+C\+I\+I}}
+\index{m\+Comm\+\_\+\+U\+A\+R\+T\+\_\+\+Char2\+A\+S\+C\+I\+I@{m\+Comm\+\_\+\+U\+A\+R\+T\+\_\+\+Char2\+A\+S\+C\+I\+I}!m\+Comm.\+c@{m\+Comm.\+c}}
+\subsubsection[{m\+Comm\+\_\+\+U\+A\+R\+T\+\_\+\+Char2\+A\+S\+C\+I\+I}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Comm\+\_\+\+U\+A\+R\+T\+\_\+\+Char2\+A\+S\+C\+I\+I (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{output}
+\end{DoxyParamCaption}
+)}\label{m_comm_8c_a239a6ceb1aeca100de01f2522fb3ca2c}
+
+
+Definition at line 1032 of file m\+Comm.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 5
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\hypertarget{m_comm_8c_af25da52c9da7c8fa9337c43ad5d7a1b6}{}\index{m\+Comm.\+c@{m\+Comm.\+c}!m\+Comm\+\_\+\+U\+A\+R\+T\+\_\+\+Int2\+A\+S\+C\+I\+I@{m\+Comm\+\_\+\+U\+A\+R\+T\+\_\+\+Int2\+A\+S\+C\+I\+I}}
+\index{m\+Comm\+\_\+\+U\+A\+R\+T\+\_\+\+Int2\+A\+S\+C\+I\+I@{m\+Comm\+\_\+\+U\+A\+R\+T\+\_\+\+Int2\+A\+S\+C\+I\+I}!m\+Comm.\+c@{m\+Comm.\+c}}
+\subsubsection[{m\+Comm\+\_\+\+U\+A\+R\+T\+\_\+\+Int2\+A\+S\+C\+I\+I}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Comm\+\_\+\+U\+A\+R\+T\+\_\+\+Int2\+A\+S\+C\+I\+I (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{output}
+\end{DoxyParamCaption}
+)}\label{m_comm_8c_af25da52c9da7c8fa9337c43ad5d7a1b6}
+
+
+Definition at line 1068 of file m\+Comm.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 7
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 8
+
+
+\hypertarget{m_comm_8c_a52e190faf8c2c0afe082c6ab232da4c8}{}\index{m\+Comm.\+c@{m\+Comm.\+c}!m\+Comm\+\_\+\+U\+A\+R\+T\+\_\+\+Put\+Char@{m\+Comm\+\_\+\+U\+A\+R\+T\+\_\+\+Put\+Char}}
+\index{m\+Comm\+\_\+\+U\+A\+R\+T\+\_\+\+Put\+Char@{m\+Comm\+\_\+\+U\+A\+R\+T\+\_\+\+Put\+Char}!m\+Comm.\+c@{m\+Comm.\+c}}
+\subsubsection[{m\+Comm\+\_\+\+U\+A\+R\+T\+\_\+\+Put\+Char}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Comm\+\_\+\+U\+A\+R\+T\+\_\+\+Put\+Char (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{data}
+\end{DoxyParamCaption}
+)}\label{m_comm_8c_a52e190faf8c2c0afe082c6ab232da4c8}
+
+
+Definition at line 920 of file m\+Comm.\+c.
+
+
+
+Here is the caller graph for this function\+:
+% FIG 9
+
+
+\hypertarget{m_comm_8c_af342943db55e1a4a0d9e9c3b9e32b37a}{}\index{m\+Comm.\+c@{m\+Comm.\+c}!m\+Comm\+\_\+\+U\+A\+R\+T\+\_\+\+Send\+A\+C\+Kor\+N\+A\+C\+K@{m\+Comm\+\_\+\+U\+A\+R\+T\+\_\+\+Send\+A\+C\+Kor\+N\+A\+C\+K}}
+\index{m\+Comm\+\_\+\+U\+A\+R\+T\+\_\+\+Send\+A\+C\+Kor\+N\+A\+C\+K@{m\+Comm\+\_\+\+U\+A\+R\+T\+\_\+\+Send\+A\+C\+Kor\+N\+A\+C\+K}!m\+Comm.\+c@{m\+Comm.\+c}}
+\subsubsection[{m\+Comm\+\_\+\+U\+A\+R\+T\+\_\+\+Send\+A\+C\+Kor\+N\+A\+C\+K}]{\setlength{\rightskip}{0pt plus 5cm}void m\+Comm\+\_\+\+U\+A\+R\+T\+\_\+\+Send\+A\+C\+Kor\+N\+A\+C\+K (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{opcode}
+\end{DoxyParamCaption}
+)}\label{m_comm_8c_af342943db55e1a4a0d9e9c3b9e32b37a}
+
+
+Definition at line 904 of file m\+Comm.\+c.
+
+
+
+Here is the call graph for this function\+:
+% FIG 10
+
+
+
+
+Here is the caller graph for this function\+:
+% FIG 11
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{m_comm_8c_a50c798160aefcb5377397e7539edfba5}{}\index{m\+Comm.\+c@{m\+Comm.\+c}!m\+Comm\+\_\+bit\+Count@{m\+Comm\+\_\+bit\+Count}}
+\index{m\+Comm\+\_\+bit\+Count@{m\+Comm\+\_\+bit\+Count}!m\+Comm.\+c@{m\+Comm.\+c}}
+\subsubsection[{m\+Comm\+\_\+bit\+Count}]{\setlength{\rightskip}{0pt plus 5cm}bank0 uint8\+\_\+t m\+Comm\+\_\+bit\+Count}\label{m_comm_8c_a50c798160aefcb5377397e7539edfba5}
+
+
+Definition at line 70 of file m\+Comm.\+c.
+
+\hypertarget{m_comm_8c_a866ab4efa94b4c92fd8874ca7b66fc7e}{}\index{m\+Comm.\+c@{m\+Comm.\+c}!m\+Comm\+\_\+delay\+Count@{m\+Comm\+\_\+delay\+Count}}
+\index{m\+Comm\+\_\+delay\+Count@{m\+Comm\+\_\+delay\+Count}!m\+Comm.\+c@{m\+Comm.\+c}}
+\subsubsection[{m\+Comm\+\_\+delay\+Count}]{\setlength{\rightskip}{0pt plus 5cm}bank0 uint8\+\_\+t m\+Comm\+\_\+delay\+Count}\label{m_comm_8c_a866ab4efa94b4c92fd8874ca7b66fc7e}
+
+
+Definition at line 71 of file m\+Comm.\+c.
+
+\hypertarget{m_comm_8c_ae86cfa6b31746d0229d17e03658fef1c}{}\index{m\+Comm.\+c@{m\+Comm.\+c}!m\+Comm\+\_\+input@{m\+Comm\+\_\+input}}
+\index{m\+Comm\+\_\+input@{m\+Comm\+\_\+input}!m\+Comm.\+c@{m\+Comm.\+c}}
+\subsubsection[{m\+Comm\+\_\+input}]{\setlength{\rightskip}{0pt plus 5cm}{\bf m\+Comm\+\_\+\+Input\+Buffer} m\+Comm\+\_\+input}\label{m_comm_8c_ae86cfa6b31746d0229d17e03658fef1c}
+
+
+Definition at line 64 of file m\+Comm.\+c.
+
+\hypertarget{m_comm_8c_afd46f38648b53444b7698fa364fae15e}{}\index{m\+Comm.\+c@{m\+Comm.\+c}!m\+Comm\+\_\+output@{m\+Comm\+\_\+output}}
+\index{m\+Comm\+\_\+output@{m\+Comm\+\_\+output}!m\+Comm.\+c@{m\+Comm.\+c}}
+\subsubsection[{m\+Comm\+\_\+output}]{\setlength{\rightskip}{0pt plus 5cm}{\bf m\+Comm\+\_\+\+Output\+Vector} m\+Comm\+\_\+output}\label{m_comm_8c_afd46f38648b53444b7698fa364fae15e}
+
+
+Definition at line 63 of file m\+Comm.\+c.
+
+\hypertarget{m_comm_8c_a19d89992e65970b980db12ea6c24555f}{}\index{m\+Comm.\+c@{m\+Comm.\+c}!m\+Comm\+\_\+shift\+Reg@{m\+Comm\+\_\+shift\+Reg}}
+\index{m\+Comm\+\_\+shift\+Reg@{m\+Comm\+\_\+shift\+Reg}!m\+Comm.\+c@{m\+Comm.\+c}}
+\subsubsection[{m\+Comm\+\_\+shift\+Reg}]{\setlength{\rightskip}{0pt plus 5cm}bank0 uint8\+\_\+t m\+Comm\+\_\+shift\+Reg}\label{m_comm_8c_a19d89992e65970b980db12ea6c24555f}
+
+
+Definition at line 69 of file m\+Comm.\+c.
+

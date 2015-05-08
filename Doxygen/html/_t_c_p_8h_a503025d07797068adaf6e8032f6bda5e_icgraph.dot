@@ -1,0 +1,22 @@
+digraph "TCPClose"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="TCPClose",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="closesocket",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_berkeley_a_p_i_8c.html#abe5d5449ec94553dfc9674e26d886b21"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="BerkeleyTCPClientDemo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_main_demo_8h.html#a2f47eed84b265359778d4d1c3a47f322"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_main_demo_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667"];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="BerkeleyTCPServerDemo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_main_demo_8h.html#a85ecc0787bf291b36e4aa7bff6b39157"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="BerkeleyUDPClientDemo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_main_demo_8h.html#a59c55454b90169edc8f242abbc6c815b"];
+  Node6 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="GenericTCPServer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_main_demo_8h.html#a6ba6541eab0d6e2839e8d67452e3ed4e"];
+  Node7 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

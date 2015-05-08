@@ -1,0 +1,108 @@
+\hypertarget{_f_s_01_phys_01_interface_01_template_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+M\+D\+D File System/\+F\+S Phys Interface Template.\+c File Reference}
+\label{_f_s_01_phys_01_interface_01_template_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+M\+D\+D File System/\+F\+S Phys Interface Template.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Microchip/\+M\+D\+D File System/\+F\+S Phys Interface Template.\+c}}
+{\ttfamily \#include \char`\"{}F\+S\+I\+O.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}F\+S\+Defs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}string.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}T\+E\+M\+P\+L\+A\+T\+E\+F\+I\+L\+E.\+h\char`\"{}}\\*
+Include dependency graph for F\+S Phys Interface Template.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_f_s_01_phys_01_interface_01_template_8c_a5051d074e6b2361e58b3ea5585443e25}{Delayms} (\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} milliseconds)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_f_s_01_phys_01_interface_01_template_8c_a9d171519c14fa876602e7a4c6337d47f}{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Media\+Initialize} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_f_s_01_phys_01_interface_01_template_8c_a1a3aee1f0e970f8f9d1243b6ace95c09}{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Media\+Detect} ()
+\item 
+void \hyperlink{_f_s_01_phys_01_interface_01_template_8c_ae2d75d78ccf8bac76862ac9aa4d9d5a0}{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Init\+I\+O} (void)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_f_s_01_phys_01_interface_01_template_8c_a2ef53f05ace400ad4f25653936a6f8ff}{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Sector\+Read} (\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} sector\+\_\+addr, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$buffer)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_f_s_01_phys_01_interface_01_template_8c_a5ca9dd928c8e592247d0f8622aed2fd3}{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Sector\+Write} (\hyperlink{_generic_type_defs_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+R\+D} sector\+\_\+addr, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} $\ast$buffer, \hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} allow\+Write\+To\+Zero)
+\item 
+\hyperlink{_generic_type_defs_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+T\+E} \hyperlink{_f_s_01_phys_01_interface_01_template_8c_a9bab5c6876a08582429acf8cc6d0fe7d}{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Write\+Protect\+State} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_f_s_01_phys_01_interface_01_template_8c_a5051d074e6b2361e58b3ea5585443e25}{}\index{F\+S Phys Interface Template.\+c@{F\+S Phys Interface Template.\+c}!Delayms@{Delayms}}
+\index{Delayms@{Delayms}!F\+S Phys Interface Template.\+c@{F\+S Phys Interface Template.\+c}}
+\subsubsection[{Delayms}]{\setlength{\rightskip}{0pt plus 5cm}void Delayms (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+T\+E}}]{milliseconds}
+\end{DoxyParamCaption}
+)}\label{_f_s_01_phys_01_interface_01_template_8c_a5051d074e6b2361e58b3ea5585443e25}
+
+
+Definition at line 393 of file F\+S Phys Interface Template.\+c.
+
+\hypertarget{_f_s_01_phys_01_interface_01_template_8c_ae2d75d78ccf8bac76862ac9aa4d9d5a0}{}\index{F\+S Phys Interface Template.\+c@{F\+S Phys Interface Template.\+c}!M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Init\+I\+O@{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Init\+I\+O}}
+\index{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Init\+I\+O@{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Init\+I\+O}!F\+S Phys Interface Template.\+c@{F\+S Phys Interface Template.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Init\+I\+O}]{\setlength{\rightskip}{0pt plus 5cm}void M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Init\+I\+O (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_f_s_01_phys_01_interface_01_template_8c_ae2d75d78ccf8bac76862ac9aa4d9d5a0}
+
+
+Definition at line 123 of file F\+S Phys Interface Template.\+c.
+
+\hypertarget{_f_s_01_phys_01_interface_01_template_8c_a1a3aee1f0e970f8f9d1243b6ace95c09}{}\index{F\+S Phys Interface Template.\+c@{F\+S Phys Interface Template.\+c}!M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Media\+Detect@{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Media\+Detect}}
+\index{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Media\+Detect@{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Media\+Detect}!F\+S Phys Interface Template.\+c@{F\+S Phys Interface Template.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Media\+Detect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Media\+Detect (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_f_s_01_phys_01_interface_01_template_8c_a1a3aee1f0e970f8f9d1243b6ace95c09}
+
+
+Definition at line 80 of file F\+S Phys Interface Template.\+c.
+
+\hypertarget{_f_s_01_phys_01_interface_01_template_8c_a9d171519c14fa876602e7a4c6337d47f}{}\index{F\+S Phys Interface Template.\+c@{F\+S Phys Interface Template.\+c}!M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Media\+Initialize@{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Media\+Initialize}}
+\index{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Media\+Initialize@{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Media\+Initialize}!F\+S Phys Interface Template.\+c@{F\+S Phys Interface Template.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Media\+Initialize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Media\+Initialize (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_f_s_01_phys_01_interface_01_template_8c_a9d171519c14fa876602e7a4c6337d47f}
+
+
+Definition at line 157 of file F\+S Phys Interface Template.\+c.
+
+\hypertarget{_f_s_01_phys_01_interface_01_template_8c_a2ef53f05ace400ad4f25653936a6f8ff}{}\index{F\+S Phys Interface Template.\+c@{F\+S Phys Interface Template.\+c}!M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Sector\+Read@{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Sector\+Read}}
+\index{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Sector\+Read@{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Sector\+Read}!F\+S Phys Interface Template.\+c@{F\+S Phys Interface Template.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Sector\+Read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Sector\+Read (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+W\+O\+R\+D}}]{sector\+\_\+addr, }
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{buffer}
+\end{DoxyParamCaption}
+)}\label{_f_s_01_phys_01_interface_01_template_8c_a2ef53f05ace400ad4f25653936a6f8ff}
+
+
+Definition at line 221 of file F\+S Phys Interface Template.\+c.
+
+\hypertarget{_f_s_01_phys_01_interface_01_template_8c_a5ca9dd928c8e592247d0f8622aed2fd3}{}\index{F\+S Phys Interface Template.\+c@{F\+S Phys Interface Template.\+c}!M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Sector\+Write@{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Sector\+Write}}
+\index{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Sector\+Write@{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Sector\+Write}!F\+S Phys Interface Template.\+c@{F\+S Phys Interface Template.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Sector\+Write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Sector\+Write (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+W\+O\+R\+D}}]{sector\+\_\+addr, }
+\item[{{\bf B\+Y\+T\+E} $\ast$}]{buffer, }
+\item[{{\bf B\+Y\+T\+E}}]{allow\+Write\+To\+Zero}
+\end{DoxyParamCaption}
+)}\label{_f_s_01_phys_01_interface_01_template_8c_a5ca9dd928c8e592247d0f8622aed2fd3}
+
+
+Definition at line 294 of file F\+S Phys Interface Template.\+c.
+
+\hypertarget{_f_s_01_phys_01_interface_01_template_8c_a9bab5c6876a08582429acf8cc6d0fe7d}{}\index{F\+S Phys Interface Template.\+c@{F\+S Phys Interface Template.\+c}!M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Write\+Protect\+State@{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Write\+Protect\+State}}
+\index{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Write\+Protect\+State@{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Write\+Protect\+State}!F\+S Phys Interface Template.\+c@{F\+S Phys Interface Template.\+c}}
+\subsubsection[{M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Write\+Protect\+State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+Y\+T\+E} M\+D\+D\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+Write\+Protect\+State (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{_f_s_01_phys_01_interface_01_template_8c_a9bab5c6876a08582429acf8cc6d0fe7d}
+
+
+Definition at line 357 of file F\+S Phys Interface Template.\+c.
+
