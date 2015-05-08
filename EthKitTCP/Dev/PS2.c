@@ -209,50 +209,6 @@ void keyboard_setup(void)
     //---keyboard configuration end---
 }
 
-void ChangeNotificationISR(void)
-{
-    //IFS1bits.CNIF = 0; //clear the interrupt flag just in case
-    //atomically clear the interrupt flag
-    //IFS1CLR = 0x1;
-    values[ChangeState] = PORTD;
-    //int temp = PORTD;
-
-    switch(ChangeState)
-    {
-        case 0:
-            //if(PORTDbits.RD7 == 1)
-            if((values[0] & 0x80)) // mask off all bits but RD7
-            {
-                badkeystart = 1;
-            }
-            else
-            {
-                badkeystart = 0;
-            }
-            //PORTDbits.RD7 = values[0];
-            ChangeState++;
-            break;
-        case 21:
-            //if(PORTDbits.RD7 == 1)
-            if(values[21] & 0x80)
-            {
-                badkeypress = 0;
-            }
-            else
-            {
-                badkeypress = 1;
-            }
-            //PORTDbits.RD7 = values[10];
-            ChangeState = 0;
-            break;
-        default:
-            ChangeState++;
-            break;
-    }
-
-    IFS1CLR = 0x1;
-}
-
 void InputCapture2ISR(void)
 {
     IC2BUF;
@@ -270,7 +226,7 @@ void InputCapture2ISR(void)
     if(PORTDbits.RD9 == 0)
     {
         //then read the data bit
-        badkeypress = 0;
+        //badkeypress = 0;
 
         switch(IC1State)
         {
@@ -291,19 +247,19 @@ void InputCapture2ISR(void)
                         temp = 0;
                     }
 
-                    code = code << 1;
-                    code += temp;
+                    scancode = scancode << 1;
+                    scancode += temp;
                 }
                 
                 //circular buffer insert handling of the ps2Buffer
                 if(ps2BufferNumItems < ps2BufferSize)
                 {
-                    ps2Buffer[ps2BufferEndIndex] = code;
+                    ps2Buffer[ps2BufferEndIndex] = scancode;
                     ps2BufferNumItems++;
 
 
                     KeysToProcess = 1;
-                    code = 0;
+                    scancode = 0;
                     //wrap inside the ps2buffer when writing to the buffer
                     if(ps2BufferEndIndex < ps2BufferSize)
                     {
@@ -322,7 +278,7 @@ void InputCapture2ISR(void)
     }
     else
     {
-        badkeypress = 1;
+        //badkeypress = 1;
     }
 }
 
@@ -337,8 +293,6 @@ void interpretKeypress(void)
     //circular buffer removal handling of the ps2Buffer
     if(ps2BufferNumItems > 0)
     {
-
-
         if( ps2Buffer[ps2BufferStart] == 0xE0 )
         {
             //special key pressed
@@ -1293,7 +1247,7 @@ void CompareTextLines(void)
 
         tempcursor = setandgetCursorLocation(i - (i%4));
 
-        for( j = i - (i % 4) - 1; j < TEXTLINELENGTH; j++)
+        for( j = i - (i % 4) - 1; j < TEXTLINELENGTH && newtextLine[j] != 0; j++)
         {
             textLine[j] = newtextLine[j];
             //here this function should call a print for a space first, then print the characters in the line until the end of the line.
@@ -1335,7 +1289,8 @@ void press_backspace(void)
         }
 
         //copy from cursor location to end of line, shifting by one to compensate for the erased character
-        for(i = textlineindex; i < TEXTLINELENGTH - 1; i++ )
+        //converting this to be until the first 0 in the newtextline
+        for(i = textlineindex; i < TEXTLINELENGTH - 1 ; i++ )
         {
             newtextLine[i] = textLine[i + 1];
         }
