@@ -117,7 +117,7 @@ void interpret_keypress(char temp)
         //}
                         
         //here the code should try to interpret the received command
-        TempProcessLineWrapper();
+        processLine(textLine);
     }
     else if(temp2 == 0x02) // esc key was pressed
     {
@@ -259,6 +259,7 @@ extern void press_F1(void)
 //shift all the characters from there to the end of the text line down
 void press_backspace(void)
 {
+    //uint8_t newtextLine[TEXTLINELENGTH];
     int i = 0;
     if(getTextLineIndex() > 1)
     {
@@ -267,7 +268,7 @@ void press_backspace(void)
         for(i = 0; i < getTextLineIndex(); i++)
         {
             //TEMPORARY COMMENTING
-            //newtextLine[i] = textLine[i];
+            newtextLine[i] = textLine[i];
         }
 
         //copy from cursor location to end of line, shifting by one to compensate for the erased character
@@ -275,7 +276,7 @@ void press_backspace(void)
         for(i = getTextLineIndex(); i < TEXTLINELENGTH - 1 ; i++ )
         {
             //TEMPORARY COMMENTING
-            //newtextLine[i] = textLine[i + 1];
+            newtextLine[i] = textLine[i + 1];
         }
         CompareTextLines(newtextLine);
     }
@@ -303,4 +304,95 @@ extern void placeChar(uint8_t * character)
 
     writechar(character);
 
+}
+
+uint8_t * gettextLine(void)
+{
+    return textLine;
+}
+
+
+//this function compares the two text lines and edits the old text line to equal the new text line
+//to make it work appropriately, edit the newtextLine and call this function.
+void CompareTextLines(char * newtextLine)
+{
+    int i = 0;
+    int j = 0;
+    int tempcursor = 0;
+    for(i = 0; i < TEXTLINELENGTH && textLine[i] == newtextLine[i]; i++)
+    {
+
+    }
+    if(i == TEXTLINELENGTH)
+    {
+        //then there is no difference, we are done
+        return;
+    }
+    else
+    {
+        //then i is now the first difference between two lines.
+        //this solution is alright for now, it does change the entire line from the beginning of changes to the end of the line
+        //but it should go from the beginning of the changes to the end of the changes
+
+        clearchar(i, TEXTLINELENGTH); // maybe i-1?
+
+        tempcursor = setandgetCursorLocation(i - (i%4));
+
+        for( j = i - (i % 4) - 1; j < TEXTLINELENGTH && newtextLine[j] != 0; j++)
+        {
+            textLine[j] = newtextLine[j];
+            //here this function should call a print for a space first, then print the characters in the line until the end of the line.
+
+
+            writechar(keyboard_lookup(newtextLine[j])); // new text line or text line?
+
+            //MoveCursorRight();
+
+            //should the characters be printed first or the cursorlocation increased first?
+            //does the cursor location really need to be increased?
+            if(tempcursor < 7499)
+            {
+                tempcursor++;
+            }
+            else
+            {
+                tempcursor = 0;
+            }
+            //this increment may be incorrect, it can be removed
+            //LineLocationEnd++;
+            setandgetCursorLocation(tempcursor);
+
+        }
+        //this is a maybe, attempt to fix the delete issue
+        setandgetCursorLocation(tempcursor-1);
+    }
+
+}
+
+extern void clearTextLine(void)
+{
+    int i = 0;
+    for(i = 0; i < TEXTLINELENGTH; i++) // iterates and clears the line
+    {
+        textLine[i] = 0;
+    }
+}
+
+extern void addCharToTextLine(char temp2)
+{
+    textLine[getTextLineIndex()] = temp2;
+
+    //then write the character to the screen
+
+    //writechar(keyboard_lookup(textLine[textlineindex]), cursor_x, cursor_y);
+    placeChar(keyboard_lookup(textLine[getTextLineIndex()]));
+
+    //increase index
+    setTextLineIndex(getTextLineIndex() + 1);
+    //textlineindex++;
+}
+
+extern void TempProcessLineWrapper(void)
+{
+    
 }

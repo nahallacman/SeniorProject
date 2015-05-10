@@ -53,18 +53,14 @@ extern void invertShiftPressed(void);
 
 extern void TempProcessLineWrapper(void);
 
-#define TEXTLINELENGTH 1024
-//buffer for line, should probably be moved later
-uint8_t textLine[TEXTLINELENGTH];
-
-
-//function for comparing the two text lines and updating the screen accordingly
-void CompareTextLines(char * newtextLine);
 
 
 
-uint8_t * gettextLine(void);
-//int cursorlocation = 0;
+
+
+
+
+
 
 
 
