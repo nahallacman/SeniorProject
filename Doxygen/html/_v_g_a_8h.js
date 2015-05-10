@@ -14,7 +14,7 @@ var _v_g_a_8h =
     [ "ShiftScreenUp", "_v_g_a_8h.html#a819307bdf0c8c8a841a2305637d102c2", null ],
     [ "shiftTextLeft", "_v_g_a_8h.html#a1ff9068d637ee1bf5b357186033e3623", null ],
     [ "shiftTextRight", "_v_g_a_8h.html#ab5c64bd9429e61e28c56cc7b35fb1f88", null ],
-    [ "writechar", "_v_g_a_8h.html#a138be10f3475a5272dc866ab13d34ebe", null ],
+    [ "writechar", "_v_g_a_8h.html#a499c31fd29b2bb4509a35860bde799b6", null ],
     [ "writefullhorizontalline", "_v_g_a_8h.html#a404c4fd746b185b08d63449a9c14049c", null ],
     [ "writefullverticalline", "_v_g_a_8h.html#aa99b12cab66ebdbdf0d5b9c2e00a9c15", null ],
     [ "writehorizontalline", "_v_g_a_8h.html#a822a698d29ce7edb349352481b65db74", null ],
