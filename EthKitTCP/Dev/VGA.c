@@ -315,18 +315,21 @@ void writepixel(int x, int y)
 }
 
 //uses 8 characters in a 8x8 grid for characters, puts that character at position starting with x, y
-//void writechar(uint8_t * character, int x, int y)
+//extern void writechar(uint8_t * character, int x, int y)
 
 //to make this function work appropriately, alter the CursorLocation to where you want to print, then call writechar()
-extern void writechar(uint8_t * character)
+//extern void writechar(uint8_t * character)
+extern void writechar(uint8_t * character, int x, int y)
 {
     int i = 0;
-    //if(x < VGA_X_MAX && y < VGA_Y_MAX)
-    //{
+    if(x < VGA_X_MAX && y < VGA_Y_MAX)
+    {
         int y_char = 0;
         int x_char = 0;
-        y_char = (getCursorLocation() / 100);
-        x_char =  getCursorLocation() - (y_char * 100);
+        //y_char = (getCursorLocation() / 100);
+        //x_char =  getCursorLocation() - (y_char * 100);
+        y_char = y;
+        x_char = x;
         int x_offset = x_char * 8;
         int y_offset = y_char * 8;
         
@@ -406,7 +409,7 @@ extern void writechar(uint8_t * character)
             VGA_VideoMemory[Byte] |= Bits;
             Byte += 25; // go down one line
         }
-    //}
+    }
 }
 
 
@@ -498,7 +501,7 @@ void BlinkCursor(void)
     uint8_t fullchar[8] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
 
     //writechar(fullchar, x_char * 8, y_char * 8);
-    writechar(fullchar);
+    writechar(fullchar, x_char, y_char);
 
 }
 

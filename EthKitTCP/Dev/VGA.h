@@ -45,10 +45,10 @@ void writeverticalline(int x1, int x2);
 
 void writepixel(int x, int y);
 
-//void writechar(uint8_t * character, int x, int y);
+extern void writechar(uint8_t * character, int x, int y);
 
 //this is extern so it can be controlled from PS2 stuff, probably shouldn't be permenant
-extern void writechar(uint8_t * character);
+//extern void writechar(uint8_t * character);
 extern void clearchar(int start, int end);
 
 

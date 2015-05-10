@@ -19,6 +19,5 @@ var cursor_8c =
     [ "resetPlaceCharLocation", "cursor_8c.html#aeca62116778bb6c13245089867ded8d9", null ],
     [ "setandgetCursorLocation", "cursor_8c.html#a3a7d62c4f2983e6e2e2f4da56f36befc", null ],
     [ "setCursorLocation", "cursor_8c.html#acd4b06887a4337467e744f693a2df6a9", null ],
-    [ "setTextLineIndex", "cursor_8c.html#a9d645a8f1ad2b03ad027accb3bcf0db4", null ],
-    [ "TempProcessLineWrapper", "cursor_8c.html#a0f63d5a4267ee5aef23c951d50458049", null ]
+    [ "setTextLineIndex", "cursor_8c.html#a9d645a8f1ad2b03ad027accb3bcf0db4", null ]
 ];

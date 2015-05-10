@@ -16,11 +16,6 @@ extern void setCursorLocation(int newCursorLocation)
     CursorLocation = newCursorLocation;
 }
 
-//to add:
-//move cursor left
-//right
-//up
-//down
 void MoveCursorLeft(void)
 {
     if(CursorLocation == 0)
@@ -295,7 +290,7 @@ extern void placeChar(uint8_t * character)
     }
     LineLocationEnd++;
 
-    writechar(character);
+    writechar(character, getCursorLocation() - (getCursorLocation() / 100 ) , getCursorLocation() / 100);
 
 }
 
@@ -337,7 +332,7 @@ void CompareTextLines(char * newtextLine)
             //here this function should call a print for a space first, then print the characters in the line until the end of the line.
 
 
-            writechar(keyboard_lookup(newtextLine[j])); // new text line or text line?
+            writechar(keyboard_lookup(newtextLine[j]), getCursorLocation() - (getCursorLocation() / 100 ) , getCursorLocation() / 100 ); // new text line or text line?
 
             //MoveCursorRight();
 
@@ -383,9 +378,4 @@ extern void addCharToTextLine(char temp2)
     //increase index
     setTextLineIndex(getTextLineIndex() + 1);
     //textlineindex++;
-}
-
-extern void TempProcessLineWrapper(void)
-{
-    
 }

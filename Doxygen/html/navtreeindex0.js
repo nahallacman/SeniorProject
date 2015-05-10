@@ -95,7 +95,6 @@ var NAVTREEINDEX0 =
 "_v_g_a_8h.html#af6a050045ac1451fbb4809441283b2aa":[0,0,0,0,0,0,7,2],
 "_v_g_a_8h_source.html":[0,0,0,0,0,0,7],
 "cursor_8c.html":[0,0,0,0,0,0,0],
-"cursor_8c.html#a0f63d5a4267ee5aef23c951d50458049":[0,0,0,0,0,0,0,20],
 "cursor_8c.html#a29bab149333c107091c1b286e05ac315":[0,0,0,0,0,0,0,12],
 "cursor_8c.html#a3a060fca8f2dde6562e2f243414d47d7":[0,0,0,0,0,0,0,5],
 "cursor_8c.html#a3a7d62c4f2983e6e2e2f4da56f36befc":[0,0,0,0,0,0,0,17],
