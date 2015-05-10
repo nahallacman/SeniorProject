@@ -1,11 +1,8 @@
 var _p_s2_8h =
 [
     [ "ps2BufferSize", "_p_s2_8h.html#a4b8578b52cb39af2122c5047a8520757", null ],
-    [ "TEXTLINELENGTH", "_p_s2_8h.html#a01882b20b26727e0c233e94a4c863459", null ],
     [ "BlinkCursor", "_p_s2_8h.html#acea8175bc07b5d0ba9f3f78d0c00c4a7", null ],
     [ "ClearScreen", "_p_s2_8h.html#a5473c6cfd6c580642133754e141ca556", null ],
-    [ "CompareTextLines", "_p_s2_8h.html#a8f55cca82244df1cf78f0a826f816f75", null ],
-    [ "gettextLine", "_p_s2_8h.html#a3a060fca8f2dde6562e2f243414d47d7", null ],
     [ "invertShiftPressed", "_p_s2_8h.html#a6d4d2e35c21e102669b9fdf8a3858e99", null ],
     [ "keyboard_lookup", "_p_s2_8h.html#ae311e9417c9347d550643de4daea45e5", null ],
     [ "keyboard_setup", "_p_s2_8h.html#a1c9949e161f05ecf2ba74181c4fdd1af", null ],
@@ -32,6 +29,5 @@ var _p_s2_8h =
     [ "ps2BufferStart", "_p_s2_8h.html#adb5fec5145465bea5af5eec1e194a1b7", null ],
     [ "scancode", "_p_s2_8h.html#ab100c3940bcc51c739758e8ab77b5330", null ],
     [ "ShiftPressed", "_p_s2_8h.html#a2083ba3e6f9cee8c4694d88b456e6d24", null ],
-    [ "textLine", "_p_s2_8h.html#a78a502c5ea8364e4c06aea5ff4361c8f", null ],
     [ "values", "_p_s2_8h.html#a2725544e7a06f2eb04622b77b3b57ac7", null ]
 ];

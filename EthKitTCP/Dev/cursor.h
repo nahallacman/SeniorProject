@@ -15,9 +15,7 @@
 extern "C" {
 #endif
 
-
-
-    
+ 
 extern int setandgetCursorLocation(int newcursorLocation);
 extern int getCursorLocation();
 extern void setCursorLocation(int newCursorLocation);
@@ -66,22 +64,17 @@ char IPTarget[16];
 //defining the line length for the printed text line and the newtextLine
 #define TEXTLINELENGTH 1024
 
-
+//buffer for line
+uint8_t textLine[TEXTLINELENGTH];
 uint8_t newtextLine[TEXTLINELENGTH];
 
 void press_backspace(void);
 
 char * getIPTarget();
 
-
 extern void placeChar(uint8_t * character);
 
 uint8_t * gettextLine(void);
-//int cursorlocation = 0;
-
-//#define TEXTLINELENGTH 1024
-//buffer for line, should probably be moved later
-uint8_t textLine[TEXTLINELENGTH];
 
 //function for comparing the two text lines and updating the screen accordingly
 void CompareTextLines(char * newtextLine);

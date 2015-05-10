@@ -1,8 +1,10 @@
 var cursor_8h =
 [
     [ "TEXTLINELENGTH", "cursor_8h.html#a01882b20b26727e0c233e94a4c863459", null ],
+    [ "CompareTextLines", "cursor_8h.html#a8f55cca82244df1cf78f0a826f816f75", null ],
     [ "getCursorLocation", "cursor_8h.html#a5a986a90cba784aeb2039295362a6282", null ],
     [ "getIPTarget", "cursor_8h.html#abe73bcf82b19d9727d29850864eac8b8", null ],
+    [ "gettextLine", "cursor_8h.html#a3a060fca8f2dde6562e2f243414d47d7", null ],
     [ "getTextLineIndex", "cursor_8h.html#a5c5543d701a9dae494df5b00cc931377", null ],
     [ "interpret_keypress", "cursor_8h.html#a467458fc0085539f52030fabf3dd9286", null ],
     [ "MoveCursorDown", "cursor_8h.html#ac8e40e0b08b773c5f3fc0b303fe562de", null ],
@@ -21,5 +23,6 @@ var cursor_8h =
     [ "LineLocationEnd", "cursor_8h.html#a9edd5050c7ee33f44c008e98933880e0", null ],
     [ "LineLocationStart", "cursor_8h.html#a96a71abb37405cb6ad878a4adac6d177", null ],
     [ "newtextLine", "cursor_8h.html#a4eddb259269e1401df5b56698f231263", null ],
+    [ "textLine", "cursor_8h.html#a78a502c5ea8364e4c06aea5ff4361c8f", null ],
     [ "textlineindex", "cursor_8h.html#a03356a6fa7a8df1d0db97d710cd234ee", null ]
 ];

@@ -108,14 +108,7 @@ void interpret_keypress(char temp)
 
     //this is where the non-printable keys are processed.
     if(temp2 == 0x01)// enter key was pressed
-    {
-                        
-        //int i = 0;
-       // for(i = 0; i < textlineindex; i++)
-        //{
-        //    placeChar(keyboard_lookup(textLine[i]));
-        //}
-                        
+    {                       
         //here the code should try to interpret the received command
         processLine(textLine);
     }
