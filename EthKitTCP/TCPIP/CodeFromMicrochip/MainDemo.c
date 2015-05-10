@@ -348,7 +348,7 @@ int main(void)
         {
 
             //process keystrokes
-            interpretKeypress();
+            removeFromPS2Buffer();
 
             //this part has not been tested, but the intent is to interpet keypresses, and on enter end the whole line over TCPIP
             //this won't work as coded, it needs updates, but it should be relatively simple to do this

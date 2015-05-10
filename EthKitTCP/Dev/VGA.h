@@ -13,7 +13,8 @@
 //#include "PS2Common.h"
 #include "TestCommon.h"
 //#include "PS2.h"
- 
+//#include "cursor.h"
+
 #ifdef	__cplusplus
 extern "C" {
 #endif
@@ -50,17 +51,14 @@ void writepixel(int x, int y);
 extern void writechar(uint8_t * character);
 extern void clearchar(int start, int end);
 
-void resetPlaceCharLocation(void);
-extern void setCursorLocation(int newcursorLocation);
+
+//extern void setCursorLocation(int newcursorLocation);
 
 void ClearScreen(void);
 
-void MoveCursorLeft(void);
-void MoveCursorRight(void);
-void MoveCursorUp(void);
-void MoveCursorDown(void);
+extern int CursorLocation;
 
-extern void placeChar(uint8_t * character);
+
 
 void ShiftScreenUp(void);
 void ShiftScreenDown(void);
@@ -79,12 +77,8 @@ void printTestScreen(void);
 #define LineWidth 25
 //int LineWidth;
 
-//int CursorLocation = 0;
-int CursorLocation;
-//int LineLocationStart = 0;
-int LineLocationStart;
-//int LineLocationEnd = 1;
-int LineLocationEnd;
+
+
 
 //int blinkstate = 0;
 int blinkstate;

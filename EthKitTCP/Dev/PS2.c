@@ -284,7 +284,7 @@ void InputCapture2ISR(void)
 
 #endif
 
-void interpretKeypress(void)
+void removeFromPS2Buffer(void)
 {
     int i = 0;
     uint8_t temp = 0;
@@ -346,57 +346,7 @@ void interpretKeypress(void)
             //testing a write char
             //writechar(keyboard_lookup(temp2), 8, 8);
 
-            //first translate the keypress
-            temp2 = translateKeypress(temp);
-            // this is the hinge for the keyboard keypresses
-
-
-			//this is where the non-printable keys are processed.
-            if(temp2 == 0x01)// enter key was pressed
-            {
-				/*
-                int i = 0;
-                for(i = 0; i < textlineindex; i++)
-                {
-                    placeChar(keyboard_lookup(textLine[i]));
-                }
-				*/
-                //here the code should try to interpret the received command
-                processLine(textLine);
-            }
-            else if(temp2 == 0x02) // esc key was pressed
-            {
-                ClearScreen(); // esc will clear the screen for now
-                int i = 0;
-                for(i = 0; i < 1024; i++) // iterates and clears the line
-                {
-                    textLine[i] = 0;
-                }
-                textlineindex = 0; // reset the index
-                resetPlaceCharLocation(); // reset the screen beginning
-            }
-            else if(temp2 == 0x03) // caps lock was pressed
-            {
-                ShiftPressed = !ShiftPressed;
-            }
-            else if(temp2 == 0x04) // backspace pressed
-            {
-
-                press_backspace();
-            }
-            else if(temp2 != 0)  //if there is no special key pressed
-            {   //then add it to the textLine buffer and increase the index
-                textLine[textlineindex] = temp2;
-
-                //then write the character to the screen
-
-                //writechar(keyboard_lookup(textLine[textlineindex]), cursor_x, cursor_y);
-                placeChar(keyboard_lookup(textLine[textlineindex]));
-
-                //increase index
-                textlineindex++;
-
-            }
+            interpret_keypress(temp);
 
             //make buffer circular
             if(ps2BufferStart < ps2BufferSize )
@@ -408,9 +358,6 @@ void interpretKeypress(void)
                 ps2BufferStart = 0;
             }
         }
-
-
-
     }
     else
     {
@@ -420,7 +367,7 @@ void interpretKeypress(void)
 }
 
 //this function translates a passed in scan code to ascii (or maybe unicode?) character values that will be used to get the correct bitmaps for printing characters to the screen
-uint8_t translateKeypress(uint8_t translate)
+extern uint8_t translateKeypress(uint8_t translate)
 {
     uint8_t temp = 0;
     int i = 0;
@@ -558,12 +505,7 @@ uint8_t translateKeypress(uint8_t translate)
 			break;
 		case 0x05: // F1
 			temp = 0;
-                        //copy iptargetset command with default IP address to newtextLine
-                        for(i = 0; i < DefaultIpTargetCommandLength + 1; i++)
-                        {
-                            newtextLine[i] = defaultIPTargetCommand[i];
-                        }
-			CompareTextLines();
+                        press_F1();
 			break;
 		case 0x06: // F2
 			temp = 0;
@@ -1105,90 +1047,6 @@ uint8_t * gettextLine(void)
     return textLine;
 }
 
-void processLine(uint8_t * textLinePtr)
-{
-    int valid_command;
-    int z;
-    int z2;
-    valid_command = 1;
-	
-    for(z = 0; z < 11 && valid_command == 1; z++)
-    {
-            if(textLinePtr[z] != commandIPTargetSet[z])
-            {
-                    valid_command = 0;
-            }
-    }
-    //check if the last character is a space
-    if(' ' != textLinePtr[11])
-    {
-        valid_command = 0;
-    }
-    else
-    {
-        //then get the next ___.___.___.___(null) 15 characters
-        //textLinePtr[12] to textLinePtr[27]
-        for(z2 = 0, z = 12; textLinePtr[z] != ' ' && z < 28; z++, z2++)
-        {
-            IPTarget[z2] = textLinePtr[z];
-        }
-    }
-
-    if(valid_command == 0)
-    {
-        valid_command = 1;
-        for(z = 0; z < 2 && valid_command == 1; z++)
-        {
-                if(textLinePtr[z] != commandLS[z])
-                {
-                        valid_command = 0;
-                }
-        }
-        //check if the last character is a space
-        if(' ' != textLinePtr[2])
-        {
-            valid_command = 0;
-        }
-    }
-    if(valid_command == 0)
-    {
-        valid_command = 1;
-        for(z = 0; z < 2 && valid_command == 1; z++)
-        {
-                if(textLinePtr[z] != commandCD[z])
-                {
-                        valid_command = 0;
-                }
-        }
-        //check if the last character is a space
-        if(' ' != textLinePtr[2])
-        {
-            valid_command = 0;
-        }
-    }
-
-
-    if(valid_command == 1)
-    {
-            placeChar(keyboard_lookup('S'));
-            placeChar(keyboard_lookup('u'));
-            placeChar(keyboard_lookup('c'));
-            placeChar(keyboard_lookup('c'));
-            placeChar(keyboard_lookup('e'));
-            placeChar(keyboard_lookup('s'));
-            placeChar(keyboard_lookup('s'));
-            //interpret command
-
-    }
-    else
-    {
-            placeChar(keyboard_lookup('F'));
-            placeChar(keyboard_lookup('a'));
-            placeChar(keyboard_lookup('i'));
-            placeChar(keyboard_lookup('l'));
-			//print error message?
-    }	
-}
 
 #ifndef __Microcontroller
 //this test agitator takes a scan code and adds it to the ps2Buffer so it can be processed with interpretKeypress
@@ -1216,14 +1074,11 @@ void testKeyboardAgitator(uint8_t scanCode)
 }
 #endif
 
-char * getIPTarget()
-{
-    return IPTarget;
-}
+
 
 //this function compares the two text lines and edits the old text line to equal the new text line
 //to make it work appropriately, edit the newtextLine and call this function.
-void CompareTextLines(void)
+void CompareTextLines(char * newtextLine)
 {
     int i = 0;
     int j = 0;
@@ -1278,27 +1133,36 @@ void CompareTextLines(void)
 
 }
 
-//take out a character at the cursor location
-//shift all the characters from there to the end of the text line down
-void press_backspace(void)
+
+extern void invertShiftPressed(void)
+{
+    ShiftPressed = !ShiftPressed;
+}
+
+extern void clearTextLine(void)
 {
     int i = 0;
-    if(textlineindex > 1)
+    for(i = 0; i < TEXTLINELENGTH; i++) // iterates and clears the line
     {
-        textlineindex--;
-        //textlineindex--;
-        for(i = 0; i < textlineindex; i++)
-        {
-            newtextLine[i] = textLine[i];
-        }
-
-        //copy from cursor location to end of line, shifting by one to compensate for the erased character
-        //converting this to be until the first 0 in the newtextline
-        for(i = textlineindex; i < TEXTLINELENGTH - 1 ; i++ )
-        {
-            newtextLine[i] = textLine[i + 1];
-        }
-        CompareTextLines();
+        textLine[i] = 0;
     }
+}
 
+extern void addCharToTextLine(char temp2)
+{
+    textLine[getTextLineIndex()] = temp2;
+
+    //then write the character to the screen
+
+    //writechar(keyboard_lookup(textLine[textlineindex]), cursor_x, cursor_y);
+    placeChar(keyboard_lookup(textLine[getTextLineIndex()]));
+
+    //increase index
+    setTextLineIndex(getTextLineIndex() + 1);
+    //textlineindex++;
+}
+
+extern void TempProcessLineWrapper(void)
+{
+    processLine(textLine);
 }

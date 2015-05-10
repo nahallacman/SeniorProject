@@ -1,0 +1,416 @@
+\hypertarget{cursor_8h}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Dev/cursor.h File Reference}
+\label{cursor_8h}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Dev/cursor.\+h@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Dev/cursor.\+h}}
+{\ttfamily \#include \char`\"{}Test\+Common.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+Include dependency graph for cursor.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{cursor_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{cursor_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{cursor_8h_a01882b20b26727e0c233e94a4c863459}{T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H}~1024
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{cursor_8h_a3a7d62c4f2983e6e2e2f4da56f36befc}{setandget\+Cursor\+Location} (int newcursor\+Location)
+\item 
+int \hyperlink{cursor_8h_a5a986a90cba784aeb2039295362a6282}{get\+Cursor\+Location} ()
+\item 
+void \hyperlink{cursor_8h_acd4b06887a4337467e744f693a2df6a9}{set\+Cursor\+Location} (int new\+Cursor\+Location)
+\item 
+void \hyperlink{cursor_8h_a7804524381705ec22e0efc3a1326dd69}{Move\+Cursor\+Left} (void)
+\item 
+void \hyperlink{cursor_8h_ac177699cfeda15e4b887864f6eacc5e3}{Move\+Cursor\+Right} (void)
+\item 
+void \hyperlink{cursor_8h_ae9337ec3c6ea47f10d329cd99d7a29f9}{Move\+Cursor\+Up} (void)
+\item 
+void \hyperlink{cursor_8h_ac8e40e0b08b773c5f3fc0b303fe562de}{Move\+Cursor\+Down} (void)
+\item 
+void \hyperlink{cursor_8h_a467458fc0085539f52030fabf3dd9286}{interpret\+\_\+keypress} (char temp)
+\item 
+void \hyperlink{cursor_8h_aeca62116778bb6c13245089867ded8d9}{reset\+Place\+Char\+Location} (void)
+\item 
+void \hyperlink{cursor_8h_a9d645a8f1ad2b03ad027accb3bcf0db4}{set\+Text\+Line\+Index} (int newtextlineindex)
+\item 
+int \hyperlink{cursor_8h_a5c5543d701a9dae494df5b00cc931377}{get\+Text\+Line\+Index} (void)
+\item 
+void \hyperlink{cursor_8h_aee82caceba560f01202c4459ba4497c7}{process\+Line} (uint8\+\_\+t $\ast$text\+Line\+Ptr)
+\item 
+void \hyperlink{cursor_8h_afb368b3eb12755cae8787b96e467e0e3}{press\+\_\+backspace} (void)
+\item 
+char $\ast$ \hyperlink{cursor_8h_abe73bcf82b19d9727d29850864eac8b8}{get\+I\+P\+Target} ()
+\item 
+void \hyperlink{cursor_8h_a29bab149333c107091c1b286e05ac315}{place\+Char} (uint8\+\_\+t $\ast$character)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{cursor_8h_a06590bd84e8fca8ad5292a6e5ca50890}{Cursor\+Location}
+\item 
+int \hyperlink{cursor_8h_a96a71abb37405cb6ad878a4adac6d177}{Line\+Location\+Start}
+\item 
+int \hyperlink{cursor_8h_a9edd5050c7ee33f44c008e98933880e0}{Line\+Location\+End}
+\item 
+int \hyperlink{cursor_8h_a03356a6fa7a8df1d0db97d710cd234ee}{textlineindex}
+\item 
+char \hyperlink{cursor_8h_aa4e0d20faf2f41acbf49d137715ba813}{I\+P\+Target} \mbox{[}16\mbox{]}
+\item 
+uint8\+\_\+t \hyperlink{cursor_8h_a4eddb259269e1401df5b56698f231263}{newtext\+Line} \mbox{[}\hyperlink{_p_s2_8h_a01882b20b26727e0c233e94a4c863459}{T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{cursor_8h_a01882b20b26727e0c233e94a4c863459}{}\index{cursor.\+h@{cursor.\+h}!T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H@{T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H}}
+\index{T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H@{T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H}!cursor.\+h@{cursor.\+h}}
+\subsubsection[{T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H~1024}\label{cursor_8h_a01882b20b26727e0c233e94a4c863459}
+
+
+Definition at line 67 of file cursor.\+h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{cursor_8h_a5a986a90cba784aeb2039295362a6282}{}\index{cursor.\+h@{cursor.\+h}!get\+Cursor\+Location@{get\+Cursor\+Location}}
+\index{get\+Cursor\+Location@{get\+Cursor\+Location}!cursor.\+h@{cursor.\+h}}
+\subsubsection[{get\+Cursor\+Location}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Cursor\+Location (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{cursor_8h_a5a986a90cba784aeb2039295362a6282}
+
+
+Definition at line 9 of file cursor.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cursor_8h_a5a986a90cba784aeb2039295362a6282_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cursor_8h_abe73bcf82b19d9727d29850864eac8b8}{}\index{cursor.\+h@{cursor.\+h}!get\+I\+P\+Target@{get\+I\+P\+Target}}
+\index{get\+I\+P\+Target@{get\+I\+P\+Target}!cursor.\+h@{cursor.\+h}}
+\subsubsection[{get\+I\+P\+Target}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+I\+P\+Target (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{cursor_8h_abe73bcf82b19d9727d29850864eac8b8}
+
+
+Definition at line 285 of file cursor.\+c.
+
+\hypertarget{cursor_8h_a5c5543d701a9dae494df5b00cc931377}{}\index{cursor.\+h@{cursor.\+h}!get\+Text\+Line\+Index@{get\+Text\+Line\+Index}}
+\index{get\+Text\+Line\+Index@{get\+Text\+Line\+Index}!cursor.\+h@{cursor.\+h}}
+\subsubsection[{get\+Text\+Line\+Index}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Text\+Line\+Index (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{cursor_8h_a5c5543d701a9dae494df5b00cc931377}
+
+
+Definition at line 155 of file cursor.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cursor_8h_a5c5543d701a9dae494df5b00cc931377_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cursor_8h_a467458fc0085539f52030fabf3dd9286}{}\index{cursor.\+h@{cursor.\+h}!interpret\+\_\+keypress@{interpret\+\_\+keypress}}
+\index{interpret\+\_\+keypress@{interpret\+\_\+keypress}!cursor.\+h@{cursor.\+h}}
+\subsubsection[{interpret\+\_\+keypress}]{\setlength{\rightskip}{0pt plus 5cm}void interpret\+\_\+keypress (
+\begin{DoxyParamCaption}
+\item[{char}]{temp}
+\end{DoxyParamCaption}
+)}\label{cursor_8h_a467458fc0085539f52030fabf3dd9286}
+
+
+Definition at line 101 of file cursor.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cursor_8h_a467458fc0085539f52030fabf3dd9286_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{cursor_8h_a467458fc0085539f52030fabf3dd9286_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cursor_8h_ac8e40e0b08b773c5f3fc0b303fe562de}{}\index{cursor.\+h@{cursor.\+h}!Move\+Cursor\+Down@{Move\+Cursor\+Down}}
+\index{Move\+Cursor\+Down@{Move\+Cursor\+Down}!cursor.\+h@{cursor.\+h}}
+\subsubsection[{Move\+Cursor\+Down}]{\setlength{\rightskip}{0pt plus 5cm}void Move\+Cursor\+Down (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{cursor_8h_ac8e40e0b08b773c5f3fc0b303fe562de}
+
+
+Definition at line 77 of file cursor.\+c.
+
+\hypertarget{cursor_8h_a7804524381705ec22e0efc3a1326dd69}{}\index{cursor.\+h@{cursor.\+h}!Move\+Cursor\+Left@{Move\+Cursor\+Left}}
+\index{Move\+Cursor\+Left@{Move\+Cursor\+Left}!cursor.\+h@{cursor.\+h}}
+\subsubsection[{Move\+Cursor\+Left}]{\setlength{\rightskip}{0pt plus 5cm}void Move\+Cursor\+Left (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{cursor_8h_a7804524381705ec22e0efc3a1326dd69}
+
+
+Definition at line 24 of file cursor.\+c.
+
+\hypertarget{cursor_8h_ac177699cfeda15e4b887864f6eacc5e3}{}\index{cursor.\+h@{cursor.\+h}!Move\+Cursor\+Right@{Move\+Cursor\+Right}}
+\index{Move\+Cursor\+Right@{Move\+Cursor\+Right}!cursor.\+h@{cursor.\+h}}
+\subsubsection[{Move\+Cursor\+Right}]{\setlength{\rightskip}{0pt plus 5cm}void Move\+Cursor\+Right (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{cursor_8h_ac177699cfeda15e4b887864f6eacc5e3}
+
+
+Definition at line 45 of file cursor.\+c.
+
+\hypertarget{cursor_8h_ae9337ec3c6ea47f10d329cd99d7a29f9}{}\index{cursor.\+h@{cursor.\+h}!Move\+Cursor\+Up@{Move\+Cursor\+Up}}
+\index{Move\+Cursor\+Up@{Move\+Cursor\+Up}!cursor.\+h@{cursor.\+h}}
+\subsubsection[{Move\+Cursor\+Up}]{\setlength{\rightskip}{0pt plus 5cm}void Move\+Cursor\+Up (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{cursor_8h_ae9337ec3c6ea47f10d329cd99d7a29f9}
+
+
+Definition at line 61 of file cursor.\+c.
+
+\hypertarget{cursor_8h_a29bab149333c107091c1b286e05ac315}{}\index{cursor.\+h@{cursor.\+h}!place\+Char@{place\+Char}}
+\index{place\+Char@{place\+Char}!cursor.\+h@{cursor.\+h}}
+\subsubsection[{place\+Char}]{\setlength{\rightskip}{0pt plus 5cm}void place\+Char (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{character}
+\end{DoxyParamCaption}
+)}\label{cursor_8h_a29bab149333c107091c1b286e05ac315}
+
+
+Definition at line 290 of file cursor.\+c.
+
+\hypertarget{cursor_8h_afb368b3eb12755cae8787b96e467e0e3}{}\index{cursor.\+h@{cursor.\+h}!press\+\_\+backspace@{press\+\_\+backspace}}
+\index{press\+\_\+backspace@{press\+\_\+backspace}!cursor.\+h@{cursor.\+h}}
+\subsubsection[{press\+\_\+backspace}]{\setlength{\rightskip}{0pt plus 5cm}void press\+\_\+backspace (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{cursor_8h_afb368b3eb12755cae8787b96e467e0e3}
+
+
+Definition at line 260 of file cursor.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cursor_8h_afb368b3eb12755cae8787b96e467e0e3_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cursor_8h_afb368b3eb12755cae8787b96e467e0e3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cursor_8h_aee82caceba560f01202c4459ba4497c7}{}\index{cursor.\+h@{cursor.\+h}!process\+Line@{process\+Line}}
+\index{process\+Line@{process\+Line}!cursor.\+h@{cursor.\+h}}
+\subsubsection[{process\+Line}]{\setlength{\rightskip}{0pt plus 5cm}void process\+Line (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{text\+Line\+Ptr}
+\end{DoxyParamCaption}
+)}\label{cursor_8h_aee82caceba560f01202c4459ba4497c7}
+
+
+Definition at line 161 of file cursor.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cursor_8h_aee82caceba560f01202c4459ba4497c7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cursor_8h_aee82caceba560f01202c4459ba4497c7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cursor_8h_aeca62116778bb6c13245089867ded8d9}{}\index{cursor.\+h@{cursor.\+h}!reset\+Place\+Char\+Location@{reset\+Place\+Char\+Location}}
+\index{reset\+Place\+Char\+Location@{reset\+Place\+Char\+Location}!cursor.\+h@{cursor.\+h}}
+\subsubsection[{reset\+Place\+Char\+Location}]{\setlength{\rightskip}{0pt plus 5cm}void reset\+Place\+Char\+Location (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{cursor_8h_aeca62116778bb6c13245089867ded8d9}
+
+
+Definition at line 144 of file cursor.\+c.
+
+\hypertarget{cursor_8h_a3a7d62c4f2983e6e2e2f4da56f36befc}{}\index{cursor.\+h@{cursor.\+h}!setandget\+Cursor\+Location@{setandget\+Cursor\+Location}}
+\index{setandget\+Cursor\+Location@{setandget\+Cursor\+Location}!cursor.\+h@{cursor.\+h}}
+\subsubsection[{setandget\+Cursor\+Location}]{\setlength{\rightskip}{0pt plus 5cm}int setandget\+Cursor\+Location (
+\begin{DoxyParamCaption}
+\item[{int}]{newcursor\+Location}
+\end{DoxyParamCaption}
+)}\label{cursor_8h_a3a7d62c4f2983e6e2e2f4da56f36befc}
+
+
+Definition at line 3 of file cursor.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cursor_8h_a3a7d62c4f2983e6e2e2f4da56f36befc_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cursor_8h_acd4b06887a4337467e744f693a2df6a9}{}\index{cursor.\+h@{cursor.\+h}!set\+Cursor\+Location@{set\+Cursor\+Location}}
+\index{set\+Cursor\+Location@{set\+Cursor\+Location}!cursor.\+h@{cursor.\+h}}
+\subsubsection[{set\+Cursor\+Location}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Cursor\+Location (
+\begin{DoxyParamCaption}
+\item[{int}]{new\+Cursor\+Location}
+\end{DoxyParamCaption}
+)}\label{cursor_8h_acd4b06887a4337467e744f693a2df6a9}
+
+
+Definition at line 14 of file cursor.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cursor_8h_acd4b06887a4337467e744f693a2df6a9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cursor_8h_a9d645a8f1ad2b03ad027accb3bcf0db4}{}\index{cursor.\+h@{cursor.\+h}!set\+Text\+Line\+Index@{set\+Text\+Line\+Index}}
+\index{set\+Text\+Line\+Index@{set\+Text\+Line\+Index}!cursor.\+h@{cursor.\+h}}
+\subsubsection[{set\+Text\+Line\+Index}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Text\+Line\+Index (
+\begin{DoxyParamCaption}
+\item[{int}]{newtextlineindex}
+\end{DoxyParamCaption}
+)}\label{cursor_8h_a9d645a8f1ad2b03ad027accb3bcf0db4}
+
+
+Definition at line 150 of file cursor.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cursor_8h_a9d645a8f1ad2b03ad027accb3bcf0db4_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{cursor_8h_a06590bd84e8fca8ad5292a6e5ca50890}{}\index{cursor.\+h@{cursor.\+h}!Cursor\+Location@{Cursor\+Location}}
+\index{Cursor\+Location@{Cursor\+Location}!cursor.\+h@{cursor.\+h}}
+\subsubsection[{Cursor\+Location}]{\setlength{\rightskip}{0pt plus 5cm}int Cursor\+Location}\label{cursor_8h_a06590bd84e8fca8ad5292a6e5ca50890}
+
+
+Definition at line 26 of file cursor.\+h.
+
+\hypertarget{cursor_8h_aa4e0d20faf2f41acbf49d137715ba813}{}\index{cursor.\+h@{cursor.\+h}!I\+P\+Target@{I\+P\+Target}}
+\index{I\+P\+Target@{I\+P\+Target}!cursor.\+h@{cursor.\+h}}
+\subsubsection[{I\+P\+Target}]{\setlength{\rightskip}{0pt plus 5cm}char I\+P\+Target\mbox{[}16\mbox{]}}\label{cursor_8h_aa4e0d20faf2f41acbf49d137715ba813}
+
+
+Definition at line 61 of file cursor.\+h.
+
+\hypertarget{cursor_8h_a9edd5050c7ee33f44c008e98933880e0}{}\index{cursor.\+h@{cursor.\+h}!Line\+Location\+End@{Line\+Location\+End}}
+\index{Line\+Location\+End@{Line\+Location\+End}!cursor.\+h@{cursor.\+h}}
+\subsubsection[{Line\+Location\+End}]{\setlength{\rightskip}{0pt plus 5cm}int Line\+Location\+End}\label{cursor_8h_a9edd5050c7ee33f44c008e98933880e0}
+
+
+Definition at line 31 of file cursor.\+h.
+
+\hypertarget{cursor_8h_a96a71abb37405cb6ad878a4adac6d177}{}\index{cursor.\+h@{cursor.\+h}!Line\+Location\+Start@{Line\+Location\+Start}}
+\index{Line\+Location\+Start@{Line\+Location\+Start}!cursor.\+h@{cursor.\+h}}
+\subsubsection[{Line\+Location\+Start}]{\setlength{\rightskip}{0pt plus 5cm}int Line\+Location\+Start}\label{cursor_8h_a96a71abb37405cb6ad878a4adac6d177}
+
+
+Definition at line 29 of file cursor.\+h.
+
+\hypertarget{cursor_8h_a4eddb259269e1401df5b56698f231263}{}\index{cursor.\+h@{cursor.\+h}!newtext\+Line@{newtext\+Line}}
+\index{newtext\+Line@{newtext\+Line}!cursor.\+h@{cursor.\+h}}
+\subsubsection[{newtext\+Line}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t newtext\+Line\mbox{[}{\bf T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H}\mbox{]}}\label{cursor_8h_a4eddb259269e1401df5b56698f231263}
+
+
+Definition at line 70 of file cursor.\+h.
+
+\hypertarget{cursor_8h_a03356a6fa7a8df1d0db97d710cd234ee}{}\index{cursor.\+h@{cursor.\+h}!textlineindex@{textlineindex}}
+\index{textlineindex@{textlineindex}!cursor.\+h@{cursor.\+h}}
+\subsubsection[{textlineindex}]{\setlength{\rightskip}{0pt plus 5cm}int textlineindex}\label{cursor_8h_a03356a6fa7a8df1d0db97d710cd234ee}
+
+
+Definition at line 45 of file cursor.\+h.
+

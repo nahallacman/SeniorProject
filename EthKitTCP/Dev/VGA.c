@@ -325,8 +325,8 @@ extern void writechar(uint8_t * character)
     //{
         int y_char = 0;
         int x_char = 0;
-        y_char = (CursorLocation / 100);
-        x_char =  CursorLocation - (y_char * 100);
+        y_char = (getCursorLocation() / 100);
+        x_char =  getCursorLocation() - (y_char * 100);
         int x_offset = x_char * 8;
         int y_offset = y_char * 8;
         
@@ -456,35 +456,11 @@ extern void clearchar(int start, int end)
     //}
 }
 
-extern void placeChar(uint8_t * character)
-{
-    
 
-    if(CursorLocation < 7499)
-    {
-        CursorLocation++;
-    }
-    else
-    {
-        CursorLocation = 0;
-    }
-    LineLocationEnd++;
 
-    writechar(character);
 
-}
 
-void resetPlaceCharLocation(void)
-{
-    CursorLocation = 0;
-    LineLocationEnd = 0;
-}
 
-extern int setandgetCursorLocation(int newcursorLocation)
-{
-     CursorLocation = newcursorLocation;
-     return CursorLocation;
-}
 void ClearScreen(void)
 {
     //clears the screen
@@ -495,74 +471,7 @@ void ClearScreen(void)
     }
 }
 
-void MoveCursorLeft(void)
-{
-    if(CursorLocation == 0)
-    {
-        //do nothing, can't move more left
-    }
-    else 
-    {
-        if(CursorLocation > LineLocationStart - 1)
-        {
-            //move cursor left
-            CursorLocation--;
-        }
-        //else
-        //{
-            //do nothing, the cursor can't go any more left
-        //}
-    }
 
-}
-
-void MoveCursorRight(void)
-{
-    if(CursorLocation < 7499)
-    {
-        if(CursorLocation + 1 < LineLocationEnd)
-        {
-            //move cursor right
-            CursorLocation++;
-        }
-    }
-    else
-    {
-        //do nothing, can't move more right
-    }
-}
-
-void MoveCursorUp(void)
-{
-    if(CursorLocation > 100)
-    {
-        if(CursorLocation - 100 > LineLocationStart)
-        {
-            //move cursor up
-            CursorLocation = CursorLocation - 100;
-        }
-    }
-    else
-    {
-        //do nothing, can't move more up
-    }
-}
-
-void MoveCursorDown(void)
-{
-    if(CursorLocation < 7499)
-    {
-        if(CursorLocation + 100 < LineLocationEnd)
-        {
-            //move cursor up
-            CursorLocation = CursorLocation + 100;
-        }
-    }
-    else
-    {
-        //do nothing, can't move more up
-    }
-}
 
 void BlinkCursor(void)
 {
@@ -584,8 +493,8 @@ void BlinkCursor(void)
     int y_char = 0;
 
 
-    y_char = (CursorLocation / 100);
-    x_char =  CursorLocation - (y_char * 100);
+    y_char = (getCursorLocation() / 100);
+    x_char =  getCursorLocation() - (y_char * 100);
     uint8_t fullchar[8] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
 
     //writechar(fullchar, x_char * 8, y_char * 8);

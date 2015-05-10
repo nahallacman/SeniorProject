@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['keyboard_5flookup',['keyboard_lookup',['../_p_s2_8c.html#ae311e9417c9347d550643de4daea45e5',1,'keyboard_lookup(uint8_t number):&#160;PS2.c'],['../_p_s2_8h.html#ae311e9417c9347d550643de4daea45e5',1,'keyboard_lookup(uint8_t number):&#160;PS2.c']]],
-  ['keyboard_5fsetup',['keyboard_setup',['../_p_s2_8c.html#a1c9949e161f05ecf2ba74181c4fdd1af',1,'keyboard_setup(void):&#160;PS2.c'],['../_p_s2_8h.html#a1c9949e161f05ecf2ba74181c4fdd1af',1,'keyboard_setup(void):&#160;PS2.c']]]
+  ['interpret_5fkeypress',['interpret_keypress',['../cursor_8c.html#a467458fc0085539f52030fabf3dd9286',1,'interpret_keypress(char temp):&#160;cursor.c'],['../cursor_8h.html#a467458fc0085539f52030fabf3dd9286',1,'interpret_keypress(char temp):&#160;cursor.c']]],
+  ['invertshiftpressed',['invertShiftPressed',['../_p_s2_8c.html#a6d4d2e35c21e102669b9fdf8a3858e99',1,'invertShiftPressed(void):&#160;PS2.c'],['../_p_s2_8h.html#a6d4d2e35c21e102669b9fdf8a3858e99',1,'invertShiftPressed(void):&#160;PS2.c']]]
 ];

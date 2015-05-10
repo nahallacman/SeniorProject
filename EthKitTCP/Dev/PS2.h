@@ -12,7 +12,7 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
-
+//#include "cursor.h"
 #include <stdint.h>
 #include "PS2Common.h"
 #include "TestCommon.h"
@@ -49,17 +49,19 @@ int ps2BufferNumItems;
 //flag for shift on/off
 int ShiftPressed;
 
-//defining the line length for the printed text line and the newtextLine
+extern void invertShiftPressed(void);
+
+extern void TempProcessLineWrapper(void);
+
 #define TEXTLINELENGTH 1024
 //buffer for line, should probably be moved later
 uint8_t textLine[TEXTLINELENGTH];
-uint8_t newtextLine[TEXTLINELENGTH];
+
 
 //function for comparing the two text lines and updating the screen accordingly
-void CompareTextLines(void);
+void CompareTextLines(char * newtextLine);
 
-//int textlineindex = 0;
-int textlineindex;
+
 
 uint8_t * gettextLine(void);
 //int cursorlocation = 0;
@@ -233,9 +235,9 @@ uint8_t * keyboard_lookup(uint8_t number);
 
 void keyboard_setup(void);
 
-void interpretKeypress(void);
+void removeFromPS2Buffer(void);
 
-uint8_t translateKeypress(uint8_t);
+extern uint8_t translateKeypress(uint8_t);
 
 
 //trying to link the two files together for testing
@@ -254,7 +256,7 @@ extern void resetPlaceCharLocation(void);
 
 
 
-void press_backspace(void);
+
 
 
 //test code that is excluded when running on the pic32 itself
@@ -262,18 +264,10 @@ void press_backspace(void);
 void testKeyboardAgitator(uint8_t scanCode);
 #endif
 
-void processLine(uint8_t * textLinePtr);
-static const uint8_t commandIPTargetSet[] = "iptargetset";
-static const uint8_t commandLS[] = "ls";
-static const uint8_t commandCD[] = "cd";
-#ifdef __Microcontroller
-char IPTarget[16] = "192.168.11.56";
-#define DefaultIpTargetCommandLength 26
-static char defaultIPTargetCommand[DefaultIpTargetCommandLength] = "iptargetset 192.168.11.56";
-#else
-char IPTarget[16];
-#endif
-char * getIPTarget();
+
+
+
+
 
 #ifdef	__cplusplus
 }

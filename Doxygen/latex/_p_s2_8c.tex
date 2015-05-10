@@ -1,7 +1,6 @@
 \hypertarget{_p_s2_8c}{}\section{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Dev/\+P\+S2.c File Reference}
 \label{_p_s2_8c}\index{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Dev/\+P\+S2.\+c@{C\+:/\+Users/mainuser/\+Desktop/\+School/\+Senior\+Project/\+Eth\+Kit\+T\+C\+P/\+Dev/\+P\+S2.\+c}}
 {\ttfamily \#include \char`\"{}P\+S2.\+h\char`\"{}}\\*
-{\ttfamily \#include $<$p32xxxx.\+h$>$}\\*
 Include dependency graph for P\+S2.\+c\+:
 % FIG 0
 \subsection*{Functions}
@@ -9,23 +8,23 @@ Include dependency graph for P\+S2.\+c\+:
 \item 
 uint8\+\_\+t $\ast$ \hyperlink{_p_s2_8c_ae311e9417c9347d550643de4daea45e5}{keyboard\+\_\+lookup} (uint8\+\_\+t number)
 \item 
-void \hyperlink{_p_s2_8c_a1c9949e161f05ecf2ba74181c4fdd1af}{keyboard\+\_\+setup} (void)
-\item 
-void \hyperlink{_p_s2_8c_a70132a6fe101c642b98c0b4336939930}{Input\+Capture2\+I\+S\+R} (void)
-\item 
-void \hyperlink{_p_s2_8c_aeb389b24fcb4bf0ef1cc98315dab5e5f}{interpret\+Keypress} (void)
+void \hyperlink{_p_s2_8c_aab6a9276acf7260f4f6dfcd5a4c92e4a}{remove\+From\+P\+S2\+Buffer} (void)
 \item 
 uint8\+\_\+t \hyperlink{_p_s2_8c_a8ab149b8e337f892e4c07286e094ee54}{translate\+Keypress} (uint8\+\_\+t translate)
 \item 
 uint8\+\_\+t $\ast$ \hyperlink{_p_s2_8c_a3a060fca8f2dde6562e2f243414d47d7}{gettext\+Line} (void)
 \item 
-void \hyperlink{_p_s2_8c_aee82caceba560f01202c4459ba4497c7}{process\+Line} (uint8\+\_\+t $\ast$text\+Line\+Ptr)
+void \hyperlink{_p_s2_8c_a5391d4586620db9cb2c8e96627f37f7e}{test\+Keyboard\+Agitator} (uint8\+\_\+t scan\+Code)
 \item 
-char $\ast$ \hyperlink{_p_s2_8c_abe73bcf82b19d9727d29850864eac8b8}{get\+I\+P\+Target} ()
+void \hyperlink{_p_s2_8c_a8f55cca82244df1cf78f0a826f816f75}{Compare\+Text\+Lines} (char $\ast$\hyperlink{cursor_8h_a4eddb259269e1401df5b56698f231263}{newtext\+Line})
 \item 
-void \hyperlink{_p_s2_8c_a48945a9d13c0e9aa46dc3f1302c00223}{Compare\+Text\+Lines} (void)
+void \hyperlink{_p_s2_8c_a6d4d2e35c21e102669b9fdf8a3858e99}{invert\+Shift\+Pressed} (void)
 \item 
-void \hyperlink{_p_s2_8c_afb368b3eb12755cae8787b96e467e0e3}{press\+\_\+backspace} (void)
+void \hyperlink{_p_s2_8c_a53ebfe2e3649276643adf8647c8a5821}{clear\+Text\+Line} (void)
+\item 
+void \hyperlink{_p_s2_8c_a41c92fd026b99457236bf755ee517e55}{add\+Char\+To\+Text\+Line} (char temp2)
+\item 
+void \hyperlink{_p_s2_8c_a0f63d5a4267ee5aef23c951d50458049}{Temp\+Process\+Line\+Wrapper} (void)
 \end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
@@ -35,39 +34,93 @@ uint8\+\_\+t \hyperlink{_p_s2_8c_a7cda0ad58ffd2ffb3ab59b7cad3a947c}{font\+\_\+ma
 
 
 \subsection{Function Documentation}
-\hypertarget{_p_s2_8c_a48945a9d13c0e9aa46dc3f1302c00223}{}\index{P\+S2.\+c@{P\+S2.\+c}!Compare\+Text\+Lines@{Compare\+Text\+Lines}}
-\index{Compare\+Text\+Lines@{Compare\+Text\+Lines}!P\+S2.\+c@{P\+S2.\+c}}
-\subsubsection[{Compare\+Text\+Lines}]{\setlength{\rightskip}{0pt plus 5cm}void Compare\+Text\+Lines (
+\hypertarget{_p_s2_8c_a41c92fd026b99457236bf755ee517e55}{}\index{P\+S2.\+c@{P\+S2.\+c}!add\+Char\+To\+Text\+Line@{add\+Char\+To\+Text\+Line}}
+\index{add\+Char\+To\+Text\+Line@{add\+Char\+To\+Text\+Line}!P\+S2.\+c@{P\+S2.\+c}}
+\subsubsection[{add\+Char\+To\+Text\+Line}]{\setlength{\rightskip}{0pt plus 5cm}void add\+Char\+To\+Text\+Line (
+\begin{DoxyParamCaption}
+\item[{char}]{temp2}
+\end{DoxyParamCaption}
+)}\label{_p_s2_8c_a41c92fd026b99457236bf755ee517e55}
+
+
+Definition at line 1151 of file P\+S2.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_p_s2_8c_a41c92fd026b99457236bf755ee517e55_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_p_s2_8c_a41c92fd026b99457236bf755ee517e55_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_p_s2_8c_a53ebfe2e3649276643adf8647c8a5821}{}\index{P\+S2.\+c@{P\+S2.\+c}!clear\+Text\+Line@{clear\+Text\+Line}}
+\index{clear\+Text\+Line@{clear\+Text\+Line}!P\+S2.\+c@{P\+S2.\+c}}
+\subsubsection[{clear\+Text\+Line}]{\setlength{\rightskip}{0pt plus 5cm}void clear\+Text\+Line (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
-)}\label{_p_s2_8c_a48945a9d13c0e9aa46dc3f1302c00223}
+)}\label{_p_s2_8c_a53ebfe2e3649276643adf8647c8a5821}
 
 
-Definition at line 1226 of file P\+S2.\+c.
-
-
-
-Here is the call graph for this function\+:
-% FIG 1
+Definition at line 1142 of file P\+S2.\+c.
 
 
 
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_p_s2_8c_a53ebfe2e3649276643adf8647c8a5821_icgraph}
+\end{center}
+\end{figure}
 
-Here is the caller graph for this function\+:
-% FIG 2
 
-
-\hypertarget{_p_s2_8c_abe73bcf82b19d9727d29850864eac8b8}{}\index{P\+S2.\+c@{P\+S2.\+c}!get\+I\+P\+Target@{get\+I\+P\+Target}}
-\index{get\+I\+P\+Target@{get\+I\+P\+Target}!P\+S2.\+c@{P\+S2.\+c}}
-\subsubsection[{get\+I\+P\+Target}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\+I\+P\+Target (
+\hypertarget{_p_s2_8c_a8f55cca82244df1cf78f0a826f816f75}{}\index{P\+S2.\+c@{P\+S2.\+c}!Compare\+Text\+Lines@{Compare\+Text\+Lines}}
+\index{Compare\+Text\+Lines@{Compare\+Text\+Lines}!P\+S2.\+c@{P\+S2.\+c}}
+\subsubsection[{Compare\+Text\+Lines}]{\setlength{\rightskip}{0pt plus 5cm}void Compare\+Text\+Lines (
 \begin{DoxyParamCaption}
-{}
+\item[{char $\ast$}]{newtext\+Line}
 \end{DoxyParamCaption}
-)}\label{_p_s2_8c_abe73bcf82b19d9727d29850864eac8b8}
+)}\label{_p_s2_8c_a8f55cca82244df1cf78f0a826f816f75}
 
 
-Definition at line 1219 of file P\+S2.\+c.
+Definition at line 1081 of file P\+S2.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_p_s2_8c_a8f55cca82244df1cf78f0a826f816f75_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_p_s2_8c_a8f55cca82244df1cf78f0a826f816f75_icgraph}
+\end{center}
+\end{figure}
+
 
 \hypertarget{_p_s2_8c_a3a060fca8f2dde6562e2f243414d47d7}{}\index{P\+S2.\+c@{P\+S2.\+c}!gettext\+Line@{gettext\+Line}}
 \index{gettext\+Line@{gettext\+Line}!P\+S2.\+c@{P\+S2.\+c}}
@@ -78,34 +131,28 @@ Definition at line 1219 of file P\+S2.\+c.
 )}\label{_p_s2_8c_a3a060fca8f2dde6562e2f243414d47d7}
 
 
-Definition at line 1103 of file P\+S2.\+c.
+Definition at line 1045 of file P\+S2.\+c.
 
-\hypertarget{_p_s2_8c_a70132a6fe101c642b98c0b4336939930}{}\index{P\+S2.\+c@{P\+S2.\+c}!Input\+Capture2\+I\+S\+R@{Input\+Capture2\+I\+S\+R}}
-\index{Input\+Capture2\+I\+S\+R@{Input\+Capture2\+I\+S\+R}!P\+S2.\+c@{P\+S2.\+c}}
-\subsubsection[{Input\+Capture2\+I\+S\+R}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+Capture2\+I\+S\+R (
+\hypertarget{_p_s2_8c_a6d4d2e35c21e102669b9fdf8a3858e99}{}\index{P\+S2.\+c@{P\+S2.\+c}!invert\+Shift\+Pressed@{invert\+Shift\+Pressed}}
+\index{invert\+Shift\+Pressed@{invert\+Shift\+Pressed}!P\+S2.\+c@{P\+S2.\+c}}
+\subsubsection[{invert\+Shift\+Pressed}]{\setlength{\rightskip}{0pt plus 5cm}void invert\+Shift\+Pressed (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
-)}\label{_p_s2_8c_a70132a6fe101c642b98c0b4336939930}
+)}\label{_p_s2_8c_a6d4d2e35c21e102669b9fdf8a3858e99}
 
 
-Definition at line 212 of file P\+S2.\+c.
-
-\hypertarget{_p_s2_8c_aeb389b24fcb4bf0ef1cc98315dab5e5f}{}\index{P\+S2.\+c@{P\+S2.\+c}!interpret\+Keypress@{interpret\+Keypress}}
-\index{interpret\+Keypress@{interpret\+Keypress}!P\+S2.\+c@{P\+S2.\+c}}
-\subsubsection[{interpret\+Keypress}]{\setlength{\rightskip}{0pt plus 5cm}void interpret\+Keypress (
-\begin{DoxyParamCaption}
-\item[{void}]{}
-\end{DoxyParamCaption}
-)}\label{_p_s2_8c_aeb389b24fcb4bf0ef1cc98315dab5e5f}
-
-
-Definition at line 287 of file P\+S2.\+c.
+Definition at line 1137 of file P\+S2.\+c.
 
 
 
-Here is the call graph for this function\+:
-% FIG 3
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_p_s2_8c_a6d4d2e35c21e102669b9fdf8a3858e99_icgraph}
+\end{center}
+\end{figure}
 
 
 \hypertarget{_p_s2_8c_ae311e9417c9347d550643de4daea45e5}{}\index{P\+S2.\+c@{P\+S2.\+c}!keyboard\+\_\+lookup@{keyboard\+\_\+lookup}}
@@ -121,66 +168,80 @@ Definition at line 135 of file P\+S2.\+c.
 
 
 
-Here is the caller graph for this function\+:
-% FIG 4
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_p_s2_8c_ae311e9417c9347d550643de4daea45e5_icgraph}
+\end{center}
+\end{figure}
 
 
-\hypertarget{_p_s2_8c_a1c9949e161f05ecf2ba74181c4fdd1af}{}\index{P\+S2.\+c@{P\+S2.\+c}!keyboard\+\_\+setup@{keyboard\+\_\+setup}}
-\index{keyboard\+\_\+setup@{keyboard\+\_\+setup}!P\+S2.\+c@{P\+S2.\+c}}
-\subsubsection[{keyboard\+\_\+setup}]{\setlength{\rightskip}{0pt plus 5cm}void keyboard\+\_\+setup (
+\hypertarget{_p_s2_8c_aab6a9276acf7260f4f6dfcd5a4c92e4a}{}\index{P\+S2.\+c@{P\+S2.\+c}!remove\+From\+P\+S2\+Buffer@{remove\+From\+P\+S2\+Buffer}}
+\index{remove\+From\+P\+S2\+Buffer@{remove\+From\+P\+S2\+Buffer}!P\+S2.\+c@{P\+S2.\+c}}
+\subsubsection[{remove\+From\+P\+S2\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}void remove\+From\+P\+S2\+Buffer (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
-)}\label{_p_s2_8c_a1c9949e161f05ecf2ba74181c4fdd1af}
+)}\label{_p_s2_8c_aab6a9276acf7260f4f6dfcd5a4c92e4a}
 
 
-Definition at line 151 of file P\+S2.\+c.
+Definition at line 287 of file P\+S2.\+c.
 
-\hypertarget{_p_s2_8c_afb368b3eb12755cae8787b96e467e0e3}{}\index{P\+S2.\+c@{P\+S2.\+c}!press\+\_\+backspace@{press\+\_\+backspace}}
-\index{press\+\_\+backspace@{press\+\_\+backspace}!P\+S2.\+c@{P\+S2.\+c}}
-\subsubsection[{press\+\_\+backspace}]{\setlength{\rightskip}{0pt plus 5cm}void press\+\_\+backspace (
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_p_s2_8c_aab6a9276acf7260f4f6dfcd5a4c92e4a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_p_s2_8c_a0f63d5a4267ee5aef23c951d50458049}{}\index{P\+S2.\+c@{P\+S2.\+c}!Temp\+Process\+Line\+Wrapper@{Temp\+Process\+Line\+Wrapper}}
+\index{Temp\+Process\+Line\+Wrapper@{Temp\+Process\+Line\+Wrapper}!P\+S2.\+c@{P\+S2.\+c}}
+\subsubsection[{Temp\+Process\+Line\+Wrapper}]{\setlength{\rightskip}{0pt plus 5cm}void Temp\+Process\+Line\+Wrapper (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
-)}\label{_p_s2_8c_afb368b3eb12755cae8787b96e467e0e3}
+)}\label{_p_s2_8c_a0f63d5a4267ee5aef23c951d50458049}
 
 
-Definition at line 1279 of file P\+S2.\+c.
-
-
-
-Here is the call graph for this function\+:
-% FIG 5
+Definition at line 1165 of file P\+S2.\+c.
 
 
 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_p_s2_8c_a0f63d5a4267ee5aef23c951d50458049_cgraph}
+\end{center}
+\end{figure}
 
-Here is the caller graph for this function\+:
-% FIG 6
 
 
-\hypertarget{_p_s2_8c_aee82caceba560f01202c4459ba4497c7}{}\index{P\+S2.\+c@{P\+S2.\+c}!process\+Line@{process\+Line}}
-\index{process\+Line@{process\+Line}!P\+S2.\+c@{P\+S2.\+c}}
-\subsubsection[{process\+Line}]{\setlength{\rightskip}{0pt plus 5cm}void process\+Line (
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_p_s2_8c_a0f63d5a4267ee5aef23c951d50458049_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_p_s2_8c_a5391d4586620db9cb2c8e96627f37f7e}{}\index{P\+S2.\+c@{P\+S2.\+c}!test\+Keyboard\+Agitator@{test\+Keyboard\+Agitator}}
+\index{test\+Keyboard\+Agitator@{test\+Keyboard\+Agitator}!P\+S2.\+c@{P\+S2.\+c}}
+\subsubsection[{test\+Keyboard\+Agitator}]{\setlength{\rightskip}{0pt plus 5cm}void test\+Keyboard\+Agitator (
 \begin{DoxyParamCaption}
-\item[{uint8\+\_\+t $\ast$}]{text\+Line\+Ptr}
+\item[{uint8\+\_\+t}]{scan\+Code}
 \end{DoxyParamCaption}
-)}\label{_p_s2_8c_aee82caceba560f01202c4459ba4497c7}
+)}\label{_p_s2_8c_a5391d4586620db9cb2c8e96627f37f7e}
 
 
-Definition at line 1108 of file P\+S2.\+c.
-
-
-
-Here is the call graph for this function\+:
-% FIG 7
-
-
-
-
-Here is the caller graph for this function\+:
-% FIG 8
-
+Definition at line 1053 of file P\+S2.\+c.
 
 \hypertarget{_p_s2_8c_a8ab149b8e337f892e4c07286e094ee54}{}\index{P\+S2.\+c@{P\+S2.\+c}!translate\+Keypress@{translate\+Keypress}}
 \index{translate\+Keypress@{translate\+Keypress}!P\+S2.\+c@{P\+S2.\+c}}
@@ -191,18 +252,28 @@ Here is the caller graph for this function\+:
 )}\label{_p_s2_8c_a8ab149b8e337f892e4c07286e094ee54}
 
 
-Definition at line 423 of file P\+S2.\+c.
+Definition at line 370 of file P\+S2.\+c.
 
 
 
-Here is the call graph for this function\+:
-% FIG 9
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_p_s2_8c_a8ab149b8e337f892e4c07286e094ee54_cgraph}
+\end{center}
+\end{figure}
 
 
 
 
-Here is the caller graph for this function\+:
-% FIG 10
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_p_s2_8c_a8ab149b8e337f892e4c07286e094ee54_icgraph}
+\end{center}
+\end{figure}
 
 
 
