@@ -13,7 +13,9 @@
 extern "C" {
 #endif
 
-//flag to communicate between the ps2 interrupt and the main loop key interpreting
+/**
+ * flag to communicate between the ps2 interrupt and the main loop key interpreting
+ */
 extern int KeysToProcess;
 
 

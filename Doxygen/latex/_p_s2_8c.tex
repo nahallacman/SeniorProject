@@ -38,7 +38,7 @@ uint8\+\_\+t \hyperlink{_p_s2_8c_a7cda0ad58ffd2ffb3ab59b7cad3a947c}{font\+\_\+ma
 )}\label{_p_s2_8c_a6d4d2e35c21e102669b9fdf8a3858e99}
 
 
-Definition at line 1074 of file P\+S2.\+c.
+Definition at line 1082 of file P\+S2.\+c.
 
 
 
@@ -58,9 +58,17 @@ Here is the caller graph for this function\+:\nopagebreak
 \item[{uint8\+\_\+t}]{number}
 \end{DoxyParamCaption}
 )}\label{_p_s2_8c_ae311e9417c9347d550643de4daea45e5}
+Checks if the keyboard scan code is within ascii range. If it is, it returns an 8x8 bitmap. 
+\begin{DoxyParams}{Parameters}
+{\em number} & -\/ Scan code to look up \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ An 8 unit array of 8bit values that make an 8x8 bitmap 
+\end{DoxyReturn}
 
 
-Definition at line 135 of file P\+S2.\+c.
+Definition at line 143 of file P\+S2.\+c.
 
 
 
@@ -82,12 +90,17 @@ Here is the caller graph for this function\+:\nopagebreak
 )}\label{_p_s2_8c_aab6a9276acf7260f4f6dfcd5a4c92e4a}
 
 
-Definition at line 287 of file P\+S2.\+c.
+Definition at line 295 of file P\+S2.\+c.
 
 
 
-Here is the call graph for this function\+:
-% FIG 0
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_p_s2_8c_aab6a9276acf7260f4f6dfcd5a4c92e4a_cgraph}
+\end{center}
+\end{figure}
 
 
 \hypertarget{_p_s2_8c_a5391d4586620db9cb2c8e96627f37f7e}{}\index{P\+S2.\+c@{P\+S2.\+c}!test\+Keyboard\+Agitator@{test\+Keyboard\+Agitator}}
@@ -99,7 +112,7 @@ Here is the call graph for this function\+:
 )}\label{_p_s2_8c_a5391d4586620db9cb2c8e96627f37f7e}
 
 
-Definition at line 1050 of file P\+S2.\+c.
+Definition at line 1058 of file P\+S2.\+c.
 
 \hypertarget{_p_s2_8c_a8ab149b8e337f892e4c07286e094ee54}{}\index{P\+S2.\+c@{P\+S2.\+c}!translate\+Keypress@{translate\+Keypress}}
 \index{translate\+Keypress@{translate\+Keypress}!P\+S2.\+c@{P\+S2.\+c}}
@@ -110,12 +123,17 @@ Definition at line 1050 of file P\+S2.\+c.
 )}\label{_p_s2_8c_a8ab149b8e337f892e4c07286e094ee54}
 
 
-Definition at line 370 of file P\+S2.\+c.
+Definition at line 378 of file P\+S2.\+c.
 
 
 
-Here is the call graph for this function\+:
-% FIG 1
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_p_s2_8c_a8ab149b8e337f892e4c07286e094ee54_cgraph}
+\end{center}
+\end{figure}
 
 
 
@@ -135,15 +153,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \hypertarget{_p_s2_8c_a7cda0ad58ffd2ffb3ab59b7cad3a947c}{}\index{P\+S2.\+c@{P\+S2.\+c}!font\+\_\+map@{font\+\_\+map}}
 \index{font\+\_\+map@{font\+\_\+map}!P\+S2.\+c@{P\+S2.\+c}}
 \subsubsection[{font\+\_\+map}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t font\+\_\+map\mbox{[}128\mbox{]}\mbox{[}8\mbox{]}}\label{_p_s2_8c_a7cda0ad58ffd2ffb3ab59b7cad3a947c}
-font\+\_\+map based on the file \href{http://users.ices.utexas.edu/~lenharth/cs378/fall13/font8x8.h}{\tt http\+://users.\+ices.\+utexas.\+edu/$\sim$lenharth/cs378/fall13/font8x8.\+h} released with comments below\+:
+A chunk of 128 8x8 bitmaps that are arranged in ascii order. 
 
-8x8 monochrome bitmap fonts for rendering Author\+: Daniel Hepper \href{mailto:daniel@hepper.net}{\tt daniel@hepper.\+net}
-
-License\+: Public Domain
-
-Based on\+: // Summary\+: font8x8.\+h // 8x8 monochrome bitmap fonts for rendering // // Author\+: // Marcel Sondaar // International Business Machines (public domain V\+G\+A fonts) // // License\+: // Public Domain
-
-Fetched from\+: \href{http://dimensionalrift.homelinux.net/combuster/mos3/?p=viewsource&file=/modules/gfx/font8_8.asm}{\tt http\+://dimensionalrift.\+homelinux.\+net/combuster/mos3/?p=viewsource\&file=/modules/gfx/font8\+\_\+8.\+asm} 
-
-Definition at line 4 of file P\+S2.\+c.
+Definition at line 6 of file P\+S2.\+c.
 

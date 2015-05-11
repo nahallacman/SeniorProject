@@ -11,6 +11,9 @@ const long int VGA_BackPorch[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 // and a lot more!
 #include <plib.h>
 
+/**
+ * Sets up the VGA video output using SPI4 for video
+ */
 void VGA_Setup(void)
 {
     VGA_VideoMemoryIndex = VGA_VideoMemory;
@@ -185,6 +188,9 @@ OpenOC1(OC_ON | OC_TIMER_MODE16 | OC_TIMER2_SRC | OC_CONTINUE_PULSE, 0, 0x110);
     //---VGA configuration end---
 }
 
+/**
+ * Sets up the DMA channels to make video work on SPI4
+ */
 void VGA_SetupVideoOutput(void)
 {
     //SpiChnOpen(SPI_CHANNEL2, SPI_OPEN_MSTEN | SPI_OPEN_MODE32 | SPI_OPEN_FRMEN | SPI_OPEN_FSP_IN | SPI_OPEN_FSP_HIGH,2);
@@ -204,7 +210,10 @@ void VGA_SetupVideoOutput(void)
 }
 
 
-
+/**
+ * The interrupt service routine to service the DMA pointer updates, v-sync.
+ * H-sync is also created from the timer two interrupt but is not serviced here.
+ */
 void T2ISR(void)
 {
     //IFS0bits.T2IF = 0;
@@ -239,8 +248,10 @@ void T2ISR(void)
 }
 
 #else
-//replacement code for the bitswapping macro that is included in the pic32 system code
-//the microcontroller needs the other code as it is MUCH faster on the pic32
+/**
+ * replacement code for the bitswapping macro that is included in the pic32 system code
+ * the microcontroller needs the other code as it is MUCH faster on the pic32
+*/
 uint32_t _bswap32(uint32_t a)
 {
   a = ((a & 0x000000FF) << 24) |
@@ -412,7 +423,9 @@ extern void writechar(uint8_t * character, int x, int y)
     }
 }
 
-
+/**
+ * clears a series of characters from the cursor location start to the cursor location end
+ */
 extern void clearchar(int start, int end)
 {
     int i = 0;
@@ -462,11 +475,12 @@ extern void clearchar(int start, int end)
 
 
 
-
-
+/**
+ * clears the entire screen
+*/
 void ClearScreen(void)
 {
-    //clears the screen
+
     int i = 0;
     for(i=0; i < 15000; i++)
     {

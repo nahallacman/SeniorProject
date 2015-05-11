@@ -1,6 +1,8 @@
 #include "PS2.h"
 
-
+/**
+ * A chunk of 128 8x8 bitmaps that are arranged in ascii order.
+ */
 uint8_t font_map[128][8] = 
 {
 { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, },  // U+0000 (nul)
@@ -132,6 +134,12 @@ uint8_t font_map[128][8] =
 { 0x76, 0xdc, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, },  // U+007E (~)
             };
 
+/**
+ * Checks if the keyboard scan code is within ascii range. If it is, it returns
+ * an 8x8 bitmap.
+ * @param number - Scan code to look up
+ * @return - An 8 unit array of 8bit values that make an 8x8 bitmap
+ */
 uint8_t * keyboard_lookup(uint8_t number)
 {
     if(number > 0x20 && number < 0x80)
