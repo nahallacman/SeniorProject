@@ -12,7 +12,7 @@ const long int VGA_BackPorch[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 #include <plib.h>
 
 /**
- * Sets up the VGA video output using SPI4 for video
+ * Sets up the VGA video output using SPI4 and timer 2 for video
  */
 void VGA_Setup(void)
 {

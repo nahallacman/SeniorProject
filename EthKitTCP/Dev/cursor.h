@@ -15,7 +15,8 @@
 extern "C" {
 #endif
 
- 
+
+
 extern int setandgetCursorLocation(int newcursorLocation);
 extern int getCursorLocation();
 extern void setCursorLocation(int newCursorLocation);
@@ -50,6 +51,7 @@ void processLine(uint8_t * textLinePtr);
 static const uint8_t commandIPTargetSet[] = "iptargetset";
 static const uint8_t commandLS[] = "ls";
 static const uint8_t commandCD[] = "cd";
+static const uint8_t commandprinttestscreen[] = "printtestscreen";
 
 #ifdef __Microcontroller
 char IPTarget[16] = "192.168.11.56";
@@ -73,6 +75,8 @@ void press_backspace(void);
 char * getIPTarget();
 
 extern void placeChar(uint8_t * character);
+
+extern void placeString(char * string);
 
 uint8_t * gettextLine(void);
 

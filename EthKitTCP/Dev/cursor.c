@@ -207,26 +207,48 @@ void processLine(uint8_t * textLinePtr)
             valid_command = 0;
         }
     }
+    if(valid_command == 0)
+    {
+        valid_command = 1;
+        for(z = 0; z < 15 && valid_command == 1; z++)
+        {
+                if(textLinePtr[z] != commandprinttestscreen[z])
+                {
+                        valid_command = 0;
+                }
+        }
+        //check if the last character is a space
+        if(' ' != textLinePtr[15])
+        {
+            valid_command = 0;
+        }
+        if(valid_command == 1)
+        {
+            printTestScreen();
+        }
+    }
 
 
     if(valid_command == 1)
     {
-            placeChar(keyboard_lookup('S'));
-            placeChar(keyboard_lookup('u'));
-            placeChar(keyboard_lookup('c'));
-            placeChar(keyboard_lookup('c'));
-            placeChar(keyboard_lookup('e'));
-            placeChar(keyboard_lookup('s'));
-            placeChar(keyboard_lookup('s'));
+            placeString("Success\0");
+            //placeChar(keyboard_lookup('S'));
+            //placeChar(keyboard_lookup('u'));
+            //placeChar(keyboard_lookup('c'));
+            //placeChar(keyboard_lookup('c'));
+            //placeChar(keyboard_lookup('e'));
+            //placeChar(keyboard_lookup('s'));
+            //placeChar(keyboard_lookup('s'));
             //interpret command
 
     }
     else
     {
-            placeChar(keyboard_lookup('F'));
-            placeChar(keyboard_lookup('a'));
-            placeChar(keyboard_lookup('i'));
-            placeChar(keyboard_lookup('l'));
+            placeString("Fail\0");
+            //placeChar(keyboard_lookup('F'));
+            //placeChar(keyboard_lookup('a'));
+            //placeChar(keyboard_lookup('i'));
+            //placeChar(keyboard_lookup('l'));
 	//print error message?
     }
 }
@@ -249,6 +271,11 @@ void press_backspace(void)
 {
     //uint8_t newtextLine[TEXTLINELENGTH];
     int i = 0;
+
+
+
+
+
     if(getTextLineIndex() > 1)
     {
         setTextLineIndex( getTextLineIndex() - 1 );
@@ -274,6 +301,16 @@ void press_backspace(void)
 char * getIPTarget()
 {
     return IPTarget;
+}
+
+
+extern void placeString(char * string)
+{
+    int iter;
+    for(iter = 0; string[iter] != 0; iter++)
+    {
+        placeChar(keyboard_lookup(string[iter]));
+    }
 }
 
 extern void placeChar(uint8_t * character)
@@ -379,3 +416,4 @@ extern void addCharToTextLine(char temp2)
     setTextLineIndex(getTextLineIndex() + 1);
     //textlineindex++;
 }
+
