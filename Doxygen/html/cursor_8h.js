@@ -12,6 +12,7 @@ var cursor_8h =
     [ "MoveCursorRight", "cursor_8h.html#ac177699cfeda15e4b887864f6eacc5e3", null ],
     [ "MoveCursorUp", "cursor_8h.html#ae9337ec3c6ea47f10d329cd99d7a29f9", null ],
     [ "placeChar", "cursor_8h.html#a29bab149333c107091c1b286e05ac315", null ],
+    [ "placeString", "cursor_8h.html#a02936826fc9c1380ef1e42ae18940c9a", null ],
     [ "press_backspace", "cursor_8h.html#afb368b3eb12755cae8787b96e467e0e3", null ],
     [ "processLine", "cursor_8h.html#aee82caceba560f01202c4459ba4497c7", null ],
     [ "resetPlaceCharLocation", "cursor_8h.html#aeca62116778bb6c13245089867ded8d9", null ],
