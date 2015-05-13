@@ -43,10 +43,10 @@ void interpret_keypress(char temp);
 void resetPlaceCharLocation(void);
 
 //int textlineindex = 0;
-int textlineindex;
+//int textlineindex;
 
-extern void setTextLineIndex(int newtextlineindex);
-extern int getTextLineIndex(void);
+//extern void setTextLineIndex(int newtextlineindex);
+//extern int getTextLineIndex(void);
 
 void processLine(uint8_t * textLinePtr);
 

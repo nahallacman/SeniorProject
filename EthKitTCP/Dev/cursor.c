@@ -149,8 +149,7 @@ void interpret_keypress(char temp)
         ClearScreen(); // esc will clear the screen for now
         clearTextLine();
 
-        textlineindex = 0; // reset the index
-        resetPlaceCharLocation(); // reset the screen beginning
+        resetPlaceCharLocation(); // reset to the screen beginning
     }
     else if(temp2 == 0x03) // caps lock was pressed
     {
@@ -171,16 +170,6 @@ void resetPlaceCharLocation(void)
     setCursorLocation(0);
     resetLineLocationEnd();
     //LineLocationEnd = 0;
-}
-
-extern void setTextLineIndex(int newtextlineindex)
-{
-    textlineindex = newtextlineindex;
-}
-
-extern int getTextLineIndex(void)
-{
-    return textlineindex;
 }
 
 
@@ -270,23 +259,11 @@ void processLine(uint8_t * textLinePtr)
     if(valid_command == 1)
     {
             placeString("Success\0");
-            //placeChar(keyboard_lookup('S'));
-            //placeChar(keyboard_lookup('u'));
-            //placeChar(keyboard_lookup('c'));
-            //placeChar(keyboard_lookup('c'));
-            //placeChar(keyboard_lookup('e'));
-            //placeChar(keyboard_lookup('s'));
-            //placeChar(keyboard_lookup('s'));
             //interpret command
-
     }
     else
     {
             placeString("Fail\0");
-            //placeChar(keyboard_lookup('F'));
-            //placeChar(keyboard_lookup('a'));
-            //placeChar(keyboard_lookup('i'));
-            //placeChar(keyboard_lookup('l'));
 	//print error message?
     }
 }
@@ -481,18 +458,17 @@ extern void clearTextLine(void)
     }
 }
 
+/**
+ * Adds a character to the text line indexed by the cursor.
+ * @param temp2
+ */
 extern void addCharToTextLine(char temp2)
 {
-    //textLine[getTextLineIndex()] = temp2;
+    //add the character to the line
     textLine[getCursorLocation()] = temp2;
 
     //then write the character to the screen
-    //placeChar(keyboard_lookup(textLine[getTextLineIndex()]));
     placeChar(keyboard_lookup(textLine[getCursorLocation()]));
-
-
-    //and move the cursor
-    //MoveCursorRight();
     
 }
 
