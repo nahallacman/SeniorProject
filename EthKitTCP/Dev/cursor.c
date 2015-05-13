@@ -1,4 +1,5 @@
 #include "cursor.h"
+//--- start cursor location operations ---
 
 extern int setandgetCursorLocation(int newcursorLocation)
 {
@@ -6,11 +7,17 @@ extern int setandgetCursorLocation(int newcursorLocation)
      return CursorLocation;
 }
 
+/**
+ * gets the cursor location
+ */
 extern int getCursorLocation(void)
 {
      return CursorLocation;
 }
 
+/**
+ * sets the cursor location
+ */
 extern void setCursorLocation(int newCursorLocation)
 {
     CursorLocation = newCursorLocation;
@@ -18,16 +25,17 @@ extern void setCursorLocation(int newCursorLocation)
 
 void MoveCursorLeft(void)
 {
-    if(CursorLocation == 0)
+    if(getCursorLocation() == 0)
     {
         //do nothing, can't move more left
     }
     else
     {
-        if(CursorLocation > LineLocationStart - 1)
+        if(getCursorLocation() > LineLocationStart - 1)
         {
             //move cursor left
-            CursorLocation--;
+            setCursorLocation(getCursorLocation() - 1);
+            //CursorLocation--;
         }
         //else
         //{
@@ -39,12 +47,13 @@ void MoveCursorLeft(void)
 
 void MoveCursorRight(void)
 {
-    if(CursorLocation < 7499)
+    if(getCursorLocation() < 7499)
     {
-        if(CursorLocation + 1 < LineLocationEnd)
+        if(getCursorLocation() < getLineLocationEnd())
         {
             //move cursor right
-            CursorLocation++;
+            //CursorLocation++;
+            setCursorLocation(getCursorLocation() + 1);
         }
     }
     else
@@ -73,7 +82,7 @@ void MoveCursorDown(void)
 {
     if(CursorLocation < 7499)
     {
-        if(CursorLocation + 100 < LineLocationEnd)
+        if(CursorLocation + 100 < getLineLocationEnd())
         {
             //move cursor up
             CursorLocation = CursorLocation + 100;
@@ -84,6 +93,27 @@ void MoveCursorDown(void)
         //do nothing, can't move more up
     }
 }
+
+//--- end cursor location operations ---
+//--- start line end location operations ---
+
+extern void increaseLineLocationEnd(void)
+{
+    LineLocationEnd++;
+}
+
+extern void resetLineLocationEnd(void)
+{
+    LineLocationEnd = 0;
+}
+
+extern int getLineLocationEnd(void)
+{
+    return LineLocationEnd;
+}
+//--- start line end location operations ---
+
+
 
 //a print line function
 
@@ -132,7 +162,8 @@ void interpret_keypress(char temp)
 void resetPlaceCharLocation(void)
 {
     setCursorLocation(0);
-    LineLocationEnd = 0;
+    resetLineLocationEnd();
+    //LineLocationEnd = 0;
 }
 
 extern void setTextLineIndex(int newtextlineindex)
@@ -271,11 +302,35 @@ void press_backspace(void)
 {
     //uint8_t newtextLine[TEXTLINELENGTH];
     int i = 0;
+    int iter = 0;
+    char * printStart;
 
 
+    int cursor = getCursorLocation();
+    int lineEnd = getLineLocationEnd();
+    //delete the character before the cursor
+    //then shift down all characters after that
+    for(iter = cursor - 1; iter < lineEnd; iter++ )
+    {
+        textLine[iter] = textLine[iter + 1];
+    }
+    //move the cursor back one
+    MoveCursorLeft();
+    //clear the line
+    clearchar(cursor - 1, lineEnd); // maybe i-1?
+    //reprint the string from the curor location
+    printStart = textLine; // does this need a dereference?
+    for(i = 0; i < cursor ; i++)
+    {
+        printStart++;
+    }
+
+    placeString(printStart);
+
+    //reduce the
 
 
-
+/*
     if(getTextLineIndex() > 1)
     {
         setTextLineIndex( getTextLineIndex() - 1 );
@@ -295,7 +350,7 @@ void press_backspace(void)
         }
         CompareTextLines(newtextLine);
     }
-
+*/
 }
 
 char * getIPTarget()
@@ -315,8 +370,10 @@ extern void placeString(char * string)
 
 extern void placeChar(uint8_t * character)
 {
-
-
+    
+    increaseLineLocationEnd();
+    MoveCursorRight();
+    /*
     if(getCursorLocation() < 7499)
     {
         setCursorLocation(getCursorLocation() + 1);
@@ -325,7 +382,9 @@ extern void placeChar(uint8_t * character)
     {
         setCursorLocation(0);
     }
-    LineLocationEnd++;
+     */
+    
+    //LineLocationEnd++;
 
     writechar(character, getCursorLocation() - (getCursorLocation() / 100 ) , getCursorLocation() / 100);
 
@@ -405,15 +464,16 @@ extern void clearTextLine(void)
 
 extern void addCharToTextLine(char temp2)
 {
-    textLine[getTextLineIndex()] = temp2;
+    //textLine[getTextLineIndex()] = temp2;
+    textLine[getCursorLocation()] = temp2;
 
     //then write the character to the screen
+    //placeChar(keyboard_lookup(textLine[getTextLineIndex()]));
+    placeChar(keyboard_lookup(textLine[getCursorLocation()]));
 
-    //writechar(keyboard_lookup(textLine[textlineindex]), cursor_x, cursor_y);
-    placeChar(keyboard_lookup(textLine[getTextLineIndex()]));
 
-    //increase index
-    setTextLineIndex(getTextLineIndex() + 1);
-    //textlineindex++;
+    //and move the cursor
+    //MoveCursorRight();
+    
 }
 

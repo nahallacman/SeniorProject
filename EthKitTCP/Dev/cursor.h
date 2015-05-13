@@ -21,6 +21,8 @@ extern int setandgetCursorLocation(int newcursorLocation);
 extern int getCursorLocation();
 extern void setCursorLocation(int newCursorLocation);
 
+extern void increaseLineLocationEnd(void);
+
 //int CursorLocation = 0;
 int CursorLocation;
 
