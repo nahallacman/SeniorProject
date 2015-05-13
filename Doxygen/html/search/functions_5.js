@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['interpret_5fkeypress',['interpret_keypress',['../cursor_8c.html#a467458fc0085539f52030fabf3dd9286',1,'interpret_keypress(char temp):&#160;cursor.c'],['../cursor_8h.html#a467458fc0085539f52030fabf3dd9286',1,'interpret_keypress(char temp):&#160;cursor.c']]],
-  ['invertshiftpressed',['invertShiftPressed',['../_p_s2_8c.html#a6d4d2e35c21e102669b9fdf8a3858e99',1,'invertShiftPressed(void):&#160;PS2.c'],['../_p_s2_8h.html#a6d4d2e35c21e102669b9fdf8a3858e99',1,'invertShiftPressed(void):&#160;PS2.c']]]
+  ['getcursorlocation',['getCursorLocation',['../cursor_8c.html#a95873c61ca346ba3ad63577fec99fe15',1,'getCursorLocation(void):&#160;cursor.c'],['../cursor_8h.html#a5a986a90cba784aeb2039295362a6282',1,'getCursorLocation():&#160;cursor.c']]],
+  ['getiptarget',['getIPTarget',['../cursor_8c.html#abe73bcf82b19d9727d29850864eac8b8',1,'getIPTarget():&#160;cursor.c'],['../cursor_8h.html#abe73bcf82b19d9727d29850864eac8b8',1,'getIPTarget():&#160;cursor.c']]],
+  ['getlinelocationend',['getLineLocationEnd',['../cursor_8c.html#a1e80692974a94a04598cba2c18c72a98',1,'cursor.c']]],
+  ['gettextline',['gettextLine',['../cursor_8c.html#a3a060fca8f2dde6562e2f243414d47d7',1,'gettextLine(void):&#160;cursor.c'],['../cursor_8h.html#a3a060fca8f2dde6562e2f243414d47d7',1,'gettextLine(void):&#160;cursor.c']]]
 ];

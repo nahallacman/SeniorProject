@@ -1,9 +1,12 @@
 var searchData=
 [
-  ['writechar',['writechar',['../_v_g_a_8c.html#a499c31fd29b2bb4509a35860bde799b6',1,'writechar(uint8_t *character, int x, int y):&#160;VGA.c'],['../_v_g_a_8h.html#a499c31fd29b2bb4509a35860bde799b6',1,'writechar(uint8_t *character, int x, int y):&#160;VGA.c']]],
-  ['writefullhorizontalline',['writefullhorizontalline',['../_v_g_a_8c.html#a404c4fd746b185b08d63449a9c14049c',1,'writefullhorizontalline(int line):&#160;VGA.c'],['../_v_g_a_8h.html#a404c4fd746b185b08d63449a9c14049c',1,'writefullhorizontalline(int line):&#160;VGA.c']]],
-  ['writefullverticalline',['writefullverticalline',['../_v_g_a_8c.html#aa99b12cab66ebdbdf0d5b9c2e00a9c15',1,'writefullverticalline(int column):&#160;VGA.c'],['../_v_g_a_8h.html#aa99b12cab66ebdbdf0d5b9c2e00a9c15',1,'writefullverticalline(int column):&#160;VGA.c']]],
-  ['writehorizontalline',['writehorizontalline',['../_v_g_a_8c.html#a822a698d29ce7edb349352481b65db74',1,'writehorizontalline(int y1, int y2):&#160;VGA.c'],['../_v_g_a_8h.html#a822a698d29ce7edb349352481b65db74',1,'writehorizontalline(int y1, int y2):&#160;VGA.c']]],
-  ['writepixel',['writepixel',['../_v_g_a_8c.html#ad6061cbae4f54062026bae527e5dee9a',1,'writepixel(int x, int y):&#160;VGA.c'],['../_v_g_a_8h.html#ad6061cbae4f54062026bae527e5dee9a',1,'writepixel(int x, int y):&#160;VGA.c']]],
-  ['writeverticalline',['writeverticalline',['../_v_g_a_8c.html#a0058c3096abb8e78f7ab293ab42daff8',1,'writeverticalline(int x1, int x2):&#160;VGA.c'],['../_v_g_a_8h.html#a0058c3096abb8e78f7ab293ab42daff8',1,'writeverticalline(int x1, int x2):&#160;VGA.c']]]
+  ['values',['values',['../_p_s2_8h.html#a2725544e7a06f2eb04622b77b3b57ac7',1,'PS2.h']]],
+  ['vga_2ec',['VGA.c',['../_v_g_a_8c.html',1,'']]],
+  ['vga_2eh',['VGA.h',['../_v_g_a_8h.html',1,'']]],
+  ['vga_5fbackporch',['VGA_BackPorch',['../_v_g_a_8c.html#a64539db1fe3ee5a5aee9c5e8ea5b151c',1,'VGA_BackPorch():&#160;VGA.c'],['../_v_g_a_8h.html#a64539db1fe3ee5a5aee9c5e8ea5b151c',1,'VGA_BackPorch():&#160;VGA.c']]],
+  ['vga_5flinecount',['VGA_LineCount',['../_v_g_a_8h.html#af549d9cadefb0e303811fa7af73cabbc',1,'VGA.h']]],
+  ['vga_5fvideomemory',['VGA_VideoMemory',['../_v_g_a_8h.html#acbba83881019a2264d96845d4d1628de',1,'VGA.h']]],
+  ['vga_5fvideomemoryindex',['VGA_VideoMemoryIndex',['../_v_g_a_8h.html#a79cc2636a394979634e6072fe7e16ed4',1,'VGA.h']]],
+  ['vga_5fx_5fmax',['VGA_X_MAX',['../_v_g_a_8h.html#af0a2c6849b7effd2ce3b1a89dad8d4e6',1,'VGA.h']]],
+  ['vga_5fy_5fmax',['VGA_Y_MAX',['../_v_g_a_8h.html#af6a050045ac1451fbb4809441283b2aa',1,'VGA.h']]]
 ];

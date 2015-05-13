@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['placechar',['placeChar',['../cursor_8c.html#a29bab149333c107091c1b286e05ac315',1,'placeChar(uint8_t *character):&#160;cursor.c'],['../cursor_8h.html#a29bab149333c107091c1b286e05ac315',1,'placeChar(uint8_t *character):&#160;cursor.c'],['../_p_s2_8h.html#a29bab149333c107091c1b286e05ac315',1,'placeChar(uint8_t *character):&#160;cursor.c']]],
-  ['placestring',['placeString',['../cursor_8c.html#a02936826fc9c1380ef1e42ae18940c9a',1,'placeString(char *string):&#160;cursor.c'],['../cursor_8h.html#a02936826fc9c1380ef1e42ae18940c9a',1,'placeString(char *string):&#160;cursor.c']]],
-  ['press_5fbackspace',['press_backspace',['../cursor_8c.html#afb368b3eb12755cae8787b96e467e0e3',1,'press_backspace(void):&#160;cursor.c'],['../cursor_8h.html#afb368b3eb12755cae8787b96e467e0e3',1,'press_backspace(void):&#160;cursor.c']]],
-  ['press_5ff1',['press_F1',['../cursor_8c.html#a8b0ba534e7681966289c491064e9cdc8',1,'cursor.c']]],
-  ['printtestscreen',['printTestScreen',['../_v_g_a_8c.html#ab66a8865de62d9daefab9f8abf026478',1,'printTestScreen(void):&#160;VGA.c'],['../_v_g_a_8h.html#ab66a8865de62d9daefab9f8abf026478',1,'printTestScreen(void):&#160;VGA.c']]],
-  ['processline',['processLine',['../cursor_8c.html#aee82caceba560f01202c4459ba4497c7',1,'processLine(uint8_t *textLinePtr):&#160;cursor.c'],['../cursor_8h.html#aee82caceba560f01202c4459ba4497c7',1,'processLine(uint8_t *textLinePtr):&#160;cursor.c']]]
+  ['movecursordown',['MoveCursorDown',['../cursor_8c.html#ac8e40e0b08b773c5f3fc0b303fe562de',1,'MoveCursorDown(void):&#160;cursor.c'],['../cursor_8h.html#ac8e40e0b08b773c5f3fc0b303fe562de',1,'MoveCursorDown(void):&#160;cursor.c'],['../_p_s2_8h.html#ac8e40e0b08b773c5f3fc0b303fe562de',1,'MoveCursorDown(void):&#160;cursor.c']]],
+  ['movecursorleft',['MoveCursorLeft',['../cursor_8c.html#a7804524381705ec22e0efc3a1326dd69',1,'MoveCursorLeft(void):&#160;cursor.c'],['../cursor_8h.html#a7804524381705ec22e0efc3a1326dd69',1,'MoveCursorLeft(void):&#160;cursor.c'],['../_p_s2_8h.html#a7804524381705ec22e0efc3a1326dd69',1,'MoveCursorLeft(void):&#160;cursor.c']]],
+  ['movecursorright',['MoveCursorRight',['../cursor_8c.html#ac177699cfeda15e4b887864f6eacc5e3',1,'MoveCursorRight(void):&#160;cursor.c'],['../cursor_8h.html#ac177699cfeda15e4b887864f6eacc5e3',1,'MoveCursorRight(void):&#160;cursor.c'],['../_p_s2_8h.html#ac177699cfeda15e4b887864f6eacc5e3',1,'MoveCursorRight(void):&#160;cursor.c']]],
+  ['movecursorup',['MoveCursorUp',['../cursor_8c.html#ae9337ec3c6ea47f10d329cd99d7a29f9',1,'MoveCursorUp(void):&#160;cursor.c'],['../cursor_8h.html#ae9337ec3c6ea47f10d329cd99d7a29f9',1,'MoveCursorUp(void):&#160;cursor.c'],['../_p_s2_8h.html#ae9337ec3c6ea47f10d329cd99d7a29f9',1,'MoveCursorUp(void):&#160;cursor.c']]]
 ];

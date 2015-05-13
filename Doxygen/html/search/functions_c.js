@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['writechar',['writechar',['../_v_g_a_8c.html#a499c31fd29b2bb4509a35860bde799b6',1,'writechar(uint8_t *character, int x, int y):&#160;VGA.c'],['../_v_g_a_8h.html#a499c31fd29b2bb4509a35860bde799b6',1,'writechar(uint8_t *character, int x, int y):&#160;VGA.c']]],
-  ['writefullhorizontalline',['writefullhorizontalline',['../_v_g_a_8c.html#a404c4fd746b185b08d63449a9c14049c',1,'writefullhorizontalline(int line):&#160;VGA.c'],['../_v_g_a_8h.html#a404c4fd746b185b08d63449a9c14049c',1,'writefullhorizontalline(int line):&#160;VGA.c']]],
-  ['writefullverticalline',['writefullverticalline',['../_v_g_a_8c.html#aa99b12cab66ebdbdf0d5b9c2e00a9c15',1,'writefullverticalline(int column):&#160;VGA.c'],['../_v_g_a_8h.html#aa99b12cab66ebdbdf0d5b9c2e00a9c15',1,'writefullverticalline(int column):&#160;VGA.c']]],
-  ['writehorizontalline',['writehorizontalline',['../_v_g_a_8c.html#a822a698d29ce7edb349352481b65db74',1,'writehorizontalline(int y1, int y2):&#160;VGA.c'],['../_v_g_a_8h.html#a822a698d29ce7edb349352481b65db74',1,'writehorizontalline(int y1, int y2):&#160;VGA.c']]],
-  ['writepixel',['writepixel',['../_v_g_a_8c.html#ad6061cbae4f54062026bae527e5dee9a',1,'writepixel(int x, int y):&#160;VGA.c'],['../_v_g_a_8h.html#ad6061cbae4f54062026bae527e5dee9a',1,'writepixel(int x, int y):&#160;VGA.c']]],
-  ['writeverticalline',['writeverticalline',['../_v_g_a_8c.html#a0058c3096abb8e78f7ab293ab42daff8',1,'writeverticalline(int x1, int x2):&#160;VGA.c'],['../_v_g_a_8h.html#a0058c3096abb8e78f7ab293ab42daff8',1,'writeverticalline(int x1, int x2):&#160;VGA.c']]]
+  ['tempprocesslinewrapper',['TempProcessLineWrapper',['../_p_s2_8h.html#a0f63d5a4267ee5aef23c951d50458049',1,'PS2.h']]],
+  ['testkeyboardagitator',['testKeyboardAgitator',['../_p_s2_8c.html#a5391d4586620db9cb2c8e96627f37f7e',1,'testKeyboardAgitator(uint8_t scanCode):&#160;PS2.c'],['../_p_s2_8h.html#a5391d4586620db9cb2c8e96627f37f7e',1,'testKeyboardAgitator(uint8_t scanCode):&#160;PS2.c']]],
+  ['translatekeypress',['translateKeypress',['../_p_s2_8c.html#a8ab149b8e337f892e4c07286e094ee54',1,'translateKeypress(uint8_t translate):&#160;PS2.c'],['../_p_s2_8h.html#a01ddbbb07d07e31ed7bce301ba934d43',1,'translateKeypress(uint8_t):&#160;PS2.c']]]
 ];

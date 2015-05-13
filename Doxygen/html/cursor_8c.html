@@ -134,14 +134,18 @@ Functions</h2></td></tr>
 <tr class="separator:ae9337ec3c6ea47f10d329cd99d7a29f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8e40e0b08b773c5f3fc0b303fe562de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cursor_8c.html#ac8e40e0b08b773c5f3fc0b303fe562de">MoveCursorDown</a> (void)</td></tr>
 <tr class="separator:ac8e40e0b08b773c5f3fc0b303fe562de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06559067271121a8ba77c7e7f387a8f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cursor_8c.html#a06559067271121a8ba77c7e7f387a8f3">increaseLineLocationEnd</a> (void)</td></tr>
+<tr class="separator:a06559067271121a8ba77c7e7f387a8f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa510ca0bb56c03148f3392c28433dc45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cursor_8c.html#aa510ca0bb56c03148f3392c28433dc45">decreaseLineLocationEnd</a> (void)</td></tr>
+<tr class="separator:aa510ca0bb56c03148f3392c28433dc45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a733c65607b5947220d85298a9b30bc34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cursor_8c.html#a733c65607b5947220d85298a9b30bc34">resetLineLocationEnd</a> (void)</td></tr>
+<tr class="separator:a733c65607b5947220d85298a9b30bc34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e80692974a94a04598cba2c18c72a98"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cursor_8c.html#a1e80692974a94a04598cba2c18c72a98">getLineLocationEnd</a> (void)</td></tr>
+<tr class="separator:a1e80692974a94a04598cba2c18c72a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a467458fc0085539f52030fabf3dd9286"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cursor_8c.html#a467458fc0085539f52030fabf3dd9286">interpret_keypress</a> (char temp)</td></tr>
 <tr class="separator:a467458fc0085539f52030fabf3dd9286"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeca62116778bb6c13245089867ded8d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cursor_8c.html#aeca62116778bb6c13245089867ded8d9">resetPlaceCharLocation</a> (void)</td></tr>
 <tr class="separator:aeca62116778bb6c13245089867ded8d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d645a8f1ad2b03ad027accb3bcf0db4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cursor_8c.html#a9d645a8f1ad2b03ad027accb3bcf0db4">setTextLineIndex</a> (int newtextlineindex)</td></tr>
-<tr class="separator:a9d645a8f1ad2b03ad027accb3bcf0db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c5543d701a9dae494df5b00cc931377"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cursor_8c.html#a5c5543d701a9dae494df5b00cc931377">getTextLineIndex</a> (void)</td></tr>
-<tr class="separator:a5c5543d701a9dae494df5b00cc931377"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee82caceba560f01202c4459ba4497c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cursor_8c.html#aee82caceba560f01202c4459ba4497c7">processLine</a> (uint8_t *textLinePtr)</td></tr>
 <tr class="separator:aee82caceba560f01202c4459ba4497c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b0ba534e7681966289c491064e9cdc8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cursor_8c.html#a8b0ba534e7681966289c491064e9cdc8">press_F1</a> (void)</td></tr>
@@ -177,15 +181,21 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Adds a character to the text line indexed by the cursor. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">temp2</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="cursor_8c_source.html#l00406">406</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
+<p>Definition at line <a class="el" href="cursor_8c_source.html#l00465">465</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="cursor_8c_a41c92fd026b99457236bf755ee517e55_cgraph.png" border="0" usemap="#cursor_8c_a41c92fd026b99457236bf755ee517e55_cgraph" alt=""/></div>
 <map name="cursor_8c_a41c92fd026b99457236bf755ee517e55_cgraph" id="cursor_8c_a41c92fd026b99457236bf755ee517e55_cgraph">
-<area shape="rect" id="node2" href="cursor_8c.html#a5c5543d701a9dae494df5b00cc931377" title="getTextLineIndex" alt="" coords="187,5,307,32"/><area shape="rect" id="node3" href="cursor_8c.html#a29bab149333c107091c1b286e05ac315" title="placeChar" alt="" coords="207,56,287,83"/><area shape="rect" id="node7" href="_p_s2_8c.html#ae311e9417c9347d550643de4daea45e5" title="keyboard_lookup" alt="" coords="187,107,307,133"/><area shape="rect" id="node8" href="cursor_8c.html#a9d645a8f1ad2b03ad027accb3bcf0db4" title="setTextLineIndex" alt="" coords="187,157,307,184"/><area shape="rect" id="node4" href="cursor_8c.html#a95873c61ca346ba3ad63577fec99fe15" title="getCursorLocation" alt="" coords="355,5,481,32"/><area shape="rect" id="node5" href="cursor_8c.html#acd4b06887a4337467e744f693a2df6a9" title="setCursorLocation" alt="" coords="355,56,481,83"/><area shape="rect" id="node6" href="_v_g_a_8c.html#a499c31fd29b2bb4509a35860bde799b6" title="writechar" alt="" coords="381,107,455,133"/></map>
+<area shape="rect" id="node2" href="cursor_8c.html#a95873c61ca346ba3ad63577fec99fe15" title="getCursorLocation" alt="" coords="574,5,701,32"/><area shape="rect" id="node3" href="cursor_8c.html#a29bab149333c107091c1b286e05ac315" title="placeChar" alt="" coords="207,56,287,83"/><area shape="rect" id="node9" href="_p_s2_8c.html#ae311e9417c9347d550643de4daea45e5" title="keyboard_lookup" alt="" coords="187,107,307,133"/><area shape="rect" id="node4" href="cursor_8c.html#a06559067271121a8ba77c7e7f387a8f3" title="increaseLineLocationEnd" alt="" coords="355,56,521,83"/><area shape="rect" id="node5" href="cursor_8c.html#ac177699cfeda15e4b887864f6eacc5e3" title="MoveCursorRight" alt="" coords="378,107,498,133"/><area shape="rect" id="node8" href="_v_g_a_8c.html#a499c31fd29b2bb4509a35860bde799b6" title="writechar" alt="" coords="401,157,475,184"/><area shape="rect" id="node6" href="cursor_8c.html#a1e80692974a94a04598cba2c18c72a98" title="getLineLocationEnd" alt="" coords="569,81,705,108"/><area shape="rect" id="node7" href="cursor_8c.html#acd4b06887a4337467e744f693a2df6a9" title="setCursorLocation" alt="" coords="574,132,701,159"/></map>
 </div>
 </p>
 
@@ -214,7 +224,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cursor_8c_source.html#l00397">397</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
+<p>Definition at line <a class="el" href="cursor_8c_source.html#l00452">452</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -241,7 +251,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cursor_8c_source.html#l00342">342</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
+<p>Definition at line <a class="el" href="cursor_8c_source.html#l00397">397</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -257,7 +267,34 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="cursor_8c_a8f55cca82244df1cf78f0a826f816f75_icgraph.png" border="0" usemap="#cursor_8c_a8f55cca82244df1cf78f0a826f816f75_icgraph" alt=""/></div>
 <map name="cursor_8c_a8f55cca82244df1cf78f0a826f816f75_icgraph" id="cursor_8c_a8f55cca82244df1cf78f0a826f816f75_icgraph">
-<area shape="rect" id="node2" href="cursor_8c.html#a8b0ba534e7681966289c491064e9cdc8" title="press_F1" alt="" coords="184,5,260,32"/><area shape="rect" id="node6" href="cursor_8h.html#afb368b3eb12755cae8787b96e467e0e3" title="press_backspace" alt="" coords="309,56,433,83"/><area shape="rect" id="node3" href="_p_s2_8h.html#a01ddbbb07d07e31ed7bce301ba934d43" title="translateKeypress" alt="" coords="308,5,435,32"/><area shape="rect" id="node4" href="cursor_8h.html#a467458fc0085539f52030fabf3dd9286" title="interpret_keypress" alt="" coords="483,31,612,57"/><area shape="rect" id="node5" href="_p_s2_8h.html#aab6a9276acf7260f4f6dfcd5a4c92e4a" title="removeFromPS2Buffer" alt="" coords="660,31,811,57"/></map>
+<area shape="rect" id="node2" href="cursor_8c.html#a8b0ba534e7681966289c491064e9cdc8" title="press_F1" alt="" coords="184,5,260,32"/><area shape="rect" id="node3" href="_p_s2_8h.html#a01ddbbb07d07e31ed7bce301ba934d43" title="translateKeypress" alt="" coords="308,5,435,32"/><area shape="rect" id="node4" href="cursor_8h.html#a467458fc0085539f52030fabf3dd9286" title="interpret_keypress" alt="" coords="483,5,612,32"/><area shape="rect" id="node5" href="_p_s2_8h.html#aab6a9276acf7260f4f6dfcd5a4c92e4a" title="removeFromPS2Buffer" alt="" coords="660,5,811,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa510ca0bb56c03148f3392c28433dc45"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void decreaseLineLocationEnd </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="cursor_8c_source.html#l00106">106</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="cursor_8c_aa510ca0bb56c03148f3392c28433dc45_icgraph.png" border="0" usemap="#cursor_8c_aa510ca0bb56c03148f3392c28433dc45_icgraph" alt=""/></div>
+<map name="cursor_8c_aa510ca0bb56c03148f3392c28433dc45_icgraph" id="cursor_8c_aa510ca0bb56c03148f3392c28433dc45_icgraph">
+<area shape="rect" id="node2" href="cursor_8h.html#afb368b3eb12755cae8787b96e467e0e3" title="press_backspace" alt="" coords="224,5,348,32"/><area shape="rect" id="node3" href="cursor_8h.html#a467458fc0085539f52030fabf3dd9286" title="interpret_keypress" alt="" coords="396,5,525,32"/><area shape="rect" id="node4" href="_p_s2_8h.html#aab6a9276acf7260f4f6dfcd5a4c92e4a" title="removeFromPS2Buffer" alt="" coords="573,5,724,32"/></map>
 </div>
 </p>
 
@@ -276,15 +313,16 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>gets the cursor location </p>
 
-<p>Definition at line <a class="el" href="cursor_8c_source.html#l00009">9</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
+<p>Definition at line <a class="el" href="cursor_8c_source.html#l00013">13</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="cursor_8c_a95873c61ca346ba3ad63577fec99fe15_icgraph.png" border="0" usemap="#cursor_8c_a95873c61ca346ba3ad63577fec99fe15_icgraph" alt=""/></div>
 <map name="cursor_8c_a95873c61ca346ba3ad63577fec99fe15_icgraph" id="cursor_8c_a95873c61ca346ba3ad63577fec99fe15_icgraph">
-<area shape="rect" id="node2" href="_p_s2_8h.html#a29bab149333c107091c1b286e05ac315" title="placeChar" alt="" coords="205,81,285,108"/><area shape="rect" id="node9" href="cursor_8h.html#a8f55cca82244df1cf78f0a826f816f75" title="CompareTextLines" alt="" coords="180,157,311,184"/><area shape="rect" id="node13" href="_v_g_a_8h.html#acea8175bc07b5d0ba9f3f78d0c00c4a7" title="BlinkCursor" alt="" coords="201,208,290,235"/><area shape="rect" id="node3" href="cursor_8h.html#a02936826fc9c1380ef1e42ae18940c9a" title="placeString" alt="" coords="372,5,459,32"/><area shape="rect" id="node7" href="cursor_8c.html#a41c92fd026b99457236bf755ee517e55" title="addCharToTextLine" alt="" coords="520,107,653,133"/><area shape="rect" id="node8" href="_v_g_a_8h.html#ab66a8865de62d9daefab9f8abf026478" title="printTestScreen" alt="" coords="359,56,472,83"/><area shape="rect" id="node4" href="cursor_8h.html#aee82caceba560f01202c4459ba4497c7" title="processLine" alt="" coords="541,56,633,83"/><area shape="rect" id="node5" href="cursor_8h.html#a467458fc0085539f52030fabf3dd9286" title="interpret_keypress" alt="" coords="701,132,831,159"/><area shape="rect" id="node6" href="_p_s2_8h.html#aab6a9276acf7260f4f6dfcd5a4c92e4a" title="removeFromPS2Buffer" alt="" coords="879,132,1029,159"/><area shape="rect" id="node10" href="cursor_8c.html#a8b0ba534e7681966289c491064e9cdc8" title="press_F1" alt="" coords="377,157,453,184"/><area shape="rect" id="node12" href="cursor_8h.html#afb368b3eb12755cae8787b96e467e0e3" title="press_backspace" alt="" coords="525,208,649,235"/><area shape="rect" id="node11" href="_p_s2_8h.html#a01ddbbb07d07e31ed7bce301ba934d43" title="translateKeypress" alt="" coords="523,157,650,184"/></map>
+<area shape="rect" id="node2" href="_p_s2_8h.html#a7804524381705ec22e0efc3a1326dd69" title="MoveCursorLeft" alt="" coords="359,5,469,32"/><area shape="rect" id="node3" href="cursor_8h.html#afb368b3eb12755cae8787b96e467e0e3" title="press_backspace" alt="" coords="699,56,823,83"/><area shape="rect" id="node7" href="_p_s2_8h.html#ac177699cfeda15e4b887864f6eacc5e3" title="MoveCursorRight" alt="" coords="185,157,305,184"/><area shape="rect" id="node8" href="_p_s2_8h.html#a29bab149333c107091c1b286e05ac315" title="placeChar" alt="" coords="374,208,454,235"/><area shape="rect" id="node11" href="cursor_8c.html#a41c92fd026b99457236bf755ee517e55" title="addCharToTextLine" alt="" coords="517,259,651,285"/><area shape="rect" id="node13" href="cursor_8h.html#a8f55cca82244df1cf78f0a826f816f75" title="CompareTextLines" alt="" coords="180,107,311,133"/><area shape="rect" id="node15" href="_v_g_a_8h.html#acea8175bc07b5d0ba9f3f78d0c00c4a7" title="BlinkCursor" alt="" coords="201,309,290,336"/><area shape="rect" id="node6" href="_p_s2_8h.html#a01ddbbb07d07e31ed7bce301ba934d43" title="translateKeypress" alt="" coords="521,107,647,133"/><area shape="rect" id="node4" href="cursor_8h.html#a467458fc0085539f52030fabf3dd9286" title="interpret_keypress" alt="" coords="871,132,1000,159"/><area shape="rect" id="node5" href="_p_s2_8h.html#aab6a9276acf7260f4f6dfcd5a4c92e4a" title="removeFromPS2Buffer" alt="" coords="1048,132,1199,159"/><area shape="rect" id="node9" href="cursor_8h.html#a02936826fc9c1380ef1e42ae18940c9a" title="placeString" alt="" coords="541,157,627,184"/><area shape="rect" id="node12" href="_v_g_a_8h.html#ab66a8865de62d9daefab9f8abf026478" title="printTestScreen" alt="" coords="527,208,641,235"/><area shape="rect" id="node10" href="cursor_8h.html#aee82caceba560f01202c4459ba4497c7" title="processLine" alt="" coords="715,157,807,184"/><area shape="rect" id="node14" href="cursor_8c.html#a8b0ba534e7681966289c491064e9cdc8" title="press_F1" alt="" coords="376,107,452,133"/></map>
 </div>
 </p>
 
@@ -303,7 +341,34 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cursor_8c_source.html#l00301">301</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
+<p>Definition at line <a class="el" href="cursor_8c_source.html#l00352">352</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1e80692974a94a04598cba2c18c72a98"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getLineLocationEnd </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="cursor_8c_source.html#l00117">117</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="cursor_8c_a1e80692974a94a04598cba2c18c72a98_icgraph.png" border="0" usemap="#cursor_8c_a1e80692974a94a04598cba2c18c72a98_icgraph" alt=""/></div>
+<map name="cursor_8c_a1e80692974a94a04598cba2c18c72a98_icgraph" id="cursor_8c_a1e80692974a94a04598cba2c18c72a98_icgraph">
+<area shape="rect" id="node2" href="_p_s2_8h.html#ac177699cfeda15e4b887864f6eacc5e3" title="MoveCursorRight" alt="" coords="191,73,311,100"/><area shape="rect" id="node8" href="cursor_8h.html#afb368b3eb12755cae8787b96e467e0e3" title="press_backspace" alt="" coords="701,22,825,49"/><area shape="rect" id="node12" href="_p_s2_8h.html#ac8e40e0b08b773c5f3fc0b303fe562de" title="MoveCursorDown" alt="" coords="189,124,312,150"/><area shape="rect" id="node3" href="_p_s2_8h.html#a29bab149333c107091c1b286e05ac315" title="placeChar" alt="" coords="383,73,463,100"/><area shape="rect" id="node11" href="_p_s2_8h.html#a01ddbbb07d07e31ed7bce301ba934d43" title="translateKeypress" alt="" coords="360,124,487,150"/><area shape="rect" id="node4" href="cursor_8h.html#a02936826fc9c1380ef1e42ae18940c9a" title="placeString" alt="" coords="548,22,635,49"/><area shape="rect" id="node9" href="cursor_8c.html#a41c92fd026b99457236bf755ee517e55" title="addCharToTextLine" alt="" coords="696,124,829,150"/><area shape="rect" id="node10" href="_v_g_a_8h.html#ab66a8865de62d9daefab9f8abf026478" title="printTestScreen" alt="" coords="535,73,648,100"/><area shape="rect" id="node5" href="cursor_8h.html#aee82caceba560f01202c4459ba4497c7" title="processLine" alt="" coords="717,73,809,100"/><area shape="rect" id="node6" href="cursor_8h.html#a467458fc0085539f52030fabf3dd9286" title="interpret_keypress" alt="" coords="877,98,1007,125"/><area shape="rect" id="node7" href="_p_s2_8h.html#aab6a9276acf7260f4f6dfcd5a4c92e4a" title="removeFromPS2Buffer" alt="" coords="1055,98,1205,125"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -321,16 +386,16 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cursor_8c_source.html#l00334">334</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
+<p>Definition at line <a class="el" href="cursor_8c_source.html#l00389">389</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a5c5543d701a9dae494df5b00cc931377"></a>
+<a class="anchor" id="a06559067271121a8ba77c7e7f387a8f3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int getTextLineIndex </td>
+          <td class="memname">void increaseLineLocationEnd </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -339,14 +404,14 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cursor_8c_source.html#l00143">143</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
+<p>Definition at line <a class="el" href="cursor_8c_source.html#l00100">100</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="cursor_8c_a5c5543d701a9dae494df5b00cc931377_icgraph.png" border="0" usemap="#cursor_8c_a5c5543d701a9dae494df5b00cc931377_icgraph" alt=""/></div>
-<map name="cursor_8c_a5c5543d701a9dae494df5b00cc931377_icgraph" id="cursor_8c_a5c5543d701a9dae494df5b00cc931377_icgraph">
-<area shape="rect" id="node2" href="cursor_8h.html#afb368b3eb12755cae8787b96e467e0e3" title="press_backspace" alt="" coords="178,5,302,32"/><area shape="rect" id="node5" href="cursor_8c.html#a41c92fd026b99457236bf755ee517e55" title="addCharToTextLine" alt="" coords="173,56,307,83"/><area shape="rect" id="node3" href="cursor_8h.html#a467458fc0085539f52030fabf3dd9286" title="interpret_keypress" alt="" coords="355,31,484,57"/><area shape="rect" id="node4" href="_p_s2_8h.html#aab6a9276acf7260f4f6dfcd5a4c92e4a" title="removeFromPS2Buffer" alt="" coords="532,31,683,57"/></map>
+<div class="center"><img src="cursor_8c_a06559067271121a8ba77c7e7f387a8f3_icgraph.png" border="0" usemap="#cursor_8c_a06559067271121a8ba77c7e7f387a8f3_icgraph" alt=""/></div>
+<map name="cursor_8c_a06559067271121a8ba77c7e7f387a8f3_icgraph" id="cursor_8c_a06559067271121a8ba77c7e7f387a8f3_icgraph">
+<area shape="rect" id="node2" href="_p_s2_8h.html#a29bab149333c107091c1b286e05ac315" title="placeChar" alt="" coords="220,56,300,83"/><area shape="rect" id="node3" href="cursor_8h.html#a02936826fc9c1380ef1e42ae18940c9a" title="placeString" alt="" coords="361,56,448,83"/><area shape="rect" id="node8" href="cursor_8c.html#a41c92fd026b99457236bf755ee517e55" title="addCharToTextLine" alt="" coords="509,107,643,133"/><area shape="rect" id="node9" href="_v_g_a_8h.html#ab66a8865de62d9daefab9f8abf026478" title="printTestScreen" alt="" coords="348,5,461,32"/><area shape="rect" id="node4" href="cursor_8h.html#aee82caceba560f01202c4459ba4497c7" title="processLine" alt="" coords="530,5,622,32"/><area shape="rect" id="node7" href="cursor_8h.html#afb368b3eb12755cae8787b96e467e0e3" title="press_backspace" alt="" coords="514,56,638,83"/><area shape="rect" id="node5" href="cursor_8h.html#a467458fc0085539f52030fabf3dd9286" title="interpret_keypress" alt="" coords="691,56,820,83"/><area shape="rect" id="node6" href="_p_s2_8h.html#aab6a9276acf7260f4f6dfcd5a4c92e4a" title="removeFromPS2Buffer" alt="" coords="868,56,1019,83"/></map>
 </div>
 </p>
 
@@ -366,14 +431,14 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cursor_8c_source.html#l00096">96</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
+<p>Definition at line <a class="el" href="cursor_8c_source.html#l00133">133</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="cursor_8c_a467458fc0085539f52030fabf3dd9286_cgraph.png" border="0" usemap="#cursor_8c_a467458fc0085539f52030fabf3dd9286_cgraph" alt=""/></div>
 <map name="cursor_8c_a467458fc0085539f52030fabf3dd9286_cgraph" id="cursor_8c_a467458fc0085539f52030fabf3dd9286_cgraph">
-<area shape="rect" id="node2" href="_p_s2_8c.html#a8ab149b8e337f892e4c07286e094ee54" title="translateKeypress" alt="" coords="183,284,309,311"/><area shape="rect" id="node20" href="cursor_8c.html#aee82caceba560f01202c4459ba4497c7" title="processLine" alt="" coords="200,613,292,640"/><area shape="rect" id="node25" href="_p_s2_8h.html#a5473c6cfd6c580642133754e141ca556" title="ClearScreen" alt="" coords="199,816,293,843"/><area shape="rect" id="node26" href="cursor_8c.html#a53ebfe2e3649276643adf8647c8a5821" title="clearTextLine" alt="" coords="197,867,295,893"/><area shape="rect" id="node27" href="cursor_8c.html#aeca62116778bb6c13245089867ded8d9" title="resetPlaceCharLocation" alt="" coords="539,816,699,843"/><area shape="rect" id="node28" href="_p_s2_8c.html#a6d4d2e35c21e102669b9fdf8a3858e99" title="invertShiftPressed" alt="" coords="183,917,309,944"/><area shape="rect" id="node29" href="cursor_8c.html#afb368b3eb12755cae8787b96e467e0e3" title="press_backspace" alt="" coords="362,715,486,741"/><area shape="rect" id="node32" href="cursor_8c.html#a41c92fd026b99457236bf755ee517e55" title="addCharToTextLine" alt="" coords="357,664,491,691"/><area shape="rect" id="node3" href="_p_s2_8h.html#a819307bdf0c8c8a841a2305637d102c2" title="ShiftScreenUp" alt="" coords="371,208,477,235"/><area shape="rect" id="node4" href="_p_s2_8h.html#a030e6b6983ff846d9cca945c743c40b2" title="ShiftScreenDown" alt="" coords="363,259,485,285"/><area shape="rect" id="node5" href="cursor_8c.html#a7804524381705ec22e0efc3a1326dd69" title="MoveCursorLeft" alt="" coords="369,309,479,336"/><area shape="rect" id="node6" href="_p_s2_8h.html#acea8175bc07b5d0ba9f3f78d0c00c4a7" title="BlinkCursor" alt="" coords="379,360,469,387"/><area shape="rect" id="node7" href="_p_s2_8h.html#a16432961ed8b60a6197456a6d92e4ddc" title="ShiftScreenLeft" alt="" coords="369,411,479,437"/><area shape="rect" id="node8" href="cursor_8c.html#ac177699cfeda15e4b887864f6eacc5e3" title="MoveCursorRight" alt="" coords="364,461,484,488"/><area shape="rect" id="node9" href="_p_s2_8h.html#a9c1bdbae316b73cb3580823f20c413f3" title="ShiftScreenRight" alt="" coords="365,512,483,539"/><area shape="rect" id="node10" href="cursor_8c.html#ae9337ec3c6ea47f10d329cd99d7a29f9" title="MoveCursorUp" alt="" coords="371,5,477,32"/><area shape="rect" id="node11" href="cursor_8c.html#ac8e40e0b08b773c5f3fc0b303fe562de" title="MoveCursorDown" alt="" coords="363,56,485,83"/><area shape="rect" id="node12" href="cursor_8c.html#a8b0ba534e7681966289c491064e9cdc8" title="press_F1" alt="" coords="386,107,462,133"/><area shape="rect" id="node19" href="_v_g_a_8c.html#a1ff9068d637ee1bf5b357186033e3623" title="shiftTextLeft" alt="" coords="378,157,470,184"/><area shape="rect" id="node13" href="cursor_8c.html#a8f55cca82244df1cf78f0a826f816f75" title="CompareTextLines" alt="" coords="553,461,684,488"/><area shape="rect" id="node14" href="_v_g_a_8c.html#a62abd37a46e00ef5754e42fdd601cb9f" title="clearchar" alt="" coords="793,411,867,437"/><area shape="rect" id="node15" href="cursor_8c.html#a3a7d62c4f2983e6e2e2f4da56f36befc" title="setandgetCursorLocation" alt="" coords="747,461,913,488"/><area shape="rect" id="node16" href="_v_g_a_8c.html#a499c31fd29b2bb4509a35860bde799b6" title="writechar" alt="" coords="793,512,867,539"/><area shape="rect" id="node17" href="_p_s2_8c.html#ae311e9417c9347d550643de4daea45e5" title="keyboard_lookup" alt="" coords="770,613,890,640"/><area shape="rect" id="node18" href="cursor_8c.html#a95873c61ca346ba3ad63577fec99fe15" title="getCursorLocation" alt="" coords="767,563,893,589"/><area shape="rect" id="node21" href="_v_g_a_8c.html#ab66a8865de62d9daefab9f8abf026478" title="printTestScreen" alt="" coords="367,613,481,640"/><area shape="rect" id="node24" href="cursor_8c.html#a02936826fc9c1380ef1e42ae18940c9a" title="placeString" alt="" coords="381,563,467,589"/><area shape="rect" id="node22" href="cursor_8c.html#a29bab149333c107091c1b286e05ac315" title="placeChar" alt="" coords="579,563,659,589"/><area shape="rect" id="node23" href="cursor_8c.html#acd4b06887a4337467e744f693a2df6a9" title="setCursorLocation" alt="" coords="767,740,893,767"/><area shape="rect" id="node30" href="cursor_8c.html#a5c5543d701a9dae494df5b00cc931377" title="getTextLineIndex" alt="" coords="559,765,679,792"/><area shape="rect" id="node31" href="cursor_8c.html#a9d645a8f1ad2b03ad027accb3bcf0db4" title="setTextLineIndex" alt="" coords="559,715,679,741"/></map>
+<area shape="rect" id="node2" href="_p_s2_8c.html#a8ab149b8e337f892e4c07286e094ee54" title="translateKeypress" alt="" coords="199,284,326,311"/><area shape="rect" id="node22" href="cursor_8c.html#aee82caceba560f01202c4459ba4497c7" title="processLine" alt="" coords="217,943,309,969"/><area shape="rect" id="node27" href="_p_s2_8h.html#a5473c6cfd6c580642133754e141ca556" title="ClearScreen" alt="" coords="216,703,309,729"/><area shape="rect" id="node28" href="cursor_8c.html#a53ebfe2e3649276643adf8647c8a5821" title="clearTextLine" alt="" coords="213,753,312,780"/><area shape="rect" id="node29" href="cursor_8c.html#aeca62116778bb6c13245089867ded8d9" title="resetPlaceCharLocation" alt="" coords="183,613,343,640"/><area shape="rect" id="node31" href="_p_s2_8c.html#a6d4d2e35c21e102669b9fdf8a3858e99" title="invertShiftPressed" alt="" coords="199,855,326,881"/><area shape="rect" id="node32" href="cursor_8c.html#afb368b3eb12755cae8787b96e467e0e3" title="press_backspace" alt="" coords="201,804,325,831"/><area shape="rect" id="node34" href="cursor_8c.html#a41c92fd026b99457236bf755ee517e55" title="addCharToTextLine" alt="" coords="409,1057,543,1084"/><area shape="rect" id="node3" href="_p_s2_8h.html#a819307bdf0c8c8a841a2305637d102c2" title="ShiftScreenUp" alt="" coords="423,107,529,133"/><area shape="rect" id="node4" href="_p_s2_8h.html#a030e6b6983ff846d9cca945c743c40b2" title="ShiftScreenDown" alt="" coords="415,157,537,184"/><area shape="rect" id="node5" href="cursor_8c.html#a7804524381705ec22e0efc3a1326dd69" title="MoveCursorLeft" alt="" coords="619,588,730,615"/><area shape="rect" id="node8" href="_p_s2_8h.html#acea8175bc07b5d0ba9f3f78d0c00c4a7" title="BlinkCursor" alt="" coords="431,208,521,235"/><area shape="rect" id="node9" href="_p_s2_8h.html#a16432961ed8b60a6197456a6d92e4ddc" title="ShiftScreenLeft" alt="" coords="421,259,531,285"/><area shape="rect" id="node10" href="cursor_8c.html#ac177699cfeda15e4b887864f6eacc5e3" title="MoveCursorRight" alt="" coords="811,563,931,589"/><area shape="rect" id="node12" href="_p_s2_8h.html#a9c1bdbae316b73cb3580823f20c413f3" title="ShiftScreenRight" alt="" coords="417,309,535,336"/><area shape="rect" id="node13" href="cursor_8c.html#ae9337ec3c6ea47f10d329cd99d7a29f9" title="MoveCursorUp" alt="" coords="423,5,529,32"/><area shape="rect" id="node14" href="cursor_8c.html#ac8e40e0b08b773c5f3fc0b303fe562de" title="MoveCursorDown" alt="" coords="613,461,736,488"/><area shape="rect" id="node15" href="cursor_8c.html#a8b0ba534e7681966289c491064e9cdc8" title="press_F1" alt="" coords="438,563,514,589"/><area shape="rect" id="node21" href="_v_g_a_8c.html#a1ff9068d637ee1bf5b357186033e3623" title="shiftTextLeft" alt="" coords="430,56,522,83"/><area shape="rect" id="node6" href="cursor_8c.html#a95873c61ca346ba3ad63577fec99fe15" title="getCursorLocation" alt="" coords="1007,867,1134,893"/><area shape="rect" id="node7" href="cursor_8c.html#acd4b06887a4337467e744f693a2df6a9" title="setCursorLocation" alt="" coords="1007,512,1134,539"/><area shape="rect" id="node11" href="cursor_8c.html#a1e80692974a94a04598cba2c18c72a98" title="getLineLocationEnd" alt="" coords="1003,563,1139,589"/><area shape="rect" id="node16" href="cursor_8c.html#a8f55cca82244df1cf78f0a826f816f75" title="CompareTextLines" alt="" coords="609,816,740,843"/><area shape="rect" id="node17" href="_v_g_a_8c.html#a62abd37a46e00ef5754e42fdd601cb9f" title="clearchar" alt="" coords="834,715,909,741"/><area shape="rect" id="node18" href="cursor_8c.html#a3a7d62c4f2983e6e2e2f4da56f36befc" title="setandgetCursorLocation" alt="" coords="788,765,955,792"/><area shape="rect" id="node19" href="_v_g_a_8c.html#a499c31fd29b2bb4509a35860bde799b6" title="writechar" alt="" coords="834,867,909,893"/><area shape="rect" id="node20" href="_p_s2_8c.html#ae311e9417c9347d550643de4daea45e5" title="keyboard_lookup" alt="" coords="811,1069,931,1096"/><area shape="rect" id="node23" href="_v_g_a_8c.html#ab66a8865de62d9daefab9f8abf026478" title="printTestScreen" alt="" coords="419,993,533,1020"/><area shape="rect" id="node26" href="cursor_8c.html#a02936826fc9c1380ef1e42ae18940c9a" title="placeString" alt="" coords="433,943,519,969"/><area shape="rect" id="node24" href="cursor_8c.html#a29bab149333c107091c1b286e05ac315" title="placeChar" alt="" coords="635,917,715,944"/><area shape="rect" id="node25" href="cursor_8c.html#a06559067271121a8ba77c7e7f387a8f3" title="increaseLineLocationEnd" alt="" coords="788,968,955,995"/><area shape="rect" id="node30" href="cursor_8c.html#a733c65607b5947220d85298a9b30bc34" title="resetLineLocationEnd" alt="" coords="403,613,549,640"/><area shape="rect" id="node33" href="cursor_8c.html#aa510ca0bb56c03148f3392c28433dc45" title="decreaseLineLocationEnd" alt="" coords="391,892,561,919"/></map>
 </div>
 </p>
 
@@ -402,7 +467,16 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cursor_8c_source.html#l00072">72</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
+<p>Definition at line <a class="el" href="cursor_8c_source.html#l00081">81</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="cursor_8c_ac8e40e0b08b773c5f3fc0b303fe562de_cgraph.png" border="0" usemap="#cursor_8c_ac8e40e0b08b773c5f3fc0b303fe562de_cgraph" alt=""/></div>
+<map name="cursor_8c_ac8e40e0b08b773c5f3fc0b303fe562de_cgraph" id="cursor_8c_ac8e40e0b08b773c5f3fc0b303fe562de_cgraph">
+<area shape="rect" id="node2" href="cursor_8c.html#a1e80692974a94a04598cba2c18c72a98" title="getLineLocationEnd" alt="" coords="176,5,312,32"/></map>
+</div>
+</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -429,14 +503,23 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cursor_8c_source.html#l00019">19</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
+<p>Definition at line <a class="el" href="cursor_8c_source.html#l00026">26</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="cursor_8c_a7804524381705ec22e0efc3a1326dd69_cgraph.png" border="0" usemap="#cursor_8c_a7804524381705ec22e0efc3a1326dd69_cgraph" alt=""/></div>
+<map name="cursor_8c_a7804524381705ec22e0efc3a1326dd69_cgraph" id="cursor_8c_a7804524381705ec22e0efc3a1326dd69_cgraph">
+<area shape="rect" id="node2" href="cursor_8c.html#a95873c61ca346ba3ad63577fec99fe15" title="getCursorLocation" alt="" coords="164,5,291,32"/><area shape="rect" id="node3" href="cursor_8c.html#acd4b06887a4337467e744f693a2df6a9" title="setCursorLocation" alt="" coords="164,56,291,83"/></map>
+</div>
+</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="cursor_8c_a7804524381705ec22e0efc3a1326dd69_icgraph.png" border="0" usemap="#cursor_8c_a7804524381705ec22e0efc3a1326dd69_icgraph" alt=""/></div>
 <map name="cursor_8c_a7804524381705ec22e0efc3a1326dd69_icgraph" id="cursor_8c_a7804524381705ec22e0efc3a1326dd69_icgraph">
-<area shape="rect" id="node2" href="_p_s2_8h.html#a01ddbbb07d07e31ed7bce301ba934d43" title="translateKeypress" alt="" coords="164,5,291,32"/><area shape="rect" id="node3" href="cursor_8h.html#a467458fc0085539f52030fabf3dd9286" title="interpret_keypress" alt="" coords="339,5,468,32"/><area shape="rect" id="node4" href="_p_s2_8h.html#aab6a9276acf7260f4f6dfcd5a4c92e4a" title="removeFromPS2Buffer" alt="" coords="516,5,667,32"/></map>
+<area shape="rect" id="node2" href="cursor_8h.html#afb368b3eb12755cae8787b96e467e0e3" title="press_backspace" alt="" coords="165,5,289,32"/><area shape="rect" id="node5" href="_p_s2_8h.html#a01ddbbb07d07e31ed7bce301ba934d43" title="translateKeypress" alt="" coords="164,56,291,83"/><area shape="rect" id="node3" href="cursor_8h.html#a467458fc0085539f52030fabf3dd9286" title="interpret_keypress" alt="" coords="339,31,468,57"/><area shape="rect" id="node4" href="_p_s2_8h.html#aab6a9276acf7260f4f6dfcd5a4c92e4a" title="removeFromPS2Buffer" alt="" coords="516,31,667,57"/></map>
 </div>
 </p>
 
@@ -456,14 +539,23 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cursor_8c_source.html#l00040">40</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
+<p>Definition at line <a class="el" href="cursor_8c_source.html#l00048">48</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="cursor_8c_ac177699cfeda15e4b887864f6eacc5e3_cgraph.png" border="0" usemap="#cursor_8c_ac177699cfeda15e4b887864f6eacc5e3_cgraph" alt=""/></div>
+<map name="cursor_8c_ac177699cfeda15e4b887864f6eacc5e3_cgraph" id="cursor_8c_ac177699cfeda15e4b887864f6eacc5e3_cgraph">
+<area shape="rect" id="node2" href="cursor_8c.html#a95873c61ca346ba3ad63577fec99fe15" title="getCursorLocation" alt="" coords="178,5,305,32"/><area shape="rect" id="node3" href="cursor_8c.html#a1e80692974a94a04598cba2c18c72a98" title="getLineLocationEnd" alt="" coords="173,56,309,83"/><area shape="rect" id="node4" href="cursor_8c.html#acd4b06887a4337467e744f693a2df6a9" title="setCursorLocation" alt="" coords="178,107,305,133"/></map>
+</div>
+</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="cursor_8c_ac177699cfeda15e4b887864f6eacc5e3_icgraph.png" border="0" usemap="#cursor_8c_ac177699cfeda15e4b887864f6eacc5e3_icgraph" alt=""/></div>
 <map name="cursor_8c_ac177699cfeda15e4b887864f6eacc5e3_icgraph" id="cursor_8c_ac177699cfeda15e4b887864f6eacc5e3_icgraph">
-<area shape="rect" id="node2" href="_p_s2_8h.html#a01ddbbb07d07e31ed7bce301ba934d43" title="translateKeypress" alt="" coords="173,5,300,32"/><area shape="rect" id="node3" href="cursor_8h.html#a467458fc0085539f52030fabf3dd9286" title="interpret_keypress" alt="" coords="348,5,477,32"/><area shape="rect" id="node4" href="_p_s2_8h.html#aab6a9276acf7260f4f6dfcd5a4c92e4a" title="removeFromPS2Buffer" alt="" coords="525,5,676,32"/></map>
+<area shape="rect" id="node2" href="_p_s2_8h.html#a29bab149333c107091c1b286e05ac315" title="placeChar" alt="" coords="197,81,277,108"/><area shape="rect" id="node10" href="_p_s2_8h.html#a01ddbbb07d07e31ed7bce301ba934d43" title="translateKeypress" alt="" coords="173,132,300,159"/><area shape="rect" id="node3" href="cursor_8h.html#a02936826fc9c1380ef1e42ae18940c9a" title="placeString" alt="" coords="361,56,448,83"/><area shape="rect" id="node8" href="cursor_8c.html#a41c92fd026b99457236bf755ee517e55" title="addCharToTextLine" alt="" coords="509,107,643,133"/><area shape="rect" id="node9" href="_v_g_a_8h.html#ab66a8865de62d9daefab9f8abf026478" title="printTestScreen" alt="" coords="348,5,461,32"/><area shape="rect" id="node4" href="cursor_8h.html#aee82caceba560f01202c4459ba4497c7" title="processLine" alt="" coords="530,5,622,32"/><area shape="rect" id="node7" href="cursor_8h.html#afb368b3eb12755cae8787b96e467e0e3" title="press_backspace" alt="" coords="514,56,638,83"/><area shape="rect" id="node5" href="cursor_8h.html#a467458fc0085539f52030fabf3dd9286" title="interpret_keypress" alt="" coords="691,81,820,108"/><area shape="rect" id="node6" href="_p_s2_8h.html#aab6a9276acf7260f4f6dfcd5a4c92e4a" title="removeFromPS2Buffer" alt="" coords="868,81,1019,108"/></map>
 </div>
 </p>
 
@@ -483,7 +575,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cursor_8c_source.html#l00056">56</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
+<p>Definition at line <a class="el" href="cursor_8c_source.html#l00065">65</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -510,14 +602,14 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cursor_8c_source.html#l00316">316</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
+<p>Definition at line <a class="el" href="cursor_8c_source.html#l00367">367</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="cursor_8c_a29bab149333c107091c1b286e05ac315_cgraph.png" border="0" usemap="#cursor_8c_a29bab149333c107091c1b286e05ac315_cgraph" alt=""/></div>
 <map name="cursor_8c_a29bab149333c107091c1b286e05ac315_cgraph" id="cursor_8c_a29bab149333c107091c1b286e05ac315_cgraph">
-<area shape="rect" id="node2" href="cursor_8c.html#a95873c61ca346ba3ad63577fec99fe15" title="getCursorLocation" alt="" coords="133,5,260,32"/><area shape="rect" id="node3" href="cursor_8c.html#acd4b06887a4337467e744f693a2df6a9" title="setCursorLocation" alt="" coords="133,56,260,83"/><area shape="rect" id="node4" href="_v_g_a_8c.html#a499c31fd29b2bb4509a35860bde799b6" title="writechar" alt="" coords="159,107,234,133"/></map>
+<area shape="rect" id="node2" href="cursor_8c.html#a06559067271121a8ba77c7e7f387a8f3" title="increaseLineLocationEnd" alt="" coords="133,5,300,32"/><area shape="rect" id="node3" href="cursor_8c.html#ac177699cfeda15e4b887864f6eacc5e3" title="MoveCursorRight" alt="" coords="157,107,277,133"/><area shape="rect" id="node4" href="cursor_8c.html#a95873c61ca346ba3ad63577fec99fe15" title="getCursorLocation" alt="" coords="353,56,479,83"/><area shape="rect" id="node7" href="_v_g_a_8c.html#a499c31fd29b2bb4509a35860bde799b6" title="writechar" alt="" coords="179,157,254,184"/><area shape="rect" id="node5" href="cursor_8c.html#a1e80692974a94a04598cba2c18c72a98" title="getLineLocationEnd" alt="" coords="348,107,484,133"/><area shape="rect" id="node6" href="cursor_8c.html#acd4b06887a4337467e744f693a2df6a9" title="setCursorLocation" alt="" coords="353,157,479,184"/></map>
 </div>
 </p>
 
@@ -526,7 +618,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="cursor_8c_a29bab149333c107091c1b286e05ac315_icgraph.png" border="0" usemap="#cursor_8c_a29bab149333c107091c1b286e05ac315_icgraph" alt=""/></div>
 <map name="cursor_8c_a29bab149333c107091c1b286e05ac315_icgraph" id="cursor_8c_a29bab149333c107091c1b286e05ac315_icgraph">
-<area shape="rect" id="node2" href="cursor_8h.html#a02936826fc9c1380ef1e42ae18940c9a" title="placeString" alt="" coords="147,5,233,32"/><area shape="rect" id="node6" href="cursor_8c.html#a41c92fd026b99457236bf755ee517e55" title="addCharToTextLine" alt="" coords="295,107,428,133"/><area shape="rect" id="node7" href="_v_g_a_8h.html#ab66a8865de62d9daefab9f8abf026478" title="printTestScreen" alt="" coords="133,56,247,83"/><area shape="rect" id="node3" href="cursor_8h.html#aee82caceba560f01202c4459ba4497c7" title="processLine" alt="" coords="315,56,407,83"/><area shape="rect" id="node4" href="cursor_8h.html#a467458fc0085539f52030fabf3dd9286" title="interpret_keypress" alt="" coords="476,81,605,108"/><area shape="rect" id="node5" href="_p_s2_8h.html#aab6a9276acf7260f4f6dfcd5a4c92e4a" title="removeFromPS2Buffer" alt="" coords="653,81,804,108"/></map>
+<area shape="rect" id="node2" href="cursor_8h.html#a02936826fc9c1380ef1e42ae18940c9a" title="placeString" alt="" coords="147,56,233,83"/><area shape="rect" id="node7" href="cursor_8c.html#a41c92fd026b99457236bf755ee517e55" title="addCharToTextLine" alt="" coords="295,107,428,133"/><area shape="rect" id="node8" href="_v_g_a_8h.html#ab66a8865de62d9daefab9f8abf026478" title="printTestScreen" alt="" coords="133,5,247,32"/><area shape="rect" id="node3" href="cursor_8h.html#aee82caceba560f01202c4459ba4497c7" title="processLine" alt="" coords="315,5,407,32"/><area shape="rect" id="node6" href="cursor_8h.html#afb368b3eb12755cae8787b96e467e0e3" title="press_backspace" alt="" coords="299,56,423,83"/><area shape="rect" id="node4" href="cursor_8h.html#a467458fc0085539f52030fabf3dd9286" title="interpret_keypress" alt="" coords="476,56,605,83"/><area shape="rect" id="node5" href="_p_s2_8h.html#aab6a9276acf7260f4f6dfcd5a4c92e4a" title="removeFromPS2Buffer" alt="" coords="653,56,804,83"/></map>
 </div>
 </p>
 
@@ -546,14 +638,14 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cursor_8c_source.html#l00307">307</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
+<p>Definition at line <a class="el" href="cursor_8c_source.html#l00358">358</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="cursor_8c_a02936826fc9c1380ef1e42ae18940c9a_cgraph.png" border="0" usemap="#cursor_8c_a02936826fc9c1380ef1e42ae18940c9a_cgraph" alt=""/></div>
 <map name="cursor_8c_a02936826fc9c1380ef1e42ae18940c9a_cgraph" id="cursor_8c_a02936826fc9c1380ef1e42ae18940c9a_cgraph">
-<area shape="rect" id="node2" href="cursor_8c.html#a29bab149333c107091c1b286e05ac315" title="placeChar" alt="" coords="160,56,240,83"/><area shape="rect" id="node6" href="_p_s2_8c.html#ae311e9417c9347d550643de4daea45e5" title="keyboard_lookup" alt="" coords="140,107,260,133"/><area shape="rect" id="node3" href="cursor_8c.html#a95873c61ca346ba3ad63577fec99fe15" title="getCursorLocation" alt="" coords="308,5,435,32"/><area shape="rect" id="node4" href="cursor_8c.html#acd4b06887a4337467e744f693a2df6a9" title="setCursorLocation" alt="" coords="308,56,435,83"/><area shape="rect" id="node5" href="_v_g_a_8c.html#a499c31fd29b2bb4509a35860bde799b6" title="writechar" alt="" coords="334,107,409,133"/></map>
+<area shape="rect" id="node2" href="cursor_8c.html#a29bab149333c107091c1b286e05ac315" title="placeChar" alt="" coords="160,81,240,108"/><area shape="rect" id="node9" href="_p_s2_8c.html#ae311e9417c9347d550643de4daea45e5" title="keyboard_lookup" alt="" coords="140,132,260,159"/><area shape="rect" id="node3" href="cursor_8c.html#a06559067271121a8ba77c7e7f387a8f3" title="increaseLineLocationEnd" alt="" coords="308,5,475,32"/><area shape="rect" id="node4" href="cursor_8c.html#ac177699cfeda15e4b887864f6eacc5e3" title="MoveCursorRight" alt="" coords="331,107,451,133"/><area shape="rect" id="node5" href="cursor_8c.html#a95873c61ca346ba3ad63577fec99fe15" title="getCursorLocation" alt="" coords="527,56,654,83"/><area shape="rect" id="node8" href="_v_g_a_8c.html#a499c31fd29b2bb4509a35860bde799b6" title="writechar" alt="" coords="354,157,429,184"/><area shape="rect" id="node6" href="cursor_8c.html#a1e80692974a94a04598cba2c18c72a98" title="getLineLocationEnd" alt="" coords="523,107,659,133"/><area shape="rect" id="node7" href="cursor_8c.html#acd4b06887a4337467e744f693a2df6a9" title="setCursorLocation" alt="" coords="527,157,654,184"/></map>
 </div>
 </p>
 
@@ -562,7 +654,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="cursor_8c_a02936826fc9c1380ef1e42ae18940c9a_icgraph.png" border="0" usemap="#cursor_8c_a02936826fc9c1380ef1e42ae18940c9a_icgraph" alt=""/></div>
 <map name="cursor_8c_a02936826fc9c1380ef1e42ae18940c9a_icgraph" id="cursor_8c_a02936826fc9c1380ef1e42ae18940c9a_icgraph">
-<area shape="rect" id="node2" href="cursor_8h.html#aee82caceba560f01202c4459ba4497c7" title="processLine" alt="" coords="140,5,232,32"/><area shape="rect" id="node3" href="cursor_8h.html#a467458fc0085539f52030fabf3dd9286" title="interpret_keypress" alt="" coords="280,5,409,32"/><area shape="rect" id="node4" href="_p_s2_8h.html#aab6a9276acf7260f4f6dfcd5a4c92e4a" title="removeFromPS2Buffer" alt="" coords="457,5,608,32"/></map>
+<area shape="rect" id="node2" href="cursor_8h.html#aee82caceba560f01202c4459ba4497c7" title="processLine" alt="" coords="156,5,248,32"/><area shape="rect" id="node5" href="cursor_8h.html#afb368b3eb12755cae8787b96e467e0e3" title="press_backspace" alt="" coords="140,56,264,83"/><area shape="rect" id="node3" href="cursor_8h.html#a467458fc0085539f52030fabf3dd9286" title="interpret_keypress" alt="" coords="312,31,441,57"/><area shape="rect" id="node4" href="_p_s2_8h.html#aab6a9276acf7260f4f6dfcd5a4c92e4a" title="removeFromPS2Buffer" alt="" coords="489,31,640,57"/></map>
 </div>
 </p>
 
@@ -582,14 +674,14 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cursor_8c_source.html#l00270">270</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
+<p>Definition at line <a class="el" href="cursor_8c_source.html#l00285">285</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="cursor_8c_afb368b3eb12755cae8787b96e467e0e3_cgraph.png" border="0" usemap="#cursor_8c_afb368b3eb12755cae8787b96e467e0e3_cgraph" alt=""/></div>
 <map name="cursor_8c_afb368b3eb12755cae8787b96e467e0e3_cgraph" id="cursor_8c_afb368b3eb12755cae8787b96e467e0e3_cgraph">
-<area shape="rect" id="node2" href="cursor_8c.html#a5c5543d701a9dae494df5b00cc931377" title="getTextLineIndex" alt="" coords="183,5,303,32"/><area shape="rect" id="node3" href="cursor_8c.html#a9d645a8f1ad2b03ad027accb3bcf0db4" title="setTextLineIndex" alt="" coords="183,56,303,83"/><area shape="rect" id="node4" href="cursor_8c.html#a8f55cca82244df1cf78f0a826f816f75" title="CompareTextLines" alt="" coords="177,107,308,133"/><area shape="rect" id="node5" href="_v_g_a_8c.html#a62abd37a46e00ef5754e42fdd601cb9f" title="clearchar" alt="" coords="402,5,477,32"/><area shape="rect" id="node6" href="cursor_8c.html#a3a7d62c4f2983e6e2e2f4da56f36befc" title="setandgetCursorLocation" alt="" coords="356,56,523,83"/><area shape="rect" id="node7" href="_v_g_a_8c.html#a499c31fd29b2bb4509a35860bde799b6" title="writechar" alt="" coords="402,107,477,133"/><area shape="rect" id="node8" href="_p_s2_8c.html#ae311e9417c9347d550643de4daea45e5" title="keyboard_lookup" alt="" coords="379,157,499,184"/><area shape="rect" id="node9" href="cursor_8c.html#a95873c61ca346ba3ad63577fec99fe15" title="getCursorLocation" alt="" coords="376,208,503,235"/></map>
+<area shape="rect" id="node2" href="cursor_8c.html#a95873c61ca346ba3ad63577fec99fe15" title="getCursorLocation" alt="" coords="783,52,910,79"/><area shape="rect" id="node3" href="cursor_8c.html#a1e80692974a94a04598cba2c18c72a98" title="getLineLocationEnd" alt="" coords="779,255,915,282"/><area shape="rect" id="node4" href="cursor_8c.html#a7804524381705ec22e0efc3a1326dd69" title="MoveCursorLeft" alt="" coords="592,27,703,54"/><area shape="rect" id="node6" href="cursor_8c.html#aa510ca0bb56c03148f3392c28433dc45" title="decreaseLineLocationEnd" alt="" coords="177,331,348,358"/><area shape="rect" id="node7" href="_v_g_a_8c.html#a62abd37a46e00ef5754e42fdd601cb9f" title="clearchar" alt="" coords="225,382,300,408"/><area shape="rect" id="node8" href="cursor_8c.html#a02936826fc9c1380ef1e42ae18940c9a" title="placeString" alt="" coords="219,179,306,206"/><area shape="rect" id="node5" href="cursor_8c.html#acd4b06887a4337467e744f693a2df6a9" title="setCursorLocation" alt="" coords="783,142,910,168"/><area shape="rect" id="node9" href="cursor_8c.html#a29bab149333c107091c1b286e05ac315" title="placeChar" alt="" coords="416,179,496,206"/><area shape="rect" id="node13" href="_p_s2_8c.html#ae311e9417c9347d550643de4daea45e5" title="keyboard_lookup" alt="" coords="396,128,516,155"/><area shape="rect" id="node10" href="cursor_8c.html#a06559067271121a8ba77c7e7f387a8f3" title="increaseLineLocationEnd" alt="" coords="564,128,731,155"/><area shape="rect" id="node11" href="cursor_8c.html#ac177699cfeda15e4b887864f6eacc5e3" title="MoveCursorRight" alt="" coords="587,230,707,256"/><area shape="rect" id="node12" href="_v_g_a_8c.html#a499c31fd29b2bb4509a35860bde799b6" title="writechar" alt="" coords="610,179,685,206"/></map>
 </div>
 </p>
 
@@ -618,7 +710,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cursor_8c_source.html#l00256">256</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
+<p>Definition at line <a class="el" href="cursor_8c_source.html#l00271">271</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -654,14 +746,14 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cursor_8c_source.html#l00149">149</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
+<p>Definition at line <a class="el" href="cursor_8c_source.html#l00176">176</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="cursor_8c_aee82caceba560f01202c4459ba4497c7_cgraph.png" border="0" usemap="#cursor_8c_aee82caceba560f01202c4459ba4497c7_cgraph" alt=""/></div>
 <map name="cursor_8c_aee82caceba560f01202c4459ba4497c7_cgraph" id="cursor_8c_aee82caceba560f01202c4459ba4497c7_cgraph">
-<area shape="rect" id="node2" href="_v_g_a_8c.html#ab66a8865de62d9daefab9f8abf026478" title="printTestScreen" alt="" coords="145,56,259,83"/><area shape="rect" id="node8" href="cursor_8c.html#a02936826fc9c1380ef1e42ae18940c9a" title="placeString" alt="" coords="159,107,245,133"/><area shape="rect" id="node3" href="cursor_8c.html#a29bab149333c107091c1b286e05ac315" title="placeChar" alt="" coords="327,56,407,83"/><area shape="rect" id="node7" href="_p_s2_8c.html#ae311e9417c9347d550643de4daea45e5" title="keyboard_lookup" alt="" coords="307,107,427,133"/><area shape="rect" id="node4" href="cursor_8c.html#a95873c61ca346ba3ad63577fec99fe15" title="getCursorLocation" alt="" coords="475,5,601,32"/><area shape="rect" id="node5" href="cursor_8c.html#acd4b06887a4337467e744f693a2df6a9" title="setCursorLocation" alt="" coords="475,56,601,83"/><area shape="rect" id="node6" href="_v_g_a_8c.html#a499c31fd29b2bb4509a35860bde799b6" title="writechar" alt="" coords="501,107,575,133"/></map>
+<area shape="rect" id="node2" href="_v_g_a_8c.html#ab66a8865de62d9daefab9f8abf026478" title="printTestScreen" alt="" coords="145,81,259,108"/><area shape="rect" id="node11" href="cursor_8c.html#a02936826fc9c1380ef1e42ae18940c9a" title="placeString" alt="" coords="159,132,245,159"/><area shape="rect" id="node3" href="cursor_8c.html#a29bab149333c107091c1b286e05ac315" title="placeChar" alt="" coords="327,81,407,108"/><area shape="rect" id="node10" href="_p_s2_8c.html#ae311e9417c9347d550643de4daea45e5" title="keyboard_lookup" alt="" coords="307,132,427,159"/><area shape="rect" id="node4" href="cursor_8c.html#a06559067271121a8ba77c7e7f387a8f3" title="increaseLineLocationEnd" alt="" coords="475,5,641,32"/><area shape="rect" id="node5" href="cursor_8c.html#ac177699cfeda15e4b887864f6eacc5e3" title="MoveCursorRight" alt="" coords="498,107,618,133"/><area shape="rect" id="node6" href="cursor_8c.html#a95873c61ca346ba3ad63577fec99fe15" title="getCursorLocation" alt="" coords="694,56,821,83"/><area shape="rect" id="node9" href="_v_g_a_8c.html#a499c31fd29b2bb4509a35860bde799b6" title="writechar" alt="" coords="521,157,595,184"/><area shape="rect" id="node7" href="cursor_8c.html#a1e80692974a94a04598cba2c18c72a98" title="getLineLocationEnd" alt="" coords="689,157,825,184"/><area shape="rect" id="node8" href="cursor_8c.html#acd4b06887a4337467e744f693a2df6a9" title="setCursorLocation" alt="" coords="694,107,821,133"/></map>
 </div>
 </p>
 
@@ -671,6 +763,33 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="cursor_8c_aee82caceba560f01202c4459ba4497c7_icgraph.png" border="0" usemap="#cursor_8c_aee82caceba560f01202c4459ba4497c7_icgraph" alt=""/></div>
 <map name="cursor_8c_aee82caceba560f01202c4459ba4497c7_icgraph" id="cursor_8c_aee82caceba560f01202c4459ba4497c7_icgraph">
 <area shape="rect" id="node2" href="cursor_8h.html#a467458fc0085539f52030fabf3dd9286" title="interpret_keypress" alt="" coords="145,5,275,32"/><area shape="rect" id="node3" href="_p_s2_8h.html#aab6a9276acf7260f4f6dfcd5a4c92e4a" title="removeFromPS2Buffer" alt="" coords="323,5,473,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a733c65607b5947220d85298a9b30bc34"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void resetLineLocationEnd </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="cursor_8c_source.html#l00112">112</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="cursor_8c_a733c65607b5947220d85298a9b30bc34_icgraph.png" border="0" usemap="#cursor_8c_a733c65607b5947220d85298a9b30bc34_icgraph" alt=""/></div>
+<map name="cursor_8c_a733c65607b5947220d85298a9b30bc34_icgraph" id="cursor_8c_a733c65607b5947220d85298a9b30bc34_icgraph">
+<area shape="rect" id="node2" href="_p_s2_8h.html#aeca62116778bb6c13245089867ded8d9" title="resetPlaceCharLocation" alt="" coords="200,5,360,32"/><area shape="rect" id="node3" href="cursor_8h.html#a467458fc0085539f52030fabf3dd9286" title="interpret_keypress" alt="" coords="408,5,537,32"/><area shape="rect" id="node4" href="_p_s2_8h.html#aab6a9276acf7260f4f6dfcd5a4c92e4a" title="removeFromPS2Buffer" alt="" coords="585,5,736,32"/></map>
 </div>
 </p>
 
@@ -690,14 +809,14 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cursor_8c_source.html#l00132">132</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
+<p>Definition at line <a class="el" href="cursor_8c_source.html#l00168">168</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="cursor_8c_aeca62116778bb6c13245089867ded8d9_cgraph.png" border="0" usemap="#cursor_8c_aeca62116778bb6c13245089867ded8d9_cgraph" alt=""/></div>
 <map name="cursor_8c_aeca62116778bb6c13245089867ded8d9_cgraph" id="cursor_8c_aeca62116778bb6c13245089867ded8d9_cgraph">
-<area shape="rect" id="node2" href="cursor_8c.html#acd4b06887a4337467e744f693a2df6a9" title="setCursorLocation" alt="" coords="213,5,340,32"/></map>
+<area shape="rect" id="node2" href="cursor_8c.html#acd4b06887a4337467e744f693a2df6a9" title="setCursorLocation" alt="" coords="223,5,350,32"/><area shape="rect" id="node3" href="cursor_8c.html#a733c65607b5947220d85298a9b30bc34" title="resetLineLocationEnd" alt="" coords="213,56,360,83"/></map>
 </div>
 </p>
 
@@ -726,14 +845,14 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cursor_8c_source.html#l00003">3</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
+<p>Definition at line <a class="el" href="cursor_8c_source.html#l00004">4</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="cursor_8c_a3a7d62c4f2983e6e2e2f4da56f36befc_icgraph.png" border="0" usemap="#cursor_8c_a3a7d62c4f2983e6e2e2f4da56f36befc_icgraph" alt=""/></div>
 <map name="cursor_8c_a3a7d62c4f2983e6e2e2f4da56f36befc_icgraph" id="cursor_8c_a3a7d62c4f2983e6e2e2f4da56f36befc_icgraph">
-<area shape="rect" id="node2" href="cursor_8h.html#a8f55cca82244df1cf78f0a826f816f75" title="CompareTextLines" alt="" coords="220,31,351,57"/><area shape="rect" id="node3" href="cursor_8c.html#a8b0ba534e7681966289c491064e9cdc8" title="press_F1" alt="" coords="399,5,475,32"/><area shape="rect" id="node7" href="cursor_8h.html#afb368b3eb12755cae8787b96e467e0e3" title="press_backspace" alt="" coords="524,56,648,83"/><area shape="rect" id="node4" href="_p_s2_8h.html#a01ddbbb07d07e31ed7bce301ba934d43" title="translateKeypress" alt="" coords="523,5,649,32"/><area shape="rect" id="node5" href="cursor_8h.html#a467458fc0085539f52030fabf3dd9286" title="interpret_keypress" alt="" coords="697,31,827,57"/><area shape="rect" id="node6" href="_p_s2_8h.html#aab6a9276acf7260f4f6dfcd5a4c92e4a" title="removeFromPS2Buffer" alt="" coords="875,31,1025,57"/></map>
+<area shape="rect" id="node2" href="cursor_8h.html#a8f55cca82244df1cf78f0a826f816f75" title="CompareTextLines" alt="" coords="220,5,351,32"/><area shape="rect" id="node3" href="cursor_8c.html#a8b0ba534e7681966289c491064e9cdc8" title="press_F1" alt="" coords="399,5,475,32"/><area shape="rect" id="node4" href="_p_s2_8h.html#a01ddbbb07d07e31ed7bce301ba934d43" title="translateKeypress" alt="" coords="523,5,649,32"/><area shape="rect" id="node5" href="cursor_8h.html#a467458fc0085539f52030fabf3dd9286" title="interpret_keypress" alt="" coords="697,5,827,32"/><area shape="rect" id="node6" href="_p_s2_8h.html#aab6a9276acf7260f4f6dfcd5a4c92e4a" title="removeFromPS2Buffer" alt="" coords="875,5,1025,32"/></map>
 </div>
 </p>
 
@@ -752,42 +871,16 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>sets the cursor location </p>
 
-<p>Definition at line <a class="el" href="cursor_8c_source.html#l00014">14</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
+<p>Definition at line <a class="el" href="cursor_8c_source.html#l00021">21</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="cursor_8c_acd4b06887a4337467e744f693a2df6a9_icgraph.png" border="0" usemap="#cursor_8c_acd4b06887a4337467e744f693a2df6a9_icgraph" alt=""/></div>
 <map name="cursor_8c_acd4b06887a4337467e744f693a2df6a9_icgraph" id="cursor_8c_acd4b06887a4337467e744f693a2df6a9_icgraph">
-<area shape="rect" id="node2" href="_p_s2_8h.html#aeca62116778bb6c13245089867ded8d9" title="resetPlaceCharLocation" alt="" coords="469,5,629,32"/><area shape="rect" id="node5" href="_p_s2_8h.html#a29bab149333c107091c1b286e05ac315" title="placeChar" alt="" coords="180,75,260,101"/><area shape="rect" id="node3" href="cursor_8h.html#a467458fc0085539f52030fabf3dd9286" title="interpret_keypress" alt="" coords="677,63,807,89"/><area shape="rect" id="node4" href="_p_s2_8h.html#aab6a9276acf7260f4f6dfcd5a4c92e4a" title="removeFromPS2Buffer" alt="" coords="855,63,1005,89"/><area shape="rect" id="node6" href="cursor_8h.html#a02936826fc9c1380ef1e42ae18940c9a" title="placeString" alt="" coords="321,49,408,76"/><area shape="rect" id="node8" href="cursor_8c.html#a41c92fd026b99457236bf755ee517e55" title="addCharToTextLine" alt="" coords="483,125,616,152"/><area shape="rect" id="node9" href="_v_g_a_8h.html#ab66a8865de62d9daefab9f8abf026478" title="printTestScreen" alt="" coords="308,100,421,127"/><area shape="rect" id="node7" href="cursor_8h.html#aee82caceba560f01202c4459ba4497c7" title="processLine" alt="" coords="503,63,595,89"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a9d645a8f1ad2b03ad027accb3bcf0db4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setTextLineIndex </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>newtextlineindex</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="cursor_8c_source.html#l00138">138</a> of file <a class="el" href="cursor_8c_source.html">cursor.c</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="cursor_8c_a9d645a8f1ad2b03ad027accb3bcf0db4_icgraph.png" border="0" usemap="#cursor_8c_a9d645a8f1ad2b03ad027accb3bcf0db4_icgraph" alt=""/></div>
-<map name="cursor_8c_a9d645a8f1ad2b03ad027accb3bcf0db4_icgraph" id="cursor_8c_a9d645a8f1ad2b03ad027accb3bcf0db4_icgraph">
-<area shape="rect" id="node2" href="cursor_8h.html#afb368b3eb12755cae8787b96e467e0e3" title="press_backspace" alt="" coords="178,5,302,32"/><area shape="rect" id="node5" href="cursor_8c.html#a41c92fd026b99457236bf755ee517e55" title="addCharToTextLine" alt="" coords="173,56,307,83"/><area shape="rect" id="node3" href="cursor_8h.html#a467458fc0085539f52030fabf3dd9286" title="interpret_keypress" alt="" coords="355,31,484,57"/><area shape="rect" id="node4" href="_p_s2_8h.html#aab6a9276acf7260f4f6dfcd5a4c92e4a" title="removeFromPS2Buffer" alt="" coords="532,31,683,57"/></map>
+<area shape="rect" id="node2" href="_p_s2_8h.html#a7804524381705ec22e0efc3a1326dd69" title="MoveCursorLeft" alt="" coords="185,69,295,96"/><area shape="rect" id="node7" href="_p_s2_8h.html#ac177699cfeda15e4b887864f6eacc5e3" title="MoveCursorRight" alt="" coords="180,120,300,147"/><area shape="rect" id="node13" href="_p_s2_8h.html#aeca62116778bb6c13245089867ded8d9" title="resetPlaceCharLocation" alt="" coords="348,233,508,260"/><area shape="rect" id="node3" href="cursor_8h.html#afb368b3eb12755cae8787b96e467e0e3" title="press_backspace" alt="" coords="722,5,846,32"/><area shape="rect" id="node6" href="_p_s2_8h.html#a01ddbbb07d07e31ed7bce301ba934d43" title="translateKeypress" alt="" coords="365,69,491,96"/><area shape="rect" id="node4" href="cursor_8h.html#a467458fc0085539f52030fabf3dd9286" title="interpret_keypress" alt="" coords="899,120,1028,147"/><area shape="rect" id="node5" href="_p_s2_8h.html#aab6a9276acf7260f4f6dfcd5a4c92e4a" title="removeFromPS2Buffer" alt="" coords="1076,120,1227,147"/><area shape="rect" id="node8" href="_p_s2_8h.html#a29bab149333c107091c1b286e05ac315" title="placeChar" alt="" coords="388,145,468,172"/><area shape="rect" id="node9" href="cursor_8h.html#a02936826fc9c1380ef1e42ae18940c9a" title="placeString" alt="" coords="569,107,656,133"/><area shape="rect" id="node11" href="cursor_8c.html#a41c92fd026b99457236bf755ee517e55" title="addCharToTextLine" alt="" coords="717,196,851,223"/><area shape="rect" id="node12" href="_v_g_a_8h.html#ab66a8865de62d9daefab9f8abf026478" title="printTestScreen" alt="" coords="556,157,669,184"/><area shape="rect" id="node10" href="cursor_8h.html#aee82caceba560f01202c4459ba4497c7" title="processLine" alt="" coords="738,120,830,147"/></map>
 </div>
 </p>
 
@@ -799,7 +892,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_8d1ca4586762d004ca3d4d8345229d64.html">School</a></li><li class="navelem"><a class="el" href="dir_3b74bdff48f09a297f4b55bbd2833f98.html">SeniorProject</a></li><li class="navelem"><a class="el" href="dir_6797e956251fb025423a318090692a60.html">EthKitTCP</a></li><li class="navelem"><a class="el" href="dir_6dcbaad4cccdc9500e03abf926fbe24d.html">Dev</a></li><li class="navelem"><a class="el" href="cursor_8c.html">cursor.c</a></li>
-    <li class="footer">Generated on Tue May 12 2015 02:21:02 for EthKitTCP by
+    <li class="footer">Generated on Tue May 12 2015 23:12:12 for EthKitTCP by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>
