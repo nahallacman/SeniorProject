@@ -254,6 +254,28 @@ void processLine(uint8_t * textLinePtr)
             printTestScreen();
         }
     }
+    if(valid_command == 0)
+    {
+        valid_command = 1;
+        for(z = 0; z < 4 && valid_command == 1; z++)
+        {
+                if(textLinePtr[z] != commandhelp[z])
+                {
+                        valid_command = 0;
+                }
+        }
+        //check if the last character is a space
+        //if(' ' != textLinePtr[4])
+        //{
+        //    valid_command = 0;
+        //}
+        if(valid_command == 1)
+        {
+            printHelpScreen();
+        }
+    }
+
+    //commandhelp[] = "help";
 
 
     if(valid_command == 1)
@@ -472,3 +494,7 @@ extern void addCharToTextLine(char temp2)
     
 }
 
+void printHelpScreen(void)
+{
+    placeString("help - prints this menu\r\niptargetset - sets a target machine by IP address\r\n\0");
+}

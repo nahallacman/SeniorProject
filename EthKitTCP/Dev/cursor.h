@@ -54,6 +54,7 @@ static const uint8_t commandIPTargetSet[] = "iptargetset";
 static const uint8_t commandLS[] = "ls";
 static const uint8_t commandCD[] = "cd";
 static const uint8_t commandprinttestscreen[] = "printtestscreen";
+static const uint8_t commandhelp[] = "help";
 
 #ifdef __Microcontroller
 char IPTarget[16] = "192.168.11.56";
@@ -84,6 +85,8 @@ uint8_t * gettextLine(void);
 
 //function for comparing the two text lines and updating the screen accordingly
 void CompareTextLines(char * newtextLine);
+
+void printHelpScreen(void);
 
 #ifdef	__cplusplus
 }
