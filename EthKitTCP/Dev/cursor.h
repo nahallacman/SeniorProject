@@ -22,6 +22,9 @@ extern int getCursorLocation();
 extern void setCursorLocation(int newCursorLocation);
 
 extern void increaseLineLocationEnd(void);
+extern void increaseLineLocationEndOneLine(void);
+extern void decreaseLineLocationEnd(void);
+
 
 //int CursorLocation = 0;
 int CursorLocation;
@@ -35,6 +38,7 @@ void MoveCursorLeft(void);
 void MoveCursorRight(void);
 void MoveCursorUp(void);
 void MoveCursorDown(void);
+void MoveCursorDownOneLine(void);
 
 //#include "PS2.h"
 
@@ -77,7 +81,8 @@ void press_backspace(void);
 
 char * getIPTarget();
 
-extern void placeChar(uint8_t * character);
+//extern void placeChar(uint8_t * character);
+extern void placeChar(uint8_t character);
 
 extern void placeString(char * string);
 

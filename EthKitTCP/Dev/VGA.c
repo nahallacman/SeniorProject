@@ -734,7 +734,8 @@ void printTestScreen(void)
 	{
 		for(a = 0x20; a < 0x7F; a++) //95 characters
 		{
-			placeChar(keyboard_lookup(a));
+                    //placeChar(keyboard_lookup(a));
+                    placeChar(a);
 		}
 	}
 }

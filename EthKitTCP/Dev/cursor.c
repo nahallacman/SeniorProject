@@ -84,13 +84,26 @@ void MoveCursorDown(void)
     {
         if(CursorLocation + 100 < getLineLocationEnd())
         {
-            //move cursor up
+            //move cursor down
             CursorLocation = CursorLocation + 100;
         }
     }
     else
     {
         //do nothing, can't move more up
+    }
+}
+
+void MoveCursorDownOneLine(void)
+{
+    int i = CursorLocation + 100 - (CursorLocation % 100);
+    if(CursorLocation < 7499)
+    {
+        if( i - 1 < getLineLocationEnd())
+        {
+            //move cursor down
+            CursorLocation = CursorLocation + 100 - (CursorLocation % 100);
+        }
     }
 }
 
@@ -101,6 +114,11 @@ extern void increaseLineLocationEnd(void)
 {
     //needs bounds checking
     LineLocationEnd++;
+}
+
+extern void increaseLineLocationEndOneLine(void)
+{
+    LineLocationEnd = LineLocationEnd - ( LineLocationEnd % 100 ) + 100;
 }
 
 extern void decreaseLineLocationEnd(void)
@@ -382,30 +400,34 @@ extern void placeString(char * string)
     int iter;
     for(iter = 0; string[iter] != 0; iter++)
     {
-        placeChar(keyboard_lookup(string[iter]));
+        //placeChar(keyboard_lookup(string[iter]));
+        placeChar(string[iter]);
     }
 }
 
-extern void placeChar(uint8_t * character)
+//extern void placeChar(uint8_t * character)
+extern void placeChar(uint8_t character)
 {
+    uint8_t character_memory[8];
+    uint8_t * character_map = character_memory;
     
     increaseLineLocationEnd();
     MoveCursorRight();
-    /*
-    if(getCursorLocation() < 7499)
-    {
-        setCursorLocation(getCursorLocation() + 1);
-    }
-    else
-    {
-        setCursorLocation(0);
-    }
-     */
-    
-    //LineLocationEnd++;
 
-    writechar(character, getCursorLocation() - (getCursorLocation() / 100 ) , getCursorLocation() / 100);
-
+    if(character == 10)//newline
+    {
+        increaseLineLocationEndOneLine();
+        MoveCursorDownOneLine();
+    }
+    else if(character == 13) //carriage return
+    {
+        //TODO
+    }
+    else // normal printable character
+    {
+        character_map = keyboard_lookup(character);
+        writechar(character_map, getCursorLocation() - (getCursorLocation() / 100 ) , getCursorLocation() / 100);
+    }
 }
 
 uint8_t * gettextLine(void)
@@ -490,7 +512,8 @@ extern void addCharToTextLine(char temp2)
     textLine[getCursorLocation()] = temp2;
 
     //then write the character to the screen
-    placeChar(keyboard_lookup(textLine[getCursorLocation()]));
+    //placeChar(keyboard_lookup(textLine[getCursorLocation()]));
+    placeChar(textLine[getCursorLocation()]);
     
 }
 
