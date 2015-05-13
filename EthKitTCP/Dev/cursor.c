@@ -99,7 +99,14 @@ void MoveCursorDown(void)
 
 extern void increaseLineLocationEnd(void)
 {
+    //needs bounds checking
     LineLocationEnd++;
+}
+
+extern void decreaseLineLocationEnd(void)
+{
+    //needs bounds checking
+    LineLocationEnd--;
 }
 
 extern void resetLineLocationEnd(void)
@@ -308,6 +315,7 @@ void press_backspace(void)
 
     int cursor = getCursorLocation();
     int lineEnd = getLineLocationEnd();
+    int printBegin = 0;
     //delete the character before the cursor
     //then shift down all characters after that
     for(iter = cursor - 1; iter < lineEnd; iter++ )
@@ -316,16 +324,27 @@ void press_backspace(void)
     }
     //move the cursor back one
     MoveCursorLeft();
+    //decrease the end of the line index
+    decreaseLineLocationEnd();
     //clear the line
     clearchar(cursor - 1, lineEnd); // maybe i-1?
-    //reprint the string from the curor location
-    printStart = textLine; // does this need a dereference?
-    for(i = 0; i < cursor ; i++)
-    {
-        printStart++;
-    }
 
-    placeString(printStart);
+        //reprint the string from the curor location
+        printStart = textLine; // does this need a dereference?
+        printBegin = cursor - (cursor % 4);
+        for(i = 0; i < (cursor % 4); i++)
+        {
+            //move the cursor back one
+            MoveCursorLeft();
+            //decrease the end of the line index
+            decreaseLineLocationEnd();
+        }
+        for(i = 0; i < printBegin - 1 ; i++)
+        {
+            printStart++;
+        }
+
+        placeString(printStart);
 
     //reduce the
 
