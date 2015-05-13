@@ -414,12 +414,16 @@ extern void placeChar(uint8_t character)
     increaseLineLocationEnd();
     MoveCursorRight();
 
-    if(character == 10)//newline
+    if(character == 10)//newline = \n
     {
         increaseLineLocationEndOneLine();
         MoveCursorDownOneLine();
     }
-    else if(character == 13) //carriage return
+    else if(character == 13) //carriage return = \r
+    {
+        //TODO
+    }
+    else if(character == 9) // tab = \t
     {
         //TODO
     }
@@ -519,5 +523,5 @@ extern void addCharToTextLine(char temp2)
 
 void printHelpScreen(void)
 {
-    placeString("help - prints this menu\r\niptargetset - sets a target machine by IP address\r\n\0");
+    placeString("\nhelp - prints this menu\niptargetset - sets a target machine by IP address\n\0");
 }
