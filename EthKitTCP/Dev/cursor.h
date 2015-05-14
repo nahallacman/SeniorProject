@@ -71,7 +71,7 @@ char IPTarget[16];
 
 
 //defining the line length for the printed text line and the newtextLine
-#define TEXTLINELENGTH 1024
+#define TEXTLINELENGTH 7500
 
 //buffer for line
 uint8_t textLine[TEXTLINELENGTH];

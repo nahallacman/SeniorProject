@@ -142,15 +142,6 @@ extern int getLineLocationEnd(void)
 //--- start line end location operations ---
 
 
-
-//a print line function
-
-//a cursor with get and set
-
-//line limits to cursor movement
-
-//
-
 void interpret_keypress(char temp)
 {
     char temp2;
@@ -166,13 +157,17 @@ void interpret_keypress(char temp)
         processLine(textLine);
         //now move the beginning of the line to the current cursor.
         LineLocationStart = getCursorLocation();
+        //clear the textLine so we can start over with the commands
+        clearTextLine();
     }
     else if(temp2 == 0x02) // esc key was pressed
     {
+        //might want to put all of these into an init() or reset()
         ClearScreen(); // esc will clear the screen for now
         clearTextLine();
 
         resetPlaceCharLocation(); // reset to the screen beginning
+        LineLocationStart = 0; // reset the lineLocationStart after reseting things
     }
     else if(temp2 == 0x03) // caps lock was pressed
     {
