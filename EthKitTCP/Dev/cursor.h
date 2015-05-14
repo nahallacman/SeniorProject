@@ -93,6 +93,10 @@ void CompareTextLines(char * newtextLine);
 
 void printHelpScreen(void);
 
+
+//more test code, that way the tests can be run on the hardware and the test environment to make sure things are working correctly.
+void printTestScreen(void);
+
 #ifdef	__cplusplus
 }
 #endif

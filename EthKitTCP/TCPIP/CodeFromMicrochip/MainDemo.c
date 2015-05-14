@@ -197,6 +197,9 @@ int main(void)
     //added by cal
     
         keyboard_setup();
+        resetPlaceCharLocation();
+        ClearScreen();
+        clearTextLine();
 
 #ifdef __Microcontroller
         

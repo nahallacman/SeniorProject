@@ -70,8 +70,7 @@ void BlinkCursor(void);
 void shiftTextRight(void);
 void shiftTextLeft(void);
 
-//more test code, that way the tests can be run on the hardware and the test environment to make sure things are working correctly.
-void printTestScreen(void);
+
 
 //int LineWidth = 25;
 #define LineWidth 25

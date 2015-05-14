@@ -9,14 +9,17 @@ extern int setandgetCursorLocation(int newcursorLocation)
 
 /**
  * gets the cursor location
+ * @return CursorLocation
  */
 extern int getCursorLocation(void)
 {
      return CursorLocation;
 }
 
+
 /**
  * sets the cursor location
+ * @param int newCursorLocation
  */
 extern void setCursorLocation(int newCursorLocation)
 {
@@ -161,6 +164,8 @@ void interpret_keypress(char temp)
     {                       
         //here the code should try to interpret the received command
         processLine(textLine);
+        //now move the beginning of the line to the current cursor.
+        LineLocationStart = getCursorLocation();
     }
     else if(temp2 == 0x02) // esc key was pressed
     {
@@ -263,10 +268,10 @@ void processLine(uint8_t * textLinePtr)
                 }
         }
         //check if the last character is a space
-        if(' ' != textLinePtr[15])
-        {
-            valid_command = 0;
-        }
+        //if(' ' != textLinePtr[15])
+        //{
+        //    valid_command = 0;
+        //}
         if(valid_command == 1)
         {
             printTestScreen();
@@ -298,12 +303,12 @@ void processLine(uint8_t * textLinePtr)
 
     if(valid_command == 1)
     {
-            placeString("Success\0");
+            placeString("\nSuccess\n\0");
             //interpret command
     }
     else
     {
-            placeString("Fail\0");
+            placeString("\nFail\n\0");
 	//print error message?
     }
 }
@@ -394,7 +399,10 @@ char * getIPTarget()
     return IPTarget;
 }
 
-
+/**
+ * Places a null terminated string on the screen.
+ * @param string - string that gets placed on screen.
+ */
 extern void placeString(char * string)
 {
     int iter;
@@ -408,11 +416,17 @@ extern void placeString(char * string)
 //extern void placeChar(uint8_t * character)
 extern void placeChar(uint8_t character)
 {
+    int breakpointint = 0;
+
+
     uint8_t character_memory[8];
     uint8_t * character_map = character_memory;
-    
-    increaseLineLocationEnd();
-    MoveCursorRight();
+
+    int cursor_x = 0;
+    int part1 = 0;
+    int part2 = 0;
+    int cursor_y = 0;
+
 
     if(character == 10)//newline = \n
     {
@@ -429,8 +443,25 @@ extern void placeChar(uint8_t character)
     }
     else // normal printable character
     {
+        part1 = getCursorLocation();
+        part2 = ((getCursorLocation() / 100 ) * 100);
+        cursor_x = part1 - part2;
+        cursor_y = getCursorLocation() / 100;
+        if(cursor_x > 97)
+        {
+            breakpointint = 1;
+        }
+        if(cursor_y > 0)
+        {
+            breakpointint = 0;
+        }
+        //get the character map and feed it to the printing function
         character_map = keyboard_lookup(character);
-        writechar(character_map, getCursorLocation() - (getCursorLocation() / 100 ) , getCursorLocation() / 100);
+        writechar( character_map, cursor_x , cursor_y );
+
+        //if the character gets placed, increase things after
+        increaseLineLocationEnd();
+        MoveCursorRight();
     }
 }
 
@@ -512,16 +543,39 @@ extern void clearTextLine(void)
  */
 extern void addCharToTextLine(char temp2)
 {
+    int index = 0;
+    index  = getCursorLocation() - LineLocationStart;
     //add the character to the line
-    textLine[getCursorLocation()] = temp2;
+    //textLine[getCursorLocation()] = temp2;
+    textLine[index] = temp2;
 
     //then write the character to the screen
     //placeChar(keyboard_lookup(textLine[getCursorLocation()]));
-    placeChar(textLine[getCursorLocation()]);
+    placeChar(textLine[index]);
     
 }
 
 void printHelpScreen(void)
 {
-    placeString("\nhelp - prints this menu\niptargetset - sets a target machine by IP address\n\0");
+    clearTextLine();
+    placeString("\nhelp - prints this menu\niptargetset - sets a target machine by IP address\nprinttestscreen - clears the screen then prints a test pattern\n\0");
+}
+
+void printTestScreen(void)
+{
+	uint8_t a;
+	int i;
+        //first clear the screen, then start printing the test pattern.
+        ClearScreen();
+        clearTextLine();
+        resetPlaceCharLocation(); // reset to the screen beginning
+	//for(i = 0; i < 79; i++) // 95 * 78 = 7500
+        for(i = 0; i < 2; i++) // 95 * 78 = 7500
+	{
+		for(a = 0x20; a < 0x7F; a++) //95 characters
+		{
+                    //placeChar(keyboard_lookup(a));
+                    placeChar(a);
+		}
+	}
 }
