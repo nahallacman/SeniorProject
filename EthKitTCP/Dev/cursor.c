@@ -1,4 +1,6 @@
 #include "cursor.h"
+
+//Do all of these functions really need to be external still?
 //--- start cursor location operations ---
 
 extern int setandgetCursorLocation(int newcursorLocation)
@@ -34,7 +36,7 @@ void MoveCursorLeft(void)
     }
     else
     {
-        if(getCursorLocation() > LineLocationStart - 1)
+        if(getCursorLocation() > getLineLocationStart() - 1)
         {
             //move cursor left
             setCursorLocation(getCursorLocation() - 1);
@@ -69,7 +71,7 @@ void MoveCursorUp(void)
 {
     if(CursorLocation > 100)
     {
-        if(CursorLocation - 100 > LineLocationStart)
+        if(CursorLocation - 100 > getLineLocationStart())
         {
             //move cursor up
             CursorLocation = CursorLocation - 100;
@@ -139,8 +141,17 @@ extern int getLineLocationEnd(void)
 {
     return LineLocationEnd;
 }
-//--- start line end location operations ---
-
+//--- end line end location operations ---
+//--- begin line start location operations ---
+int getLineLocationStart(void)
+{
+    return LineLocationStart;
+}
+void setLineLocationStart(int newLineLocationStart)
+{
+    LineLocationStart = newLineLocationStart;
+}
+//--- end line start location operations ---
 
 void interpret_keypress(char temp)
 {
@@ -156,7 +167,7 @@ void interpret_keypress(char temp)
         //here the code should try to interpret the received command
         processLine(textLine);
         //now move the beginning of the line to the current cursor.
-        LineLocationStart = getCursorLocation();
+        setLineLocationStart(getCursorLocation());
         //clear the textLine so we can start over with the commands
         clearTextLine();
     }
@@ -167,7 +178,7 @@ void interpret_keypress(char temp)
         clearTextLine();
 
         resetPlaceCharLocation(); // reset to the screen beginning
-        LineLocationStart = 0; // reset the lineLocationStart after reseting things
+        setLineLocationStart(0); // reset the lineLocationStart after reseting things
     }
     else if(temp2 == 0x03) // caps lock was pressed
     {
@@ -330,21 +341,34 @@ void press_backspace(void)
     char * printStart;
 
 
-    int cursor = getCursorLocation();
+    int cursor = getCursorLocation()- getLineLocationStart();
     int lineEnd = getLineLocationEnd();
     int printBegin = 0;
-    //delete the character before the cursor
-    //then shift down all characters after that
-    for(iter = cursor - 1; iter < lineEnd; iter++ )
+    //only do stuff if the cursor is bigger than the current line beginning
+    //(attempting to keep from deleting off the back of the line)
+    if(getCursorLocation() > getLineLocationStart())
     {
-        textLine[iter] = textLine[iter + 1];
-    }
-    //move the cursor back one
-    MoveCursorLeft();
-    //decrease the end of the line index
-    decreaseLineLocationEnd();
-    //clear the line
-    clearchar(cursor - 1, lineEnd); // maybe i-1?
+        //delete the character before the cursor
+        //if it is the last one in the line, replace it with a null
+        if(textLine[cursor] == 0)
+        {
+            textLine[cursor - 1]  = 0;
+        }
+        else
+        {
+            //this needs to be tested and corrected
+            //otherwise shift down all characters after that
+            for(iter = cursor - 1; iter < lineEnd; iter++ )
+            {
+                textLine[iter] = textLine[iter + 1];
+            }
+        }
+        //move the cursor back one
+        MoveCursorLeft();
+        //decrease the end of the line index
+        decreaseLineLocationEnd();
+        //clear the line
+        clearchar(getCursorLocation() - 1, lineEnd); // maybe i-1?
 
         //reprint the string from the curor location
         printStart = textLine; // does this need a dereference?
@@ -378,7 +402,9 @@ void press_backspace(void)
             printStart++;
         }
 
+        //walk the cursor back while reprinting the area that was just cleared
         placeString(printStart);
+    }
 
     //reduce the
 
@@ -556,7 +582,7 @@ extern void clearTextLine(void)
 extern void addCharToTextLine(char temp2)
 {
     int index = 0;
-    index  = getCursorLocation() - LineLocationStart;
+    index  = getCursorLocation() - getLineLocationStart();
     //add the character to the line
     //textLine[getCursorLocation()] = temp2;
     textLine[index] = temp2;

@@ -25,6 +25,8 @@ extern void increaseLineLocationEnd(void);
 extern void increaseLineLocationEndOneLine(void);
 extern void decreaseLineLocationEnd(void);
 
+int getLineLocationStart(void);
+void setLineLocationStart(int newLineLocationStart);
 
 //int CursorLocation = 0;
 int CursorLocation;
