@@ -10,7 +10,7 @@ extern int setandgetCursorLocation(int newcursorLocation)
 }
 
 /**
- * gets the cursor location
+ * Gets the cursor location
  * @return CursorLocation
  */
 extern int getCursorLocation(void)
@@ -20,8 +20,8 @@ extern int getCursorLocation(void)
 
 
 /**
- * sets the cursor location manually. Not suggested for normal use. No parameter checking.
- * @param int newCursorLocation
+ * Sets the cursor location manually. Not suggested for normal use. No parameter checking.
+ * @param newCursorLocation - int that the cursor will be set to.
  */
 extern void setCursorLocation(int newCursorLocation)
 {

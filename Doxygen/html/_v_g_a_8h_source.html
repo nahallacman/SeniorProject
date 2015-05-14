@@ -177,67 +177,66 @@ $(document).ready(function(){initNavTree('_v_g_a_8h_source.html','');});
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_v_g_a_8h.html#ab5c64bd9429e61e28c56cc7b35fb1f88">shiftTextRight</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_v_g_a_8h.html#a1ff9068d637ee1bf5b357186033e3623">shiftTextLeft</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">//more test code, that way the tests can be run on the hardware and the test environment to make sure things are working correctly.</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_v_g_a_8h.html#ab66a8865de62d9daefab9f8abf026478">printTestScreen</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">//int LineWidth = 25;</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="_v_g_a_8h.html#a68ca05ae4f954459ded9ad45509affb5">   77</a></span>&#160;<span class="preprocessor">#define LineWidth 25</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">//int LineWidth;</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">//int LineWidth = 25;</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="_v_g_a_8h.html#a68ca05ae4f954459ded9ad45509affb5">   76</a></span>&#160;<span class="preprocessor">#define LineWidth 25</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">//int LineWidth;</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">//int blinkstate = 0;</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="_v_g_a_8h.html#af565a2dd8affed5da35ee86a55ded0e5">   84</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="_v_g_a_8h.html#af565a2dd8affed5da35ee86a55ded0e5">blinkstate</a>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">//these need to be unchanging (const? or something?)</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">//int VGA_X_MAX = 800;</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="_v_g_a_8h.html#af0a2c6849b7effd2ce3b1a89dad8d4e6">   88</a></span>&#160;<span class="preprocessor">#define VGA_X_MAX 800</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">//int VGA_Y_MAX = 600;</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="_v_g_a_8h.html#af6a050045ac1451fbb4809441283b2aa">   90</a></span>&#160;<span class="preprocessor">#define VGA_Y_MAX 600</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">//for VGA version 2.0</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">//int VGA_LineCount = 0;</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">//const int VGA_VIDEO_MEMORY_SIZE = 15000;</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">//volatile int VGA_LineCount=0;</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="_v_g_a_8h.html#af549d9cadefb0e303811fa7af73cabbc">   97</a></span>&#160;<span class="keyword">volatile</span> <span class="keywordtype">int</span> <a class="code" href="_v_g_a_8h.html#af549d9cadefb0e303811fa7af73cabbc">VGA_LineCount</a>;                                                                     <span class="comment">//Used to keep a track of current video line</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">//volatile unsigned long int VGA_VideoMemory[VGA_VIDEO_MEMORY_SIZE];                                          //800 x 600 x 1bit Video Memory</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="_v_g_a_8h.html#acbba83881019a2264d96845d4d1628de">   99</a></span>&#160;<span class="keyword">volatile</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code" href="_v_g_a_8h.html#acbba83881019a2264d96845d4d1628de">VGA_VideoMemory</a>[15000];</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">//volatile unsigned long int VGA_VideoMemoryArray[600][25];</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">//volatile unsigned long int *VGA_VideoMemory = VGA_VideoMemoryArray;</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">//volatile unsigned long int VGA_VideoMemory[800];</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">//volatile unsigned long int *VGA_VideoMemoryIndex = VGA_VideoMemory;                                         //Pointer Index into Video Memory</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="_v_g_a_8h.html#a79cc2636a394979634e6072fe7e16ed4">  104</a></span>&#160;<span class="keyword">volatile</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> *<a class="code" href="_v_g_a_8h.html#a79cc2636a394979634e6072fe7e16ed4">VGA_VideoMemoryIndex</a>; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">//volatile unsigned long int *VGA_VideoScrollIndex = VGA_VideoMemory;                                         //Pointer Scrolling Index into Video Memory</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">//volatile unsigned long int *VGA_VideoScrollIndex = VGA_VideoMemory; </span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">//long int VGA_BackPorch[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};                                                  //Back porch buffer</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code" href="_v_g_a_8h.html#a64539db1fe3ee5a5aee9c5e8ea5b151c">VGA_BackPorch</a>[10]; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">//volatile uint8_t VideoTextFrame[7500];</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#ifdef  __cplusplus</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* VGA_H */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">//int blinkstate = 0;</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="_v_g_a_8h.html#af565a2dd8affed5da35ee86a55ded0e5">   83</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="_v_g_a_8h.html#af565a2dd8affed5da35ee86a55ded0e5">blinkstate</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">//these need to be unchanging (const? or something?)</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">//int VGA_X_MAX = 800;</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="_v_g_a_8h.html#af0a2c6849b7effd2ce3b1a89dad8d4e6">   87</a></span>&#160;<span class="preprocessor">#define VGA_X_MAX 800</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">//int VGA_Y_MAX = 600;</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="_v_g_a_8h.html#af6a050045ac1451fbb4809441283b2aa">   89</a></span>&#160;<span class="preprocessor">#define VGA_Y_MAX 600</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">//for VGA version 2.0</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">//int VGA_LineCount = 0;</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">//const int VGA_VIDEO_MEMORY_SIZE = 15000;</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">//volatile int VGA_LineCount=0;</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="_v_g_a_8h.html#af549d9cadefb0e303811fa7af73cabbc">   96</a></span>&#160;<span class="keyword">volatile</span> <span class="keywordtype">int</span> <a class="code" href="_v_g_a_8h.html#af549d9cadefb0e303811fa7af73cabbc">VGA_LineCount</a>;                                                                     <span class="comment">//Used to keep a track of current video line</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">//volatile unsigned long int VGA_VideoMemory[VGA_VIDEO_MEMORY_SIZE];                                          //800 x 600 x 1bit Video Memory</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="_v_g_a_8h.html#acbba83881019a2264d96845d4d1628de">   98</a></span>&#160;<span class="keyword">volatile</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code" href="_v_g_a_8h.html#acbba83881019a2264d96845d4d1628de">VGA_VideoMemory</a>[15000];</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">//volatile unsigned long int VGA_VideoMemoryArray[600][25];</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">//volatile unsigned long int *VGA_VideoMemory = VGA_VideoMemoryArray;</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">//volatile unsigned long int VGA_VideoMemory[800];</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">//volatile unsigned long int *VGA_VideoMemoryIndex = VGA_VideoMemory;                                         //Pointer Index into Video Memory</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="_v_g_a_8h.html#a79cc2636a394979634e6072fe7e16ed4">  103</a></span>&#160;<span class="keyword">volatile</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> *<a class="code" href="_v_g_a_8h.html#a79cc2636a394979634e6072fe7e16ed4">VGA_VideoMemoryIndex</a>; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">//volatile unsigned long int *VGA_VideoScrollIndex = VGA_VideoMemory;                                         //Pointer Scrolling Index into Video Memory</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">//volatile unsigned long int *VGA_VideoScrollIndex = VGA_VideoMemory; </span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">//long int VGA_BackPorch[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};                                                  //Back porch buffer</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code" href="_v_g_a_8h.html#a64539db1fe3ee5a5aee9c5e8ea5b151c">VGA_BackPorch</a>[10]; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">//volatile uint8_t VideoTextFrame[7500];</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">#ifdef  __cplusplus</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* VGA_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
 <div class="ttc" id="_v_g_a_8h_html_a1ff9068d637ee1bf5b357186033e3623"><div class="ttname"><a href="_v_g_a_8h.html#a1ff9068d637ee1bf5b357186033e3623">shiftTextLeft</a></div><div class="ttdeci">void shiftTextLeft(void)</div><div class="ttdef"><b>Definition:</b> <a href="_v_g_a_8c_source.html#l00708">VGA.c:708</a></div></div>
-<div class="ttc" id="_v_g_a_8h_html_a79cc2636a394979634e6072fe7e16ed4"><div class="ttname"><a href="_v_g_a_8h.html#a79cc2636a394979634e6072fe7e16ed4">VGA_VideoMemoryIndex</a></div><div class="ttdeci">volatile unsigned long int * VGA_VideoMemoryIndex</div><div class="ttdef"><b>Definition:</b> <a href="_v_g_a_8h_source.html#l00104">VGA.h:104</a></div></div>
+<div class="ttc" id="_v_g_a_8h_html_a79cc2636a394979634e6072fe7e16ed4"><div class="ttname"><a href="_v_g_a_8h.html#a79cc2636a394979634e6072fe7e16ed4">VGA_VideoMemoryIndex</a></div><div class="ttdeci">volatile unsigned long int * VGA_VideoMemoryIndex</div><div class="ttdef"><b>Definition:</b> <a href="_v_g_a_8h_source.html#l00103">VGA.h:103</a></div></div>
 <div class="ttc" id="_test_common_8h_html"><div class="ttname"><a href="_test_common_8h.html">TestCommon.h</a></div></div>
 <div class="ttc" id="_v_g_a_8h_html_a819307bdf0c8c8a841a2305637d102c2"><div class="ttname"><a href="_v_g_a_8h.html#a819307bdf0c8c8a841a2305637d102c2">ShiftScreenUp</a></div><div class="ttdeci">void ShiftScreenUp(void)</div><div class="ttdef"><b>Definition:</b> <a href="_v_g_a_8c_source.html#l00522">VGA.c:522</a></div></div>
 <div class="ttc" id="_v_g_a_8h_html_a64539db1fe3ee5a5aee9c5e8ea5b151c"><div class="ttname"><a href="_v_g_a_8h.html#a64539db1fe3ee5a5aee9c5e8ea5b151c">VGA_BackPorch</a></div><div class="ttdeci">const long int VGA_BackPorch[10]</div><div class="ttdef"><b>Definition:</b> <a href="_v_g_a_8c_source.html#l00005">VGA.c:5</a></div></div>
-<div class="ttc" id="_v_g_a_8h_html_af549d9cadefb0e303811fa7af73cabbc"><div class="ttname"><a href="_v_g_a_8h.html#af549d9cadefb0e303811fa7af73cabbc">VGA_LineCount</a></div><div class="ttdeci">volatile int VGA_LineCount</div><div class="ttdef"><b>Definition:</b> <a href="_v_g_a_8h_source.html#l00097">VGA.h:97</a></div></div>
+<div class="ttc" id="_v_g_a_8h_html_af549d9cadefb0e303811fa7af73cabbc"><div class="ttname"><a href="_v_g_a_8h.html#af549d9cadefb0e303811fa7af73cabbc">VGA_LineCount</a></div><div class="ttdeci">volatile int VGA_LineCount</div><div class="ttdef"><b>Definition:</b> <a href="_v_g_a_8h_source.html#l00096">VGA.h:96</a></div></div>
 <div class="ttc" id="_v_g_a_8h_html_ad6061cbae4f54062026bae527e5dee9a"><div class="ttname"><a href="_v_g_a_8h.html#ad6061cbae4f54062026bae527e5dee9a">writepixel</a></div><div class="ttdeci">void writepixel(int x, int y)</div><div class="ttdef"><b>Definition:</b> <a href="_v_g_a_8c_source.html#l00313">VGA.c:313</a></div></div>
 <div class="ttc" id="_v_g_a_8h_html_ab5c64bd9429e61e28c56cc7b35fb1f88"><div class="ttname"><a href="_v_g_a_8h.html#ab5c64bd9429e61e28c56cc7b35fb1f88">shiftTextRight</a></div><div class="ttdeci">void shiftTextRight(void)</div><div class="ttdef"><b>Definition:</b> <a href="_v_g_a_8c_source.html#l00631">VGA.c:631</a></div></div>
 <div class="ttc" id="_v_g_a_8h_html_a16432961ed8b60a6197456a6d92e4ddc"><div class="ttname"><a href="_v_g_a_8h.html#a16432961ed8b60a6197456a6d92e4ddc">ShiftScreenLeft</a></div><div class="ttdeci">void ShiftScreenLeft(void)</div><div class="ttdef"><b>Definition:</b> <a href="_v_g_a_8c_source.html#l00574">VGA.c:574</a></div></div>
 <div class="ttc" id="_v_g_a_8h_html_a822a698d29ce7edb349352481b65db74"><div class="ttname"><a href="_v_g_a_8h.html#a822a698d29ce7edb349352481b65db74">writehorizontalline</a></div><div class="ttdeci">void writehorizontalline(int y1, int y2)</div><div class="ttdef"><b>Definition:</b> <a href="_v_g_a_8c_source.html#l00302">VGA.c:302</a></div></div>
 <div class="ttc" id="_v_g_a_8h_html_a70a1baebed80d9631cc4a999fc3cda5d"><div class="ttname"><a href="_v_g_a_8h.html#a70a1baebed80d9631cc4a999fc3cda5d">_bswap32</a></div><div class="ttdeci">uint32_t _bswap32(uint32_t a)</div><div class="ttdef"><b>Definition:</b> <a href="_v_g_a_8c_source.html#l00255">VGA.c:255</a></div></div>
-<div class="ttc" id="_v_g_a_8h_html_acbba83881019a2264d96845d4d1628de"><div class="ttname"><a href="_v_g_a_8h.html#acbba83881019a2264d96845d4d1628de">VGA_VideoMemory</a></div><div class="ttdeci">volatile unsigned long int VGA_VideoMemory[15000]</div><div class="ttdef"><b>Definition:</b> <a href="_v_g_a_8h_source.html#l00099">VGA.h:99</a></div></div>
+<div class="ttc" id="_v_g_a_8h_html_acbba83881019a2264d96845d4d1628de"><div class="ttname"><a href="_v_g_a_8h.html#acbba83881019a2264d96845d4d1628de">VGA_VideoMemory</a></div><div class="ttdeci">volatile unsigned long int VGA_VideoMemory[15000]</div><div class="ttdef"><b>Definition:</b> <a href="_v_g_a_8h_source.html#l00098">VGA.h:98</a></div></div>
 <div class="ttc" id="_v_g_a_8h_html_a1bd3f5fbccb1628eb13dda4cd02633a4"><div class="ttname"><a href="_v_g_a_8h.html#a1bd3f5fbccb1628eb13dda4cd02633a4">test</a></div><div class="ttdeci">int test</div><div class="ttdef"><b>Definition:</b> <a href="_v_g_a_8h_source.html#l00022">VGA.h:22</a></div></div>
 <div class="ttc" id="_v_g_a_8h_html_aa99b12cab66ebdbdf0d5b9c2e00a9c15"><div class="ttname"><a href="_v_g_a_8h.html#aa99b12cab66ebdbdf0d5b9c2e00a9c15">writefullverticalline</a></div><div class="ttdeci">void writefullverticalline(int column)</div><div class="ttdef"><b>Definition:</b> <a href="_v_g_a_8c_source.html#l00277">VGA.c:277</a></div></div>
-<div class="ttc" id="_v_g_a_8h_html_a06590bd84e8fca8ad5292a6e5ca50890"><div class="ttname"><a href="_v_g_a_8h.html#a06590bd84e8fca8ad5292a6e5ca50890">CursorLocation</a></div><div class="ttdeci">int CursorLocation</div><div class="ttdef"><b>Definition:</b> <a href="cursor_8h_source.html#l00030">cursor.h:30</a></div></div>
+<div class="ttc" id="_v_g_a_8h_html_a06590bd84e8fca8ad5292a6e5ca50890"><div class="ttname"><a href="_v_g_a_8h.html#a06590bd84e8fca8ad5292a6e5ca50890">CursorLocation</a></div><div class="ttdeci">int CursorLocation</div><div class="ttdef"><b>Definition:</b> <a href="cursor_8h_source.html#l00032">cursor.h:32</a></div></div>
 <div class="ttc" id="_v_g_a_8h_html_a62abd37a46e00ef5754e42fdd601cb9f"><div class="ttname"><a href="_v_g_a_8h.html#a62abd37a46e00ef5754e42fdd601cb9f">clearchar</a></div><div class="ttdeci">void clearchar(int start, int end)</div><div class="ttdef"><b>Definition:</b> <a href="_v_g_a_8c_source.html#l00429">VGA.c:429</a></div></div>
 <div class="ttc" id="_v_g_a_8h_html_a030e6b6983ff846d9cca945c743c40b2"><div class="ttname"><a href="_v_g_a_8h.html#a030e6b6983ff846d9cca945c743c40b2">ShiftScreenDown</a></div><div class="ttdeci">void ShiftScreenDown(void)</div><div class="ttdef"><b>Definition:</b> <a href="_v_g_a_8c_source.html#l00548">VGA.c:548</a></div></div>
 <div class="ttc" id="_v_g_a_8h_html_a5473c6cfd6c580642133754e141ca556"><div class="ttname"><a href="_v_g_a_8h.html#a5473c6cfd6c580642133754e141ca556">ClearScreen</a></div><div class="ttdeci">void ClearScreen(void)</div><div class="ttdef"><b>Definition:</b> <a href="_v_g_a_8c_source.html#l00481">VGA.c:481</a></div></div>
@@ -246,15 +245,14 @@ $(document).ready(function(){initNavTree('_v_g_a_8h_source.html','');});
 <div class="ttc" id="_v_g_a_8h_html_a0058c3096abb8e78f7ab293ab42daff8"><div class="ttname"><a href="_v_g_a_8h.html#a0058c3096abb8e78f7ab293ab42daff8">writeverticalline</a></div><div class="ttdeci">void writeverticalline(int x1, int x2)</div><div class="ttdef"><b>Definition:</b> <a href="_v_g_a_8c_source.html#l00307">VGA.c:307</a></div></div>
 <div class="ttc" id="_v_g_a_8h_html_acea8175bc07b5d0ba9f3f78d0c00c4a7"><div class="ttname"><a href="_v_g_a_8h.html#acea8175bc07b5d0ba9f3f78d0c00c4a7">BlinkCursor</a></div><div class="ttdeci">void BlinkCursor(void)</div><div class="ttdef"><b>Definition:</b> <a href="_v_g_a_8c_source.html#l00493">VGA.c:493</a></div></div>
 <div class="ttc" id="_v_g_a_8h_html_a9c1bdbae316b73cb3580823f20c413f3"><div class="ttname"><a href="_v_g_a_8h.html#a9c1bdbae316b73cb3580823f20c413f3">ShiftScreenRight</a></div><div class="ttdeci">void ShiftScreenRight(void)</div><div class="ttdef"><b>Definition:</b> <a href="_v_g_a_8c_source.html#l00601">VGA.c:601</a></div></div>
-<div class="ttc" id="_v_g_a_8h_html_ab66a8865de62d9daefab9f8abf026478"><div class="ttname"><a href="_v_g_a_8h.html#ab66a8865de62d9daefab9f8abf026478">printTestScreen</a></div><div class="ttdeci">void printTestScreen(void)</div><div class="ttdef"><b>Definition:</b> <a href="_v_g_a_8c_source.html#l00729">VGA.c:729</a></div></div>
-<div class="ttc" id="_v_g_a_8h_html_af565a2dd8affed5da35ee86a55ded0e5"><div class="ttname"><a href="_v_g_a_8h.html#af565a2dd8affed5da35ee86a55ded0e5">blinkstate</a></div><div class="ttdeci">int blinkstate</div><div class="ttdef"><b>Definition:</b> <a href="_v_g_a_8h_source.html#l00084">VGA.h:84</a></div></div>
+<div class="ttc" id="_v_g_a_8h_html_af565a2dd8affed5da35ee86a55ded0e5"><div class="ttname"><a href="_v_g_a_8h.html#af565a2dd8affed5da35ee86a55ded0e5">blinkstate</a></div><div class="ttdeci">int blinkstate</div><div class="ttdef"><b>Definition:</b> <a href="_v_g_a_8h_source.html#l00083">VGA.h:83</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_8d1ca4586762d004ca3d4d8345229d64.html">School</a></li><li class="navelem"><a class="el" href="dir_3b74bdff48f09a297f4b55bbd2833f98.html">SeniorProject</a></li><li class="navelem"><a class="el" href="dir_6797e956251fb025423a318090692a60.html">EthKitTCP</a></li><li class="navelem"><a class="el" href="dir_6dcbaad4cccdc9500e03abf926fbe24d.html">Dev</a></li><li class="navelem"><a class="el" href="_v_g_a_8h.html">VGA.h</a></li>
-    <li class="footer">Generated on Wed May 13 2015 01:46:08 for EthKitTCP by
+    <li class="footer">Generated on Thu May 14 2015 02:22:58 for EthKitTCP by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

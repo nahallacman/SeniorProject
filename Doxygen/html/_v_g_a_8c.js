@@ -4,7 +4,6 @@ var _v_g_a_8c =
     [ "BlinkCursor", "_v_g_a_8c.html#acea8175bc07b5d0ba9f3f78d0c00c4a7", null ],
     [ "clearchar", "_v_g_a_8c.html#a62abd37a46e00ef5754e42fdd601cb9f", null ],
     [ "ClearScreen", "_v_g_a_8c.html#a5473c6cfd6c580642133754e141ca556", null ],
-    [ "printTestScreen", "_v_g_a_8c.html#ab66a8865de62d9daefab9f8abf026478", null ],
     [ "ShiftScreenDown", "_v_g_a_8c.html#a7658a533b49674fdef8006fdcf6a694b", null ],
     [ "ShiftScreenLeft", "_v_g_a_8c.html#ac1761d7d3dfc7d3514362f41649c1e93", null ],
     [ "ShiftScreenRight", "_v_g_a_8c.html#a3468671ccd9c43681712ba1cd515a7f0", null ],

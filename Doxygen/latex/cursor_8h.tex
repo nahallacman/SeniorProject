@@ -19,7 +19,7 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{cursor_8h_a01882b20b26727e0c233e94a4c863459}{T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H}~1024
+\#define \hyperlink{cursor_8h_a01882b20b26727e0c233e94a4c863459}{T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H}~7500
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -35,6 +35,10 @@ void \hyperlink{cursor_8h_a06559067271121a8ba77c7e7f387a8f3}{increase\+Line\+Loc
 void \hyperlink{cursor_8h_ad74454a9d14ccfe37bfa622791fa47e8}{increase\+Line\+Location\+End\+One\+Line} (void)
 \item 
 void \hyperlink{cursor_8h_aa510ca0bb56c03148f3392c28433dc45}{decrease\+Line\+Location\+End} (void)
+\item 
+int \hyperlink{cursor_8h_a52e93559a57ee99d14ce6d275cbb47a6}{get\+Line\+Location\+Start} (void)
+\item 
+void \hyperlink{cursor_8h_a453e2db022d7de17533e1509906065c9}{set\+Line\+Location\+Start} (int new\+Line\+Location\+Start)
 \item 
 void \hyperlink{cursor_8h_a7804524381705ec22e0efc3a1326dd69}{Move\+Cursor\+Left} (void)
 \item 
@@ -65,6 +69,8 @@ uint8\+\_\+t $\ast$ \hyperlink{cursor_8h_a3a060fca8f2dde6562e2f243414d47d7}{gett
 void \hyperlink{cursor_8h_a8f55cca82244df1cf78f0a826f816f75}{Compare\+Text\+Lines} (char $\ast$\hyperlink{cursor_8h_a4eddb259269e1401df5b56698f231263}{newtext\+Line})
 \item 
 void \hyperlink{cursor_8h_aa68556b6a4e7315e031e8f18361d283e}{print\+Help\+Screen} (void)
+\item 
+void \hyperlink{cursor_8h_ab66a8865de62d9daefab9f8abf026478}{print\+Test\+Screen} (void)
 \end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
@@ -86,10 +92,10 @@ uint8\+\_\+t \hyperlink{cursor_8h_a4eddb259269e1401df5b56698f231263}{newtext\+Li
 \subsection{Macro Definition Documentation}
 \hypertarget{cursor_8h_a01882b20b26727e0c233e94a4c863459}{}\index{cursor.\+h@{cursor.\+h}!T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H@{T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H}}
 \index{T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H@{T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H}!cursor.\+h@{cursor.\+h}}
-\subsubsection[{T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H~1024}\label{cursor_8h_a01882b20b26727e0c233e94a4c863459}
+\subsubsection[{T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H~7500}\label{cursor_8h_a01882b20b26727e0c233e94a4c863459}
 
 
-Definition at line 74 of file cursor.\+h.
+Definition at line 76 of file cursor.\+h.
 
 
 
@@ -103,7 +109,7 @@ Definition at line 74 of file cursor.\+h.
 )}\label{cursor_8h_a8f55cca82244df1cf78f0a826f816f75}
 
 
-Definition at line 445 of file cursor.\+c.
+Definition at line 514 of file cursor.\+c.
 
 
 
@@ -136,12 +142,11 @@ Here is the caller graph for this function\+:\nopagebreak
 )}\label{cursor_8h_aa510ca0bb56c03148f3392c28433dc45}
 
 
-Definition at line 124 of file cursor.\+c.
+Definition at line 129 of file cursor.\+c.
 
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -157,14 +162,16 @@ Here is the caller graph for this function\+:
 \item[{void}]{}
 \end{DoxyParamCaption}
 )}\label{cursor_8h_a5a986a90cba784aeb2039295362a6282}
-gets the cursor location 
+Gets the cursor location \begin{DoxyReturn}{Returns}
+Cursor\+Location 
+\end{DoxyReturn}
 
-Definition at line 13 of file cursor.\+c.
+
+Definition at line 16 of file cursor.\+c.
 
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -182,7 +189,29 @@ Here is the caller graph for this function\+:
 )}\label{cursor_8h_abe73bcf82b19d9727d29850864eac8b8}
 
 
-Definition at line 392 of file cursor.\+c.
+Definition at line 435 of file cursor.\+c.
+
+\hypertarget{cursor_8h_a52e93559a57ee99d14ce6d275cbb47a6}{}\index{cursor.\+h@{cursor.\+h}!get\+Line\+Location\+Start@{get\+Line\+Location\+Start}}
+\index{get\+Line\+Location\+Start@{get\+Line\+Location\+Start}!cursor.\+h@{cursor.\+h}}
+\subsubsection[{get\+Line\+Location\+Start}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Line\+Location\+Start (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{cursor_8h_a52e93559a57ee99d14ce6d275cbb47a6}
+
+
+Definition at line 146 of file cursor.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cursor_8h_a52e93559a57ee99d14ce6d275cbb47a6_icgraph}
+\end{center}
+\end{figure}
+
 
 \hypertarget{cursor_8h_a3a060fca8f2dde6562e2f243414d47d7}{}\index{cursor.\+h@{cursor.\+h}!gettext\+Line@{gettext\+Line}}
 \index{gettext\+Line@{gettext\+Line}!cursor.\+h@{cursor.\+h}}
@@ -193,7 +222,7 @@ Definition at line 392 of file cursor.\+c.
 )}\label{cursor_8h_a3a060fca8f2dde6562e2f243414d47d7}
 
 
-Definition at line 437 of file cursor.\+c.
+Definition at line 506 of file cursor.\+c.
 
 \hypertarget{cursor_8h_a06559067271121a8ba77c7e7f387a8f3}{}\index{cursor.\+h@{cursor.\+h}!increase\+Line\+Location\+End@{increase\+Line\+Location\+End}}
 \index{increase\+Line\+Location\+End@{increase\+Line\+Location\+End}!cursor.\+h@{cursor.\+h}}
@@ -204,12 +233,11 @@ Definition at line 437 of file cursor.\+c.
 )}\label{cursor_8h_a06559067271121a8ba77c7e7f387a8f3}
 
 
-Definition at line 113 of file cursor.\+c.
+Definition at line 118 of file cursor.\+c.
 
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -227,12 +255,11 @@ Here is the caller graph for this function\+:
 )}\label{cursor_8h_ad74454a9d14ccfe37bfa622791fa47e8}
 
 
-Definition at line 119 of file cursor.\+c.
+Definition at line 124 of file cursor.\+c.
 
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -250,12 +277,11 @@ Here is the caller graph for this function\+:
 )}\label{cursor_8h_a467458fc0085539f52030fabf3dd9286}
 
 
-Definition at line 151 of file cursor.\+c.
+Definition at line 156 of file cursor.\+c.
 
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -284,7 +310,7 @@ Here is the caller graph for this function\+:\nopagebreak
 )}\label{cursor_8h_ac8e40e0b08b773c5f3fc0b303fe562de}
 
 
-Definition at line 81 of file cursor.\+c.
+Definition at line 86 of file cursor.\+c.
 
 \hypertarget{cursor_8h_aa0d5d4e3acd447e87fdab37d7388df23}{}\index{cursor.\+h@{cursor.\+h}!Move\+Cursor\+Down\+One\+Line@{Move\+Cursor\+Down\+One\+Line}}
 \index{Move\+Cursor\+Down\+One\+Line@{Move\+Cursor\+Down\+One\+Line}!cursor.\+h@{cursor.\+h}}
@@ -295,12 +321,11 @@ Definition at line 81 of file cursor.\+c.
 )}\label{cursor_8h_aa0d5d4e3acd447e87fdab37d7388df23}
 
 
-Definition at line 97 of file cursor.\+c.
+Definition at line 102 of file cursor.\+c.
 
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -311,8 +336,7 @@ Here is the call graph for this function\+:
 
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -330,7 +354,7 @@ Here is the caller graph for this function\+:
 )}\label{cursor_8h_a7804524381705ec22e0efc3a1326dd69}
 
 
-Definition at line 26 of file cursor.\+c.
+Definition at line 31 of file cursor.\+c.
 
 \hypertarget{cursor_8h_ac177699cfeda15e4b887864f6eacc5e3}{}\index{cursor.\+h@{cursor.\+h}!Move\+Cursor\+Right@{Move\+Cursor\+Right}}
 \index{Move\+Cursor\+Right@{Move\+Cursor\+Right}!cursor.\+h@{cursor.\+h}}
@@ -341,7 +365,7 @@ Definition at line 26 of file cursor.\+c.
 )}\label{cursor_8h_ac177699cfeda15e4b887864f6eacc5e3}
 
 
-Definition at line 48 of file cursor.\+c.
+Definition at line 53 of file cursor.\+c.
 
 \hypertarget{cursor_8h_ae9337ec3c6ea47f10d329cd99d7a29f9}{}\index{cursor.\+h@{cursor.\+h}!Move\+Cursor\+Up@{Move\+Cursor\+Up}}
 \index{Move\+Cursor\+Up@{Move\+Cursor\+Up}!cursor.\+h@{cursor.\+h}}
@@ -352,7 +376,7 @@ Definition at line 48 of file cursor.\+c.
 )}\label{cursor_8h_ae9337ec3c6ea47f10d329cd99d7a29f9}
 
 
-Definition at line 65 of file cursor.\+c.
+Definition at line 70 of file cursor.\+c.
 
 \hypertarget{cursor_8h_a8d48f16d45338842dc6cbb3256eb7dae}{}\index{cursor.\+h@{cursor.\+h}!place\+Char@{place\+Char}}
 \index{place\+Char@{place\+Char}!cursor.\+h@{cursor.\+h}}
@@ -363,12 +387,11 @@ Definition at line 65 of file cursor.\+c.
 )}\label{cursor_8h_a8d48f16d45338842dc6cbb3256eb7dae}
 
 
-Definition at line 409 of file cursor.\+c.
+Definition at line 455 of file cursor.\+c.
 
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -379,8 +402,7 @@ Here is the call graph for this function\+:
 
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -396,14 +418,18 @@ Here is the caller graph for this function\+:
 \item[{char $\ast$}]{string}
 \end{DoxyParamCaption}
 )}\label{cursor_8h_a02936826fc9c1380ef1e42ae18940c9a}
+Places a null terminated string on the screen. 
+\begin{DoxyParams}{Parameters}
+{\em string} & -\/ string that gets placed on screen. \\
+\hline
+\end{DoxyParams}
 
 
-Definition at line 398 of file cursor.\+c.
+Definition at line 444 of file cursor.\+c.
 
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -414,8 +440,7 @@ Here is the call graph for this function\+:
 
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -433,12 +458,11 @@ Here is the caller graph for this function\+:
 )}\label{cursor_8h_afb368b3eb12755cae8787b96e467e0e3}
 
 
-Definition at line 325 of file cursor.\+c.
+Definition at line 336 of file cursor.\+c.
 
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -467,12 +491,11 @@ Here is the caller graph for this function\+:\nopagebreak
 )}\label{cursor_8h_aa68556b6a4e7315e031e8f18361d283e}
 
 
-Definition at line 524 of file cursor.\+c.
+Definition at line 596 of file cursor.\+c.
 
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -483,12 +506,44 @@ Here is the call graph for this function\+:
 
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{cursor_8h_aa68556b6a4e7315e031e8f18361d283e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cursor_8h_ab66a8865de62d9daefab9f8abf026478}{}\index{cursor.\+h@{cursor.\+h}!print\+Test\+Screen@{print\+Test\+Screen}}
+\index{print\+Test\+Screen@{print\+Test\+Screen}!cursor.\+h@{cursor.\+h}}
+\subsubsection[{print\+Test\+Screen}]{\setlength{\rightskip}{0pt plus 5cm}void print\+Test\+Screen (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{cursor_8h_ab66a8865de62d9daefab9f8abf026478}
+
+
+Definition at line 602 of file cursor.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cursor_8h_ab66a8865de62d9daefab9f8abf026478_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cursor_8h_ab66a8865de62d9daefab9f8abf026478_icgraph}
 \end{center}
 \end{figure}
 
@@ -502,12 +557,11 @@ Here is the caller graph for this function\+:
 )}\label{cursor_8h_aee82caceba560f01202c4459ba4497c7}
 
 
-Definition at line 194 of file cursor.\+c.
+Definition at line 205 of file cursor.\+c.
 
 
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -536,7 +590,7 @@ Here is the caller graph for this function\+:\nopagebreak
 )}\label{cursor_8h_aeca62116778bb6c13245089867ded8d9}
 
 
-Definition at line 186 of file cursor.\+c.
+Definition at line 197 of file cursor.\+c.
 
 \hypertarget{cursor_8h_a3a7d62c4f2983e6e2e2f4da56f36befc}{}\index{cursor.\+h@{cursor.\+h}!setandget\+Cursor\+Location@{setandget\+Cursor\+Location}}
 \index{setandget\+Cursor\+Location@{setandget\+Cursor\+Location}!cursor.\+h@{cursor.\+h}}
@@ -547,7 +601,7 @@ Definition at line 186 of file cursor.\+c.
 )}\label{cursor_8h_a3a7d62c4f2983e6e2e2f4da56f36befc}
 
 
-Definition at line 4 of file cursor.\+c.
+Definition at line 6 of file cursor.\+c.
 
 
 
@@ -567,18 +621,44 @@ Here is the caller graph for this function\+:\nopagebreak
 \item[{int}]{new\+Cursor\+Location}
 \end{DoxyParamCaption}
 )}\label{cursor_8h_acd4b06887a4337467e744f693a2df6a9}
-sets the cursor location 
+Sets the cursor location manually. Not suggested for normal use. No parameter checking. 
+\begin{DoxyParams}{Parameters}
+{\em new\+Cursor\+Location} & -\/ int that the cursor will be set to. \\
+\hline
+\end{DoxyParams}
 
-Definition at line 21 of file cursor.\+c.
+
+Definition at line 26 of file cursor.\+c.
 
 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{cursor_8h_acd4b06887a4337467e744f693a2df6a9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cursor_8h_a453e2db022d7de17533e1509906065c9}{}\index{cursor.\+h@{cursor.\+h}!set\+Line\+Location\+Start@{set\+Line\+Location\+Start}}
+\index{set\+Line\+Location\+Start@{set\+Line\+Location\+Start}!cursor.\+h@{cursor.\+h}}
+\subsubsection[{set\+Line\+Location\+Start}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Line\+Location\+Start (
+\begin{DoxyParamCaption}
+\item[{int}]{new\+Line\+Location\+Start}
+\end{DoxyParamCaption}
+)}\label{cursor_8h_a453e2db022d7de17533e1509906065c9}
+
+
+Definition at line 150 of file cursor.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cursor_8h_a453e2db022d7de17533e1509906065c9_icgraph}
 \end{center}
 \end{figure}
 
@@ -591,40 +671,40 @@ Here is the caller graph for this function\+:
 \subsubsection[{Cursor\+Location}]{\setlength{\rightskip}{0pt plus 5cm}int Cursor\+Location}\label{cursor_8h_a06590bd84e8fca8ad5292a6e5ca50890}
 
 
-Definition at line 30 of file cursor.\+h.
+Definition at line 32 of file cursor.\+h.
 
 \hypertarget{cursor_8h_aa4e0d20faf2f41acbf49d137715ba813}{}\index{cursor.\+h@{cursor.\+h}!I\+P\+Target@{I\+P\+Target}}
 \index{I\+P\+Target@{I\+P\+Target}!cursor.\+h@{cursor.\+h}}
 \subsubsection[{I\+P\+Target}]{\setlength{\rightskip}{0pt plus 5cm}char I\+P\+Target\mbox{[}16\mbox{]}}\label{cursor_8h_aa4e0d20faf2f41acbf49d137715ba813}
 
 
-Definition at line 68 of file cursor.\+h.
+Definition at line 70 of file cursor.\+h.
 
 \hypertarget{cursor_8h_a9edd5050c7ee33f44c008e98933880e0}{}\index{cursor.\+h@{cursor.\+h}!Line\+Location\+End@{Line\+Location\+End}}
 \index{Line\+Location\+End@{Line\+Location\+End}!cursor.\+h@{cursor.\+h}}
 \subsubsection[{Line\+Location\+End}]{\setlength{\rightskip}{0pt plus 5cm}int Line\+Location\+End}\label{cursor_8h_a9edd5050c7ee33f44c008e98933880e0}
 
 
-Definition at line 35 of file cursor.\+h.
+Definition at line 37 of file cursor.\+h.
 
 \hypertarget{cursor_8h_a96a71abb37405cb6ad878a4adac6d177}{}\index{cursor.\+h@{cursor.\+h}!Line\+Location\+Start@{Line\+Location\+Start}}
 \index{Line\+Location\+Start@{Line\+Location\+Start}!cursor.\+h@{cursor.\+h}}
 \subsubsection[{Line\+Location\+Start}]{\setlength{\rightskip}{0pt plus 5cm}int Line\+Location\+Start}\label{cursor_8h_a96a71abb37405cb6ad878a4adac6d177}
 
 
-Definition at line 33 of file cursor.\+h.
+Definition at line 35 of file cursor.\+h.
 
 \hypertarget{cursor_8h_a4eddb259269e1401df5b56698f231263}{}\index{cursor.\+h@{cursor.\+h}!newtext\+Line@{newtext\+Line}}
 \index{newtext\+Line@{newtext\+Line}!cursor.\+h@{cursor.\+h}}
 \subsubsection[{newtext\+Line}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t newtext\+Line\mbox{[}{\bf T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H}\mbox{]}}\label{cursor_8h_a4eddb259269e1401df5b56698f231263}
 
 
-Definition at line 78 of file cursor.\+h.
+Definition at line 80 of file cursor.\+h.
 
 \hypertarget{cursor_8h_a78a502c5ea8364e4c06aea5ff4361c8f}{}\index{cursor.\+h@{cursor.\+h}!text\+Line@{text\+Line}}
 \index{text\+Line@{text\+Line}!cursor.\+h@{cursor.\+h}}
 \subsubsection[{text\+Line}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t text\+Line\mbox{[}{\bf T\+E\+X\+T\+L\+I\+N\+E\+L\+E\+N\+G\+T\+H}\mbox{]}}\label{cursor_8h_a78a502c5ea8364e4c06aea5ff4361c8f}
 
 
-Definition at line 77 of file cursor.\+h.
+Definition at line 79 of file cursor.\+h.
 
