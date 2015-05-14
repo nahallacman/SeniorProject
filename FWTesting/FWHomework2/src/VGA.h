@@ -13,7 +13,8 @@
 //#include "PS2Common.h"
 #include "TestCommon.h"
 //#include "PS2.h"
- 
+//#include "cursor.h"
+
 #ifdef	__cplusplus
 extern "C" {
 #endif
@@ -44,20 +45,20 @@ void writeverticalline(int x1, int x2);
 
 void writepixel(int x, int y);
 
-//void writechar(uint8_t * character, int x, int y);
+extern void writechar(uint8_t * character, int x, int y);
 
-void writechar(uint8_t * character);
+//this is extern so it can be controlled from PS2 stuff, probably shouldn't be permenant
+//extern void writechar(uint8_t * character);
+extern void clearchar(int start, int end);
 
-void resetPlaceCharLocation(void);
+
+//extern void setCursorLocation(int newcursorLocation);
 
 void ClearScreen(void);
 
-void MoveCursorLeft(void);
-void MoveCursorRight(void);
-void MoveCursorUp(void);
-void MoveCursorDown(void);
+extern int CursorLocation;
 
-extern void placeChar(uint8_t * character);
+
 
 void ShiftScreenUp(void);
 void ShiftScreenDown(void);
@@ -69,19 +70,14 @@ void BlinkCursor(void);
 void shiftTextRight(void);
 void shiftTextLeft(void);
 
-//more test code, that way the tests can be run on the hardware and the test environment to make sure things are working correctly.
-void printTestScreen(void);
+
 
 //int LineWidth = 25;
 #define LineWidth 25
 //int LineWidth;
 
-//int CursorLocation = 0;
-int CursorLocation;
-//int LineLocationStart = 0;
-int LineLocationStart;
-//int LineLocationEnd = 1;
-int LineLocationEnd;
+
+
 
 //int blinkstate = 0;
 int blinkstate;

@@ -1,6 +1,8 @@
 #include "PS2.h"
 
-
+/**
+ * A chunk of 128 8x8 bitmaps that are arranged in ascii order.
+ */
 uint8_t font_map[128][8] = 
 {
 { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, },  // U+0000 (nul)
@@ -132,6 +134,12 @@ uint8_t font_map[128][8] =
 { 0x76, 0xdc, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, },  // U+007E (~)
             };
 
+/**
+ * Checks if the keyboard scan code is within ascii range. If it is, it returns
+ * an 8x8 bitmap.
+ * @param number - Scan code to look up
+ * @return - An 8 unit array of 8bit values that make an 8x8 bitmap
+ */
 uint8_t * keyboard_lookup(uint8_t number)
 {
     if(number > 0x20 && number < 0x80)
@@ -209,50 +217,6 @@ void keyboard_setup(void)
     //---keyboard configuration end---
 }
 
-void ChangeNotificationISR(void)
-{
-    //IFS1bits.CNIF = 0; //clear the interrupt flag just in case
-    //atomically clear the interrupt flag
-    //IFS1CLR = 0x1;
-    values[ChangeState] = PORTD;
-    //int temp = PORTD;
-
-    switch(ChangeState)
-    {
-        case 0:
-            //if(PORTDbits.RD7 == 1)
-            if((values[0] & 0x80)) // mask off all bits but RD7
-            {
-                badkeystart = 1;
-            }
-            else
-            {
-                badkeystart = 0;
-            }
-            //PORTDbits.RD7 = values[0];
-            ChangeState++;
-            break;
-        case 21:
-            //if(PORTDbits.RD7 == 1)
-            if(values[21] & 0x80)
-            {
-                badkeypress = 0;
-            }
-            else
-            {
-                badkeypress = 1;
-            }
-            //PORTDbits.RD7 = values[10];
-            ChangeState = 0;
-            break;
-        default:
-            ChangeState++;
-            break;
-    }
-
-    IFS1CLR = 0x1;
-}
-
 void InputCapture2ISR(void)
 {
     IC2BUF;
@@ -270,7 +234,7 @@ void InputCapture2ISR(void)
     if(PORTDbits.RD9 == 0)
     {
         //then read the data bit
-        badkeypress = 0;
+        //badkeypress = 0;
 
         switch(IC1State)
         {
@@ -291,19 +255,19 @@ void InputCapture2ISR(void)
                         temp = 0;
                     }
 
-                    code = code << 1;
-                    code += temp;
+                    scancode = scancode << 1;
+                    scancode += temp;
                 }
                 
                 //circular buffer insert handling of the ps2Buffer
                 if(ps2BufferNumItems < ps2BufferSize)
                 {
-                    ps2Buffer[ps2BufferEndIndex] = code;
+                    ps2Buffer[ps2BufferEndIndex] = scancode;
                     ps2BufferNumItems++;
 
 
                     KeysToProcess = 1;
-                    code = 0;
+                    scancode = 0;
                     //wrap inside the ps2buffer when writing to the buffer
                     if(ps2BufferEndIndex < ps2BufferSize)
                     {
@@ -322,23 +286,21 @@ void InputCapture2ISR(void)
     }
     else
     {
-        badkeypress = 1;
+        //badkeypress = 1;
     }
 }
 
 #endif
 
-void interpretKeypress(void)
+void removeFromPS2Buffer(void)
 {
-    
+    int i = 0;
     uint8_t temp = 0;
     uint8_t temp2 = 0;
 
     //circular buffer removal handling of the ps2Buffer
     if(ps2BufferNumItems > 0)
     {
-
-
         if( ps2Buffer[ps2BufferStart] == 0xE0 )
         {
             //special key pressed
@@ -392,52 +354,7 @@ void interpretKeypress(void)
             //testing a write char
             //writechar(keyboard_lookup(temp2), 8, 8);
 
-            //first translate the keypress
-            temp2 = translateKeypress(temp);
-            // this is the hinge for the keyboard keypresses
-
-
-			//this is where the non-printable keys are processed.
-            if(temp2 == 0x01)// enter key was pressed
-            {
-				/*
-                int i = 0;
-                for(i = 0; i < textlineindex; i++)
-                {
-                    placeChar(keyboard_lookup(textLine[i]));
-                }
-				*/
-                //here the code should try to interpret the received command
-                processLine(textLine);
-            }
-            else if(temp2 == 0x02) // esc key was pressed
-            {
-                ClearScreen(); // esc will clear the screen for now
-                int i = 0;
-                for(i = 0; i < 1024; i++) // iterates and clears the line
-                {
-                    textLine[i] = 0;
-                }
-                textlineindex = 0; // reset the index
-                resetPlaceCharLocation(); // reset the screen beginning
-            }
-            else if(temp2 == 0x03) // caps lock was pressed
-            {
-                ShiftPressed = !ShiftPressed;
-            }
-            else if(temp2 != 0)  //if there is no special key pressed
-            {   //then add it to the textLine buffer and increase the index
-                textLine[textlineindex] = temp2;
-
-                //then write the character to the screen
-
-                //writechar(keyboard_lookup(textLine[textlineindex]), cursor_x, cursor_y);
-                placeChar(keyboard_lookup(textLine[textlineindex]));
-
-                //increase index
-                textlineindex++;
-
-            }
+            interpret_keypress(temp);
 
             //make buffer circular
             if(ps2BufferStart < ps2BufferSize )
@@ -449,9 +366,6 @@ void interpretKeypress(void)
                 ps2BufferStart = 0;
             }
         }
-
-
-
     }
     else
     {
@@ -461,7 +375,7 @@ void interpretKeypress(void)
 }
 
 //this function translates a passed in scan code to ascii (or maybe unicode?) character values that will be used to get the correct bitmaps for printing characters to the screen
-uint8_t translateKeypress(uint8_t translate)
+extern uint8_t translateKeypress(uint8_t translate)
 {
     uint8_t temp = 0;
     int i = 0;
@@ -487,6 +401,10 @@ uint8_t translateKeypress(uint8_t translate)
 		case 0x5A: // enter
 			temp = 0x01;
 			break;
+                //start special key: backspace
+                case 0x66: // backspace
+                    temp = 0x04;
+                    break;
 		//start special keys: page up and page down
 		case 0x7D: // page up
 		switch(ShiftPressed)
@@ -595,7 +513,7 @@ uint8_t translateKeypress(uint8_t translate)
 			break;
 		case 0x05: // F1
 			temp = 0;
-			shiftTextRight();
+                        press_F1();
 			break;
 		case 0x06: // F2
 			temp = 0;
@@ -1132,95 +1050,8 @@ uint8_t translateKeypress(uint8_t translate)
     return temp;
 }
 
-uint8_t * gettextLine(void)
-{
-    return textLine;
-}
-
-void processLine(uint8_t * textLinePtr)
-{
-    int valid_command;
-    int z;
-    int z2;
-    valid_command = 1;
-	
-    for(z = 0; z < 11 && valid_command == 1; z++)
-    {
-            if(textLinePtr[z] != commandIPTargetSet[z])
-            {
-                    valid_command = 0;
-            }
-    }
-    //check if the last character is a space
-    if(' ' != textLinePtr[11])
-    {
-        valid_command = 0;
-    }
-    else
-    {
-        //then get the next ___.___.___.___(null) 15 characters
-        //textLinePtr[12] to textLinePtr[27]
-        for(z2 = 0, z = 12; textLinePtr[z] != ' ' && z < 28; z++, z2++)
-        {
-            IPTarget[z2] = textLinePtr[z];
-        }
-    }
-
-    if(valid_command == 0)
-    {
-        valid_command = 1;
-        for(z = 0; z < 2 && valid_command == 1; z++)
-        {
-                if(textLinePtr[z] != commandLS[z])
-                {
-                        valid_command = 0;
-                }
-        }
-        //check if the last character is a space
-        if(' ' != textLinePtr[2])
-        {
-            valid_command = 0;
-        }
-    }
-    if(valid_command == 0)
-    {
-        valid_command = 1;
-        for(z = 0; z < 2 && valid_command == 1; z++)
-        {
-                if(textLinePtr[z] != commandCD[z])
-                {
-                        valid_command = 0;
-                }
-        }
-        //check if the last character is a space
-        if(' ' != textLinePtr[2])
-        {
-            valid_command = 0;
-        }
-    }
 
 
-    if(valid_command == 1)
-    {
-            placeChar(keyboard_lookup('S'));
-            placeChar(keyboard_lookup('u'));
-            placeChar(keyboard_lookup('c'));
-            placeChar(keyboard_lookup('c'));
-            placeChar(keyboard_lookup('e'));
-            placeChar(keyboard_lookup('s'));
-            placeChar(keyboard_lookup('s'));
-            //interpret command
-
-    }
-    else
-    {
-            placeChar(keyboard_lookup('F'));
-            placeChar(keyboard_lookup('a'));
-            placeChar(keyboard_lookup('i'));
-            placeChar(keyboard_lookup('l'));
-			//print error message?
-    }	
-}
 
 #ifndef __Microcontroller
 //this test agitator takes a scan code and adds it to the ps2Buffer so it can be processed with interpretKeypress
@@ -1248,7 +1079,7 @@ void testKeyboardAgitator(uint8_t scanCode)
 }
 #endif
 
-char * getIPTarget()
+extern void invertShiftPressed(void)
 {
-    return IPTarget;
+    ShiftPressed = !ShiftPressed;
 }

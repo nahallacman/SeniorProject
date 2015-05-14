@@ -11,6 +11,9 @@ const long int VGA_BackPorch[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 // and a lot more!
 #include <plib.h>
 
+/**
+ * Sets up the VGA video output using SPI4 and timer 2 for video
+ */
 void VGA_Setup(void)
 {
     VGA_VideoMemoryIndex = VGA_VideoMemory;
@@ -134,7 +137,7 @@ void VGA_Setup(void)
 
     //OpenOC1(OC_ON | OC_TIMER_MODE16 | OC_TIMER2_SRC | OC_CONTINUE_PULSE, 0, 0x110);
     //OpenOC1(OC_ON | OC_TIMER_MODE16 | OC_TIMER2_SRC | OC_CONTINUE_PULSE, 0, 0x108);
-OpenOC1(OC_ON | OC_TIMER_MODE16 | OC_TIMER2_SRC | OC_CONTINUE_PULSE, 0, 0x100);
+OpenOC1(OC_ON | OC_TIMER_MODE16 | OC_TIMER2_SRC | OC_CONTINUE_PULSE, 0, 0x110);
 
     //OpenTimer23( T23_ON | T23_SOURCE_INT | T2_32BIT_MODE_ON | T23_PS_1_1 , 100);
 
@@ -185,6 +188,9 @@ OpenOC1(OC_ON | OC_TIMER_MODE16 | OC_TIMER2_SRC | OC_CONTINUE_PULSE, 0, 0x100);
     //---VGA configuration end---
 }
 
+/**
+ * Sets up the DMA channels to make video work on SPI4
+ */
 void VGA_SetupVideoOutput(void)
 {
     //SpiChnOpen(SPI_CHANNEL2, SPI_OPEN_MSTEN | SPI_OPEN_MODE32 | SPI_OPEN_FRMEN | SPI_OPEN_FSP_IN | SPI_OPEN_FSP_HIGH,2);
@@ -204,7 +210,10 @@ void VGA_SetupVideoOutput(void)
 }
 
 
-
+/**
+ * The interrupt service routine to service the DMA pointer updates, v-sync.
+ * H-sync is also created from the timer two interrupt but is not serviced here.
+ */
 void T2ISR(void)
 {
     //IFS0bits.T2IF = 0;
@@ -239,8 +248,10 @@ void T2ISR(void)
 }
 
 #else
-//replacement code for the bitswapping macro that is included in the pic32 system code
-//the microcontroller needs the other code as it is MUCH faster on the pic32
+/**
+ * replacement code for the bitswapping macro that is included in the pic32 system code
+ * the microcontroller needs the other code as it is MUCH faster on the pic32
+*/
 uint32_t _bswap32(uint32_t a)
 {
   a = ((a & 0x000000FF) << 24) |
@@ -315,16 +326,21 @@ void writepixel(int x, int y)
 }
 
 //uses 8 characters in a 8x8 grid for characters, puts that character at position starting with x, y
-//void writechar(uint8_t * character, int x, int y)
-void writechar(uint8_t * character)
+//extern void writechar(uint8_t * character, int x, int y)
+
+//to make this function work appropriately, alter the CursorLocation to where you want to print, then call writechar()
+//extern void writechar(uint8_t * character)
+extern void writechar(uint8_t * character, int x, int y)
 {
     int i = 0;
-    //if(x < VGA_X_MAX && y < VGA_Y_MAX)
-    //{
+    if(x < VGA_X_MAX && y < VGA_Y_MAX)
+    {
         int y_char = 0;
         int x_char = 0;
-        y_char = (CursorLocation / 100);
-        x_char =  CursorLocation - (y_char * 100);
+        //y_char = (getCursorLocation() / 100);
+        //x_char =  getCursorLocation() - (y_char * 100);
+        y_char = y;
+        x_char = x;
         int x_offset = x_char * 8;
         int y_offset = y_char * 8;
         
@@ -404,36 +420,67 @@ void writechar(uint8_t * character)
             VGA_VideoMemory[Byte] |= Bits;
             Byte += 25; // go down one line
         }
+    }
+}
+
+/**
+ * clears a series of characters from the cursor location start to the cursor location end
+ */
+extern void clearchar(int start, int end)
+{
+    int i = 0;
+    int j = 0;
+    //if(x < VGA_X_MAX && y < VGA_Y_MAX)
+    //{
+        int y_char = 0;
+        int x_char = 0;
+
+        int x_offset = x_char * 8;
+        int y_offset = y_char * 8;
+
+        int Bits;
+        int Byte;
+
+        for(j = start; j < end; j++)
+        {
+            y_char = (j / 100);
+            x_char =  j - (y_char * 100);
+            x_offset = x_char * 8;
+            y_offset = y_char * 8;
+
+
+
+
+            //int leftover = x % 32;
+            //int leftover =  x_offset % 32;
+
+            //Byte = (y*25) + (x/32);
+            Byte = (y_offset*25) + (x_offset/32);
+
+
+
+            for(i = 0; i < 8; i++)
+            {
+                Bits = 0;
+               //Bits = VGA_VideoMemory[Byte];
+
+                //write the bits to the video memory buffer
+                VGA_VideoMemory[Byte] = Bits;
+                Byte += 25; // go down one line4
+            }
+        }
     //}
 }
 
-extern void placeChar(uint8_t * character)
-{
-    
 
-    if(CursorLocation < 7499)
-    {
-        CursorLocation++;
-    }
-    else
-    {
-        CursorLocation = 0;
-    }
-    LineLocationEnd++;
 
-    writechar(character);
 
-}
-
-void resetPlaceCharLocation(void)
-{
-    CursorLocation = 0;
-    LineLocationEnd = 0;
-}
-
+/**
+ * clears the entire screen
+*/
 void ClearScreen(void)
 {
-    //clears the screen
+
     int i = 0;
     for(i=0; i < 15000; i++)
     {
@@ -441,74 +488,7 @@ void ClearScreen(void)
     }
 }
 
-void MoveCursorLeft(void)
-{
-    if(CursorLocation == 0)
-    {
-        //do nothing, can't move more left
-    }
-    else 
-    {
-        if(CursorLocation > LineLocationStart - 1)
-        {
-            //move cursor left
-            CursorLocation--;
-        }
-        //else
-        //{
-            //do nothing, the cursor can't go any more left
-        //}
-    }
 
-}
-
-void MoveCursorRight(void)
-{
-    if(CursorLocation < 7499)
-    {
-        if(CursorLocation + 1 < LineLocationEnd)
-        {
-            //move cursor right
-            CursorLocation++;
-        }
-    }
-    else
-    {
-        //do nothing, can't move more right
-    }
-}
-
-void MoveCursorUp(void)
-{
-    if(CursorLocation > 100)
-    {
-        if(CursorLocation - 100 > LineLocationStart)
-        {
-            //move cursor up
-            CursorLocation = CursorLocation - 100;
-        }
-    }
-    else
-    {
-        //do nothing, can't move more up
-    }
-}
-
-void MoveCursorDown(void)
-{
-    if(CursorLocation < 7499)
-    {
-        if(CursorLocation + 100 < LineLocationEnd)
-        {
-            //move cursor up
-            CursorLocation = CursorLocation + 100;
-        }
-    }
-    else
-    {
-        //do nothing, can't move more up
-    }
-}
 
 void BlinkCursor(void)
 {
@@ -530,12 +510,12 @@ void BlinkCursor(void)
     int y_char = 0;
 
 
-    y_char = (CursorLocation / 100);
-    x_char =  CursorLocation - (y_char * 100);
+    y_char = (getCursorLocation() / 100);
+    x_char =  getCursorLocation() - (y_char * 100);
     uint8_t fullchar[8] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
 
     //writechar(fullchar, x_char * 8, y_char * 8);
-    writechar(fullchar);
+    writechar(fullchar, x_char, y_char);
 
 }
 
@@ -746,15 +726,3 @@ void shiftTextLeft(void)
 
 }
 
-void printTestScreen(void)
-{
-	uint8_t a;
-	int i;
-	for(i = 0; i < 79; i++) // 95 * 78 = 7500
-	{
-		for(a = 0x20; a < 0x7F; a++) //95 characters
-		{
-			placeChar(keyboard_lookup(a));
-		}
-	}
-}

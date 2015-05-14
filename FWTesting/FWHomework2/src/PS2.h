@@ -12,83 +12,63 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
-
+//#include "cursor.h"
 #include <stdint.h>
 #include "PS2Common.h"
 #include "TestCommon.h"
-//testing adds to fix unit tests
 #ifndef __Microcontroller
-//#include "VGA.h"
 #endif
 
 #ifdef __Microcontroller
 //set the priority of the ChangeNotificationISR
-#pragma interrupt ChangeNotificationISR IPL1 vector 26
+//#pragma interrupt ChangeNotificationISR IPL1 vector 26
 
+//declarations for the input capture ISR
 #pragma interrupt InputCapture2ISR IPL6 vector 9
-
-
-void ChangeNotificationISR(void);
-
 void InputCapture2ISR(void);
 
 #endif
 
-//int ChangeState = 0;
-int ChangeState;
+//variables for ps2 input capture ISR
 int values[23];
-
-//int badkeypress = 0;
-int badkeypress;
-//int badkeystart = 0;
-int badkeystart;
-
-
-//int IC1State = 0;
 int IC1State;
-
-//int parity = 0;
-int parity;
-//int code = 0;
-int code;
-//int ps2BufferEndIndex = 0;
+int scancode;
 int ps2BufferEndIndex;
-//int ps2Buffer[8];
 int ps2Buffer[100];
 
 //flag letting the system know if there is something keyboard related to process in the main loop
 int KeysToProcess;
 
+//variables for the ps2 circular buffer
 //index to the ps2buffer for using a circular buffer
-//int KeyBufferEnd = 0;
-//int ps2BufferStart = 0;
 int ps2BufferStart;
 
-//maybe this should be a #define?
-//int ps2BufferSize = 100;
 #define ps2BufferSize 100
-//int ps2BufferNumItems = 0;
 int ps2BufferNumItems;
 
 //flag for shift on/off
-//int ShiftPressed = 0;
 int ShiftPressed;
 
-//buffer for line, should probably be moved later
-uint8_t textLine[1024];
-//int textlineindex = 0;
-int textlineindex;
+extern void invertShiftPressed(void);
 
-uint8_t * gettextLine(void);
-//int cursorlocation = 0;
+extern void TempProcessLineWrapper(void);
+
+
+
+
+
+
+
+
+
 
 
 
 //begining cursor functionality
 //int cursor_x = 0;
-int cursor_x;
+//int cursor_x;
 //int cursor_y = 0;
-int cursor_y;
+//int cursor_y;
 
  /**
   * font_map based on the file
@@ -251,9 +231,9 @@ uint8_t * keyboard_lookup(uint8_t number);
 
 void keyboard_setup(void);
 
-void interpretKeypress(void);
+void removeFromPS2Buffer(void);
 
-uint8_t translateKeypress(uint8_t);
+extern uint8_t translateKeypress(uint8_t);
 
 
 //trying to link the two files together for testing
@@ -270,21 +250,20 @@ extern void BlinkCursor(void);
 extern void ClearScreen(void);
 extern void resetPlaceCharLocation(void);
 
+
+
+
+
+
 //test code that is excluded when running on the pic32 itself
 #ifndef __Microcontroller
 void testKeyboardAgitator(uint8_t scanCode);
 #endif
 
-void processLine(uint8_t * textLinePtr);
-static const uint8_t commandIPTargetSet[] = "iptargetset";
-static const uint8_t commandLS[] = "ls";
-static const uint8_t commandCD[] = "cd";
-#ifdef __Microcontroller
-char IPTarget[16] = "192.168.5.199";
-#else
-char IPTarget[16];
-#endif
-char * getIPTarget();
+
+
+
+
 
 #ifdef	__cplusplus
 }
