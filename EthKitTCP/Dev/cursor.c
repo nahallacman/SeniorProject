@@ -569,10 +569,10 @@ void printTestScreen(void)
         ClearScreen();
         clearTextLine();
         resetPlaceCharLocation(); // reset to the screen beginning
-	//for(i = 0; i < 79; i++) // 95 * 78 = 7500
-        for(i = 0; i < 2; i++) // 95 * 78 = 7500
+	for(i = 0; i < 79; i++) // 94 * 79 = 7426
+        //for(i = 0; i < 2; i++) // 94 * 79 = 7426, less than 7500 total
 	{
-		for(a = 0x20; a < 0x7F; a++) //95 characters
+		for(a = 0x21; a < 0x7F; a++) //94 characters
 		{
                     //placeChar(keyboard_lookup(a));
                     placeChar(a);
