@@ -18,7 +18,7 @@ extern int getCursorLocation(void)
 
 
 /**
- * sets the cursor location
+ * sets the cursor location manually. Not suggested for normal use. No parameter checking.
  * @param int newCursorLocation
  */
 extern void setCursorLocation(int newCursorLocation)
@@ -354,12 +354,29 @@ void press_backspace(void)
         //reprint the string from the curor location
         printStart = textLine; // does this need a dereference?
         printBegin = cursor - (cursor % 4);
-        for(i = 0; i < (cursor % 4); i++)
+        if(printBegin == cursor)
         {
-            //move the cursor back one
-            MoveCursorLeft();
-            //decrease the end of the line index
-            decreaseLineLocationEnd();
+            printBegin = printBegin - 4;
+        }
+        if( ( cursor % 4 ) == 0 )
+        {
+            for(i = 0; i < 4; i++)
+            {
+                //move the cursor back one
+                MoveCursorLeft();
+                //decrease the end of the line index
+                decreaseLineLocationEnd();
+            }
+        }
+        else
+        {
+            for(i = 0; i < (cursor % 4); i++)
+            {
+                //move the cursor back one
+                MoveCursorLeft();
+                //decrease the end of the line index
+                decreaseLineLocationEnd();
+            }
         }
         for(i = 0; i < printBegin - 1 ; i++)
         {
