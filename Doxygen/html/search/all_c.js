@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['placechar',['placeChar',['../cursor_8c.html#a8d48f16d45338842dc6cbb3256eb7dae',1,'placeChar(uint8_t character):&#160;cursor.c'],['../cursor_8h.html#a8d48f16d45338842dc6cbb3256eb7dae',1,'placeChar(uint8_t character):&#160;cursor.c'],['../_p_s2_8h.html#a29bab149333c107091c1b286e05ac315',1,'placeChar(uint8_t *character):&#160;PS2.h']]],
+  ['placechar',['placeChar',['../cursor_8c.html#a8d48f16d45338842dc6cbb3256eb7dae',1,'placeChar(uint8_t character):&#160;cursor.c'],['../cursor_8h.html#a8d48f16d45338842dc6cbb3256eb7dae',1,'placeChar(uint8_t character):&#160;cursor.c'],['../_p_s2_8h.html#a8d48f16d45338842dc6cbb3256eb7dae',1,'placeChar(uint8_t character):&#160;cursor.c']]],
   ['placestring',['placeString',['../cursor_8c.html#a02936826fc9c1380ef1e42ae18940c9a',1,'placeString(char *string):&#160;cursor.c'],['../cursor_8h.html#a02936826fc9c1380ef1e42ae18940c9a',1,'placeString(char *string):&#160;cursor.c']]],
   ['press_5fbackspace',['press_backspace',['../cursor_8c.html#afb368b3eb12755cae8787b96e467e0e3',1,'press_backspace(void):&#160;cursor.c'],['../cursor_8h.html#afb368b3eb12755cae8787b96e467e0e3',1,'press_backspace(void):&#160;cursor.c']]],
   ['press_5ff1',['press_F1',['../cursor_8c.html#a8b0ba534e7681966289c491064e9cdc8',1,'cursor.c']]],

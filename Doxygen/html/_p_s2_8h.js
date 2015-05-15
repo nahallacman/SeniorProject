@@ -10,7 +10,7 @@ var _p_s2_8h =
     [ "MoveCursorLeft", "_p_s2_8h.html#a7804524381705ec22e0efc3a1326dd69", null ],
     [ "MoveCursorRight", "_p_s2_8h.html#ac177699cfeda15e4b887864f6eacc5e3", null ],
     [ "MoveCursorUp", "_p_s2_8h.html#ae9337ec3c6ea47f10d329cd99d7a29f9", null ],
-    [ "placeChar", "_p_s2_8h.html#a29bab149333c107091c1b286e05ac315", null ],
+    [ "placeChar", "_p_s2_8h.html#a8d48f16d45338842dc6cbb3256eb7dae", null ],
     [ "removeFromPS2Buffer", "_p_s2_8h.html#aab6a9276acf7260f4f6dfcd5a4c92e4a", null ],
     [ "resetPlaceCharLocation", "_p_s2_8h.html#aeca62116778bb6c13245089867ded8d9", null ],
     [ "ShiftScreenDown", "_p_s2_8h.html#a030e6b6983ff846d9cca945c743c40b2", null ],

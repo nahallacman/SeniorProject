@@ -16,8 +16,11 @@ extern "C" {
 #include <stdint.h>
 #include "PS2Common.h"
 #include "TestCommon.h"
-#ifndef __Microcontroller
-#endif
+
+
+    
+//#ifndef __Microcontroller
+//#endif
 
 #ifdef __Microcontroller
 //set the priority of the ChangeNotificationISR
@@ -237,7 +240,14 @@ extern uint8_t translateKeypress(uint8_t);
 
 
 //trying to link the two files together for testing
-extern void placeChar(uint8_t * character);
+//extern void placeChar(uint8_t * character);
+
+//from cursor.h
+extern void interpret_keypress(char temp);
+extern void placeChar(uint8_t character);
+
+
+
 extern void ShiftScreenUp(void);
 extern void ShiftScreenDown(void);
 extern void ShiftScreenLeft(void);

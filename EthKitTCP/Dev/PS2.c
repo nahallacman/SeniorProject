@@ -1,5 +1,11 @@
 #include "PS2.h"
 
+//temporary for testing
+//void interpret_keypress(char temp)
+//{
+//    char a = temp;
+//}
+
 /**
  * A chunk of 128 8x8 bitmaps that are arranged in ascii order.
  */
@@ -513,7 +519,7 @@ extern uint8_t translateKeypress(uint8_t translate)
 			break;
 		case 0x05: // F1
 			temp = 0;
-                        press_F1();
+                        //press_F1();
 			break;
 		case 0x06: // F2
 			temp = 0;

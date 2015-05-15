@@ -1,4 +1,5 @@
 #include "unity.h"
+#include "cursor.h"
 #include "PS2.h"
 #include "PS2Common.h"
 #include "VGA.h"
@@ -128,8 +129,8 @@ void testInputCommandIPTargetSet(void)
 	//change this to an assert instead of an if
 	TEST_ASSERT_EQUAL_INT(KeysToProcess, 1);
 	//process keystrokes
-	interpretKeypress();
-
+	//interpretKeypress();
+	removeFromPS2Buffer();
 	
 	
 //this bit of code takes a string and enters in the appropriate scan codes that match the string
@@ -145,7 +146,8 @@ void testInputCommandIPTargetSet(void)
 				if(KeysToProcess == 1) // then process it
 				{
 					//process keystrokes
-					interpretKeypress();
+					//interpretKeypress();
+					removeFromPS2Buffer();
 				}
 			}
 		}
@@ -212,8 +214,8 @@ void testInputCommandIPTargetSet(void)
 	{
 
 		//process keystrokes
-		interpretKeypress();
-
+		//interpretKeypress();
+		removeFromPS2Buffer();
 	}
 	
 	//printf("text line after processing keys and enter = %s", textLine);
@@ -240,7 +242,8 @@ void testInputCommandLS(void)
 	//change this to an assert instead of an if
 	TEST_ASSERT_EQUAL_INT(KeysToProcess, 1);
 	//process keystrokes
-	interpretKeypress();
+	//interpretKeypress();
+	removeFromPS2Buffer();
 
 	
 	
@@ -257,7 +260,8 @@ void testInputCommandLS(void)
 				if(KeysToProcess == 1) // then process it
 				{
 					//process keystrokes
-					interpretKeypress();
+					//interpretKeypress();
+					removeFromPS2Buffer();
 				}
 			}
 		}
@@ -270,7 +274,8 @@ void testInputCommandLS(void)
 	{
 
 		//process keystrokes
-		interpretKeypress();
+		//interpretKeypress();
+		removeFromPS2Buffer();
 
 	}
 	
@@ -300,7 +305,8 @@ void testShiftTextRightPart1(void)
 	//change this to an assert instead of an if
 	TEST_ASSERT_EQUAL_INT(KeysToProcess, 1);
 	//process keystrokes
-	interpretKeypress();
+	//interpretKeypress();
+	removeFromPS2Buffer();
 	
 	//this bit of code takes a string and enters in the appropriate scan codes that match the string
 	int j = 0;
@@ -315,7 +321,8 @@ void testShiftTextRightPart1(void)
 				if(KeysToProcess == 1) // then process it
 				{
 					//process keystrokes
-					interpretKeypress();
+					//interpretKeypress();
+					removeFromPS2Buffer();
 				}
 			}
 		}
@@ -328,7 +335,8 @@ void testShiftTextRightPart1(void)
 	if(KeysToProcess == 1)
 	{
 		//process keystrokes
-		interpretKeypress();
+		//interpretKeypress();
+		removeFromPS2Buffer();
 	}
 	
 	
@@ -356,7 +364,8 @@ void testShiftTextRightPart2(void)
 	//change this to an assert instead of an if
 	TEST_ASSERT_EQUAL_INT(KeysToProcess, 1);
 	//process keystrokes
-	interpretKeypress();
+	//interpretKeypress();
+		removeFromPS2Buffer();
 	
 	//this bit of code takes a string and enters in the appropriate scan codes that match the string
 	int j = 0;
@@ -371,7 +380,8 @@ void testShiftTextRightPart2(void)
 				if(KeysToProcess == 1) // then process it
 				{
 					//process keystrokes
-					interpretKeypress();
+					//interpretKeypress();
+		removeFromPS2Buffer();
 				}
 			}
 		}
@@ -384,7 +394,8 @@ void testShiftTextRightPart2(void)
 	if(KeysToProcess == 1)
 	{
 		//process keystrokes
-		interpretKeypress();
+		//interpretKeypress();
+		removeFromPS2Buffer();
 	}
 	
 	
@@ -412,7 +423,8 @@ void testShiftTextLeftPart1(void)
 	//change this to an assert instead of an if
 	TEST_ASSERT_EQUAL_INT(KeysToProcess, 1);
 	//process keystrokes
-	interpretKeypress();
+	//interpretKeypress();
+		removeFromPS2Buffer();
 	
 	//this bit of code takes a string and enters in the appropriate scan codes that match the string
 	int j = 0;
@@ -427,7 +439,8 @@ void testShiftTextLeftPart1(void)
 				if(KeysToProcess == 1) // then process it
 				{
 					//process keystrokes
-					interpretKeypress();
+					//interpretKeypress();
+		removeFromPS2Buffer();
 				}
 			}
 		}
@@ -440,7 +453,8 @@ void testShiftTextLeftPart1(void)
 	if(KeysToProcess == 1)
 	{
 		//process keystrokes
-		interpretKeypress();
+		//interpretKeypress();
+		removeFromPS2Buffer();
 	}
 	
 	
@@ -466,7 +480,8 @@ void testShiftTextLeftPart2(void)
 	//change this to an assert instead of an if
 	TEST_ASSERT_EQUAL_INT(KeysToProcess, 1);
 	//process keystrokes
-	interpretKeypress();
+	//interpretKeypress();
+		removeFromPS2Buffer();
 	
 	//this bit of code takes a string and enters in the appropriate scan codes that match the string
 	int j = 0;
@@ -481,7 +496,8 @@ void testShiftTextLeftPart2(void)
 				if(KeysToProcess == 1) // then process it
 				{
 					//process keystrokes
-					interpretKeypress();
+					//interpretKeypress();
+		removeFromPS2Buffer();
 				}
 			}
 		}
@@ -494,7 +510,8 @@ void testShiftTextLeftPart2(void)
 	if(KeysToProcess == 1)
 	{
 		//process keystrokes
-		interpretKeypress();
+		//interpretKeypress();
+		removeFromPS2Buffer();
 	}
 	
 	

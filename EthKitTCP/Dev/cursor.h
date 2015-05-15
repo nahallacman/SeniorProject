@@ -5,8 +5,7 @@
  * Created on May 9, 2015, 8:34 PM
  */
 
-#include "TestCommon.h"
-#include <stdint.h>
+
 
 #ifndef CURSOR_H
 #define	CURSOR_H
@@ -14,7 +13,9 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
-
+//#include "PS2.h"
+#include "TestCommon.h"
+#include <stdint.h>
 
 
 extern int setandgetCursorLocation(int newcursorLocation);
@@ -62,9 +63,10 @@ static const uint8_t commandCD[] = "cd";
 static const uint8_t commandprinttestscreen[] = "printtestscreen";
 static const uint8_t commandhelp[] = "help";
 
-#ifdef __Microcontroller
-char IPTarget[16] = "192.168.11.56";
 #define DefaultIpTargetCommandLength 26
+#ifdef __Microcontroller
+//char IPTarget[16] = "192.168.11.56";
+char IPTarget[16];
 static char defaultIPTargetCommand[DefaultIpTargetCommandLength] = "iptargetset 192.168.11.56";
 #else
 char IPTarget[16];

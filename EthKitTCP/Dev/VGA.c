@@ -1,6 +1,6 @@
 #include "VGA.h"
 //this include is soley for the  #define __Microcontroller line. It might be good to take that into another file.
-#include "TestCommon.h"
+//#include "TestCommon.h"
 
 const long int VGA_BackPorch[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 

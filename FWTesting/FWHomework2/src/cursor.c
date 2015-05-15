@@ -319,6 +319,7 @@ void processLine(uint8_t * textLinePtr)
     }
 }
 
+/*
 extern void press_F1(void)
 {
     int i = 0;
@@ -330,7 +331,7 @@ extern void press_F1(void)
     CompareTextLines(newtextLine);
 }
 
-
+*/
 //take out a character at the cursor location
 //shift all the characters from there to the end of the text line down
 void press_backspace(void)

@@ -151,7 +151,7 @@ $(document).ready(function(){initNavTree('cursor_8h_source.html','');});
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">//#include &quot;PS2.h&quot;</span></div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cursor_8h.html#a467458fc0085539f52030fabf3dd9286">interpret_keypress</a>(<span class="keywordtype">char</span> temp);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="cursor_8h.html#a467458fc0085539f52030fabf3dd9286">interpret_keypress</a>(<span class="keywordtype">char</span> temp);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cursor_8h.html#aeca62116778bb6c13245089867ded8d9">resetPlaceCharLocation</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
@@ -170,48 +170,49 @@ $(document).ready(function(){initNavTree('cursor_8h_source.html','');});
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> uint8_t commandhelp[] = <span class="stringliteral">&quot;help&quot;</span>;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#ifdef __Microcontroller</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">char</span> <a class="code" href="cursor_8h.html#aa4e0d20faf2f41acbf49d137715ba813">IPTarget</a>[16] = <span class="stringliteral">&quot;192.168.11.56&quot;</span>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#define DefaultIpTargetCommandLength 26</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">static</span> <span class="keywordtype">char</span> defaultIPTargetCommand[DefaultIpTargetCommandLength] = <span class="stringliteral">&quot;iptargetset 192.168.11.56&quot;</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="cursor_8h.html#aa4e0d20faf2f41acbf49d137715ba813">   70</a></span>&#160;<span class="keywordtype">char</span> IPTarget[16];</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">//char IPTarget[16] = &quot;192.168.11.56&quot;;</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keywordtype">char</span> <a class="code" href="cursor_8h.html#aa4e0d20faf2f41acbf49d137715ba813">IPTarget</a>[16];</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#define DefaultIpTargetCommandLength 26</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">static</span> <span class="keywordtype">char</span> defaultIPTargetCommand[DefaultIpTargetCommandLength] = <span class="stringliteral">&quot;iptargetset 192.168.11.56&quot;</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="cursor_8h.html#aa4e0d20faf2f41acbf49d137715ba813">   71</a></span>&#160;<span class="keywordtype">char</span> IPTarget[16];</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">//defining the line length for the printed text line and the newtextLine</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="cursor_8h.html#a01882b20b26727e0c233e94a4c863459">   76</a></span>&#160;<span class="preprocessor">#define TEXTLINELENGTH 7500</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">//buffer for line</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="cursor_8h.html#a78a502c5ea8364e4c06aea5ff4361c8f">   79</a></span>&#160;uint8_t <a class="code" href="cursor_8h.html#a78a502c5ea8364e4c06aea5ff4361c8f">textLine</a>[<a class="code" href="cursor_8h.html#a01882b20b26727e0c233e94a4c863459">TEXTLINELENGTH</a>];</div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="cursor_8h.html#a4eddb259269e1401df5b56698f231263">   80</a></span>&#160;uint8_t <a class="code" href="cursor_8h.html#a4eddb259269e1401df5b56698f231263">newtextLine</a>[<a class="code" href="cursor_8h.html#a01882b20b26727e0c233e94a4c863459">TEXTLINELENGTH</a>];</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cursor_8h.html#afb368b3eb12755cae8787b96e467e0e3">press_backspace</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keywordtype">char</span> * <a class="code" href="cursor_8h.html#abe73bcf82b19d9727d29850864eac8b8">getIPTarget</a>();</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">//extern void placeChar(uint8_t * character);</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="cursor_8h.html#a8d48f16d45338842dc6cbb3256eb7dae">placeChar</a>(uint8_t character);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="cursor_8h.html#a02936826fc9c1380ef1e42ae18940c9a">placeString</a>(<span class="keywordtype">char</span> * <span class="keywordtype">string</span>);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;uint8_t * <a class="code" href="cursor_8h.html#a3a060fca8f2dde6562e2f243414d47d7">gettextLine</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">//function for comparing the two text lines and updating the screen accordingly</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cursor_8h.html#a8f55cca82244df1cf78f0a826f816f75">CompareTextLines</a>(<span class="keywordtype">char</span> * newtextLine);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cursor_8h.html#aa68556b6a4e7315e031e8f18361d283e">printHelpScreen</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">//defining the line length for the printed text line and the newtextLine</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="cursor_8h.html#a01882b20b26727e0c233e94a4c863459">   77</a></span>&#160;<span class="preprocessor">#define TEXTLINELENGTH 7500</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">//buffer for line</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="cursor_8h.html#a78a502c5ea8364e4c06aea5ff4361c8f">   80</a></span>&#160;uint8_t <a class="code" href="cursor_8h.html#a78a502c5ea8364e4c06aea5ff4361c8f">textLine</a>[<a class="code" href="cursor_8h.html#a01882b20b26727e0c233e94a4c863459">TEXTLINELENGTH</a>];</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="cursor_8h.html#a4eddb259269e1401df5b56698f231263">   81</a></span>&#160;uint8_t <a class="code" href="cursor_8h.html#a4eddb259269e1401df5b56698f231263">newtextLine</a>[<a class="code" href="cursor_8h.html#a01882b20b26727e0c233e94a4c863459">TEXTLINELENGTH</a>];</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cursor_8h.html#afb368b3eb12755cae8787b96e467e0e3">press_backspace</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keywordtype">char</span> * <a class="code" href="cursor_8h.html#abe73bcf82b19d9727d29850864eac8b8">getIPTarget</a>();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">//extern void placeChar(uint8_t * character);</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="cursor_8h.html#a8d48f16d45338842dc6cbb3256eb7dae">placeChar</a>(uint8_t character);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="cursor_8h.html#a02936826fc9c1380ef1e42ae18940c9a">placeString</a>(<span class="keywordtype">char</span> * <span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;uint8_t * <a class="code" href="cursor_8h.html#a3a060fca8f2dde6562e2f243414d47d7">gettextLine</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">//function for comparing the two text lines and updating the screen accordingly</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cursor_8h.html#a8f55cca82244df1cf78f0a826f816f75">CompareTextLines</a>(<span class="keywordtype">char</span> * newtextLine);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cursor_8h.html#aa68556b6a4e7315e031e8f18361d283e">printHelpScreen</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">//more test code, that way the tests can be run on the hardware and the test environment to make sure things are working correctly.</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cursor_8h.html#ab66a8865de62d9daefab9f8abf026478">printTestScreen</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#ifdef  __cplusplus</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* CURSOR_H */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">//more test code, that way the tests can be run on the hardware and the test environment to make sure things are working correctly.</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cursor_8h.html#ab66a8865de62d9daefab9f8abf026478">printTestScreen</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#ifdef  __cplusplus</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">/* CURSOR_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
 <div class="ttc" id="cursor_8h_html_a453e2db022d7de17533e1509906065c9"><div class="ttname"><a href="cursor_8h.html#a453e2db022d7de17533e1509906065c9">setLineLocationStart</a></div><div class="ttdeci">void setLineLocationStart(int newLineLocationStart)</div><div class="ttdef"><b>Definition:</b> <a href="cursor_8c_source.html#l00150">cursor.c:150</a></div></div>
 <div class="ttc" id="cursor_8h_html_a06590bd84e8fca8ad5292a6e5ca50890"><div class="ttname"><a href="cursor_8h.html#a06590bd84e8fca8ad5292a6e5ca50890">CursorLocation</a></div><div class="ttdeci">int CursorLocation</div><div class="ttdef"><b>Definition:</b> <a href="cursor_8h_source.html#l00032">cursor.h:32</a></div></div>
 <div class="ttc" id="_test_common_8h_html"><div class="ttname"><a href="_test_common_8h.html">TestCommon.h</a></div></div>
@@ -224,14 +225,14 @@ $(document).ready(function(){initNavTree('cursor_8h_source.html','');});
 <div class="ttc" id="cursor_8h_html_a8d48f16d45338842dc6cbb3256eb7dae"><div class="ttname"><a href="cursor_8h.html#a8d48f16d45338842dc6cbb3256eb7dae">placeChar</a></div><div class="ttdeci">void placeChar(uint8_t character)</div><div class="ttdef"><b>Definition:</b> <a href="cursor_8c_source.html#l00455">cursor.c:455</a></div></div>
 <div class="ttc" id="cursor_8h_html_aa0d5d4e3acd447e87fdab37d7388df23"><div class="ttname"><a href="cursor_8h.html#aa0d5d4e3acd447e87fdab37d7388df23">MoveCursorDownOneLine</a></div><div class="ttdeci">void MoveCursorDownOneLine(void)</div><div class="ttdef"><b>Definition:</b> <a href="cursor_8c_source.html#l00102">cursor.c:102</a></div></div>
 <div class="ttc" id="cursor_8h_html_ab66a8865de62d9daefab9f8abf026478"><div class="ttname"><a href="cursor_8h.html#ab66a8865de62d9daefab9f8abf026478">printTestScreen</a></div><div class="ttdeci">void printTestScreen(void)</div><div class="ttdef"><b>Definition:</b> <a href="cursor_8c_source.html#l00602">cursor.c:602</a></div></div>
-<div class="ttc" id="cursor_8h_html_a78a502c5ea8364e4c06aea5ff4361c8f"><div class="ttname"><a href="cursor_8h.html#a78a502c5ea8364e4c06aea5ff4361c8f">textLine</a></div><div class="ttdeci">uint8_t textLine[TEXTLINELENGTH]</div><div class="ttdef"><b>Definition:</b> <a href="cursor_8h_source.html#l00079">cursor.h:79</a></div></div>
+<div class="ttc" id="cursor_8h_html_a78a502c5ea8364e4c06aea5ff4361c8f"><div class="ttname"><a href="cursor_8h.html#a78a502c5ea8364e4c06aea5ff4361c8f">textLine</a></div><div class="ttdeci">uint8_t textLine[TEXTLINELENGTH]</div><div class="ttdef"><b>Definition:</b> <a href="cursor_8h_source.html#l00080">cursor.h:80</a></div></div>
 <div class="ttc" id="cursor_8h_html_a3a7d62c4f2983e6e2e2f4da56f36befc"><div class="ttname"><a href="cursor_8h.html#a3a7d62c4f2983e6e2e2f4da56f36befc">setandgetCursorLocation</a></div><div class="ttdeci">int setandgetCursorLocation(int newcursorLocation)</div><div class="ttdef"><b>Definition:</b> <a href="cursor_8c_source.html#l00006">cursor.c:6</a></div></div>
 <div class="ttc" id="cursor_8h_html_aeca62116778bb6c13245089867ded8d9"><div class="ttname"><a href="cursor_8h.html#aeca62116778bb6c13245089867ded8d9">resetPlaceCharLocation</a></div><div class="ttdeci">void resetPlaceCharLocation(void)</div><div class="ttdef"><b>Definition:</b> <a href="cursor_8c_source.html#l00197">cursor.c:197</a></div></div>
 <div class="ttc" id="cursor_8h_html_a52e93559a57ee99d14ce6d275cbb47a6"><div class="ttname"><a href="cursor_8h.html#a52e93559a57ee99d14ce6d275cbb47a6">getLineLocationStart</a></div><div class="ttdeci">int getLineLocationStart(void)</div><div class="ttdef"><b>Definition:</b> <a href="cursor_8c_source.html#l00146">cursor.c:146</a></div></div>
 <div class="ttc" id="cursor_8h_html_aa510ca0bb56c03148f3392c28433dc45"><div class="ttname"><a href="cursor_8h.html#aa510ca0bb56c03148f3392c28433dc45">decreaseLineLocationEnd</a></div><div class="ttdeci">void decreaseLineLocationEnd(void)</div><div class="ttdef"><b>Definition:</b> <a href="cursor_8c_source.html#l00129">cursor.c:129</a></div></div>
-<div class="ttc" id="cursor_8h_html_a01882b20b26727e0c233e94a4c863459"><div class="ttname"><a href="cursor_8h.html#a01882b20b26727e0c233e94a4c863459">TEXTLINELENGTH</a></div><div class="ttdeci">#define TEXTLINELENGTH</div><div class="ttdef"><b>Definition:</b> <a href="cursor_8h_source.html#l00076">cursor.h:76</a></div></div>
+<div class="ttc" id="cursor_8h_html_a01882b20b26727e0c233e94a4c863459"><div class="ttname"><a href="cursor_8h.html#a01882b20b26727e0c233e94a4c863459">TEXTLINELENGTH</a></div><div class="ttdeci">#define TEXTLINELENGTH</div><div class="ttdef"><b>Definition:</b> <a href="cursor_8h_source.html#l00077">cursor.h:77</a></div></div>
 <div class="ttc" id="cursor_8h_html_ac8e40e0b08b773c5f3fc0b303fe562de"><div class="ttname"><a href="cursor_8h.html#ac8e40e0b08b773c5f3fc0b303fe562de">MoveCursorDown</a></div><div class="ttdeci">void MoveCursorDown(void)</div><div class="ttdef"><b>Definition:</b> <a href="cursor_8c_source.html#l00086">cursor.c:86</a></div></div>
-<div class="ttc" id="cursor_8h_html_a4eddb259269e1401df5b56698f231263"><div class="ttname"><a href="cursor_8h.html#a4eddb259269e1401df5b56698f231263">newtextLine</a></div><div class="ttdeci">uint8_t newtextLine[TEXTLINELENGTH]</div><div class="ttdef"><b>Definition:</b> <a href="cursor_8h_source.html#l00080">cursor.h:80</a></div></div>
+<div class="ttc" id="cursor_8h_html_a4eddb259269e1401df5b56698f231263"><div class="ttname"><a href="cursor_8h.html#a4eddb259269e1401df5b56698f231263">newtextLine</a></div><div class="ttdeci">uint8_t newtextLine[TEXTLINELENGTH]</div><div class="ttdef"><b>Definition:</b> <a href="cursor_8h_source.html#l00081">cursor.h:81</a></div></div>
 <div class="ttc" id="cursor_8h_html_a3a060fca8f2dde6562e2f243414d47d7"><div class="ttname"><a href="cursor_8h.html#a3a060fca8f2dde6562e2f243414d47d7">gettextLine</a></div><div class="ttdeci">uint8_t * gettextLine(void)</div><div class="ttdef"><b>Definition:</b> <a href="cursor_8c_source.html#l00506">cursor.c:506</a></div></div>
 <div class="ttc" id="cursor_8h_html_a9edd5050c7ee33f44c008e98933880e0"><div class="ttname"><a href="cursor_8h.html#a9edd5050c7ee33f44c008e98933880e0">LineLocationEnd</a></div><div class="ttdeci">int LineLocationEnd</div><div class="ttdef"><b>Definition:</b> <a href="cursor_8h_source.html#l00037">cursor.h:37</a></div></div>
 <div class="ttc" id="cursor_8h_html_a8f55cca82244df1cf78f0a826f816f75"><div class="ttname"><a href="cursor_8h.html#a8f55cca82244df1cf78f0a826f816f75">CompareTextLines</a></div><div class="ttdeci">void CompareTextLines(char *newtextLine)</div><div class="ttdef"><b>Definition:</b> <a href="cursor_8c_source.html#l00514">cursor.c:514</a></div></div>
@@ -243,14 +244,14 @@ $(document).ready(function(){initNavTree('cursor_8h_source.html','');});
 <div class="ttc" id="cursor_8h_html_afb368b3eb12755cae8787b96e467e0e3"><div class="ttname"><a href="cursor_8h.html#afb368b3eb12755cae8787b96e467e0e3">press_backspace</a></div><div class="ttdeci">void press_backspace(void)</div><div class="ttdef"><b>Definition:</b> <a href="cursor_8c_source.html#l00336">cursor.c:336</a></div></div>
 <div class="ttc" id="cursor_8h_html_a96a71abb37405cb6ad878a4adac6d177"><div class="ttname"><a href="cursor_8h.html#a96a71abb37405cb6ad878a4adac6d177">LineLocationStart</a></div><div class="ttdeci">int LineLocationStart</div><div class="ttdef"><b>Definition:</b> <a href="cursor_8h_source.html#l00035">cursor.h:35</a></div></div>
 <div class="ttc" id="cursor_8h_html_a7804524381705ec22e0efc3a1326dd69"><div class="ttname"><a href="cursor_8h.html#a7804524381705ec22e0efc3a1326dd69">MoveCursorLeft</a></div><div class="ttdeci">void MoveCursorLeft(void)</div><div class="ttdef"><b>Definition:</b> <a href="cursor_8c_source.html#l00031">cursor.c:31</a></div></div>
-<div class="ttc" id="cursor_8h_html_aa4e0d20faf2f41acbf49d137715ba813"><div class="ttname"><a href="cursor_8h.html#aa4e0d20faf2f41acbf49d137715ba813">IPTarget</a></div><div class="ttdeci">char IPTarget[16]</div><div class="ttdef"><b>Definition:</b> <a href="cursor_8h_source.html#l00070">cursor.h:70</a></div></div>
+<div class="ttc" id="cursor_8h_html_aa4e0d20faf2f41acbf49d137715ba813"><div class="ttname"><a href="cursor_8h.html#aa4e0d20faf2f41acbf49d137715ba813">IPTarget</a></div><div class="ttdeci">char IPTarget[16]</div><div class="ttdef"><b>Definition:</b> <a href="cursor_8h_source.html#l00071">cursor.h:71</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_8d1ca4586762d004ca3d4d8345229d64.html">School</a></li><li class="navelem"><a class="el" href="dir_3b74bdff48f09a297f4b55bbd2833f98.html">SeniorProject</a></li><li class="navelem"><a class="el" href="dir_6797e956251fb025423a318090692a60.html">EthKitTCP</a></li><li class="navelem"><a class="el" href="dir_6dcbaad4cccdc9500e03abf926fbe24d.html">Dev</a></li><li class="navelem"><a class="el" href="cursor_8h.html">cursor.h</a></li>
-    <li class="footer">Generated on Thu May 14 2015 03:21:27 for EthKitTCP by
+    <li class="footer">Generated on Fri May 15 2015 01:05:09 for EthKitTCP by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>
