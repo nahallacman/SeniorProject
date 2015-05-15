@@ -108,7 +108,7 @@ $(document).ready(function(){initNavTree('_p_s2_8c_source.html','');});
 <a href="_p_s2_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_p_s2_8h.html">PS2.h</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//temporary for testing</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//extern void interpret_keypress(char temp);</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//void interpret_keypress(char temp)</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//{</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//    char a = temp;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//}</span></div>
@@ -617,7 +617,7 @@ $(document).ready(function(){initNavTree('_p_s2_8c_source.html','');});
 <div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;        <span class="keywordflow">case</span> 0x05: <span class="comment">// F1</span></div>
 <div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;            temp = 0;</div>
-<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;                        <a class="code" href="cursor_8c.html#a8b0ba534e7681966289c491064e9cdc8">press_F1</a>();</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;                        <span class="comment">//press_F1();</span></div>
 <div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;        <span class="keywordflow">case</span> 0x06: <span class="comment">// F2</span></div>
 <div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;            temp = 0;</div>
@@ -1192,7 +1192,6 @@ $(document).ready(function(){initNavTree('_p_s2_8c_source.html','');});
 <div class="ttc" id="cursor_8c_html_a467458fc0085539f52030fabf3dd9286"><div class="ttname"><a href="cursor_8c.html#a467458fc0085539f52030fabf3dd9286">interpret_keypress</a></div><div class="ttdeci">void interpret_keypress(char temp)</div><div class="ttdef"><b>Definition:</b> <a href="cursor_8c_source.html#l00156">cursor.c:156</a></div></div>
 <div class="ttc" id="_p_s2_8h_html_a7d0767b3a211317df10f5b01f5402d18"><div class="ttname"><a href="_p_s2_8h.html#a7d0767b3a211317df10f5b01f5402d18">ps2BufferEndIndex</a></div><div class="ttdeci">int ps2BufferEndIndex</div><div class="ttdef"><b>Definition:</b> <a href="_p_s2_8h_source.html#l00039">PS2.h:39</a></div></div>
 <div class="ttc" id="_p_s2_8c_html_a8ab149b8e337f892e4c07286e094ee54"><div class="ttname"><a href="_p_s2_8c.html#a8ab149b8e337f892e4c07286e094ee54">translateKeypress</a></div><div class="ttdeci">uint8_t translateKeypress(uint8_t translate)</div><div class="ttdef"><b>Definition:</b> <a href="_p_s2_8c_source.html#l00384">PS2.c:384</a></div></div>
-<div class="ttc" id="cursor_8c_html_a8b0ba534e7681966289c491064e9cdc8"><div class="ttname"><a href="cursor_8c.html#a8b0ba534e7681966289c491064e9cdc8">press_F1</a></div><div class="ttdeci">void press_F1(void)</div><div class="ttdef"><b>Definition:</b> <a href="cursor_8c_source.html#l00322">cursor.c:322</a></div></div>
 <div class="ttc" id="cursor_8c_html_ae9337ec3c6ea47f10d329cd99d7a29f9"><div class="ttname"><a href="cursor_8c.html#ae9337ec3c6ea47f10d329cd99d7a29f9">MoveCursorUp</a></div><div class="ttdeci">void MoveCursorUp(void)</div><div class="ttdef"><b>Definition:</b> <a href="cursor_8c_source.html#l00070">cursor.c:70</a></div></div>
 <div class="ttc" id="_p_s2_8h_html_a4b47033f07f05416b1337b1c3469df6c"><div class="ttname"><a href="_p_s2_8h.html#a4b47033f07f05416b1337b1c3469df6c">KeysToProcess</a></div><div class="ttdeci">int KeysToProcess</div><div class="ttdef"><b>Definition:</b> <a href="_p_s2_8h_source.html#l00043">PS2.h:43</a></div></div>
 <div class="ttc" id="_p_s2_8c_html_a7cda0ad58ffd2ffb3ab59b7cad3a947c"><div class="ttname"><a href="_p_s2_8c.html#a7cda0ad58ffd2ffb3ab59b7cad3a947c">font_map</a></div><div class="ttdeci">uint8_t font_map[128][8]</div><div class="ttdef"><b>Definition:</b> <a href="_p_s2_8c_source.html#l00012">PS2.c:12</a></div></div>
@@ -1223,7 +1222,7 @@ $(document).ready(function(){initNavTree('_p_s2_8c_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_8d1ca4586762d004ca3d4d8345229d64.html">School</a></li><li class="navelem"><a class="el" href="dir_3b74bdff48f09a297f4b55bbd2833f98.html">SeniorProject</a></li><li class="navelem"><a class="el" href="dir_6797e956251fb025423a318090692a60.html">EthKitTCP</a></li><li class="navelem"><a class="el" href="dir_6dcbaad4cccdc9500e03abf926fbe24d.html">Dev</a></li><li class="navelem"><a class="el" href="_p_s2_8c.html">PS2.c</a></li>
-    <li class="footer">Generated on Fri May 15 2015 01:05:09 for EthKitTCP by
+    <li class="footer">Generated on Fri May 15 2015 02:06:07 for EthKitTCP by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

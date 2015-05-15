@@ -20,7 +20,6 @@ var cursor_8c =
     [ "placeChar", "cursor_8c.html#a8d48f16d45338842dc6cbb3256eb7dae", null ],
     [ "placeString", "cursor_8c.html#a02936826fc9c1380ef1e42ae18940c9a", null ],
     [ "press_backspace", "cursor_8c.html#afb368b3eb12755cae8787b96e467e0e3", null ],
-    [ "press_F1", "cursor_8c.html#a8b0ba534e7681966289c491064e9cdc8", null ],
     [ "printHelpScreen", "cursor_8c.html#aa68556b6a4e7315e031e8f18361d283e", null ],
     [ "printTestScreen", "cursor_8c.html#ab66a8865de62d9daefab9f8abf026478", null ],
     [ "processLine", "cursor_8c.html#aee82caceba560f01202c4459ba4497c7", null ],

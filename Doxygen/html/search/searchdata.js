@@ -4,7 +4,7 @@ var indexSectionsWithContent =
   1: "cptv",
   2: "_abcdgikmprstw",
   3: "bcfiklnpstv",
-  4: "lptv"
+  4: "dlptv"
 };
 
 var indexSectionNames =

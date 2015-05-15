@@ -1,5 +1,6 @@
 var cursor_8h =
 [
+    [ "DefaultIpTargetCommandLength", "cursor_8h.html#ad06bcb74c84988cb42c4afb1b62e7b55", null ],
     [ "TEXTLINELENGTH", "cursor_8h.html#a01882b20b26727e0c233e94a4c863459", null ],
     [ "CompareTextLines", "cursor_8h.html#a8f55cca82244df1cf78f0a826f816f75", null ],
     [ "decreaseLineLocationEnd", "cursor_8h.html#aa510ca0bb56c03148f3392c28433dc45", null ],

@@ -3,6 +3,7 @@ var _p_s2_8h =
     [ "ps2BufferSize", "_p_s2_8h.html#a4b8578b52cb39af2122c5047a8520757", null ],
     [ "BlinkCursor", "_p_s2_8h.html#acea8175bc07b5d0ba9f3f78d0c00c4a7", null ],
     [ "ClearScreen", "_p_s2_8h.html#a5473c6cfd6c580642133754e141ca556", null ],
+    [ "interpret_keypress", "_p_s2_8h.html#a467458fc0085539f52030fabf3dd9286", null ],
     [ "invertShiftPressed", "_p_s2_8h.html#a6d4d2e35c21e102669b9fdf8a3858e99", null ],
     [ "keyboard_lookup", "_p_s2_8h.html#ae311e9417c9347d550643de4daea45e5", null ],
     [ "keyboard_setup", "_p_s2_8h.html#a1c9949e161f05ecf2ba74181c4fdd1af", null ],
