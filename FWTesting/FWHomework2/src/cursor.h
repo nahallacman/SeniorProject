@@ -65,8 +65,8 @@ static const uint8_t commandhelp[] = "help";
 
 #define DefaultIpTargetCommandLength 26
 #ifdef __Microcontroller
-//char IPTarget[16] = "192.168.11.56";
-char IPTarget[16];
+char IPTarget[16] = "192.168.11.56";
+//char IPTarget[16];
 static char defaultIPTargetCommand[DefaultIpTargetCommandLength] = "iptargetset 192.168.11.56";
 #else
 char IPTarget[16];
