@@ -51,8 +51,8 @@ while 1:
     print ("received data:", data)
 
     string = data.decode("utf-8")
-    if string == "$dir":
-        status = sub.check_output("dir", shell=True)
+    if string[0:4] == "$dir":
+        status = sub.check_output("dir "+string[5:100], shell=True)
         bytetotal = len(status)
         index = 0
         linepart = status[0:1024]

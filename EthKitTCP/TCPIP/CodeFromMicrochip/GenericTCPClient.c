@@ -281,7 +281,8 @@ void NewTCPClient(char * textToSend, BYTE * ServerName)
     BYTE flag;
 	BYTE 				i;
 	WORD				w;
-	BYTE				vBuffer[7499];
+        BYTE				vBuffer[1024]; //guessing this value
+	//BYTE				vBuffer[512]; //this value may be causing hangups in the system
         //BYTE				vBuffer[21];
 	static DWORD		Timer;
 	static TCP_SOCKET	MySocket = INVALID_SOCKET;
