@@ -21,5 +21,5 @@ while 1:
     data = conn.recv(BUFFER_SIZE)
     print ("received data:", data)
 
-    conn.send(data)  # echo
+    conn.send(data.upper())  # echo
     conn.close()

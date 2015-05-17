@@ -278,9 +278,10 @@ void GenericTCPClient(void)
 
 void NewTCPClient(char * textToSend, BYTE * ServerName)
 {
+    BYTE flag;
 	BYTE 				i;
 	WORD				w;
-	BYTE				vBuffer[9];
+	BYTE				vBuffer[1024];
 	static DWORD		Timer;
 	static TCP_SOCKET	MySocket = INVALID_SOCKET;
 	static enum _GenericTCPExampleState
@@ -357,7 +358,9 @@ void NewTCPClient(char * textToSend, BYTE * ServerName)
 
 			//cals edits
 			//TCPPutROMString(MySocket, (ROM BTYE*)"TEST ");
-			TCPPutROMString(MySocket, (ROM BYTE*)"TEST MESSAGE ");
+			//TCPPutROMString(MySocket, (ROM BYTE*)"TEST MESSAGE ");
+                        TCPPutROMString(MySocket, (ROM BYTE*)"$");
+
                         TCPPutROMString(MySocket, (ROM BYTE*)textToSend);
                         //TCPPutROMString(MySocket, (ROM BYTE*)textLine);
                         /*
@@ -408,7 +411,19 @@ void NewTCPClient(char * textToSend, BYTE * ServerName)
 				// use up all the data before changing states.
 				if(GenericTCPExampleState == SM_PROCESS_RESPONSE)
 					break;
+                                
+                                //done collecting some string data, so print it
+                                flag = 1;
 			}
+
+                        //Not positive this will work, but it will print any
+                        //returned messages once they are done. Might not be in
+                        //the right place, needs testing.
+                        if(flag == 1)
+                        {
+                            placeString(vBuffer);
+                            flag = 0;
+                        }
 
 			break;
 
