@@ -79,7 +79,15 @@ char IPTarget[16];
 
 //buffer for line
 uint8_t textLine[TEXTLINELENGTH];
-uint8_t newtextLine[TEXTLINELENGTH];
+//uint8_t newtextLine[TEXTLINELENGTH];
+
+//text line that will be added to using addtoprintstring(char *)
+uint8_t PrintTextLine[TEXTLINELENGTH];
+//index for addtoprintstring(char *)
+int PrintTextIndex;
+
+void AddToPrintString(char *);
+void printStoredString(void);
 
 void press_backspace(void);
 

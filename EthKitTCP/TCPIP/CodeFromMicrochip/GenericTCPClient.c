@@ -421,7 +421,7 @@ void NewTCPClient(char * textToSend, BYTE * ServerName)
                         //the right place, needs testing.
                         if(flag == 1)
                         {
-                            placeString(vBuffer);
+                            AddToPrintString(vBuffer);
                             flag = 0;
                         }
 

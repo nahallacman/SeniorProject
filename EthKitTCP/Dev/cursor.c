@@ -170,6 +170,8 @@ void interpret_keypress(char temp)
         setLineLocationStart(getCursorLocation());
         //clear the textLine so we can start over with the commands
         clearTextLine();
+        //not sure if this goes here, but going to try
+        printStoredString();
     }
     else if(temp2 == 0x02) // esc key was pressed
     {
@@ -258,10 +260,10 @@ void processLine(uint8_t * textLinePtr)
                 }
         }
         //check if the last character is a space
-        if(' ' != textLinePtr[2])
-        {
-            valid_command = 0;
-        }
+        //if(' ' != textLinePtr[2])
+        //{
+        //    valid_command = 0;
+        //}
     }
     if(valid_command == 0)
     {
@@ -617,4 +619,34 @@ void printTestScreen(void)
                     placeChar(a);
 		}
 	}
+}
+
+//text line that will be added to using addtoprintstring(char *)
+uint8_t PrintTextLine[TEXTLINELENGTH];
+//index for addtoprintstring(char *)
+int PrintTextIndex;
+
+//add the string to a line using the PrintTextIndex
+void AddToPrintString(char * TextString)
+{
+    int iter;
+    for(iter = 0; TextString[iter] != 0; iter++)
+    {
+        PrintTextLine[PrintTextIndex+iter] = TextString[iter];
+    }
+    PrintTextIndex += iter;
+}
+void printStoredString(void)
+{
+    if(PrintTextLine[PrintTextIndex] != '\n')
+    {
+        PrintTextLine[PrintTextIndex] = '\n';
+    }
+    if(PrintTextLine[PrintTextIndex + 1] != '\0')
+    {
+        PrintTextLine[PrintTextIndex + 1] = '\0';
+    }
+
+    placeString(PrintTextLine);
+    PrintTextIndex = 0;
 }
