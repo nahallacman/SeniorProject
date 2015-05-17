@@ -5,6 +5,8 @@ import os
 import sys
 import subprocess as sub
 
+#config option placeholder, will figure out a better secure method later
+MODE = "SECURE"
 
 #TCP_IP = '127.0.0.1'
 #TCP_IP = '192.168.0.100'
@@ -51,8 +53,10 @@ while 1:
     print ("received data:", data)
 
     string = data.decode("utf-8")
-    if string[0:4] == "$dir":
-        status = sub.check_output("dir "+string[5:100], shell=True)
+    
+    if MODE == "UNSECURE":
+        
+        status = sub.check_output(string, shell=True) # HIGHLY DANGEROUS. DONT USE UNSECURE MODE UNLESS YOU ARE ON AN ISOLATED NETWORK AND ARE CONIFDENT YOU KNOW WHAT YOU ARE DOING.
         bytetotal = len(status)
         index = 0
         linepart = status[0:1024]
@@ -62,6 +66,25 @@ while 1:
             bytetotal = bytetotal - bytessent
             index = index + bytessent
             linepart = status[index:index+1024]
+
+    elif MODE == "SECURE":
+        if string[0:4] == "$dir":
+            args = string[4:]
+            status = sub.check_output("dir "+args, shell=True)
+            bytetotal = len(status)
+            index = 0
+            linepart = status[0:1024]
+
+            while bytetotal > 0:
+                bytessent = conn.send(linepart)  # echo
+                bytetotal = bytetotal - bytessent
+                index = index + bytessent
+                linepart = status[index:index+1024]
+    else:
+        error = 1
+    
+    
+   
 
 
     #else:
