@@ -281,7 +281,8 @@ void NewTCPClient(char * textToSend, BYTE * ServerName)
     BYTE flag;
 	BYTE 				i;
 	WORD				w;
-	BYTE				vBuffer[1024];
+	BYTE				vBuffer[7499];
+        //BYTE				vBuffer[21];
 	static DWORD		Timer;
 	static TCP_SOCKET	MySocket = INVALID_SOCKET;
 	static enum _GenericTCPExampleState
@@ -400,6 +401,7 @@ void NewTCPClient(char * textToSend, BYTE * ServerName)
 					vBuffer[i] = '\0';
 				}
 				w -= TCPGetArray(MySocket, vBuffer, i);
+                                AddToPrintString(vBuffer);
 				#if defined(STACK_USE_UART)
 				putsUART((char*)vBuffer);
 				#endif
@@ -413,17 +415,17 @@ void NewTCPClient(char * textToSend, BYTE * ServerName)
 					break;
                                 
                                 //done collecting some string data, so print it
-                                flag = 1;
+                                //flag = 1;
 			}
 
                         //Not positive this will work, but it will print any
                         //returned messages once they are done. Might not be in
                         //the right place, needs testing.
-                        if(flag == 1)
-                        {
-                            AddToPrintString(vBuffer);
-                            flag = 0;
-                        }
+                        //if(flag == 1)
+                        //{
+                            
+                        //    flag = 0;
+                        //}
 
 			break;
 

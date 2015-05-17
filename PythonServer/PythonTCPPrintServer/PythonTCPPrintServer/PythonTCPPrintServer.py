@@ -11,11 +11,10 @@ import subprocess as sub
 TCP_IP = '192.168.11.4'
 TCP_PORT = 5005
 BUFFER_SIZE = 1024 #20  # Normally 1024, but we want fast response
-
 string = ""
-string2 = ""
-line = ""
-string3 = ""
+#string2 = ""
+#line = ""
+#string3 = ""
 
 
 #from subprocess import call
@@ -38,6 +37,7 @@ string3 = ""
 #outputstring = process.communicate()[0]
 
 
+
 while 1:
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.bind((TCP_IP, TCP_PORT))
@@ -53,7 +53,17 @@ while 1:
     string = data.decode("utf-8")
     if string == "$dir":
         status = sub.check_output("dir", shell=True)
-        conn.send(status)  # echo
+        bytetotal = len(status)
+        index = 0
+        linepart = status[0:1024]
+
+        while bytetotal > 0:
+            bytessent = conn.send(linepart)  # echo
+            bytetotal = bytetotal - bytessent
+            index = index + bytessent
+            linepart = status[index:index+1024]
+
+
     #else:
         #status = data.upper()
         
