@@ -129,7 +129,10 @@ extern void increaseLineLocationEndOneLine(void)
 extern void decreaseLineLocationEnd(void)
 {
     //needs bounds checking
-    LineLocationEnd--;
+    if(LineLocationEnd > 0)
+    {
+        LineLocationEnd--;
+    }
 }
 
 extern void resetLineLocationEnd(void)
@@ -166,12 +169,14 @@ void interpret_keypress(char temp)
     {                       
         //here the code should try to interpret the received command
         processLine(textLine);
-        //now move the beginning of the line to the current cursor.
-        setLineLocationStart(getCursorLocation());
+
         //clear the textLine so we can start over with the commands
         clearTextLine();
         //not sure if this goes here, but going to try
         printStoredString();
+
+        //now move the beginning of the line to the current cursor.
+        setLineLocationStart(getCursorLocation());
     }
     else if(temp2 == 0x02) // esc key was pressed
     {
@@ -457,6 +462,7 @@ extern void placeString(char * string)
 //extern void placeChar(uint8_t * character)
 extern void placeChar(uint8_t character)
 {
+    //only for testing
     int breakpointint = 0;
 
 
@@ -488,11 +494,13 @@ extern void placeChar(uint8_t character)
         part2 = ((getCursorLocation() / 100 ) * 100);
         cursor_x = part1 - part2;
         cursor_y = getCursorLocation() / 100;
+
+        //purely for testing
         if(cursor_x > 97)
         {
             breakpointint = 1;
         }
-        if(cursor_y > 0)
+        if(cursor_y > 2)
         {
             breakpointint = 0;
         }

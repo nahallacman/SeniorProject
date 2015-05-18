@@ -56,7 +56,7 @@ while 1:
     
     if MODE == "UNSECURE":
         
-        status = sub.check_output(string, shell=True) # HIGHLY DANGEROUS. DONT USE UNSECURE MODE UNLESS YOU ARE ON AN ISOLATED NETWORK AND ARE CONIFDENT YOU KNOW WHAT YOU ARE DOING.
+        status = sub.check_output(string[1:], shell=True) # HIGHLY DANGEROUS. DONT USE UNSECURE MODE UNLESS YOU ARE ON AN ISOLATED NETWORK AND ARE CONIFDENT YOU KNOW WHAT YOU ARE DOING.
         bytetotal = len(status)
         index = 0
         linepart = status[0:1024]
