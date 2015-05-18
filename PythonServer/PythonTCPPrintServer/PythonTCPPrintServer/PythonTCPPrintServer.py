@@ -30,6 +30,7 @@ json_string = '{"dir": "dir ..", "cd":"cd"}'
 parsed_json = json.loads(json_string)
 print(parsed_json['dir'])
 
+#messing with some JSON ideas
 #{"commands":[
 #    {"name":"dir", "args":[{".",".."}]},
 #    {"name":"cd", "args":[{".",".."}]},
