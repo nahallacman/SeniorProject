@@ -376,7 +376,7 @@ void press_backspace(void)
         //decrease the end of the line index
         decreaseLineLocationEnd();
         //clear the line
-        clearchar(getCursorLocation() - 1, lineEnd); // maybe i-1?
+        clearchar(getCursorLocation(), lineEnd); // maybe i-1?
 
         //reprint the string from the curor location
         printStart = textLine; // does this need a dereference?

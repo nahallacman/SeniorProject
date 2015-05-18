@@ -129,7 +129,10 @@ extern void increaseLineLocationEndOneLine(void)
 extern void decreaseLineLocationEnd(void)
 {
     //needs bounds checking
-    LineLocationEnd--;
+    if(LineLocationEnd > 0)
+    {
+        LineLocationEnd--;
+    }
 }
 
 extern void resetLineLocationEnd(void)
@@ -166,10 +169,14 @@ void interpret_keypress(char temp)
     {                       
         //here the code should try to interpret the received command
         processLine(textLine);
-        //now move the beginning of the line to the current cursor.
-        setLineLocationStart(getCursorLocation());
+
         //clear the textLine so we can start over with the commands
         clearTextLine();
+        //not sure if this goes here, but going to try
+        printStoredString();
+
+        //now move the beginning of the line to the current cursor.
+        setLineLocationStart(getCursorLocation());
     }
     else if(temp2 == 0x02) // esc key was pressed
     {
@@ -258,10 +265,10 @@ void processLine(uint8_t * textLinePtr)
                 }
         }
         //check if the last character is a space
-        if(' ' != textLinePtr[2])
-        {
-            valid_command = 0;
-        }
+        //if(' ' != textLinePtr[2])
+        //{
+        //    valid_command = 0;
+        //}
     }
     if(valid_command == 0)
     {
@@ -369,7 +376,7 @@ void press_backspace(void)
         //decrease the end of the line index
         decreaseLineLocationEnd();
         //clear the line
-        clearchar(getCursorLocation() - 1, lineEnd); // maybe i-1?
+        clearchar(getCursorLocation(), lineEnd); // maybe i-1?
 
         //reprint the string from the curor location
         printStart = textLine; // does this need a dereference?
@@ -455,6 +462,7 @@ extern void placeString(char * string)
 //extern void placeChar(uint8_t * character)
 extern void placeChar(uint8_t character)
 {
+    //only for testing
     int breakpointint = 0;
 
 
@@ -486,11 +494,13 @@ extern void placeChar(uint8_t character)
         part2 = ((getCursorLocation() / 100 ) * 100);
         cursor_x = part1 - part2;
         cursor_y = getCursorLocation() / 100;
+
+        //purely for testing
         if(cursor_x > 97)
         {
             breakpointint = 1;
         }
-        if(cursor_y > 0)
+        if(cursor_y > 2)
         {
             breakpointint = 0;
         }
@@ -617,4 +627,34 @@ void printTestScreen(void)
                     placeChar(a);
 		}
 	}
+}
+
+//text line that will be added to using addtoprintstring(char *)
+uint8_t PrintTextLine[TEXTLINELENGTH];
+//index for addtoprintstring(char *)
+int PrintTextIndex;
+
+//add the string to a line using the PrintTextIndex
+void AddToPrintString(char * TextString)
+{
+    int iter;
+    for(iter = 0; TextString[iter] != 0; iter++)
+    {
+        PrintTextLine[PrintTextIndex+iter] = TextString[iter];
+    }
+    PrintTextIndex += iter;
+}
+void printStoredString(void)
+{
+    if(PrintTextLine[PrintTextIndex] != '\n')
+    {
+        PrintTextLine[PrintTextIndex] = '\n';
+    }
+    if(PrintTextLine[PrintTextIndex + 1] != '\0')
+    {
+        PrintTextLine[PrintTextIndex + 1] = '\0';
+    }
+
+    placeString(PrintTextLine);
+    PrintTextIndex = 0;
 }

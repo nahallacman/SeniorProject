@@ -65,7 +65,7 @@ static const uint8_t commandhelp[] = "help";
 
 #define DefaultIpTargetCommandLength 26
 #ifdef __Microcontroller
-char IPTarget[16] = "192.168.11.56";
+char IPTarget[16] = "192.168.11.4";
 //char IPTarget[16];
 static char defaultIPTargetCommand[DefaultIpTargetCommandLength] = "iptargetset 192.168.11.56";
 #else
@@ -79,7 +79,15 @@ char IPTarget[16];
 
 //buffer for line
 uint8_t textLine[TEXTLINELENGTH];
-uint8_t newtextLine[TEXTLINELENGTH];
+//uint8_t newtextLine[TEXTLINELENGTH];
+
+//text line that will be added to using addtoprintstring(char *)
+uint8_t PrintTextLine[TEXTLINELENGTH];
+//index for addtoprintstring(char *)
+int PrintTextIndex;
+
+void AddToPrintString(char *);
+void printStoredString(void);
 
 void press_backspace(void);
 

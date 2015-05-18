@@ -25,6 +25,16 @@ string = ""
 #status = call("dir" + " ", shell=True)
 
 #status = sub.call("dir", shell=True)
+import json
+json_string = '{"dir": "dir ..", "cd":"cd"}'
+parsed_json = json.loads(json_string)
+print(parsed_json['dir'])
+
+#{"commands":[
+#    {"name":"dir", "args":[{".",".."}]},
+#    {"name":"cd", "args":[{".",".."}]},
+#    {"name":"ls", "args":".."}
+#]}
 
 
 
@@ -70,7 +80,7 @@ while 1:
     elif MODE == "SECURE":
         if string[0:4] == "$dir":
             args = string[4:]
-            status = sub.check_output("dir "+args, shell=True)
+            status = sub.check_output(parsed_json[string[1:4]], shell=True)
             bytetotal = len(status)
             index = 0
             linepart = status[0:1024]

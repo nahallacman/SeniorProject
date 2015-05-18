@@ -441,7 +441,7 @@ void testBackspace(void)
 	removeFromPS2Buffer();
 	
 	//this could be changed to an assertion later on
-	printf("text line after processing keys", textLine);
+	printf("text line after processing keys %s", textLine);
 	printf("should read: abcdefghijklmnopqrstuvwx");
 	
 	MakeBitmap((int *)VGA_VideoMemory, "backspace_success_s2.bmp");
@@ -458,8 +458,8 @@ void testBackspace(void)
 	removeFromPS2Buffer();
 	
 	//this could be changed to an assertion later on
-	printf("text line after processing keys", textLine);
-	printf("should read: abcdefghijklmnopqrstuvw");
+	printf("text line after processing keys %s\n", textLine);
+	printf("should read: abcdefghijklmnopqrstuvw\n");
 	
 	MakeBitmap((int *)VGA_VideoMemory, "backspace_success_s3.bmp");
 	
