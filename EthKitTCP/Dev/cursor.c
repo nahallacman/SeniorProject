@@ -4,7 +4,8 @@
 
 void cursor_init(void)
 {
-    DonePrintingFlag = 1;
+    //ResponseBeginFlag = 0;
+    DonePrintingFlag = 1; // this may not work without preemptions
     setCursorLocation(0);
     resetLineLocationEnd();
     setLineLocationStart(0);
@@ -182,11 +183,17 @@ void interpret_keypress(char temp)
         if(processLine(textLine) == 0)
         {
             setCommand(textLine);
+
         }
 
 
         //clear the textLine so we can start over with the commands
         clearTextLine();
+
+        //wait for the command to be sent then recieved.
+        //while(ResponseBeginFlag == 0);
+        
+
         //not sure if this goes here, but going to try
         printStoredString();
 

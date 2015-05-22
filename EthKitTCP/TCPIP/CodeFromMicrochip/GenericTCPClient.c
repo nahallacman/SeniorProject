@@ -384,6 +384,7 @@ void NewTCPClient(char * textToSend, BYTE * ServerName)
 			break;
 
 		case SM_PROCESS_RESPONSE:
+                    
 			// Check to see if the remote node has disconnected from us or sent us any application data
 			// If application data is available, write it to the UART
 			if(!TCPIsConnected(MySocket))
@@ -420,14 +421,15 @@ void NewTCPClient(char * textToSend, BYTE * ServerName)
 					break;
                                 
                                 //done collecting some string data, so print it
-                                //will set a flag for the printcommand to read
+                                
                                 if(w == 0)
                                 {
-                                    //flag = 1;
+                                    //will set a flag for the printcommand to read
                                     DonePrintingFlag = 1;
                                 }
                                 else
                                 {
+                                    //will unset a flag for the printcommand to block on
                                     DonePrintingFlag = 0;
                                 }
 			}

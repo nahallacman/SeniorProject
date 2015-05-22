@@ -412,7 +412,6 @@ int main(void)
 
         //NewTCPClient(gettextLine(), getIPTarget());
         NewTCPClient(getCommand(), getIPTarget());
-
         #endif
        //end cals edits
         

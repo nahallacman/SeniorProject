@@ -111,6 +111,7 @@ void printTestScreen(void);
 
 void cursor_init(void);
 
+int ResponseBeginFlag;
 int DonePrintingFlag;
 
 uint8_t CommandLine[200];
