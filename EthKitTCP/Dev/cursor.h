@@ -55,7 +55,7 @@ void resetPlaceCharLocation(void);
 //extern void setTextLineIndex(int newtextlineindex);
 //extern int getTextLineIndex(void);
 
-void processLine(uint8_t * textLinePtr);
+int processLine(uint8_t * textLinePtr);
 
 static const uint8_t commandIPTargetSet[] = "iptargetset";
 static const uint8_t commandLS[] = "ls";
@@ -65,8 +65,8 @@ static const uint8_t commandhelp[] = "help";
 
 #define DefaultIpTargetCommandLength 26
 #ifdef __Microcontroller
-char IPTarget[16] = "192.168.11.4";
-//char IPTarget[16];
+//char IPTarget[16] = "192.168.11.4";
+char IPTarget[16];
 static char defaultIPTargetCommand[DefaultIpTargetCommandLength] = "iptargetset 192.168.11.56";
 #else
 char IPTarget[16];
@@ -108,6 +108,15 @@ void printHelpScreen(void);
 
 //more test code, that way the tests can be run on the hardware and the test environment to make sure things are working correctly.
 void printTestScreen(void);
+
+void cursor_init(void);
+
+int DonePrintingFlag;
+
+uint8_t CommandLine[200];
+void setCommand(uint8_t * TextString);
+uint8_t * getCommand(void);
+
 
 #ifdef	__cplusplus
 }

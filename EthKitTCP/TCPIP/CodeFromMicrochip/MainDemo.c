@@ -200,6 +200,7 @@ int main(void)
         resetPlaceCharLocation();
         ClearScreen();
         clearTextLine();
+        cursor_init();
 
 #ifdef __Microcontroller
         
@@ -408,7 +409,10 @@ int main(void)
         //ptr = gettextLine();
          //GenericTCPClient(ptr);
         //GenericTCPClient();
-        NewTCPClient(gettextLine(), getIPTarget());
+
+        //NewTCPClient(gettextLine(), getIPTarget());
+        NewTCPClient(getCommand(), getIPTarget());
+
         #endif
        //end cals edits
         

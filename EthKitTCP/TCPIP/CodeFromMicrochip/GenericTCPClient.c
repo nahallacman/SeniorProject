@@ -52,6 +52,8 @@
  *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * Howard Schlunder     8/01/06	Original
  ********************************************************************/
+
+
 #define __GENERICTCPCLIENT_C
 
 #include "TCPIPConfig.h"
@@ -59,6 +61,8 @@
 #if defined(STACK_USE_GENERIC_TCP_CLIENT_EXAMPLE)
 
 #include "TCPIP Stack/TCPIP.h"
+
+#include "../../Dev/cursor.h"
 
 //cals edit
 //#include "../../Dev/PS2.h"
@@ -278,7 +282,7 @@ void GenericTCPClient(void)
 
 void NewTCPClient(char * textToSend, BYTE * ServerName)
 {
-    BYTE flag;
+    //BYTE flag;
 	BYTE 				i;
 	WORD				w;
         BYTE				vBuffer[1024]; //guessing this value
@@ -416,7 +420,16 @@ void NewTCPClient(char * textToSend, BYTE * ServerName)
 					break;
                                 
                                 //done collecting some string data, so print it
-                                //flag = 1;
+                                //will set a flag for the printcommand to read
+                                if(w == 0)
+                                {
+                                    //flag = 1;
+                                    DonePrintingFlag = 1;
+                                }
+                                else
+                                {
+                                    DonePrintingFlag = 0;
+                                }
 			}
 
                         //Not positive this will work, but it will print any
