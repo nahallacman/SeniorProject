@@ -2,6 +2,10 @@ build/XC32-PIC32_ETH_SK_ETH795/production/_ext/1472/MainDemo.o:  \
  ../MainDemo.c  \
 ../../../Dev/TestCommon.h  \
 ../../../Dev/PS2Common.h  \
+ ../../../Dev/cursor.h  \
+../../../Dev/TestCommon.h  \
+ ../../../Dev/GenericTCPClient.h  \
+../../../Dev/../Dev/cursor.h  \
  ../../../Microchip/Include/TCPIP\ Stack/TCPIP.h  \
  ../../../Microchip/Include/Compiler.h  \
 ../HardwareProfile.h  \

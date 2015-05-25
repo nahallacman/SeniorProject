@@ -36,5 +36,6 @@ build/XC32-PIC32_ETH_SK_ETH795/production/_ext/1472/GenericTCPClient.o:  \
  ../../../Microchip/Include/TCPIP\ Stack/Reboot.h  \
  ../../../Microchip/Include/TCPIP\ Stack/SNTP.h  \
  ../../../Microchip/Include/TCPIP\ Stack/TCPPerformanceTest.h  \
- ../../../Dev/cursor.h  \
-../../../Dev/TestCommon.h 
+ ../../../Dev/GenericTCPClient.h  \
+../../../Dev/../Dev/cursor.h  \
+ ../../../Dev/../Dev/TestCommon.h 

@@ -62,7 +62,7 @@
 
 #include "TCPIP Stack/TCPIP.h"
 
-#include "../../Dev/cursor.h"
+#include "../../Dev/GenericTCPClient.h"
 
 //cals edit
 //#include "../../Dev/PS2.h"
@@ -412,26 +412,30 @@ void NewTCPClient(char * textToSend, BYTE * ServerName)
 				putsUART((char*)vBuffer);
 				#endif
 
+                                if(w == 0)
+                                {
+                                    //will set a flag for the printcommand to read
+                                    DoneReceivingFlag = 1;
+                                }
+                                else
+                                {
+                                    //will unset a flag for the printcommand to block on
+                                    //DoneReceivingFlag = 0;
+                                }
+
 				// putsUART is a blocking call which will slow down the rest of the stack
 				// if we shovel the whole TCP RX FIFO into the serial port all at once.
 				// Therefore, let's break out after only one chunk most of the time.  The
 				// only exception is when the remote node disconncets from us and we need to
 				// use up all the data before changing states.
+                                
+                                //not sure if I should remove this, testing.
 				if(GenericTCPExampleState == SM_PROCESS_RESPONSE)
 					break;
                                 
                                 //done collecting some string data, so print it
                                 
-                                if(w == 0)
-                                {
-                                    //will set a flag for the printcommand to read
-                                    DonePrintingFlag = 1;
-                                }
-                                else
-                                {
-                                    //will unset a flag for the printcommand to block on
-                                    DonePrintingFlag = 0;
-                                }
+
 			}
 
                         //Not positive this will work, but it will print any
@@ -451,6 +455,9 @@ void NewTCPClient(char * textToSend, BYTE * ServerName)
 			TCPDisconnect(MySocket);
 			MySocket = INVALID_SOCKET;
 			GenericTCPExampleState = SM_DONE;
+
+                        TCPCycleDoneFlag = 1;
+
 			break;
 
 		case SM_DONE:

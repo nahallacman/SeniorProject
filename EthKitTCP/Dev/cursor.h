@@ -112,12 +112,17 @@ void printTestScreen(void);
 void cursor_init(void);
 
 int ResponseBeginFlag;
-int DonePrintingFlag;
+int DoneReceivingFlag;
 
 uint8_t CommandLine[200];
 void setCommand(uint8_t * TextString);
 uint8_t * getCommand(void);
+//Flag for command state machine
+uint8_t NewCommandFlag;
 
+uint8_t LastCommandLine[200];
+void setLastCommand(uint8_t * TextString);
+uint8_t * getLastCommand(void);
 
 #ifdef	__cplusplus
 }

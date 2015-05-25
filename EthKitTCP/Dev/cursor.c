@@ -4,8 +4,9 @@
 
 void cursor_init(void)
 {
-    //ResponseBeginFlag = 0;
-    DonePrintingFlag = 1; // this may not work without preemptions
+    //ResponseCompleteFlag = 0;
+    NewCommandFlag = 0;
+    DoneReceivingFlag = 0; 
     setCursorLocation(0);
     resetLineLocationEnd();
     setLineLocationStart(0);
@@ -182,8 +183,11 @@ void interpret_keypress(char temp)
         //if the processed line isn't recognized, set it to the command to send
         if(processLine(textLine) == 0)
         {
-            setCommand(textLine);
-
+            if(textLine[0] != '\0')
+            {
+                setCommand(textLine);
+                ResponseBeginFlag = 1;
+            }
         }
 
 
@@ -192,13 +196,16 @@ void interpret_keypress(char temp)
 
         //wait for the command to be sent then recieved.
         //while(ResponseBeginFlag == 0);
+
+        //set the flag for beginning a send command, wait for response, print response cycle
+
         
 
         //not sure if this goes here, but going to try
-        printStoredString();
+        //printStoredString();
 
         //now move the beginning of the line to the current cursor.
-        setLineLocationStart(getCursorLocation());
+        //setLineLocationStart(getCursorLocation());
     }
     else if(temp2 == 0x02) // esc key was pressed
     {
@@ -670,9 +677,7 @@ void AddToPrintString(char * TextString)
 }
 void printStoredString(void)
 {
-    //wait until return buffer is full
-    //blocking and inefficient, but good enough for now.
-    while(DonePrintingFlag == 0);
+    
 
     //make sure the string ends in a newline and a null
     if(PrintTextLine[PrintTextIndex] != '\n')
@@ -702,4 +707,18 @@ void setCommand(uint8_t * TextString)
 uint8_t * getCommand(void)
 {
     return CommandLine;
+}
+
+void setLastCommand(uint8_t * TextString)
+{
+    int iter;
+    for(iter = 0; TextString[iter] != 0; iter++)
+    {
+        LastCommandLine[iter] = TextString[iter];
+    }
+    LastCommandLine[iter] = '\0';
+}
+uint8_t * getLastCommand(void)
+{
+    return LastCommandLine;
 }

@@ -10,7 +10,7 @@ MODE = "SECURE"
 
 #TCP_IP = '127.0.0.1'
 #TCP_IP = '192.168.0.100'
-TCP_IP = '192.168.11.4'
+TCP_IP = '192.168.11.5'
 TCP_PORT = 5005
 BUFFER_SIZE = 1024 #20  # Normally 1024, but we want fast response
 string = ""

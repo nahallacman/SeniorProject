@@ -64,6 +64,10 @@
 #include "../../Dev/TestCommon.h"
 
 #include "../../Dev/PS2Common.h"
+
+#include "../../Dev/cursor.h"
+
+#include "../../Dev/GenericTCPClient.h"
 #include <plib.h>
 
 void NewTCPClient(char * textToSend, BYTE * ServerName);
@@ -195,6 +199,9 @@ int main(void)
 #endif
 {
     //added by cal
+
+    int CommandSendState = 0;
+    int SendAndRecieveState = 0;
     
         keyboard_setup();
         resetPlaceCharLocation();
@@ -362,6 +369,39 @@ int main(void)
 
         }
 
+        //need to make a state machine
+        //one state waiting for begin the sending
+        //one state for waiting for response
+        //one state for printing response (then go back to waiting)
+        switch(CommandSendState)
+        {
+            case 0:
+                if(ResponseBeginFlag == 1)
+                {
+                    ResponseBeginFlag = 0;
+                    CommandSendState = 2;
+                }
+                break;
+            //case 1://wait until return buffer is full
+            //    if(DoneReceivingFlag == 0)
+            //    {
+            //        CommandSendState = 2;
+            //    }
+            //    break;
+            case 2://wait until return buffer is full
+                if(DoneReceivingFlag == 1)
+                {
+                     printStoredString();
+                    //now move the beginning of the line to the current cursor.
+                    setLineLocationStart(getCursorLocation());
+                    CommandSendState = 2;
+                    DoneReceivingFlag = 0;
+                }
+                break;
+            default:
+                CommandSendState = 0;
+        }
+
         
         // Blink LED0 (right most one) every second.
         if(TickGet() - t >= TICK_SECOND/2ul)
@@ -411,7 +451,40 @@ int main(void)
         //GenericTCPClient();
 
         //NewTCPClient(gettextLine(), getIPTarget());
-        NewTCPClient(getCommand(), getIPTarget());
+        //needs some functionality to detect if the target or command has changed.
+        //If they have, start the TCP command process. Use a flag that gets cleared
+        //when the TCP process finishes that will bring this outer state machine to
+        //a halt.
+        switch(SendAndRecieveState)
+        {
+            case 0:
+                //if(strcmp(getCommand(), getLastCommand()))
+                if(NewCommandFlag == 1)
+                {
+                //if getCommand() == getLastCommand() // need a strcmp function
+                //do nothing
+                    SendAndRecieveState = 0;
+                }
+                else
+                {
+                    //setLastCommand(getCommand());
+                    //SendAndRecieveState = 1;
+                }
+                break;
+            case 1:
+                NewTCPClient(getCommand(), getIPTarget());
+                if(TCPCycleDoneFlag == 1)
+                {
+                    NewCommandFlag = 0;
+                    TCPCycleDoneFlag = 0;
+                    SendAndRecieveState = 0;
+                }
+                break;
+            default:
+                SendAndRecieveState = 0;
+        }
+
+        
         #endif
        //end cals edits
         
