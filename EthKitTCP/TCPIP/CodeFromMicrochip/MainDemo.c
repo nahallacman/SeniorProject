@@ -394,7 +394,7 @@ int main(void)
                      printStoredString();
                     //now move the beginning of the line to the current cursor.
                     setLineLocationStart(getCursorLocation());
-                    CommandSendState = 2;
+                    CommandSendState = 0;
                     DoneReceivingFlag = 0;
                 }
                 break;
@@ -463,7 +463,7 @@ int main(void)
                 {
                 //if getCommand() == getLastCommand() // need a strcmp function
                 //do nothing
-                    SendAndRecieveState = 0;
+                    SendAndRecieveState = 1;
                 }
                 else
                 {

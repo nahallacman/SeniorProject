@@ -6,7 +6,7 @@ import sys
 import subprocess as sub
 
 #config option placeholder, will figure out a better secure method later
-MODE = "SECURE"
+MODE = "UNSECURE"
 
 #TCP_IP = '127.0.0.1'
 #TCP_IP = '192.168.0.100'

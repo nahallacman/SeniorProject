@@ -187,6 +187,7 @@ void interpret_keypress(char temp)
             {
                 setCommand(textLine);
                 ResponseBeginFlag = 1;
+                NewCommandFlag = 1;
             }
         }
 
@@ -205,7 +206,7 @@ void interpret_keypress(char temp)
         //printStoredString();
 
         //now move the beginning of the line to the current cursor.
-        //setLineLocationStart(getCursorLocation());
+        setLineLocationStart(getCursorLocation());
     }
     else if(temp2 == 0x02) // esc key was pressed
     {
@@ -553,6 +554,7 @@ uint8_t * gettextLine(void)
 
 //this function compares the two text lines and edits the old text line to equal the new text line
 //to make it work appropriately, edit the newtextLine and call this function.
+//this function no longer works appropriately, needs a lot of work
 void CompareTextLines(char * newtextLine)
 {
     int i = 0;
