@@ -60,28 +60,16 @@ while 1:
     conn, addr = s.accept()
     print ('Connection address:', addr)
 
-    data = conn.recv(BUFFER_SIZE)
-    print ("received data:", data)
+    while 1:
+        data = conn.recv(BUFFER_SIZE)
+        if not data: break
+        print ("received data:", data)
 
-    string = data.decode("utf-8")
+        string = data.decode("utf-8")
     
-    if MODE == "UNSECURE":
+        if MODE == "UNSECURE":
         
-        status = sub.check_output(string[1:], shell=True) # HIGHLY DANGEROUS. DONT USE UNSECURE MODE UNLESS YOU ARE ON AN ISOLATED NETWORK AND ARE CONIFDENT YOU KNOW WHAT YOU ARE DOING.
-        bytetotal = len(status)
-        index = 0
-        linepart = status[0:1024]
-
-        while bytetotal > 0:
-            bytessent = conn.send(linepart)  # echo
-            bytetotal = bytetotal - bytessent
-            index = index + bytessent
-            linepart = status[index:index+1024]
-
-    elif MODE == "SECURE":
-        if string[0:4] == "$dir":
-            args = string[4:]
-            status = sub.check_output(parsed_json[string[1:4]], shell=True)
+            status = sub.check_output(string[1:], shell=True) # HIGHLY DANGEROUS. DONT USE UNSECURE MODE UNLESS YOU ARE ON AN ISOLATED NETWORK AND ARE CONIFDENT YOU KNOW WHAT YOU ARE DOING.
             bytetotal = len(status)
             index = 0
             linepart = status[0:1024]
@@ -91,8 +79,23 @@ while 1:
                 bytetotal = bytetotal - bytessent
                 index = index + bytessent
                 linepart = status[index:index+1024]
-    else:
-        error = 1
+
+        elif MODE == "SECURE":
+            if string[0:4] == "$dir":
+                args = string[4:]
+                status = sub.check_output(parsed_json[string[1:4]], shell=True)
+                bytetotal = len(status)
+                index = 0
+                linepart = status[0:1024]
+
+                while bytetotal > 0:
+                    bytessent = conn.send(linepart)  # echo
+                    bytetotal = bytetotal - bytessent
+                    index = index + bytessent
+                    linepart = status[index:index+1024]
+        else:
+            error = 1
+            break
     
     
    
