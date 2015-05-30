@@ -19,6 +19,19 @@ extern "C" {
 int TCPCycleDoneFlag;
 
 
+
+	static enum _GenericTCPExampleState
+	{
+		SM_HOME = 0,
+		SM_SOCKET_OBTAINED,
+		#if defined(STACK_USE_SSL_CLIENT)
+    	SM_START_SSL,
+    	#endif
+		SM_PROCESS_RESPONSE,
+		SM_DISCONNECT,
+		SM_DONE
+	} GenericTCPExampleState = SM_DONE;
+
 #ifdef	__cplusplus
 }
 #endif

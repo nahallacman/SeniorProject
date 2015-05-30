@@ -389,6 +389,7 @@ int main(void)
             //    }
             //    break;
             case 2://wait until return buffer is full
+                NewTCPClient(getCommand(), getIPTarget());
                 if(DoneReceivingFlag == 1)
                 {
                      printStoredString();
@@ -396,6 +397,8 @@ int main(void)
                     setLineLocationStart(getCursorLocation());
                     CommandSendState = 0;
                     DoneReceivingFlag = 0;
+                    //call one more time to continue the state machine, this is a guess
+                    //NewTCPClient(getCommand(), getIPTarget());
                 }
                 break;
             default:
@@ -455,6 +458,8 @@ int main(void)
         //If they have, start the TCP command process. Use a flag that gets cleared
         //when the TCP process finishes that will bring this outer state machine to
         //a halt.
+
+/*
         switch(SendAndRecieveState)
         {
             case 0:
@@ -482,10 +487,11 @@ int main(void)
             default:
                 SendAndRecieveState = 0;
         }
-
+*/
         
         #endif
        //end cals edits
+
         
         #if defined(STACK_USE_GENERIC_TCP_SERVER_EXAMPLE)
         GenericTCPServer();

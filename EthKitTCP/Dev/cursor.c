@@ -663,9 +663,9 @@ void printTestScreen(void)
 }
 
 //text line that will be added to using addtoprintstring(char *)
-uint8_t PrintTextLine[TEXTLINELENGTH];
+//uint8_t PrintTextLine[TEXTLINELENGTH];
 //index for addtoprintstring(char *)
-int PrintTextIndex;
+//int PrintTextIndex;
 
 //add the string to a line using the PrintTextIndex
 void AddToPrintString(char * TextString)

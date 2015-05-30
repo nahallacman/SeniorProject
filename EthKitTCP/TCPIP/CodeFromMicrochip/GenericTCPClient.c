@@ -283,24 +283,14 @@ void GenericTCPClient(void)
 void NewTCPClient(char * textToSend, BYTE * ServerName)
 {
     //BYTE flag;
-	BYTE 				i;
-	WORD				w;
-        BYTE				vBuffer[1024]; //guessing this value
+	BYTE 				TCP_i;
+	WORD				TCP_w;
+        BYTE				TCP_vBuffer[1024]; //guessing this value
 	//BYTE				vBuffer[512]; //this value may be causing hangups in the system
         //BYTE				vBuffer[21];
-	static DWORD		Timer;
+	static DWORD		TCP_Timer;
 	static TCP_SOCKET	MySocket = INVALID_SOCKET;
-	static enum _GenericTCPExampleState
-	{
-		SM_HOME = 0,
-		SM_SOCKET_OBTAINED,
-		#if defined(STACK_USE_SSL_CLIENT)
-    	SM_START_SSL,
-    	#endif
-		SM_PROCESS_RESPONSE,
-		SM_DISCONNECT,
-		SM_DONE
-	} GenericTCPExampleState = SM_DONE;
+
 
 	switch(GenericTCPExampleState)
 	{
@@ -318,7 +308,7 @@ void NewTCPClient(char * textToSend, BYTE * ServerName)
 			#endif
 
 			GenericTCPExampleState++;
-			Timer = TickGet();
+			TCP_Timer = TickGet();
 			break;
 
 		case SM_SOCKET_OBTAINED:
@@ -326,7 +316,7 @@ void NewTCPClient(char * textToSend, BYTE * ServerName)
 			if(!TCPIsConnected(MySocket))
 			{
 				// Time out if too much time is spent in this state
-				if(TickGet()-Timer > 5*TICK_SECOND)
+				if(TickGet()-TCP_Timer > 5*TICK_SECOND)
 				{
 					// Close the socket so it can be used by other modules
 					TCPDisconnect(MySocket);
@@ -336,7 +326,7 @@ void NewTCPClient(char * textToSend, BYTE * ServerName)
 				break;
 			}
 
-			Timer = TickGet();
+			TCP_Timer = TickGet();
 
     #if defined (STACK_USE_SSL_CLIENT)
             if(!TCPStartSSLClient(MySocket,(void *)"thishost"))
@@ -394,28 +384,33 @@ void NewTCPClient(char * textToSend, BYTE * ServerName)
 			}
 
 			// Get count of RX bytes waiting
-			w = TCPIsGetReady(MySocket);
+			TCP_w = TCPIsGetReady(MySocket);
 
 			// Obtian and print the server reply
-			i = sizeof(vBuffer)-1;
-			vBuffer[i] = '\0';
-			while(w)
+			TCP_i = sizeof(TCP_vBuffer)-1;
+			TCP_vBuffer[TCP_i] = '\0';
+			while(TCP_w)
 			{
-				if(w < i)
+				if(TCP_w < TCP_i)
 				{
-					i = w;
-					vBuffer[i] = '\0';
+					TCP_i = TCP_w;
+					TCP_vBuffer[TCP_i] = '\0';
 				}
-				w -= TCPGetArray(MySocket, vBuffer, i);
-                                AddToPrintString(vBuffer);
+				TCP_w -= TCPGetArray(MySocket, TCP_vBuffer, TCP_i);
+                                AddToPrintString(TCP_vBuffer);
 				#if defined(STACK_USE_UART)
 				putsUART((char*)vBuffer);
 				#endif
 
-                                if(w == 0)
+                                if(TCP_w == 0)
                                 {
                                     //will set a flag for the printcommand to read
                                     DoneReceivingFlag = 1;
+
+                                    //maybe this will work to make the system loop and repeat?
+                                    GenericTCPExampleState = SM_SOCKET_OBTAINED;
+                                    //GenericTCPExampleState = SM_HOME;
+                                    //GenericTCPExampleState = SM_DISCONNECT;
                                 }
                                 else
                                 {
