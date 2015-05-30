@@ -12,13 +12,30 @@
 extern "C" {
 #endif
 
+    #include "../Dev/cursor.h"
 
-#include "../Dev/cursor.h"
+#include "TCPIPConfig.h"
+//#include "TCPIP Stack/TCPIP.h"
+
+    //for the flag
+#include <string.h>
+#include <stdlib.h>
+
+#include <plib.h>
+
+    #include "GenericTypeDefs.h"
+#include "Compiler.h"
+//#include "HardwareProfile.h"
+
+    //#include "TCPIP Stack/TCPIP.h"
 
 //flag for TCP send and recieve cycles
 int TCPCycleDoneFlag;
 
 
+////variables for the TCP client
+
+//	static TCP_SOCKET	TCP_MySocket;// = INVALID_SOCKET;
 
 	static enum _GenericTCPExampleState
 	{
@@ -32,6 +49,10 @@ int TCPCycleDoneFlag;
 		SM_DONE
 	} GenericTCPExampleState = SM_DONE;
 
+
+void NewTCPClient(char * textToSend, BYTE * ServerName);
+
+BOOL myTCPIsConnected(void);
 #ifdef	__cplusplus
 }
 #endif

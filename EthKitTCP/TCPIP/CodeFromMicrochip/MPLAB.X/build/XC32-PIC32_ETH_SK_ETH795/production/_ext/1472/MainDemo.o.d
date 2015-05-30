@@ -6,12 +6,13 @@ build/XC32-PIC32_ETH_SK_ETH795/production/_ext/1472/MainDemo.o:  \
 ../../../Dev/TestCommon.h  \
  ../../../Dev/GenericTCPClient.h  \
 ../../../Dev/../Dev/cursor.h  \
- ../../../Microchip/Include/TCPIP\ Stack/TCPIP.h  \
+ ../TCPIPConfig.h  \
+../Configs/TCPIP\ ETH795.h  \
+ ../../../Microchip/Include/GenericTypeDefs.h  \
  ../../../Microchip/Include/Compiler.h  \
+ ../../../Microchip/Include/TCPIP\ Stack/TCPIP.h  \
 ../HardwareProfile.h  \
  ../Configs/HWP\ PIC32_ETH_SK_ETH795.h  \
-../TCPIPConfig.h  \
- ../Configs/TCPIP\ ETH795.h  \
  ../../../Microchip/Include/TCPIP\ Stack/StackTsk.h  \
  ../../../Microchip/Include/TCPIP\ Stack/Helpers.h  \
  ../../../Microchip/Include/TCPIP\ Stack/Delay.h  \
