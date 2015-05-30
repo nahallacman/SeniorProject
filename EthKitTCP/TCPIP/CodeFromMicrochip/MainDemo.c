@@ -467,7 +467,6 @@ int main(void)
                 }
                 else
                 {
-                    //setLastCommand(getCommand());
                     //SendAndRecieveState = 1;
                 }
                 break;

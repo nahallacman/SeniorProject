@@ -120,10 +120,11 @@ uint8_t * getCommand(void);
 //Flag for command state machine
 uint8_t NewCommandFlag;
 
+/*
 uint8_t LastCommandLine[200];
 void setLastCommand(uint8_t * TextString);
 uint8_t * getLastCommand(void);
-
+*/
 #ifdef	__cplusplus
 }
 #endif

@@ -710,7 +710,7 @@ uint8_t * getCommand(void)
 {
     return CommandLine;
 }
-
+/*
 void setLastCommand(uint8_t * TextString)
 {
     int iter;
@@ -724,3 +724,4 @@ uint8_t * getLastCommand(void)
 {
     return LastCommandLine;
 }
+ * */
