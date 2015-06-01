@@ -464,10 +464,10 @@ void NewTCPClient(char * textToSend, BYTE * ServerName)
                                 if(TCP_w == 0)
                                 {
                                     //will set a flag for the printcommand to read
-                                    DoneReceivingFlag = 1;
+                                    //DoneReceivingFlag = 1;
 
-                                    //maybe this will work to make the system loop and repeat?
-                                    GenericTCPExampleState = SM_SOCKET_OBTAINED;
+                                    //maybe this will work to make the system disconnect and try agian
+                                    GenericTCPExampleState = SM_DISCONNECT;
                                     //GenericTCPExampleState = SM_HOME;
                                     //GenericTCPExampleState = SM_DISCONNECT;
                                 }
@@ -510,13 +510,19 @@ void NewTCPClient(char * textToSend, BYTE * ServerName)
 			TCP_MySocket = INVALID_SOCKET;
 			GenericTCPExampleState = SM_DONE;
 
+                        //testing this, may not work right.
+                        //will set a flag for the printcommand to read
+                        DoneReceivingFlag = 1;
+
+
                         TCPCycleDoneFlag = 1;
 
 			break;
 
 		case SM_DONE:
 			// Do nothing unless the user pushes BUTTON1 and wants to restart the whole connection/download process
-			if(BUTTON1_IO == 0u)
+			//if(BUTTON1_IO == 0u)
+                    //try it automatically, see if it fixes things
 				GenericTCPExampleState = SM_HOME;
 			break;
 	}

@@ -380,10 +380,11 @@ int main(void)
                 {
                     ResponseBeginFlag = 0;
                     CommandSendState = 2;
-                    if(!myTCPIsConnected())
+                    /*if(!myTCPIsConnected())
                     {
                         myTCPClientConnect(getIPTarget());
                     }
+                     */
                 }
                 break;
             //case 1://wait until return buffer is full
