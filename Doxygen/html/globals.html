@@ -76,6 +76,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li class="current"><a href="globals.html"><span>All</span></a></li>
       <li><a href="globals_func.html"><span>Functions</span></a></li>
       <li><a href="globals_vars.html"><span>Variables</span></a></li>
+      <li><a href="globals_enum.html"><span>Enumerations</span></a></li>
+      <li><a href="globals_eval.html"><span>Enumerator</span></a></li>
       <li><a href="globals_defs.html"><span>Macros</span></a></li>
     </ul>
   </div>
@@ -138,12 +140,19 @@ $(document).ready(function(){initNavTree('globals.html','');});
 : <a class="el" href="_v_g_a_8c.html#a70a1baebed80d9631cc4a999fc3cda5d">VGA.c</a>
 , <a class="el" href="_v_g_a_8h.html#a70a1baebed80d9631cc4a999fc3cda5d">VGA.h</a>
 </li>
+<li>_GenericTCPExampleState
+: <a class="el" href="_generic_t_c_p_client_8h.html#a50ddea7cc1e0c4d1e2adff09da796cd3">GenericTCPClient.h</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
 <li>addCharToTextLine()
 : <a class="el" href="cursor_8c.html#a41c92fd026b99457236bf755ee517e55">cursor.c</a>
+</li>
+<li>AddToPrintString()
+: <a class="el" href="cursor_8c.html#a1480a346c163451a23320f3d03106865">cursor.c</a>
+, <a class="el" href="cursor_8h.html#a8bb492f63bd27bfaca0ee1c7461f165a">cursor.h</a>
 </li>
 </ul>
 
@@ -173,9 +182,16 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <li>clearTextLine()
 : <a class="el" href="cursor_8c.html#a53ebfe2e3649276643adf8647c8a5821">cursor.c</a>
 </li>
+<li>CommandLine
+: <a class="el" href="cursor_8h.html#a9a3fc782d039246781f14f72ad1ee679">cursor.h</a>
+</li>
 <li>CompareTextLines()
 : <a class="el" href="cursor_8c.html#a8f55cca82244df1cf78f0a826f816f75">cursor.c</a>
 , <a class="el" href="cursor_8h.html#a8f55cca82244df1cf78f0a826f816f75">cursor.h</a>
+</li>
+<li>cursor_init()
+: <a class="el" href="cursor_8c.html#a5bbfe98695534ca971f4c6ed253ec451">cursor.c</a>
+, <a class="el" href="cursor_8h.html#a5bbfe98695534ca971f4c6ed253ec451">cursor.h</a>
 </li>
 <li>CursorLocation
 : <a class="el" href="cursor_8h.html#a06590bd84e8fca8ad5292a6e5ca50890">cursor.h</a>
@@ -192,6 +208,9 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <li>DefaultIpTargetCommandLength
 : <a class="el" href="cursor_8h.html#ad06bcb74c84988cb42c4afb1b62e7b55">cursor.h</a>
 </li>
+<li>DoneReceivingFlag
+: <a class="el" href="cursor_8h.html#a8ef198410e45668e5389d1831090dd6f">cursor.h</a>
+</li>
 </ul>
 
 
@@ -204,6 +223,10 @@ $(document).ready(function(){initNavTree('globals.html','');});
 
 
 <h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
+<li>getCommand()
+: <a class="el" href="cursor_8c.html#addfbbda131b30f1ece52f3e760df16e0">cursor.c</a>
+, <a class="el" href="cursor_8h.html#addfbbda131b30f1ece52f3e760df16e0">cursor.h</a>
+</li>
 <li>getCursorLocation()
 : <a class="el" href="cursor_8c.html#a95873c61ca346ba3ad63577fec99fe15">cursor.c</a>
 , <a class="el" href="cursor_8h.html#a5a986a90cba784aeb2039295362a6282">cursor.h</a>
@@ -306,12 +329,18 @@ $(document).ready(function(){initNavTree('globals.html','');});
 , <a class="el" href="cursor_8h.html#ae9337ec3c6ea47f10d329cd99d7a29f9">cursor.h</a>
 , <a class="el" href="_p_s2_8h.html#ae9337ec3c6ea47f10d329cd99d7a29f9">PS2.h</a>
 </li>
+<li>myTCPIsConnected()
+: <a class="el" href="_generic_t_c_p_client_8h.html#abdd82d2095586ef0feb1042b6c3261e0">GenericTCPClient.h</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
-<li>newtextLine
-: <a class="el" href="cursor_8h.html#a4eddb259269e1401df5b56698f231263">cursor.h</a>
+<li>NewCommandFlag
+: <a class="el" href="cursor_8h.html#ae06856faacabef2a978187eb13afb99a">cursor.h</a>
+</li>
+<li>NewTCPClient()
+: <a class="el" href="_generic_t_c_p_client_8h.html#ab7d4a26647c648da4ee61bc23f508eba">GenericTCPClient.h</a>
 </li>
 </ul>
 
@@ -334,13 +363,23 @@ $(document).ready(function(){initNavTree('globals.html','');});
 : <a class="el" href="cursor_8c.html#aa68556b6a4e7315e031e8f18361d283e">cursor.c</a>
 , <a class="el" href="cursor_8h.html#aa68556b6a4e7315e031e8f18361d283e">cursor.h</a>
 </li>
+<li>printStoredString()
+: <a class="el" href="cursor_8c.html#a7cd94f383da79e0ed8d07e9040d2509b">cursor.c</a>
+, <a class="el" href="cursor_8h.html#a7cd94f383da79e0ed8d07e9040d2509b">cursor.h</a>
+</li>
 <li>printTestScreen()
 : <a class="el" href="cursor_8c.html#ab66a8865de62d9daefab9f8abf026478">cursor.c</a>
 , <a class="el" href="cursor_8h.html#ab66a8865de62d9daefab9f8abf026478">cursor.h</a>
 </li>
+<li>PrintTextIndex
+: <a class="el" href="cursor_8h.html#a8a4c8905fd2a201ef43a13ad80840f48">cursor.h</a>
+</li>
+<li>PrintTextLine
+: <a class="el" href="cursor_8h.html#a93d348e6a705a6b79690d8145da02c18">cursor.h</a>
+</li>
 <li>processLine()
-: <a class="el" href="cursor_8c.html#aee82caceba560f01202c4459ba4497c7">cursor.c</a>
-, <a class="el" href="cursor_8h.html#aee82caceba560f01202c4459ba4497c7">cursor.h</a>
+: <a class="el" href="cursor_8c.html#aa2efb6f288578cf493c06a2b7083b69d">cursor.c</a>
+, <a class="el" href="cursor_8h.html#aa2efb6f288578cf493c06a2b7083b69d">cursor.h</a>
 </li>
 <li>ps2Buffer
 : <a class="el" href="_p_s2_8h.html#a8631eed927347d2af2042273a5e835e8">PS2.h</a>
@@ -373,6 +412,9 @@ $(document).ready(function(){initNavTree('globals.html','');});
 , <a class="el" href="cursor_8h.html#aeca62116778bb6c13245089867ded8d9">cursor.h</a>
 , <a class="el" href="_p_s2_8h.html#aeca62116778bb6c13245089867ded8d9">PS2.h</a>
 </li>
+<li>ResponseBeginFlag
+: <a class="el" href="cursor_8h.html#affe4a7c9bc78099425ab5f39abefc783">cursor.h</a>
+</li>
 </ul>
 
 
@@ -383,6 +425,10 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <li>setandgetCursorLocation()
 : <a class="el" href="cursor_8c.html#a3a7d62c4f2983e6e2e2f4da56f36befc">cursor.c</a>
 , <a class="el" href="cursor_8h.html#a3a7d62c4f2983e6e2e2f4da56f36befc">cursor.h</a>
+</li>
+<li>setCommand()
+: <a class="el" href="cursor_8c.html#a0cd9552857be8bd9e783405f52ff613c">cursor.c</a>
+, <a class="el" href="cursor_8h.html#a0cd9552857be8bd9e783405f52ff613c">cursor.h</a>
 </li>
 <li>setCursorLocation()
 : <a class="el" href="cursor_8c.html#acd4b06887a4337467e744f693a2df6a9">cursor.c</a>
@@ -423,10 +469,28 @@ $(document).ready(function(){initNavTree('globals.html','');});
 : <a class="el" href="_v_g_a_8c.html#ab5c64bd9429e61e28c56cc7b35fb1f88">VGA.c</a>
 , <a class="el" href="_v_g_a_8h.html#ab5c64bd9429e61e28c56cc7b35fb1f88">VGA.h</a>
 </li>
+<li>SM_DISCONNECT
+: <a class="el" href="_generic_t_c_p_client_8h.html#a50ddea7cc1e0c4d1e2adff09da796cd3a492d87a3b4da4a2a3c0eb2c0129c5371">GenericTCPClient.h</a>
+</li>
+<li>SM_DONE
+: <a class="el" href="_generic_t_c_p_client_8h.html#a50ddea7cc1e0c4d1e2adff09da796cd3ab5923ad958027d9243723c3576a4b025">GenericTCPClient.h</a>
+</li>
+<li>SM_HOME
+: <a class="el" href="_generic_t_c_p_client_8h.html#a50ddea7cc1e0c4d1e2adff09da796cd3aea7247ebfc50d7f911c172da37f49e23">GenericTCPClient.h</a>
+</li>
+<li>SM_PROCESS_RESPONSE
+: <a class="el" href="_generic_t_c_p_client_8h.html#a50ddea7cc1e0c4d1e2adff09da796cd3a596b53fd32dd6f186d800ae4add4b539">GenericTCPClient.h</a>
+</li>
+<li>SM_SOCKET_OBTAINED
+: <a class="el" href="_generic_t_c_p_client_8h.html#a50ddea7cc1e0c4d1e2adff09da796cd3a02828fd101bddc708b2068ebbe8979e9">GenericTCPClient.h</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
+<li>TCPCycleDoneFlag
+: <a class="el" href="_generic_t_c_p_client_8h.html#ae8c9c2a8aaa33d706b40985f60861906">GenericTCPClient.h</a>
+</li>
 <li>TempProcessLineWrapper()
 : <a class="el" href="_p_s2_8h.html#a0f63d5a4267ee5aef23c951d50458049">PS2.h</a>
 </li>
@@ -507,7 +571,7 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri May 15 2015 02:47:23 for EthKitTCP by
+    <li class="footer">Generated on Mon Jun 1 2015 03:33:33 for EthKitTCP by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

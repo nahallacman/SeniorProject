@@ -76,6 +76,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="globals.html"><span>All</span></a></li>
       <li class="current"><a href="globals_func.html"><span>Functions</span></a></li>
       <li><a href="globals_vars.html"><span>Variables</span></a></li>
+      <li><a href="globals_enum.html"><span>Enumerations</span></a></li>
+      <li><a href="globals_eval.html"><span>Enumerator</span></a></li>
       <li><a href="globals_defs.html"><span>Macros</span></a></li>
     </ul>
   </div>
@@ -90,6 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_i"><span>i</span></a></li>
       <li><a href="#index_k"><span>k</span></a></li>
       <li><a href="#index_m"><span>m</span></a></li>
+      <li><a href="#index_n"><span>n</span></a></li>
       <li><a href="#index_p"><span>p</span></a></li>
       <li><a href="#index_r"><span>r</span></a></li>
       <li><a href="#index_s"><span>s</span></a></li>
@@ -141,14 +144,18 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 <li>addCharToTextLine()
 : <a class="el" href="cursor_8c.html#a41c92fd026b99457236bf755ee517e55">cursor.c</a>
 </li>
+<li>AddToPrintString()
+: <a class="el" href="cursor_8h.html#a8bb492f63bd27bfaca0ee1c7461f165a">cursor.h</a>
+, <a class="el" href="cursor_8c.html#a1480a346c163451a23320f3d03106865">cursor.c</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_b"></a>- b -</h3><ul>
 <li>BlinkCursor()
 : <a class="el" href="_p_s2_8h.html#acea8175bc07b5d0ba9f3f78d0c00c4a7">PS2.h</a>
-, <a class="el" href="_v_g_a_8c.html#acea8175bc07b5d0ba9f3f78d0c00c4a7">VGA.c</a>
 , <a class="el" href="_v_g_a_8h.html#acea8175bc07b5d0ba9f3f78d0c00c4a7">VGA.h</a>
+, <a class="el" href="_v_g_a_8c.html#acea8175bc07b5d0ba9f3f78d0c00c4a7">VGA.c</a>
 </li>
 </ul>
 
@@ -159,16 +166,20 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 , <a class="el" href="_v_g_a_8h.html#a62abd37a46e00ef5754e42fdd601cb9f">VGA.h</a>
 </li>
 <li>ClearScreen()
-: <a class="el" href="_v_g_a_8h.html#a5473c6cfd6c580642133754e141ca556">VGA.h</a>
-, <a class="el" href="_p_s2_8h.html#a5473c6cfd6c580642133754e141ca556">PS2.h</a>
+: <a class="el" href="_p_s2_8h.html#a5473c6cfd6c580642133754e141ca556">PS2.h</a>
 , <a class="el" href="_v_g_a_8c.html#a5473c6cfd6c580642133754e141ca556">VGA.c</a>
+, <a class="el" href="_v_g_a_8h.html#a5473c6cfd6c580642133754e141ca556">VGA.h</a>
 </li>
 <li>clearTextLine()
 : <a class="el" href="cursor_8c.html#a53ebfe2e3649276643adf8647c8a5821">cursor.c</a>
 </li>
 <li>CompareTextLines()
-: <a class="el" href="cursor_8c.html#a8f55cca82244df1cf78f0a826f816f75">cursor.c</a>
-, <a class="el" href="cursor_8h.html#a8f55cca82244df1cf78f0a826f816f75">cursor.h</a>
+: <a class="el" href="cursor_8h.html#a8f55cca82244df1cf78f0a826f816f75">cursor.h</a>
+, <a class="el" href="cursor_8c.html#a8f55cca82244df1cf78f0a826f816f75">cursor.c</a>
+</li>
+<li>cursor_init()
+: <a class="el" href="cursor_8h.html#a5bbfe98695534ca971f4c6ed253ec451">cursor.h</a>
+, <a class="el" href="cursor_8c.html#a5bbfe98695534ca971f4c6ed253ec451">cursor.c</a>
 </li>
 </ul>
 
@@ -182,9 +193,13 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 
 
 <h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
+<li>getCommand()
+: <a class="el" href="cursor_8c.html#addfbbda131b30f1ece52f3e760df16e0">cursor.c</a>
+, <a class="el" href="cursor_8h.html#addfbbda131b30f1ece52f3e760df16e0">cursor.h</a>
+</li>
 <li>getCursorLocation()
-: <a class="el" href="cursor_8c.html#a95873c61ca346ba3ad63577fec99fe15">cursor.c</a>
-, <a class="el" href="cursor_8h.html#a5a986a90cba784aeb2039295362a6282">cursor.h</a>
+: <a class="el" href="cursor_8h.html#a5a986a90cba784aeb2039295362a6282">cursor.h</a>
+, <a class="el" href="cursor_8c.html#a95873c61ca346ba3ad63577fec99fe15">cursor.c</a>
 </li>
 <li>getIPTarget()
 : <a class="el" href="cursor_8c.html#abe73bcf82b19d9727d29850864eac8b8">cursor.c</a>
@@ -198,8 +213,8 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 , <a class="el" href="cursor_8h.html#a52e93559a57ee99d14ce6d275cbb47a6">cursor.h</a>
 </li>
 <li>gettextLine()
-: <a class="el" href="cursor_8c.html#a3a060fca8f2dde6562e2f243414d47d7">cursor.c</a>
-, <a class="el" href="cursor_8h.html#a3a060fca8f2dde6562e2f243414d47d7">cursor.h</a>
+: <a class="el" href="cursor_8h.html#a3a060fca8f2dde6562e2f243414d47d7">cursor.h</a>
+, <a class="el" href="cursor_8c.html#a3a060fca8f2dde6562e2f243414d47d7">cursor.c</a>
 </li>
 </ul>
 
@@ -210,17 +225,17 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 , <a class="el" href="cursor_8h.html#a06559067271121a8ba77c7e7f387a8f3">cursor.h</a>
 </li>
 <li>increaseLineLocationEndOneLine()
-: <a class="el" href="cursor_8c.html#ad74454a9d14ccfe37bfa622791fa47e8">cursor.c</a>
-, <a class="el" href="cursor_8h.html#ad74454a9d14ccfe37bfa622791fa47e8">cursor.h</a>
+: <a class="el" href="cursor_8h.html#ad74454a9d14ccfe37bfa622791fa47e8">cursor.h</a>
+, <a class="el" href="cursor_8c.html#ad74454a9d14ccfe37bfa622791fa47e8">cursor.c</a>
 </li>
 <li>interpret_keypress()
-: <a class="el" href="cursor_8c.html#a467458fc0085539f52030fabf3dd9286">cursor.c</a>
-, <a class="el" href="cursor_8h.html#a467458fc0085539f52030fabf3dd9286">cursor.h</a>
+: <a class="el" href="cursor_8h.html#a467458fc0085539f52030fabf3dd9286">cursor.h</a>
+, <a class="el" href="cursor_8c.html#a467458fc0085539f52030fabf3dd9286">cursor.c</a>
 , <a class="el" href="_p_s2_8h.html#a467458fc0085539f52030fabf3dd9286">PS2.h</a>
 </li>
 <li>invertShiftPressed()
-: <a class="el" href="_p_s2_8c.html#a6d4d2e35c21e102669b9fdf8a3858e99">PS2.c</a>
-, <a class="el" href="_p_s2_8h.html#a6d4d2e35c21e102669b9fdf8a3858e99">PS2.h</a>
+: <a class="el" href="_p_s2_8h.html#a6d4d2e35c21e102669b9fdf8a3858e99">PS2.h</a>
+, <a class="el" href="_p_s2_8c.html#a6d4d2e35c21e102669b9fdf8a3858e99">PS2.c</a>
 </li>
 </ul>
 
@@ -247,19 +262,29 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 , <a class="el" href="cursor_8h.html#aa0d5d4e3acd447e87fdab37d7388df23">cursor.h</a>
 </li>
 <li>MoveCursorLeft()
-: <a class="el" href="cursor_8h.html#a7804524381705ec22e0efc3a1326dd69">cursor.h</a>
+: <a class="el" href="cursor_8c.html#a7804524381705ec22e0efc3a1326dd69">cursor.c</a>
+, <a class="el" href="cursor_8h.html#a7804524381705ec22e0efc3a1326dd69">cursor.h</a>
 , <a class="el" href="_p_s2_8h.html#a7804524381705ec22e0efc3a1326dd69">PS2.h</a>
-, <a class="el" href="cursor_8c.html#a7804524381705ec22e0efc3a1326dd69">cursor.c</a>
 </li>
 <li>MoveCursorRight()
-: <a class="el" href="cursor_8h.html#ac177699cfeda15e4b887864f6eacc5e3">cursor.h</a>
+: <a class="el" href="cursor_8c.html#ac177699cfeda15e4b887864f6eacc5e3">cursor.c</a>
+, <a class="el" href="cursor_8h.html#ac177699cfeda15e4b887864f6eacc5e3">cursor.h</a>
 , <a class="el" href="_p_s2_8h.html#ac177699cfeda15e4b887864f6eacc5e3">PS2.h</a>
-, <a class="el" href="cursor_8c.html#ac177699cfeda15e4b887864f6eacc5e3">cursor.c</a>
 </li>
 <li>MoveCursorUp()
 : <a class="el" href="cursor_8c.html#ae9337ec3c6ea47f10d329cd99d7a29f9">cursor.c</a>
 , <a class="el" href="cursor_8h.html#ae9337ec3c6ea47f10d329cd99d7a29f9">cursor.h</a>
 , <a class="el" href="_p_s2_8h.html#ae9337ec3c6ea47f10d329cd99d7a29f9">PS2.h</a>
+</li>
+<li>myTCPIsConnected()
+: <a class="el" href="_generic_t_c_p_client_8h.html#abdd82d2095586ef0feb1042b6c3261e0">GenericTCPClient.h</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
+<li>NewTCPClient()
+: <a class="el" href="_generic_t_c_p_client_8h.html#ab7d4a26647c648da4ee61bc23f508eba">GenericTCPClient.h</a>
 </li>
 </ul>
 
@@ -282,13 +307,17 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 : <a class="el" href="cursor_8c.html#aa68556b6a4e7315e031e8f18361d283e">cursor.c</a>
 , <a class="el" href="cursor_8h.html#aa68556b6a4e7315e031e8f18361d283e">cursor.h</a>
 </li>
+<li>printStoredString()
+: <a class="el" href="cursor_8c.html#a7cd94f383da79e0ed8d07e9040d2509b">cursor.c</a>
+, <a class="el" href="cursor_8h.html#a7cd94f383da79e0ed8d07e9040d2509b">cursor.h</a>
+</li>
 <li>printTestScreen()
-: <a class="el" href="cursor_8c.html#ab66a8865de62d9daefab9f8abf026478">cursor.c</a>
-, <a class="el" href="cursor_8h.html#ab66a8865de62d9daefab9f8abf026478">cursor.h</a>
+: <a class="el" href="cursor_8h.html#ab66a8865de62d9daefab9f8abf026478">cursor.h</a>
+, <a class="el" href="cursor_8c.html#ab66a8865de62d9daefab9f8abf026478">cursor.c</a>
 </li>
 <li>processLine()
-: <a class="el" href="cursor_8c.html#aee82caceba560f01202c4459ba4497c7">cursor.c</a>
-, <a class="el" href="cursor_8h.html#aee82caceba560f01202c4459ba4497c7">cursor.h</a>
+: <a class="el" href="cursor_8c.html#aa2efb6f288578cf493c06a2b7083b69d">cursor.c</a>
+, <a class="el" href="cursor_8h.html#aa2efb6f288578cf493c06a2b7083b69d">cursor.h</a>
 </li>
 </ul>
 
@@ -314,18 +343,22 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 : <a class="el" href="cursor_8c.html#a3a7d62c4f2983e6e2e2f4da56f36befc">cursor.c</a>
 , <a class="el" href="cursor_8h.html#a3a7d62c4f2983e6e2e2f4da56f36befc">cursor.h</a>
 </li>
+<li>setCommand()
+: <a class="el" href="cursor_8h.html#a0cd9552857be8bd9e783405f52ff613c">cursor.h</a>
+, <a class="el" href="cursor_8c.html#a0cd9552857be8bd9e783405f52ff613c">cursor.c</a>
+</li>
 <li>setCursorLocation()
 : <a class="el" href="cursor_8c.html#acd4b06887a4337467e744f693a2df6a9">cursor.c</a>
 , <a class="el" href="cursor_8h.html#acd4b06887a4337467e744f693a2df6a9">cursor.h</a>
 </li>
 <li>setLineLocationStart()
-: <a class="el" href="cursor_8c.html#a453e2db022d7de17533e1509906065c9">cursor.c</a>
-, <a class="el" href="cursor_8h.html#a453e2db022d7de17533e1509906065c9">cursor.h</a>
+: <a class="el" href="cursor_8h.html#a453e2db022d7de17533e1509906065c9">cursor.h</a>
+, <a class="el" href="cursor_8c.html#a453e2db022d7de17533e1509906065c9">cursor.c</a>
 </li>
 <li>ShiftScreenDown()
-: <a class="el" href="_v_g_a_8h.html#a030e6b6983ff846d9cca945c743c40b2">VGA.h</a>
-, <a class="el" href="_p_s2_8h.html#a030e6b6983ff846d9cca945c743c40b2">PS2.h</a>
+: <a class="el" href="_p_s2_8h.html#a030e6b6983ff846d9cca945c743c40b2">PS2.h</a>
 , <a class="el" href="_v_g_a_8c.html#a7658a533b49674fdef8006fdcf6a694b">VGA.c</a>
+, <a class="el" href="_v_g_a_8h.html#a030e6b6983ff846d9cca945c743c40b2">VGA.h</a>
 </li>
 <li>ShiftScreenLeft()
 : <a class="el" href="_p_s2_8h.html#a16432961ed8b60a6197456a6d92e4ddc">PS2.h</a>
@@ -347,8 +380,8 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 , <a class="el" href="_v_g_a_8h.html#a1ff9068d637ee1bf5b357186033e3623">VGA.h</a>
 </li>
 <li>shiftTextRight()
-: <a class="el" href="_v_g_a_8c.html#ab5c64bd9429e61e28c56cc7b35fb1f88">VGA.c</a>
-, <a class="el" href="_v_g_a_8h.html#ab5c64bd9429e61e28c56cc7b35fb1f88">VGA.h</a>
+: <a class="el" href="_v_g_a_8h.html#ab5c64bd9429e61e28c56cc7b35fb1f88">VGA.h</a>
+, <a class="el" href="_v_g_a_8c.html#ab5c64bd9429e61e28c56cc7b35fb1f88">VGA.c</a>
 </li>
 </ul>
 
@@ -374,20 +407,20 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 , <a class="el" href="_v_g_a_8h.html#a499c31fd29b2bb4509a35860bde799b6">VGA.h</a>
 </li>
 <li>writefullhorizontalline()
-: <a class="el" href="_v_g_a_8c.html#a404c4fd746b185b08d63449a9c14049c">VGA.c</a>
-, <a class="el" href="_v_g_a_8h.html#a404c4fd746b185b08d63449a9c14049c">VGA.h</a>
+: <a class="el" href="_v_g_a_8h.html#a404c4fd746b185b08d63449a9c14049c">VGA.h</a>
+, <a class="el" href="_v_g_a_8c.html#a404c4fd746b185b08d63449a9c14049c">VGA.c</a>
 </li>
 <li>writefullverticalline()
 : <a class="el" href="_v_g_a_8c.html#aa99b12cab66ebdbdf0d5b9c2e00a9c15">VGA.c</a>
 , <a class="el" href="_v_g_a_8h.html#aa99b12cab66ebdbdf0d5b9c2e00a9c15">VGA.h</a>
 </li>
 <li>writehorizontalline()
-: <a class="el" href="_v_g_a_8c.html#a822a698d29ce7edb349352481b65db74">VGA.c</a>
-, <a class="el" href="_v_g_a_8h.html#a822a698d29ce7edb349352481b65db74">VGA.h</a>
+: <a class="el" href="_v_g_a_8h.html#a822a698d29ce7edb349352481b65db74">VGA.h</a>
+, <a class="el" href="_v_g_a_8c.html#a822a698d29ce7edb349352481b65db74">VGA.c</a>
 </li>
 <li>writepixel()
-: <a class="el" href="_v_g_a_8c.html#ad6061cbae4f54062026bae527e5dee9a">VGA.c</a>
-, <a class="el" href="_v_g_a_8h.html#ad6061cbae4f54062026bae527e5dee9a">VGA.h</a>
+: <a class="el" href="_v_g_a_8h.html#ad6061cbae4f54062026bae527e5dee9a">VGA.h</a>
+, <a class="el" href="_v_g_a_8c.html#ad6061cbae4f54062026bae527e5dee9a">VGA.c</a>
 </li>
 <li>writeverticalline()
 : <a class="el" href="_v_g_a_8c.html#a0058c3096abb8e78f7ab293ab42daff8">VGA.c</a>
@@ -399,7 +432,7 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri May 15 2015 02:47:23 for EthKitTCP by
+    <li class="footer">Generated on Mon Jun 1 2015 03:33:33 for EthKitTCP by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

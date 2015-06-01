@@ -1,5 +1,17 @@
 #include "cursor.h"
 
+
+
+void cursor_init(void)
+{
+    //ResponseCompleteFlag = 0;
+    NewCommandFlag = 0;
+    DoneReceivingFlag = 0; 
+    setCursorLocation(0);
+    resetLineLocationEnd();
+    setLineLocationStart(0);
+}
+
 //Do all of these functions really need to be external still?
 //--- start cursor location operations ---
 
@@ -168,12 +180,30 @@ void interpret_keypress(char temp)
     if(temp2 == 0x01)// enter key was pressed
     {                       
         //here the code should try to interpret the received command
-        processLine(textLine);
+        //if the processed line isn't recognized, set it to the command to send
+        if(processLine(textLine) == 0)
+        {
+            if(textLine[0] != '\0')
+            {
+                setCommand(textLine);
+                ResponseBeginFlag = 1;
+                NewCommandFlag = 1;
+            }
+        }
+
 
         //clear the textLine so we can start over with the commands
         clearTextLine();
+
+        //wait for the command to be sent then recieved.
+        //while(ResponseBeginFlag == 0);
+
+        //set the flag for beginning a send command, wait for response, print response cycle
+
+        
+
         //not sure if this goes here, but going to try
-        printStoredString();
+        //printStoredString();
 
         //now move the beginning of the line to the current cursor.
         setLineLocationStart(getCursorLocation());
@@ -209,7 +239,7 @@ void resetPlaceCharLocation(void)
 }
 
 
-void processLine(uint8_t * textLinePtr)
+int processLine(uint8_t * textLinePtr)
 {
     int valid_command;
     int z;
@@ -316,14 +346,16 @@ void processLine(uint8_t * textLinePtr)
 
     if(valid_command == 1)
     {
-            placeString("\nSuccess\n\0");
+            placeString("\nPIC32 Valid String\n\0");
             //interpret command
     }
     else
     {
-            placeString("\nFail\n\0");
+            placeString("\nPIC32 Invalid String, passing it on\n\0");
 	//print error message?
     }
+
+    return valid_command;
 }
 
 /*
@@ -522,6 +554,7 @@ uint8_t * gettextLine(void)
 
 //this function compares the two text lines and edits the old text line to equal the new text line
 //to make it work appropriately, edit the newtextLine and call this function.
+//this function no longer works appropriately, needs a lot of work
 void CompareTextLines(char * newtextLine)
 {
     int i = 0;
@@ -630,9 +663,9 @@ void printTestScreen(void)
 }
 
 //text line that will be added to using addtoprintstring(char *)
-uint8_t PrintTextLine[TEXTLINELENGTH];
+//uint8_t PrintTextLine[TEXTLINELENGTH];
 //index for addtoprintstring(char *)
-int PrintTextIndex;
+//int PrintTextIndex;
 
 //add the string to a line using the PrintTextIndex
 void AddToPrintString(char * TextString)
@@ -646,6 +679,9 @@ void AddToPrintString(char * TextString)
 }
 void printStoredString(void)
 {
+    
+
+    //make sure the string ends in a newline and a null
     if(PrintTextLine[PrintTextIndex] != '\n')
     {
         PrintTextLine[PrintTextIndex] = '\n';
@@ -658,3 +694,34 @@ void printStoredString(void)
     placeString(PrintTextLine);
     PrintTextIndex = 0;
 }
+
+//currently has no indication of the size of the command buffer, may need to implement that
+void setCommand(uint8_t * TextString)
+{
+    int iter;
+    for(iter = 0; TextString[iter] != 0; iter++)
+    {
+        CommandLine[iter] = TextString[iter];
+    }
+    CommandLine[iter] = '\0';
+}
+
+uint8_t * getCommand(void)
+{
+    return CommandLine;
+}
+/*
+void setLastCommand(uint8_t * TextString)
+{
+    int iter;
+    for(iter = 0; TextString[iter] != 0; iter++)
+    {
+        LastCommandLine[iter] = TextString[iter];
+    }
+    LastCommandLine[iter] = '\0';
+}
+uint8_t * getLastCommand(void)
+{
+    return LastCommandLine;
+}
+ * */

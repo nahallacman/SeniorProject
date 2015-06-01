@@ -1,21 +1,4 @@
 var searchData=
 [
-  ['_5f_5fzcll_5fdhcp_5fsubstate',['__zcll_dhcp_substate',['../_zeroconf_link_local_8c.html#a4631e096d68dae2561b9f0e6f590ff15',1,'ZeroconfLinkLocal.c']]],
-  ['_5fandroid_5faccessory_5fstrings',['_ANDROID_ACCESSORY_STRINGS',['../usb__host__android_8c.html#a39170ef5d95de63b3af62a66d9023fe5',1,'usb_host_android.c']]],
-  ['_5farpstate',['_ARPState',['../_zeroconf_link_local_8c.html#a3fa7067821ed8d8051668a7c234ac7ca',1,'ZeroconfLinkLocal.c']]],
-  ['_5fbit',['_BIT',['../_generic_type_defs_8h.html#a3e91cdef3d9410f02e684e1b69fd12e3',1,'GenericTypeDefs.h']]],
-  ['_5fbool',['_BOOL',['../_generic_type_defs_8h.html#afbf708854fe02af8475a9ba02f3196cb',1,'GenericTypeDefs.h']]],
-  ['_5fcetype',['_CETYPE',['../_f_s_defs_8h.html#a17ff363fa8ec4257ee5bdb3d2a8e8a56',1,'FSDefs.h']]],
-  ['_5fimg_5ffile_5fformat',['_IMG_FILE_FORMAT',['../_image_decoder_8h.html#acabde58b68c7459c5d7205a82b60bc52',1,'ImageDecoder.h']]],
-  ['_5fmdns_5fctx_5ftype',['_MDNS_CTX_TYPE',['../_zeroconf_multicast_d_n_s_8c.html#a84bf1514c18b18fdcb46931955e7e4f7',1,'ZeroconfMulticastDNS.c']]],
-  ['_5fmdns_5frr_5fgroup',['_MDNS_RR_GROUP',['../_zeroconf_multicast_d_n_s_8c.html#aa2796a9c9bd402bd9e8a9815f8dda9eb',1,'ZeroconfMulticastDNS.c']]],
-  ['_5fmdns_5fstate',['_MDNS_STATE',['../_zeroconf_multicast_d_n_s_8c.html#ac381fc5dcc970180a07908c4927f04d5',1,'ZeroconfMulticastDNS.c']]],
-  ['_5fmtouchcontroldecode_5f',['_MTOUCHCONTROLDECODE_',['../m_touch_control_8h.html#a8976962e18f70eda24759342ebfaff6c',1,'mTouchControl.h']]],
-  ['_5fmtouchcontrolstate_5f',['_MTOUCHCONTROLSTATE_',['../m_touch_control_8h.html#a572bec5d84da5561ae4ee43eeb1a03d1',1,'mTouchControl.h']]],
-  ['_5fmtouchsensorstate_5f',['_MTOUCHSENSORSTATE_',['../m_touch_sensor_8h.html#a37fe49f6f90d8d459e97c11b70ef8a67',1,'mTouchSensor.h']]],
-  ['_5fsm_5fautoip',['_SM_AUTOIP',['../_auto_i_p_8h.html#a631e8f014045ea075d5746cf65ffd46a',1,'AutoIP.h']]],
-  ['_5ftftp_5faccess_5ferror',['_TFTP_ACCESS_ERROR',['../_t_f_t_pc_8h.html#a95a35d58e50bcfabfc7d41101672bbd5',1,'TFTPc.h']]],
-  ['_5ftftp_5ffile_5fmode',['_TFTP_FILE_MODE',['../_t_f_t_pc_8h.html#a64c82d2f644e78708a7002187926a42d',1,'TFTPc.h']]],
-  ['_5ftftp_5fresult',['_TFTP_RESULT',['../_t_f_t_pc_8h.html#a293de8f67c6943e8e2457a4b20df13d8',1,'TFTPc.h']]],
-  ['_5fzeroconfllstate',['_ZeroconfLLState',['../_zeroconf_link_local_8c.html#abb07d168826fa7fc8fda794bec949c74',1,'ZeroconfLinkLocal.c']]]
+  ['_5fgenerictcpexamplestate',['_GenericTCPExampleState',['../_generic_t_c_p_client_8h.html#a50ddea7cc1e0c4d1e2adff09da796cd3',1,'GenericTCPClient.h']]]
 ];

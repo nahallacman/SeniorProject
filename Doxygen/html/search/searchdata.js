@@ -1,10 +1,12 @@
 var indexSectionsWithContent =
 {
   0: "_abcdfgiklmnprstvw",
-  1: "cptv",
-  2: "_abcdgikmprstw",
-  3: "bcfiklnpstv",
-  4: "dlptv"
+  1: "cgptv",
+  2: "_abcdgikmnprstw",
+  3: "bcdfiklnprstv",
+  4: "_",
+  5: "s",
+  6: "dlptv"
 };
 
 var indexSectionNames =
@@ -13,7 +15,9 @@ var indexSectionNames =
   1: "files",
   2: "functions",
   3: "variables",
-  4: "defines"
+  4: "enums",
+  5: "enumvalues",
+  6: "defines"
 };
 
 var indexSectionLabels =
@@ -22,6 +26,8 @@ var indexSectionLabels =
   1: "Files",
   2: "Functions",
   3: "Variables",
-  4: "Macros"
+  4: "Enumerations",
+  5: "Enumerator",
+  6: "Macros"
 };
 

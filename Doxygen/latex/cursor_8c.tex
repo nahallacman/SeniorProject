@@ -11,6 +11,8 @@ Include dependency graph for cursor.\+c\+:\nopagebreak
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+void \hyperlink{cursor_8c_a5bbfe98695534ca971f4c6ed253ec451}{cursor\+\_\+init} (void)
+\item 
 int \hyperlink{cursor_8c_a3a7d62c4f2983e6e2e2f4da56f36befc}{setandget\+Cursor\+Location} (int newcursor\+Location)
 \item 
 int \hyperlink{cursor_8c_a95873c61ca346ba3ad63577fec99fe15}{get\+Cursor\+Location} (void)
@@ -45,7 +47,7 @@ void \hyperlink{cursor_8c_a467458fc0085539f52030fabf3dd9286}{interpret\+\_\+keyp
 \item 
 void \hyperlink{cursor_8c_aeca62116778bb6c13245089867ded8d9}{reset\+Place\+Char\+Location} (void)
 \item 
-void \hyperlink{cursor_8c_aee82caceba560f01202c4459ba4497c7}{process\+Line} (uint8\+\_\+t $\ast$text\+Line\+Ptr)
+int \hyperlink{cursor_8c_aa2efb6f288578cf493c06a2b7083b69d}{process\+Line} (uint8\+\_\+t $\ast$text\+Line\+Ptr)
 \item 
 void \hyperlink{cursor_8c_afb368b3eb12755cae8787b96e467e0e3}{press\+\_\+backspace} (void)
 \item 
@@ -57,7 +59,7 @@ void \hyperlink{cursor_8c_a8d48f16d45338842dc6cbb3256eb7dae}{place\+Char} (uint8
 \item 
 uint8\+\_\+t $\ast$ \hyperlink{cursor_8c_a3a060fca8f2dde6562e2f243414d47d7}{gettext\+Line} (void)
 \item 
-void \hyperlink{cursor_8c_a8f55cca82244df1cf78f0a826f816f75}{Compare\+Text\+Lines} (char $\ast$\hyperlink{cursor_8h_a4eddb259269e1401df5b56698f231263}{newtext\+Line})
+void \hyperlink{cursor_8c_a8f55cca82244df1cf78f0a826f816f75}{Compare\+Text\+Lines} (char $\ast$newtext\+Line)
 \item 
 void \hyperlink{cursor_8c_a53ebfe2e3649276643adf8647c8a5821}{clear\+Text\+Line} (void)
 \item 
@@ -66,6 +68,14 @@ void \hyperlink{cursor_8c_a41c92fd026b99457236bf755ee517e55}{add\+Char\+To\+Text
 void \hyperlink{cursor_8c_aa68556b6a4e7315e031e8f18361d283e}{print\+Help\+Screen} (void)
 \item 
 void \hyperlink{cursor_8c_ab66a8865de62d9daefab9f8abf026478}{print\+Test\+Screen} (void)
+\item 
+void \hyperlink{cursor_8c_a1480a346c163451a23320f3d03106865}{Add\+To\+Print\+String} (char $\ast$Text\+String)
+\item 
+void \hyperlink{cursor_8c_a7cd94f383da79e0ed8d07e9040d2509b}{print\+Stored\+String} (void)
+\item 
+void \hyperlink{cursor_8c_a0cd9552857be8bd9e783405f52ff613c}{set\+Command} (uint8\+\_\+t $\ast$Text\+String)
+\item 
+uint8\+\_\+t $\ast$ \hyperlink{cursor_8c_addfbbda131b30f1ece52f3e760df16e0}{get\+Command} (void)
 \end{DoxyCompactItemize}
 
 
@@ -84,7 +94,7 @@ Adds a character to the text line indexed by the cursor.
 \end{DoxyParams}
 
 
-Definition at line 583 of file cursor.\+c.
+Definition at line 626 of file cursor.\+c.
 
 
 
@@ -108,6 +118,17 @@ Here is the caller graph for this function\+:\nopagebreak
 \end{figure}
 
 
+\hypertarget{cursor_8c_a1480a346c163451a23320f3d03106865}{}\index{cursor.\+c@{cursor.\+c}!Add\+To\+Print\+String@{Add\+To\+Print\+String}}
+\index{Add\+To\+Print\+String@{Add\+To\+Print\+String}!cursor.\+c@{cursor.\+c}}
+\subsubsection[{Add\+To\+Print\+String}]{\setlength{\rightskip}{0pt plus 5cm}void Add\+To\+Print\+String (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{Text\+String}
+\end{DoxyParamCaption}
+)}\label{cursor_8c_a1480a346c163451a23320f3d03106865}
+
+
+Definition at line 671 of file cursor.\+c.
+
 \hypertarget{cursor_8c_a53ebfe2e3649276643adf8647c8a5821}{}\index{cursor.\+c@{cursor.\+c}!clear\+Text\+Line@{clear\+Text\+Line}}
 \index{clear\+Text\+Line@{clear\+Text\+Line}!cursor.\+c@{cursor.\+c}}
 \subsubsection[{clear\+Text\+Line}]{\setlength{\rightskip}{0pt plus 5cm}void clear\+Text\+Line (
@@ -117,11 +138,12 @@ Here is the caller graph for this function\+:\nopagebreak
 )}\label{cursor_8c_a53ebfe2e3649276643adf8647c8a5821}
 
 
-Definition at line 570 of file cursor.\+c.
+Definition at line 613 of file cursor.\+c.
 
 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -139,7 +161,7 @@ Here is the caller graph for this function\+:\nopagebreak
 )}\label{cursor_8c_a8f55cca82244df1cf78f0a826f816f75}
 
 
-Definition at line 515 of file cursor.\+c.
+Definition at line 558 of file cursor.\+c.
 
 
 
@@ -148,6 +170,29 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{center}
 \leavevmode
 \includegraphics[width=339pt]{cursor_8c_a8f55cca82244df1cf78f0a826f816f75_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cursor_8c_a5bbfe98695534ca971f4c6ed253ec451}{}\index{cursor.\+c@{cursor.\+c}!cursor\+\_\+init@{cursor\+\_\+init}}
+\index{cursor\+\_\+init@{cursor\+\_\+init}!cursor.\+c@{cursor.\+c}}
+\subsubsection[{cursor\+\_\+init}]{\setlength{\rightskip}{0pt plus 5cm}void cursor\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{cursor_8c_a5bbfe98695534ca971f4c6ed253ec451}
+
+
+Definition at line 5 of file cursor.\+c.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{cursor_8c_a5bbfe98695534ca971f4c6ed253ec451_cgraph}
 \end{center}
 \end{figure}
 
@@ -161,7 +206,7 @@ Here is the call graph for this function\+:\nopagebreak
 )}\label{cursor_8c_aa510ca0bb56c03148f3392c28433dc45}
 
 
-Definition at line 129 of file cursor.\+c.
+Definition at line 141 of file cursor.\+c.
 
 
 
@@ -173,6 +218,17 @@ Here is the caller graph for this function\+:\nopagebreak
 \end{center}
 \end{figure}
 
+
+\hypertarget{cursor_8c_addfbbda131b30f1ece52f3e760df16e0}{}\index{cursor.\+c@{cursor.\+c}!get\+Command@{get\+Command}}
+\index{get\+Command@{get\+Command}!cursor.\+c@{cursor.\+c}}
+\subsubsection[{get\+Command}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t$\ast$ get\+Command (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{cursor_8c_addfbbda131b30f1ece52f3e760df16e0}
+
+
+Definition at line 709 of file cursor.\+c.
 
 \hypertarget{cursor_8c_a95873c61ca346ba3ad63577fec99fe15}{}\index{cursor.\+c@{cursor.\+c}!get\+Cursor\+Location@{get\+Cursor\+Location}}
 \index{get\+Cursor\+Location@{get\+Cursor\+Location}!cursor.\+c@{cursor.\+c}}
@@ -186,11 +242,12 @@ Cursor\+Location
 \end{DoxyReturn}
 
 
-Definition at line 16 of file cursor.\+c.
+Definition at line 28 of file cursor.\+c.
 
 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -208,7 +265,7 @@ Here is the caller graph for this function\+:\nopagebreak
 )}\label{cursor_8c_abe73bcf82b19d9727d29850864eac8b8}
 
 
-Definition at line 436 of file cursor.\+c.
+Definition at line 475 of file cursor.\+c.
 
 \hypertarget{cursor_8c_a1e80692974a94a04598cba2c18c72a98}{}\index{cursor.\+c@{cursor.\+c}!get\+Line\+Location\+End@{get\+Line\+Location\+End}}
 \index{get\+Line\+Location\+End@{get\+Line\+Location\+End}!cursor.\+c@{cursor.\+c}}
@@ -219,11 +276,12 @@ Definition at line 436 of file cursor.\+c.
 )}\label{cursor_8c_a1e80692974a94a04598cba2c18c72a98}
 
 
-Definition at line 140 of file cursor.\+c.
+Definition at line 155 of file cursor.\+c.
 
 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -241,7 +299,7 @@ Here is the caller graph for this function\+:\nopagebreak
 )}\label{cursor_8c_a52e93559a57ee99d14ce6d275cbb47a6}
 
 
-Definition at line 146 of file cursor.\+c.
+Definition at line 161 of file cursor.\+c.
 
 
 
@@ -263,7 +321,7 @@ Here is the caller graph for this function\+:\nopagebreak
 )}\label{cursor_8c_a3a060fca8f2dde6562e2f243414d47d7}
 
 
-Definition at line 507 of file cursor.\+c.
+Definition at line 549 of file cursor.\+c.
 
 \hypertarget{cursor_8c_a06559067271121a8ba77c7e7f387a8f3}{}\index{cursor.\+c@{cursor.\+c}!increase\+Line\+Location\+End@{increase\+Line\+Location\+End}}
 \index{increase\+Line\+Location\+End@{increase\+Line\+Location\+End}!cursor.\+c@{cursor.\+c}}
@@ -274,11 +332,12 @@ Definition at line 507 of file cursor.\+c.
 )}\label{cursor_8c_a06559067271121a8ba77c7e7f387a8f3}
 
 
-Definition at line 118 of file cursor.\+c.
+Definition at line 130 of file cursor.\+c.
 
 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -296,11 +355,12 @@ Here is the caller graph for this function\+:\nopagebreak
 )}\label{cursor_8c_ad74454a9d14ccfe37bfa622791fa47e8}
 
 
-Definition at line 124 of file cursor.\+c.
+Definition at line 136 of file cursor.\+c.
 
 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -318,11 +378,12 @@ Here is the caller graph for this function\+:\nopagebreak
 )}\label{cursor_8c_a467458fc0085539f52030fabf3dd9286}
 
 
-Definition at line 156 of file cursor.\+c.
+Definition at line 171 of file cursor.\+c.
 
 
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -351,7 +412,7 @@ Here is the caller graph for this function\+:\nopagebreak
 )}\label{cursor_8c_ac8e40e0b08b773c5f3fc0b303fe562de}
 
 
-Definition at line 86 of file cursor.\+c.
+Definition at line 98 of file cursor.\+c.
 
 
 
@@ -384,7 +445,7 @@ Here is the caller graph for this function\+:\nopagebreak
 )}\label{cursor_8c_aa0d5d4e3acd447e87fdab37d7388df23}
 
 
-Definition at line 102 of file cursor.\+c.
+Definition at line 114 of file cursor.\+c.
 
 
 
@@ -399,7 +460,8 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -417,7 +479,7 @@ Here is the caller graph for this function\+:\nopagebreak
 )}\label{cursor_8c_a7804524381705ec22e0efc3a1326dd69}
 
 
-Definition at line 31 of file cursor.\+c.
+Definition at line 43 of file cursor.\+c.
 
 
 
@@ -450,7 +512,7 @@ Here is the caller graph for this function\+:\nopagebreak
 )}\label{cursor_8c_ac177699cfeda15e4b887864f6eacc5e3}
 
 
-Definition at line 53 of file cursor.\+c.
+Definition at line 65 of file cursor.\+c.
 
 
 
@@ -465,7 +527,8 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -483,7 +546,7 @@ Here is the caller graph for this function\+:\nopagebreak
 )}\label{cursor_8c_ae9337ec3c6ea47f10d329cd99d7a29f9}
 
 
-Definition at line 70 of file cursor.\+c.
+Definition at line 82 of file cursor.\+c.
 
 
 
@@ -516,7 +579,7 @@ Here is the caller graph for this function\+:\nopagebreak
 )}\label{cursor_8c_a8d48f16d45338842dc6cbb3256eb7dae}
 
 
-Definition at line 456 of file cursor.\+c.
+Definition at line 495 of file cursor.\+c.
 
 
 
@@ -531,7 +594,8 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -554,7 +618,7 @@ Places a null terminated string on the screen.
 \end{DoxyParams}
 
 
-Definition at line 445 of file cursor.\+c.
+Definition at line 484 of file cursor.\+c.
 
 
 
@@ -569,7 +633,8 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -587,7 +652,7 @@ Here is the caller graph for this function\+:\nopagebreak
 )}\label{cursor_8c_afb368b3eb12755cae8787b96e467e0e3}
 
 
-Definition at line 337 of file cursor.\+c.
+Definition at line 376 of file cursor.\+c.
 
 
 
@@ -620,7 +685,7 @@ Here is the caller graph for this function\+:\nopagebreak
 )}\label{cursor_8c_aa68556b6a4e7315e031e8f18361d283e}
 
 
-Definition at line 597 of file cursor.\+c.
+Definition at line 640 of file cursor.\+c.
 
 
 
@@ -635,11 +700,35 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{cursor_8c_aa68556b6a4e7315e031e8f18361d283e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cursor_8c_a7cd94f383da79e0ed8d07e9040d2509b}{}\index{cursor.\+c@{cursor.\+c}!print\+Stored\+String@{print\+Stored\+String}}
+\index{print\+Stored\+String@{print\+Stored\+String}!cursor.\+c@{cursor.\+c}}
+\subsubsection[{print\+Stored\+String}]{\setlength{\rightskip}{0pt plus 5cm}void print\+Stored\+String (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{cursor_8c_a7cd94f383da79e0ed8d07e9040d2509b}
+
+
+Definition at line 680 of file cursor.\+c.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cursor_8c_a7cd94f383da79e0ed8d07e9040d2509b_cgraph}
 \end{center}
 \end{figure}
 
@@ -653,7 +742,7 @@ Here is the caller graph for this function\+:\nopagebreak
 )}\label{cursor_8c_ab66a8865de62d9daefab9f8abf026478}
 
 
-Definition at line 603 of file cursor.\+c.
+Definition at line 646 of file cursor.\+c.
 
 
 
@@ -668,7 +757,8 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -677,35 +767,37 @@ Here is the caller graph for this function\+:\nopagebreak
 \end{figure}
 
 
-\hypertarget{cursor_8c_aee82caceba560f01202c4459ba4497c7}{}\index{cursor.\+c@{cursor.\+c}!process\+Line@{process\+Line}}
+\hypertarget{cursor_8c_aa2efb6f288578cf493c06a2b7083b69d}{}\index{cursor.\+c@{cursor.\+c}!process\+Line@{process\+Line}}
 \index{process\+Line@{process\+Line}!cursor.\+c@{cursor.\+c}}
-\subsubsection[{process\+Line}]{\setlength{\rightskip}{0pt plus 5cm}void process\+Line (
+\subsubsection[{process\+Line}]{\setlength{\rightskip}{0pt plus 5cm}int process\+Line (
 \begin{DoxyParamCaption}
 \item[{uint8\+\_\+t $\ast$}]{text\+Line\+Ptr}
 \end{DoxyParamCaption}
-)}\label{cursor_8c_aee82caceba560f01202c4459ba4497c7}
+)}\label{cursor_8c_aa2efb6f288578cf493c06a2b7083b69d}
 
 
-Definition at line 205 of file cursor.\+c.
+Definition at line 242 of file cursor.\+c.
 
 
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{cursor_8c_aee82caceba560f01202c4459ba4497c7_cgraph}
+\includegraphics[width=350pt]{cursor_8c_aa2efb6f288578cf493c06a2b7083b69d_cgraph}
 \end{center}
 \end{figure}
 
 
 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{cursor_8c_aee82caceba560f01202c4459ba4497c7_icgraph}
+\includegraphics[width=350pt]{cursor_8c_aa2efb6f288578cf493c06a2b7083b69d_icgraph}
 \end{center}
 \end{figure}
 
@@ -719,11 +811,12 @@ Here is the caller graph for this function\+:\nopagebreak
 )}\label{cursor_8c_a733c65607b5947220d85298a9b30bc34}
 
 
-Definition at line 135 of file cursor.\+c.
+Definition at line 150 of file cursor.\+c.
 
 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -741,7 +834,7 @@ Here is the caller graph for this function\+:\nopagebreak
 )}\label{cursor_8c_aeca62116778bb6c13245089867ded8d9}
 
 
-Definition at line 197 of file cursor.\+c.
+Definition at line 234 of file cursor.\+c.
 
 
 
@@ -756,7 +849,8 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -774,7 +868,7 @@ Here is the caller graph for this function\+:\nopagebreak
 )}\label{cursor_8c_a3a7d62c4f2983e6e2e2f4da56f36befc}
 
 
-Definition at line 6 of file cursor.\+c.
+Definition at line 18 of file cursor.\+c.
 
 
 
@@ -783,6 +877,29 @@ Here is the caller graph for this function\+:\nopagebreak
 \begin{center}
 \leavevmode
 \includegraphics[width=339pt]{cursor_8c_a3a7d62c4f2983e6e2e2f4da56f36befc_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{cursor_8c_a0cd9552857be8bd9e783405f52ff613c}{}\index{cursor.\+c@{cursor.\+c}!set\+Command@{set\+Command}}
+\index{set\+Command@{set\+Command}!cursor.\+c@{cursor.\+c}}
+\subsubsection[{set\+Command}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Command (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{Text\+String}
+\end{DoxyParamCaption}
+)}\label{cursor_8c_a0cd9552857be8bd9e783405f52ff613c}
+
+
+Definition at line 699 of file cursor.\+c.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cursor_8c_a0cd9552857be8bd9e783405f52ff613c_icgraph}
 \end{center}
 \end{figure}
 
@@ -801,11 +918,12 @@ Sets the cursor location manually. Not suggested for normal use. No parameter ch
 \end{DoxyParams}
 
 
-Definition at line 26 of file cursor.\+c.
+Definition at line 38 of file cursor.\+c.
 
 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -823,11 +941,12 @@ Here is the caller graph for this function\+:\nopagebreak
 )}\label{cursor_8c_a453e2db022d7de17533e1509906065c9}
 
 
-Definition at line 150 of file cursor.\+c.
+Definition at line 165 of file cursor.\+c.
 
 
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['getcommand',['getCommand',['../cursor_8c.html#addfbbda131b30f1ece52f3e760df16e0',1,'getCommand(void):&#160;cursor.c'],['../cursor_8h.html#addfbbda131b30f1ece52f3e760df16e0',1,'getCommand(void):&#160;cursor.c']]],
   ['getcursorlocation',['getCursorLocation',['../cursor_8c.html#a95873c61ca346ba3ad63577fec99fe15',1,'getCursorLocation(void):&#160;cursor.c'],['../cursor_8h.html#a5a986a90cba784aeb2039295362a6282',1,'getCursorLocation():&#160;cursor.c']]],
   ['getiptarget',['getIPTarget',['../cursor_8c.html#abe73bcf82b19d9727d29850864eac8b8',1,'getIPTarget():&#160;cursor.c'],['../cursor_8h.html#abe73bcf82b19d9727d29850864eac8b8',1,'getIPTarget():&#160;cursor.c']]],
   ['getlinelocationend',['getLineLocationEnd',['../cursor_8c.html#a1e80692974a94a04598cba2c18c72a98',1,'cursor.c']]],

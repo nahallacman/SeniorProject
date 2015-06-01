@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['nbnstask',['NBNSTask',['../_n_b_n_s_8h.html#a702bf030a02ba5807ac10f54c7ffa906',1,'NBNSTask(void):&#160;NBNS.c'],['../_n_b_n_s_8c.html#a702bf030a02ba5807ac10f54c7ffa906',1,'NBNSTask(void):&#160;NBNS.c']]],
-  ['newajaxcommand',['newAJAXCommand',['../mchp_8js.html#ae5d69879ea45fee508c93dfa017824ac',1,'mchp.js']]],
-  ['newtcpclient',['NewTCPClient',['../_generic_t_c_p_client_8c.html#ab7d4a26647c648da4ee61bc23f508eba',1,'NewTCPClient(char *textToSend, BYTE *ServerName):&#160;GenericTCPClient.c'],['../_main_demo_8c.html#ab7d4a26647c648da4ee61bc23f508eba',1,'NewTCPClient(char *textToSend, BYTE *ServerName):&#160;GenericTCPClient.c']]],
-  ['nongziptypes',['NonGZipTypes',['../class_microchip_m_p_f_s_1_1_m_p_f_s2_lib.html#a18fc099dc6b7c9aa568df00892e4d58d',1,'MicrochipMPFS::MPFS2Lib']]]
+  ['writechar',['writechar',['../_v_g_a_8c.html#a499c31fd29b2bb4509a35860bde799b6',1,'writechar(uint8_t *character, int x, int y):&#160;VGA.c'],['../_v_g_a_8h.html#a499c31fd29b2bb4509a35860bde799b6',1,'writechar(uint8_t *character, int x, int y):&#160;VGA.c']]],
+  ['writefullhorizontalline',['writefullhorizontalline',['../_v_g_a_8c.html#a404c4fd746b185b08d63449a9c14049c',1,'writefullhorizontalline(int line):&#160;VGA.c'],['../_v_g_a_8h.html#a404c4fd746b185b08d63449a9c14049c',1,'writefullhorizontalline(int line):&#160;VGA.c']]],
+  ['writefullverticalline',['writefullverticalline',['../_v_g_a_8c.html#aa99b12cab66ebdbdf0d5b9c2e00a9c15',1,'writefullverticalline(int column):&#160;VGA.c'],['../_v_g_a_8h.html#aa99b12cab66ebdbdf0d5b9c2e00a9c15',1,'writefullverticalline(int column):&#160;VGA.c']]],
+  ['writehorizontalline',['writehorizontalline',['../_v_g_a_8c.html#a822a698d29ce7edb349352481b65db74',1,'writehorizontalline(int y1, int y2):&#160;VGA.c'],['../_v_g_a_8h.html#a822a698d29ce7edb349352481b65db74',1,'writehorizontalline(int y1, int y2):&#160;VGA.c']]],
+  ['writepixel',['writepixel',['../_v_g_a_8c.html#ad6061cbae4f54062026bae527e5dee9a',1,'writepixel(int x, int y):&#160;VGA.c'],['../_v_g_a_8h.html#ad6061cbae4f54062026bae527e5dee9a',1,'writepixel(int x, int y):&#160;VGA.c']]],
+  ['writeverticalline',['writeverticalline',['../_v_g_a_8c.html#a0058c3096abb8e78f7ab293ab42daff8',1,'writeverticalline(int x1, int x2):&#160;VGA.c'],['../_v_g_a_8h.html#a0058c3096abb8e78f7ab293ab42daff8',1,'writeverticalline(int x1, int x2):&#160;VGA.c']]]
 ];
