@@ -50,26 +50,38 @@ print(parsed_json['dir'])
 #outputstring = process.communicate()[0]
 
 
-
+print("TCP Test Server v2")
 while 1:
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.bind((TCP_IP, TCP_PORT))
     s.listen(1)
-    a = 1
+    #a = 1
 
     conn, addr = s.accept()
     print ('Connection address:', addr)
+    data = conn.recv(BUFFER_SIZE)
+    if not data: break
+    print ("received data:", data)
 
-    while 1:
-        data = conn.recv(BUFFER_SIZE)
-        if not data: break
-        print ("received data:", data)
-
-        string = data.decode("utf-8")
+    string = data.decode("utf-8")
     
-        if MODE == "UNSECURE":
+    if MODE == "UNSECURE":
         
-            status = sub.check_output(string[1:], shell=True) # HIGHLY DANGEROUS. DONT USE UNSECURE MODE UNLESS YOU ARE ON AN ISOLATED NETWORK AND ARE CONIFDENT YOU KNOW WHAT YOU ARE DOING.
+        status = sub.check_output(string[1:], shell=True) # HIGHLY DANGEROUS. DONT USE UNSECURE MODE UNLESS YOU ARE ON AN ISOLATED NETWORK AND ARE CONIFDENT YOU KNOW WHAT YOU ARE DOING.
+        bytetotal = len(status)
+        index = 0
+        linepart = status[0:1024]
+
+        while bytetotal > 0:
+            bytessent = conn.send(linepart)  # echo
+            bytetotal = bytetotal - bytessent
+            index = index + bytessent
+            linepart = status[index:index+1024]
+
+    elif MODE == "SECURE":
+        if string[0:4] == "$dir":
+            args = string[4:]
+            status = sub.check_output(parsed_json[string[1:4]], shell=True)
             bytetotal = len(status)
             index = 0
             linepart = status[0:1024]
@@ -79,23 +91,9 @@ while 1:
                 bytetotal = bytetotal - bytessent
                 index = index + bytessent
                 linepart = status[index:index+1024]
-
-        elif MODE == "SECURE":
-            if string[0:4] == "$dir":
-                args = string[4:]
-                status = sub.check_output(parsed_json[string[1:4]], shell=True)
-                bytetotal = len(status)
-                index = 0
-                linepart = status[0:1024]
-
-                while bytetotal > 0:
-                    bytessent = conn.send(linepart)  # echo
-                    bytetotal = bytetotal - bytessent
-                    index = index + bytessent
-                    linepart = status[index:index+1024]
-        else:
-            error = 1
-            break
+    else:
+        error = 1
+        break
     
     
    
@@ -109,4 +107,5 @@ while 1:
     #string3 = string2.encode
     #conn.send(data) 
     
+    print("closing")
     conn.close()
