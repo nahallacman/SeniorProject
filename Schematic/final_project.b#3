@@ -2154,7 +2154,7 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="FEEDBACK" library="resistor" package="0204V" value="1K" x="57.15" y="45.72"/>
+<element name="FEEDBACK_RESISTOR" library="resistor" package="0204V" value="1K" x="57.15" y="45.72"/>
 <element name="CLAMPING_DIODE" library="diode" package="DO41-10" value="1N4148" x="36.83" y="50.8"/>
 <element name="VGA_HEADER" library="con-subd" package="HDF15H" value="" x="36.83" y="21.59">
 <attribute name="MPN" value="" x="36.83" y="21.59" size="1.778" layer="27" display="off"/>
@@ -2217,6 +2217,13 @@ design rules under a new name.</description>
 <signal name="VSS">
 <contactref element="U$1" pad="75"/>
 </signal>
+<signal name="N$1">
+<contactref element="U$1" pad="40"/>
+<contactref element="FEEDBACK_RESISTOR" pad="1"/>
+<contactref element="VGA_HEADER" pad="13"/>
+<wire x1="55.609996875" y1="57.15" x2="55.88" y2="45.72" width="0" layer="19" extent="1-1"/>
+<wire x1="36.587" y1="19.05" x2="55.609996875" y2="57.15" width="0" layer="19" extent="1-1"/>
+</signal>
 <signal name="N$2">
 <contactref element="COLOR_JUMPERS" pad="5"/>
 <contactref element="VGA_HEADER" pad="1"/>
@@ -2243,6 +2250,9 @@ design rules under a new name.</description>
 <wire x1="39.37" y1="35.56" x2="41.91" y2="35.56" width="0" layer="19" extent="1-1"/>
 <wire x1="36.83" y1="35.56" x2="39.37" y2="35.56" width="0" layer="19" extent="1-1"/>
 </signal>
+<signal name="N$7">
+<contactref element="FEEDBACK_RESISTOR" pad="2"/>
+</signal>
 <signal name="N$6">
 <contactref element="U$1" pad="32"/>
 <contactref element="VGA_HEADER" pad="14"/>
@@ -2257,36 +2267,6 @@ design rules under a new name.</description>
 <contactref element="U$1" pad="69"/>
 <contactref element="PS/2_HEADER" pad="5"/>
 <wire x1="87.39" y1="13.03" x2="62.23" y2="67.76999375" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="N$10">
-<contactref element="U$1" pad="40"/>
-<contactref element="FEEDBACK" pad="2"/>
-<wire x1="58.42" y1="45.72" x2="55.609996875" y2="57.15" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="N$7">
-<contactref element="FEEDBACK" pad="1"/>
-<contactref element="VGA_HEADER" pad="13"/>
-<wire x1="36.587" y1="19.05" x2="55.88" y2="45.72" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="GND">
-<contactref element="CLAMPING_DIODE" pad="C"/>
-<contactref element="PS/2_HEADER" pad="3"/>
-<contactref element="VGA_HEADER" pad="5"/>
-<contactref element="VGA_HEADER" pad="6"/>
-<contactref element="VGA_HEADER" pad="7"/>
-<contactref element="VGA_HEADER" pad="8"/>
-<contactref element="VGA_HEADER" pad="9"/>
-<contactref element="VGA_HEADER" pad="10"/>
-<wire x1="42.302" y1="21.59" x2="87.89" y2="11.03" width="0" layer="19" extent="1-1"/>
-<wire x1="40.016" y1="21.59" x2="42.302" y2="21.59" width="0" layer="19" extent="1-1"/>
-<wire x1="37.73" y1="21.59" x2="40.016" y2="21.59" width="0" layer="19" extent="1-1"/>
-<wire x1="35.444" y1="21.59" x2="37.73" y2="21.59" width="0" layer="19" extent="1-1"/>
-<wire x1="33.158" y1="21.59" x2="35.444" y2="21.59" width="0" layer="19" extent="1-1"/>
-<wire x1="32.015" y1="24.13" x2="33.158" y2="21.59" width="0" layer="19" extent="1-1"/>
-<wire x1="31.75" y1="50.8" x2="32.015" y2="24.13" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="VCC">
-<contactref element="PS/2_HEADER" pad="4"/>
 </signal>
 </signals>
 </board>
